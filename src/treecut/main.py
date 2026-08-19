@@ -48,6 +48,18 @@ def main() -> int:
                         help="P1: --assets-list 时仅列出已探测元数据的资产")
     parser.add_argument("--migrate-v12", metavar="V12_DB",
                         help="P1: 从 v12 ai_material_library.db 只读迁移素材身份")
+    parser.add_argument("--inc-scan", metavar="PATH",
+                        help="P1.1: 增量扫描（NEW/CHANGED/MOVED/MISSING/UNCHANGED 分类）")
+    parser.add_argument("--lifecycle-dashboard", action="store_true",
+                        help="P1.1: 显示各处理阶段全局统计")
+    parser.add_argument("--lifecycle-list", type=int, metavar="LIMIT", default=None,
+                        help="P1.1: 列出资产各阶段状态（可加 --stage-status 过滤）")
+    parser.add_argument("--stage-status", metavar="STAGE",
+                        help="P1.1: 与 --lifecycle-list 连用，仅显示指定阶段状态")
+    parser.add_argument("--filter-status", metavar="STATUS",
+                        help="P1.1: 与 --lifecycle-list 连用，仅显示指定状态（如 FAILED/STALE/PENDING）")
+    parser.add_argument("--mark-stale", nargs=3, metavar=("ASSET_ID", "STAGE", "REASON"),
+                        help="P1.1: 手动将某资产某阶段标记 STALE（级联下游）")
     args = parser.parse_args()
     if args.status:
         print(json.dumps(status(), ensure_ascii=False, indent=2))
@@ -102,6 +114,49 @@ def main() -> int:
         limit = args.assets_list if args.assets_list is not None else 200
         assets = manager.list_assets(limit=limit, probed_only=args.probed_only)
         print(json.dumps(assets, ensure_ascii=False, indent=2))
+        return 0
+    if args.inc_scan:
+        from treecut.scanner import IncrementalScanner
+        result = IncrementalScanner().scan(args.inc_scan)
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.lifecycle_dashboard:
+        from treecut.library.processing_state import ProcessingState
+        print(json.dumps(ProcessingState().dashboard(), ensure_ascii=False, indent=2))
+        return 0
+    if args.lifecycle_list is not None:
+        from treecut.library.processing_state import ProcessingState, STAGES
+        ps = ProcessingState()
+        limit = args.lifecycle_list if args.lifecycle_list is not None else 200
+        stage_filter = args.stage_status or None
+        status_filter = args.filter_status or None
+        with ps._connect() as connection:
+            where = []
+            params: list = []
+            if stage_filter:
+                where.append("stage=?")
+                params.append(stage_filter)
+            if status_filter:
+                where.append("status=?")
+                params.append(status_filter)
+            clause = f"WHERE {' AND '.join(where)}" if where else ""
+            rows = connection.execute(
+                f"SELECT asset_id,stage,status,model_name,model_version,input_fingerprint,"
+                f"retry_count,error_message,updated_at FROM asset_processing_state {clause} "
+                f"ORDER BY updated_at DESC LIMIT ?", (*params, limit)
+            ).fetchall()
+        print(json.dumps([dict(r) for r in rows], ensure_ascii=False, indent=2))
+        return 0
+    if args.mark_stale:
+        asset_id, stage, reason = args.mark_stale
+        from treecut.library.processing_state import ProcessingState
+        ps = ProcessingState()
+        ps.mark_stale(asset_id, stage, reason)
+        affected = ps.get_asset_states(asset_id)
+        print(json.dumps({
+            "marked_stale": {"asset_id": asset_id, "stage": stage, "reason": reason},
+            "after": {s: v.status for s, v in affected.items()},
+        }, ensure_ascii=False, indent=2))
         return 0
     parser.print_help()
     return 0
