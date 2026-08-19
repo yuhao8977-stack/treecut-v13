@@ -60,6 +60,14 @@ def main() -> int:
                         help="P1.1: 与 --lifecycle-list 连用，仅显示指定状态（如 FAILED/STALE/PENDING）")
     parser.add_argument("--mark-stale", nargs=3, metavar=("ASSET_ID", "STAGE", "REASON"),
                         help="P1.1: 手动将某资产某阶段标记 STALE（级联下游）")
+    parser.add_argument("--p2-run", type=int, metavar="COUNT", default=None,
+                        help="P2: 处理指定数量素材的 scene/keyframe/asr/ocr")
+    parser.add_argument("--p2-status", action="store_true",
+                        help="P2: 显示 scene/keyframe/asr/ocr 阶段统计")
+    parser.add_argument("--p2-no-asr", action="store_true",
+                        help="P2: --p2-run 时跳过 ASR（仅 scene/keyframe/ocr）")
+    parser.add_argument("--p2-no-ocr", action="store_true",
+                        help="P2: --p2-run 时跳过 OCR")
     args = parser.parse_args()
     if args.status:
         print(json.dumps(status(), ensure_ascii=False, indent=2))
@@ -156,6 +164,33 @@ def main() -> int:
         print(json.dumps({
             "marked_stale": {"asset_id": asset_id, "stage": stage, "reason": reason},
             "after": {s: v.status for s, v in affected.items()},
+        }, ensure_ascii=False, indent=2))
+        return 0
+    if args.p2_run is not None:
+        context = bootstrap()
+        from treecut.analysis.p2_worker import P2Worker
+        worker = P2Worker(paths=context.paths,
+                          include_asr=not args.p2_no_asr,
+                          include_ocr=not args.p2_no_ocr)
+        result = worker.run(limit=args.p2_run)
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.p2_status:
+        from treecut.library.processing_state import ProcessingState
+        from treecut.library.segments import SegmentStore
+        ps = ProcessingState()
+        stats = ps.stage_stats()
+        store = SegmentStore()
+        with store._connect() as connection:
+            segs = connection.execute("SELECT COUNT(*) n FROM segments").fetchone()["n"]
+            kfs = connection.execute("SELECT COUNT(*) n FROM keyframes").fetchone()["n"]
+            trs = connection.execute("SELECT COUNT(*) n FROM transcripts").fetchone()["n"]
+            ocrs = connection.execute("SELECT COUNT(*) n FROM ocr_text").fetchone()["n"]
+        print(json.dumps({
+            "stage_stats": {k: stats.get(k, {}) for k in
+                            ("scene", "keyframe", "asr", "ocr")},
+            "result_counts": {"segments": segs, "keyframes": kfs,
+                              "transcripts": trs, "ocr_items": ocrs},
         }, ensure_ascii=False, indent=2))
         return 0
     parser.print_help()
