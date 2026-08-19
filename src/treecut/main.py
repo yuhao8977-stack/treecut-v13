@@ -86,6 +86,15 @@ def main() -> int:
                         help="P4: 混合检索（如 '客户家 无人 全景 伸缩岛台'）")
     parser.add_argument("--search-topk", type=int, default=5,
                         help="P4: --search 返回条数（默认 5）")
+    parser.add_argument("--template-register", action="store_true",
+                        help="P5: 注册 CT01/CT02 模板到库")
+    parser.add_argument("--template-list", action="store_true",
+                        help="P5: 列出已注册模板")
+    parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
+                        help="P5: 为模板槽位推荐候选镜头")
+    parser.add_argument("--template-select", nargs=5,
+                        metavar=("PROJECT", "TID", "SLOT", "SEGMENT", "STATUS"),
+                        help="P5: 保存选镜结果（candidate/selected/backup/excluded）")
     args = parser.parse_args()
     if args.status:
         print(json.dumps(status(), ensure_ascii=False, indent=2))
@@ -274,6 +283,36 @@ def main() -> int:
         hs = HybridSearch()
         result = hs.search(args.search, top_k=args.search_topk)
         print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.template_register:
+        from treecut.templates import list_templates
+        from treecut.templates.engine import TemplateEngine
+        engine = TemplateEngine()
+        for t in list_templates():
+            engine.register_template(t)
+        print(json.dumps({"registered": engine.list_registered()},
+                         ensure_ascii=False, indent=2))
+        return 0
+    if args.template_list:
+        from treecut.templates.engine import TemplateEngine
+        engine = TemplateEngine()
+        print(json.dumps(engine.list_registered(), ensure_ascii=False, indent=2))
+        return 0
+    if args.template_recommend:
+        tid, version, slot = args.template_recommend
+        from treecut.templates.engine import TemplateEngine
+        engine = TemplateEngine()
+        candidates = engine.recommend_slot(tid, version, int(slot), top_k=10)
+        print(json.dumps([c.to_dict() for c in candidates], ensure_ascii=False, indent=2))
+        return 0
+    if args.template_select:
+        project, tid, slot, segment, status = args.template_select
+        from treecut.templates.engine import TemplateEngine
+        engine = TemplateEngine()
+        engine.save_selection(project, tid, "1.0", int(slot), segment, status)
+        print(json.dumps({"saved": {"project": project, "slot": int(slot),
+                                    "segment": segment, "status": status}},
+                         ensure_ascii=False, indent=2))
         return 0
     parser.print_help()
     return 0
