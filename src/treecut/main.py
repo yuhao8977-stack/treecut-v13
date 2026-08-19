@@ -95,6 +95,10 @@ def main() -> int:
     parser.add_argument("--template-select", nargs=5,
                         metavar=("PROJECT", "TID", "SLOT", "SEGMENT", "STATUS"),
                         help="P5: 保存选镜结果（candidate/selected/backup/excluded）")
+    parser.add_argument("--advise-sort", metavar="PROJECT",
+                        help="P6: AI 排序建议（只建议不改）")
+    parser.add_argument("--roughcut", nargs=2, metavar=("PROJECT", "OUT_DIR"),
+                        help="P6: 按选镜生成 FFmpeg 粗剪（rough_cut+timeline+cuts+srt）")
     args = parser.parse_args()
     if args.status:
         print(json.dumps(status(), ensure_ascii=False, indent=2))
@@ -313,6 +317,19 @@ def main() -> int:
         print(json.dumps({"saved": {"project": project, "slot": int(slot),
                                     "segment": segment, "status": status}},
                          ensure_ascii=False, indent=2))
+        return 0
+    if args.advise_sort:
+        from treecut.roughcut import SortAdvisor
+        advisor = SortAdvisor()
+        suggestion = advisor.advise(args.advise_sort)
+        print(json.dumps(suggestion.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.roughcut:
+        project, out_dir = args.roughcut
+        from treecut.roughcut import RoughCutEngine
+        engine = RoughCutEngine()
+        result = engine.build(project, out_dir)
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
         return 0
     parser.print_help()
     return 0
