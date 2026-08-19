@@ -39,6 +39,15 @@ def main() -> int:
     parser.add_argument("--catalog-scan", metavar="PATH", help="增量登记指定素材目录")
     parser.add_argument("--catalog-status", action="store_true", help="显示素材库状态")
     parser.add_argument("--analyze", type=int, metavar="COUNT", help="处理指定数量的素材分析任务")
+    parser.add_argument("--probe-assets", type=int, metavar="COUNT", default=None,
+                        help="P1: 采集指定数量素材的 ffprobe 元数据与完整指纹")
+    parser.add_argument("--assets-status", action="store_true", help="P1: 显示资产表状态")
+    parser.add_argument("--assets-list", type=int, metavar="LIMIT", default=None,
+                        help="P1: 列出资产（默认 200，加 --assets-list 1 只列已探测）")
+    parser.add_argument("--probed-only", action="store_true",
+                        help="P1: --assets-list 时仅列出已探测元数据的资产")
+    parser.add_argument("--migrate-v12", metavar="V12_DB",
+                        help="P1: 从 v12 ai_material_library.db 只读迁移素材身份")
     args = parser.parse_args()
     if args.status:
         print(json.dumps(status(), ensure_ascii=False, indent=2))
@@ -65,6 +74,34 @@ def main() -> int:
         context = bootstrap()
         result = AnalysisWorker(paths=context.paths).run(limit=args.analyze)
         print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.migrate_v12:
+        from treecut.library import V12Migrator
+        result = V12Migrator().migrate(args.migrate_v12)
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.probe_assets is not None:
+        context = bootstrap()
+        from treecut.library import ProbeWorker
+        result = ProbeWorker(paths=context.paths).run(limit=args.probe_assets)
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.assets_status:
+        context = bootstrap()
+        from treecut.library import AssetsManager
+        manager = AssetsManager()
+        print(json.dumps({
+            "assets": manager.stats(),
+            "pending_probes": len(manager.pending_probes(limit=1000)),
+        }, ensure_ascii=False, indent=2))
+        return 0
+    if args.assets_list is not None or args.probed_only:
+        context = bootstrap()
+        from treecut.library import AssetsManager
+        manager = AssetsManager()
+        limit = args.assets_list if args.assets_list is not None else 200
+        assets = manager.list_assets(limit=limit, probed_only=args.probed_only)
+        print(json.dumps(assets, ensure_ascii=False, indent=2))
         return 0
     parser.print_help()
     return 0
