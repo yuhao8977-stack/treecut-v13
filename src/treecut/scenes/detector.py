@@ -46,14 +46,33 @@ class SceneDetector:
                     "start_ms": int(start * 1000),
                     "end_ms": int(end * 1000),
                 })
+            # 无场景切换（单镜头稳定素材）→ 均匀分段保证可用候选
+            if not segments:
+                if duration_sec is None:
+                    from treecut.media.probe import probe_media, bundled_ffprobe
+                    import shutil
+                    try:
+                        ff = bundled_ffprobe(self._install_root())
+                    except Exception:
+                        ff = Path(shutil.which("ffprobe") or "")
+                    if ff.is_file():
+                        duration_sec = probe_media(path, ff).duration
+                if duration_sec is None:
+                    duration_sec = 30.0
+                segments = self._uniform_split(path, duration_sec)
+                self._fell_back = True
         except Exception:
             # 降级：按均匀分段（无依赖时的兜底，算法版本明确标注）
             segments = self._uniform_split(path, duration_sec)
+            self._fell_back = True
         return SceneDetectResult(
             segments=tuple(segments),
             seconds=round(time.perf_counter() - started, 3),
-            algorithm_version=self.ALGORITHM_VERSION,
+            algorithm_version=self.ALGORITHM_VERSION + ("-uniform" if getattr(self, "_fell_back", False) else ""),
         )
+
+    def _install_root(self) -> Path:
+        return Path(__file__).resolve().parents[3]
 
     def _uniform_split(self, path: Path, duration_sec: float | None) -> list[dict]:
         if duration_sec is None:
