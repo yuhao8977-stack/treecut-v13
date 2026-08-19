@@ -76,6 +76,16 @@ def main() -> int:
                         help="P3: 列出某资产标签")
     parser.add_argument("--add-label", nargs=3, metavar=("ASSET_ID", "CATEGORY", "LABEL"),
                         help="P3: 人工添加标签（human_override 优先）")
+    parser.add_argument("--embed", type=int, metavar="COUNT", default=None,
+                        help="P4: 为素材生成 segment embedding 并建 FAISS 索引")
+    parser.add_argument("--embed-status", action="store_true",
+                        help="P4: 显示向量索引状态")
+    parser.add_argument("--index-text", action="store_true",
+                        help="P4: 重建 FTS5 全文索引（transcripts/ocr）")
+    parser.add_argument("--search", metavar="QUERY",
+                        help="P4: 混合检索（如 '客户家 无人 全景 伸缩岛台'）")
+    parser.add_argument("--search-topk", type=int, default=5,
+                        help="P4: --search 返回条数（默认 5）")
     args = parser.parse_args()
     if args.status:
         print(json.dumps(status(), ensure_ascii=False, indent=2))
@@ -241,6 +251,29 @@ def main() -> int:
         print(json.dumps({"added": {"asset_id": asset_id, "category": category,
                                      "label": label, "source": "human"}},
                          ensure_ascii=False, indent=2))
+        return 0
+    if args.embed is not None:
+        from treecut.analysis.embedding_worker import EmbeddingWorker
+        worker = EmbeddingWorker()
+        result = worker.run(limit=args.embed)
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.embed_status:
+        from treecut.search.embedding import EmbeddingIndexer
+        idx = EmbeddingIndexer()
+        print(json.dumps(idx.stats(), ensure_ascii=False, indent=2))
+        return 0
+    if args.index_text:
+        from treecut.search.hybrid import HybridSearch
+        hs = HybridSearch()
+        n = hs.index_texts()
+        print(json.dumps({"fts_indexed": n}, ensure_ascii=False, indent=2))
+        return 0
+    if args.search:
+        from treecut.search.hybrid import HybridSearch
+        hs = HybridSearch()
+        result = hs.search(args.search, top_k=args.search_topk)
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
         return 0
     parser.print_help()
     return 0
