@@ -69,6 +69,10 @@ CT02 = {
 
 TEMPLATES: dict[str, dict] = {"CT01": CT01, "CT02": CT02}
 
+# CT03-CT12（P7 扩展，见 definitions_ext.py）
+from .definitions_ext import TEMPLATES_EXT
+TEMPLATES.update(TEMPLATES_EXT)
+
 
 def list_templates() -> list[dict]:
     return list(TEMPLATES.values())

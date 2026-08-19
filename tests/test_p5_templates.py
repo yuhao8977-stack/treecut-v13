@@ -41,11 +41,11 @@ def test_template_register(isolated_env):
     for t in list_templates():
         engine.register_template(t)
     reg = engine.list_registered()
-    assert len(reg) == 2
+    assert len(reg) == 12  # CT01-CT12（P7 扩展后）
     # 槽位表
     with engine._connect() as conn:
         n = conn.execute("SELECT COUNT(*) n FROM template_slots").fetchone()["n"]
-    assert n == 17  # 8 + 9
+    assert n == 78  # 8+9+6+7+6+7+6+6+6+5+6+6
 
 
 def test_recommend_slot(isolated_env):
