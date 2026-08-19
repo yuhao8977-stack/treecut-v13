@@ -12,6 +12,7 @@ from .processing_state import (
     STATUS_PARTIAL, STATUS_FAILED, STATUS_SKIPPED, STATUS_STALE, STATUS_REVIEW,
 )
 from .segments import SegmentStore
+from .classification_store import ClassificationStore
 
 __all__ = [
     "Catalog", "ScanResult", "PreliminaryCategory", "classify_filename",
@@ -22,5 +23,5 @@ __all__ = [
     "ProcessingState", "StageState", "STAGES", "ALL_STATUSES",
     "STATUS_NEW", "STATUS_PENDING", "STATUS_PROCESSING", "STATUS_DONE",
     "STATUS_PARTIAL", "STATUS_FAILED", "STATUS_SKIPPED", "STATUS_STALE", "STATUS_REVIEW",
-    "SegmentStore",
+    "SegmentStore", "ClassificationStore",
 ]

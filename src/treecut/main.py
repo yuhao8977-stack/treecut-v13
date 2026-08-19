@@ -68,6 +68,14 @@ def main() -> int:
                         help="P2: --p2-run 时跳过 ASR（仅 scene/keyframe/ocr）")
     parser.add_argument("--p2-no-ocr", action="store_true",
                         help="P2: --p2-run 时跳过 OCR")
+    parser.add_argument("--p3-run", type=int, metavar="COUNT", default=None,
+                        help="P3: 成片/原片分类 + 重复识别 + TC_CONTENT_TAGS 标签")
+    parser.add_argument("--p3-status", action="store_true",
+                        help="P3: 显示分类/标签/重复统计")
+    parser.add_argument("--labels", metavar="ASSET_ID",
+                        help="P3: 列出某资产标签")
+    parser.add_argument("--add-label", nargs=3, metavar=("ASSET_ID", "CATEGORY", "LABEL"),
+                        help="P3: 人工添加标签（human_override 优先）")
     args = parser.parse_args()
     if args.status:
         print(json.dumps(status(), ensure_ascii=False, indent=2))
@@ -192,6 +200,47 @@ def main() -> int:
             "result_counts": {"segments": segs, "keyframes": kfs,
                               "transcripts": trs, "ocr_items": ocrs},
         }, ensure_ascii=False, indent=2))
+        return 0
+    if args.p3_run is not None:
+        from treecut.analysis.p3_worker import P3Worker
+        worker = P3Worker()
+        result = worker.run(limit=args.p3_run)
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.p3_status:
+        from treecut.library.classification_store import ClassificationStore
+        cls = ClassificationStore()
+        with cls._connect() as connection:
+            types = {
+                row["asset_type"]: row["n"]
+                for row in connection.execute(
+                    "SELECT asset_type,COUNT(*) n FROM asset_types GROUP BY asset_type"
+                ).fetchall()
+            }
+            labels = connection.execute("SELECT COUNT(*) n FROM labels").fetchone()["n"]
+            dup_groups = connection.execute(
+                "SELECT COUNT(*) n FROM duplicate_groups").fetchone()["n"]
+            human = connection.execute(
+                "SELECT COUNT(*) n FROM labels WHERE source='human'").fetchone()["n"]
+        print(json.dumps({
+            "asset_types": types, "total_labels": labels,
+            "human_labels": human, "duplicate_groups": dup_groups,
+        }, ensure_ascii=False, indent=2))
+        return 0
+    if args.labels:
+        from treecut.library.classification_store import ClassificationStore
+        cls = ClassificationStore()
+        labels = cls.list_labels(asset_id=args.labels)
+        print(json.dumps(labels, ensure_ascii=False, indent=2))
+        return 0
+    if args.add_label:
+        asset_id, category, label = args.add_label
+        from treecut.library.classification_store import ClassificationStore
+        cls = ClassificationStore()
+        cls.save_human_label(asset_id, label, category=category)
+        print(json.dumps({"added": {"asset_id": asset_id, "category": category,
+                                     "label": label, "source": "human"}},
+                         ensure_ascii=False, indent=2))
         return 0
     parser.print_help()
     return 0
