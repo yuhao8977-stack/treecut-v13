@@ -1,0 +1,32 @@
+name: 发布构建
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 运行测试与清单校验
+        shell: pwsh
+        run: |
+          .\runtime\python.exe -m pytest tests -q
+          .\runtime\python.exe -m compileall -q src
+          $env:PYTHONPATH = "$PWD\scripts"
+          .\runtime\python.exe -m scripts.generate_release_metadata --root "$PWD\release_payload"
+          .\runtime\python.exe -m scripts.verify_release_manifest --root "$PWD\release_payload"
+
+      - name: 构建安装包
+        shell: pwsh
+        run: |
+          .\tools\inno\ISCC.exe installer\TreeCut_v13_CPU_Setup.iss
+
+      - name: 上传安装包
+        uses: actions/upload-artifact@v4
+        with:
+          name: TreeCut-Setup
+          path: output\TreeCut_v13_CPU_Setup.exe
