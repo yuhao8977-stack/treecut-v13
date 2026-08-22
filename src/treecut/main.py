@@ -68,6 +68,21 @@ def main() -> int:
                         help="P2: --p2-run 时跳过 ASR（仅 scene/keyframe/ocr）")
     parser.add_argument("--p2-no-ocr", action="store_true",
                         help="P2: --p2-run 时跳过 OCR")
+    parser.add_argument("--p2.5-run", type=int, metavar="COUNT", default=None,
+                        dest="p25_run",
+                        help="P2.5: 并行分析（默认3 Worker）指定数量素材（缺省=全部剩余）")
+    parser.add_argument("--p2.5-workers", type=int, default=3, metavar="N",
+                        dest="p25_workers",
+                        help="P2.5: Worker 进程数（默认 3：视觉/ASR/OCR 各一）")
+    parser.add_argument("--p2.5-stages", default="scene,keyframe,asr,ocr",
+                        dest="p25_stages", metavar="STAGES",
+                        help="P2.5: 参与分析的阶段（逗号分隔）")
+    parser.add_argument("--p2.5-force", action="store_true",
+                        dest="p25_force",
+                        help="P2.5: 强制并行（即使检测到旧 P2 进程正在处理）")
+    parser.add_argument("--p2.5-status", action="store_true",
+                        dest="p25_status",
+                        help="P2.5: 显示任务调度状态（analysis_tasks 统计）")
     parser.add_argument("--p3-run", type=int, metavar="COUNT", default=None,
                         help="P3: 成片/原片分类 + 重复识别 + TC_CONTENT_TAGS 标签")
     parser.add_argument("--p3-status", action="store_true",
@@ -223,6 +238,23 @@ def main() -> int:
             "result_counts": {"segments": segs, "keyframes": kfs,
                               "transcripts": trs, "ocr_items": ocrs},
         }, ensure_ascii=False, indent=2))
+        return 0
+    if args.p25_status:
+        from treecut.analysis.scheduler import TaskScheduler
+        context = bootstrap()
+        print(json.dumps(TaskScheduler(context.paths).status(),
+                         ensure_ascii=False, indent=2))
+        return 0
+    if args.p25_run is not None or args.p25_workers != 3 or args.p25_force:
+        # --p2.5-run 显式 0 或缺省均代表"处理全部剩余"
+        context = bootstrap()
+        from treecut.analysis.scheduler import TaskScheduler
+        scheduler = TaskScheduler(context.paths)
+        stages = [s.strip() for s in args.p25_stages.split(",") if s.strip()]
+        limit = args.p25_run if (args.p25_run or 0) > 0 else None
+        result = scheduler.run(workers=args.p25_workers, limit=limit,
+                               stages=stages, force=args.p25_force)
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
         return 0
     if args.p3_run is not None:
         from treecut.analysis.p3_worker import P3Worker
