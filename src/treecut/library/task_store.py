@@ -258,7 +258,7 @@ class TaskStore:
         with closing(self._connect()) as connection:
             connection.execute(
                 "UPDATE analysis_tasks SET status=?,finished_time=?,error=? WHERE task_id=?",
-                (STATUS_SKIPPED, now, reason[:500]),
+                (STATUS_SKIPPED, now, reason[:500], task_id),
             )
             connection.commit()
 
