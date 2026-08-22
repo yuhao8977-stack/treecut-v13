@@ -83,6 +83,9 @@ def main() -> int:
     parser.add_argument("--p2.5-status", action="store_true",
                         dest="p25_status",
                         help="P2.5: 显示任务调度状态（analysis_tasks 统计）")
+    parser.add_argument("--asr-device", default=None, metavar="DEVICE",
+                        dest="asr_device",
+                        help="ASR 推理设备: auto/cpu/cuda（默认 auto，自动检测 GPU）")
     parser.add_argument("--p3-run", type=int, metavar="COUNT", default=None,
                         help="P3: 成片/原片分类 + 重复识别 + TC_CONTENT_TAGS 标签")
     parser.add_argument("--p3-status", action="store_true",
@@ -245,7 +248,7 @@ def main() -> int:
         print(json.dumps(TaskScheduler(context.paths).status(),
                          ensure_ascii=False, indent=2))
         return 0
-    if args.p25_run is not None or args.p25_workers != 3 or args.p25_force:
+    if args.p25_run is not None or args.p25_workers != 3 or args.p25_force or args.asr_device:
         # --p2.5-run 显式 0 或缺省均代表"处理全部剩余"
         context = bootstrap()
         from treecut.analysis.scheduler import TaskScheduler
@@ -253,7 +256,8 @@ def main() -> int:
         stages = [s.strip() for s in args.p25_stages.split(",") if s.strip()]
         limit = args.p25_run if (args.p25_run or 0) > 0 else None
         result = scheduler.run(workers=args.p25_workers, limit=limit,
-                               stages=stages, force=args.p25_force)
+                               stages=stages, force=args.p25_force,
+                               asr_device=args.asr_device)
         print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
         return 0
     if args.p3_run is not None:

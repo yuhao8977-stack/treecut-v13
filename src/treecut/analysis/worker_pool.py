@@ -19,11 +19,18 @@ from treecut.platform.paths import RuntimePaths
 
 def _pool_entry(worker_id: str, task_type: str, stages: list[str],
                 db_path: str, log_path: str, limit: int | None,
+                asr_device: str | None, cuda_dll_dir: str | None,
                 ready_queue, result_queue, stop_event) -> None:
     """spawn 子进程入口。模型常驻，循环领取任务直到无 pending 或达 limit。"""
+    if cuda_dll_dir:
+        import os
+        cur = os.environ.get("PATH", "")
+        if cuda_dll_dir not in cur:
+            os.environ["PATH"] = cuda_dll_dir + os.pathsep + cur
     from treecut.analysis.worker_p25 import Worker25
     worker = Worker25(worker_id=worker_id, task_type=task_type, stages=stages,
-                      db_path=db_path, log_path=log_path)
+                      db_path=db_path, log_path=log_path,
+                      asr_device=asr_device)
     ready_queue.put(worker_id)
     try:
         counts = worker.run(limit=limit)
@@ -47,12 +54,15 @@ class WorkerPool:
 
     def __init__(self, workers: int = 3, paths: RuntimePaths | None = None,
                  stages: dict[str, list[str]] | None = None,
-                 limit: int | None = None):
+                 limit: int | None = None, asr_device: str | None = None,
+                 cuda_dll_dir: str | None = None):
         if not isinstance(workers, int) or workers < 1:
             raise ValueError(f"Worker 数必须是正整数: {workers}")
         self.workers = workers
         self.paths = paths or RuntimePaths.discover()
         self.limit = limit
+        self.asr_device = asr_device or "auto"
+        self.cuda_dll_dir = cuda_dll_dir
         stage_map = dict(stages or DEFAULT_STAGES)
         if not stage_map:
             stage_map = dict(DEFAULT_STAGES)
@@ -98,7 +108,8 @@ class WorkerPool:
                 args=(assignment["worker_id"], assignment["task_type"],
                       assignment["stages"], db_path,
                       str(log_dir / f"worker_{assignment['worker_id']}.log"),
-                      self.limit, ready_queue, result_queue, stop_event),
+                      self.limit, self.asr_device, self.cuda_dll_dir,
+                      ready_queue, result_queue, stop_event),
                 daemon=True,
             )
             processes.append(process)

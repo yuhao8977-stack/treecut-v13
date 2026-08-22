@@ -32,17 +32,18 @@ class Worker25:
 
     def __init__(self, worker_id: str, task_type: str, stages: list[str],
                  db_path: str | Path | None = None, log_path: str | Path | None = None,
-                 asr_model: str = "small"):
+                 asr_model: str = "small", asr_device: str | None = "auto"):
         self.worker_id = worker_id
         self.task_type = task_type
         self.stages = stages
+        self.asr_device = asr_device or "auto"
         self.paths = RuntimePaths.discover()
         self.store = TaskStore(db_path or (self.paths.databases / "materials.db"))
         self.ps = ProcessingState()
         self.segments_store = SegmentStore()
         self.scene_detector = SceneDetector()
         self.keyframe_extractor = KeyframeExtractor(paths=self.paths)
-        self.asr_engine = WhisperEngine(model_size=asr_model)
+        self.asr_engine = WhisperEngine(model_size=asr_model, device=self.asr_device)
         self.ocr_engine = OcrEngine()
         self.logger = logging.getLogger(f"treecut.worker.{worker_id}")
         self._setup_logging(log_path)

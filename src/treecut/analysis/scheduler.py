@@ -116,8 +116,11 @@ class TaskScheduler:
 
     def run(self, workers: int = 3, limit: int | None = None,
             stages: list[str] | None = None,
-            force: bool = False) -> SchedulerResult:
-        """完整流程：迁移 → 同步任务 → 检查旧进程 → WorkerPool 并行执行。"""
+            force: bool = False, asr_device: str | None = None) -> SchedulerResult:
+        """完整流程：迁移 → 同步任务 → 检查旧进程 → WorkerPool 并行执行。
+
+        asr_device: auto/cpu/cuda，透传给 ASR Worker（默认 auto 自动检测）。
+        """
         started = time.perf_counter()
         stages = stages or self.DEFAULT_P2_STAGES
 
@@ -142,7 +145,8 @@ class TaskScheduler:
                 )
 
         # 3) 启动 WorkerPool
-        pool = WorkerPool(workers=workers, paths=self.paths, limit=limit)
+        pool = WorkerPool(workers=workers, paths=self.paths, limit=limit,
+                          asr_device=asr_device)
         summaries = pool.run(batch_size=limit)
 
         # 4) 汇总

@@ -24,17 +24,41 @@ class AsrResult:
 
 
 class WhisperEngine:
-    """faster-whisper 封装。先 small；中文口播 Benchmark 不足可换 medium。"""
+    """faster-whisper 封装。先 small；中文口播 Benchmark 不足可换 medium。
 
-    def __init__(self, model_size: str = "small", device: str = "cpu",
+    device ∈ {auto, cpu, cuda}：
+      - auto: 自动检测（GPU 可用且显存充足 → cuda/float16，否则 cpu/int8）
+      - cpu:  强制 CPU (int8)
+      - cuda: 强制 GPU (float16)，不可用则抛错
+    """
+
+    def __init__(self, model_size: str = "small", device: str = "auto",
                  compute_type: str = "auto", language: str = "zh"):
-        # 默认 CPU：本机无 CUDA/cuDNN 完整环境（cublas64_12.dll 缺失），
-        # CPU int8 推理稳定；GPU 需显式 device="cuda" + 完整 CUDA 运行时
         self.model_size = model_size
         self.device = device
         self.compute_type = compute_type
         self.language = language
         self._model = None
+        self._device_decision = None
+
+    @property
+    def device_decision(self):
+        """返回 DeviceDecision（在首次加载后可用）。"""
+        return self._device_decision
+
+    def _resolve_device(self):
+        """把 auto/cpu/cuda 解析为 (device, compute_type)。"""
+        from treecut.asr.device_manager import detect_device, apply_cuda_dll_path
+        if self.device == "auto":
+            apply_cuda_dll_path()  # 先注入 TREECUT_CUDA_DLL_DIR 目录（若有）
+            decision = detect_device("auto")
+        else:
+            apply_cuda_dll_path()
+            decision = detect_device(self.device)
+        self._device_decision = decision
+        if self.compute_type and self.compute_type != "auto":
+            return decision.device, self.compute_type
+        return decision.device, decision.compute_type
 
     def _lazy_load(self):
         if self._model is None:
@@ -50,9 +74,15 @@ class WhisperEngine:
             if not (Path(current_hf) / "hub" / model_dir_name).exists() and \
                (Path(user_hf) / "hub" / model_dir_name).exists():
                 _os.environ["HF_HOME"] = user_hf
+            device, compute_type = self._resolve_device()
+            import logging
+            logging.getLogger("treecut.asr").info(
+                "WhisperEngine 设备决策: device=%s compute_type=%s (%s)",
+                device, compute_type,
+                self._device_decision.reason if self._device_decision else "")
             from faster_whisper import WhisperModel
-            self._model = WhisperModel(self.model_size, device=self.device,
-                                       compute_type=self.compute_type)
+            self._model = WhisperModel(self.model_size, device=device,
+                                       compute_type=compute_type)
 
     def transcribe(self, video_path: str | Path) -> AsrResult:
         started = time.perf_counter()

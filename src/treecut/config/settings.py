@@ -15,6 +15,7 @@ class Settings:
     output_mode: Literal["jianying", "mp4", "both"] = "both"
     model_mode: Literal["auto", "cpu", "nvidia"] = "auto"
     vision_mode: Literal["auto", "florence", "qwen"] = "auto"
+    asr_device: Literal["auto", "cpu", "cuda"] = "auto"
     default_duration: float = 30.0
     auto_preview: bool = True
     analysis_workers: int = 2
@@ -27,6 +28,8 @@ class Settings:
             raise ValueError(f"不支持的模型模式: {self.model_mode}")
         if self.vision_mode not in {"auto", "florence", "qwen"}:
             raise ValueError(f"不支持的视觉模型选择: {self.vision_mode}")
+        if self.asr_device not in {"auto", "cpu", "cuda"}:
+            raise ValueError(f"不支持的 ASR 设备: {self.asr_device}（可选 auto/cpu/cuda）")
         if not isinstance(self.auto_preview, bool):
             raise ValueError("自动预览必须是布尔值")
         if not isinstance(self.analysis_workers, int) or not 1 <= self.analysis_workers <= 4:
