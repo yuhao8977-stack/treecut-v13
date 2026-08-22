@@ -84,23 +84,25 @@ class TaskScheduler:
         for row in rows:
             pending_by_asset.setdefault(row["asset_id"], set()).add(row["stage"])
 
-        # 按 task_type 分桶创建
+        # 按 task_type 分桶批量创建（单事务，避免逐条提交 3 万次）
         created = 0
         by_type: dict[str, int] = {}
+        buckets: dict[str, list[str]] = {"vision": [], "asr": [], "ocr": []}
         for asset_id, asset_stages in pending_by_asset.items():
             vision = [s for s in ("scene", "keyframe") if s in asset_stages]
-            asr = "asr" in asset_stages
-            ocr = "ocr" in asset_stages
             if vision:
-                created += self.store.create_task(
-                    asset_id, "vision", stages=",".join(vision))
-                by_type["vision"] = by_type.get("vision", 0) + 1
-            if asr:
-                created += self.store.create_task(asset_id, "asr", stages="asr")
-                by_type["asr"] = by_type.get("asr", 0) + 1
-            if ocr:
-                created += self.store.create_task(asset_id, "ocr", stages="ocr")
-                by_type["ocr"] = by_type.get("ocr", 0) + 1
+                buckets["vision"].append(asset_id)
+            if "asr" in asset_stages:
+                buckets["asr"].append(asset_id)
+            if "ocr" in asset_stages:
+                buckets["ocr"].append(asset_id)
+        for task_type, stages_expr in (("vision", "scene,keyframe"),
+                                       ("asr", "asr"), ("ocr", "ocr")):
+            if buckets[task_type]:
+                n = self.store.create_tasks(buckets[task_type], task_type,
+                                            stages=stages_expr)
+                created += n
+                by_type[task_type] = n
 
         return {
             "created": created,

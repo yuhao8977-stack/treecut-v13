@@ -69,7 +69,7 @@ def main() -> int:
     parser.add_argument("--p2-no-ocr", action="store_true",
                         help="P2: --p2-run 时跳过 OCR")
     parser.add_argument("--p2.5-run", type=int, metavar="COUNT", default=None,
-                        dest="p25_run",
+                        nargs="?", const=0, dest="p25_run",
                         help="P2.5: 并行分析（默认3 Worker）指定数量素材（缺省=全部剩余）")
     parser.add_argument("--p2.5-workers", type=int, default=3, metavar="N",
                         dest="p25_workers",
