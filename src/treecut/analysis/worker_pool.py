@@ -69,11 +69,34 @@ class WorkerPool:
         self._assignments = self._assign(workers, stage_map)
 
     def _assign(self, workers: int, stage_map: dict[str, list[str]]) -> list[dict]:
-        """把 workers 个进程分配给 task_type。默认 3 Worker → vision/asr/ocr 各一。
+        """把 workers 个进程分配给 task_type。
 
-        多于 stage_map 时轮询复用（同阶段多 Worker 靠原子领取分片 asset）。
+        默认 3 类型（vision/asr/ocr）且 workers>3 时按瓶颈加权：
+        - ocr 固定 1（最快）
+        - asr 1~2（GPU 并发上限 2，显存 6GB / 模型 1.6GB）
+        - 其余全部给 vision（scene+keyframe 是最慢瓶颈）
+        否则按类型轮询（同阶段多 Worker 靠原子领取分片 asset）。
         """
         types = list(stage_map.keys())
+        # 瓶颈加权（仅当默认 3 类型且 worker 数 > 类型数）
+        if (len(types) == 3 and set(types) == {"vision", "asr", "ocr"}
+                and workers > len(types)):
+            ocr_n = 1
+            asr_n = 1 if workers <= 4 else min(2, workers - 2)
+            vision_n = workers - ocr_n - asr_n
+            counts = {"vision": vision_n, "asr": asr_n, "ocr": ocr_n}
+            assignments = []
+            idx = 1
+            for task_type in ("vision", "asr", "ocr"):
+                for _ in range(counts[task_type]):
+                    assignments.append({
+                        "worker_id": f"worker_{idx:03d}",
+                        "task_type": task_type,
+                        "stages": stage_map[task_type],
+                    })
+                    idx += 1
+            return assignments
+        # 默认轮询
         assignments = []
         for i in range(workers):
             task_type = types[i % len(types)]
