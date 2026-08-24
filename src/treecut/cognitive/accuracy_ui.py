@@ -39,6 +39,7 @@ class AccuracyReviewApp(tk.Tk):
         self.queue: list[dict] = []
         self.current_index = 0
         self.current: dict | None = None
+        self.templates: dict[str, dict] = self._load_templates()
 
         self.title("TreeCut AI 业务理解能力验证 - 人工审核")
         self.geometry("1680x940")
@@ -47,6 +48,44 @@ class AccuracyReviewApp(tk.Tk):
         self._build_layout()
         self._reload_queue(force_reviewed=False)
         self.protocol("WM_DELETE_WINDOW", self.destroy)
+
+    def _load_templates(self) -> dict[str, dict]:
+        """加载模板定义（T001-T004），供审核时查看。"""
+        conn = sqlite3.connect(
+            "file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
+        rows = conn.execute(
+            "SELECT template_id, template_name, content_type, structure, cta "
+            "FROM content_templates").fetchall()
+        conn.close()
+        out = {}
+        for tid, name, ctype, structure, cta in rows:
+            try:
+                struct = json.loads(structure or "[]")
+                roles = " → ".join(f"{s.get('t','')}{s.get('role','')}" for s in struct)
+            except Exception:
+                roles = ""
+            out[tid] = {"name": name, "content_type": ctype,
+                        "structure": roles, "cta": cta}
+        return out
+
+    def _all_templates_desc(self) -> str:
+        """全部模板清单（审核前必读）。"""
+        lines = []
+        for tid in ("T001", "T002", "T003", "T004"):
+            t = self.templates.get(tid)
+            if t:
+                lines.append(f"· {tid} {t['name']}（{t['content_type']}）: {t['structure']} | CTA: {t['cta']}")
+        return "\n".join(lines) if lines else "（模板库为空）"
+
+    def template_desc(self, tid: str) -> str:
+        """返回模板的可读描述（无模板/未知模板时给提示）。"""
+        if not tid or tid in ("", "无推荐"):
+            return "无推荐模板 — 此类素材当前无匹配模板，可人工指定或跳过"
+        t = self.templates.get(tid)
+        if not t:
+            return f"{tid}（未知模板，可在模板表查看）"
+        return (f"{tid} {t['name']}（适用: {t['content_type']}）\n"
+                f"结构: {t['structure']}\nCTA: {t['cta']}")
 
     # ------------------------------------------------------------------
     # 队列
@@ -204,28 +243,36 @@ class AccuracyReviewApp(tk.Tk):
         row("模板判定", self.tpl_verdict_var, ("适合", "部分适合", "不适合"), 8)
         row("人工最终模板", self.human_tpl_var, TEMPLATES, 9)
         row("模板原因", self.tpl_reason_var, r=10)
+        # 模板说明（当前 AI 推荐模板 + 全部模板清单）
+        tk.Label(form, text="📋 模板说明（审核前必读）", bg="#fffbe6",
+                 font=("Microsoft YaHei", 9, "bold")).grid(row=11, column=0, columnspan=2, sticky=tk.W, pady=(6, 2))
+        self.tpl_info_text = tk.Text(form, width=52, height=10,
+                                     font=("Microsoft YaHei", 8), bg="#fffbe6", relief=tk.GROOVE)
+        self.tpl_info_text.grid(row=12, column=0, columnspan=2, sticky=tk.W, padx=4, pady=2)
+        self.tpl_info_text.insert(tk.END, self._all_templates_desc())
+        self.tpl_info_text.config(state=tk.DISABLED)
 
         tk.Label(form, text="— 商业价值评分（5×20 拆解）—", bg="#f0f0f0",
-                 font=("Microsoft YaHei", 9, "bold")).grid(row=11, column=0, columnspan=2, sticky=tk.W, pady=(8, 2))
-        row("AI 商业总分", self.ai_biz_var, spin=True, r=12, spin_to=100)
+                 font=("Microsoft YaHei", 9, "bold")).grid(row=13, column=0, columnspan=2, sticky=tk.W, pady=(8, 2))
+        row("AI 商业总分", self.ai_biz_var, spin=True, r=14, spin_to=100)
         tk.Label(form, text="人工 5 维评分（每项 0-20）+ 原因",
-                 bg="#f0f0f0", font=("Microsoft YaHei", 8)).grid(row=13, column=0, columnspan=2, sticky=tk.W)
-        row("真实性/20", self.human_truth_var, spin=True, r=14, spin_to=20)
-        row("真实性原因", self.truth_reason_var, r=15)
-        row("产品价值/20", self.human_prod_var, spin=True, r=16, spin_to=20)
-        row("产品价值原因", self.prod_reason_var, r=17)
-        row("用户价值/20", self.human_user_var, spin=True, r=18, spin_to=20)
-        row("用户价值原因", self.user_reason_var, r=19)
-        row("传播价值/20", self.human_comm_var, spin=True, r=20, spin_to=20)
-        row("传播价值原因", self.comm_reason_var, r=21)
-        row("成交价值/20", self.human_deal_var, spin=True, r=22, spin_to=20)
-        row("成交价值原因", self.deal_reason_var, r=23)
+                 bg="#f0f0f0", font=("Microsoft YaHei", 8)).grid(row=15, column=0, columnspan=2, sticky=tk.W)
+        row("真实性/20", self.human_truth_var, spin=True, r=16, spin_to=20)
+        row("真实性原因", self.truth_reason_var, r=17)
+        row("产品价值/20", self.human_prod_var, spin=True, r=18, spin_to=20)
+        row("产品价值原因", self.prod_reason_var, r=19)
+        row("用户价值/20", self.human_user_var, spin=True, r=20, spin_to=20)
+        row("用户价值原因", self.user_reason_var, r=21)
+        row("传播价值/20", self.human_comm_var, spin=True, r=22, spin_to=20)
+        row("传播价值原因", self.comm_reason_var, r=23)
+        row("成交价值/20", self.human_deal_var, spin=True, r=24, spin_to=20)
+        row("成交价值原因", self.deal_reason_var, r=25)
 
         tk.Label(form, text="— 总评 —", bg="#f0f0f0",
-                 font=("Microsoft YaHei", 9, "bold")).grid(row=24, column=0, columnspan=2, sticky=tk.W, pady=(8, 2))
-        row("总评", self.overall_var, OVERALLS, 25)
-        row("备注", self.comment_var, r=26)
-        row("操作员", self.operator_var, r=27)
+                 font=("Microsoft YaHei", 9, "bold")).grid(row=26, column=0, columnspan=2, sticky=tk.W, pady=(8, 2))
+        row("总评", self.overall_var, OVERALLS, 27)
+        row("备注", self.comment_var, r=28)
+        row("操作员", self.operator_var, r=29)
 
         btn = tk.Button(parent, text="✓ 保存审核", command=self._save_review,
                         bg="#4CAF50", fg="white", font=("Microsoft YaHei", 11, "bold"))
@@ -300,6 +347,16 @@ class AccuracyReviewApp(tk.Tk):
         self.overall_var.set("")
         self.comment_var.set("")
         self.operator_var.set(os.environ.get("USERNAME", ""))
+
+        # 模板说明：顶部标出当前 AI 推荐模板
+        ai_tpl = c.get("recommend_template", "") or "无推荐"
+        head = f"▶ 本视频 AI 推荐: {ai_tpl}\n"
+        head += self.template_desc(ai_tpl) + "\n\n"
+        self.tpl_info_text.config(state=tk.NORMAL)
+        self.tpl_info_text.delete("1.0", tk.END)
+        self.tpl_info_text.insert(tk.END, head)
+        self.tpl_info_text.insert(tk.END, "【全部模板】\n" + self._all_templates_desc())
+        self.tpl_info_text.config(state=tk.DISABLED)
 
     def _play_video(self) -> None:
         if not self.current:
