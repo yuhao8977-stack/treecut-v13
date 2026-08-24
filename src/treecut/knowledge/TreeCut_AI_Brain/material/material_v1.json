@@ -1,0 +1,78 @@
+{
+  "version": "1.0",
+  "domain": "material",
+  "entries": [
+    {
+      "name": "岩板",
+      "category": "台面材料",
+      "aliases": ["岩板台面", "岩板桌面"],
+      "description": "高端台面材料：耐磨/耐高温/高级感，岛台首选",
+      "keywords": ["岩板", "岩板台面", "耐磨", "耐高温"],
+      "weight": 1.0
+    },
+    {
+      "name": "潘多拉",
+      "category": "奢石材料",
+      "aliases": ["潘多拉岩板", "潘多拉奢石"],
+      "description": "顶级奢石纹理，高端定制岛台核心卖点",
+      "keywords": ["潘多拉", "奢石", "顶级"],
+      "weight": 1.0
+    },
+    {
+      "name": "寒江雪",
+      "category": "奢石材料",
+      "aliases": ["寒江雪岩板"],
+      "description": "灰白雪花纹理奢石，轻奢风热门材料",
+      "keywords": ["寒江雪", "雪花纹"],
+      "weight": 0.9
+    },
+    {
+      "name": "黑胡桃",
+      "category": "木材",
+      "aliases": ["黑胡桃木", "胡桃木"],
+      "description": "高端实木：深色质感，原木/中古风",
+      "keywords": ["黑胡桃", "胡桃木", "实木"],
+      "weight": 0.8
+    },
+    {
+      "name": "木纹",
+      "category": "木材",
+      "aliases": ["木纹板", "木饰面"],
+      "description": "木纹饰面，自然质感，奶油风/原木风",
+      "keywords": ["木纹", "木饰面", "原木"],
+      "weight": 0.7
+    },
+    {
+      "name": "大理石",
+      "category": "台面材料",
+      "aliases": ["天然大理石", "大理石台面"],
+      "description": "天然石材台面：高级但需保养，性价比低于岩板",
+      "keywords": ["大理石", "天然石"],
+      "weight": 0.6
+    },
+    {
+      "name": "肤感",
+      "category": "柜体材料",
+      "aliases": ["肤感板", "肤感膜"],
+      "description": "柜门肤感材质：细腻手感，轻奢风标配",
+      "keywords": ["肤感", "哑光", "无把手"],
+      "weight": 0.6
+    },
+    {
+      "name": "烤漆",
+      "category": "柜体材料",
+      "aliases": ["烤漆板", "烤漆门板"],
+      "description": "高光/哑光烤漆柜门：色彩表现力强",
+      "keywords": ["烤漆", "亮光", "高光"],
+      "weight": 0.5
+    },
+    {
+      "name": "水波纹",
+      "category": "特殊纹理",
+      "aliases": ["水波纹板", "水波纹纹理"],
+      "description": "水波纹纹理柜门/背景：轻奢设计元素",
+      "keywords": ["水波纹", "波纹"],
+      "weight": 0.5
+    }
+  ]
+}

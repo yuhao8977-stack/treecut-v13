@@ -20,13 +20,18 @@ from treecut.platform.paths import RuntimePaths
 def _pool_entry(worker_id: str, task_type: str, stages: list[str],
                 db_path: str, log_path: str, limit: int | None,
                 asr_device: str | None, cuda_dll_dir: str | None,
+                cpu_threads: int | None,
                 ready_queue, result_queue, stop_event) -> None:
     """spawn 子进程入口。模型常驻，循环领取任务直到无 pending 或达 limit。"""
+    import os
     if cuda_dll_dir:
-        import os
         cur = os.environ.get("PATH", "")
         if cuda_dll_dir not in cur:
             os.environ["PATH"] = cuda_dll_dir + os.pathsep + cur
+    if cpu_threads and cpu_threads > 0:
+        # 限制 onnxruntime/OpenMP 线程数，避免多进程争抢 CPU（OCR 场景）
+        os.environ["OMP_NUM_THREADS"] = str(cpu_threads)
+        os.environ["ORT_NUM_THREADS"] = str(cpu_threads)
     from treecut.analysis.worker_p25 import Worker25
     worker = Worker25(worker_id=worker_id, task_type=task_type, stages=stages,
                       db_path=db_path, log_path=log_path,
@@ -55,7 +60,8 @@ class WorkerPool:
     def __init__(self, workers: int = 3, paths: RuntimePaths | None = None,
                  stages: dict[str, list[str]] | None = None,
                  limit: int | None = None, asr_device: str | None = None,
-                 cuda_dll_dir: str | None = None):
+                 cuda_dll_dir: str | None = None,
+                 cpu_threads: dict[str, int] | None = None):
         if not isinstance(workers, int) or workers < 1:
             raise ValueError(f"Worker 数必须是正整数: {workers}")
         self.workers = workers
@@ -63,6 +69,8 @@ class WorkerPool:
         self.limit = limit
         self.asr_device = asr_device or "auto"
         self.cuda_dll_dir = cuda_dll_dir
+        # 各 task_type 的线程限制（如 {"ocr": 4} → OCR 每进程 4 线程）
+        self.cpu_threads = cpu_threads or {}
         stage_map = dict(stages or DEFAULT_STAGES)
         if not stage_map:
             stage_map = dict(DEFAULT_STAGES)
@@ -132,6 +140,7 @@ class WorkerPool:
                       assignment["stages"], db_path,
                       str(log_dir / f"worker_{assignment['worker_id']}.log"),
                       self.limit, self.asr_device, self.cuda_dll_dir,
+                      self.cpu_threads.get(assignment["task_type"]),
                       ready_queue, result_queue, stop_event),
                 daemon=True,
             )

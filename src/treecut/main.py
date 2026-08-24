@@ -113,6 +113,12 @@ def main() -> int:
                         help="P4: --search 返回条数（默认 5）")
     parser.add_argument("--template-register", action="store_true",
                         help="P5: 注册 CT01/CT02 模板到库")
+    parser.add_argument("--brain-status", action="store_true",
+                        help="认知体系: 显示数据库表与知识库状态")
+    parser.add_argument("--brain-knowledge", action="store_true",
+                        help="认知体系: 加载/热更新 TreeCut_AI_Brain 知识库到数据库")
+    parser.add_argument("--brain-analyze", metavar="ASSET_ID",
+                        help="认知体系: 对单个素材运行完整认知链（Layer 0-6）")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -290,6 +296,29 @@ def main() -> int:
             "broken": {"count": store.count_broken()},
         }
         print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0
+    if args.brain_status:
+        # 认知体系状态
+        context = bootstrap()
+        from treecut.cognitive import Brain
+        brain = Brain(context.paths.databases / "materials.db")
+        print(json.dumps(brain.status(), ensure_ascii=False, indent=2))
+        return 0
+    if args.brain_knowledge:
+        # 加载/热更新知识库
+        context = bootstrap()
+        from treecut.cognitive import KnowledgeLoader
+        loader = KnowledgeLoader(context.paths.databases / "materials.db")
+        results = loader.load_all()
+        print(json.dumps(results, ensure_ascii=False, indent=2))
+        return 0
+    if args.brain_analyze:
+        # 单素材完整认知链
+        context = bootstrap()
+        from treecut.cognitive import Brain
+        brain = Brain(context.paths.databases / "materials.db")
+        print(json.dumps(brain.analyze(args.brain_analyze),
+                         ensure_ascii=False, indent=2))
         return 0
     if args.p3_run is not None:
         from treecut.analysis.p3_worker import P3Worker

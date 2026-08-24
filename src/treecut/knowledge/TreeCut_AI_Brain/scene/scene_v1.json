@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "domain": "scene",
+  "entries": [
+    {
+      "name": "客户家",
+      "category": "场景",
+      "aliases": ["客户家实景", "入户", "完工实景"],
+      "description": "客户家实景：完工后真实空间，高价值（真实+信任）",
+      "keywords": ["客户家", "入户", "实景", "完工", "家里"],
+      "weight": 1.0
+    },
+    {
+      "name": "工厂",
+      "category": "场景",
+      "aliases": ["车间", "生产车间", "加工厂"],
+      "description": "工厂生产场景：机器/工人/加工，降顾虑内容",
+      "keywords": ["工厂", "车间", "生产", "加工", "机器", "工人"],
+      "weight": 1.0
+    },
+    {
+      "name": "展厅",
+      "category": "场景",
+      "aliases": ["展厅", "体验馆", "样板间"],
+      "description": "展厅/样板间：产品展示场景",
+      "keywords": ["展厅", "体验馆", "样板间", "展示"],
+      "weight": 0.8
+    },
+    {
+      "name": "厨房空间",
+      "category": "空间",
+      "aliases": ["厨房", "开放式厨房", "厨房间"],
+      "description": "厨房空间：岛台核心应用场景",
+      "keywords": ["厨房", "开放式厨房", "烹饪区"],
+      "weight": 1.0
+    },
+    {
+      "name": "客厅空间",
+      "category": "空间",
+      "aliases": ["客厅", "客餐厅"],
+      "description": "客厅/客餐厅空间：餐岛一体常见场景",
+      "keywords": ["客厅", "客餐厅", "餐厅"],
+      "weight": 0.8
+    },
+    {
+      "name": "安装现场",
+      "category": "场景",
+      "aliases": ["安装", "施工", "组装"],
+      "description": "安装/施工场景：体现服务能力",
+      "keywords": ["安装", "施工", "组装", "师傅", "搬运"],
+      "weight": 0.9
+    },
+    {
+      "name": "生产",
+      "category": "场景",
+      "aliases": ["生产过程", "制作"],
+      "description": "生产过程：开料/封边/打孔等工艺展示",
+      "keywords": ["开料", "封边", "打孔", "工艺", "制作"],
+      "weight": 0.7
+    },
+    {
+      "name": "运输",
+      "category": "场景",
+      "aliases": ["物流", "配送"],
+      "description": "运输/配送场景",
+      "keywords": ["运输", "物流", "配送", "送货"],
+      "weight": 0.5
+    }
+  ]
+}
