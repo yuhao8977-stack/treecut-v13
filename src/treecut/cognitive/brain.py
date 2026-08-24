@@ -21,6 +21,9 @@ from pathlib import Path
 
 from treecut.cognitive.knowledge import KnowledgeLoader
 from treecut.cognitive.store import CognitiveStore
+from treecut.cognitive.industry import IndustryEngine
+from treecut.cognitive.account import AccountEngine
+from treecut.cognitive.template import TemplateEngine
 
 
 class Brain:
@@ -30,6 +33,9 @@ class Brain:
         self.store = CognitiveStore(db_path)
         self.store.ensure_schema()
         self.knowledge = KnowledgeLoader(db_path)
+        self.industry = IndustryEngine(db_path)
+        self.account = AccountEngine(db_path)
+        self.template = TemplateEngine(db_path)
 
     # ------------------------------------------------------------------
     # Layer 0-1: 读取既有分析数据
@@ -132,14 +138,26 @@ class Brain:
     # ------------------------------------------------------------------
 
     def analyze(self, asset_id: str) -> dict:
-        """对单个素材运行完整认知链（Layer 0-6）。"""
+        """对单个素材运行完整认知链（Layer 0-6），输出设计文档 §4.5 格式。"""
         started = time.perf_counter()
         layer1 = self._layer01(asset_id)
-        layer2 = self._layer2(layer1)
-        layer3 = self._layer3(layer1)
-        layer456 = self._layer456(layer1, layer3)
+
+        # Layer 2/3/4：行业引擎（产品/材料/功能/场景 + 内容分类）
+        industry = self.industry.analyze(asset_id, persist=True)
+
+        # Layer 5：账号适配度
+        fit = self.account.compute_fit(asset_id)
+
+        # Layer 6：模板匹配 + 商业价值
+        tpl = self.template.recommend(asset_id)
+
+        # 场景语义（从 industry 结果提取）
+        scenes = [{"semantic": s["name"], "score": s["score"]}
+                  for s in industry.scenes[:3]]
+
         result = {
             "asset_id": asset_id,
+            "ai_understanding": self._summarize_understanding(asset_id, industry),
             "perception": {
                 "duration": layer1["duration"],
                 "resolution": f"{layer1['width']}x{layer1['height']}",
@@ -148,14 +166,38 @@ class Brain:
                 "asr_preview": layer1["asr_text"][:200],
                 "ocr_preview": layer1["ocr_text"][:200],
             },
-            "scene_semantics": layer2["scene_semantics"],
-            "industry": layer3["industry_hits"],
-            "content": layer456["content_types"],
-            "account_fit": layer456["account_fit"],
-            "template": layer456["template_match"],
+            "industry": {
+                "products": [p["name"] for p in industry.products[:3]],
+                "materials": [m["name"] for m in industry.materials[:3]],
+                "functions": [f["name"] for f in industry.functions[:3]],
+                "scenes": scenes,
+            },
+            "content_type": industry.top_content_type,
+            "content_confidence": round(industry.top_confidence, 2),
+            "account_fit": fit.to_dict(),
+            "template": tpl.to_dict(),
+            "business_value": tpl.business_score,
+            "business_reasons": tpl.business_reasons,
             "seconds": round(time.perf_counter() - started, 2),
         }
         return result
+
+    def _summarize_understanding(self, asset_id: str, industry) -> str:
+        """生成设计文档 §4.5 的『AI理解』一句话。"""
+        parts = []
+        scenes = [s["name"] for s in industry.scenes[:1]]
+        products = [p["name"] for p in industry.products[:2]]
+        materials = [m["name"] for m in industry.materials[:1]]
+        if scenes:
+            parts.append(scenes[0])
+        if materials:
+            parts.append(f"{materials[0]}材质")
+        if products:
+            parts.append(f"{products[0]}案例" if "客户" in "".join(scenes) else f"{products[0]}")
+        if not parts:
+            parts.append("素材画面")
+        content = industry.top_content_type or "未分类"
+        return f"{'、'.join(parts)}，内容类型: {content}"
 
     def status(self) -> dict:
         """认知体系状态（表就绪 + 知识库统计）。"""

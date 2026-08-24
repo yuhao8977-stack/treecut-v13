@@ -6,6 +6,8 @@
   knowledge.py — 知识库加载/校验/热更新（JSON → SQLite）
   brain.py     — 认知引擎（7 层调用链）
   industry.py  — Layer3/4 行业知识引擎（特征抽取 + 内容分类）
+  account.py   — Layer5 账号适配度引擎
+  template.py  — Layer6 模板匹配 + 商业价值引擎
 """
 from __future__ import annotations
 
@@ -13,7 +15,10 @@ from treecut.cognitive.store import CognitiveStore
 from treecut.cognitive.knowledge import KnowledgeLoader, KNOWLEDGE_ROOT
 from treecut.cognitive.brain import Brain
 from treecut.cognitive.industry import IndustryEngine
+from treecut.cognitive.account import AccountEngine
+from treecut.cognitive.template import TemplateEngine
 
-__all__ = ["CognitiveStore", "KnowledgeLoader", "Brain", "KnowledgeLoader",
-           "IndustryEngine", "KNOWLEDGE_ROOT"]
+__all__ = ["CognitiveStore", "KnowledgeLoader", "Brain", "IndustryEngine",
+           "AccountEngine", "TemplateEngine", "KNOWLEDGE_ROOT"]
+
 
