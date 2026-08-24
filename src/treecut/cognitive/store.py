@@ -10,6 +10,7 @@
 """
 from __future__ import annotations
 
+import json
 import sqlite3
 import time
 from contextlib import closing
@@ -48,14 +49,15 @@ CREATE TABLE IF NOT EXISTS knowledge_entries (
 CREATE INDEX IF NOT EXISTS idx_knowledge_domain ON knowledge_entries(domain, category);
 
 CREATE TABLE IF NOT EXISTS content_classification (
-    asset_id      TEXT PRIMARY KEY,
-    content_type  TEXT NOT NULL,
-    sub_type      TEXT NOT NULL DEFAULT '',
-    confidence    REAL NOT NULL DEFAULT 0,
-    reasons       TEXT NOT NULL DEFAULT '',
-    model_version TEXT NOT NULL DEFAULT '',
-    reviewed      INTEGER NOT NULL DEFAULT 0,
-    created_time  REAL NOT NULL
+    asset_id         TEXT PRIMARY KEY,
+    content_type     TEXT NOT NULL,
+    sub_type         TEXT NOT NULL DEFAULT '',
+    confidence       REAL NOT NULL DEFAULT 0,
+    reasons          TEXT NOT NULL DEFAULT '',
+    model_version    TEXT NOT NULL DEFAULT '',
+    content_elements TEXT NOT NULL DEFAULT '',
+    reviewed         INTEGER NOT NULL DEFAULT 0,
+    created_time     REAL NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS account_dna (
@@ -113,6 +115,13 @@ class CognitiveStore:
     def ensure_schema(self) -> int:
         with closing(self._connect()) as connection:
             connection.executescript(SCHEMA)
+            # 幂等迁移：content_classification 增加 content_elements 列
+            cols = [r[1] for r in connection.execute(
+                "PRAGMA table_info(content_classification)")]
+            if "content_elements" not in cols:
+                connection.execute(
+                    "ALTER TABLE content_classification ADD COLUMN content_elements "
+                    "TEXT NOT NULL DEFAULT ''")
             row = connection.execute(
                 "SELECT version FROM schema_version WHERE name=?", (SCHEMA_NAME,)
             ).fetchone()
@@ -214,15 +223,25 @@ class CognitiveStore:
 
     def save_classification(self, asset_id: str, content_type: str,
                             sub_type: str = "", confidence: float = 0.0,
-                            reasons: str = "", model_version: str = "") -> None:
+                            reasons: str = "", model_version: str = "",
+                            content_elements: list[str] | None = None) -> None:
         now = time.time()
+        elements_json = json.dumps(content_elements or [],
+                                   ensure_ascii=False) if content_elements else ""
         with closing(self._connect()) as connection:
+            # 幂等迁移：content_classification 增加 content_elements 列
+            cols = [r[1] for r in connection.execute(
+                "PRAGMA table_info(content_classification)")]
+            if "content_elements" not in cols:
+                connection.execute(
+                    "ALTER TABLE content_classification ADD COLUMN content_elements "
+                    "TEXT NOT NULL DEFAULT ''")
             connection.execute(
                 "INSERT OR REPLACE INTO content_classification(asset_id,content_type,"
-                "sub_type,confidence,reasons,model_version,reviewed,created_time) "
-                "VALUES(?,?,?,?,?,?,0,?)",
+                "sub_type,confidence,reasons,model_version,content_elements,"
+                "reviewed,created_time) VALUES(?,?,?,?,?,?,?,0,?)",
                 (asset_id, content_type, sub_type, confidence, reasons,
-                 model_version, now),
+                 model_version, elements_json, now),
             )
             connection.commit()
 

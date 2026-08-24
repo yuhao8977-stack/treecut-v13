@@ -176,7 +176,7 @@ class AccuracyEngine:
             "ocr": perception.get("ocr_preview", ""),
         }
 
-        # B. AI 业务理解
+        # B. AI 业务理解（V2 双层）
         industry_data = brain_result.get("industry", {})
         scenes = [s.get("semantic", "") for s in industry_data.get("scenes", [])]
         b = {
@@ -186,6 +186,8 @@ class AccuracyEngine:
             "material": industry_data.get("materials", []),
             "function": industry_data.get("functions", []),
             "content_type": brain_result.get("content_type", "其他"),
+            "content_type_main": brain_result.get("content_type_main", ""),
+            "content_elements": brain_result.get("content_elements", []),
             "content_confidence": brain_result.get("content_confidence", 0),
             "purpose": self._infer_purpose(brain_result.get("content_type", "")),
             "target_user": self._infer_user(brain_result.get("content_type", "")),
@@ -203,9 +205,9 @@ class AccuracyEngine:
             "match_score": tpl.get("match_score", 0),
         }
 
-        # D. 商业价值评分（5×20 拆分）
+        # D. 商业价值评分（5×20 拆分，V2 真实维度）
         business = brain_result.get("business_value", 0)
-        d = self._split_business(business, b)
+        d = self._split_business(business, b, brain_result)
 
         analysis = {
             "A": a, "B": b, "C": c, "D": d,
@@ -213,8 +215,10 @@ class AccuracyEngine:
         }
         if persist:
             conn = sqlite3.connect(str(self.db_path), timeout=30)
+            # 保留人工审核状态：reviewed 不降级，仅更新 AI 分析
             conn.execute(
-                "UPDATE accuracy_test SET ai_analysis=?, status='analyzed' "
+                "UPDATE accuracy_test SET ai_analysis=?, status= "
+                "CASE WHEN status='reviewed' THEN 'reviewed' ELSE 'analyzed' END "
                 "WHERE asset_id=?",
                 (json.dumps(analysis, ensure_ascii=False), asset_id))
             conn.commit()
@@ -234,13 +238,34 @@ class AccuracyEngine:
             "避坑知识": "装修用户",
         }.get(content_type, "装修用户")
 
-    def _split_business(self, total: float, b: dict) -> dict:
-        """按 5 维拆商业评分（20×5）。基于内容类型/特征分布分配。"""
+    def _split_business(self, total: float, b: dict,
+                        brain_result: dict | None = None) -> dict:
+        """商业评分 5 维拆分（20×5）。
+
+        优先使用 template 引擎 V2 的真实维度（business_reasons 中的五维），
+        缺失时退回近似拆分。
+        """
+        # 从 template business_reasons 解析 V2 真实五维
+        tpl = (brain_result or {}).get("template", {}) or {}
+        reasons = tpl.get("business_reasons", []) or []
+        for line in reasons:
+            if "五维合计" in line:
+                import re
+                m = re.search(r"\{.*\}", line)
+                if m:
+                    try:
+                        dims = json.loads(m.group(0))
+                        dims = {k: max(0, min(20, int(v))) for k, v in dims.items()}
+                        return {"scores": dims,
+                                "total": round(sum(dims.values()), 1),
+                                "reason": self._business_reason(b)}
+                    except Exception:
+                        pass
+        # 退回近似拆分
         total = max(0, min(100, float(total)))
         base = total / 5.0
-        # 特征加权微调
         if b.get("product"):
-            base = base + 2  # 有产品识别 → 产品展示维度更高
+            base = base + 2
         if b.get("material"):
             base = base + 1
         scores = {
@@ -250,7 +275,6 @@ class AccuracyEngine:
             "内容传播": max(0, min(20, base - 1)),
             "成交价值": max(0, min(20, base + (1 if b.get("content_type") == "客户案例" else 0))),
         }
-        # 归一化使总和 ≈ total
         cur = sum(scores.values())
         if cur > 0:
             scale = total / cur

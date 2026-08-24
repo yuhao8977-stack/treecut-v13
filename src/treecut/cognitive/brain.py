@@ -174,6 +174,9 @@ class Brain:
             },
             "content_type": industry.top_content_type,
             "content_confidence": round(industry.top_confidence, 2),
+            "content_type_main": industry.content_type_main,
+            "content_elements": industry.content_elements,
+            "evidence": industry.evidence,
             "account_fit": fit.to_dict(),
             "template": tpl.to_dict(),
             "business_value": tpl.business_score,
@@ -183,7 +186,7 @@ class Brain:
         return result
 
     def _summarize_understanding(self, asset_id: str, industry) -> str:
-        """生成设计文档 §4.5 的『AI理解』一句话。"""
+        """生成设计文档 §4.5 的『AI理解』一句话（V2：主类型+元素）。"""
         parts = []
         scenes = [s["name"] for s in industry.scenes[:1]]
         products = [p["name"] for p in industry.products[:2]]
@@ -193,11 +196,12 @@ class Brain:
         if materials:
             parts.append(f"{materials[0]}材质")
         if products:
-            parts.append(f"{products[0]}案例" if "客户" in "".join(scenes) else f"{products[0]}")
+            parts.append(f"{products[0]}")
         if not parts:
             parts.append("素材画面")
-        content = industry.top_content_type or "未分类"
-        return f"{'、'.join(parts)}，内容类型: {content}"
+        main = industry.content_type_main or industry.top_content_type or "未分类"
+        elems = "、".join(industry.content_elements[:4]) if industry.content_elements else "无元素"
+        return f"{'、'.join(parts)}，主类型: {main}，内容元素: {elems}"
 
     def status(self) -> dict:
         """认知体系状态（表就绪 + 知识库统计）。"""
