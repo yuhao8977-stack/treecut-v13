@@ -81,12 +81,18 @@ class ProductionEngine:
         if db_path is None:
             from treecut.platform.paths import RuntimePaths
             self.paths = RuntimePaths.discover()
+            self.install_root = self.paths.install_root
         else:
-            # db 路径 → data_root
+            # db 路径 → data_root/install_root（从 db 位置推导）
+            data_root = Path(db_path).parent.parent
             self.paths = type("P", (), {
-                "output": Path(db_path).parent.parent / "output",
+                "output": data_root / "output",
                 "databases": Path(db_path).parent,
+                "data_root": data_root,
             })()
+            # 安装根：data_root = <install>/runtime_data/temp/batch1 → parents[2] = <install>
+            self.install_root = data_root.parents[2] if "TreeCut_v13" in str(data_root) \
+                else Path(r"E:\树剪整理\02_安装程序\TreeCut_v13")
 
     def _ensure_plans_table(self) -> None:
         conn = sqlite3.connect(str(self.store.db_path), timeout=30)
@@ -194,8 +200,9 @@ class ProductionEngine:
     # 生成成片
     # ------------------------------------------------------------------
 
-    def produce(self, template_id: str, project_name: str | None = None) -> ProductionResult:
-        """按模板生成成片。"""
+    def produce(self, template_id: str, project_name: str | None = None,
+                render: bool = True) -> ProductionResult:
+        """按模板生成成片（render=True 时渲染 MP4 + 剪映草稿）。"""
         started = time.perf_counter()
         templates = self.store.list_templates()
         tpl = next((t for t in templates if t["template_id"] == template_id), None)
@@ -218,41 +225,141 @@ class ProductionEngine:
             seconds=time.perf_counter() - started,
         )
 
-        # 生成剪映草稿（若有足够素材）
         has_material = any(p.path for p in picks)
-        if has_material:
-            try:
-                draft = self._build_jianying_draft(picks, out_dir, tpl)
-                result.jianying_draft = str(draft)
-                result.status = "draft_ready"
-            except Exception as e:
-                result.message = f"剪映草稿生成失败: {e}"
-        else:
+        if not has_material:
             result.message = "素材不足，未生成成片"
+            self._save_plan(result)
+            return result
 
-        # 落库
-        conn = sqlite3.connect(str(self.store.db_path), timeout=30)
-        conn.execute(
-            "INSERT OR REPLACE INTO production_plans(project_id,template_id,content_type,"
-            "plan_json,status,output_dir,created_time) VALUES(?,?,?,?,?,?,?)",
-            (project_id, template_id, content_type,
-             json.dumps(result.to_dict(), ensure_ascii=False),
-             result.status, result.output_dir, time.time()))
-        conn.commit()
-        conn.close()
+        try:
+            # 1) 生产计划文件 + 口播脚本
+            self._build_plan_files(picks, out_dir, tpl)
+
+            if render:
+                # 2) 构建 EditPlan 并渲染
+                edit_plan = self._build_edit_plan(picks)
+                rendered = self._render(edit_plan, out_dir)
+                result.jianying_draft = rendered.get("draft", "")
+                result.mp4_path = rendered.get("mp4", "")
+                result.status = "rendered" if result.mp4_path else "draft_ready"
+                if result.mp4_path:
+                    result.message = f"成片已生成: {Path(result.mp4_path).name}"
+            else:
+                result.status = "draft_ready"
+                result.message = "计划已生成（未渲染）"
+        except Exception as e:
+            result.status = "error"
+            result.message = f"生产失败: {type(e).__name__}: {e}"
+
+        self._save_plan(result)
         return result
 
-    def _build_jianying_draft(self, picks: list[SlotPick], out_dir: Path,
-                              tpl: dict) -> Path:
-        """生成简易剪映草稿（含视频素材 + 口播建议文本文件）。"""
-        # 剪映草稿格式较复杂，此处生成最小可用草稿 + 生产说明
-        materials = []
+    # ------------------------------------------------------------------
+    # 渲染
+    # ------------------------------------------------------------------
+
+    def _build_edit_plan(self, picks: list[SlotPick]):
+        """构建 EditPlan（复用 workflow.EditSegment）。"""
+        from treecut.workflow.planning import EditPlan, EditSegment
+        segments = []
+        timeline = 0.0
         for i, pick in enumerate(picks):
-            if pick.path:
-                materials.append({
-                    "order": i, "role": pick.role, "path": pick.path,
-                    "duration": pick.duration, "hint": pick.narration_hint,
-                })
+            if not pick.path:
+                continue
+            duration = pick.duration
+            # 从素材取真实时长（ffprobe 粗查，失败用默认）
+            real_dur = self._probe_duration(pick.path) or duration
+            use_dur = min(duration, max(2.0, real_dur * 0.8))
+            segments.append(EditSegment(
+                order=i, media_id=pick.media_id, path=pick.path,
+                category=pick.role, source_start=0.0, source_end=use_dur,
+                timeline_start=timeline, timeline_end=timeline + use_dur,
+                match_score=pick.score, matched_terms=(pick.role,),
+            ))
+            timeline += use_dur
+        return EditPlan(
+            requested_duration=timeline, planned_duration=timeline,
+            complete=True, warnings=(), segments=tuple(segments),
+        )
+
+    def _probe_duration(self, path: str) -> float | None:
+        """用 ffprobe 查素材时长（失败返回 None）。"""
+        try:
+            import subprocess
+            ffprobe = self._ffmpeg_root() / "ffprobe.exe"
+            out = subprocess.run(
+                [str(ffprobe), "-v", "error", "-show_entries", "format=duration",
+                 "-of", "default=noprint_wrappers=1:nokey=1", path],
+                capture_output=True, text=True, timeout=15)
+            if out.returncode == 0 and out.stdout.strip():
+                return float(out.stdout.strip())
+        except Exception:
+            pass
+        return None
+
+    def _ffmpeg_root(self):
+        """定位 tools/win32（含 ffmpeg/ffprobe）。"""
+        tools = self.install_root / "tools" / "win32"
+        if tools.exists():
+            return tools
+        return self.install_root
+
+    def _render(self, edit_plan, out_dir: Path) -> dict:
+        """渲染 MP4 + 剪映草稿（草稿需 narration/bgm/srt，缺失则跳过）。"""
+        from treecut.output.mp4 import render_video_plan
+        tools = self._ffmpeg_root()
+        ffmpeg = tools / "ffmpeg.exe"
+        ffprobe = tools / "ffprobe.exe"
+
+        result = {}
+        # MP4 渲染（preview 规格，竖屏 540x960）
+        if ffmpeg.exists():
+            try:
+                mp4_out = out_dir / "preview.mp4"
+                render_video_plan(edit_plan, mp4_out, ffmpeg, ffprobe,
+                                  profile="preview")
+                result["mp4"] = str(mp4_out)
+            except Exception as e:
+                print(f"  [MP4 渲染跳过] {type(e).__name__}: {e}")
+        # 剪映草稿（需 narration/bgm/srt 文件；认知链路无 TTS/选曲时跳过）
+        try:
+            from treecut.output.jianying import build_jianying_draft
+            draft_dir = out_dir / "jianying_draft"
+            draft_dir.mkdir(parents=True, exist_ok=True)
+            narration = out_dir / "narration.wav"
+            bgm = out_dir / "bgm.mp3"
+            srt = out_dir / "narration.srt"
+            if not narration.exists():
+                # 生成 2 秒静音占位（草稿接口要求文件存在）
+                import subprocess as _sp
+                _sp.run([str(ffmpeg), "-y", "-f", "lavfi", "-i",
+                         "anullsrc=r=44100:cl=mono", "-t", "2",
+                         str(narration)], capture_output=True, timeout=60)
+            if not bgm.exists():
+                # 静音 BGM 占位
+                import subprocess as _sp
+                _sp.run([str(ffmpeg), "-y", "-f", "lavfi", "-i",
+                         "anullsrc=r=44100:cl=mono", "-t", "2",
+                         str(bgm)], capture_output=True, timeout=60)
+            if not srt.exists():
+                # 空字幕占位（避免 None 触发 is_file 检查）
+                srt.write_text("", encoding="utf-8")
+            build_jianying_draft(
+                edit_plan, draft_dir,
+                narration_wav=narration, bgm=bgm, subtitle_srt=srt,
+                ffmpeg=ffmpeg,
+            )
+            result["draft"] = str(draft_dir)
+        except Exception as e:
+            print(f"  [剪映草稿跳过] {type(e).__name__}: {e}")
+        return result
+
+    def _build_plan_files(self, picks: list[SlotPick], out_dir: Path,
+                          tpl: dict) -> None:
+        """生产计划 JSON + 口播脚本（原 produce 的落盘逻辑）。"""
+        materials = [{"order": i, "role": p.role, "path": p.path,
+                      "duration": p.duration, "hint": p.narration_hint}
+                     for i, p in enumerate(picks) if p.path]
         plan_path = out_dir / "production_plan.json"
         plan_path.write_text(json.dumps({
             "project": str(out_dir.parent.name),
@@ -263,13 +370,23 @@ class ProductionEngine:
             "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
         }, ensure_ascii=False, indent=2), encoding="utf-8")
 
-        # 口播脚本建议
         script = out_dir / "narration_script.txt"
         lines = ["# 成片口播脚本建议", ""]
         for i, pick in enumerate(picks):
-            lines.append(f"[{i + 1}] {pick.time_range} {pick.role}: {pick.narration_hint or '（结合素材内容口播）'}")
+            lines.append(f"[{i + 1}] {pick.time_range} {pick.role}: "
+                         f"{pick.narration_hint or '（结合素材内容口播）'}")
         script.write_text("\n".join(lines), encoding="utf-8")
-        return plan_path
+
+    def _save_plan(self, result: ProductionResult) -> None:
+        conn = sqlite3.connect(str(self.store.db_path), timeout=30)
+        conn.execute(
+            "INSERT OR REPLACE INTO production_plans(project_id,template_id,content_type,"
+            "plan_json,status,output_dir,created_time) VALUES(?,?,?,?,?,?,?)",
+            (result.project_id, result.template_id, result.content_type,
+             json.dumps(result.to_dict(), ensure_ascii=False),
+             result.status, result.output_dir, time.time()))
+        conn.commit()
+        conn.close()
 
     # ------------------------------------------------------------------
     # 状态

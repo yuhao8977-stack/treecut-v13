@@ -135,6 +135,12 @@ def main() -> int:
     parser.add_argument("--brain-produce-status", action="store_true",
                         dest="brain_produce_status",
                         help="认知体系: 生产计划状态")
+    parser.add_argument("--brain-vision", type=int, metavar="N", default=None,
+                        dest="brain_vision",
+                        help="认知体系: 对 N 个纯画面素材用 Florence 补视觉认知（默认 10）")
+    parser.add_argument("--brain-vision-status", action="store_true",
+                        dest="brain_vision_status",
+                        help="认知体系: 视觉模型可用性")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -405,6 +411,29 @@ def main() -> int:
         project = args.brain_produce[1] if len(args.brain_produce) > 1 else None
         result = engine.produce(template_id, project)
         print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.brain_vision_status:
+        # 视觉模型可用性
+        context = bootstrap()
+        from treecut.cognitive import VisionEngine
+        engine = VisionEngine(context.paths.databases / "materials.db")
+        print(json.dumps({"florence_available": engine.available()},
+                         ensure_ascii=False, indent=2))
+        return 0
+    if args.brain_vision is not None:
+        # 视觉补认知
+        context = bootstrap()
+        from treecut.cognitive import VisionEngine
+        engine = VisionEngine(context.paths.databases / "materials.db")
+        if not engine.available():
+            print(json.dumps({"error": "Florence-2 模型不可用"},
+                             ensure_ascii=False, indent=2))
+            return 1
+        n = args.brain_vision if args.brain_vision > 0 else 10
+        candidates = engine.candidates(limit=n)
+        result = engine.batch_enrich(candidates)
+        print(json.dumps({k: v for k, v in result.items() if k != "results"},
+                         ensure_ascii=False, indent=2))
         return 0
     if args.p3_run is not None:
         from treecut.analysis.p3_worker import P3Worker
