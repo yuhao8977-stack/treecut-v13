@@ -54,6 +54,12 @@ class AccuracyReviewApp(tk.Tk):
             from treecut.platform.paths import RuntimePaths
             db_path = RuntimePaths.discover().databases / "materials.db"
         self.db_path = Path(db_path)
+        # 确保 accuracy 表结构就绪（含新列迁移），否则保存会报 no such column
+        try:
+            from treecut.cognitive.accuracy import AccuracyEngine
+            AccuracyEngine(self.db_path)
+        except Exception as e:
+            print(f"  [accuracy schema init] {e}")
         self.queue: list[dict] = []
         self.current_index = 0
         self.current: dict | None = None
@@ -233,9 +239,17 @@ class AccuracyReviewApp(tk.Tk):
                 ttk.Spinbox(form, from_=0, to=spin_to, textvariable=var, width=8).grid(
                     row=r, column=1, sticky=tk.W, padx=4)
             elif options:
-                ttk.Combobox(form, textvariable=var, values=options,
-                             width=36, state="normal" if editable else "readonly").grid(
-                    row=r, column=1, sticky=tk.W, padx=4)
+                cb = ttk.Combobox(form, textvariable=var, values=options,
+                                  width=36, state="normal" if editable else "readonly")
+                cb.grid(row=r, column=1, sticky=tk.W, padx=4)
+                # 修复：点击输入框/箭头即弹出下拉列表（ttk 在 canvas 内默认不弹）
+                def _open_dropdown(event):
+                    try:
+                        event.widget.event_generate("<Down>")
+                        return "break"
+                    except Exception:
+                        return None
+                cb.bind("<Button-1>", _open_dropdown)
             else:
                 ttk.Entry(form, textvariable=var, width=40).grid(
                     row=r, column=1, sticky=tk.W, padx=4)
