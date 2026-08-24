@@ -26,6 +26,24 @@ TEMPLATES = ("T001", "T002", "T003", "T004", "无推荐")
 OVERALLS = ("优秀", "可用", "需要优化", "不可用")
 VERDICTS = ("correct", "partial", "wrong")
 
+# 人工内容确认选项（V1.2：人工给出具体判定，非对错）
+HUMAN_SCENES = (
+    "客户家", "工厂", "展厅", "安装现场", "生产", "厨房空间", "客厅空间",
+    "餐厅", "户外", "其他",
+)
+HUMAN_PRODUCTS = (
+    "岛台", "伸缩岛台", "岩板岛台", "实木岛台", "中古风岛台", "半岛台",
+    "餐边柜", "橱柜", "餐桌", "吧台", "茶桌", "电视柜", "无产品", "其他",
+)
+HUMAN_MATERIALS = (
+    "岩板", "实木", "奢石", "大理石", "水晶", "肤感", "烤漆", "木纹",
+    "不锈钢", "玻璃", "无明确材质", "其他",
+)
+HUMAN_FUNCTIONS = (
+    "收纳", "抽屉", "伸缩", "隐藏电器", "插座", "轨道插座", "水吧",
+    "升降", "灯带", "无明确功能", "其他",
+)
+
 
 class AccuracyReviewApp(tk.Tk):
     """AI 业务理解准确率人工审核界面。"""
@@ -206,8 +224,8 @@ class AccuracyReviewApp(tk.Tk):
             e.grid(row=r, column=1, sticky=tk.W, padx=4, pady=1)
             return r + 1
 
-        def hurow(label, var, r, options=None, spin=False, spin_to=100):
-            """人工填写行（缩进，白底）。"""
+        def hurow(label, var, r, options=None, spin=False, spin_to=100, editable=True):
+            """人工填写行（缩进，白底；下拉可选可手输）。"""
             tk.Label(form, text="✍ " + label, bg="#f0f0f0", anchor=tk.W,
                      width=16, font=("Microsoft YaHei", 8)).grid(
                 row=r, column=0, sticky=tk.W, pady=2, padx=2)
@@ -215,8 +233,9 @@ class AccuracyReviewApp(tk.Tk):
                 ttk.Spinbox(form, from_=0, to=spin_to, textvariable=var, width=8).grid(
                     row=r, column=1, sticky=tk.W, padx=4)
             elif options:
-                ttk.Combobox(form, textvariable=var, values=options, state="readonly",
-                             width=38).grid(row=r, column=1, sticky=tk.W, padx=4)
+                ttk.Combobox(form, textvariable=var, values=options,
+                             width=36, state="normal" if editable else "readonly").grid(
+                    row=r, column=1, sticky=tk.W, padx=4)
             else:
                 ttk.Entry(form, textvariable=var, width=40).grid(
                     row=r, column=1, sticky=tk.W, padx=4)
@@ -227,6 +246,11 @@ class AccuracyReviewApp(tk.Tk):
         self.ai_product_var = tk.StringVar()   # AI 产品识别（只读）
         self.ai_material_var = tk.StringVar()  # AI 材质识别（只读）
         self.ai_func_var = tk.StringVar()      # AI 功能识别（只读）
+        # 人工内容确认（具体值，非对错）
+        self.human_scene_var = tk.StringVar()
+        self.human_product_var = tk.StringVar()
+        self.human_material_var = tk.StringVar()
+        self.human_function_var = tk.StringVar()
         self.scene_var = tk.StringVar()
         self.scene_score_var = tk.IntVar(value=0)
         self.product_var = tk.StringVar()
@@ -265,16 +289,17 @@ class AccuracyReviewApp(tk.Tk):
         self.operator_var = tk.StringVar()
 
         # ---------------- 布局 ----------------
-        r = section("— 一、场景与产品判定 —", 0)
-        r = airow("场景判定", self.ai_scene_var, r)
-        r = hurow("场景判定(人工)", self.scene_var, r, VERDICTS)
-        r = hurow("场景评分(0-100)", self.scene_score_var, r, spin=True)
-        r = airow("产品识别", self.ai_product_var, r)
-        r = airow("材质识别", self.ai_material_var, r)
-        r = airow("功能识别", self.ai_func_var, r)
-        r = hurow("产品判定(人工)", self.product_var, r, VERDICTS)
-        r = airow("内容类型", self.ai_ct_var, r)
-        r = hurow("内容类型(人工)", self.human_ct_var, r, CONTENT_TYPES)
+        r = section("— 一、场景与产品判定（AI 判定 ↑ / 人工确认内容 ↓）—", 0)
+        r = airow("AI 场景", self.ai_scene_var, r)
+        r = hurow("人工场景(选择或输入)", self.human_scene_var, r, HUMAN_SCENES)
+        r = airow("AI 产品", self.ai_product_var, r)
+        r = hurow("人工产品(选择或输入)", self.human_product_var, r, HUMAN_PRODUCTS)
+        r = airow("AI 材质", self.ai_material_var, r)
+        r = hurow("人工材质(选择或输入)", self.human_material_var, r, HUMAN_MATERIALS)
+        r = airow("AI 功能", self.ai_func_var, r)
+        r = hurow("人工功能(选择或输入)", self.human_function_var, r, HUMAN_FUNCTIONS)
+        r = airow("AI 内容类型", self.ai_ct_var, r)
+        r = hurow("人工内容类型", self.human_ct_var, r, CONTENT_TYPES)
 
         r = section("— 二、模板反馈（账号DNA训练）—", r)
         r = airow("推荐模板", self.ai_tpl_var, r)
@@ -396,10 +421,12 @@ class AccuracyReviewApp(tk.Tk):
                           ("用户价值", "ai_user_rs"), ("内容传播", "ai_comm_rs"),
                           ("成交价值", "ai_deal_rs")):
             getattr(self, f"{attr}_var").set(ai_dr.get(dim, ""))
-        # 人工值清空
-        self.scene_var.set("")
+        # 人工值清空（V1.2：具体内容确认）
+        self.human_scene_var.set("")
+        self.human_product_var.set("")
+        self.human_material_var.set("")
+        self.human_function_var.set("")
         self.scene_score_var.set(0)
-        self.product_var.set("")
         self.human_ct_var.set("")
         self.human_tpl_var.set("无推荐")
         self.tpl_verdict_var.set("")
@@ -444,13 +471,18 @@ class AccuracyReviewApp(tk.Tk):
     def _save_review(self) -> None:
         if not self.current:
             return
-        if not self.human_ct_var.get() or not self.scene_var.get():
-            messagebox.showwarning("提示", "请至少填写场景判定和人工内容类型")
+        if not self.human_ct_var.get() or not self.human_scene_var.get():
+            messagebox.showwarning("提示", "请至少填写人工场景和人工内容类型")
             return
         # 人工 5 维总分（自动汇总）
         human_biz = (self.human_truth_var.get() + self.human_prod_var.get()
                      + self.human_user_var.get() + self.human_comm_var.get()
                      + self.human_deal_var.get())
+        # AI 各维度判定（从只读变量提取，供学习规则对比）
+        ai_scene = self.ai_scene_var.get()
+        ai_product = self.ai_product_var.get()
+        ai_material = self.ai_material_var.get()
+        ai_function = self.ai_func_var.get()
         conn = sqlite3.connect(str(self.db_path), timeout=30)
         conn.execute(
             "INSERT OR REPLACE INTO accuracy_review("
@@ -458,11 +490,11 @@ class AccuracyReviewApp(tk.Tk):
             "ai_content_type,human_content_type,ai_template,human_template,"
             "ai_business,human_business,overall,comment,operator,created_time,"
             "template_verdict,template_reason,"
-            "truth_reason,product_reason,user_reason,comm_reason,deal_reason)"
-            " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            "truth_reason,product_reason,user_reason,comm_reason,deal_reason,"
+            "human_scene,human_product,human_material,human_function)"
+            " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             (self.current["test_id"], self.current["asset_id"],
-             self.scene_var.get(), self.scene_score_var.get(),
-             self.product_var.get(),
+             "", self.scene_score_var.get(), "",
              self.ai_ct_var.get(), self.human_ct_var.get(),
              self.ai_tpl_var.get(), self.human_tpl_var.get(),
              self.ai_biz_var.get(), human_biz,
@@ -471,7 +503,9 @@ class AccuracyReviewApp(tk.Tk):
              self.tpl_verdict_var.get(), self.tpl_reason_var.get(),
              self.truth_reason_var.get(), self.prod_reason_var.get(),
              self.user_reason_var.get(), self.comm_reason_var.get(),
-             self.deal_reason_var.get()))
+             self.deal_reason_var.get(),
+             self.human_scene_var.get(), self.human_product_var.get(),
+             self.human_material_var.get(), self.human_function_var.get()))
         conn.execute(
             "UPDATE accuracy_test SET status='reviewed' WHERE id=?",
             (self.current["test_id"],))
@@ -481,7 +515,33 @@ class AccuracyReviewApp(tk.Tk):
         if self.human_ct_var.get() and self.ai_ct_var.get() \
                 and self.human_ct_var.get() != self.ai_ct_var.get():
             self._write_learning_rule()
+        # 场景/材质/产品/功能差异也写入学习规则
+        self._write_content_learning_rules(ai_scene, ai_product, ai_material, ai_function)
         self._step(1)
+
+    def _write_content_learning_rules(self, ai_scene, ai_product,
+                                      ai_material, ai_function) -> None:
+        """人工确认内容 vs AI 判定的差异 → learning_rules。"""
+        try:
+            from treecut.cognitive.store import CognitiveStore
+            store = CognitiveStore(self.db_path)
+            store.ensure_schema()
+            diffs = [
+                ("scene", ai_scene, self.human_scene_var.get()),
+                ("product", ai_product, self.human_product_var.get()),
+                ("material", ai_material, self.human_material_var.get()),
+                ("function", ai_function, self.human_function_var.get()),
+            ]
+            for error_type, ai_out, hu_out in diffs:
+                if hu_out and ai_out and hu_out != ai_out and "未识别" not in hu_out:
+                    store.add_learning_rule(
+                        source="accuracy_review",
+                        ai_output=ai_out,
+                        human_output=hu_out,
+                        error_type=error_type,
+                        rule=f"人工内容确认: AI={ai_out} 人工={hu_out}")
+        except Exception as e:
+            print(f"  [内容学习规则写入失败] {e}")
 
     def _write_learning_rule(self) -> None:
         try:

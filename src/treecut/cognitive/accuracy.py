@@ -92,6 +92,11 @@ class AccuracyEngine:
                 user_reason       TEXT NOT NULL DEFAULT '',
                 comm_reason       TEXT NOT NULL DEFAULT '',
                 deal_reason       TEXT NOT NULL DEFAULT '',
+                -- V1.2 人工内容确认字段（人工给出具体判定，非对错）
+                human_scene    TEXT NOT NULL DEFAULT '',  -- 人工确认的场景（客户家/工厂/展厅/安装现场…）
+                human_product  TEXT NOT NULL DEFAULT '',  -- 人工确认的产品（岛台/伸缩岛台/餐边柜…）
+                human_material TEXT NOT NULL DEFAULT '',  -- 人工确认的材质（岩板/实木/奢石/大理石/肤感…）
+                human_function TEXT NOT NULL DEFAULT '',  -- 人工确认的功能（收纳/伸缩/隐藏电器/插座…）
                 UNIQUE(test_id, asset_id)
             )
         """)
@@ -105,6 +110,10 @@ class AccuracyEngine:
             "user_reason": "TEXT NOT NULL DEFAULT ''",
             "comm_reason": "TEXT NOT NULL DEFAULT ''",
             "deal_reason": "TEXT NOT NULL DEFAULT ''",
+            "human_scene": "TEXT NOT NULL DEFAULT ''",
+            "human_product": "TEXT NOT NULL DEFAULT ''",
+            "human_material": "TEXT NOT NULL DEFAULT ''",
+            "human_function": "TEXT NOT NULL DEFAULT ''",
         }.items():
             if col not in cols:
                 conn.execute(f"ALTER TABLE accuracy_review ADD COLUMN {col} {ddl}")
