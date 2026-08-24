@@ -124,6 +124,11 @@ def main() -> int:
                         help="认知体系: 对 N 个素材批量运行行业理解（默认从抽检队列取 100）")
     parser.add_argument("--brain-ui", action="store_true",
                         help="认知体系: 启动认知结果人工确认 UI")
+    parser.add_argument("--brain-learn", action="store_true",
+                        help="认知体系: 执行一次反馈学习（差异→规则→权重更新）")
+    parser.add_argument("--brain-learn-status", action="store_true",
+                        dest="brain_learn_status",
+                        help="认知体系: 反馈学习状态（待处理反馈量）")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -360,6 +365,21 @@ def main() -> int:
         from treecut.cognitive.ui import CognitiveReviewApp
         app = CognitiveReviewApp(context.paths.databases / "materials.db")
         app.mainloop()
+        return 0
+    if args.brain_learn_status:
+        # 反馈学习状态
+        context = bootstrap()
+        from treecut.cognitive import LearningEngine
+        engine = LearningEngine(context.paths.databases / "materials.db")
+        print(json.dumps(engine.status(), ensure_ascii=False, indent=2))
+        return 0
+    if args.brain_learn:
+        # 执行反馈学习
+        context = bootstrap()
+        from treecut.cognitive import LearningEngine
+        engine = LearningEngine(context.paths.databases / "materials.db")
+        result = engine.learn()
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
         return 0
     if args.p3_run is not None:
         from treecut.analysis.p3_worker import P3Worker

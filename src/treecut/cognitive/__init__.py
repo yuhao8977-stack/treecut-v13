@@ -8,6 +8,7 @@
   industry.py  — Layer3/4 行业知识引擎（特征抽取 + 内容分类）
   account.py   — Layer5 账号适配度引擎
   template.py  — Layer6 模板匹配 + 商业价值引擎
+  learning.py  — Layer7 反馈学习引擎
 """
 from __future__ import annotations
 
@@ -17,8 +18,9 @@ from treecut.cognitive.brain import Brain
 from treecut.cognitive.industry import IndustryEngine
 from treecut.cognitive.account import AccountEngine
 from treecut.cognitive.template import TemplateEngine
+from treecut.cognitive.learning import LearningEngine
 
 __all__ = ["CognitiveStore", "KnowledgeLoader", "Brain", "IndustryEngine",
-           "AccountEngine", "TemplateEngine", "KNOWLEDGE_ROOT"]
+           "AccountEngine", "TemplateEngine", "LearningEngine", "KNOWLEDGE_ROOT"]
 
 
