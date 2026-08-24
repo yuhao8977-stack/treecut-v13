@@ -438,7 +438,7 @@ class AccuracyEngine:
         conn = sqlite3.connect("file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
         rows = conn.execute("SELECT * FROM accuracy_review").fetchall()
         conn.close()
-        cols = [d[0] for d in
+        cols = [d[1] for d in
                 sqlite3.connect("file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
                 .execute("PRAGMA table_info(accuracy_review)").fetchall()]
         errors = []
