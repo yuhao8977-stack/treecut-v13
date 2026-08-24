@@ -122,6 +122,8 @@ def main() -> int:
     parser.add_argument("--brain-batch", type=int, metavar="N", default=None,
                         dest="brain_batch",
                         help="认知体系: 对 N 个素材批量运行行业理解（默认从抽检队列取 100）")
+    parser.add_argument("--brain-ui", action="store_true",
+                        help="认知体系: 启动认知结果人工确认 UI")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -351,6 +353,13 @@ def main() -> int:
         result = engine.batch(asset_ids, persist=True)
         print(json.dumps({k: v for k, v in result.items() if k != "results"},
                          ensure_ascii=False, indent=2))
+        return 0
+    if args.brain_ui:
+        # 认知结果人工确认 UI
+        context = bootstrap()
+        from treecut.cognitive.ui import CognitiveReviewApp
+        app = CognitiveReviewApp(context.paths.databases / "materials.db")
+        app.mainloop()
         return 0
     if args.p3_run is not None:
         from treecut.analysis.p3_worker import P3Worker
