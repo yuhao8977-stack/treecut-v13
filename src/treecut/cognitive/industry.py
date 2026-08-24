@@ -293,6 +293,59 @@ class IndustryEngine:
     # V2 双层内容类型（第一轮人工校准）
     # ------------------------------------------------------------------
 
+    def _correct_scenes(self, scenes: list[dict], texts: dict,
+                        full_text: str) -> list[dict]:
+        """V2.1 场景修正规则（来自第一轮人工反馈）。
+
+        用户判定标准：
+          - 安装现场 = 入户安装（真实客户家里，需入户证据）
+          - 展厅 = 环境干净/有吊顶/陈列展示（需展厅证据，非工厂施工环境）
+          - 工厂 = 生产/施工/杂乱环境；工厂内产品空镜/造型展示 属工厂
+        修正逻辑：
+          1. 有入户证据（客户家/入户/家里/完工/装好）→ 安装现场优先
+          2. 路径含"产品空镜/空镜/造型展示/产品类/整体展示" 且无入户证据
+             → 工厂（工厂内产品展示），压制 安装现场/展厅
+          3. CLIP "安装施工现场" 标签仅在无工厂空镜信号时算安装现场
+        """
+        if not scenes:
+            return scenes
+        path = texts.get("path", "")
+        asr = texts.get("asr", "")
+        vision = texts.get("vision", "")
+        text = full_text or ""
+
+        # 1) 入户证据 → 安装现场（强证据覆盖）
+        #    严格：真实入户安装/完工交付；"家里"单独出现（口播语境）不算
+        entry_strong = ["客户家", "入户", "完工", "装好", "安装完成", "交付",
+                        "入住", "新家", "客户家里"]
+        entry_weak = ["家里", "实景"]   # 口播常用，需强证据伴生
+        if any(k in asr or k in path for k in entry_strong):
+            return self._promote_scene(scenes, "安装现场", 0.95)
+
+        # 2) 工厂内产品空镜/造型展示（无入户证据）→ 工厂
+        factory_show = ["产品空镜", "空镜", "造型展示", "产品类", "整体展示",
+                        "细节展示", "对开间", "下层抽屉", "灯带", "轨道插座",
+                        "内嵌烤箱", "钢结构", "展示"]
+        is_factory_show = any(k in path for k in factory_show)
+        if is_factory_show:
+            return self._promote_scene(scenes, "工厂", 0.92)
+
+        # 3) 展厅证据（干净陈列：展厅/体验馆/样板间）且无施工信号 → 展厅
+        showroom = ["展厅", "体验馆", "样板间", "陈列"]
+        work_signal = ["安装", "施工", "组装", "师傅"]
+        if any(k in path or k in vision for k in showroom) \
+                and not any(k in asr or k in path for k in work_signal):
+            return self._promote_scene(scenes, "展厅", 0.85)
+
+        # 4) 默认：保留原评分
+        return scenes
+
+    def _promote_scene(self, scenes: list[dict], name: str, score: float) -> list[dict]:
+        """把指定场景提升到首位（若已存在则改分，否则插入）。"""
+        out = [s for s in scenes if s["name"] != name]
+        out.insert(0, {"name": name, "score": round(score, 3)})
+        return out
+
     def _classify_content_v2(self, text: str, asr_text: str = "") -> tuple[str, float, list[str], dict]:
         """V2 内容理解：主类型 + 内容元素 + 证据。
 
@@ -419,6 +472,8 @@ class IndustryEngine:
         products = self._score_entries(full_text, "product")
         materials = self._score_entries(full_text, "material")
         scenes = self._score_entries(full_text, "scene")
+        # V2.1 场景修正（第一轮人工反馈：工厂内产品空镜 ≠ 安装现场/展厅）
+        scenes = self._correct_scenes(scenes, texts, full_text)
         functions = self._match_functions(full_text)
         content_types = self._classify_content(full_text)
         # V2 双层内容类型（传原始 ASR 判断"是否有实质讲解"）
