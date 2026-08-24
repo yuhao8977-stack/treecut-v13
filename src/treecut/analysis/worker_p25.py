@@ -135,6 +135,14 @@ class Worker25:
     def _run_ocr(self, asset_id: str) -> bool:
         frames = self.segments_store.list_keyframes(asset_id)
         if not frames:
+            # 竞态防护：keyframe 阶段还在处理中 → 返回 False 触发任务重试等待，
+            # 而不是误标记 SKIPPED（修复 P2.5 调度竞态：OCR 先于 keyframe 执行）
+            kf_state = self.ps.get_state(asset_id, "keyframe")
+            if kf_state and kf_state.status == "PROCESSING":
+                self._log("", asset_id, "ocr", "retry_wait", 0.0,
+                          "keyframe 仍在处理中，OCR 等待重试")
+                return False
+            # keyframe 已 DONE/SKIPPED 但仍无关键帧 → 真无关键帧，跳过
             self.ps.mark_skipped(asset_id, "ocr", reason="无关键帧，跳过 OCR")
             return True
         ocr_frames = [{
@@ -213,6 +221,11 @@ class Worker25:
                 self._log(task_id, asset_id, stage,
                           "success" if ok else "failed",
                           round(time.perf_counter() - started, 2))
+                if not ok and stage == "ocr":
+                    # OCR 等待重试（keyframe 未就绪）→ 交还任务队列，稍后重试
+                    self.store.fail_task(task_id, "ocr: keyframe 未就绪，等待重试",
+                                         retryable=True)
+                    return "occupied"
             except Exception as exc:
                 stage_results[stage] = "failed"
                 self.ps.mark_failed(asset_id, stage, reason=str(exc)[:200],
