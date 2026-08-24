@@ -17,6 +17,7 @@ from treecut.cognitive.store import CognitiveStore
 CONTENT_TEMPLATE_MAP = {
     "客户案例": "T001",
     "产品介绍": "T003",
+    "产品展示": "T003",
     "工厂实力": "T002",
     "装修方案": "T003",
     "避坑知识": "T004",
@@ -239,11 +240,11 @@ class TemplateEngine:
         has_talk = bool(t.strip())
 
         # --- 内容类型基准分（人工校准） ---
-        base_map = {"产品介绍": 55, "客户案例": 70, "功能展示": 50,
+        base_map = {"产品介绍": 55, "客户案例": 70, "产品展示": 45, "功能展示": 50,
                     "装修方案": 55, "知识分享": 50, "品牌展示": 35, "其他": 10}
         base = base_map.get(content_type, 30)
         reasons.append(f"内容类型基准: {content_type} ({base})")
-        if not has_product and content_type in ("产品介绍", "功能展示"):
+        if not has_product and content_type in ("产品介绍", "产品展示", "功能展示"):
             base -= 8
             reasons.append("无产品主体识别，基准 -8")
 
