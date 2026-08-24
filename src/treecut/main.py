@@ -141,6 +141,15 @@ def main() -> int:
     parser.add_argument("--brain-vision-status", action="store_true",
                         dest="brain_vision_status",
                         help="认知体系: 视觉模型可用性")
+    parser.add_argument("--accuracy-build", action="store_true",
+                        help="验证: 随机抽取 100 条测试集")
+    parser.add_argument("--accuracy-run", type=int, metavar="N", default=None,
+                        dest="accuracy_run",
+                        help="验证: 对测试集批量生成 AI 分析（默认全部 pending）")
+    parser.add_argument("--accuracy-report", action="store_true",
+                        help="验证: 生成准确率报告（需人工审核数据）")
+    parser.add_argument("--accuracy-ui", action="store_true",
+                        help="验证: 启动 AI Accuracy Review UI（人工逐项审核）")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -419,6 +428,39 @@ def main() -> int:
         engine = VisionEngine(context.paths.databases / "materials.db")
         print(json.dumps({"florence_available": engine.available()},
                          ensure_ascii=False, indent=2))
+        return 0
+    if args.accuracy_build:
+        # 验证: 随机抽取 100 条测试集
+        context = bootstrap()
+        from treecut.cognitive import AccuracyEngine
+        engine = AccuracyEngine(context.paths.databases / "materials.db")
+        result = engine.build_test_set(force=True)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0
+    if args.accuracy_run is not None:
+        # 验证: 批量 AI 分析测试集
+        context = bootstrap()
+        from treecut.cognitive import AccuracyEngine
+        engine = AccuracyEngine(context.paths.databases / "materials.db")
+        n = args.accuracy_run if args.accuracy_run > 0 else None
+        result = engine.batch_analyze(limit=n)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0
+    if args.accuracy_report:
+        # 验证: 准确率报告（markdown 落盘）
+        context = bootstrap()
+        from treecut.cognitive import AccuracyEngine
+        engine = AccuracyEngine(context.paths.databases / "materials.db")
+        report = engine.generate_report()
+        print(json.dumps(engine.compute_accuracy(), ensure_ascii=False, indent=2))
+        print(f"报告已生成: {report}")
+        return 0
+    if args.accuracy_ui:
+        # 验证: AI Accuracy Review UI
+        context = bootstrap()
+        from treecut.cognitive.accuracy_ui import AccuracyReviewApp
+        app = AccuracyReviewApp(context.paths.databases / "materials.db")
+        app.run()
         return 0
     if args.brain_vision is not None:
         # 视觉补认知

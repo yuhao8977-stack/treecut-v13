@@ -1,5 +1,37 @@
 # TreeCut v13 Changelog
 
+## [13.5.13] - 2026-08-24 — AI 业务理解能力验证（Accuracy Validation）
+
+### 新增：准确率验证体系（用户指定：验证 AI 是否接近真实小红书家具运营判断）
+
+- **`cognitive/accuracy.py`**（新）：`AccuracyEngine`
+  - `accuracy_test` / `accuracy_review` 两表（asset_id UNIQUE，人工逐项审核）
+  - `build_test_set()`：100 条随机测试集（客户案例20/产品介绍20/工厂实力20/装修方案15/避坑知识15/低质量10），
+    配额不足从全量素材随机补足（无人工筛选）
+  - `analyze_asset()`：ABCD 四段式 AI 分析（A 事实 / B 业务理解 / C 小红书适配 / D 商业 5×20）
+  - `compute_accuracy()`：内容类型30%+模板30%+产品20%+商业20%；目标 内容类型≥85% / 模板≥80% / 商业偏差≤15
+  - `top_errors()` / `knowledge_gaps()` / `self_baseline()`：TOP20 错误、知识缺口、无人工审核时可量化的自基线
+  - `generate_report()`：`docs/TREECUT_AI_ACCURACY_REPORT.md`（环境/分类统计/交叉表/置信度/错误模式/缺口/计划）
+- **`cognitive/accuracy_ui.py`**（新）：AI Accuracy Review UI（tkinter 三栏：素材信息+视频 / AI ABCD / 人工逐项审核）
+  - 人工修正自动写入 `learning_rules`（Phase 5 学习），不修改任何 AI 分析结果
+- **`main.py`**：新增 `--accuracy-build` / `--accuracy-run N` / `--accuracy-report` / `--accuracy-ui`
+
+### 验证首轮基线发现（不调整结果，只记录）
+
+- AI 判定仅覆盖 3 类（产品介绍/客户案例/工厂实力）；装修方案/避坑知识/低质量 为随机 fallback 素材，
+  期望分类与真实内容错位，需人工审核后重评
+- 置信度锁定 0.47：命中 1 词即 0.4+0.12×1，乘工厂权重 0.9 反向压低，规则无区分度
+- 约 20% 素材 ASR 为繁体，简体关键词库命中率低
+- 工厂实力 20 条中 AI 误判客户案例 3 / 产品介绍 2；产品未识别 41 条
+
+### 文档
+
+- `docs/TREECUT_AI_ACCURACY_REPORT.md` — 首轮 AI 自基线验证报告（待人工审核回填）
+
+## [13.5.12] - 2026-08-23 — 认知体系全链路 + 优化
+
+（Phase 0-5 认知系统、视觉补认知、生产链路等，见 13.5.12 提交）
+
 ## [13.5.11] - 2026-08-22 — P2.5 并行分析引擎
 
 ### 新增：多 Worker 任务调度系统（P2.5）

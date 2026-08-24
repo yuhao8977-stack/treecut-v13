@@ -10,7 +10,8 @@
   template.py  — Layer6 模板匹配 + 商业价值引擎
   learning.py  — Layer7 反馈学习引擎
   production.py — Phase5 认知生产引擎（模板→选材→成片）
-  vision.py     — Phase2b 视觉理解补齐（Florence-2）
+  vision.py     — Phase2b 视觉理解补齐（CLIP）
+  accuracy.py   — 业务理解能力验证（测试集/准确率计算）
 """
 from __future__ import annotations
 
@@ -23,9 +24,11 @@ from treecut.cognitive.template import TemplateEngine
 from treecut.cognitive.learning import LearningEngine
 from treecut.cognitive.production import ProductionEngine
 from treecut.cognitive.vision import VisionEngine
+from treecut.cognitive.accuracy import AccuracyEngine
 
 __all__ = ["CognitiveStore", "KnowledgeLoader", "Brain", "IndustryEngine",
            "AccountEngine", "TemplateEngine", "LearningEngine",
-           "ProductionEngine", "VisionEngine", "KNOWLEDGE_ROOT"]
+           "ProductionEngine", "VisionEngine", "AccuracyEngine",
+           "KNOWLEDGE_ROOT"]
 
 
