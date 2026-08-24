@@ -119,6 +119,9 @@ def main() -> int:
                         help="认知体系: 加载/热更新 TreeCut_AI_Brain 知识库到数据库")
     parser.add_argument("--brain-analyze", metavar="ASSET_ID",
                         help="认知体系: 对单个素材运行完整认知链（Layer 0-6）")
+    parser.add_argument("--brain-batch", type=int, metavar="N", default=None,
+                        dest="brain_batch",
+                        help="认知体系: 对 N 个素材批量运行行业理解（默认从抽检队列取 100）")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -318,6 +321,35 @@ def main() -> int:
         from treecut.cognitive import Brain
         brain = Brain(context.paths.databases / "materials.db")
         print(json.dumps(brain.analyze(args.brain_analyze),
+                         ensure_ascii=False, indent=2))
+        return 0
+    if args.brain_batch is not None:
+        # 批量行业理解（默认从 sample_100.json 取；N>0 则随机取 N 个有分析数据的素材）
+        context = bootstrap()
+        from treecut.cognitive import IndustryEngine
+        engine = IndustryEngine(context.paths.databases / "materials.db")
+        sample_file = context.paths.databases / "sample_100.json"
+        asset_ids = []
+        if sample_file.exists() and args.brain_batch == 0:
+            import json as _json
+            with open(sample_file, encoding="utf-8") as f:
+                asset_ids = [s["asset_id"] for s in _json.load(f)]
+        else:
+            n = args.brain_batch if args.brain_batch > 0 else 100
+            conn = sqlite3.connect(
+                "file:" + str(context.paths.databases / "materials.db").replace("\\", "/") + "?mode=ro", uri=True)
+            rows = conn.execute(
+                "SELECT DISTINCT a.asset_id FROM assets a "
+                "JOIN transcripts t ON t.asset_id=a.asset_id "
+                "ORDER BY RANDOM() LIMIT ?", (n,)).fetchall()
+            conn.close()
+            asset_ids = [r[0] for r in rows]
+        if not asset_ids:
+            print(json.dumps({"error": "无可用素材（需先生成 sample_100.json 或素材有 ASR 数据）"},
+                             ensure_ascii=False, indent=2))
+            return 1
+        result = engine.batch(asset_ids, persist=True)
+        print(json.dumps({k: v for k, v in result.items() if k != "results"},
                          ensure_ascii=False, indent=2))
         return 0
     if args.p3_run is not None:
