@@ -460,7 +460,7 @@ def main() -> int:
         context = bootstrap()
         from treecut.cognitive.accuracy_ui import AccuracyReviewApp
         app = AccuracyReviewApp(context.paths.databases / "materials.db")
-        app.run()
+        app.mainloop()
         return 0
     if args.brain_vision is not None:
         # 视觉补认知
