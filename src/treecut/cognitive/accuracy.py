@@ -264,22 +264,25 @@ class AccuracyEngine:
         """商业评分 5 维拆分（20×5）。
 
         优先使用 template 引擎 V2 的真实维度（business_reasons 中的五维），
-        缺失时退回近似拆分。
+        缺失时退回近似拆分。同时解析每维评分原因（供审核 UI 对比）。
         """
         # 从 template business_reasons 解析 V2 真实五维
         tpl = (brain_result or {}).get("template", {}) or {}
         reasons = tpl.get("business_reasons", []) or []
         for line in reasons:
-            if "五维合计" in line:
+            if line.startswith("五维:"):
                 import re
+                import ast
                 m = re.search(r"\{.*\}", line)
                 if m:
                     try:
-                        dims = json.loads(m.group(0))
+                        dims = ast.literal_eval(m.group(0))
                         dims = {k: max(0, min(20, int(v))) for k, v in dims.items()}
+                        dim_reasons = self._parse_dim_reasons(reasons)
                         return {"scores": dims,
                                 "total": round(sum(dims.values()), 1),
-                                "reason": self._business_reason(b)}
+                                "reason": self._business_reason(b),
+                                "dim_reasons": dim_reasons}
                     except Exception:
                         pass
         # 退回近似拆分
@@ -302,6 +305,19 @@ class AccuracyEngine:
             scores = {k: max(0, min(20, round(v * scale, 1))) for k, v in scores.items()}
         return {"scores": scores, "total": round(total, 1),
                 "reason": self._business_reason(b)}
+
+    def _parse_dim_reasons(self, reasons: list[str]) -> dict[str, str]:
+        """从 business_reasons 解析每维评分原因（如"真实性: 有真实客户/空间证据 → 18"）。"""
+        out = {}
+        for line in reasons:
+            for dim in ("真实性", "产品价值", "用户价值", "内容传播", "成交价值"):
+                if line.startswith(dim + ":"):
+                    # 去掉尾部" → 分数"
+                    import re
+                    txt = re.sub(r"→\s*\d+\s*$", "", line).strip()
+                    out[dim] = txt
+                    break
+        return out
 
     def _business_reason(self, b: dict) -> str:
         reasons = []
