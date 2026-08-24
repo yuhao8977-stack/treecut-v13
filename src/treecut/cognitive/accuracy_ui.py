@@ -141,19 +141,27 @@ class AccuracyReviewApp(tk.Tk):
         tk.Label(parent, text="人工审核（依据视频实际判断）",
                  bg="#f0f0f0", font=("Microsoft YaHei", 10, "bold")).pack(anchor=tk.W)
 
-        form = ttk.Frame(parent)
-        form.pack(fill=tk.BOTH, expand=True, padx=6, pady=4)
+        # 使用滚动容器
+        canvas = tk.Canvas(parent, highlightthickness=0)
+        sb = ttk.Scrollbar(parent, orient=tk.VERTICAL, command=canvas.yview)
+        form = ttk.Frame(canvas)
+        form.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+        canvas.create_window((0, 0), window=form, anchor=tk.NW)
+        canvas.configure(yscrollcommand=sb.set)
+        canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        sb.pack(side=tk.RIGHT, fill=tk.Y)
 
-        def row(label, var, options=None, r=0, spin=False):
-            tk.Label(form, text=label, bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W, pady=3)
+        def row(label, var, options=None, r=0, spin=False, spin_to=100):
+            tk.Label(form, text=label, bg="#f0f0f0", anchor=tk.W).grid(
+                row=r, column=0, sticky=tk.W, pady=3)
             if spin:
-                ttk.Spinbox(form, from_=0, to=100, textvariable=var, width=8).grid(
+                ttk.Spinbox(form, from_=0, to=spin_to, textvariable=var, width=6).grid(
                     row=r, column=1, sticky=tk.W, padx=4)
             elif options:
                 ttk.Combobox(form, textvariable=var, values=options, state="readonly",
-                             width=22).grid(row=r, column=1, sticky=tk.W, padx=4)
+                             width=24).grid(row=r, column=1, sticky=tk.W, padx=4)
             else:
-                ttk.Entry(form, textvariable=var, width=26).grid(
+                ttk.Entry(form, textvariable=var, width=30).grid(
                     row=r, column=1, sticky=tk.W, padx=4)
 
         self.scene_var = tk.StringVar()
@@ -163,27 +171,65 @@ class AccuracyReviewApp(tk.Tk):
         self.human_ct_var = tk.StringVar()
         self.ai_tpl_var = tk.StringVar()
         self.human_tpl_var = tk.StringVar()
+        self.tpl_verdict_var = tk.StringVar()
+        self.tpl_reason_var = tk.StringVar()
         self.ai_biz_var = tk.IntVar(value=0)
         self.human_biz_var = tk.IntVar(value=0)
+        # 5 维商业评分（各 20）+ 原因
+        self.human_truth_var = tk.IntVar(value=0)
+        self.human_prod_var = tk.IntVar(value=0)
+        self.human_user_var = tk.IntVar(value=0)
+        self.human_comm_var = tk.IntVar(value=0)
+        self.human_deal_var = tk.IntVar(value=0)
+        self.truth_reason_var = tk.StringVar()
+        self.prod_reason_var = tk.StringVar()
+        self.user_reason_var = tk.StringVar()
+        self.comm_reason_var = tk.StringVar()
+        self.deal_reason_var = tk.StringVar()
         self.overall_var = tk.StringVar()
         self.comment_var = tk.StringVar()
         self.operator_var = tk.StringVar()
 
-        row("场景判定", self.scene_var, VERDICTS, 0)
-        row("场景评分(0-100)", self.scene_score_var, spin=True, r=1)
-        row("产品判定", self.product_var, VERDICTS, 2)
-        row("AI 内容类型", self.ai_ct_var, options=(), r=3)
-        row("人工内容类型", self.human_ct_var, CONTENT_TYPES, 4)
-        row("AI 模板", self.ai_tpl_var, options=(), r=5)
-        row("人工模板", self.human_tpl_var, TEMPLATES, 6)
-        row("AI 商业评分", self.ai_biz_var, spin=True, r=7)
-        row("人工商业评分", self.human_biz_var, spin=True, r=8)
-        row("总评", self.overall_var, OVERALLS, 9)
-        row("备注", self.comment_var, r=10)
-        row("操作员", self.operator_var, r=11)
+        tk.Label(form, text="— 基础判定 —", bg="#f0f0f0",
+                 font=("Microsoft YaHei", 9, "bold")).grid(row=0, column=0, columnspan=2, sticky=tk.W, pady=(6, 2))
+        row("场景判定", self.scene_var, VERDICTS, 1)
+        row("场景评分(0-100)", self.scene_score_var, spin=True, r=2)
+        row("产品判定", self.product_var, VERDICTS, 3)
+        row("AI 内容类型", self.ai_ct_var, options=(), r=4)
+        row("人工内容类型", self.human_ct_var, CONTENT_TYPES, 5)
 
-        ttk.Button(parent, text="✓ 保存审核", command=self._save_review).pack(
-            fill=tk.X, padx=8, pady=6)
+        tk.Label(form, text="— 模板反馈（账号DNA训练）—", bg="#f0f0f0",
+                 font=("Microsoft YaHei", 9, "bold")).grid(row=6, column=0, columnspan=2, sticky=tk.W, pady=(8, 2))
+        row("AI 推荐模板", self.ai_tpl_var, options=(), r=7)
+        row("模板判定", self.tpl_verdict_var, ("适合", "部分适合", "不适合"), 8)
+        row("人工最终模板", self.human_tpl_var, TEMPLATES, 9)
+        row("模板原因", self.tpl_reason_var, r=10)
+
+        tk.Label(form, text="— 商业价值评分（5×20 拆解）—", bg="#f0f0f0",
+                 font=("Microsoft YaHei", 9, "bold")).grid(row=11, column=0, columnspan=2, sticky=tk.W, pady=(8, 2))
+        row("AI 商业总分", self.ai_biz_var, spin=True, r=12, spin_to=100)
+        tk.Label(form, text="人工 5 维评分（每项 0-20）+ 原因",
+                 bg="#f0f0f0", font=("Microsoft YaHei", 8)).grid(row=13, column=0, columnspan=2, sticky=tk.W)
+        row("真实性/20", self.human_truth_var, spin=True, r=14, spin_to=20)
+        row("真实性原因", self.truth_reason_var, r=15)
+        row("产品价值/20", self.human_prod_var, spin=True, r=16, spin_to=20)
+        row("产品价值原因", self.prod_reason_var, r=17)
+        row("用户价值/20", self.human_user_var, spin=True, r=18, spin_to=20)
+        row("用户价值原因", self.user_reason_var, r=19)
+        row("传播价值/20", self.human_comm_var, spin=True, r=20, spin_to=20)
+        row("传播价值原因", self.comm_reason_var, r=21)
+        row("成交价值/20", self.human_deal_var, spin=True, r=22, spin_to=20)
+        row("成交价值原因", self.deal_reason_var, r=23)
+
+        tk.Label(form, text="— 总评 —", bg="#f0f0f0",
+                 font=("Microsoft YaHei", 9, "bold")).grid(row=24, column=0, columnspan=2, sticky=tk.W, pady=(8, 2))
+        row("总评", self.overall_var, OVERALLS, 25)
+        row("备注", self.comment_var, r=26)
+        row("操作员", self.operator_var, r=27)
+
+        btn = tk.Button(parent, text="✓ 保存审核", command=self._save_review,
+                        bg="#4CAF50", fg="white", font=("Microsoft YaHei", 11, "bold"))
+        btn.pack(fill=tk.X, padx=8, pady=6)
 
     # ------------------------------------------------------------------
     # 渲染
@@ -239,7 +285,18 @@ class AccuracyReviewApp(tk.Tk):
         self.product_var.set("")
         self.human_ct_var.set("")
         self.human_tpl_var.set("无推荐")
-        self.human_biz_var.set(0)
+        self.tpl_verdict_var.set("")
+        self.tpl_reason_var.set("")
+        self.human_truth_var.set(0)
+        self.human_prod_var.set(0)
+        self.human_user_var.set(0)
+        self.human_comm_var.set(0)
+        self.human_deal_var.set(0)
+        self.truth_reason_var.set("")
+        self.prod_reason_var.set("")
+        self.user_reason_var.set("")
+        self.comm_reason_var.set("")
+        self.deal_reason_var.set("")
         self.overall_var.set("")
         self.comment_var.set("")
         self.operator_var.set(os.environ.get("USERNAME", ""))
@@ -263,21 +320,31 @@ class AccuracyReviewApp(tk.Tk):
         if not self.human_ct_var.get() or not self.scene_var.get():
             messagebox.showwarning("提示", "请至少填写场景判定和人工内容类型")
             return
+        # 人工 5 维总分（自动汇总）
+        human_biz = (self.human_truth_var.get() + self.human_prod_var.get()
+                     + self.human_user_var.get() + self.human_comm_var.get()
+                     + self.human_deal_var.get())
         conn = sqlite3.connect(str(self.db_path), timeout=30)
         conn.execute(
             "INSERT OR REPLACE INTO accuracy_review("
             "test_id,asset_id,scene_verdict,scene_score,product_verdict,"
             "ai_content_type,human_content_type,ai_template,human_template,"
-            "ai_business,human_business,overall,comment,operator,created_time)"
-            " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            "ai_business,human_business,overall,comment,operator,created_time,"
+            "template_verdict,template_reason,"
+            "truth_reason,product_reason,user_reason,comm_reason,deal_reason)"
+            " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             (self.current["test_id"], self.current["asset_id"],
              self.scene_var.get(), self.scene_score_var.get(),
              self.product_var.get(),
              self.ai_ct_var.get(), self.human_ct_var.get(),
              self.ai_tpl_var.get(), self.human_tpl_var.get(),
-             self.ai_biz_var.get(), self.human_biz_var.get(),
+             self.ai_biz_var.get(), human_biz,
              self.overall_var.get(), self.comment_var.get(),
-             self.operator_var.get(), time.time()))
+             self.operator_var.get(), time.time(),
+             self.tpl_verdict_var.get(), self.tpl_reason_var.get(),
+             self.truth_reason_var.get(), self.prod_reason_var.get(),
+             self.user_reason_var.get(), self.comm_reason_var.get(),
+             self.deal_reason_var.get()))
         conn.execute(
             "UPDATE accuracy_test SET status='reviewed' WHERE id=?",
             (self.current["test_id"],))

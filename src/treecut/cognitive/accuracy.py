@@ -84,9 +84,30 @@ class AccuracyEngine:
                 comment         TEXT NOT NULL DEFAULT '',
                 operator        TEXT NOT NULL DEFAULT '',
                 created_time    REAL NOT NULL,
+                -- V1.1 账号DNA训练新增字段（模板反馈 + 5维评分原因）
+                template_verdict  TEXT NOT NULL DEFAULT '',  -- 适合|部分适合|不适合
+                template_reason   TEXT NOT NULL DEFAULT '',
+                truth_reason      TEXT NOT NULL DEFAULT '',
+                product_reason    TEXT NOT NULL DEFAULT '',
+                user_reason       TEXT NOT NULL DEFAULT '',
+                comm_reason       TEXT NOT NULL DEFAULT '',
+                deal_reason       TEXT NOT NULL DEFAULT '',
                 UNIQUE(test_id, asset_id)
             )
         """)
+        # 幂等迁移：旧库补充新列
+        cols = [d[1] for d in conn.execute("PRAGMA table_info(accuracy_review)")]
+        for col, ddl in {
+            "template_verdict": "TEXT NOT NULL DEFAULT ''",
+            "template_reason": "TEXT NOT NULL DEFAULT ''",
+            "truth_reason": "TEXT NOT NULL DEFAULT ''",
+            "product_reason": "TEXT NOT NULL DEFAULT ''",
+            "user_reason": "TEXT NOT NULL DEFAULT ''",
+            "comm_reason": "TEXT NOT NULL DEFAULT ''",
+            "deal_reason": "TEXT NOT NULL DEFAULT ''",
+        }.items():
+            if col not in cols:
+                conn.execute(f"ALTER TABLE accuracy_review ADD COLUMN {col} {ddl}")
         conn.commit()
         conn.close()
 
