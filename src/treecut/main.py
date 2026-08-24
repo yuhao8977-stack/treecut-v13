@@ -86,6 +86,13 @@ def main() -> int:
     parser.add_argument("--asr-device", default=None, metavar="DEVICE",
                         dest="asr_device",
                         help="ASR 推理设备: auto/cpu/cuda（默认 auto，自动检测 GPU）")
+    parser.add_argument("--quality-review", action="store_true",
+                        help="P2.7: 启动 AI 分析质量验证 UI（人工抽检）")
+    parser.add_argument("--quality-sample", type=int, default=100, metavar="N",
+                        dest="quality_sample",
+                        help="P2.7: 抽检样本数量（默认 100）")
+    parser.add_argument("--quality-report", action="store_true",
+                        help="P2.7: 生成质量报告（准确率/OCR/损坏资产）并打印")
     parser.add_argument("--p3-run", type=int, metavar="COUNT", default=None,
                         help="P3: 成片/原片分类 + 重复识别 + TC_CONTENT_TAGS 标签")
     parser.add_argument("--p3-status", action="store_true",
@@ -259,6 +266,30 @@ def main() -> int:
                                stages=stages, force=args.p25_force,
                                asr_device=args.asr_device)
         print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.quality_review:
+        # P2.7: 启动人工质量验证 UI
+        context = bootstrap()
+        from treecut.quality_validation.ui import QualityReviewApp
+        app = QualityReviewApp(context.paths.databases / "materials.db")
+        app.mainloop()
+        return 0
+    if args.quality_report:
+        # P2.7: 生成质量报告
+        context = bootstrap()
+        from treecut.quality_validation.store import QualityValidationStore
+        from treecut.quality_validation.report import ReportBuilder
+        store = QualityValidationStore(context.paths.databases / "materials.db")
+        store.ensure_schema()
+        rb = ReportBuilder(context.paths.databases / "materials.db")
+        report = {
+            "coverage": rb.analysis_coverage(),
+            "ocr": rb.ocr_analysis(),
+            "asr": rb.asr_analysis(),
+            "feedback": store.feedback_stats(),
+            "broken": {"count": store.count_broken()},
+        }
+        print(json.dumps(report, ensure_ascii=False, indent=2))
         return 0
     if args.p3_run is not None:
         from treecut.analysis.p3_worker import P3Worker
