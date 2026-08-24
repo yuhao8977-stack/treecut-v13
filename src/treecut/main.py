@@ -129,6 +129,12 @@ def main() -> int:
     parser.add_argument("--brain-learn-status", action="store_true",
                         dest="brain_learn_status",
                         help="认知体系: 反馈学习状态（待处理反馈量）")
+    parser.add_argument("--brain-produce", nargs="+", metavar=("TEMPLATE_ID", "PROJECT"),
+                        default=None, dest="brain_produce",
+                        help="认知体系: 按模板生成成片（如 --brain-produce T001 客户案例001）")
+    parser.add_argument("--brain-produce-status", action="store_true",
+                        dest="brain_produce_status",
+                        help="认知体系: 生产计划状态")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -379,6 +385,25 @@ def main() -> int:
         from treecut.cognitive import LearningEngine
         engine = LearningEngine(context.paths.databases / "materials.db")
         result = engine.learn()
+        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+        return 0
+    if args.brain_produce_status:
+        # 生产计划状态
+        context = bootstrap()
+        from treecut.cognitive import ProductionEngine
+        engine = ProductionEngine(context.paths.databases / "materials.db")
+        print(json.dumps({"status": engine.status(),
+                          "plans": engine.list_plans()},
+                         ensure_ascii=False, indent=2))
+        return 0
+    if args.brain_produce:
+        # 认知生产：按模板生成成片
+        context = bootstrap()
+        from treecut.cognitive import ProductionEngine
+        engine = ProductionEngine(context.paths.databases / "materials.db")
+        template_id = args.brain_produce[0]
+        project = args.brain_produce[1] if len(args.brain_produce) > 1 else None
+        result = engine.produce(template_id, project)
         print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
         return 0
     if args.p3_run is not None:

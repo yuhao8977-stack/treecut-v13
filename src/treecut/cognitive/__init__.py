@@ -9,6 +9,7 @@
   account.py   — Layer5 账号适配度引擎
   template.py  — Layer6 模板匹配 + 商业价值引擎
   learning.py  — Layer7 反馈学习引擎
+  production.py — Phase5 认知生产引擎（模板→选材→成片）
 """
 from __future__ import annotations
 
@@ -19,8 +20,10 @@ from treecut.cognitive.industry import IndustryEngine
 from treecut.cognitive.account import AccountEngine
 from treecut.cognitive.template import TemplateEngine
 from treecut.cognitive.learning import LearningEngine
+from treecut.cognitive.production import ProductionEngine
 
 __all__ = ["CognitiveStore", "KnowledgeLoader", "Brain", "IndustryEngine",
-           "AccountEngine", "TemplateEngine", "LearningEngine", "KNOWLEDGE_ROOT"]
+           "AccountEngine", "TemplateEngine", "LearningEngine",
+           "ProductionEngine", "KNOWLEDGE_ROOT"]
 
 
