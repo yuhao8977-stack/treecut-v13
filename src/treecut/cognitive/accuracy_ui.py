@@ -171,16 +171,16 @@ class AccuracyReviewApp(tk.Tk):
         self.ai_text = tk.Text(mid, wrap=tk.WORD, font=("Microsoft YaHei", 9))
         self.ai_text.pack(fill=tk.BOTH, expand=True)
 
-        # --- 右栏：人工审核 ---
-        right = ttk.Frame(paned, width=420)
+        # --- 右栏：人工审核（加宽） ---
+        right = ttk.Frame(paned, width=560)
         paned.add(right, weight=0)
         self._build_review_form(right)
 
     def _build_review_form(self, parent) -> None:
-        tk.Label(parent, text="人工审核（AI vs 人工 逐项比对）",
-                 bg="#f0f0f0", font=("Microsoft YaHei", 10, "bold")).pack(anchor=tk.W)
+        tk.Label(parent, text="人工审核（AI 判定 ↑ / 人工填写 ↓）",
+                 bg="#f0f0f0", font=("Microsoft YaHei", 10, "bold")).pack(anchor=tk.W, padx=4)
 
-        # 使用滚动容器
+        # 滚动容器（垂直滚动即可，2 列布局无横向溢出）
         canvas = tk.Canvas(parent, highlightthickness=0)
         sb = ttk.Scrollbar(parent, orient=tk.VERTICAL, command=canvas.yview)
         form = ttk.Frame(canvas)
@@ -191,52 +191,36 @@ class AccuracyReviewApp(tk.Tk):
         sb.pack(side=tk.RIGHT, fill=tk.Y)
 
         def section(text, r):
-            tk.Label(form, text=text, bg="#e8e8f8",
+            tk.Label(form, text=text, bg="#e8e8f8", anchor=tk.W,
                      font=("Microsoft YaHei", 9, "bold")).grid(
-                row=r, column=0, columnspan=2, sticky=tk.W + tk.E, pady=(8, 2))
+                row=r, column=0, columnspan=2, sticky=tk.W + tk.E, pady=(8, 2), padx=2)
             return r + 1
 
-        def aiview(label, var, r, color="#eef6ee"):
-            """AI 只读值（绿底）。"""
-            tk.Label(form, text=label, bg="#f0f0f0", anchor=tk.W, width=14).grid(
-                row=r, column=0, sticky=tk.W, pady=2)
+        def airow(label, var, r):
+            """AI 只读行（整行绿底，2 列：标签 + 值）。"""
+            tk.Label(form, text="AI " + label, bg="#d8f0d8", anchor=tk.W,
+                     width=16, font=("Microsoft YaHei", 8, "bold")).grid(
+                row=r, column=0, sticky=tk.W, pady=1, padx=2)
             e = tk.Entry(form, textvariable=var, state="readonly",
-                         readonlybackground=color, width=32, font=("Microsoft YaHei", 8))
-            e.grid(row=r, column=1, sticky=tk.W, padx=4, pady=2)
+                         readonlybackground="#eef6ee", width=40, font=("Microsoft YaHei", 8))
+            e.grid(row=r, column=1, sticky=tk.W, padx=4, pady=1)
+            return r + 1
 
-        def row(label, var, options=None, r=0, spin=False, spin_to=100):
-            tk.Label(form, text=label, bg="#f0f0f0", anchor=tk.W, width=14).grid(
-                row=r, column=0, sticky=tk.W, pady=3)
+        def hurow(label, var, r, options=None, spin=False, spin_to=100):
+            """人工填写行（缩进，白底）。"""
+            tk.Label(form, text="✍ " + label, bg="#f0f0f0", anchor=tk.W,
+                     width=16, font=("Microsoft YaHei", 8)).grid(
+                row=r, column=0, sticky=tk.W, pady=2, padx=2)
             if spin:
-                ttk.Spinbox(form, from_=0, to=spin_to, textvariable=var, width=6).grid(
+                ttk.Spinbox(form, from_=0, to=spin_to, textvariable=var, width=8).grid(
                     row=r, column=1, sticky=tk.W, padx=4)
             elif options:
                 ttk.Combobox(form, textvariable=var, values=options, state="readonly",
-                             width=30).grid(row=r, column=1, sticky=tk.W, padx=4)
+                             width=38).grid(row=r, column=1, sticky=tk.W, padx=4)
             else:
-                ttk.Entry(form, textvariable=var, width=32).grid(
+                ttk.Entry(form, textvariable=var, width=40).grid(
                     row=r, column=1, sticky=tk.W, padx=4)
-
-        def pair(label, ai_var, hu_var, r, hu_options=None, hu_spin=False, spin_to=100):
-            """AI vs 人工 并排对比。"""
-            tk.Label(form, text=label, bg="#f0f0f0", anchor=tk.W, width=14).grid(
-                row=r, column=0, sticky=tk.W, pady=2)
-            e = tk.Entry(form, textvariable=ai_var, state="readonly",
-                         readonlybackground="#eef6ee", width=14, font=("Microsoft YaHei", 8))
-            e.grid(row=r, column=1, sticky=tk.W, padx=(4, 0))
-            tk.Label(form, text="AI", bg="#eef6ee", font=("Microsoft YaHei", 7)).grid(
-                row=r, column=2, sticky=tk.W)
-            if hu_spin:
-                ttk.Spinbox(form, from_=0, to=spin_to, textvariable=hu_var, width=6).grid(
-                    row=r, column=3, sticky=tk.W, padx=4)
-            elif hu_options:
-                ttk.Combobox(form, textvariable=hu_var, values=hu_options, state="readonly",
-                             width=14).grid(row=r, column=3, sticky=tk.W, padx=4)
-            else:
-                ttk.Entry(form, textvariable=hu_var, width=14).grid(
-                    row=r, column=3, sticky=tk.W, padx=4)
-            tk.Label(form, text="人工", bg="#f0f0f0", font=("Microsoft YaHei", 7)).grid(
-                row=r, column=4, sticky=tk.W)
+            return r + 1
 
         # ---------------- 变量 ----------------
         self.ai_scene_var = tk.StringVar()     # AI 场景判定（只读）
@@ -281,58 +265,61 @@ class AccuracyReviewApp(tk.Tk):
         self.operator_var = tk.StringVar()
 
         # ---------------- 布局 ----------------
-        r = section("— 一、场景与产品判定（AI 只读 vs 人工）—", 0)
-        pair("场景判定", self.ai_scene_var, self.scene_var, r, VERDICTS); r += 1
-        row("场景评分(0-100)", self.scene_score_var, spin=True, r=r); r += 1
-        pair("产品判定", self.ai_product_var, self.product_var, r, VERDICTS); r += 1
-        aiview("AI 材质识别", self.ai_material_var, r); r += 1
-        aiview("AI 功能识别", self.ai_func_var, r); r += 1
-        pair("内容类型", self.ai_ct_var, self.human_ct_var, r, CONTENT_TYPES); r += 1
+        r = section("— 一、场景与产品判定 —", 0)
+        r = airow("场景判定", self.ai_scene_var, r)
+        r = hurow("场景判定(人工)", self.scene_var, r, VERDICTS)
+        r = hurow("场景评分(0-100)", self.scene_score_var, r, spin=True)
+        r = airow("产品识别", self.ai_product_var, r)
+        r = airow("材质识别", self.ai_material_var, r)
+        r = airow("功能识别", self.ai_func_var, r)
+        r = hurow("产品判定(人工)", self.product_var, r, VERDICTS)
+        r = airow("内容类型", self.ai_ct_var, r)
+        r = hurow("内容类型(人工)", self.human_ct_var, r, CONTENT_TYPES)
 
         r = section("— 二、模板反馈（账号DNA训练）—", r)
-        pair("模板", self.ai_tpl_var, self.human_tpl_var, r, TEMPLATES); r += 1
-        row("模板判定", self.tpl_verdict_var, ("适合", "部分适合", "不适合"), r); r += 1
-        row("模板原因", self.tpl_reason_var, r=r); r += 1
+        r = airow("推荐模板", self.ai_tpl_var, r)
+        r = hurow("人工最终模板", self.human_tpl_var, r, TEMPLATES)
+        r = hurow("模板判定", self.tpl_verdict_var, r, ("适合", "部分适合", "不适合"))
+        r = hurow("模板原因", self.tpl_reason_var, r)
         tk.Label(form, text="📋 模板说明（审核前必读）", bg="#fffbe6",
-                 font=("Microsoft YaHei", 9, "bold")).grid(row=r, column=0, columnspan=2, sticky=tk.W, pady=(6, 2)); r += 1
-        self.tpl_info_text = tk.Text(form, width=52, height=9,
+                 font=("Microsoft YaHei", 9, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.W, pady=(6, 2), padx=2); r += 1
+        self.tpl_info_text = tk.Text(form, width=54, height=8,
                                      font=("Microsoft YaHei", 8), bg="#fffbe6", relief=tk.GROOVE)
         self.tpl_info_text.grid(row=r, column=0, columnspan=2, sticky=tk.W, padx=4, pady=2); r += 1
         self.tpl_info_text.insert(tk.END, self._all_templates_desc())
         self.tpl_info_text.config(state=tk.DISABLED)
 
-        r = section("— 三、商业价值评分（AI 5维 vs 人工 5维，各 20 分）—", r)
-        row("AI 商业总分", self.ai_biz_var, spin=True, r=r, spin_to=100); r += 1
-        # AI 维度（只读）
-        aiview("AI 真实性/20", self.ai_truth_var, r); r += 1
-        aiview("AI 真实性原因", self.ai_truth_rs_var, r); r += 1
-        aiview("AI 产品价值/20", self.ai_prod_var, r); r += 1
-        aiview("AI 产品价值原因", self.ai_prod_rs_var, r); r += 1
-        aiview("AI 用户价值/20", self.ai_user_var, r); r += 1
-        aiview("AI 用户价值原因", self.ai_user_rs_var, r); r += 1
-        aiview("AI 传播价值/20", self.ai_comm_var, r); r += 1
-        aiview("AI 传播价值原因", self.ai_comm_rs_var, r); r += 1
-        aiview("AI 成交价值/20", self.ai_deal_var, r); r += 1
-        aiview("AI 成交价值原因", self.ai_deal_rs_var, r); r += 1
-        # 人工维度（输入）
+        r = section("— 三、商业价值评分（AI 5维 ↑ / 人工 5维 ↓）—", r)
+        r = airow("商业总分", self.ai_biz_var, r)
+        r = airow("真实性/20", self.ai_truth_var, r)
+        r = airow("真实性原因", self.ai_truth_rs_var, r)
+        r = airow("产品价值/20", self.ai_prod_var, r)
+        r = airow("产品价值原因", self.ai_prod_rs_var, r)
+        r = airow("用户价值/20", self.ai_user_var, r)
+        r = airow("用户价值原因", self.ai_user_rs_var, r)
+        r = airow("传播价值/20", self.ai_comm_var, r)
+        r = airow("传播价值原因", self.ai_comm_rs_var, r)
+        r = airow("成交价值/20", self.ai_deal_var, r)
+        r = airow("成交价值原因", self.ai_deal_rs_var, r)
         tk.Label(form, text="▼ 以下为人工填写（每项 0-20 + 原因）",
                  bg="#f0f0f0", font=("Microsoft YaHei", 8, "bold")).grid(
-            row=r, column=0, columnspan=2, sticky=tk.W, pady=(6, 2)); r += 1
-        row("人工真实性/20", self.human_truth_var, spin=True, r=r, spin_to=20); r += 1
-        row("人工真实性原因", self.truth_reason_var, r=r); r += 1
-        row("人工产品价值/20", self.human_prod_var, spin=True, r=r, spin_to=20); r += 1
-        row("人工产品价值原因", self.prod_reason_var, r=r); r += 1
-        row("人工用户价值/20", self.human_user_var, spin=True, r=r, spin_to=20); r += 1
-        row("人工用户价值原因", self.user_reason_var, r=r); r += 1
-        row("人工传播价值/20", self.human_comm_var, spin=True, r=r, spin_to=20); r += 1
-        row("人工传播价值原因", self.comm_reason_var, r=r); r += 1
-        row("人工成交价值/20", self.human_deal_var, spin=True, r=r, spin_to=20); r += 1
-        row("人工成交价值原因", self.deal_reason_var, r=r); r += 1
+            row=r, column=0, columnspan=2, sticky=tk.W, pady=(6, 2), padx=2); r += 1
+        r = hurow("人工真实性/20", self.human_truth_var, r, spin=True, spin_to=20)
+        r = hurow("人工真实性原因", self.truth_reason_var, r)
+        r = hurow("人工产品价值/20", self.human_prod_var, r, spin=True, spin_to=20)
+        r = hurow("人工产品价值原因", self.prod_reason_var, r)
+        r = hurow("人工用户价值/20", self.human_user_var, r, spin=True, spin_to=20)
+        r = hurow("人工用户价值原因", self.user_reason_var, r)
+        r = hurow("人工传播价值/20", self.human_comm_var, r, spin=True, spin_to=20)
+        r = hurow("人工传播价值原因", self.comm_reason_var, r)
+        r = hurow("人工成交价值/20", self.human_deal_var, r, spin=True, spin_to=20)
+        r = hurow("人工成交价值原因", self.deal_reason_var, r)
 
         r = section("— 四、总评 —", r)
-        row("总评", self.overall_var, OVERALLS, r); r += 1
-        row("备注", self.comment_var, r=r); r += 1
-        row("操作员", self.operator_var, r=r); r += 1
+        r = hurow("总评", self.overall_var, r, OVERALLS)
+        r = hurow("备注", self.comment_var, r)
+        r = hurow("操作员", self.operator_var, r)
 
         btn = tk.Button(parent, text="✓ 保存审核", command=self._save_review,
                         bg="#4CAF50", fg="white", font=("Microsoft YaHei", 11, "bold"))
