@@ -25,10 +25,11 @@ from treecut.cognitive.learning import LearningEngine
 from treecut.cognitive.production import ProductionEngine
 from treecut.cognitive.vision import VisionEngine
 from treecut.cognitive.accuracy import AccuracyEngine
+from treecut.cognitive.value import ContentValueEngine
 
 __all__ = ["CognitiveStore", "KnowledgeLoader", "Brain", "IndustryEngine",
            "AccountEngine", "TemplateEngine", "LearningEngine",
            "ProductionEngine", "VisionEngine", "AccuracyEngine",
-           "KNOWLEDGE_ROOT"]
+           "ContentValueEngine", "KNOWLEDGE_ROOT"]
 
 

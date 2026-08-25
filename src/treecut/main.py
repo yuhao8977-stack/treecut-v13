@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sqlite3
 
 from treecut.bootstrap import bootstrap
 from treecut.library import Catalog
@@ -150,6 +151,12 @@ def main() -> int:
                         help="验证: 生成准确率报告（需人工审核数据）")
     parser.add_argument("--accuracy-ui", action="store_true",
                         help="验证: 启动 AI Accuracy Review UI（人工逐项审核）")
+    parser.add_argument("--value-run", type=int, metavar="N", default=None,
+                        dest="value_run",
+                        help="Phase6: 批量内容价值评分（默认全部素材）")
+    parser.add_argument("--value-status", action="store_true",
+                        dest="value_status",
+                        help="Phase6: 素材池分类统计")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -461,6 +468,29 @@ def main() -> int:
         from treecut.cognitive.accuracy_ui import AccuracyReviewApp
         app = AccuracyReviewApp(context.paths.databases / "materials.db")
         app.mainloop()
+        return 0
+    if args.value_run is not None:
+        # Phase6: 批量内容价值评分
+        context = bootstrap()
+        from treecut.cognitive import ContentValueEngine
+        engine = ContentValueEngine(context.paths.databases / "materials.db")
+        conn = sqlite3.connect(
+            "file:" + str(context.paths.databases / "materials.db").replace("\\", "/") + "?mode=ro", uri=True)
+        if args.value_run > 0:
+            ids = [r[0] for r in conn.execute(
+                "SELECT asset_id FROM assets LIMIT ?", (args.value_run,))]
+        else:
+            ids = [r[0] for r in conn.execute("SELECT asset_id FROM assets")]
+        conn.close()
+        result = engine.batch_score(ids)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0
+    if args.value_status:
+        # Phase6: 素材池分类统计
+        context = bootstrap()
+        from treecut.cognitive import ContentValueEngine
+        engine = ContentValueEngine(context.paths.databases / "materials.db")
+        print(json.dumps(engine.pool_status(), ensure_ascii=False, indent=2))
         return 0
     if args.brain_vision is not None:
         # 视觉补认知
