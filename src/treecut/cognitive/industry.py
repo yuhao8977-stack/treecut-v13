@@ -23,8 +23,10 @@ from treecut.cognitive.store import CognitiveStore
 
 # 功能关键词（来自行业知识，不依赖 product 域）
 FUNCTION_KEYWORDS = {
-    "伸缩": ["伸缩", "展开", "收缩", "折叠", "抽拉", "变形"],
-    "收纳": ["收纳", "抽屉", "薄抽", "深抽", "储物", "分类"],
+    "伸缩": ["伸缩", "展开", "收缩", "折叠", "抽拉", "变形", "拿出来", "拉出来",
+            "收进去", "变长", "加长", "延伸", "坐6个人", "坐10个人"],
+    "收纳": ["收纳", "储物", "分类", "薄抽", "上层薄抽", "下层抽屉"],
+    "抽屉": ["抽屉", "薄抽", "深抽", "抽拉", "托底", "三节"],
     "隐藏": ["隐藏", "隐形", "无把手", "嵌入式"],
     "插座": ["插座", "轨道插座", "充电", "电源"],
     "隐藏电器": ["烤箱", "洗碗机", "蒸箱", "冰箱", "电器"],
@@ -293,6 +295,52 @@ class IndustryEngine:
     # V2 双层内容类型（第一轮人工校准）
     # ------------------------------------------------------------------
 
+    def _compose_products(self, products: list[dict], materials: list[dict],
+                          text: str) -> list[dict]:
+        """V2.2 产品组合识别（来自人工反馈）。
+
+        规则：
+          1. 伸缩功能词（伸缩/拿出来/拉出来/坐6个人…）→ 提升"伸缩岛台"
+          2. 材质词 + 岛台 → 提升对应材质岛台（岩板岛台/实木岛台/奢石岛台）
+          3. 原"岛台"作为兜底保留
+        """
+        names = {p["name"] for p in products}
+        new = list(products)
+        added = set()
+
+        # 1) 伸缩岛台
+        stretch_kw = ["伸缩", "展开", "收缩", "折叠", "拿出来", "拉出来",
+                      "坐6个人", "坐10个人", "坐八个人", "变长", "加长", "延伸"]
+        if any(k in text for k in stretch_kw) and "伸缩岛台" not in names:
+            new.insert(0, {"name": "伸缩岛台", "score": 1.0,
+                           "matched": [k for k in stretch_kw if k in text][:3]})
+            added.add("伸缩岛台")
+
+        # 2) 材质组合岛台
+        mat_names = {m["name"] for m in materials}
+        combo_map = [
+            ("岩板岛台", ["岩板"]),
+            ("实木岛台", ["黑胡桃", "实木", "木纹", "原木"]),
+            ("奢石岛台", ["潘多拉", "奢石", "寒江雪"]),
+            ("大理石岛台", ["大理石"]),
+        ]
+        has_base = "岛台" in names or any("岛台" in n for n in names)
+        for combo_name, mats in combo_map:
+            if combo_name in names or combo_name in added:
+                continue
+            if any(m in mat_names for m in mats) and has_base:
+                hit = [m for m in mats if m in mat_names][0]
+                new.append({"name": combo_name, "score": 0.9,
+                            "matched": [hit]})
+        # 去重保序
+        seen = set()
+        out = []
+        for p in new:
+            if p["name"] not in seen:
+                seen.add(p["name"])
+                out.append(p)
+        return out[:6]
+
     def _correct_scenes(self, scenes: list[dict], texts: dict,
                         full_text: str) -> list[dict]:
         """V2.1 场景修正规则（来自第一轮人工反馈）。
@@ -325,10 +373,12 @@ class IndustryEngine:
         # 2) 工厂内产品空镜/造型展示（无入户证据）→ 工厂
         factory_show = ["产品空镜", "空镜", "造型展示", "产品类", "整体展示",
                         "细节展示", "对开间", "下层抽屉", "灯带", "轨道插座",
-                        "内嵌烤箱", "钢结构", "展示"]
+                        "内嵌烤箱", "钢结构", "展示", "收纳层", "薄抽", "收纳层展示",
+                        "特写", "内嵌酒柜", "水波纹", "收纳米"]
         is_factory_show = any(k in path for k in factory_show)
         if is_factory_show:
-            return self._promote_scene(scenes, "工厂", 0.92)
+            # 工厂内展示：只保留工厂，移除误判的安装现场/展厅
+            return self._set_scene_only(scenes, "工厂", 0.95)
 
         # 3) 展厅证据（干净陈列：展厅/体验馆/样板间）且无施工信号 → 展厅
         showroom = ["展厅", "体验馆", "样板间", "陈列"]
@@ -339,6 +389,10 @@ class IndustryEngine:
 
         # 4) 默认：保留原评分
         return scenes
+
+    def _set_scene_only(self, scenes: list[dict], name: str, score: float) -> list[dict]:
+        """只保留指定场景（移除其它误判场景）。"""
+        return [{"name": name, "score": round(score, 3)}]
 
     def _promote_scene(self, scenes: list[dict], name: str, score: float) -> list[dict]:
         """把指定场景提升到首位（若已存在则改分，否则插入）。"""
@@ -471,6 +525,8 @@ class IndustryEngine:
 
         products = self._score_entries(full_text, "product")
         materials = self._score_entries(full_text, "material")
+        # V2.2 产品组合识别：材质+功能 → 细粒度产品（人工反馈：岛台→伸缩岛台/岩板岛台）
+        products = self._compose_products(products, materials, full_text)
         scenes = self._score_entries(full_text, "scene")
         # V2.1 场景修正（第一轮人工反馈：工厂内产品空镜 ≠ 安装现场/展厅）
         scenes = self._correct_scenes(scenes, texts, full_text)
