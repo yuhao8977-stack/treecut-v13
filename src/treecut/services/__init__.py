@@ -37,6 +37,7 @@ class Services:
     _assets = None
     _segments = None
     _shot_usage = None
+    _segment_cognition = None
 
     def __post_init__(self):
         self.context = ServiceContext(db_path=self.db_path)
@@ -121,6 +122,14 @@ class Services:
             from treecut.services.shot_usage import ShotUsageService
             self._shot_usage = ShotUsageService(self.db_path)
         return self._shot_usage
+
+    @property
+    def segment_cognition(self):
+        """SegmentCognitionService：镜头认知层（Phase 2，L2 语义解释）。"""
+        if self._segment_cognition is None:
+            from treecut.services.segment_cognition import SegmentCognitionService
+            self._segment_cognition = SegmentCognitionService(self.db_path)
+        return self._segment_cognition
 
 
 def bootstrap_services(db_path: str | Path | None = None) -> Services:

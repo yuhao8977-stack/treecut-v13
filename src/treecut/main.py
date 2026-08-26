@@ -157,6 +157,12 @@ def main() -> int:
     parser.add_argument("--value-status", action="store_true",
                         dest="value_status",
                         help="Phase6: 素材池分类统计")
+    parser.add_argument("--segment-cognition-ui", action="store_true",
+                        dest="segment_cognition_ui",
+                        help="Phase2: Segment 认知人工审核 UI")
+    parser.add_argument("--segment-annotate", type=str, metavar="SEGMENT_ID",
+                        dest="segment_annotate",
+                        help="Phase2: 对单个 segment 生成 L2 认知")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -491,6 +497,21 @@ def main() -> int:
         from treecut.cognitive import ContentValueEngine
         engine = ContentValueEngine(context.paths.databases / "materials.db")
         print(json.dumps(engine.pool_status(), ensure_ascii=False, indent=2))
+        return 0
+    if args.segment_cognition_ui:
+        # Phase2: Segment 认知人工审核 UI（薄适配，经 Service）
+        context = bootstrap()
+        from treecut.services.segment_cognition_ui import SegmentCognitionReviewApp
+        app = SegmentCognitionReviewApp(context.paths.databases / "materials.db")
+        app.mainloop()
+        return 0
+    if args.segment_annotate:
+        # Phase2: 单个 segment L2 认知
+        context = bootstrap()
+        from treecut.services.segment_cognition import SegmentCognitionService
+        svc = SegmentCognitionService(context.paths.databases / "materials.db")
+        r = svc.annotate(args.segment_annotate)
+        print(json.dumps(r, ensure_ascii=False, indent=2))
         return 0
     if args.brain_vision is not None:
         # 视觉补认知
