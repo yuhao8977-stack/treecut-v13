@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import os
 import sqlite3
+import time
 import tkinter as tk
 from pathlib import Path
 from tkinter import messagebox, ttk
@@ -25,7 +26,7 @@ PEOPLE = ("yes", "no", "unknown")
 
 
 class SegmentCognitionReviewApp(tk.Tk):
-    """Segment 认知审核界面（L2 vs L3）。"""
+    """Segment 认知审核界面（L2 vs L3 + Boundary 审核）。"""
 
     def __init__(self, db_path: str | Path | None = None,
                  queue_limit: int = 300):
@@ -38,9 +39,10 @@ class SegmentCognitionReviewApp(tk.Tk):
         self.queue = self._load_queue(queue_limit)
         self.idx = 0
         self.current: dict | None = None
+        self.reviewed_count = self._reviewed_count()
 
         self.title("TreeCut Phase 2 - Segment 认知人工审核")
-        self.geometry("1500x900")
+        self.geometry("1500x950")
         self.configure(bg="#f0f0f0")
         self._build_layout()
         if self.queue:
@@ -51,6 +53,7 @@ class SegmentCognitionReviewApp(tk.Tk):
         conn = sqlite3.connect(
             "file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
         conn.row_factory = sqlite3.Row
+        # 未审核 = 无 human_annotations 记录 或 无 boundary review
         rows = conn.execute(
             "SELECT target_id, target_type FROM semantic_annotations "
             "WHERE target_type='segment' AND status='candidate' "
@@ -59,14 +62,26 @@ class SegmentCognitionReviewApp(tk.Tk):
         conn.close()
         return [dict(r) for r in rows]
 
+    def _reviewed_count(self) -> int:
+        conn = sqlite3.connect(
+            "file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
+        n = conn.execute(
+            "SELECT COUNT(DISTINCT target_id) FROM human_annotations").fetchone()[0]
+        conn.close()
+        return n
+
     def _build_layout(self) -> None:
         top = tk.Frame(self, bg="#f0f0f0")
         top.pack(fill=tk.X, padx=8, pady=6)
         self.pos = tk.Label(top, text="", bg="#f0f0f0",
                             font=("Microsoft YaHei", 11, "bold"))
         self.pos.pack(side=tk.LEFT)
+        self.progress = tk.Label(top, text=f"已审核 {self.reviewed_count}/300",
+                                 bg="#f0f0f0", font=("Microsoft YaHei", 10))
+        self.progress.pack(side=tk.LEFT, padx=16)
         ttk.Button(top, text="上一题", command=lambda: self._load(self.idx - 1)).pack(side=tk.RIGHT, padx=4)
         ttk.Button(top, text="下一题", command=lambda: self._load(self.idx + 1)).pack(side=tk.RIGHT, padx=4)
+        ttk.Button(top, text="跳过", command=lambda: self._load(self.idx + 1)).pack(side=tk.RIGHT, padx=4)
         ttk.Button(top, text="✓ 保存人工裁决", command=self._save).pack(side=tk.RIGHT, padx=8)
 
         paned = ttk.PanedWindow(self, orient=tk.HORIZONTAL)
@@ -133,6 +148,32 @@ class SegmentCognitionReviewApp(tk.Tk):
         tk.Entry(form, textvariable=self.l3_comment, width=30).grid(row=row, column=1, padx=4)
         row += 1
 
+        # --- Boundary 审核区（Phase 2 Validation Closure） ---
+        tk.Label(form, text="— Segment Boundary 审核（是/否） —",
+                 bg="#fff3cd", font=("Microsoft YaHei", 9, "bold")).grid(
+            row=row, column=0, columnspan=2, sticky=tk.W, pady=(8, 2))
+        row += 1
+        self.boundary_vars = {}
+        boundary_fields = [
+            ("boundary_start_ok", "起点正常"),
+            ("boundary_end_ok", "终点正常"),
+            ("action_complete", "动作完整"),
+            ("semantic_complete", "语义完整"),
+            ("cut_mid_action", "动作被切断"),
+            ("cut_mid_sentence", "语句被切断"),
+            ("usable_as_edit_unit", "可作为剪辑单位"),
+        ]
+        for key, label in boundary_fields:
+            tk.Label(form, text=label, bg="#f0f0f0").grid(row=row, column=0, sticky=tk.W)
+            var = tk.StringVar()
+            ttk.Combobox(form, textvariable=var, values=("是", "否", "待定"), width=22).grid(
+                row=row, column=1, padx=4)
+            self.boundary_vars[key] = var
+            row += 1
+        tk.Label(form, text="边界备注", bg="#f0f0f0").grid(row=row, column=0, sticky=tk.W)
+        self.boundary_comment = tk.StringVar()
+        tk.Entry(form, textvariable=self.boundary_comment, width=30).grid(row=row, column=1, padx=4)
+
     def _load(self, idx: int) -> None:
         if not self.queue:
             self.pos.config(text="无可审核（已全部裁决）")
@@ -177,6 +218,9 @@ class SegmentCognitionReviewApp(tk.Tk):
             for v in self.l2_vars.values():
                 v.set("")
             self._ann_id = 0
+        for v in self.boundary_vars.values():
+            v.set("待定")
+        self.boundary_comment.set("")
 
     def _play(self) -> None:
         if not self.current:
@@ -201,7 +245,34 @@ class SegmentCognitionReviewApp(tk.Tk):
         self.svc.add_human_adjudication(
             self.current["target_id"], self._ann_id, values,
             operator=os.environ.get("USERNAME", ""))
+        # Boundary 审核写入 segment_boundary_reviews
+        self._save_boundary(self.current["target_id"], self._ann_id)
+        self.reviewed_count += 1
+        self.progress.config(text=f"已审核 {self.reviewed_count}/300")
         self._load(self.idx + 1)
+
+    def _save_boundary(self, segment_id: str, annotation_id: int) -> None:
+        """保存 Boundary 审核（是=1 否=0 待定=-1）。"""
+        import sqlite3
+        conv = {"是": 1, "否": 0, "待定": -1}
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        conn.execute(
+            "INSERT OR REPLACE INTO segment_boundary_reviews(segment_id,annotation_id,"
+            "boundary_start_ok,boundary_end_ok,action_complete,semantic_complete,"
+            "cut_mid_action,cut_mid_sentence,usable_as_edit_unit,boundary_comment,"
+            "operator,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
+            (segment_id, annotation_id,
+             conv.get(self.boundary_vars["boundary_start_ok"].get(), -1),
+             conv.get(self.boundary_vars["boundary_end_ok"].get(), -1),
+             conv.get(self.boundary_vars["action_complete"].get(), -1),
+             conv.get(self.boundary_vars["semantic_complete"].get(), -1),
+             conv.get(self.boundary_vars["cut_mid_action"].get(), -1),
+             conv.get(self.boundary_vars["cut_mid_sentence"].get(), -1),
+             conv.get(self.boundary_vars["usable_as_edit_unit"].get(), -1),
+             self.boundary_comment.get(),
+             os.environ.get("USERNAME", ""), time.time()))
+        conn.commit()
+        conn.close()
 
 
 if __name__ == "__main__":

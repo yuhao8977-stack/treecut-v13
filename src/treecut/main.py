@@ -163,6 +163,9 @@ def main() -> int:
     parser.add_argument("--segment-annotate", type=str, metavar="SEGMENT_ID",
                         dest="segment_annotate",
                         help="Phase2: 对单个 segment 生成 L2 认知")
+    parser.add_argument("--segment-validation-report", action="store_true",
+                        dest="segment_validation_report",
+                        help="Phase2 Closure: 人工审核后生成验证报告")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -512,6 +515,21 @@ def main() -> int:
         svc = SegmentCognitionService(context.paths.databases / "materials.db")
         r = svc.annotate(args.segment_annotate)
         print(json.dumps(r, ensure_ascii=False, indent=2))
+        return 0
+    if args.segment_validation_report:
+        # Phase2 Closure: 人工审核后验证报告
+        context = bootstrap()
+        from treecut.services.segment_validation_report import SegmentValidationReport
+        rep = SegmentValidationReport(context.paths.databases / "materials.db")
+        data = rep.generate()
+        import io as _io
+        text = json.dumps(data, ensure_ascii=False, indent=2)
+        out = context.paths.databases.parent / "docs" / "PHASE2_VALIDATION_REPORT.md"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(f"# TreeCut Phase 2 验证报告（人工审核后）\n\n```json\n{text}\n```\n",
+                       encoding="utf-8")
+        print(text)
+        print(f"报告: {out}")
         return 0
     if args.brain_vision is not None:
         # 视觉补认知
