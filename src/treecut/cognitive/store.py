@@ -114,6 +114,10 @@ class CognitiveStore:
 
     def ensure_schema(self) -> int:
         with closing(self._connect()) as connection:
+            # schema_version 表需先存在（SCHEMA 不含其建表语句；新库首次初始化必需）
+            connection.execute(
+                "CREATE TABLE IF NOT EXISTS schema_version ("
+                "name TEXT PRIMARY KEY, version INTEGER NOT NULL)")
             connection.executescript(SCHEMA)
             # 幂等迁移：content_classification 增加 content_elements 列
             cols = [r[1] for r in connection.execute(

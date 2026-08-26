@@ -67,8 +67,10 @@ class LearningEngine:
         conn = sqlite3.connect("file:" + str(self.store.db_path).replace("\\", "/") + "?mode=ro", uri=True)
         conn.row_factory = sqlite3.Row
         # learning_rules：认知 UI 的差异
+        # 注意：UI 写入的 error_type 是 'content_type'（accuracy_ui.py 的 add_learning_rule 调用），
+        # 而非 'content_type_mismatch'。此处仅修正字段匹配，不改变学习逻辑。
         for r in conn.execute(
-                "SELECT * FROM learning_rules WHERE error_type='content_type_mismatch' "
+                "SELECT * FROM learning_rules WHERE error_type='content_type' "
                 "ORDER BY id"):
             feedback.append({
                 "source": "learning_rules",

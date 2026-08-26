@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install core dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-cov
+          # 仅核心测试依赖（不下载数 GB 模型）
+          pip install scenedetect rapidocr-onnxruntime
+
+      - name: Unit + integration tests
+        env:
+          TREECUT_DATA_ROOT: ${{ runner.temp }}
+        run: |
+          python -m pytest tests --tb=short -q
+
+      - name: Migration smoke test
+        run: |
+          python -c "
+import sys, tempfile, os
+sys.path.insert(0, 'src')
+os.environ['TREECUT_DATA_ROOT'] = tempfile.mkdtemp()
+from treecut.platform.migrations import MigrationManager
+db = os.path.join(os.environ['TREECUT_DATA_ROOT'], 'smoke.db')
+open(db, 'w').close()
+mgr = MigrationManager(db)
+result = mgr.init()
+assert result and result[0]['version'] == '0001', result
+print('migration smoke OK:', result)
+"
+
+      - name: Coverage summary
+        env:
+          TREECUT_DATA_ROOT: ${{ runner.temp }}
+          COVERAGE_FILE: ${{ runner.temp }}/.coverage
+        run: |
+          python -m pytest tests --cov=treecut.cognitive.industry --cov=treecut.cognitive.value --cov=treecut.cognitive.accuracy --cov-report=term --tb=short -q

@@ -89,3 +89,10 @@ desktop.ini
 *.tmp
 *.bak
 *.log
+
+# Office lock files
+~$*.md
+
+# Phase 0 backups
+backups/
+BACKUP_MANIFEST.json

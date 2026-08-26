@@ -33,8 +33,8 @@ def check(name: str, cond: bool, detail: str = "") -> None:
         print(f"  FAIL  {name}  {detail}")
 
 
-def make_db(tmp: Path) -> Path:
-    db = tmp / "test_materials.db"
+def make_db(tmp_path: Path) -> Path:
+    db = tmp_path / "test_materials.db"
     if db.exists():
         db.unlink()
     for suffix in ("-wal", "-shm"):
@@ -76,9 +76,9 @@ def make_db(tmp: Path) -> Path:
     return db
 
 
-def test_migration_idempotent(tmp: Path) -> None:
+def test_migration_idempotent(tmp_path: Path) -> None:
     print("[迁移幂等]")
-    db = make_db(tmp)
+    db = make_db(tmp_path)
     s1 = TaskStore(db)
     s1.migrate_if_needed()
     s1.migrate_if_needed()  # 第二次
@@ -98,9 +98,9 @@ def test_migration_idempotent(tmp: Path) -> None:
     print(f"  备份文件数: {len(backups)}（首次迁移 1 份）")
 
 
-def test_atomic_claim(tmp: Path) -> None:
+def test_atomic_claim(tmp_path: Path) -> None:
     print("\n[原子领取防双领 - 10 线程并发]")
-    db = make_db(tmp)
+    db = make_db(tmp_path)
     store = TaskStore(db)
     store.migrate_if_needed()
     for i in range(10):
@@ -138,9 +138,9 @@ def test_atomic_claim(tmp: Path) -> None:
     conn.close()
 
 
-def test_complete_fail_recover(tmp: Path) -> None:
+def test_complete_fail_recover(tmp_path: Path) -> None:
     print("\n[完成/失败/重试/恢复]")
-    db = make_db(tmp)
+    db = make_db(tmp_path)
     store = TaskStore(db)
     store.migrate_if_needed()
     store.create_task("asset_0000", "asr", stages="asr")
@@ -177,17 +177,17 @@ def test_complete_fail_recover(tmp: Path) -> None:
     check("回收后回到 pending", store.pending_count() == 1)
 
 
-def test_worker25_logging(tmp: Path) -> None:
+def test_worker25_logging(tmp_path: Path) -> None:
     print("\n[Worker25 日志]")
-    db = make_db(tmp)
-    log = tmp / "worker_w_test.log"
+    db = make_db(tmp_path)
+    log = tmp_path / "worker_w_test.log"
     store = TaskStore(db)
     store.migrate_if_needed()
     store.create_task("asset_0000", "asr", stages="asr")
     check("任务创建", store.pending_count() == 1)
     # 只验证日志框架不炸（不真正跑分析）
-    os.environ["TREECUT_DATA_ROOT"] = str(tmp)   # RuntimePaths 禁止 C 盘数据目录
-    os.environ["TREECUT_MODEL_ROOT"] = str(tmp / "models")
+    os.environ["TREECUT_DATA_ROOT"] = str(tmp_path)   # RuntimePaths 禁止 C 盘数据目录
+    os.environ["TREECUT_MODEL_ROOT"] = str(tmp_path / "models")
     from treecut.analysis.worker_p25 import Worker25
     try:
         Worker25(worker_id="w_test", task_type="asr", stages=["asr"],
