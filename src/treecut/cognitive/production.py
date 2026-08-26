@@ -115,7 +115,13 @@ class ProductionEngine:
     # ------------------------------------------------------------------
 
     def _asset_pool(self, content_type: str, limit: int = 200) -> list[dict]:
-        """取指定内容类型的素材池（有分析数据，按价值排序）。"""
+        """取指定内容类型的素材池（有分析数据，按价值排序）。
+
+        LEGACY_ASSET_LEVEL_PRODUCTION（Phase 1 标记）：
+        本方法以 asset_id 为选材单位（整素材截取），不符合 Canonical 设计
+        （宪法 2：自动生产最小单位=segment_id）。按架构路线，Phase 6 将
+        以 SegmentRepository 替换本链路。Phase 1 仅标记，不重构选材算法。
+        """
         conn = sqlite3.connect("file:" + str(self.store.db_path).replace("\\", "/") + "?mode=ro", uri=True)
         conn.row_factory = sqlite3.Row
         rows = conn.execute("""

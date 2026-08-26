@@ -34,6 +34,9 @@ class Services:
     _accuracy = None
     _value = None
     _migrations = None
+    _assets = None
+    _segments = None
+    _shot_usage = None
 
     def __post_init__(self):
         self.context = ServiceContext(db_path=self.db_path)
@@ -94,6 +97,30 @@ class Services:
             from treecut.cognitive.value import ContentValueEngine
             self._value = ContentValueEngine(self.db_path)
         return self._value
+
+    @property
+    def assets(self):
+        """AssetService：Canonical Asset 身份访问（Phase 1）。"""
+        if self._assets is None:
+            from treecut.services.identity import AssetRepository
+            self._assets = AssetRepository(self.db_path)
+        return self._assets
+
+    @property
+    def segments(self):
+        """SegmentService：Segment 生产单位身份访问（Phase 1）。"""
+        if self._segments is None:
+            from treecut.services.identity import SegmentRepository
+            self._segments = SegmentRepository(self.db_path)
+        return self._segments
+
+    @property
+    def shot_usage(self):
+        """ShotUsageService：镜头使用 Ledger（Phase 1 基础）。"""
+        if self._shot_usage is None:
+            from treecut.services.shot_usage import ShotUsageService
+            self._shot_usage = ShotUsageService(self.db_path)
+        return self._shot_usage
 
 
 def bootstrap_services(db_path: str | Path | None = None) -> Services:
