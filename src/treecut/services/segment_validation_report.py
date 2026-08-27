@@ -57,9 +57,12 @@ class SegmentValidationReport:
         return [dict(r) for r in rows]
 
     def _load_boundary(self) -> list[dict]:
-        with self._ro() as conn:
-            rows = conn.execute("SELECT * FROM segment_boundary_reviews").fetchall()
-        return [dict(r) for r in rows]
+        try:
+            with self._ro() as conn:
+                rows = conn.execute("SELECT * FROM segment_boundary_reviews").fetchall()
+            return [dict(r) for r in rows]
+        except sqlite3.OperationalError:
+            return []
 
     # ------------------------------------------------------------------
     # 1. 样本统计
@@ -77,57 +80,91 @@ class SegmentValidationReport:
     # ------------------------------------------------------------------
 
     def _field_metrics(self, reviews: list[dict]) -> dict:
+        """V2.5 指标：human_valid_n/ai_answered_n/ai_unknown_n/correct_n/wrong_n +
+        conditional_accuracy + effective_correct_rate + UNKNOWN 行混淆。"""
         out = {}
         for field in SEM_FIELDS:
             human_key, ai_key = field, f"a_{field}"
-            # 只统计 AI 非 UNKNOWN 且人工有值的样本
-            cm = defaultdict(Counter)  # ai -> human count
-            unknown_ai = 0
-            unknown_human = 0
+            # people_presence 在 SQL 中别名为 a_people
+            if field == "people_presence":
+                ai_key = "a_people"
+            cm = defaultdict(Counter)
+            human_valid = 0        # 人工有值（非空）
+            ai_answered = 0        # AI 非 UNKNOWN
+            ai_unknown = 0         # AI = UNKNOWN
+            correct = 0
+            wrong = 0
+            unknown_human_judgeable = 0
             for r in reviews:
                 ai = r.get(ai_key) or ""
                 hu = r.get(human_key) or ""
+                # 人工值标准化：yes/no 处理（people 字段）
+                if field == "people_presence":
+                    if hu in ("yes", "no"):
+                        human_valid += 1
+                    else:
+                        continue
+                    if ai == "unknown":
+                        ai_unknown += 1
+                        unknown_human_judgeable += 1
+                        cm["UNKNOWN"][hu] += 1
+                        continue
+                    if ai in ("yes", "no"):
+                        ai_answered += 1
+                        cm[ai][hu] += 1
+                        if ai == hu:
+                            correct += 1
+                        else:
+                            wrong += 1
+                    continue
+                # 其他字段
+                if hu:
+                    human_valid += 1
+                if not hu or hu == "UNKNOWN":
+                    continue
                 if ai == "UNKNOWN":
-                    unknown_ai += 1
-                    if hu and hu != "UNKNOWN":
-                        unknown_human += 1
+                    ai_unknown += 1
+                    unknown_human_judgeable += 1
+                    cm["UNKNOWN"][hu] += 1
                     continue
-                if not hu:
-                    continue
-                cm[ai][hu if hu != "UNKNOWN" else "(人工UNKNOWN)"] += 1
-            # 计算 per-class precision/recall/F1 + macro avg
-            classes = set()
-            for ai_map in cm.values():
-                classes.update(ai_map.keys())
-            classes.update(cm.keys())
+                ai_answered += 1
+                cm[ai][hu] += 1
+                if ai == hu:
+                    correct += 1
+                else:
+                    wrong += 1
+            # 指标
+            conditional_acc = correct / ai_answered * 100 if ai_answered else 0
+            effective_correct = correct / human_valid * 100 if human_valid else 0
+            # 每类 precision/recall/F1（排除 UNKNOWN 行）
+            classes = {k for k in cm if k != "UNKNOWN"}
             class_metrics = {}
             for cls in sorted(classes):
                 tp = cm[cls].get(cls, 0)
                 fp = sum(v for k, v in cm[cls].items() if k != cls)
-                fn = sum(m.get(cls, 0) for k, m in cm.items() if k != cls)
+                fn = sum(m.get(cls, 0) for k, m in cm.items() if k != cls and k != "UNKNOWN")
                 prec = tp / (tp + fp) if tp + fp else 0
                 rec = tp / (tp + fn) if tp + fn else 0
                 f1 = 2 * prec * rec / (prec + rec) if prec + rec else 0
                 class_metrics[cls] = {"tp": tp, "fp": fp, "fn": fn,
                                       "precision": round(prec, 3), "recall": round(rec, 3),
                                       "f1": round(f1, 3)}
-            # 总体
-            correct = sum(m.get(k, 0) for k, m in cm.items())
-            total_answered = sum(sum(m.values()) for m in cm.values())
             macro_p = sum(c["precision"] for c in class_metrics.values()) / len(class_metrics) if class_metrics else 0
             macro_r = sum(c["recall"] for c in class_metrics.values()) / len(class_metrics) if class_metrics else 0
             macro_f1 = sum(c["f1"] for c in class_metrics.values()) / len(class_metrics) if class_metrics else 0
             out[field] = {
-                "n": len(reviews),
-                "answered": total_answered,
-                "accuracy": round(correct / total_answered * 100, 1) if total_answered else 0,
+                "human_valid_n": human_valid,
+                "ai_answered_n": ai_answered,
+                "ai_unknown_n": ai_unknown,
+                "correct_n": correct,
+                "wrong_n": wrong,
+                "conditional_accuracy": round(conditional_acc, 1),   # AI非UNKNOWN回答中的准确率
+                "effective_correct_rate": round(effective_correct, 1),  # 正确覆盖/人工真值全部
                 "macro_precision": round(macro_p, 3),
                 "macro_recall": round(macro_r, 3),
                 "macro_f1": round(macro_f1, 3),
-                "unknown_ai": unknown_ai,
-                "unknown_rate": round(unknown_ai / len(reviews) * 100, 1) if reviews else 0,
-                "unknown_but_human_answered": unknown_human,
-                "sample_size": total_answered,
+                "unknown_but_human_judgeable": unknown_human_judgeable,
+                "sample_size": human_valid,
                 "confusion_matrix": {k: dict(v) for k, v in cm.items()},
             }
         return out
@@ -206,6 +243,8 @@ class SegmentValidationReport:
                 ev = json.loads(r.get("evidence_refs_json") or "{}")
             except Exception:
                 pass
+            if not isinstance(ev, dict):
+                ev = {}
             has_asr = bool(ev.get("asr_text"))
             has_ocr = bool(ev.get("ocr_text"))
             has_clip = bool(ev.get("clip_tags"))
@@ -277,6 +316,8 @@ class SegmentValidationReport:
                 ev = json.loads(r.get("evidence_refs_json") or "{}")
             except Exception:
                 pass
+            if not isinstance(ev, dict):
+                ev = {}
             if ev.get("asr_text"):
                 wrong_with_asr += 1
             if ev.get("ocr_text"):
@@ -296,6 +337,39 @@ class SegmentValidationReport:
             "note": "诊断数据；不自动修改",
         }
 
+    def _confidence_reliability(self, reviews: list[dict]) -> dict:
+        """Confidence bucket reliability table（NOT_CALIBRATED_SCORE）。"""
+        buckets = {"0-0.49": [], "0.50-0.69": [], "0.70-0.79": [],
+                   "0.80-0.89": [], "0.90-1.0": []}
+        for r in reviews:
+            conf = r.get("confidence") or 0
+            # 该样本是否 function 或 product 错误
+            wrong = False
+            for field in ("function", "product", "scene"):
+                ai = r.get(f"a_{field}") or ""
+                hu = r.get(field) or ""
+                if ai and ai != "UNKNOWN" and hu and hu != "UNKNOWN" and ai != hu:
+                    wrong = True
+                    break
+            if conf < 0.5:
+                buckets["0-0.49"].append((wrong, r.get("confidence") or 0))
+            elif conf < 0.7:
+                buckets["0.50-0.69"].append((wrong, conf))
+            elif conf < 0.8:
+                buckets["0.70-0.79"].append((wrong, conf))
+            elif conf < 0.9:
+                buckets["0.80-0.89"].append((wrong, conf))
+            else:
+                buckets["0.90-1.0"].append((wrong, conf))
+        out = {}
+        for bucket, items in buckets.items():
+            n = len(items)
+            wrong_n = sum(1 for w, _ in items if w)
+            out[bucket] = {"n": n, "wrong_n": wrong_n,
+                           "conditional_accuracy": round((n - wrong_n) / n * 100, 1) if n else 0}
+        return {"buckets": out,
+                "note": "NOT_CALIBRATED_SCORE — confidence 为规则分数，非概率；不得称为置信概率"}
+
     # ------------------------------------------------------------------
 
     def generate(self) -> dict:
@@ -311,4 +385,5 @@ class SegmentValidationReport:
             "boundary_metrics": self._boundary_metrics(reviews),
             "error_analysis": self._error_analysis(reviews),
             "evidence_relationship": self._evidence_relationship(reviews),
+            "confidence_reliability": self._confidence_reliability(reviews),
         }

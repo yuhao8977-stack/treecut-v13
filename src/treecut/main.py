@@ -166,6 +166,15 @@ def main() -> int:
     parser.add_argument("--segment-validation-report", action="store_true",
                         dest="segment_validation_report",
                         help="Phase2 Closure: 人工审核后生成验证报告")
+    parser.add_argument("--second-review-ui", action="store_true",
+                        dest="second_review_ui",
+                        help="Phase2.5: SECOND_REVIEW_V1 二次复核 UI")
+    parser.add_argument("--coverage-status", action="store_true",
+                        dest="coverage_status",
+                        help="Phase2.5: 标注覆盖矩阵状态")
+    parser.add_argument("--taxonomy-audit", action="store_true",
+                        dest="taxonomy_audit",
+                        help="Phase2.5: 标注 Taxonomy 审计")
     parser.add_argument("--template-list", action="store_true",
                         help="P5: 列出已注册模板")
     parser.add_argument("--template-recommend", nargs=3, metavar=("TID", "VERSION", "SLOT"),
@@ -530,6 +539,30 @@ def main() -> int:
                        encoding="utf-8")
         print(text)
         print(f"报告: {out}")
+        return 0
+    if args.second_review_ui:
+        # Phase2.5: 二次复核 UI（薄适配）
+        context = bootstrap()
+        from treecut.services.second_review_ui import SecondReviewApp
+        app = SecondReviewApp(context.paths.databases / "materials.db")
+        app.mainloop()
+        return 0
+    if args.coverage_status:
+        # Phase2.5: 覆盖矩阵
+        context = bootstrap()
+        from treecut.services.annotation_governance import CoverageService
+        svc = CoverageService(context.paths.databases / "materials.db")
+        n = svc.persist()
+        gaps = svc.coverage_gaps("product", "scene", 10)
+        print(json.dumps({"persisted": n,
+                          "top_gaps": gaps}, ensure_ascii=False, indent=2))
+        return 0
+    if args.taxonomy_audit:
+        # Phase2.5: Taxonomy 审计
+        context = bootstrap()
+        from treecut.services.annotation_governance import AnnotationService
+        svc = AnnotationService(context.paths.databases / "materials.db")
+        print(json.dumps(svc.taxonomy_audit(), ensure_ascii=False, indent=2))
         return 0
     if args.brain_vision is not None:
         # 视觉补认知

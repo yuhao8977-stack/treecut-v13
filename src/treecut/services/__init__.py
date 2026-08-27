@@ -38,6 +38,9 @@ class Services:
     _segments = None
     _shot_usage = None
     _segment_cognition = None
+    _annotation = None
+    _review_queue = None
+    _coverage = None
 
     def __post_init__(self):
         self.context = ServiceContext(db_path=self.db_path)
@@ -130,6 +133,30 @@ class Services:
             from treecut.services.segment_cognition import SegmentCognitionService
             self._segment_cognition = SegmentCognitionService(self.db_path)
         return self._segment_cognition
+
+    @property
+    def annotation(self):
+        """AnnotationService：标注治理（Phase 2.5）。"""
+        if self._annotation is None:
+            from treecut.services.annotation_governance import AnnotationService
+            self._annotation = AnnotationService(self.db_path)
+        return self._annotation
+
+    @property
+    def review_queue(self):
+        """ReviewQueueService：主动学习审核队列（Phase 2.5）。"""
+        if self._review_queue is None:
+            from treecut.services.annotation_governance import ReviewQueueService
+            self._review_queue = ReviewQueueService(self.db_path)
+        return self._review_queue
+
+    @property
+    def coverage(self):
+        """CoverageService：标注覆盖矩阵（Phase 2.5）。"""
+        if self._coverage is None:
+            from treecut.services.annotation_governance import CoverageService
+            self._coverage = CoverageService(self.db_path)
+        return self._coverage
 
 
 def bootstrap_services(db_path: str | Path | None = None) -> Services:

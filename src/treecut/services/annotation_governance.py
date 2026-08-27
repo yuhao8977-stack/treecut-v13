@@ -1,0 +1,247 @@
+"""TreeCut Phase 2.5 — Annotation Governance Services。
+
+  AnnotationService  — 标注治理：taxonomy 审计 / 人工可信度 / CALIBRATION eligibility
+  ReviewQueueService — 主动学习审核队列（基础）
+  CoverageService    — 标注覆盖矩阵
+"""
+from __future__ import annotations
+
+import json
+import sqlite3
+import time
+from collections import Counter, defaultdict
+from pathlib import Path
+
+
+class AnnotationService:
+    """标注治理服务。"""
+
+    # 字段 → 概念层（Annotation Schema V2 审计用）
+    FIELD_LAYER = {
+        "scene": "scene",
+        "product": "product_family",
+        "material": "material",
+        "function": "function",
+        "action": "action",
+        "shot_type": "shot_type",
+        "people_presence": "people_presence",
+    }
+
+    def __init__(self, db_path: str | Path):
+        self.db_path = Path(db_path)
+
+    def _ro(self) -> sqlite3.Connection:
+        conn = sqlite3.connect(
+            "file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
+        conn.row_factory = sqlite3.Row
+        return conn
+
+    # ------------------------------------------------------------------
+    # Taxonomy Audit（5）
+    # ------------------------------------------------------------------
+
+    def taxonomy_audit(self) -> dict:
+        """分析人工标签的跨层混用。"""
+        with self._ro() as conn:
+            rows = conn.execute("""
+                SELECT h.function, h.product, h.scene, h.action, h.material
+                FROM human_annotations h
+            """).fetchall()
+        issues = []
+        # Object vs Function 混用（function 字段出现部件/物体）
+        object_in_function = Counter()
+        for r in rows:
+            f = r["function"] or ""
+            if f in ("抽屉", "柜门", "台面", "插座", "水槽", "轨道"):
+                object_in_function[f] += 1
+                issues.append({"type": "OBJECT_FUNCTION_MIX", "value": f,
+                               "detail": f"function 字段出现部件/物体: {f}"})
+        # Parent-child mix（product 字段子类 vs 父类）
+        product_vals = Counter(r["product"] or "" for r in rows)
+        parent_child = [v for v in product_vals if v in ("伸缩岛台", "悬浮岛台")]
+        # Action vs Function mix
+        action_func_mix = Counter()
+        for r in rows:
+            a = r["action"] or ""
+            if a in ("收纳", "伸缩", "展示"):
+                action_func_mix[a] += 1
+                issues.append({"type": "ACTION_FUNCTION_MIX", "value": a,
+                               "detail": f"action 字段出现功能词: {a}"})
+        return {
+            "issues_count": len(issues),
+            "object_in_function": dict(object_in_function),
+            "action_in_function_words": dict(action_func_mix),
+            "product_parent_child_candidates": dict(product_vals),
+            "issue_types": [i["type"] for i in issues][:50],
+            "note": "仅审计，禁止自动修改历史 Human Label",
+        }
+
+    # ------------------------------------------------------------------
+    # CALIBRATION eligibility（10）
+    # ------------------------------------------------------------------
+
+    def calibration_eligible(self, human_confidence: str = "",
+                             review_status: str = "") -> bool:
+        """HIGH/MEDIUM + REVIEWED/GOLD → eligible。"""
+        conf_ok = human_confidence in ("HIGH", "MEDIUM")
+        status_ok = review_status in ("REVIEWED", "GOLD")
+        return conf_ok and status_ok
+
+    def eligibility_stats(self) -> dict:
+        """当前人工数据的 CALIBRATION 合格率。"""
+        with self._ro() as conn:
+            total = conn.execute("SELECT COUNT(*) FROM human_annotations").fetchone()[0]
+            # v1 无 human_confidence 字段 → 默认视为 MEDIUM/REVIEWED（Phase2.5 前）
+        return {"v1_total": total,
+                "note": "v1 无可信度字段；Phase2.5 后新审核带 human_confidence"}
+
+    # ------------------------------------------------------------------
+    # human_annotation_v2（8）
+    # ------------------------------------------------------------------
+
+    def save_v2(self, segment_id: str, v1_annotation_id: int, values: dict,
+                human_confidence: str = "MEDIUM",
+                review_status: str = "REVIEWED",
+                operator: str = "") -> int:
+        """二次复核保存（不覆盖 v1）。"""
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        cur = conn.execute(
+            "INSERT OR REPLACE INTO human_annotation_v2(segment_id,v1_annotation_id,"
+            "scene,product,material,function,action,shot_type,people_presence,"
+            "human_confidence,review_status,comment,operator,created_at) "
+            "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            (segment_id, v1_annotation_id,
+             values.get("scene", ""), values.get("product", ""),
+             values.get("material", ""), values.get("function", ""),
+             values.get("action", ""), values.get("shot_type", ""),
+             values.get("people_presence", ""),
+             human_confidence, review_status, values.get("comment", ""),
+             operator, time.time()))
+        conn.commit()
+        conn.close()
+        return int(cur.lastrowid)
+
+    def v2_count(self) -> int:
+        conn = sqlite3.connect(
+            "file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
+        n = conn.execute("SELECT COUNT(*) FROM human_annotation_v2").fetchone()[0]
+        conn.close()
+        return n
+
+
+class ReviewQueueService:
+    """主动学习审核队列（基础，11）。"""
+
+    REASONS = ("LOW_CONFIDENCE", "UNKNOWN", "MULTIMODAL_CONFLICT",
+               "NEW_VISUAL_CLUSTER", "NEW_PRODUCT", "NEW_MATERIAL",
+               "NEW_FUNCTION", "PRODUCTION_REJECTED", "HIGH_VALUE_CANDIDATE",
+               "RANDOM_AUDIT")
+
+    def __init__(self, db_path: str | Path):
+        self.db_path = Path(db_path)
+
+    def enqueue(self, segment_id: str, reason: str = "RANDOM_AUDIT",
+                priority: int = 50, source: str = "system") -> int:
+        if reason not in self.REASONS:
+            reason = "RANDOM_AUDIT"
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        cur = conn.execute(
+            "INSERT INTO review_queue(segment_id,reason,priority,source,status,created_at) "
+            "VALUES(?,?,?,?, 'pending', ?)",
+            (segment_id, reason, priority, source, time.time()))
+        conn.commit()
+        conn.close()
+        return int(cur.lastrowid)
+
+    def next_pending(self, limit: int = 10) -> list[dict]:
+        conn = sqlite3.connect(
+            "file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
+        conn.row_factory = sqlite3.Row
+        rows = conn.execute(
+            "SELECT * FROM review_queue WHERE status='pending' "
+            "ORDER BY priority DESC, created_at LIMIT ?", (limit,)).fetchall()
+        conn.close()
+        return [dict(r) for r in rows]
+
+    def mark_reviewed(self, queue_id: int) -> None:
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        conn.execute("UPDATE review_queue SET status='reviewed', reviewed_at=? WHERE queue_id=?",
+                     (time.time(), queue_id))
+        conn.commit()
+        conn.close()
+
+    def stats(self) -> dict:
+        conn = sqlite3.connect(
+            "file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
+        by_status = {r[0]: r[1] for r in conn.execute(
+            "SELECT status, COUNT(*) FROM review_queue GROUP BY status")}
+        by_reason = {r[0]: r[1] for r in conn.execute(
+            "SELECT reason, COUNT(*) FROM review_queue GROUP BY reason")}
+        conn.close()
+        return {"by_status": by_status, "by_reason": by_reason}
+
+
+class CoverageService:
+    """标注覆盖矩阵（13）。"""
+
+    THRESHOLDS = {"EMPTY": 0, "LOW": 5, "MEDIUM": 20, "GOOD": 50}  # 配置化阈值
+
+    def __init__(self, db_path: str | Path):
+        self.db_path = Path(db_path)
+
+    def _ro(self) -> sqlite3.Connection:
+        conn = sqlite3.connect(
+            "file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
+        conn.row_factory = sqlite3.Row
+        return conn
+
+    def _state(self, n: int) -> str:
+        if n >= self.THRESHOLDS["GOOD"]:
+            return "GOOD"
+        if n >= self.THRESHOLDS["MEDIUM"]:
+            return "MEDIUM"
+        if n >= self.THRESHOLDS["LOW"]:
+            return "LOW"
+        return "EMPTY"
+
+    def compute(self, dim1: str, dim2: str = "") -> list[dict]:
+        """按 (dim1 × dim2) 统计覆盖。dim1/dim2 ∈ scene/product/material/function/action。"""
+        with self._ro() as conn:
+            if dim2:
+                rows = conn.execute(
+                    f"SELECT {dim1} AS d1, {dim2} AS d2, COUNT(*) n "
+                    f"FROM human_annotations WHERE {dim1}!='' AND {dim2}!='' "
+                    f"GROUP BY {dim1}, {dim2}").fetchall()
+                return [{"dim1_value": r["d1"], "dim2_value": r["d2"],
+                         "sample_count": r["n"], "coverage_state": self._state(r["n"])}
+                        for r in rows]
+            rows = conn.execute(
+                f"SELECT {dim1} AS d1, COUNT(*) n FROM human_annotations "
+                f"WHERE {dim1}!='' GROUP BY {dim1}").fetchall()
+            return [{"dim1_value": r["d1"], "sample_count": r["n"],
+                     "coverage_state": self._state(r["n"])} for r in rows]
+
+    def coverage_gaps(self, dim1: str = "product", dim2: str = "scene",
+                      limit: int = 10) -> list[dict]:
+        """覆盖不足的组合（LOW/EMPTY）Top N。"""
+        combos = self.compute(dim1, dim2)
+        gaps = [c for c in combos if c["coverage_state"] in ("EMPTY", "LOW")]
+        gaps.sort(key=lambda c: c["sample_count"])
+        return gaps[:limit]
+
+    def persist(self) -> int:
+        """写入 annotation_coverage 表。"""
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        n = 0
+        for dim1 in ("scene", "product", "material", "function", "action"):
+            for row in self.compute(dim1):
+                conn.execute(
+                    "INSERT OR REPLACE INTO annotation_coverage(dim1,dim1_value,dim2,"
+                    "dim2_value,sample_count,high_conf_count,coverage_state,updated_at) "
+                    "VALUES(?,?,?,?,?,?,?,?)",
+                    (dim1, row["dim1_value"], "", "", row["sample_count"], 0,
+                     row["coverage_state"], time.time()))
+                n += 1
+        conn.commit()
+        conn.close()
+        return n
