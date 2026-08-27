@@ -25,6 +25,37 @@ PEOPLE = ("yes", "no", "unknown")
 CONFIDENCE = ("HIGH", "MEDIUM", "LOW")
 REVIEW_STATUS = ("REVIEWED", "NEEDS_SECOND_REVIEW", "GOLD", "EXCLUDED")
 
+# Phase 2.5.1 空提交治理：关键人工字段全空禁止 REVIEWED
+REQUIRED_KEYS = ("scene", "product", "material", "function", "action",
+                 "shot_type", "people_presence")
+
+
+def validate_submission(values: dict, human_confidence: str,
+                        review_status: str) -> tuple[bool, str, str]:
+    """审核提交校验（Phase 2.5.1）。
+
+    返回 (是否通过, 错误/提示信息, 调整后的 review_status)。
+    规则：
+      1) human_confidence / review_status 必选（禁止无感默认）；
+      2) 关键字段全空 → 禁止 REVIEWED，自动降级 NEEDS_SECOND_REVIEW；
+      3) EXCLUDED 仅当备注含 UNPLAYABLE（视频无法播放）允许空字段。
+    """
+    conf = (human_confidence or "").strip().upper()
+    status = (review_status or "").strip().upper()
+    if conf not in CONFIDENCE:
+        return False, "必须主动选择人工置信度（HIGH/MEDIUM/LOW）", status
+    if status not in REVIEW_STATUS:
+        return False, "必须主动选择审核状态", status
+    filled = sum(1 for k in REQUIRED_KEYS if (values.get(k) or "").strip() not in ("", "UNKNOWN"))
+    if filled == 0:
+        note = (values.get("comment") or "").upper()
+        if status == "EXCLUDED" and ("UNPLAYABLE" in note or "无法播放" in (values.get("comment") or "")):
+            return True, "EXCLUDED（UNPLAYABLE）", status
+        if status == "REVIEWED" or status == "GOLD":
+            return False, "关键字段全空，禁止 REVIEWED/GOLD；已自动置为 NEEDS_SECOND_REVIEW", "NEEDS_SECOND_REVIEW"
+        return True, "关键字段全空，仅允许 NEEDS_SECOND_REVIEW/EXCLUDED", status
+    return True, "", status
+
 
 class SecondReviewApp(tk.Tk):
     """SECOND_REVIEW_V1 二次复核界面。"""
@@ -110,13 +141,13 @@ class SecondReviewApp(tk.Tk):
         ttk.Combobox(form, textvariable=self.vars["people_presence"], values=PEOPLE, width=24).grid(
             row=row, column=1, padx=4)
         row += 1
-        tk.Label(form, text="人工置信度", bg="#f0f0f0").grid(row=row, column=0, sticky=tk.W)
-        self.vars["human_confidence"] = tk.StringVar(value="MEDIUM")
+        tk.Label(form, text="人工置信度*", bg="#f0f0f0").grid(row=row, column=0, sticky=tk.W)
+        self.vars["human_confidence"] = tk.StringVar()
         ttk.Combobox(form, textvariable=self.vars["human_confidence"], values=CONFIDENCE, width=24).grid(
             row=row, column=1, padx=4)
         row += 1
-        tk.Label(form, text="审核状态", bg="#f0f0f0").grid(row=row, column=0, sticky=tk.W)
-        self.vars["review_status"] = tk.StringVar(value="REVIEWED")
+        tk.Label(form, text="审核状态*", bg="#f0f0f0").grid(row=row, column=0, sticky=tk.W)
+        self.vars["review_status"] = tk.StringVar()
         ttk.Combobox(form, textvariable=self.vars["review_status"], values=REVIEW_STATUS, width=24).grid(
             row=row, column=1, padx=4)
         row += 1
@@ -145,8 +176,6 @@ class SecondReviewApp(tk.Tk):
         self.info.insert(tk.END, "\n".join(info))
         for v in self.vars.values():
             v.set("")
-        self.vars["human_confidence"].set("MEDIUM")
-        self.vars["review_status"].set("REVIEWED")
         # 记录 v1 annotation id
         conn = sqlite3.connect(
             "file:" + str(self.db_path).replace("\\", "/") + "?mode=ro", uri=True)
@@ -171,9 +200,18 @@ class SecondReviewApp(tk.Tk):
         if not self.current_seg:
             return
         values = {k: v.get() for k, v in self.vars.items()}
+        ok, msg, status = validate_submission(
+            values,
+            self.vars["human_confidence"].get(),
+            self.vars["review_status"].get())
+        if not ok:
+            messagebox.showerror("提交被拒绝", msg)
+            return
+        if msg:
+            messagebox.showwarning("状态调整", msg)
         self.svc.save_v2(self.current_seg, self.current_v1_id, values,
                          human_confidence=self.vars["human_confidence"].get(),
-                         review_status=self.vars["review_status"].get(),
+                         review_status=status,
                          operator=os.environ.get("USERNAME", ""))
         done = sum(1 for s in self.manifest["segments"] if self._already_v2(s))
         self.progress.config(text=f"二次复核 {done}/60")

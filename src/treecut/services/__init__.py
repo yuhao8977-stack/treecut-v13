@@ -41,6 +41,7 @@ class Services:
     _annotation = None
     _review_queue = None
     _coverage = None
+    _canonical_truth = None
 
     def __post_init__(self):
         self.context = ServiceContext(db_path=self.db_path)
@@ -157,6 +158,14 @@ class Services:
             from treecut.services.annotation_governance import CoverageService
             self._coverage = CoverageService(self.db_path)
         return self._coverage
+
+    @property
+    def canonical_truth(self):
+        """CanonicalTruthService：唯一人工真值解析（Phase 2.5.1）。"""
+        if self._canonical_truth is None:
+            from treecut.services.canonical_truth import CanonicalTruthService
+            self._canonical_truth = CanonicalTruthService(self.db_path)
+        return self._canonical_truth
 
 
 def bootstrap_services(db_path: str | Path | None = None) -> Services:
