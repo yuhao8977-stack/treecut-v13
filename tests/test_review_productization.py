@@ -29,11 +29,23 @@ def count_w(w):
 
 @pytest.fixture(scope="module")
 def app():
-    """共享审核窗口实例（模块级，只创建一次 Tk 根）。"""
+    """共享审核窗口实例（模块级，只创建一次 Tk 根）。
+
+    BATCH_V1 已 60/60 完成 → queue 空；播放/加载测试注入假题目数据，
+    独立于真实任务完成状态。
+    """
     a = TargetedReviewV1App(os.path.join(DATA_ROOT, "database", "materials.db"))
     a.withdraw()
     a._resolve_asset = lambda asset_id: r"C:\fake.mp4"
     a.pb._on_launch = lambda m, p: None
+    # 注入假题目（不影响真实库）：items/queue/current 覆盖为测试数据
+    fake_items = [{"segment_id": f"blind_test_segment_{i:016d}",
+                   "selection_reason": "test"} for i in range(120)]
+    a.items = fake_items
+    a.done = set()
+    a.queue = list(fake_items)
+    a.idx = 0
+    a._load(0)
     yield a
     a.destroy()
 
@@ -154,8 +166,8 @@ def test_task_stats_complete():
             assert st["status"] == "完成"
         elif t["id"] == "TARGETED_REVIEW_STAGE3_V3_1":
             assert st["total"] == 60  # 最终批次冻结 60 条
-            assert st["done"] == 0  # 尚未人工审核
-            assert st["status"] == "进行中"
+            assert st["done"] == 60  # 人工审核已完成并冻结
+            assert st["status"] == "完成"
 
 
 def test_responsive_sizes(app):

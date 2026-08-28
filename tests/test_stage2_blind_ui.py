@@ -2,7 +2,9 @@
 """Stage 2 Blind Review UI — Regression（STEP 13：12 项）。"""
 import json
 import os
+import shutil
 import sys
+import tempfile
 import tkinter as tk
 
 import pytest
@@ -24,22 +26,41 @@ def count_w(w):
 
 
 def _open_blind(root):
-    # 盲审 UI 回归：FRESH_HOLDOUT_V1 已交卷（30/30）→ 结果页无 items；
-    # 改用待审的 TARGETED_REVIEW_STAGE3_V3_1（60 条，blind=True，同一 ReviewTaskWindow 路径）。
-    hold = [t for t in TASKS if t["id"] == "TARGETED_REVIEW_STAGE3_V3_1"][0]
+    """构造临时待审 manifest 副本任务（不碰真实任务完成状态）。
+
+    真实 TARGETED_REVIEW_STAGE3_V3_1 已 60/60 完成 → 结果页无 items；
+    盲审 UI 回归需要审核表单路径，故复制 manifest 到临时目录，并把目标表指向
+    不存在的表（task_stats/_done_set 查空返回 done=0 → remaining>0 → 审核表单）。
+    段用真实 V3_1 前 3 条（asset/keyframes 可解析）；测试不保存，故不落库。
+    """
+    base = TASKS[-1]  # TARGETED_REVIEW_STAGE3_V3_1
+    tmpdir = tempfile.mkdtemp(prefix="blind_ui_")
+    src_manifest = base["manifest"]
+    dst_manifest = os.path.join(tmpdir, "TARGETED_REVIEW_STAGE3_V3_1_BLIND_TEST.json")
+    data = json.load(open(src_manifest, encoding="utf-8"))
+    data["segments"] = data["segments"][:3]
+    data["manifest_version"] = "TARGETED_REVIEW_STAGE3_V3_1_BLIND_TEST"
+    json.dump(data, open(dst_manifest, "w", encoding="utf-8"), ensure_ascii=False)
+    task = dict(base)
+    task["manifest"] = dst_manifest
+    task["id"] = "TARGETED_REVIEW_STAGE3_V3_1_BLIND_TEST"
+    task["table"] = "blind_ui_test_nonexistent_table"  # 强制 remaining>0 → 审核表单
+    task["_tmpdir"] = tmpdir
     cen = ReviewCenterWindow(root)
     root.update_idletasks()
-    cen._open_task(hold)
+    cen._open_task(task)
     root.update_idletasks()
     tw = getattr(cen, "_task_win", None)
-    return cen, tw
+    if tw is not None:
+        tw._tmpdir = tmpdir
+    return cen, tw, tmpdir
 
 
 @pytest.fixture(scope="module")
 def blind_win():
     root = tk.Tk()
     root.withdraw()
-    cen, tw = _open_blind(root)
+    cen, tw, tmpdir = _open_blind(root)
     yield root, cen, tw
     try:
         tw.destroy()
@@ -50,13 +71,14 @@ def blind_win():
     except Exception:
         pass
     root.destroy()
+    shutil.rmtree(tmpdir, ignore_errors=True)
 
 
 def test_blind_task_loads_30(blind_win):
     _, _, tw = blind_win
     assert tw is not None
-    assert len(tw.items) == 60  # V3 最终批次冻结 60 条
-    assert len(tw.queue) == 60
+    assert len(tw.items) == 3  # 临时待审 manifest 前 3 条
+    assert len(tw.queue) == 3
 
 
 def test_current_record_non_null(blind_win):
@@ -116,7 +138,7 @@ def test_load30_widget_count_stable(blind_win):
     _, _, tw = blind_win
     tw.update_idletasks()
     base = count_w(tw)
-    for i in range(60):
+    for i in range(3):
         tw._load(i)
     tw.update_idletasks()
     assert count_w(tw) == base
@@ -125,12 +147,15 @@ def test_load30_widget_count_stable(blind_win):
 def test_open_close_no_save_count_stays_zero(blind_win):
     root, _, tw = blind_win
     tw.destroy()
-    cen2, tw2 = _open_blind(root)
+    cen2, tw2, tmpdir2 = _open_blind(root)
     root.update_idletasks()
-    assert len(tw2.queue) == 60
-    assert task_stats([t for t in TASKS if t["id"] == "TARGETED_REVIEW_STAGE3_V3_1"][0])["done"] == 0
+    assert len(tw2.queue) == 3
+    # 真实 V3_1 已完成（60/60）；临时 manifest 段不在表内 → done=0
+    assert task_stats([t for t in TASKS if t["id"] == "TARGETED_REVIEW_STAGE3_V3_1"][0])["done"] == 60
     tw2.destroy()
     cen2.destroy()
+    import shutil
+    shutil.rmtree(tmpdir2, ignore_errors=True)
 
 
 def test_prediction_hash_unchanged():

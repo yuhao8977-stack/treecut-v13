@@ -471,9 +471,17 @@ class _ReviewBase(tk.Tk):
         return json.loads(p.read_text(encoding="utf-8")).get("segments", [])
 
     def _done_set(self) -> set:
+        """已完成集 = 本任务 manifest 成员 ∩ 表中已审 segment_id（避免共享表跨任务污染）。"""
+        items = getattr(self, "items", None) or self._load_items()
+        ids = {i["segment_id"] for i in items}
+        if not ids:
+            return set()
         with sqlite3.connect("file:" + str(self.db_path).replace("\\", "/") + "?mode=ro",
                              uri=True) as conn:
-            return {r[0] for r in conn.execute(f"SELECT segment_id FROM {self.TABLE}")}
+            ph = ",".join("?" * len(ids))
+            rows = conn.execute(f"SELECT segment_id FROM {self.TABLE} WHERE segment_id IN ({ph})",
+                                list(ids)).fetchall()
+            return {r[0] for r in rows}
 
     def _build(self):
         if self._ui_built:
