@@ -25,8 +25,8 @@ def count_w(w):
 
 def _open_blind(root):
     # 盲审 UI 回归：FRESH_HOLDOUT_V1 已交卷（30/30）→ 结果页无 items；
-    # 改用待审的 TARGETED_REVIEW_STAGE3_V3（60 条，blind=True，同一 ReviewTaskWindow 路径）。
-    hold = [t for t in TASKS if t["id"] == "TARGETED_REVIEW_STAGE3_V3"][0]
+    # 改用待审的 TARGETED_REVIEW_STAGE3_V3_1（60 条，blind=True，同一 ReviewTaskWindow 路径）。
+    hold = [t for t in TASKS if t["id"] == "TARGETED_REVIEW_STAGE3_V3_1"][0]
     cen = ReviewCenterWindow(root)
     root.update_idletasks()
     cen._open_task(hold)
@@ -128,7 +128,7 @@ def test_open_close_no_save_count_stays_zero(blind_win):
     cen2, tw2 = _open_blind(root)
     root.update_idletasks()
     assert len(tw2.queue) == 60
-    assert task_stats([t for t in TASKS if t["id"] == "TARGETED_REVIEW_STAGE3_V3"][0])["done"] == 0
+    assert task_stats([t for t in TASKS if t["id"] == "TARGETED_REVIEW_STAGE3_V3_1"][0])["done"] == 0
     tw2.destroy()
     cen2.destroy()
 

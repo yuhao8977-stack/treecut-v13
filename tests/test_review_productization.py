@@ -152,7 +152,7 @@ def test_task_stats_complete():
             assert st["total"] == 30
             assert st["done"] == 30  # 盲审已交卷（30 条人工锁存在）
             assert st["status"] == "完成"
-        elif t["id"] == "TARGETED_REVIEW_STAGE3_V3":
+        elif t["id"] == "TARGETED_REVIEW_STAGE3_V3_1":
             assert st["total"] == 60  # 最终批次冻结 60 条
             assert st["done"] == 0  # 尚未人工审核
             assert st["status"] == "进行中"

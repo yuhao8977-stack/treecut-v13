@@ -1,9 +1,9 @@
 # PHASE3 STAGE3 — FINAL PRE-REVIEW BATCH GATE（16 步收口报告）
 
-> 状态：**GATE PASS（四项硬性要求全部落地，未开启人工审核）**
-> 日期：2025-08（FINAL PRE-REVIEW BATCH）
-> 范围：Calibration333 DEV ONLY；**未使用/未触碰 Fresh Holdout V1（30 条考试卷）**
-> 产物：本报告 + 6 个数据产物 + Review Center 接入 `TARGETED_REVIEW_STAGE3_V3`
+> 状态：**GATE PASS PENDING 2 SANITY FIXES**（后续由 PHASE3_STAGE3_REVIEW_READY_FINAL.md 收尾）
+> 日期：2026-08-28
+> 范围：Calibration333 DEV ONLY；**Fresh Holdout V1 仅被 READ-ONLY 访问**（特征提取/回归参考/泄漏检查；未参与 Prompt、阈值、Policy、Routing、模型选择）
+> 产物：本报告 + 6 个数据产物 + Review Center 接入 `TARGETED_REVIEW_STAGE3_V3`（后由 V3_1 取代）
 
 ---
 
@@ -54,6 +54,13 @@ top1_plain F1 4.8 · top1_min05 5.1 · top2_gap10 10.1 · top3_gap10 **13.9** ·
 
 **People 复核 12 条排序（60 候选池，YOLO × SigLIP 分歧优先）：**
 全部 12 条均为 `DETECTOR_SIGLIP_DISAGREE`（YOLO 高置信检测到人、SigLIP 判 NO）——正是盲审价值最高的难例；balance 12/12 NO（SigLIP 侧），每条附 yolo_max_conf（0.72–0.93）。写入 `PEOPLE_DETECTOR_BENCHMARK_V1.json.people_review_order_top12`。
+
+> **⚠ 数字更正（2026-08-28 Sanity）：** 旧版把 TN 计进 TP，导致 precision 被高估为 accuracy。
+> 修正后（混淆矩阵 4 元重建，见 PEOPLE_DETECTOR_BENCHMARK_V1.json）：
+> YOLOv8n conf=0.55 → **TP=237 FP=28 TN=65 FN=0**（sum=330）→
+> **P 89.4 / R 100.0 / Sp 69.9 / F1 94.4 / acc 91.5 / bacc 84.9**；
+> SigLIP → TP=23 FP=0 TN=93 FN=214 → P 100.0 / R 9.7 / F1 17.7 / acc 35.2。
+> 结论不变：YOLO 仍明显优于 SigLIP（F1 94.4 vs 17.7；R 100 vs 9.7）。
 
 ---
 

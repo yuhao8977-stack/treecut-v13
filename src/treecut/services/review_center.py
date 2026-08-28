@@ -50,12 +50,12 @@ TASKS = [
               "· 置信度解释：高=几乎确定；中=大体确定但有一定判断空间；低=自己拿不准\n"
               "· 材质/组件/功能/镜头角色：点击即多选，再点取消；动作按发生顺序添加\n"
               "· 看不清就选 未知 + 低 + 需复核，不硬猜")},
-    {"id": "TARGETED_REVIEW_STAGE3_V3", "name": "Stage3 定向审核（60 条·最终批次）", "type": "TARGETED",
-     "manifest": os.path.join(DATA_ROOT, "TARGETED_REVIEW_STAGE3_V3.json"),
+    {"id": "TARGETED_REVIEW_STAGE3_V3_1", "name": "Stage3 定向审核（60 条·最终批次 V3_1）", "type": "TARGETED",
+     "manifest": os.path.join(DATA_ROOT, "TARGETED_REVIEW_STAGE3_V3_1.json"),
      "table": "targeted_human_review_v1",
      "blind": True,  # 只显示采样目标类别，隐藏一切 AI 预测/关键词/证据
      "show_sampling_target": True,
-     "hint": ("定向审核（Stage3 最终批次，DEV/校准扩展，非考试卷）。\n"
+     "hint": ("定向审核（Stage3 最终批次 V3_1，DEV/校准扩展，非考试卷）。\n"
               "系统只显示采样目标（动作/人物/变体/场景/材质），不显示任何 AI 猜测，请只看视频独立作答。\n"
               "· 置信度解释：高=几乎确定；中=大体确定但有一定判断空间；低=自己拿不准\n"
               "· 材质/组件/功能/镜头角色：点击即多选，再点取消；动作按发生顺序添加\n"
