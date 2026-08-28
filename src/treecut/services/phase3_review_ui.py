@@ -83,12 +83,19 @@ def validate_v21(values: dict, human_confidence: str, review_status: str,
 
 
 class _V21Form(tk.Frame):
-    """Schema V2.1 审核表单（滚动布局 + 分组 + 大号多选框）。"""
+    """Schema V2.1 审核表单（滚动布局 + 分组 + 大号多选框）。
 
-    def __init__(self, master, on_save):
+    conf_var/status_var：由父窗口顶部固定区传入（共享 StringVar），
+    置信度/状态永远在顶部可见，避免"滚到底部看不见漏选"。
+    """
+
+    def __init__(self, master, on_save, conf_var=None, status_var=None):
         super().__init__(master)
+        self.on_save = on_save
         self.vars = {}
         self.combos = {}
+        self.conf_var = conf_var
+        self.status_var = status_var
         self.seq_list: tk.Listbox | None = None
         self.seq = []  # 有序动作（英文）
         self._build()
@@ -200,23 +207,16 @@ class _V21Form(tk.Frame):
                  font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6)
         r += 1
         self._group(form, r, GROUPS[6][1]); r += 1
+        # 置信度/状态在顶部固定区（conf_var/status_var 由父窗口共享），表单内提示即可
         tk.Label(form, text="* 人工置信度", bg="#f0f0f0", fg="#b00000",
                  font=("Microsoft YaHei", 10, "bold")).grid(row=r, column=0, sticky=tk.W, pady=3)
-        self.vars["human_confidence"] = tk.StringVar()
-        cb_conf = ttk.Combobox(form, textvariable=self.vars["human_confidence"],
-                               values=("高", "中", "低"), width=30, state="readonly",
-                               font=("Microsoft YaHei", 10))
-        cb_conf.grid(row=r, column=1, sticky=tk.W, padx=6)
-        self.combos["human_confidence"] = cb_conf
+        tk.Label(form, text="（在顶部工具栏选择）", bg="#f0f0f0", fg="#b00000",
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6)
         r += 1
         tk.Label(form, text="* 审核状态", bg="#f0f0f0", fg="#b00000",
                  font=("Microsoft YaHei", 10, "bold")).grid(row=r, column=0, sticky=tk.W, pady=3)
-        self.vars["review_status"] = tk.StringVar()
-        cb_stat = ttk.Combobox(form, textvariable=self.vars["review_status"],
-                               values=("已审核", "需复核", "金标准", "排除"), width=30, state="readonly",
-                               font=("Microsoft YaHei", 10))
-        cb_stat.grid(row=r, column=1, sticky=tk.W, padx=6)
-        self.combos["review_status"] = cb_stat
+        tk.Label(form, text="（在顶部工具栏选择）", bg="#f0f0f0", fg="#b00000",
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6)
         r += 1
         tk.Label(form, text="备注", bg="#f0f0f0", font=("Microsoft YaHei", 10)).grid(
             row=r, column=0, sticky=tk.NW, pady=3)
@@ -313,11 +313,11 @@ class _V21Form(tk.Frame):
         out["shot_scale"] = en("shot_scale", out.get("shot_scale", ""))
         out["people_presence"] = en("people_presence", out.get("people_presence", ""))
         out["product_visibility"] = en("product_visibility", out.get("product_visibility", ""))
-        out["human_confidence"] = {"高": "HIGH", "中": "MEDIUM", "低": "LOW"}.get(
-            self._get("human_confidence"), "")
+        conf_raw = self.conf_var.get() if self.conf_var is not None else self._get("human_confidence")
+        status_raw = self.status_var.get() if self.status_var is not None else self._get("review_status")
+        out["human_confidence"] = {"高": "HIGH", "中": "MEDIUM", "低": "LOW"}.get(conf_raw, "")
         out["review_status"] = {"已审核": "REVIEWED", "需复核": "NEEDS_SECOND_REVIEW",
-                                "金标准": "GOLD", "排除": "EXCLUDED"}.get(
-            self._get("review_status"), "")
+                                "金标准": "GOLD", "排除": "EXCLUDED"}.get(status_raw, "")
         out["material"] = multi("material")
         out["component"] = multi("component")
         out["function"] = multi("function")
@@ -331,6 +331,10 @@ class _V21Form(tk.Frame):
                 self.vars[label].selection_clear(0, tk.END)
             else:
                 self.vars[label].set("")
+        if self.conf_var is not None:
+            self.conf_var.set("")
+        if self.status_var is not None:
+            self.status_var.set("")
         self.seq = []
         self._seq_refresh()
 
@@ -385,6 +389,20 @@ class _ReviewBase(tk.Tk):
         tk.Label(top, text=f"词典：{DICTIONARY_VERSION_V2_1}（中文显示/英文入库）",
                  bg="#e8f0fe", font=("Microsoft YaHei", 9), fg="#555").pack(side=tk.RIGHT)
         ttk.Button(top, text="✓ 保存并下一题", command=self._save).pack(side=tk.RIGHT, padx=8)
+        # 固定必选区：置信度/状态 永远在顶部可见（修复"滚到底部看不见漏选"）
+        self.conf_var = tk.StringVar()
+        self.status_var = tk.StringVar()
+        tk.Label(top, text="*置信度", bg="#e8f0fe", fg="#b00000",
+                 font=("Microsoft YaHei", 10, "bold")).pack(side=tk.RIGHT)
+        ttk.Combobox(top, textvariable=self.conf_var, values=("高", "中", "低"),
+                     width=6, state="readonly", font=("Microsoft YaHei", 10)).pack(side=tk.RIGHT, padx=4)
+        tk.Label(top, text="*状态", bg="#e8f0fe", fg="#b00000",
+                 font=("Microsoft YaHei", 10, "bold")).pack(side=tk.RIGHT)
+        ttk.Combobox(top, textvariable=self.status_var,
+                     values=("已审核", "需复核", "金标准", "排除"),
+                     width=9, state="readonly", font=("Microsoft YaHei", 10)).pack(side=tk.RIGHT, padx=4)
+        tk.Label(top, text="每题目必选：", bg="#e8f0fe", fg="#b00000",
+                 font=("Microsoft YaHei", 9)).pack(side=tk.RIGHT)
         ttk.Button(top, text="跳过", command=lambda: self._load(self.idx + 1)).pack(side=tk.RIGHT, padx=4)
         ttk.Button(top, text="上一题", command=lambda: self._load(self.idx - 1)).pack(side=tk.RIGHT, padx=4)
 
@@ -417,7 +435,8 @@ class _ReviewBase(tk.Tk):
 
         right = ttk.Frame(paned, width=600)
         paned.add(right, weight=1)
-        self.form = _V21Form(right, self._save)
+        self.form = _V21Form(right, self._save,
+                             conf_var=self.conf_var, status_var=self.status_var)
         self.form.pack(fill=tk.BOTH, expand=True)
 
     def _seg_info(self, sid) -> tuple[str, int, int]:
