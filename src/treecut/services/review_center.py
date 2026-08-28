@@ -60,6 +60,17 @@ TASKS = [
               "· 置信度解释：高=几乎确定；中=大体确定但有一定判断空间；低=自己拿不准\n"
               "· 材质/组件/功能/镜头角色：点击即多选，再点取消；动作按发生顺序添加\n"
               "· 看不清就选 未知 + 低 + 需复核，不硬猜")},
+    {"id": "STAGE3_ACTION_QA_ADJUDICATION", "name": "Stage3 动作 QA 二次裁决（仅 3 条）", "type": "ADJUDICATION",
+     "manifest": os.path.join(DATA_ROOT, "STAGE3_ACTION_QA_ADJUDICATION.json"),
+     "table": "targeted_human_review_v1",
+     "blind": True,  # 不显示 AI prediction；只显示现有 Human annotation
+     "show_sampling_target": True,
+     "show_current_annotation": True,
+     "hint": ("QA 二次裁决（仅 3 条 action_group↔action_sequence 冲突）。\n"
+              "请只看视频，修正 action_group 与 action_sequence 使其一致。\n"
+              "· action_group 是主类别（如 静态展示/讲解/抽屉/柜门）\n"
+              "· action_sequence 是按发生顺序的完整动作流\n"
+              "· 系统不显示任何 AI 猜测；看不清就选 未知 + 低 + 需复核")},
 ]
 
 
@@ -285,6 +296,16 @@ class ReviewTaskWindow(tk.Toplevel):
             info.append(f"采样目标：{tgt}" + (f"（{reason}）" if reason else ""))
         else:
             info.append(f"采样原因：{it.get('selection_reason', '')}")
+        if self.task.get("show_current_annotation"):
+            cur = it.get("current_annotation") or {}
+            if cur:
+                info.append("当前人工标注（待裁决）：")
+                info.append(f"  action_group: {cur.get('action_group', '')}")
+                info.append(f"  action_sequence: {','.join(cur.get('action_sequence', []))}")
+                if cur.get("people_presence"):
+                    info.append(f"  people: {cur.get('people_presence')}")
+                if cur.get("comment"):
+                    info.append(f"  原comment: {cur.get('comment')}")
         if it.get("conflict_fields"):
             info.append(f"冲突字段：{', '.join(d['field'] for d in it['conflict_fields'][:8])}")
         self.info.delete("1.0", tk.END)

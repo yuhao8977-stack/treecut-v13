@@ -33,7 +33,7 @@ def _open_blind(root):
     不存在的表（task_stats/_done_set 查空返回 done=0 → remaining>0 → 审核表单）。
     段用真实 V3_1 前 3 条（asset/keyframes 可解析）；测试不保存，故不落库。
     """
-    base = TASKS[-1]  # TARGETED_REVIEW_STAGE3_V3_1
+    base = [t for t in TASKS if t["id"] == "TARGETED_REVIEW_STAGE3_V3_1"][0]
     tmpdir = tempfile.mkdtemp(prefix="blind_ui_")
     src_manifest = base["manifest"]
     dst_manifest = os.path.join(tmpdir, "TARGETED_REVIEW_STAGE3_V3_1_BLIND_TEST.json")
