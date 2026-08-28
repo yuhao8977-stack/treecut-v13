@@ -180,7 +180,7 @@ class ReviewTaskWindow(tk.Toplevel):
         ttk.Label(left, text=self.task.get("hint", "审核提示：隐藏 AI/历史答案；多选点击即选；看不清选 未知+低+需复核"),
                   wraplength=400, foreground="#666").pack(anchor="w", pady=4)
         right = ttk.Frame(paned, width=600)
-        paned.add(right, weight=6, minsize=520)
+        paned.add(right, weight=6)  # 注意：ttk.Panedwindow 不支持 minsize 选项（曾致 _build_review 崩溃）
         self.form = _V21Form(right, self._save,
                              conf_var=self.conf_var, status_var=self.status_var)
         self.form.pack(fill=tk.BOTH, expand=True)
