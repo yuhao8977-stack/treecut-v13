@@ -59,9 +59,9 @@ def validate_v21(values: dict, human_confidence: str, review_status: str,
     conf = (human_confidence or "").strip().upper()
     status = (review_status or "").strip().upper()
     if conf not in ("HIGH", "MEDIUM", "LOW"):
-        return False, "请先选择人工置信度（高/中/低）", status
+        return False, "人工置信度未选择：本题目需单独选择（高/中/低）", status
     if status not in ("REVIEWED", "NEEDS_SECOND_REVIEW", "GOLD", "EXCLUDED"):
-        return False, "请先选择审核状态", status
+        return False, "审核状态未选择：本题目需单独选择（已审核/需复核/金标准/排除）", status
     filled = 0
     for k in ("scene_family", "scene_subtype", "product_family", "product_variant",
               "shot_scale", "people_presence", "product_visibility"):
@@ -203,16 +203,20 @@ class _V21Form(tk.Frame):
         tk.Label(form, text="* 人工置信度", bg="#f0f0f0", fg="#b00000",
                  font=("Microsoft YaHei", 10, "bold")).grid(row=r, column=0, sticky=tk.W, pady=3)
         self.vars["human_confidence"] = tk.StringVar()
-        ttk.Combobox(form, textvariable=self.vars["human_confidence"],
-                     values=("高", "中", "低"), width=30, state="readonly",
-                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6)
+        cb_conf = ttk.Combobox(form, textvariable=self.vars["human_confidence"],
+                               values=("高", "中", "低"), width=30, state="readonly",
+                               font=("Microsoft YaHei", 10))
+        cb_conf.grid(row=r, column=1, sticky=tk.W, padx=6)
+        self.combos["human_confidence"] = cb_conf
         r += 1
         tk.Label(form, text="* 审核状态", bg="#f0f0f0", fg="#b00000",
                  font=("Microsoft YaHei", 10, "bold")).grid(row=r, column=0, sticky=tk.W, pady=3)
         self.vars["review_status"] = tk.StringVar()
-        ttk.Combobox(form, textvariable=self.vars["review_status"],
-                     values=("已审核", "需复核", "金标准", "排除"), width=30, state="readonly",
-                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6)
+        cb_stat = ttk.Combobox(form, textvariable=self.vars["review_status"],
+                               values=("已审核", "需复核", "金标准", "排除"), width=30, state="readonly",
+                               font=("Microsoft YaHei", 10))
+        cb_stat.grid(row=r, column=1, sticky=tk.W, padx=6)
+        self.combos["review_status"] = cb_stat
         r += 1
         tk.Label(form, text="备注", bg="#f0f0f0", font=("Microsoft YaHei", 10)).grid(
             row=r, column=0, sticky=tk.W, pady=3)
@@ -263,6 +267,15 @@ class _V21Form(tk.Frame):
             self.seq_list.insert(tk.END, f"{i + 1}. {cn('atomic_action', a)}")
 
     # ---------------- 取值 / 重置 ----------------
+    def _get(self, label: str) -> str:
+        """双通道取值：StringVar + Combobox 显示值兜底（修复 readonly Combobox 偶发不同步）。"""
+        v = ""
+        if label in self.vars and hasattr(self.vars[label], "get"):
+            v = self.vars[label].get() or ""
+        if not v and label in self.combos:
+            v = self.combos[label].get() or ""
+        return v
+
     def collect(self) -> dict:
         def multi(label):
             lb = self.vars[label]
@@ -272,7 +285,7 @@ class _V21Form(tk.Frame):
                       "product_variant", "action_group", "shot_scale",
                       "people_presence", "product_visibility", "quality", "comment"):
             if label in self.vars:
-                out[label] = self.vars[label].get()
+                out[label] = self._get(label)
         out["scene_family"] = en("scene_family", out.get("scene_family", ""))
         out["scene_subtype"] = en("scene_subtype", out.get("scene_subtype", ""))
         out["product_family"] = en("product_family", out.get("product_family", ""))
@@ -282,10 +295,10 @@ class _V21Form(tk.Frame):
         out["people_presence"] = en("people_presence", out.get("people_presence", ""))
         out["product_visibility"] = en("product_visibility", out.get("product_visibility", ""))
         out["human_confidence"] = {"高": "HIGH", "中": "MEDIUM", "低": "LOW"}.get(
-            self.vars["human_confidence"].get(), "")
+            self._get("human_confidence"), "")
         out["review_status"] = {"已审核": "REVIEWED", "需复核": "NEEDS_SECOND_REVIEW",
                                 "金标准": "GOLD", "排除": "EXCLUDED"}.get(
-            self.vars["review_status"].get(), "")
+            self._get("review_status"), "")
         out["material"] = multi("material")
         out["component"] = multi("component")
         out["function"] = multi("function")
@@ -475,6 +488,24 @@ class _ReviewBase(tk.Tk):
             messagebox.showerror("播放错误", str(e))
 
     # ---------------- 保存 ----------------
+    def _save_log(self, values: dict, ok: bool, msg: str, status: str):
+        """保存尝试日志（追加文件），用于诊断偶发校验失败。"""
+        try:
+            log_dir = self.db_path.parent.parent / "logs"
+            log_dir.mkdir(parents=True, exist_ok=True)
+            line = "\t".join([
+                time.strftime("%Y-%m-%d %H:%M:%S"),
+                self.TABLE,
+                self.current["segment_id"] if getattr(self, "current", None) else "",
+                repr(values.get("human_confidence", "")),
+                repr(values.get("review_status", "")),
+                str(ok), msg.replace("\t", " "), status,
+            ])
+            with open(log_dir / "review_save_log.tsv", "a", encoding="utf-8") as f:
+                f.write(line + "\n")
+        except Exception:
+            pass
+
     def _save(self):
         if not getattr(self, "current", None):
             return
@@ -482,6 +513,7 @@ class _ReviewBase(tk.Tk):
         ok, msg, status = validate_v21(
             values, values["human_confidence"], values["review_status"],
             values["comment"])
+        self._save_log(values, ok, msg, status)
         if not ok:
             messagebox.showerror("无法保存", msg)
             return
