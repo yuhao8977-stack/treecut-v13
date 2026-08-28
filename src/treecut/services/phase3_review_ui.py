@@ -114,7 +114,8 @@ class _V21Form(tk.Frame):
             row=row, column=0, sticky=tk.NW, pady=3)
         wrap = ttk.Frame(parent)
         wrap.grid(row=row, column=1, sticky=tk.W, padx=6)
-        lb = tk.Listbox(wrap, selectmode=tk.EXTENDED, height=5, width=32,
+        # MULTIPLE: 点击即选中/再点取消，无需 Ctrl —— 符合"点一下选一个"习惯
+        lb = tk.Listbox(wrap, selectmode=tk.MULTIPLE, height=5, width=32,
                         exportselection=False, font=("Microsoft YaHei", 10))
         for o in options_en:
             lb.insert(tk.END, cn(label, o))
@@ -511,7 +512,7 @@ class AdjudicationV1App(_ReviewBase):
     TITLE = "THIRD_ADJUDICATION_V1 — 34 条第三次独立裁决"
     SOURCE_FIELD = ""
     HINT = ("审核说明：已隐藏 AI 答案、第一次答案、第二次答案，请只看视频独立判断。\n"
-            "· 材质/组件/功能/镜头角色可多选（Ctrl 点击）\n"
+            "· 材质/组件/功能/镜头角色：点击即多选，再点一下取消\n"
             "· 动作按发生顺序逐个添加（如 拉出→缩回）\n"
             "· 场景/产品先选大类，再选子类\n"
             "· 看不清就选：未知 + 低 + 需复核，不要硬猜")
@@ -555,7 +556,7 @@ class TargetedReviewV1App(_ReviewBase):
     SOURCE_FIELD = "selection_reason"
     HINT = ("审核说明：已隐藏 AI 预测结果，请只看视频独立标注。\n"
             "这批是主动学习补覆盖的新样本，可能出现非工厂/实木/水槽/电器等少见场景，属正常。\n"
-            "· 材质/组件/功能/镜头角色可多选（Ctrl 点击）\n"
+            "· 材质/组件/功能/镜头角色：点击即多选，再点一下取消\n"
             "· 动作按发生顺序添加\n"
             "· 看不清就选：未知 + 低 + 需复核")
 
