@@ -199,6 +199,39 @@ class AnnotationService:
         finally:
             conn.close()
 
+    def save_holdout_review(self, segment_id: str, values: dict, stratum: str,
+                            human_confidence: str, review_status: str,
+                            operator: str = "",
+                            dictionary_version: str = "ANNOTATION_DICTIONARY_V2_1") -> int:
+        """Fresh Holdout 盲审保存 → fresh_holdout_human_review_v1（只存人工结果，无 AI 信息）。"""
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            cur = conn.execute(
+                "INSERT OR REPLACE INTO fresh_holdout_human_review_v1(segment_id,stratum,"
+                "scene_family,scene_subtype,product_family,product_variant,material_multi,"
+                "component_multi,function_multi,action_group,action_sequence,shot_scale,"
+                "shot_role_multi,people_presence,product_visibility,quality,human_confidence,"
+                "review_status,comment,operator,dictionary_version,created_at) "
+                "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (segment_id, stratum, values.get("scene_family", ""),
+                 values.get("scene_subtype", ""), values.get("product_family", ""),
+                 values.get("product_variant", ""),
+                 json.dumps(values.get("material", []), ensure_ascii=False),
+                 json.dumps(values.get("component", []), ensure_ascii=False),
+                 json.dumps(values.get("function", []), ensure_ascii=False),
+                 values.get("action_group", ""),
+                 json.dumps(values.get("action_sequence", []), ensure_ascii=False),
+                 values.get("shot_scale", ""),
+                 json.dumps(values.get("shot_role", []), ensure_ascii=False),
+                 values.get("people_presence", ""),
+                 values.get("product_visibility", ""),
+                 values.get("quality"), human_confidence, review_status,
+                 values.get("comment", ""), operator, dictionary_version, time.time()))
+            conn.commit()
+            return int(cur.lastrowid)
+        finally:
+            conn.close()
+
 
 class ReviewQueueService:
     """主动学习审核队列（基础，11）。"""

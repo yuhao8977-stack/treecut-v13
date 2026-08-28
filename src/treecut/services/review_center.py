@@ -279,33 +279,11 @@ class ReviewTaskWindow(tk.Toplevel):
                                      selection_reason=it.get("selection_reason", ""),
                                      operator=os.environ.get("USERNAME", ""))
         elif self.task["table"] == "fresh_holdout_human_review_v1":
-            # 盲审保存：仅存人工结果 + stratum，不存任何 AI 信息
-            conn = sqlite3.connect(str(self.db_path), timeout=30)
-            try:
-                conn.execute(
-                    "INSERT OR REPLACE INTO fresh_holdout_human_review_v1(segment_id,stratum,"
-                    "scene_family,scene_subtype,product_family,product_variant,material_multi,"
-                    "component_multi,function_multi,action_group,action_sequence,shot_scale,"
-                    "shot_role_multi,people_presence,product_visibility,quality,human_confidence,"
-                    "review_status,comment,operator,dictionary_version,created_at) "
-                    "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                    (it["segment_id"], it.get("selection_reason", ""),
-                     values["scene_family"], values["scene_subtype"],
-                     values["product_family"], values["product_variant"],
-                     json.dumps(values["material"], ensure_ascii=False),
-                     json.dumps(values["component"], ensure_ascii=False),
-                     json.dumps(values["function"], ensure_ascii=False),
-                     values["action_group"],
-                     json.dumps(values["action_sequence"], ensure_ascii=False),
-                     values["shot_scale"],
-                     json.dumps(values["shot_role"], ensure_ascii=False),
-                     values["people_presence"], values["product_visibility"],
-                     float(values["quality"]) if values["quality"].strip() else None,
-                     values["human_confidence"], status, values["comment"],
-                     os.environ.get("USERNAME", ""), DICTIONARY_VERSION_V2_1, time.time()))
-                conn.commit()
-            finally:
-                conn.close()
+            # 盲审保存：统一走 AnnotationService（只存人工结果 + stratum，无 AI 信息）
+            svc.save_holdout_review(it["segment_id"], values,
+                                    it.get("selection_reason", ""),
+                                    values["human_confidence"], status,
+                                    operator=os.environ.get("USERNAME", ""))
         else:
             svc.save_v3(it["segment_id"], values,
                         values["human_confidence"], status,
