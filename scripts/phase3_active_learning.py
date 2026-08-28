@@ -62,8 +62,10 @@ def main():
     conn.row_factory = sqlite3.Row
 
     reviewed = {r[0] for r in conn.execute(
-        "SELECT target_id FROM human_annotations UNION SELECT segment_id FROM human_annotation_v2")}
-    print("已审段:", len(reviewed), flush=True)
+        "SELECT target_id FROM human_annotations UNION SELECT segment_id FROM human_annotation_v2"
+        " UNION SELECT segment_id FROM human_annotation_v3"
+        " UNION SELECT segment_id FROM targeted_human_review_v1")}
+    print("已审段(含 V3/Targeted):", len(reviewed), flush=True)
 
     # 候选池（未审段 + 元数据）
     cands = []
@@ -71,7 +73,9 @@ def main():
             "SELECT s.segment_id, s.asset_id, s.start_ms, s.end_ms, s.duration_ms "
             "FROM segments s WHERE s.segment_id NOT IN "
             "(SELECT target_id FROM human_annotations) "
-            "AND s.segment_id NOT IN (SELECT segment_id FROM human_annotation_v2)"):
+            "AND s.segment_id NOT IN (SELECT segment_id FROM human_annotation_v2)"
+            " AND s.segment_id NOT IN (SELECT segment_id FROM human_annotation_v3)"
+            " AND s.segment_id NOT IN (SELECT segment_id FROM targeted_human_review_v1)"):
         sid = r["segment_id"]
         # ASR（asset 级）与 OCR（段时间窗）文本
         asr = conn.execute(
@@ -125,41 +129,53 @@ def main():
         c["gap_score"], c["gap_hits"] = score_gap(c)
         c["low_ev_score"] = score_low_ev(c)
 
-    # ---- 抽样（asset 去重：每 asset 至多 2 段；段内时间不重叠优先） ----
+    # ---- 保留已审核条目（同 asset 只留 1 条；已审数据在库不丢，清单去重） ----
+    old_path = os.path.join(DATA_ROOT, "TARGETED_REVIEW_BATCH_V1.json")
+    kept = []
+    if os.path.exists(old_path):
+        old = json.load(open(old_path, encoding="utf-8")).get("segments", [])
+        kept_raw = [s for s in old if s["segment_id"] in reviewed]
+        seen_a = set()
+        for s in kept_raw:
+            if s["asset_id"] not in seen_a:
+                kept.append(s)
+                seen_a.add(s["asset_id"])
+    kept_assets = {k["asset_id"] for k in kept}
+    print(f"保留已审条目(asset 去重): {len(kept)}（已审数据全部在库不丢）", flush=True)
+
+    # ---- 抽样（asset 严格去重：每 asset 至多 1 段 + 排除 kept asset） ----
     def pick(pool, k, label):
         picked = []
-        asset_cnt = Counter()
+        asset_seen = set(kept_assets)
         pool = sorted(pool, key=lambda c: -c["gap_score"] if label != "random" else random.random())
         for c in pool:
             if len(picked) >= k:
                 break
             if c["segment_id"] in {p["segment_id"] for p in picked}:
                 continue
-            if asset_cnt[c["asset_id"]] >= 2:
-                continue
-            # near-duplicate：同 asset 已选段时间窗重叠
-            dup = False
-            for p in picked:
-                if p["asset_id"] == c["asset_id"] and not (
-                        c["end_ms"] <= p["start_ms"] or c["start_ms"] >= p["end_ms"]):
-                    dup = True
-                    break
-            if dup:
-                continue
+            if c["asset_id"] in asset_seen:
+                continue  # 同一素材严格只取 1 段（修复：杜绝相邻段 ±3s 上下文重叠）
             picked.append(c)
-            asset_cnt[c["asset_id"]] += 1
+            asset_seen.add(c["asset_id"])
         return picked
 
     gap_pool = [c for c in cands if c["gap_score"] >= 6]
     low_pool = [c for c in cands if c["low_ev_score"] >= 3 and c["gap_score"] < 6]
     random_pool = cands
 
-    gap_batch = pick(gap_pool, GAP_RATIO, "gap")
-    low_batch = pick(low_pool, LOW_EV_RATIO, "low_evidence")
+    # 动态目标：总 60 = kept + 新段（优先 gap，其次 low，最后 random）
+    target = 60 - len(kept)
+    gap_target = min(GAP_RATIO, target)
+    low_target = min(LOW_EV_RATIO, max(0, target - gap_target))
+    random_target = max(0, target - gap_target - low_target)
+    print(f"采样目标: gap {gap_target} + low {low_target} + random {random_target}（新段共 {target}）", flush=True)
+
+    gap_batch = pick(gap_pool, gap_target, "gap")
+    low_batch = pick(low_pool, low_target, "low_evidence")
     # random 从剩余抽
     used = {c["segment_id"] for c in gap_batch + low_batch}
     random_batch = pick([c for c in random_pool if c["segment_id"] not in used],
-                        RANDOM_RATIO, "random")
+                        random_target, "random")
 
     batch = []
     for c in gap_batch:
@@ -173,32 +189,46 @@ def main():
     # 与旧 300 零重叠校验
     assert all(b["segment_id"] not in reviewed for b in batch), "与已审段重复！"
 
+    # ---- 合并 kept + 新段 = 60；严格校验 ----
+    all_items = kept + batch
+    print(f"新清单总数: {len(all_items)}", flush=True)
+    # 严格校验：segment 唯一 + asset 唯一
+    assert len({s["segment_id"] for s in all_items}) == len(all_items), "segment 重复！"
+    dup_asset = [a for a, n in Counter(s["asset_id"] for s in all_items).items() if n > 1]
+    assert not dup_asset, f"asset 重复（修复后不应出现）: {dup_asset}"
+
     discover_stats = discover(conn)
     out = {
         "manifest_version": "TARGETED_REVIEW_BATCH_V1",
         "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "revision": "rev2-fix-asset-dedup",
+        "fix_note": ("rev2 修复：同一 asset 严格只取 1 段（旧版允许 2 段相邻段，"
+                     "±3s 上下文重叠导致观感重复）。保留已审条目，补足 60 条新段。"),
         "ratios": {"coverage_gap": GAP_RATIO, "low_evidence": LOW_EV_RATIO,
                    "random_audit": RANDOM_RATIO},
-        "total": len(batch),
-        "composition": dict(Counter(b["selection_reason"] for b in batch)),
+        "total": len(all_items),
+        "kept_already_reviewed": len(kept),
+        "composition": dict(Counter(b["selection_reason"] for b in all_items)),
         "discover_stats": discover_stats,
-        "dedup_policy": ("排除 300 已审段（exact）；同 asset 至多 2 段且时间窗不重叠（near-duplicate 规避）；"
+        "dedup_policy": ("排除全部已审段（300+V3 34+Targeted 已审）；同一 asset 严格 1 段；"
                          "类别不存在不伪造配额"),
         "segments": [{"segment_id": b["segment_id"], "asset_id": b["asset_id"],
                       "start_ms": b["start_ms"], "end_ms": b["end_ms"],
                       "duration_ms": b["duration_ms"], "asr_len": b["asr_len"],
                       "ocr_len": b["ocr_len"], "keyframes_n": b["keyframes_n"],
                       "selection_reason": b["selection_reason"],
-                      "hits": b["gap_hits"], "asr_excerpt": b["asr_text"][:80],
-                      "ocr_excerpt": b["ocr_text"][:60]} for b in batch],
+                      "gap_hits": b.get("gap_hits") or b.get("hits", []),
+                      "asr_excerpt": (b.get("asr_text") or b.get("asr_excerpt") or "")[:80],
+                      "ocr_excerpt": (b.get("ocr_text") or b.get("ocr_excerpt") or "")[:60]} for b in all_items],
     }
     out_path = os.path.join(DATA_ROOT, "TARGETED_REVIEW_BATCH_V1.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
-    print("TARGETED_REVIEW_BATCH_V1 ->", out_path)
-    print("total:", len(batch), "| composition:", out["composition"])
+    print("TARGETED_REVIEW_BATCH_V1(rev2) ->", out_path)
+    print("total:", len(all_items), "| kept:", len(kept), "| 新段:", len(batch))
+    print("composition:", out["composition"])
     print("素材库 discover:", json.dumps(discover_stats, ensure_ascii=False))
-    print("gap hits 分布:", dict(Counter(w for b in gap_batch for w in b["gap_hits"])))
+    print("gap hits 分布:", dict(Counter(w for b in all_items if b["selection_reason"] == "coverage_gap" for w in b["gap_hits"])))
     conn.close()
 
 
