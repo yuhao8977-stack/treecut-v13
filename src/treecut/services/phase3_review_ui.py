@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
-"""TreeCut Phase 3 — 人工审核 UI（Schema V2.1）。
+"""TreeCut Phase 3 — 人工审核 UI（Schema V2.1，中文界面）。
 
-包含两个独立审核任务（审核期间系统冻结，只允许保存人工结果）：
+两个独立审核任务（审核期间系统冻结，只允许保存人工结果）：
   1. THIRD_ADJUDICATION_V1：34 条第三次独立裁决 → human_annotation_v3（Human V3）
   2. TARGETED_REVIEW_BATCH_V1：60 条新 Segment 主动学习审核 → targeted_human_review_v1
 
 设计约束（架构监工冻结）：
-  - 隐藏 AI 答案 / Human V1 / Human V2（防锚定），只显示 Segment 视频与元数据
-  - 字段 = ANNOTATION_DICTIONARY_V2_1：scene_family/scene_subtype、product_family/product_variant、
-    material[]/component[]/function[]/shot_role[] 多选、action_group + action_sequence[] 有序、
-    shot_scale、people_presence、product_visibility、quality
-  - human_confidence / review_status 无默认值，必须人工选择
-  - 空提交禁止保存；看不清 → UNKNOWN + LOW + NEEDS_SECOND_REVIEW，禁止强迫猜测
+  - 隐藏 AI / Human V1 / Human V2 答案，只显示 Segment 视频与元数据
+  - 字段 = ANNOTATION_DICTIONARY_V2_1（中文显示、英文入库）
+  - 中文词汇与 Phase 2.5 业务词连贯（工厂展示区/客户住宅/茶桌/插电/拉出/缩回…）
+  - human_confidence / review_status 无默认必选；空提交禁止；看不清 → 未知+低+需复核
   - 保存不覆盖 V1/V2；完成后只提示进度，不自动改 canonical / 不学习
 """
 from __future__ import annotations
@@ -33,8 +31,6 @@ from treecut.services.schema_v2 import (
 )
 
 FFMPEG = r"E:\树剪整理\02_安装程序\TreeCut_v13\tools\win32\ffmpeg.exe"
-REQUIRED_KEYS = ("scene_family", "product_family", "material", "component",
-                 "function", "action_group", "shot_scale", "people_presence")
 
 # 字段中文名（UI 标签）
 FIELD_CN = {"scene_family": "场景类别", "scene_subtype": "场景子类",
@@ -44,9 +40,17 @@ FIELD_CN = {"scene_family": "场景类别", "scene_subtype": "场景子类",
             "shot_scale": "景别", "shot_role": "镜头角色",
             "people_presence": "人物", "product_visibility": "产品可见性",
             "quality": "质量分"}
-# Listbox 部件 → 字段名（multi() 反查）
-field_of = {"material": "material", "component": "component",
-            "function": "function", "shot_role": "shot_role"}
+
+# 分组标题
+GROUPS = [
+    ("scene", "① 场景"),
+    ("product", "② 产品"),
+    ("parts", "③ 材质 / 组件 / 功能（可多选）"),
+    ("action", "④ 动作（按发生顺序）"),
+    ("shot", "⑤ 镜头"),
+    ("other", "⑥ 其他"),
+    ("review", "⑦ 审核（必填）"),
+]
 
 
 def validate_v21(values: dict, human_confidence: str, review_status: str,
@@ -55,9 +59,9 @@ def validate_v21(values: dict, human_confidence: str, review_status: str,
     conf = (human_confidence or "").strip().upper()
     status = (review_status or "").strip().upper()
     if conf not in ("HIGH", "MEDIUM", "LOW"):
-        return False, "必须主动选择人工置信度（HIGH/MEDIUM/LOW）", status
+        return False, "请先选择人工置信度（高/中/低）", status
     if status not in ("REVIEWED", "NEEDS_SECOND_REVIEW", "GOLD", "EXCLUDED"):
-        return False, "必须主动选择审核状态", status
+        return False, "请先选择审核状态", status
     filled = 0
     for k in ("scene_family", "scene_subtype", "product_family", "product_variant",
               "shot_scale", "people_presence", "product_visibility"):
@@ -71,34 +75,33 @@ def validate_v21(values: dict, human_confidence: str, review_status: str,
     if filled == 0:
         note = (comment or "").upper()
         if status == "EXCLUDED" and ("UNPLAYABLE" in note or "无法播放" in comment):
-            return True, "EXCLUDED（UNPLAYABLE）", status
+            return True, "EXCLUDED（视频无法播放）", status
         if status in ("REVIEWED", "GOLD"):
-            return False, "关键字段全空，禁止 REVIEWED/GOLD；已自动置为 NEEDS_SECOND_REVIEW", "NEEDS_SECOND_REVIEW"
-        return True, "关键字段全空，仅允许 NEEDS_SECOND_REVIEW/EXCLUDED", status
+            return False, "关键字段全空，禁止保存为已审核/金标准；已自动改为需复核", "NEEDS_SECOND_REVIEW"
+        return True, "关键字段全空，仅允许需复核/排除", status
     return True, "", status
 
 
 class _V21Form(tk.Frame):
-    """Schema V2.1 审核表单（两个 UI 共用）。"""
+    """Schema V2.1 审核表单（滚动布局 + 分组 + 大号多选框）。"""
 
     def __init__(self, master, on_save):
         super().__init__(master)
-        self.on_save = on_save
         self.vars = {}
         self.combos = {}
         self.seq_list: tk.Listbox | None = None
-        self.seq = []  # 有序动作
+        self.seq = []  # 有序动作（英文）
         self._build()
 
     # ---------------- 构建 ----------------
     def _combo(self, parent, row, label, options_en, bind=None):
-        tk.Label(parent, text=FIELD_CN.get(label, label), bg="#f0f0f0", anchor=tk.W).grid(
-            row=row, column=0, sticky=tk.W, pady=2)
+        tk.Label(parent, text=FIELD_CN.get(label, label), bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=row, column=0, sticky=tk.W, pady=3)
         var = tk.StringVar()
         cb = ttk.Combobox(parent, textvariable=var,
-                          values=[cn(label, o) for o in options_en], width=26,
-                          state="readonly")
-        cb.grid(row=row, column=1, sticky=tk.W, padx=4)
+                          values=[cn(label, o) for o in options_en], width=30,
+                          state="readonly", font=("Microsoft YaHei", 10))
+        cb.grid(row=row, column=1, sticky=tk.W, padx=6)
         if bind:
             cb.bind("<<ComboboxSelected>>", bind)
         self.vars[label] = var
@@ -106,72 +109,115 @@ class _V21Form(tk.Frame):
         return cb
 
     def _multiselect(self, parent, row, label, options_en):
-        tk.Label(parent, text=f"{FIELD_CN.get(label, label)}[]（可多选）",
-                 bg="#f0f0f0", anchor=tk.W).grid(row=row, column=0, sticky=tk.NW, pady=2)
-        lb = tk.Listbox(parent, selectmode=tk.EXTENDED, height=4,
-                        exportselection=False, font=("Microsoft YaHei", 9))
+        tk.Label(parent, text=f"{FIELD_CN.get(label, label)}（可多选）",
+                 bg="#f0f0f0", anchor=tk.W, font=("Microsoft YaHei", 10)).grid(
+            row=row, column=0, sticky=tk.NW, pady=3)
+        wrap = ttk.Frame(parent)
+        wrap.grid(row=row, column=1, sticky=tk.W, padx=6)
+        lb = tk.Listbox(wrap, selectmode=tk.EXTENDED, height=5, width=32,
+                        exportselection=False, font=("Microsoft YaHei", 10))
         for o in options_en:
             lb.insert(tk.END, cn(label, o))
-        lb.grid(row=row, column=1, sticky=tk.W, padx=4)
+        sb = ttk.Scrollbar(wrap, orient="vertical", command=lb.yview)
+        lb.configure(yscrollcommand=sb.set)
+        lb.pack(side=tk.LEFT)
+        sb.pack(side=tk.RIGHT, fill=tk.Y)
         self.vars[label] = lb
         return lb
 
+    def _group(self, parent, row, title):
+        tk.Label(parent, text=title, bg="#e8f0fe", anchor=tk.W,
+                 font=("Microsoft YaHei", 10, "bold")).grid(
+            row=row, column=0, columnspan=2, sticky=tk.EW, pady=(8, 2))
+
     def _build(self):
-        form = ttk.Frame(self)
-        form.pack(fill=tk.BOTH, expand=True, padx=6, pady=4)
+        canvas = tk.Canvas(self, highlightthickness=0, bg="#f0f0f0")
+        vsb = ttk.Scrollbar(self, orient="vertical", command=canvas.yview)
+        inner = ttk.Frame(canvas)
+        inner_id = canvas.create_window((0, 0), window=inner, anchor="nw")
+        canvas.configure(yscrollcommand=vsb.set)
+        canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        vsb.pack(side=tk.RIGHT, fill=tk.Y)
+        inner.bind("<Configure>",
+                   lambda _e: canvas.configure(scrollregion=canvas.bbox("all")))
+        canvas.bind("<Configure>",
+                    lambda e: canvas.itemconfigure(inner_id, width=e.width - 8))
+        # 鼠标滚轮
+        canvas.bind_all("<MouseWheel>",
+                        lambda e: canvas.yview_scroll(int(-e.delta / 120), "units"))
+
+        form = ttk.Frame(inner)
+        form.pack(fill=tk.BOTH, expand=True, padx=10, pady=6)
         r = 0
+        self._group(form, r, GROUPS[0][1]); r += 1
         self._combo(form, r, "scene_family", list(SCENE_FAMILY),
                     bind=self._on_scene); r += 1
         self._combo(form, r, "scene_subtype", []); r += 1
+        self._group(form, r, GROUPS[1][1]); r += 1
         self._combo(form, r, "product_family", list(PRODUCT_FAMILY),
                     bind=self._on_product); r += 1
         self._combo(form, r, "product_variant", []); r += 1
-        for f in ("material", "component", "function", "shot_role"):
+        self._group(form, r, GROUPS[2][1]); r += 1
+        for f in ("material", "component", "function"):
             self._multiselect(form, r, f, MULTI_OPTIONS[f]); r += 1
+        self._group(form, r, GROUPS[3][1]); r += 1
         self._combo(form, r, "action_group", list(ACTION_GROUP)); r += 1
-        # action_sequence 有序编辑器
-        tk.Label(form, text="动作序列[]（按发生顺序）", bg="#f0f0f0", anchor=tk.W).grid(
-            row=r, column=0, sticky=tk.NW, pady=2)
-        seq_frame = ttk.Frame(form)
-        seq_frame.grid(row=r, column=1, sticky=tk.W, padx=4)
-        self.cand_seq = tk.Listbox(seq_frame, selectmode=tk.SINGLE, height=4,
-                                   exportselection=False, font=("Microsoft YaHei", 9))
+        # 动作序列（有序）
+        tk.Label(form, text="动作序列（按发生顺序）", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.NW, pady=3)
+        seq_wrap = ttk.Frame(form)
+        seq_wrap.grid(row=r, column=1, sticky=tk.W, padx=6)
+        self.cand_seq = tk.Listbox(seq_wrap, selectmode=tk.SINGLE, height=5, width=20,
+                                   exportselection=False, font=("Microsoft YaHei", 10))
         for a in ATOMIC_ACTION:
             self.cand_seq.insert(tk.END, cn("atomic_action", a))
-        self.cand_seq.grid(row=0, column=0, rowspan=4)
-        btns = ttk.Frame(seq_frame)
-        btns.grid(row=0, column=1, rowspan=4, padx=4)
-        ttk.Button(btns, text="添加→", command=self._seq_add, width=8).pack(pady=1)
-        ttk.Button(btns, text="↑上移", command=lambda: self._seq_move(-1), width=8).pack(pady=1)
-        ttk.Button(btns, text="↓下移", command=lambda: self._seq_move(1), width=8).pack(pady=1)
-        ttk.Button(btns, text="移除", command=self._seq_remove, width=8).pack(pady=1)
-        self.seq_list = tk.Listbox(seq_frame, height=4, exportselection=False,
-                                   font=("Microsoft YaHei", 9))
-        self.seq_list.grid(row=0, column=2, rowspan=4)
+        csb = ttk.Scrollbar(seq_wrap, orient="vertical", command=self.cand_seq.yview)
+        self.cand_seq.configure(yscrollcommand=csb.set)
+        self.cand_seq.grid(row=0, column=0, rowspan=5)
+        csb.grid(row=0, column=1, rowspan=5, sticky=tk.NS)
+        btns = ttk.Frame(seq_wrap)
+        btns.grid(row=0, column=2, rowspan=5, padx=6)
+        ttk.Button(btns, text="添加 →", command=self._seq_add, width=9).pack(pady=2)
+        ttk.Button(btns, text="↑ 上移", command=lambda: self._seq_move(-1), width=9).pack(pady=2)
+        ttk.Button(btns, text="↓ 下移", command=lambda: self._seq_move(1), width=9).pack(pady=2)
+        ttk.Button(btns, text="移除", command=self._seq_remove, width=9).pack(pady=2)
+        self.seq_list = tk.Listbox(seq_wrap, height=5, width=22,
+                                   exportselection=False, font=("Microsoft YaHei", 10))
+        self.seq_list.grid(row=0, column=3, rowspan=5)
         r += 1
+        self._group(form, r, GROUPS[4][1]); r += 1
         self._combo(form, r, "shot_scale", list(SHOT_SCALE)); r += 1
+        self._multiselect(form, r, "shot_role", MULTI_OPTIONS["shot_role"]); r += 1
+        self._group(form, r, GROUPS[5][1]); r += 1
         self._combo(form, r, "people_presence", list(PEOPLE_PRESENCE)); r += 1
         self._combo(form, r, "product_visibility",
                     ["VISIBLE", "PARTIAL", "HIDDEN", "UNKNOWN"]); r += 1
-        tk.Label(form, text="质量分（0-100）", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
+        tk.Label(form, text="质量分（0-100）", bg="#f0f0f0", font=("Microsoft YaHei", 10)).grid(
+            row=r, column=0, sticky=tk.W, pady=3)
         self.vars["quality"] = tk.StringVar()
-        tk.Entry(form, textvariable=self.vars["quality"], width=28).grid(row=r, column=1, sticky=tk.W, padx=4)
+        tk.Entry(form, textvariable=self.vars["quality"], width=32,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6)
         r += 1
-        tk.Label(form, text="*人工置信度", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
+        self._group(form, r, GROUPS[6][1]); r += 1
+        tk.Label(form, text="* 人工置信度", bg="#f0f0f0", fg="#b00000",
+                 font=("Microsoft YaHei", 10, "bold")).grid(row=r, column=0, sticky=tk.W, pady=3)
         self.vars["human_confidence"] = tk.StringVar()
         ttk.Combobox(form, textvariable=self.vars["human_confidence"],
-                     values=("高", "中", "低"), width=26, state="readonly").grid(
-            row=r, column=1, sticky=tk.W, padx=4)
+                     values=("高", "中", "低"), width=30, state="readonly",
+                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6)
         r += 1
-        tk.Label(form, text="*审核状态", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
+        tk.Label(form, text="* 审核状态", bg="#f0f0f0", fg="#b00000",
+                 font=("Microsoft YaHei", 10, "bold")).grid(row=r, column=0, sticky=tk.W, pady=3)
         self.vars["review_status"] = tk.StringVar()
         ttk.Combobox(form, textvariable=self.vars["review_status"],
-                     values=("已审核", "需复核", "金标准", "排除"),
-                     width=26, state="readonly").grid(row=r, column=1, sticky=tk.W, padx=4)
+                     values=("已审核", "需复核", "金标准", "排除"), width=30, state="readonly",
+                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6)
         r += 1
-        tk.Label(form, text="备注", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
+        tk.Label(form, text="备注", bg="#f0f0f0", font=("Microsoft YaHei", 10)).grid(
+            row=r, column=0, sticky=tk.W, pady=3)
         self.vars["comment"] = tk.StringVar()
-        tk.Entry(form, textvariable=self.vars["comment"], width=30).grid(row=r, column=1, sticky=tk.W, padx=4)
+        tk.Entry(form, textvariable=self.vars["comment"], width=50,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6)
 
     # ---------------- 联动 ----------------
     def _on_scene(self, _e=None):
@@ -226,7 +272,6 @@ class _V21Form(tk.Frame):
                       "people_presence", "product_visibility", "quality", "comment"):
             if label in self.vars:
                 out[label] = self.vars[label].get()
-        # 中文 → 英文（confidence/status 特殊映射；其他用反查表）
         out["scene_family"] = en("scene_family", out.get("scene_family", ""))
         out["scene_subtype"] = en("scene_subtype", out.get("scene_subtype", ""))
         out["product_family"] = en("product_family", out.get("product_family", ""))
@@ -264,6 +309,7 @@ class _ReviewBase(tk.Tk):
     TABLE = ""
     TITLE = ""
     SOURCE_FIELD = ""
+    HINT = ""
 
     def __init__(self, db_path):
         super().__init__()
@@ -273,7 +319,8 @@ class _ReviewBase(tk.Tk):
         self.queue = [it for it in self.items if it["segment_id"] not in self.done]
         self.idx = 0
         self.title(self.TITLE)
-        self.geometry("1500x920")
+        self.geometry("1560x940")
+        self.minsize(1200, 760)
         self.configure(bg="#f0f0f0")
         self._build()
         if self.queue:
@@ -291,43 +338,52 @@ class _ReviewBase(tk.Tk):
     def _done_set(self) -> set:
         with sqlite3.connect("file:" + str(self.db_path).replace("\\", "/") + "?mode=ro",
                              uri=True) as conn:
-            col = "segment_id"
-            return {r[0] for r in conn.execute(
-                f"SELECT {col} FROM {self.TABLE}")}
+            return {r[0] for r in conn.execute(f"SELECT segment_id FROM {self.TABLE}")}
 
     def _build(self):
-        top = tk.Frame(self, bg="#f0f0f0")
-        top.pack(fill=tk.X, padx=8, pady=6)
-        self.pos = tk.Label(top, text="", bg="#f0f0f0",
-                            font=("Microsoft YaHei", 11, "bold"))
+        top = tk.Frame(self, bg="#e8f0fe", padx=8, pady=6)
+        top.pack(fill=tk.X)
+        self.pos = tk.Label(top, text="", bg="#e8f0fe",
+                            font=("Microsoft YaHei", 13, "bold"))
         self.pos.pack(side=tk.LEFT)
-        self.progress = tk.Label(top, text="", bg="#f0f0f0",
-                                 font=("Microsoft YaHei", 10))
-        self.progress.pack(side=tk.LEFT, padx=16)
-        ttk.Button(top, text="上一题", command=lambda: self._load(self.idx - 1)).pack(side=tk.RIGHT, padx=4)
+        self.progress = tk.Label(top, text="", bg="#e8f0fe",
+                                 font=("Microsoft YaHei", 11))
+        self.progress.pack(side=tk.LEFT, padx=20)
+        tk.Label(top, text=f"词典：{DICTIONARY_VERSION_V2_1}（中文显示/英文入库）",
+                 bg="#e8f0fe", font=("Microsoft YaHei", 9), fg="#555").pack(side=tk.RIGHT)
+        ttk.Button(top, text="✓ 保存并下一题", command=self._save).pack(side=tk.RIGHT, padx=8)
         ttk.Button(top, text="跳过", command=lambda: self._load(self.idx + 1)).pack(side=tk.RIGHT, padx=4)
-        ttk.Button(top, text="✓ 保存", command=self._save).pack(side=tk.RIGHT, padx=8)
+        ttk.Button(top, text="上一题", command=lambda: self._load(self.idx - 1)).pack(side=tk.RIGHT, padx=4)
 
         paned = ttk.PanedWindow(self, orient=tk.HORIZONTAL)
         paned.pack(fill=tk.BOTH, expand=True, padx=8, pady=4)
 
-        left = ttk.Frame(paned, width=460)
+        left = ttk.Frame(paned, width=430)
         paned.add(left, weight=0)
-        self.info = tk.Text(left, wrap=tk.WORD, font=("Microsoft YaHei", 9), height=10)
-        self.info.pack(fill=tk.X)
-        self.note = tk.Label(left, text="", bg="#fffbe6", anchor=tk.W, justify=tk.LEFT,
-                             font=("Microsoft YaHei", 9), wraplength=440)
-        self.note.pack(fill=tk.X, pady=4)
-        ttk.Button(left, text="▶ 播放完整视频", command=self._play_full).pack(fill=tk.X, padx=6, pady=2)
-        ttk.Button(left, text="▶ 播放 Segment ±3s", command=self._play_context).pack(fill=tk.X, padx=6, pady=2)
-        tk.Label(left, text="\n审核提示：已隐藏 AI / 第一次 / 第二次答案；\n"
-                            "材质/组件/功能/镜头角色 可多选（Ctrl 点击）；\n"
-                            "动作按发生顺序添加；\n"
-                            "看不清就选：未知 + 低置信 + 需复核，不要猜。",
-                 bg="#f0f0f0", justify=tk.LEFT, font=("Microsoft YaHei", 9), wraplength=440).pack(fill=tk.X, pady=4)
+        # 信息卡片
+        card = tk.Frame(left, bg="#ffffff", highlightbackground="#ccc",
+                        highlightthickness=1)
+        card.pack(fill=tk.X, padx=4, pady=2)
+        self.info = tk.Text(card, wrap=tk.WORD, font=("Microsoft YaHei", 10),
+                            bg="#ffffff", height=8, borderwidth=0)
+        self.info.pack(fill=tk.X, padx=8, pady=6)
+        self.note = tk.Label(card, text="", bg="#fffbe6", anchor=tk.W, justify=tk.LEFT,
+                             font=("Microsoft YaHei", 9), wraplength=400, padx=6, pady=4)
+        self.note.pack(fill=tk.X)
+        # 播放按钮
+        btn = tk.Frame(left)
+        btn.pack(fill=tk.X, padx=4, pady=6)
+        ttk.Button(btn, text="▶ 播放本段（前后3秒）", command=self._play_context,
+                   width=24).pack(fill=tk.X, pady=2)
+        ttk.Button(btn, text="▶ 播放完整视频", command=self._play_full,
+                   width=24).pack(fill=tk.X, pady=2)
+        # 提示
+        tk.Label(left, text=self.HINT, bg="#f0f0f0", justify=tk.LEFT,
+                 font=("Microsoft YaHei", 9), wraplength=410,
+                 fg="#444").pack(fill=tk.X, padx=8, pady=6)
 
-        right = ttk.Frame(paned, width=560)
-        paned.add(right, weight=0)
+        right = ttk.Frame(paned, width=600)
+        paned.add(right, weight=1)
         self.form = _V21Form(right, self._save)
         self.form.pack(fill=tk.BOTH, expand=True)
 
@@ -349,22 +405,22 @@ class _ReviewBase(tk.Tk):
         it = self.queue[self.idx]
         self.current = it
         sid = it["segment_id"]
-        self.pos.config(text=f"{self.idx + 1}/{len(self.queue)}  {sid[:16]}")
+        self.pos.config(text=f"{self.idx + 1} / {len(self.queue)}")
         asset, start, end = self._seg_info(sid)
         self.current_start, self.current_end = start, end
-        info = [f"segment: {sid}", f"asset: {asset[:16]}",
-                f"range: {start}-{end}ms（{end - start}ms）"]
+        info = [f"片段编号：{sid[:20]}…", f"素材：{asset[:20]}…",
+                f"时间范围：{start} - {end} ms（共 {(end - start) // 1000} 秒）"]
         if self.SOURCE_FIELD:
-            info.append(f"source: {it.get(self.SOURCE_FIELD, '')}")
+            info.append(f"采样原因：{it.get(self.SOURCE_FIELD, '')}")
         if it.get("hits"):
-            info.append(f"采样命中: {','.join(it['hits'][:6])}")
+            info.append(f"命中：{', '.join(it['hits'][:6])}")
         if it.get("conflict_fields"):
-            info.append(f"冲突字段: {','.join(d['field'] for d in it['conflict_fields'][:8])}")
+            info.append(f"冲突字段：{', '.join(d['field'] for d in it['conflict_fields'][:8])}")
         self.info.delete("1.0", tk.END)
         self.info.insert(tk.END, "\n".join(info))
         self.note.config(text="")
         self.form.reset()
-        self.progress.config(text=f"已完成 {len(self.done)}/{len(self.items)}")
+        self.progress.config(text=f"已完成 {len(self.done)} / {len(self.items)}")
 
     # ---------------- 播放 ----------------
     def _resolve_asset(self, asset_id: str) -> str:
@@ -382,7 +438,7 @@ class _ReviewBase(tk.Tk):
         if path:
             os.startfile(path)  # type: ignore[attr-defined]
         else:
-            messagebox.showwarning("无法播放", "asset 视频文件不可达")
+            messagebox.showwarning("无法播放", "素材视频文件不可达")
 
     def _play_context(self):
         if not getattr(self, "current", None):
@@ -390,7 +446,7 @@ class _ReviewBase(tk.Tk):
         asset = self._seg_info(self.current["segment_id"])[0]
         path = self._resolve_asset(asset)
         if not path:
-            messagebox.showwarning("无法播放", "asset 视频文件不可达")
+            messagebox.showwarning("无法播放", "素材视频文件不可达")
             return
         start = max(0, self.current_start - 3000)
         end = self.current_end + 3000
@@ -400,17 +456,19 @@ class _ReviewBase(tk.Tk):
                "-i", path, "-t", str((end - start) / 1000.0),
                "-c:v", "libx264", "-preset", "ultrafast", "-an", out]
         try:
+            self.note.config(text="正在提取片段…（约3-8秒）")
+            self.update_idletasks()
             subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            # 等待提取完成（≤10s）
-            deadline = time.time() + 12
+            deadline = time.time() + 15
             while time.time() < deadline:
                 if os.path.exists(out) and os.path.getsize(out) > 1000:
                     break
                 time.sleep(0.4)
             if os.path.exists(out) and os.path.getsize(out) > 1000:
                 os.startfile(out)  # type: ignore[attr-defined]
+                self.note.config(text="")
             else:
-                messagebox.showwarning("提取失败", "±3s 片段提取超时，已打开完整视频")
+                self.note.config(text="片段提取超时，已打开完整视频")
                 os.startfile(path)  # type: ignore[attr-defined]
         except Exception as e:
             messagebox.showerror("播放错误", str(e))
@@ -424,24 +482,24 @@ class _ReviewBase(tk.Tk):
             values, values["human_confidence"], values["review_status"],
             values["comment"])
         if not ok:
-            messagebox.showerror("提交被拒绝", msg)
+            messagebox.showerror("无法保存", msg)
             return
         if msg:
-            messagebox.showwarning("状态调整", msg)
+            messagebox.showwarning("状态已调整", msg)
         self._persist(values, status)
         self.done.add(self.current["segment_id"])
         self.queue = [it for it in self.items if it["segment_id"] not in self.done]
-        self.progress.config(text=f"已完成 {len(self.done)}/{len(self.items)}")
+        self.progress.config(text=f"已完成 {len(self.done)} / {len(self.items)}")
         if len(self.done) >= len(self.items):
-            messagebox.showinfo("批次完成", f"{self.TITLE} {len(self.done)}/{len(self.items)} 完成。"
-                                            "请进行 Phase 3 人工数据结算。")
+            messagebox.showinfo("批次完成",
+                                f"{self.TITLE}\n\n{len(self.done)}/{len(self.items)} 全部完成。\n"
+                                "请进行 Phase 3 人工数据结算（暂不学习）。")
         if self.queue:
             self._load(0)
         else:
             self.pos.config(text="全部完成")
 
     def _persist(self, values: dict, status: str):
-        """子类实现：写入对应表。"""
         raise NotImplementedError
 
 
@@ -450,8 +508,13 @@ class AdjudicationV1App(_ReviewBase):
 
     MANIFEST = r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime_data\temp\batch1\THIRD_ADJUDICATION_V1.json"
     TABLE = "human_annotation_v3"
-    TITLE = "THIRD_ADJUDICATION_V1 — 34 条第三次独立裁决（Schema V2.1）"
+    TITLE = "THIRD_ADJUDICATION_V1 — 34 条第三次独立裁决"
     SOURCE_FIELD = ""
+    HINT = ("审核说明：已隐藏 AI 答案、第一次答案、第二次答案，请只看视频独立判断。\n"
+            "· 材质/组件/功能/镜头角色可多选（Ctrl 点击）\n"
+            "· 动作按发生顺序逐个添加（如 拉出→缩回）\n"
+            "· 场景/产品先选大类，再选子类\n"
+            "· 看不清就选：未知 + 低 + 需复核，不要硬猜")
 
     def _persist(self, values: dict, status: str):
         conn = sqlite3.connect(str(self.db_path), timeout=30)
@@ -488,8 +551,13 @@ class TargetedReviewV1App(_ReviewBase):
 
     MANIFEST = r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime_data\temp\batch1\TARGETED_REVIEW_BATCH_V1.json"
     TABLE = "targeted_human_review_v1"
-    TITLE = "TARGETED_REVIEW_BATCH_V1 — 60 条新 Segment 人工标注（Schema V2.1）"
+    TITLE = "TARGETED_REVIEW_BATCH_V1 — 60 条新片段人工标注"
     SOURCE_FIELD = "selection_reason"
+    HINT = ("审核说明：已隐藏 AI 预测结果，请只看视频独立标注。\n"
+            "这批是主动学习补覆盖的新样本，可能出现非工厂/实木/水槽/电器等少见场景，属正常。\n"
+            "· 材质/组件/功能/镜头角色可多选（Ctrl 点击）\n"
+            "· 动作按发生顺序添加\n"
+            "· 看不清就选：未知 + 低 + 需复核")
 
     def _persist(self, values: dict, status: str):
         it = self.current

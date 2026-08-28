@@ -179,15 +179,15 @@ MULTI_OPTIONS = {
 # quality 参考范围
 QUALITY_RANGE = (0.0, 100.0)
 
-# ---- 中文标签（UI 显示中文，DB 存英文代码） ----
+# ---- 中文标签（UI 显示中文，DB 存英文代码；词汇对齐 Phase 2.5 业务词） ----
 LABELS = {
-    "scene_family": {"FACTORY": "工厂", "CUSTOMER_HOME": "客户家", "SHOWROOM": "展厅",
+    "scene_family": {"FACTORY": "工厂", "CUSTOMER_HOME": "客户住宅", "SHOWROOM": "展厅",
                      "INSTALLATION_SITE": "安装现场", "OTHER": "其他", "UNKNOWN": "未知"},
-    "scene_subtype": {"FACTORY_WORKSHOP": "工厂·加工车间", "FACTORY_SHOWROOM": "工厂·展示区",
-                      "FACTORY_WAREHOUSE": "工厂·仓库", "FACTORY_OTHER": "工厂·其他",
+    "scene_subtype": {"FACTORY_WORKSHOP": "工厂加工车间", "FACTORY_SHOWROOM": "工厂展示区",
+                      "FACTORY_WAREHOUSE": "工厂仓库", "FACTORY_OTHER": "工厂其他",
                       "NOT_APPLICABLE": "不适用", "UNKNOWN": "未知"},
     "product_family": {"ISLAND": "岛台", "BAR": "吧台", "SIDEBOARD": "餐边柜",
-                       "DINING_TABLE": "餐桌", "OTHER": "其他", "UNKNOWN": "未知"},
+                       "DINING_TABLE": "茶桌", "OTHER": "其他", "UNKNOWN": "未知"},
     "product_variant": {"STANDARD_ISLAND": "标准岛台", "EXTENDABLE_ISLAND": "伸缩岛台",
                         "FLOATING_ISLAND": "悬浮岛台", "FLOOR_ISLAND": "落地岛台",
                         "NOT_APPLICABLE": "不适用", "OTHER": "其他", "UNKNOWN": "未知"},
@@ -198,7 +198,7 @@ LABELS = {
                   "COUNTERTOP": "台面", "SINK": "水槽", "APPLIANCE_SLOT": "电器槽",
                   "ACRYLIC_SUPPORT": "亚克力支撑", "OTHER": "其他", "UNKNOWN": "未知",
                   "NOT_APPLICABLE": "不适用"},
-    "function": {"STORAGE": "收纳", "EXTENDABLE": "伸缩", "POWER": "用电", "DINING": "就餐",
+    "function": {"STORAGE": "收纳", "EXTENDABLE": "伸缩", "POWER": "用电", "DINING": "多人就餐",
                  "OFFICE": "办公", "WATER_BAR": "水吧", "EMBEDDED_APPLIANCE": "嵌入电器",
                  "CHILD_SAFETY": "儿童安全", "OTHER": "其他", "UNKNOWN": "未知",
                  "NOT_APPLICABLE": "不适用"},
@@ -211,7 +211,7 @@ LABELS = {
                       "PULL_OUT_THEN_RETRACT": "拉出再缩回", "RETRACT_THEN_PULL_OUT": "缩回再拉出",
                       "OPEN_DRAWER": "打开抽屉", "CLOSE_DRAWER": "关闭抽屉",
                       "OPEN_THEN_CLOSE_DRAWER": "开抽屉再关", "OPEN_CABINET": "打开柜门",
-                      "CLOSE_CABINET": "关闭柜门", "OPERATE_SOCKET": "操作插座",
+                      "CLOSE_CABINET": "关闭柜门", "OPERATE_SOCKET": "插电",
                       "OPEN_SINK_COVER": "打开水槽盖", "OTHER": "其他", "UNKNOWN": "未知",
                       "NOT_APPLICABLE": "不适用"},
     "shot_scale": {"WIDE": "全景", "MEDIUM": "中景", "CLOSE": "近景", "CLOSE_UP": "特写",
