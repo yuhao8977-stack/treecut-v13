@@ -388,7 +388,14 @@ class _ReviewBase(tk.Tk):
         self.progress.pack(side=tk.LEFT, padx=20)
         tk.Label(top, text=f"词典：{DICTIONARY_VERSION_V2_1}（中文显示/英文入库）",
                  bg="#e8f0fe", font=("Microsoft YaHei", 9), fg="#555").pack(side=tk.RIGHT)
-        ttk.Button(top, text="✓ 保存并下一题", command=self._save).pack(side=tk.RIGHT, padx=8)
+        # 保存按钮：防呆（未选置信度/状态时禁用，选完才亮）
+        self.save_btn = ttk.Button(top, text="✓ 保存并下一题", command=self._save,
+                                   state="disabled")
+        self.save_btn.pack(side=tk.RIGHT, padx=8)
+        self.mandatory_hint = tk.Label(top, text="⚠ 请先选置信度/状态（每题目必选）",
+                                       bg="#ffe0e0", fg="#b00000",
+                                       font=("Microsoft YaHei", 9, "bold"))
+        self.mandatory_hint.pack(side=tk.RIGHT)
         # 固定必选区：置信度/状态 永远在顶部可见（修复"滚到底部看不见漏选"）
         self.conf_var = tk.StringVar()
         self.status_var = tk.StringVar()
@@ -405,6 +412,19 @@ class _ReviewBase(tk.Tk):
                  font=("Microsoft YaHei", 9)).pack(side=tk.RIGHT)
         ttk.Button(top, text="跳过", command=lambda: self._load(self.idx + 1)).pack(side=tk.RIGHT, padx=4)
         ttk.Button(top, text="上一题", command=lambda: self._load(self.idx - 1)).pack(side=tk.RIGHT, padx=4)
+        # 联动：必选完成后保存按钮才可用
+        self.conf_var.trace_add("write", self._on_mandatory)
+        self.status_var.trace_add("write", self._on_mandatory)
+        self._on_mandatory()
+
+    def _on_mandatory(self, *_a):
+        """防呆：置信度+状态都选完 → 保存按钮可用；否则禁用并提示。"""
+        ok = bool((self.conf_var.get() or "").strip()) and bool((self.status_var.get() or "").strip())
+        self.save_btn.config(state="normal" if ok else "disabled")
+        if ok:
+            self.mandatory_hint.config(text="", bg="#e8f0fe")
+        else:
+            self.mandatory_hint.config(text="⚠ 请先选置信度/状态（每题目必选）", bg="#ffe0e0")
 
         paned = ttk.PanedWindow(self, orient=tk.HORIZONTAL)
         paned.pack(fill=tk.BOTH, expand=True, padx=8, pady=4)
