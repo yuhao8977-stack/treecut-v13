@@ -118,10 +118,15 @@ def main():
                     continue
                 pred = r[which].get(field)
                 if pred in ("", "UNKNOWN", "NOT_APPLICABLE", None):
-                    unk += 1; fn += 1; continue
-                if pred == truth: tp += 1
-                else: fp += 1; fn += 1
-            hv = tp + fp + fn
+                    unk += 1
+                    continue
+                if pred == truth:
+                    tp += 1
+                else:
+                    fp += 1
+            # 单标签：真值类未命中 = 预测错误 + UNKNOWN；样本数 = tp+fp+unk
+            fn = fp + unk
+            hv = tp + fp + unk
             res[which] = {
                 "accuracy": round(tp / hv * 100, 1) if hv else 0,
                 "effective_correct_rate": round(tp / hv * 100, 1) if hv else 0,
@@ -130,7 +135,7 @@ def main():
                 "macro_f1": round(f1(tp / (tp + fp) if (tp + fp) else 0,
                                      tp / (tp + fn) if (tp + fn) else 0) * 100, 1),
                 "unknown_rate": round(unk / hv * 100, 1) if hv else 0,
-                "tp": tp, "fp": fp, "fn": fn, "n_valid": hv}
+                "tp": tp, "fp": fp, "fn": fn, "unk": unk, "n_valid": hv}
         out["fields"][field] = res
 
     for field in ("material", "component", "function", "shot_role"):
