@@ -150,9 +150,36 @@ class _V21Form(tk.Frame):
                    lambda _e: canvas.configure(scrollregion=canvas.bbox("all")))
         canvas.bind("<Configure>",
                     lambda e: canvas.itemconfigure(inner_id, width=e.width - 8))
-        # 鼠标滚轮
-        canvas.bind_all("<MouseWheel>",
-                        lambda e: canvas.yview_scroll(int(-e.delta / 120), "units"))
+        # 鼠标滚轮：仅右侧表单区域生效（Enter 绑定 / Leave 解绑，避免全局劫持）
+        self._wheel_bound = False
+
+        def _bind_wheel(_e=None):
+            if self._wheel_bound:
+                return
+            canvas.bind_all("<MouseWheel>",
+                            lambda e: canvas.yview_scroll(int(-e.delta / 120), "units"))
+            canvas.bind_all("<Button-4>",
+                            lambda _e: canvas.yview_scroll(-1, "units"))
+            canvas.bind_all("<Button-5>",
+                            lambda _e: canvas.yview_scroll(1, "units"))
+            self._wheel_bound = True
+
+        def _unbind_wheel(_e=None):
+            if not self._wheel_bound:
+                return
+            canvas.unbind_all("<MouseWheel>")
+            canvas.unbind_all("<Button-4>")
+            canvas.unbind_all("<Button-5>")
+            self._wheel_bound = False
+
+        self.bind("<Enter>", _bind_wheel, add="+")
+        self.bind("<Leave>", _unbind_wheel, add="+")
+        canvas.bind("<Enter>", _bind_wheel, add="+")
+        canvas.bind("<Leave>", _unbind_wheel, add="+")
+        inner.bind("<Enter>", _bind_wheel, add="+")
+        inner.bind("<Leave>", _unbind_wheel, add="+")
+        self.bind("<Destroy>", lambda _e: _unbind_wheel(), add="+")
+        self._wheel_bind = (_bind_wheel, _unbind_wheel)
 
         form = ttk.Frame(inner)
         form.pack(fill=tk.BOTH, expand=True, padx=10, pady=6)
@@ -350,21 +377,33 @@ class _ReviewBase(tk.Tk):
 
     def __init__(self, db_path):
         super().__init__()
+        self._ui_built = False
+        self._widget_baseline = None
         self.db_path = Path(db_path)
         self.items = self._load_items()
         self.done = self._done_set()
         self.queue = [it for it in self.items if it["segment_id"] not in self.done]
         self.idx = 0
         self.title(self.TITLE)
-        self.geometry("1560x940")
-        self.minsize(1200, 760)
+        # 窗口尺寸：默认 1280x820，最小 980x640，可缩放（不强制最大化）
+        sw, sh = self.winfo_screenwidth(), self.winfo_screenheight()
+        w = min(1280, max(980, sw - 160))
+        h = min(820, max(640, sh - 180))
+        self.geometry(f"{w}x{h}")
+        self.minsize(min(980, sw - 80), min(640, sh - 120))
+        self.resizable(True, True)
         self.configure(bg="#f0f0f0")
+        # root 统一 grid（toolbar/body 同一 parent）
+        self.rowconfigure(1, weight=1)
+        self.columnconfigure(0, weight=1)
         self._build()
         if self.queue:
             self._load(0)
         else:
             self.pos.config(text="全部完成")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
+        # widget leak 守卫：首次构建完成后冻结基线
+        self.after_idle(self._freeze_widget_baseline)
 
     def _load_items(self) -> list[dict]:
         p = Path(self.MANIFEST)
@@ -378,8 +417,19 @@ class _ReviewBase(tk.Tk):
             return {r[0] for r in conn.execute(f"SELECT segment_id FROM {self.TABLE}")}
 
     def _build(self):
+        if self._ui_built:
+            raise RuntimeError("Review UI must only be built once")
+        self._ui_built = True
+        self._build_toolbar()
+        self._build_body()
+        # 联动：必选完成后保存按钮才可用
+        self.conf_var.trace_add("write", self._on_mandatory)
+        self.status_var.trace_add("write", self._on_mandatory)
+        self._on_mandatory()
+
+    def _build_toolbar(self):
         top = tk.Frame(self, bg="#e8f0fe", padx=8, pady=6)
-        top.pack(fill=tk.X)
+        top.grid(row=0, column=0, sticky="ew")
         self.pos = tk.Label(top, text="", bg="#e8f0fe",
                             font=("Microsoft YaHei", 13, "bold"))
         self.pos.pack(side=tk.LEFT)
@@ -412,22 +462,11 @@ class _ReviewBase(tk.Tk):
                  font=("Microsoft YaHei", 9)).pack(side=tk.RIGHT)
         ttk.Button(top, text="跳过", command=lambda: self._load(self.idx + 1)).pack(side=tk.RIGHT, padx=4)
         ttk.Button(top, text="上一题", command=lambda: self._load(self.idx - 1)).pack(side=tk.RIGHT, padx=4)
-        # 联动：必选完成后保存按钮才可用
-        self.conf_var.trace_add("write", self._on_mandatory)
-        self.status_var.trace_add("write", self._on_mandatory)
-        self._on_mandatory()
 
-    def _on_mandatory(self, *_a):
-        """防呆：置信度+状态都选完 → 保存按钮可用；否则禁用并提示。"""
-        ok = bool((self.conf_var.get() or "").strip()) and bool((self.status_var.get() or "").strip())
-        self.save_btn.config(state="normal" if ok else "disabled")
-        if ok:
-            self.mandatory_hint.config(text="", bg="#e8f0fe")
-        else:
-            self.mandatory_hint.config(text="⚠ 请先选置信度/状态（每题目必选）", bg="#ffe0e0")
-
+    def _build_body(self):
+        """body（左栏+右栏滚动表单）只在此创建一次。"""
         paned = ttk.PanedWindow(self, orient=tk.HORIZONTAL)
-        paned.pack(fill=tk.BOTH, expand=True, padx=8, pady=4)
+        paned.grid(row=1, column=0, sticky="nsew", padx=8, pady=4)
 
         left = ttk.Frame(paned, width=430)
         paned.add(left, weight=0)
@@ -458,6 +497,18 @@ class _ReviewBase(tk.Tk):
         self.form = _V21Form(right, self._save,
                              conf_var=self.conf_var, status_var=self.status_var)
         self.form.pack(fill=tk.BOTH, expand=True)
+
+    def _on_mandatory(self, *_a):
+        """防呆：置信度+状态都选完 → 保存按钮可用；否则禁用并提示。
+
+        本方法只更新状态，禁止创建任何 Widget。
+        """
+        ok = bool((self.conf_var.get() or "").strip()) and bool((self.status_var.get() or "").strip())
+        self.save_btn.config(state="normal" if ok else "disabled")
+        if ok:
+            self.mandatory_hint.config(text="✓ 已选择置信度和审核状态", bg="#e8f0fe")
+        else:
+            self.mandatory_hint.config(text="⚠ 请先选置信度/状态（每题目必选）", bg="#ffe0e0")
 
     def _seg_info(self, sid) -> tuple[str, int, int]:
         with sqlite3.connect("file:" + str(self.db_path).replace("\\", "/") + "?mode=ro",
@@ -493,6 +544,30 @@ class _ReviewBase(tk.Tk):
         self.note.config(text="")
         self.form.reset()
         self.progress.config(text=f"已完成 {len(self.done)} / {len(self.items)}")
+        # widget leak 守卫：切题不得增加 widget
+        self.after_idle(self._assert_widget_stable)
+
+    # ---------------- Widget Leak Guard ----------------
+    def _count_widgets(self, w=None) -> int:
+        w = w or self
+        n = 1
+        for c in w.winfo_children():
+            n += self._count_widgets(c)
+        return n
+
+    def _freeze_widget_baseline(self):
+        self.update_idletasks()
+        self._widget_baseline = self._count_widgets()
+
+    def _assert_widget_stable(self):
+        if self._widget_baseline is None:
+            return
+        cur = self._count_widgets()
+        if cur != self._widget_baseline:
+            import logging
+            logging.getLogger("review_ui").error(
+                "UI_WIDGET_LEAK baseline=%s current=%s diff=%s",
+                self._widget_baseline, cur, cur - self._widget_baseline)
 
     # ---------------- 播放 ----------------
     def _resolve_asset(self, asset_id: str) -> str:
