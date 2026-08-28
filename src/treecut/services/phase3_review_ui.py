@@ -1,0 +1,511 @@
+# -*- coding: utf-8 -*-
+"""TreeCut Phase 3 — 人工审核 UI（Schema V2.1）。
+
+包含两个独立审核任务（审核期间系统冻结，只允许保存人工结果）：
+  1. THIRD_ADJUDICATION_V1：34 条第三次独立裁决 → human_annotation_v3（Human V3）
+  2. TARGETED_REVIEW_BATCH_V1：60 条新 Segment 主动学习审核 → targeted_human_review_v1
+
+设计约束（架构监工冻结）：
+  - 隐藏 AI 答案 / Human V1 / Human V2（防锚定），只显示 Segment 视频与元数据
+  - 字段 = ANNOTATION_DICTIONARY_V2_1：scene_family/scene_subtype、product_family/product_variant、
+    material[]/component[]/function[]/shot_role[] 多选、action_group + action_sequence[] 有序、
+    shot_scale、people_presence、product_visibility、quality
+  - human_confidence / review_status 无默认值，必须人工选择
+  - 空提交禁止保存；看不清 → UNKNOWN + LOW + NEEDS_SECOND_REVIEW，禁止强迫猜测
+  - 保存不覆盖 V1/V2；完成后只提示进度，不自动改 canonical / 不学习
+"""
+from __future__ import annotations
+
+import json
+import os
+import sqlite3
+import subprocess
+import tempfile
+import time
+import tkinter as tk
+from pathlib import Path
+from tkinter import messagebox, ttk
+
+from treecut.services.schema_v2 import (
+    ACTION_GROUP, ATOMIC_ACTION, MULTI_OPTIONS, PRODUCT_FAMILY,
+    PRODUCT_VARIANT_BY_FAMILY, SCENE_FAMILY, SCENE_SUBTYPE_BY_FAMILY,
+    SHOT_SCALE, PEOPLE_PRESENCE, DICTIONARY_VERSION_V2_1,
+)
+
+FFMPEG = r"E:\树剪整理\02_安装程序\TreeCut_v13\tools\win32\ffmpeg.exe"
+REQUIRED_KEYS = ("scene_family", "product_family", "material", "component",
+                 "function", "action_group", "shot_scale", "people_presence")
+
+
+def validate_v21(values: dict, human_confidence: str, review_status: str,
+                 comment: str = "") -> tuple[bool, str, str]:
+    """V2.1 提交校验。返回 (是否通过, 提示, 调整后 status)。"""
+    conf = (human_confidence or "").strip().upper()
+    status = (review_status or "").strip().upper()
+    if conf not in ("HIGH", "MEDIUM", "LOW"):
+        return False, "必须主动选择人工置信度（HIGH/MEDIUM/LOW）", status
+    if status not in ("REVIEWED", "NEEDS_SECOND_REVIEW", "GOLD", "EXCLUDED"):
+        return False, "必须主动选择审核状态", status
+    filled = 0
+    for k in ("scene_family", "scene_subtype", "product_family", "product_variant",
+              "shot_scale", "people_presence", "product_visibility"):
+        if (values.get(k) or "").strip() not in ("", "UNKNOWN"):
+            filled += 1
+    for k in ("material", "component", "function", "shot_role", "action_sequence"):
+        if values.get(k):
+            filled += 1
+    if values.get("action_group"):
+        filled += 1
+    if filled == 0:
+        note = (comment or "").upper()
+        if status == "EXCLUDED" and ("UNPLAYABLE" in note or "无法播放" in comment):
+            return True, "EXCLUDED（UNPLAYABLE）", status
+        if status in ("REVIEWED", "GOLD"):
+            return False, "关键字段全空，禁止 REVIEWED/GOLD；已自动置为 NEEDS_SECOND_REVIEW", "NEEDS_SECOND_REVIEW"
+        return True, "关键字段全空，仅允许 NEEDS_SECOND_REVIEW/EXCLUDED", status
+    return True, "", status
+
+
+class _V21Form(tk.Frame):
+    """Schema V2.1 审核表单（两个 UI 共用）。"""
+
+    def __init__(self, master, on_save):
+        super().__init__(master)
+        self.on_save = on_save
+        self.vars = {}
+        self.seq_list: tk.Listbox | None = None
+        self.seq = []  # 有序动作
+        self._build()
+
+    # ---------------- 构建 ----------------
+    def _combo(self, parent, row, label, options, bind=None, state="normal"):
+        tk.Label(parent, text=label, bg="#f0f0f0", anchor=tk.W).grid(
+            row=row, column=0, sticky=tk.W, pady=2)
+        var = tk.StringVar()
+        cb = ttk.Combobox(parent, textvariable=var, values=options, width=26)
+        cb.grid(row=row, column=1, sticky=tk.W, padx=4)
+        if bind:
+            cb.bind("<<ComboboxSelected>>", bind)
+        self.vars[label] = var
+        return cb
+
+    def _multiselect(self, parent, row, label, options):
+        tk.Label(parent, text=f"{label}[]（可多选）", bg="#f0f0f0", anchor=tk.W).grid(
+            row=row, column=0, sticky=tk.NW, pady=2)
+        lb = tk.Listbox(parent, selectmode=tk.EXTENDED, height=4,
+                        exportselection=False, font=("Microsoft YaHei", 9))
+        for o in options:
+            lb.insert(tk.END, o)
+        lb.grid(row=row, column=1, sticky=tk.W, padx=4)
+        self.vars[label] = lb
+        return lb
+
+    def _build(self):
+        form = ttk.Frame(self)
+        form.pack(fill=tk.BOTH, expand=True, padx=6, pady=4)
+        r = 0
+        self._combo(form, r, "scene_family", list(SCENE_FAMILY),
+                    bind=self._on_scene); r += 1
+        self._combo(form, r, "scene_subtype", []); r += 1
+        self._combo(form, r, "product_family", list(PRODUCT_FAMILY),
+                    bind=self._on_product); r += 1
+        self._combo(form, r, "product_variant", []); r += 1
+        for f in ("material", "component", "function", "shot_role"):
+            self._multiselect(form, r, f, MULTI_OPTIONS[f]); r += 1
+        self._combo(form, r, "action_group", list(ACTION_GROUP)); r += 1
+        # action_sequence 有序编辑器
+        tk.Label(form, text="action_sequence[]（有序）", bg="#f0f0f0", anchor=tk.W).grid(
+            row=r, column=0, sticky=tk.NW, pady=2)
+        seq_frame = ttk.Frame(form)
+        seq_frame.grid(row=r, column=1, sticky=tk.W, padx=4)
+        self.cand_seq = tk.Listbox(seq_frame, selectmode=tk.SINGLE, height=4,
+                                   exportselection=False, font=("Microsoft YaHei", 9))
+        for a in ATOMIC_ACTION:
+            self.cand_seq.insert(tk.END, a)
+        self.cand_seq.grid(row=0, column=0, rowspan=4)
+        btns = ttk.Frame(seq_frame)
+        btns.grid(row=0, column=1, rowspan=4, padx=4)
+        ttk.Button(btns, text="添加→", command=self._seq_add, width=8).pack(pady=1)
+        ttk.Button(btns, text="↑上移", command=lambda: self._seq_move(-1), width=8).pack(pady=1)
+        ttk.Button(btns, text="↓下移", command=lambda: self._seq_move(1), width=8).pack(pady=1)
+        ttk.Button(btns, text="移除", command=self._seq_remove, width=8).pack(pady=1)
+        self.seq_list = tk.Listbox(seq_frame, height=4, exportselection=False,
+                                   font=("Microsoft YaHei", 9))
+        self.seq_list.grid(row=0, column=2, rowspan=4)
+        r += 1
+        self._combo(form, r, "shot_scale", list(SHOT_SCALE)); r += 1
+        self._combo(form, r, "people_presence", list(PEOPLE_PRESENCE)); r += 1
+        self._combo(form, r, "product_visibility",
+                    ["VISIBLE", "PARTIAL", "HIDDEN", "UNKNOWN"]); r += 1
+        tk.Label(form, text="quality（0-100）", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
+        self.vars["quality"] = tk.StringVar()
+        tk.Entry(form, textvariable=self.vars["quality"], width=28).grid(row=r, column=1, sticky=tk.W, padx=4)
+        r += 1
+        tk.Label(form, text="*人工置信度", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
+        self.vars["human_confidence"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["human_confidence"],
+                     values=("HIGH", "MEDIUM", "LOW"), width=26).grid(row=r, column=1, sticky=tk.W, padx=4)
+        r += 1
+        tk.Label(form, text="*审核状态", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
+        self.vars["review_status"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["review_status"],
+                     values=("REVIEWED", "NEEDS_SECOND_REVIEW", "GOLD", "EXCLUDED"),
+                     width=26).grid(row=r, column=1, sticky=tk.W, padx=4)
+        r += 1
+        tk.Label(form, text="备注", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
+        self.vars["comment"] = tk.StringVar()
+        tk.Entry(form, textvariable=self.vars["comment"], width=30).grid(row=r, column=1, sticky=tk.W, padx=4)
+
+    # ---------------- 联动 ----------------
+    def _on_scene(self, _e=None):
+        f = self.vars["scene_family"].get()
+        self.vars["scene_subtype"].set("")
+        cb = self._find_combo("scene_subtype")
+        cb["values"] = SCENE_SUBTYPE_BY_FAMILY.get(f, [])
+
+    def _on_product(self, _e=None):
+        f = self.vars["product_family"].get()
+        self.vars["product_variant"].set("")
+        cb = self._find_combo("product_variant")
+        cb["values"] = PRODUCT_VARIANT_BY_FAMILY.get(f, [])
+
+    def _find_combo(self, label):
+        for w in self.winfo_children():
+            for c in w.winfo_children():
+                for child in c.winfo_children():
+                    if isinstance(child, ttk.Combobox) and label in str(child.cget("textvariable")):
+                        return child
+        return None
+
+    def _seq_add(self):
+        sel = self.cand_seq.curselection()
+        if sel:
+            v = self.cand_seq.get(sel[0])
+            self.seq.append(v)
+            self._seq_refresh()
+
+    def _seq_move(self, delta):
+        sel = self.seq_list.curselection()
+        if not sel:
+            return
+        i = sel[0]
+        j = i + delta
+        if 0 <= j < len(self.seq):
+            self.seq[i], self.seq[j] = self.seq[j], self.seq[i]
+            self._seq_refresh()
+            self.seq_list.selection_set(j)
+
+    def _seq_remove(self):
+        sel = self.seq_list.curselection()
+        if sel:
+            del self.seq[sel[0]]
+            self._seq_refresh()
+
+    def _seq_refresh(self):
+        self.seq_list.delete(0, tk.END)
+        for i, a in enumerate(self.seq):
+            self.seq_list.insert(tk.END, f"{i + 1}. {a}")
+
+    # ---------------- 取值 / 重置 ----------------
+    def collect(self) -> dict:
+        def multi(lb):
+            return [lb.get(i) for i in lb.curselection()]
+        out = {}
+        for label in ("scene_family", "scene_subtype", "product_family",
+                      "product_variant", "action_group", "shot_scale",
+                      "people_presence", "product_visibility", "quality",
+                      "human_confidence", "review_status", "comment"):
+            if label in self.vars:
+                out[label] = self.vars[label].get()
+        out["material"] = multi(self.vars["material"])
+        out["component"] = multi(self.vars["component"])
+        out["function"] = multi(self.vars["function"])
+        out["shot_role"] = multi(self.vars["shot_role"])
+        out["action_sequence"] = list(self.seq)
+        return out
+
+    def reset(self):
+        for label in self.vars:
+            if isinstance(self.vars[label], tk.Listbox):
+                self.vars[label].selection_clear(0, tk.END)
+            else:
+                self.vars[label].set("")
+        self.seq = []
+        self._seq_refresh()
+
+
+class _ReviewBase(tk.Tk):
+    """审核 UI 基类（进度 / 信息 / 播放 / 保存）。"""
+
+    MANIFEST = None
+    TABLE = ""
+    TITLE = ""
+    SOURCE_FIELD = ""
+
+    def __init__(self, db_path):
+        super().__init__()
+        self.db_path = Path(db_path)
+        self.items = self._load_items()
+        self.done = self._done_set()
+        self.queue = [it for it in self.items if it["segment_id"] not in self.done]
+        self.idx = 0
+        self.title(self.TITLE)
+        self.geometry("1500x920")
+        self.configure(bg="#f0f0f0")
+        self._build()
+        if self.queue:
+            self._load(0)
+        else:
+            self.pos.config(text="全部完成")
+        self.protocol("WM_DELETE_WINDOW", self.destroy)
+
+    def _load_items(self) -> list[dict]:
+        p = Path(self.MANIFEST)
+        if not p.exists():
+            return []
+        return json.loads(p.read_text(encoding="utf-8")).get("segments", [])
+
+    def _done_set(self) -> set:
+        with sqlite3.connect("file:" + str(self.db_path).replace("\\", "/") + "?mode=ro",
+                             uri=True) as conn:
+            col = "segment_id"
+            return {r[0] for r in conn.execute(
+                f"SELECT {col} FROM {self.TABLE}")}
+
+    def _build(self):
+        top = tk.Frame(self, bg="#f0f0f0")
+        top.pack(fill=tk.X, padx=8, pady=6)
+        self.pos = tk.Label(top, text="", bg="#f0f0f0",
+                            font=("Microsoft YaHei", 11, "bold"))
+        self.pos.pack(side=tk.LEFT)
+        self.progress = tk.Label(top, text="", bg="#f0f0f0",
+                                 font=("Microsoft YaHei", 10))
+        self.progress.pack(side=tk.LEFT, padx=16)
+        ttk.Button(top, text="上一题", command=lambda: self._load(self.idx - 1)).pack(side=tk.RIGHT, padx=4)
+        ttk.Button(top, text="跳过", command=lambda: self._load(self.idx + 1)).pack(side=tk.RIGHT, padx=4)
+        ttk.Button(top, text="✓ 保存", command=self._save).pack(side=tk.RIGHT, padx=8)
+
+        paned = ttk.PanedWindow(self, orient=tk.HORIZONTAL)
+        paned.pack(fill=tk.BOTH, expand=True, padx=8, pady=4)
+
+        left = ttk.Frame(paned, width=460)
+        paned.add(left, weight=0)
+        self.info = tk.Text(left, wrap=tk.WORD, font=("Microsoft YaHei", 9), height=10)
+        self.info.pack(fill=tk.X)
+        self.note = tk.Label(left, text="", bg="#fffbe6", anchor=tk.W, justify=tk.LEFT,
+                             font=("Microsoft YaHei", 9), wraplength=440)
+        self.note.pack(fill=tk.X, pady=4)
+        ttk.Button(left, text="▶ 播放完整视频", command=self._play_full).pack(fill=tk.X, padx=6, pady=2)
+        ttk.Button(left, text="▶ 播放 Segment ±3s", command=self._play_context).pack(fill=tk.X, padx=6, pady=2)
+        tk.Label(left, text="\n审核提示：隐藏 AI / V1 / V2 答案；"
+                            "material/component/function/shot_role 可多选；"
+                            "动作按发生顺序排列；看不清选 UNKNOWN+LOW+NEEDS_SECOND_REVIEW。",
+                 bg="#f0f0f0", justify=tk.LEFT, font=("Microsoft YaHei", 9), wraplength=440).pack(fill=tk.X, pady=4)
+
+        right = ttk.Frame(paned, width=560)
+        paned.add(right, weight=0)
+        self.form = _V21Form(right, self._save)
+
+    def _seg_info(self, sid) -> tuple[str, int, int]:
+        with sqlite3.connect("file:" + str(self.db_path).replace("\\", "/") + "?mode=ro",
+                             uri=True) as conn:
+            r = conn.execute(
+                "SELECT asset_id, start_ms, end_ms FROM segments WHERE segment_id=?",
+                (sid,)).fetchone()
+        if not r:
+            return "", 0, 0
+        return r[0], r[1], r[2]
+
+    def _load(self, idx: int):
+        if not self.queue:
+            self.pos.config(text="全部完成")
+            return
+        self.idx = idx % len(self.queue)
+        it = self.queue[self.idx]
+        self.current = it
+        sid = it["segment_id"]
+        self.pos.config(text=f"{self.idx + 1}/{len(self.queue)}  {sid[:16]}")
+        asset, start, end = self._seg_info(sid)
+        self.current_start, self.current_end = start, end
+        info = [f"segment: {sid}", f"asset: {asset[:16]}",
+                f"range: {start}-{end}ms（{end - start}ms）"]
+        if self.SOURCE_FIELD:
+            info.append(f"source: {it.get(self.SOURCE_FIELD, '')}")
+        if it.get("hits"):
+            info.append(f"采样命中: {','.join(it['hits'][:6])}")
+        if it.get("conflict_fields"):
+            info.append(f"冲突字段: {','.join(d['field'] for d in it['conflict_fields'][:8])}")
+        self.info.delete("1.0", tk.END)
+        self.info.insert(tk.END, "\n".join(info))
+        self.note.config(text="")
+        self.form.reset()
+        self.progress.config(text=f"已完成 {len(self.done)}/{len(self.items)}")
+
+    # ---------------- 播放 ----------------
+    def _resolve_asset(self, asset_id: str) -> str:
+        try:
+            from treecut.services.identity import AssetRepository
+            p = AssetRepository(self.db_path).resolve_path(asset_id)
+            return p if p and os.path.exists(p) else ""
+        except Exception:
+            return ""
+
+    def _play_full(self):
+        if not getattr(self, "current", None):
+            return
+        path = self._resolve_asset(self._seg_info(self.current["segment_id"])[0])
+        if path:
+            os.startfile(path)  # type: ignore[attr-defined]
+        else:
+            messagebox.showwarning("无法播放", "asset 视频文件不可达")
+
+    def _play_context(self):
+        if not getattr(self, "current", None):
+            return
+        asset = self._seg_info(self.current["segment_id"])[0]
+        path = self._resolve_asset(asset)
+        if not path:
+            messagebox.showwarning("无法播放", "asset 视频文件不可达")
+            return
+        start = max(0, self.current_start - 3000)
+        end = self.current_end + 3000
+        out = os.path.join(tempfile.gettempdir(),
+                           f"treecut_preview_{self.current['segment_id'][:12]}.mp4")
+        cmd = [FFMPEG, "-y", "-ss", str(start / 1000.0),
+               "-i", path, "-t", str((end - start) / 1000.0),
+               "-c:v", "libx264", "-preset", "ultrafast", "-an", out]
+        try:
+            subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            # 等待提取完成（≤10s）
+            deadline = time.time() + 12
+            while time.time() < deadline:
+                if os.path.exists(out) and os.path.getsize(out) > 1000:
+                    break
+                time.sleep(0.4)
+            if os.path.exists(out) and os.path.getsize(out) > 1000:
+                os.startfile(out)  # type: ignore[attr-defined]
+            else:
+                messagebox.showwarning("提取失败", "±3s 片段提取超时，已打开完整视频")
+                os.startfile(path)  # type: ignore[attr-defined]
+        except Exception as e:
+            messagebox.showerror("播放错误", str(e))
+
+    # ---------------- 保存 ----------------
+    def _save(self):
+        if not getattr(self, "current", None):
+            return
+        values = self.form.collect()
+        ok, msg, status = validate_v21(
+            values, values["human_confidence"], values["review_status"],
+            values["comment"])
+        if not ok:
+            messagebox.showerror("提交被拒绝", msg)
+            return
+        if msg:
+            messagebox.showwarning("状态调整", msg)
+        self._persist(values, status)
+        self.done.add(self.current["segment_id"])
+        self.queue = [it for it in self.items if it["segment_id"] not in self.done]
+        self.progress.config(text=f"已完成 {len(self.done)}/{len(self.items)}")
+        if len(self.done) >= len(self.items):
+            messagebox.showinfo("批次完成", f"{self.TITLE} {len(self.done)}/{len(self.items)} 完成。"
+                                            "请进行 Phase 3 人工数据结算。")
+        if self.queue:
+            self._load(0)
+        else:
+            self.pos.config(text="全部完成")
+
+    def _persist(self, values: dict, status: str):
+        """子类实现：写入对应表。"""
+        raise NotImplementedError
+
+
+class AdjudicationV1App(_ReviewBase):
+    """THIRD_ADJUDICATION_V1：34 条第三次独立裁决 → human_annotation_v3。"""
+
+    MANIFEST = r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime_data\temp\batch1\THIRD_ADJUDICATION_V1.json"
+    TABLE = "human_annotation_v3"
+    TITLE = "THIRD_ADJUDICATION_V1 — 34 条第三次独立裁决（Schema V2.1）"
+    SOURCE_FIELD = ""
+
+    def _persist(self, values: dict, status: str):
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            conn.execute(
+                "INSERT OR REPLACE INTO human_annotation_v3(segment_id,scene_family,"
+                "scene_subtype,product_family,product_variant,material_multi,"
+                "component_multi,function_multi,action_group,action_sequence,"
+                "shot_scale,shot_role_multi,people_presence,product_visibility,"
+                "quality,human_confidence,review_status,comment,operator,"
+                "dictionary_version,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (self.current["segment_id"], values["scene_family"],
+                 values["scene_subtype"], values["product_family"],
+                 values["product_variant"],
+                 json.dumps(values["material"], ensure_ascii=False),
+                 json.dumps(values["component"], ensure_ascii=False),
+                 json.dumps(values["function"], ensure_ascii=False),
+                 values["action_group"],
+                 json.dumps(values["action_sequence"], ensure_ascii=False),
+                 values["shot_scale"],
+                 json.dumps(values["shot_role"], ensure_ascii=False),
+                 values["people_presence"], values["product_visibility"],
+                 float(values["quality"]) if values["quality"].strip() else None,
+                 values["human_confidence"], status, values["comment"],
+                 os.environ.get("USERNAME", ""), DICTIONARY_VERSION_V2_1,
+                 time.time()))
+            conn.commit()
+        finally:
+            conn.close()
+
+
+class TargetedReviewV1App(_ReviewBase):
+    """TARGETED_REVIEW_BATCH_V1：60 条新 Segment 主动学习审核 → targeted_human_review_v1。"""
+
+    MANIFEST = r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime_data\temp\batch1\TARGETED_REVIEW_BATCH_V1.json"
+    TABLE = "targeted_human_review_v1"
+    TITLE = "TARGETED_REVIEW_BATCH_V1 — 60 条新 Segment 人工标注（Schema V2.1）"
+    SOURCE_FIELD = "selection_reason"
+
+    def _persist(self, values: dict, status: str):
+        it = self.current
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            conn.execute(
+                "INSERT OR REPLACE INTO targeted_human_review_v1(segment_id,scene_family,"
+                "scene_subtype,product_family,product_variant,material_multi,"
+                "component_multi,function_multi,action_group,action_sequence,"
+                "shot_scale,shot_role_multi,people_presence,product_visibility,"
+                "quality,human_confidence,review_status,comment,operator,"
+                "dictionary_version,selection_reason,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (it["segment_id"], values["scene_family"], values["scene_subtype"],
+                 values["product_family"], values["product_variant"],
+                 json.dumps(values["material"], ensure_ascii=False),
+                 json.dumps(values["component"], ensure_ascii=False),
+                 json.dumps(values["function"], ensure_ascii=False),
+                 values["action_group"],
+                 json.dumps(values["action_sequence"], ensure_ascii=False),
+                 values["shot_scale"],
+                 json.dumps(values["shot_role"], ensure_ascii=False),
+                 values["people_presence"], values["product_visibility"],
+                 float(values["quality"]) if values["quality"].strip() else None,
+                 values["human_confidence"], status, values["comment"],
+                 os.environ.get("USERNAME", ""), DICTIONARY_VERSION_V2_1,
+                 it.get("selection_reason", ""), time.time()))
+            conn.commit()
+        finally:
+            conn.close()
+
+
+def main():
+    import sys as _sys
+    mode = _sys.argv[1] if len(_sys.argv) > 1 else "adjudication"
+    db = r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime_data\temp\batch1\database\materials.db"
+    if mode == "targeted":
+        app = TargetedReviewV1App(db)
+    else:
+        app = AdjudicationV1App(db)
+    app.mainloop()
+
+
+if __name__ == "__main__":
+    main()

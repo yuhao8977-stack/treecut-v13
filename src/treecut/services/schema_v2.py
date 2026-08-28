@@ -150,6 +150,35 @@ SHOT_ROLE_MAP = {"人物讲解": "PERSON_TALKING", "功能演示": "FUNCTION_DEM
 
 PEOPLE_MAP = {"yes": "YES", "no": "NO", "unknown": "UNKNOWN", "": "UNKNOWN"}
 
+# ---- V2.1 UI 联动选项（scene_subtype / product_variant 随 family 变化） ----
+SCENE_SUBTYPE_BY_FAMILY = {
+    "FACTORY": ["FACTORY_WORKSHOP", "FACTORY_SHOWROOM", "FACTORY_WAREHOUSE",
+                "FACTORY_OTHER", "UNKNOWN"],
+    "CUSTOMER_HOME": ["NOT_APPLICABLE", "UNKNOWN"],
+    "SHOWROOM": ["NOT_APPLICABLE", "UNKNOWN"],
+    "INSTALLATION_SITE": ["NOT_APPLICABLE", "UNKNOWN"],
+    "OTHER": ["NOT_APPLICABLE", "UNKNOWN"],
+    "UNKNOWN": ["UNKNOWN"],
+}
+PRODUCT_VARIANT_BY_FAMILY = {
+    "ISLAND": ["STANDARD_ISLAND", "EXTENDABLE_ISLAND", "FLOATING_ISLAND",
+               "FLOOR_ISLAND", "UNKNOWN"],
+    "BAR": ["NOT_APPLICABLE", "UNKNOWN"],
+    "SIDEBOARD": ["NOT_APPLICABLE", "UNKNOWN"],
+    "DINING_TABLE": ["NOT_APPLICABLE", "UNKNOWN"],
+    "OTHER": ["NOT_APPLICABLE", "UNKNOWN"],
+    "UNKNOWN": ["UNKNOWN"],
+}
+# 多标签候选（V2.1 UI 多选）
+MULTI_OPTIONS = {
+    "material": list(MATERIAL),
+    "component": list(COMPONENT),
+    "function": list(FUNCTION),
+    "shot_role": list(SHOT_ROLE),
+}
+# quality 参考范围
+QUALITY_RANGE = (0.0, 100.0)
+
 
 def freeze_schema() -> dict:
     """冻结字典（ANNOTATION_DICTIONARY_V2 内容）。"""
