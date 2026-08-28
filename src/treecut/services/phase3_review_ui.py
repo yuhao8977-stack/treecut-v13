@@ -219,10 +219,26 @@ class _V21Form(tk.Frame):
         self.combos["review_status"] = cb_stat
         r += 1
         tk.Label(form, text="备注", bg="#f0f0f0", font=("Microsoft YaHei", 10)).grid(
-            row=r, column=0, sticky=tk.W, pady=3)
+            row=r, column=0, sticky=tk.NW, pady=3)
+        cmt_wrap = ttk.Frame(form)
+        cmt_wrap.grid(row=r, column=1, sticky=tk.W, padx=6)
         self.vars["comment"] = tk.StringVar()
-        tk.Entry(form, textvariable=self.vars["comment"], width=50,
-                 font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6)
+        tk.Entry(cmt_wrap, textvariable=self.vars["comment"], width=42,
+                 font=("Microsoft YaHei", 10)).grid(row=0, column=0, columnspan=4, sticky=tk.W)
+        quick = [("［成片］", "此视频为已剪辑成片，若需使用需按需裁剪"),
+                 ("［素材片段］", "此视频为原始素材片段"),
+                 ("［录屏］", "此视频为录屏内容"),
+                 ("［价格/尺寸］", "视频主要讲价格或尺寸等业务参数"),
+                 ("［纯画面无讲解］", "画面只有产品展示，无讲解")]
+        for i, (tag, hint) in enumerate(quick):
+            def _mk(tag=tag, hint=hint):
+                def _ins():
+                    cur = self.vars["comment"].get()
+                    new = (cur + "；" if cur else "") + tag + hint
+                    self.vars["comment"].set(new)
+                return _ins
+            ttk.Button(cmt_wrap, text=tag, command=_mk(), width=12).grid(
+                row=1, column=i, padx=1, pady=2)
 
     # ---------------- 联动 ----------------
     def _on_scene(self, _e=None):
