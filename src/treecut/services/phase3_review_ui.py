@@ -32,6 +32,50 @@ from treecut.services.schema_v2 import (
 
 FFMPEG = r"E:\树剪整理\02_安装程序\TreeCut_v13\tools\win32\ffmpeg.exe"
 
+
+class PlaybackController:
+    """统一播放控制器（B2/B3）。
+
+    - UI 禁止直接 os.startfile/subprocess.Popen，统一经此控制器
+    - Single Flight + Debounce：同一 (path, mode) 在 DEBOUNCE_MS 内重复请求只接受第一次
+    - 不杀用户其他播放器进程
+    """
+
+    DEBOUNCE_MS = 600
+
+    def __init__(self, on_launch):
+        self._last = {}
+        self._busy_until = 0.0
+        self._on_launch = on_launch  # 回调：记录 launch（测试/日志用）
+
+    def _allowed(self, key) -> bool:
+        import time as _t
+        now = _t.time() * 1000
+        if key in self._last and (now - self._last[key]) < self.DEBOUNCE_MS:
+            return False
+        self._last[key] = now
+        return True
+
+    def play_full(self, path: str) -> bool:
+        if not path or not self._allowed(("full", path)):
+            return False
+        self._on_launch("full", path)
+        os.startfile(path)  # type: ignore[attr-defined]
+        return True
+
+    def play_context(self, path: str, start_ms: int, end_ms: int) -> bool:
+        key = ("ctx", path, start_ms, end_ms)
+        if not path or not self._allowed(key):
+            return False
+        self._on_launch("context", path)
+        out = os.path.join(tempfile.gettempdir(),
+                           f"treecut_preview_{abs(hash(key)) % 10**10}.mp4")
+        cmd = [FFMPEG, "-y", "-ss", str(max(0, start_ms - 3000) / 1000.0),
+               "-i", path, "-t", str((end_ms + 3000 - max(0, start_ms - 3000)) / 1000.0),
+               "-c:v", "libx264", "-preset", "ultrafast", "-an", out]
+        subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return True
+
 # 字段中文名（UI 标签）
 FIELD_CN = {"scene_family": "场景类别", "scene_subtype": "场景子类",
             "product_family": "产品类别", "product_variant": "产品型号",
@@ -251,7 +295,7 @@ class _V21Form(tk.Frame):
         cmt_wrap.grid(row=r, column=1, sticky=tk.W, padx=6)
         self.vars["comment"] = tk.StringVar()
         tk.Entry(cmt_wrap, textvariable=self.vars["comment"], width=42,
-                 font=("Microsoft YaHei", 10)).grid(row=0, column=0, columnspan=4, sticky=tk.W)
+                 font=("Microsoft YaHei", 10)).grid(row=0, column=0, columnspan=6, sticky=tk.W)
         quick = [("［成片］", "此视频为已剪辑成片，若需使用需按需裁剪"),
                  ("［素材片段］", "此视频为原始素材片段"),
                  ("［录屏］", "此视频为录屏内容"),
@@ -260,6 +304,7 @@ class _V21Form(tk.Frame):
                  ("［颜色/配色］", "视频讲产品颜色/配色（颜色为业务属性，V2.1 无字段，备注记录）"),
                  ("［工艺/组装］", "视频展示组装/工艺过程（可配镜头角色-工艺展示）"),
                  ("［卡断/质量差］", "视频有卡断或质量差，需按需裁剪或标记低质量")]
+        self._quick_btns = []
         for i, (tag, hint) in enumerate(quick):
             def _mk(tag=tag, hint=hint):
                 def _ins():
@@ -267,8 +312,20 @@ class _V21Form(tk.Frame):
                     new = (cur + "；" if cur else "") + tag + hint
                     self.vars["comment"].set(new)
                 return _ins
-            ttk.Button(cmt_wrap, text=tag, command=_mk(), width=12).grid(
-                row=1, column=i, padx=1, pady=2)
+            b = ttk.Button(cmt_wrap, text=tag, command=_mk(), width=12)
+            b.grid(row=1, column=i, padx=1, pady=2)
+            self._quick_btns.append(b)
+        # 响应式：宽度 <460 两列 / <620 三列 / 其余四列（重排已有按钮，不重建）
+        cmt_wrap.bind("<Configure>", self._relayout_quick)
+
+    def _relayout_quick(self, _e=None):
+        try:
+            w = self.winfo_width()
+            cols = 2 if w < 460 else (3 if w < 620 else 4)
+            for i, b in enumerate(self._quick_btns):
+                b.grid_configure(row=1 + i // cols, column=i % cols, padx=1, pady=2)
+        except Exception:
+            pass
 
     # ---------------- 联动 ----------------
     def _on_scene(self, _e=None):
@@ -480,13 +537,16 @@ class _ReviewBase(tk.Tk):
         self.note = tk.Label(card, text="", bg="#fffbe6", anchor=tk.W, justify=tk.LEFT,
                              font=("Microsoft YaHei", 9), wraplength=400, padx=6, pady=4)
         self.note.pack(fill=tk.X)
-        # 播放按钮
+        # 播放按钮（经 PlaybackController：防重复 launch + 点击后短暂禁用）
+        self.pb = PlaybackController(on_launch=lambda mode, path: None)
         btn = tk.Frame(left)
         btn.pack(fill=tk.X, padx=4, pady=6)
-        ttk.Button(btn, text="▶ 播放本段（前后3秒）", command=self._play_context,
-                   width=24).pack(fill=tk.X, pady=2)
-        ttk.Button(btn, text="▶ 播放完整视频", command=self._play_full,
-                   width=24).pack(fill=tk.X, pady=2)
+        self._btn_ctx = ttk.Button(btn, text="▶ 播放本段（前后3秒）",
+                                   command=self._play_context, width=24)
+        self._btn_ctx.pack(fill=tk.X, pady=2)
+        self._btn_full = ttk.Button(btn, text="▶ 播放完整视频",
+                                    command=self._play_full, width=24)
+        self._btn_full.pack(fill=tk.X, pady=2)
         # 提示
         tk.Label(left, text=self.HINT, bg="#f0f0f0", justify=tk.LEFT,
                  font=("Microsoft YaHei", 9), wraplength=410,
@@ -582,10 +642,20 @@ class _ReviewBase(tk.Tk):
         if not getattr(self, "current", None):
             return
         path = self._resolve_asset(self._seg_info(self.current["segment_id"])[0])
-        if path:
-            os.startfile(path)  # type: ignore[attr-defined]
-        else:
+        if not path:
             messagebox.showwarning("无法播放", "素材视频文件不可达")
+            return
+        launched = self.pb.play_full(path)
+        if launched:
+            self._debounce_btn(self._btn_full)
+
+    def _debounce_btn(self, btn):
+        """点击后按钮短暂禁用（防连点），成功 launch 后恢复。"""
+        try:
+            btn.config(state="disabled")
+            self.after(PlaybackController.DEBOUNCE_MS + 150, lambda: btn.config(state="normal"))
+        except Exception:
+            pass
 
     def _play_context(self):
         if not getattr(self, "current", None):
@@ -595,17 +665,14 @@ class _ReviewBase(tk.Tk):
         if not path:
             messagebox.showwarning("无法播放", "素材视频文件不可达")
             return
-        start = max(0, self.current_start - 3000)
-        end = self.current_end + 3000
+        if not self.pb.play_context(path, self.current_start, self.current_end):
+            return  # debounce 内重复请求忽略
+        self._debounce_btn(self._btn_ctx)
+        self.note.config(text="正在提取片段…（约3-8秒）")
+        self.update_idletasks()
         out = os.path.join(tempfile.gettempdir(),
                            f"treecut_preview_{self.current['segment_id'][:12]}.mp4")
-        cmd = [FFMPEG, "-y", "-ss", str(start / 1000.0),
-               "-i", path, "-t", str((end - start) / 1000.0),
-               "-c:v", "libx264", "-preset", "ultrafast", "-an", out]
         try:
-            self.note.config(text="正在提取片段…（约3-8秒）")
-            self.update_idletasks()
-            subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             deadline = time.time() + 15
             while time.time() < deadline:
                 if os.path.exists(out) and os.path.getsize(out) > 1000:

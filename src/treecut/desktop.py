@@ -56,6 +56,16 @@ class TreeCutDesktop(tk.Tk):
         self._ensure_remote_autostart()
         self._ensure_desktop_shortcut()
 
+    def _open_review_center(self) -> None:
+        """打开人工审核中心（单实例：已存在则 focus）。"""
+        if self._review_center is not None and self._review_center.winfo_exists():
+            self._review_center.lift()
+            self._review_center.focus_force()
+            return
+        from treecut.services.review_center import ReviewCenterWindow
+        self._review_center = ReviewCenterWindow(self)
+        self._review_center.transient(self)
+
     def _ensure_desktop_shortcut(self) -> None:
         """Portable copies have no installer, so create the desktop shortcut here."""
         try:
@@ -86,7 +96,12 @@ class TreeCutDesktop(tk.Tk):
     def _build(self):
         root = ttk.Frame(self, padding=16)
         root.pack(fill="both", expand=True)
-        ttk.Label(root, text="树剪 v13", font=("Microsoft YaHei UI", 20, "bold")).pack(anchor="w")
+        header = ttk.Frame(root)
+        header.pack(fill="x", anchor="w")
+        ttk.Label(header, text="树剪 v13", font=("Microsoft YaHei UI", 20, "bold")).pack(side="left")
+        # 人工审核中心入口（PART C：由 Main 管理，单实例）
+        self._review_center = None
+        ttk.Button(header, text="人工审核中心", command=self._open_review_center).pack(side="right")
         plan = self.context.model_plan
         ttk.Label(root, text=f"当前模式：{plan.profile} ｜ 画面：{plan.vision} ｜ 语音：{plan.speech} ｜ 配音：{plan.tts}").pack(anchor="w", pady=(2, 14))
 
