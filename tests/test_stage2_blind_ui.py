@@ -24,7 +24,9 @@ def count_w(w):
 
 
 def _open_blind(root):
-    hold = [t for t in TASKS if t["id"] == "FRESH_HOLDOUT_V1"][0]
+    # 盲审 UI 回归：FRESH_HOLDOUT_V1 已交卷（30/30）→ 结果页无 items；
+    # 改用待审的 TARGETED_REVIEW_STAGE3_V3（60 条，blind=True，同一 ReviewTaskWindow 路径）。
+    hold = [t for t in TASKS if t["id"] == "TARGETED_REVIEW_STAGE3_V3"][0]
     cen = ReviewCenterWindow(root)
     root.update_idletasks()
     cen._open_task(hold)
@@ -53,8 +55,8 @@ def blind_win():
 def test_blind_task_loads_30(blind_win):
     _, _, tw = blind_win
     assert tw is not None
-    assert len(tw.items) == 30
-    assert len(tw.queue) == 30
+    assert len(tw.items) == 60  # V3 最终批次冻结 60 条
+    assert len(tw.queue) == 60
 
 
 def test_current_record_non_null(blind_win):
@@ -114,7 +116,7 @@ def test_load30_widget_count_stable(blind_win):
     _, _, tw = blind_win
     tw.update_idletasks()
     base = count_w(tw)
-    for i in range(30):
+    for i in range(60):
         tw._load(i)
     tw.update_idletasks()
     assert count_w(tw) == base
@@ -125,8 +127,8 @@ def test_open_close_no_save_count_stays_zero(blind_win):
     tw.destroy()
     cen2, tw2 = _open_blind(root)
     root.update_idletasks()
-    assert len(tw2.queue) == 30
-    assert task_stats([t for t in TASKS if t["id"] == "FRESH_HOLDOUT_V1"][0])["done"] == 0
+    assert len(tw2.queue) == 60
+    assert task_stats([t for t in TASKS if t["id"] == "TARGETED_REVIEW_STAGE3_V3"][0])["done"] == 0
     tw2.destroy()
     cen2.destroy()
 

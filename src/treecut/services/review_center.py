@@ -50,26 +50,41 @@ TASKS = [
               "· 置信度解释：高=几乎确定；中=大体确定但有一定判断空间；低=自己拿不准\n"
               "· 材质/组件/功能/镜头角色：点击即多选，再点取消；动作按发生顺序添加\n"
               "· 看不清就选 未知 + 低 + 需复核，不硬猜")},
+    {"id": "TARGETED_REVIEW_STAGE3_V3", "name": "Stage3 定向审核（60 条·最终批次）", "type": "TARGETED",
+     "manifest": os.path.join(DATA_ROOT, "TARGETED_REVIEW_STAGE3_V3.json"),
+     "table": "targeted_human_review_v1",
+     "blind": True,  # 只显示采样目标类别，隐藏一切 AI 预测/关键词/证据
+     "show_sampling_target": True,
+     "hint": ("定向审核（Stage3 最终批次，DEV/校准扩展，非考试卷）。\n"
+              "系统只显示采样目标（动作/人物/变体/场景/材质），不显示任何 AI 猜测，请只看视频独立作答。\n"
+              "· 置信度解释：高=几乎确定；中=大体确定但有一定判断空间；低=自己拿不准\n"
+              "· 材质/组件/功能/镜头角色：点击即多选，再点取消；动作按发生顺序添加\n"
+              "· 看不清就选 未知 + 低 + 需复核，不硬猜")},
 ]
 
 
 def task_stats(task: dict) -> dict:
-    """任务进度统计（只读 DB + manifest）。"""
+    """任务进度统计（只读 DB + manifest）。按 manifest 成员 segment_id 计数，避免跨任务表共享污染。"""
     total = 0
+    seg_ids = []
     if os.path.exists(task["manifest"]):
         try:
             d = json.load(open(task["manifest"], encoding="utf-8"))
-            total = len(d.get("segments", d.get("strata", [])))
+            seg_ids = [s["segment_id"] for s in d.get("segments", d.get("strata", []))]
+            total = len(seg_ids)
         except Exception:
             total = 0
     done, needs = 0, 0
-    if os.path.exists(DB):
+    if os.path.exists(DB) and seg_ids:
         try:
             conn = sqlite3.connect("file:" + DB.replace("\\", "/") + "?mode=ro", uri=True)
-            done = conn.execute(f"SELECT COUNT(*) FROM {task['table']}").fetchone()[0]
+            ph = ",".join("?" * len(seg_ids))
+            done = conn.execute(
+                f"SELECT COUNT(*) FROM {task['table']} WHERE segment_id IN ({ph})",
+                seg_ids).fetchone()[0]
             needs = conn.execute(
                 f"SELECT COUNT(*) FROM {task['table']} WHERE review_status='NEEDS_SECOND_REVIEW'"
-            ).fetchone()[0]
+                f" AND segment_id IN ({ph})", seg_ids).fetchone()[0]
             conn.close()
         except Exception:
             done = 0
@@ -214,11 +229,22 @@ class ReviewTaskWindow(tk.Toplevel):
         return []
 
     def _done_set(self):
+        """已完成集 = 本任务 manifest 成员 ∩ 表中已审 segment_id（避免共享表跨任务污染）。"""
         try:
+            segs = self.items if hasattr(self, "items") and self.items else []
+            if not segs:
+                p = Path(self.task["manifest"])
+                data = json.loads(p.read_text(encoding="utf-8"))
+                segs = data.get("segments", data.get("strata", []))
+            ids = {s["segment_id"] for s in segs}
+            if not ids:
+                return set()
             conn = sqlite3.connect("file:" + DB.replace("\\", "/") + "?mode=ro", uri=True)
-            s = {r[0] for r in conn.execute(f"SELECT segment_id FROM {self.task['table']}")}
+            ph = ",".join("?" * len(ids))
+            rows = conn.execute(f"SELECT segment_id FROM {self.task['table']} WHERE segment_id IN ({ph})",
+                                list(ids)).fetchall()
             conn.close()
-            return s
+            return {r[0] for r in rows}
         except Exception:
             return set()
 
@@ -252,8 +278,13 @@ class ReviewTaskWindow(tk.Toplevel):
         asset, start, end = self._seg_info(sid)
         self.current_start, self.current_end = start, end
         info = [f"片段编号：{sid[:20]}…", f"素材：{asset[:20]}…",
-                f"时间范围：{start} - {end} ms（{(end - start) // 1000} 秒）",
-                f"采样原因：{it.get('selection_reason', '')}"]
+                f"时间范围：{start} - {end} ms（{(end - start) // 1000} 秒）"]
+        if self.task.get("show_sampling_target"):
+            tgt = it.get("sampling_target_cn") or it.get("sampling_target") or ""
+            reason = it.get("selection_reason", "")
+            info.append(f"采样目标：{tgt}" + (f"（{reason}）" if reason else ""))
+        else:
+            info.append(f"采样原因：{it.get('selection_reason', '')}")
         if it.get("conflict_fields"):
             info.append(f"冲突字段：{', '.join(d['field'] for d in it['conflict_fields'][:8])}")
         self.info.delete("1.0", tk.END)

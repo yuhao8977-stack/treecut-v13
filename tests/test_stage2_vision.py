@@ -116,6 +116,22 @@ def test_multilabel_output():
     an.unload()
 
 
+def test_policy_mode_routing_final():
+    """Stage3 FINAL PRE-REVIEW BATCH 裁定：material/shot_role 走 v1 旧路由，component/function 走 v2。"""
+    rt = VisionRuntimeProvider(MODELS)
+    an = StaticVisionAnalyzerV2(rt)
+    assert an.MULTI_POLICY["material"]["policy_mode"] == "v1"
+    assert an.MULTI_POLICY["shot_role"]["policy_mode"] == "v1"
+    assert an.MULTI_POLICY["component"]["policy_mode"] == "v2"
+    assert an.MULTI_POLICY["function"]["policy_mode"] == "v2"
+    # 多标签输出带 per-label scores（Policy 模拟 / near-dup 审计依赖）
+    res = an.analyze(_sample_frames(2))
+    for f in ("material", "component", "function", "shot_role"):
+        assert "scores" in res[f], f"{f} 缺少 scores"
+        assert isinstance(res[f]["scores"], dict) and len(res[f]["scores"]) > 0
+    an.unload()
+
+
 # ---------------------------------------------------------------------------
 # Holdout 隔离
 # ---------------------------------------------------------------------------

@@ -269,12 +269,17 @@ class StaticVisionAnalyzerV2:
     # ---------------- 多标签字段（阈值） ----------------
     # Stage3 STEP 2 — Multi-label Decision Policy V2（CANDIDATE）：
     # 过预测审计确认预测 avg 5-8 标签 vs 人工 1-3 → 撒网。策略改为 per-field Top-K + score gap + min score。
-    # 阈值只能在 Calibration333 调（禁止用 Holdout V1）；本轮实现，验证在 Stage3 下一轮。
+    # Stage3 FINAL PRE-REVIEW BATCH 裁定（MULTILABEL_POLICY_V2_FINAL_EVAL.json，333 DEV，真实 per-label scores）：
+    #   material → POLICY_V2_REJECTED_FOR_MATERIAL（V2 F1 10.1 vs V1 22.0 退化；333 网格无改善变体）→ V1 legacy
+    #   component → ACCEPTED V2（F1 32.9 vs 32.3；labels 5.34→2.66 对齐人工 1.38）
+    #   function  → ACCEPTED V2（F1 31.0 vs 29.1；labels 8.17→2.75 对齐人工 1.46）
+    #   shot_role → REJECTED（F1 27.4 vs 34.6 退化）→ V1 legacy
+    # policy_mode: "v2" = Top-K+gap+min；"v1" = threshold 0.06 全标签（旧路由，仅 material/shot_role）
     MULTI_POLICY = {
-        "material": {"top_k": 2, "gap": 0.10, "min_score": 0.02},
-        "component": {"top_k": 3, "gap": 0.10, "min_score": 0.02},
-        "function": {"top_k": 3, "gap": 0.10, "min_score": 0.02},
-        "shot_role": {"top_k": 3, "gap": 0.10, "min_score": 0.02},
+        "material": {"top_k": 2, "gap": 0.10, "min_score": 0.02, "policy_mode": "v1"},
+        "component": {"top_k": 3, "gap": 0.10, "min_score": 0.02, "policy_mode": "v2"},
+        "function": {"top_k": 3, "gap": 0.10, "min_score": 0.02, "policy_mode": "v2"},
+        "shot_role": {"top_k": 3, "gap": 0.10, "min_score": 0.02, "policy_mode": "v1"},
     }
 
     def _classify_multi_emb(self, field: str, ie: np.ndarray, threshold: float = 0.06,
@@ -290,8 +295,15 @@ class StaticVisionAnalyzerV2:
         labels = []
         if label_scores:
             ranked = sorted(label_scores.items(), key=lambda x: -x[1])
-            if use_policy_v2:
-                pol = self.MULTI_POLICY.get(field, {"top_k": 3, "gap": 0.10, "min_score": 0.02})
+            pol = self.MULTI_POLICY.get(field, {"top_k": 3, "gap": 0.10, "min_score": 0.02,
+                                                "policy_mode": "v2"})
+            if pol.get("policy_mode") == "v1":
+                # 旧路由：全标签阈值 0.06（material/shot_role 裁定保留）
+                base = max(label_scores.values())
+                for lab, s in label_scores.items():
+                    if s >= base - 0.06:
+                        labels.append(lab)
+            elif use_policy_v2:
                 top1 = ranked[0][1]
                 for lab, s in ranked[: pol["top_k"]]:
                     if s >= top1 - pol["gap"] and s >= pol["min_score"]:
@@ -305,7 +317,8 @@ class StaticVisionAnalyzerV2:
             labels = ["UNKNOWN"]
         return {"prediction": labels, "model_score": round(max(label_scores.values(), default=0.0), 3),
                 "frame_evidence": len(ie), "model_version": MODEL_VERSION,
-                "backend": self.runtime.backend, "created_at": time.time()}
+                "backend": self.runtime.backend, "created_at": time.time(),
+                "scores": {k: round(v, 4) for k, v in label_scores.items()}}
 
     def unload(self):
         if self._model is not None:
