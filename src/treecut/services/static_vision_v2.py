@@ -266,7 +266,19 @@ class StaticVisionAnalyzerV2:
                 "backend": self.runtime.backend, "created_at": time.time(),
                 "all_scores": {k: round(v, 3) for k, v in sorted(scores.items(), key=lambda x: -x[1])[:3]}}
 
-    def _classify_multi_emb(self, field: str, ie: np.ndarray, threshold: float = 0.06) -> dict:
+    # ---------------- 多标签字段（阈值） ----------------
+    # Stage3 STEP 2 — Multi-label Decision Policy V2（CANDIDATE）：
+    # 过预测审计确认预测 avg 5-8 标签 vs 人工 1-3 → 撒网。策略改为 per-field Top-K + score gap + min score。
+    # 阈值只能在 Calibration333 调（禁止用 Holdout V1）；本轮实现，验证在 Stage3 下一轮。
+    MULTI_POLICY = {
+        "material": {"top_k": 2, "gap": 0.10, "min_score": 0.02},
+        "component": {"top_k": 3, "gap": 0.10, "min_score": 0.02},
+        "function": {"top_k": 3, "gap": 0.10, "min_score": 0.02},
+        "shot_role": {"top_k": 3, "gap": 0.10, "min_score": 0.02},
+    }
+
+    def _classify_multi_emb(self, field: str, ie: np.ndarray, threshold: float = 0.06,
+                            use_policy_v2: bool = True) -> dict:
         label_scores = {}
         for label in self.LABEL_PROMPTS.get(field, {}):
             if label in ("UNKNOWN", "NOT_APPLICABLE"):
@@ -277,10 +289,18 @@ class StaticVisionAnalyzerV2:
             label_scores[label] = float(np.mean(ie @ te))
         labels = []
         if label_scores:
-            base = max(label_scores.values())
-            for lab, s in label_scores.items():
-                if s >= base - threshold:
-                    labels.append(lab)
+            ranked = sorted(label_scores.items(), key=lambda x: -x[1])
+            if use_policy_v2:
+                pol = self.MULTI_POLICY.get(field, {"top_k": 3, "gap": 0.10, "min_score": 0.02})
+                top1 = ranked[0][1]
+                for lab, s in ranked[: pol["top_k"]]:
+                    if s >= top1 - pol["gap"] and s >= pol["min_score"]:
+                        labels.append(lab)
+            else:
+                base = max(label_scores.values())
+                for lab, s in label_scores.items():
+                    if s >= base - threshold:
+                        labels.append(lab)
         if not labels:
             labels = ["UNKNOWN"]
         return {"prediction": labels, "model_score": round(max(label_scores.values(), default=0.0), 3),
