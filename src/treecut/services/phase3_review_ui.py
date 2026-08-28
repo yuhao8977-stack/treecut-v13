@@ -29,12 +29,24 @@ from tkinter import messagebox, ttk
 from treecut.services.schema_v2 import (
     ACTION_GROUP, ATOMIC_ACTION, MULTI_OPTIONS, PRODUCT_FAMILY,
     PRODUCT_VARIANT_BY_FAMILY, SCENE_FAMILY, SCENE_SUBTYPE_BY_FAMILY,
-    SHOT_SCALE, PEOPLE_PRESENCE, DICTIONARY_VERSION_V2_1,
+    SHOT_SCALE, PEOPLE_PRESENCE, DICTIONARY_VERSION_V2_1, cn, en,
 )
 
 FFMPEG = r"E:\树剪整理\02_安装程序\TreeCut_v13\tools\win32\ffmpeg.exe"
 REQUIRED_KEYS = ("scene_family", "product_family", "material", "component",
                  "function", "action_group", "shot_scale", "people_presence")
+
+# 字段中文名（UI 标签）
+FIELD_CN = {"scene_family": "场景类别", "scene_subtype": "场景子类",
+            "product_family": "产品类别", "product_variant": "产品型号",
+            "material": "材质", "component": "组件", "function": "功能",
+            "action_group": "动作类别", "action_sequence": "动作序列",
+            "shot_scale": "景别", "shot_role": "镜头角色",
+            "people_presence": "人物", "product_visibility": "产品可见性",
+            "quality": "质量分"}
+# Listbox 部件 → 字段名（multi() 反查）
+field_of = {"material": "material", "component": "component",
+            "function": "function", "shot_role": "shot_role"}
 
 
 def validate_v21(values: dict, human_confidence: str, review_status: str,
@@ -73,29 +85,33 @@ class _V21Form(tk.Frame):
         super().__init__(master)
         self.on_save = on_save
         self.vars = {}
+        self.combos = {}
         self.seq_list: tk.Listbox | None = None
         self.seq = []  # 有序动作
         self._build()
 
     # ---------------- 构建 ----------------
-    def _combo(self, parent, row, label, options, bind=None, state="normal"):
-        tk.Label(parent, text=label, bg="#f0f0f0", anchor=tk.W).grid(
+    def _combo(self, parent, row, label, options_en, bind=None):
+        tk.Label(parent, text=FIELD_CN.get(label, label), bg="#f0f0f0", anchor=tk.W).grid(
             row=row, column=0, sticky=tk.W, pady=2)
         var = tk.StringVar()
-        cb = ttk.Combobox(parent, textvariable=var, values=options, width=26)
+        cb = ttk.Combobox(parent, textvariable=var,
+                          values=[cn(label, o) for o in options_en], width=26,
+                          state="readonly")
         cb.grid(row=row, column=1, sticky=tk.W, padx=4)
         if bind:
             cb.bind("<<ComboboxSelected>>", bind)
         self.vars[label] = var
+        self.combos[label] = cb
         return cb
 
-    def _multiselect(self, parent, row, label, options):
-        tk.Label(parent, text=f"{label}[]（可多选）", bg="#f0f0f0", anchor=tk.W).grid(
-            row=row, column=0, sticky=tk.NW, pady=2)
+    def _multiselect(self, parent, row, label, options_en):
+        tk.Label(parent, text=f"{FIELD_CN.get(label, label)}[]（可多选）",
+                 bg="#f0f0f0", anchor=tk.W).grid(row=row, column=0, sticky=tk.NW, pady=2)
         lb = tk.Listbox(parent, selectmode=tk.EXTENDED, height=4,
                         exportselection=False, font=("Microsoft YaHei", 9))
-        for o in options:
-            lb.insert(tk.END, o)
+        for o in options_en:
+            lb.insert(tk.END, cn(label, o))
         lb.grid(row=row, column=1, sticky=tk.W, padx=4)
         self.vars[label] = lb
         return lb
@@ -114,14 +130,14 @@ class _V21Form(tk.Frame):
             self._multiselect(form, r, f, MULTI_OPTIONS[f]); r += 1
         self._combo(form, r, "action_group", list(ACTION_GROUP)); r += 1
         # action_sequence 有序编辑器
-        tk.Label(form, text="action_sequence[]（有序）", bg="#f0f0f0", anchor=tk.W).grid(
+        tk.Label(form, text="动作序列[]（按发生顺序）", bg="#f0f0f0", anchor=tk.W).grid(
             row=r, column=0, sticky=tk.NW, pady=2)
         seq_frame = ttk.Frame(form)
         seq_frame.grid(row=r, column=1, sticky=tk.W, padx=4)
         self.cand_seq = tk.Listbox(seq_frame, selectmode=tk.SINGLE, height=4,
                                    exportselection=False, font=("Microsoft YaHei", 9))
         for a in ATOMIC_ACTION:
-            self.cand_seq.insert(tk.END, a)
+            self.cand_seq.insert(tk.END, cn("atomic_action", a))
         self.cand_seq.grid(row=0, column=0, rowspan=4)
         btns = ttk.Frame(seq_frame)
         btns.grid(row=0, column=1, rowspan=4, padx=4)
@@ -137,20 +153,21 @@ class _V21Form(tk.Frame):
         self._combo(form, r, "people_presence", list(PEOPLE_PRESENCE)); r += 1
         self._combo(form, r, "product_visibility",
                     ["VISIBLE", "PARTIAL", "HIDDEN", "UNKNOWN"]); r += 1
-        tk.Label(form, text="quality（0-100）", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
+        tk.Label(form, text="质量分（0-100）", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
         self.vars["quality"] = tk.StringVar()
         tk.Entry(form, textvariable=self.vars["quality"], width=28).grid(row=r, column=1, sticky=tk.W, padx=4)
         r += 1
         tk.Label(form, text="*人工置信度", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
         self.vars["human_confidence"] = tk.StringVar()
         ttk.Combobox(form, textvariable=self.vars["human_confidence"],
-                     values=("HIGH", "MEDIUM", "LOW"), width=26).grid(row=r, column=1, sticky=tk.W, padx=4)
+                     values=("高", "中", "低"), width=26, state="readonly").grid(
+            row=r, column=1, sticky=tk.W, padx=4)
         r += 1
         tk.Label(form, text="*审核状态", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
         self.vars["review_status"] = tk.StringVar()
         ttk.Combobox(form, textvariable=self.vars["review_status"],
-                     values=("REVIEWED", "NEEDS_SECOND_REVIEW", "GOLD", "EXCLUDED"),
-                     width=26).grid(row=r, column=1, sticky=tk.W, padx=4)
+                     values=("已审核", "需复核", "金标准", "排除"),
+                     width=26, state="readonly").grid(row=r, column=1, sticky=tk.W, padx=4)
         r += 1
         tk.Label(form, text="备注", bg="#f0f0f0").grid(row=r, column=0, sticky=tk.W)
         self.vars["comment"] = tk.StringVar()
@@ -160,28 +177,20 @@ class _V21Form(tk.Frame):
     def _on_scene(self, _e=None):
         f = self.vars["scene_family"].get()
         self.vars["scene_subtype"].set("")
-        cb = self._find_combo("scene_subtype")
-        cb["values"] = SCENE_SUBTYPE_BY_FAMILY.get(f, [])
+        self.combos["scene_subtype"]["values"] = [
+            cn("scene_subtype", o) for o in SCENE_SUBTYPE_BY_FAMILY.get(en("scene_family", f), [])]
 
     def _on_product(self, _e=None):
         f = self.vars["product_family"].get()
         self.vars["product_variant"].set("")
-        cb = self._find_combo("product_variant")
-        cb["values"] = PRODUCT_VARIANT_BY_FAMILY.get(f, [])
-
-    def _find_combo(self, label):
-        for w in self.winfo_children():
-            for c in w.winfo_children():
-                for child in c.winfo_children():
-                    if isinstance(child, ttk.Combobox) and label in str(child.cget("textvariable")):
-                        return child
-        return None
+        self.combos["product_variant"]["values"] = [
+            cn("product_variant", o) for o in PRODUCT_VARIANT_BY_FAMILY.get(en("product_family", f), [])]
 
     def _seq_add(self):
         sel = self.cand_seq.curselection()
         if sel:
             v = self.cand_seq.get(sel[0])
-            self.seq.append(v)
+            self.seq.append(en("atomic_action", v))
             self._seq_refresh()
 
     def _seq_move(self, delta):
@@ -204,23 +213,37 @@ class _V21Form(tk.Frame):
     def _seq_refresh(self):
         self.seq_list.delete(0, tk.END)
         for i, a in enumerate(self.seq):
-            self.seq_list.insert(tk.END, f"{i + 1}. {a}")
+            self.seq_list.insert(tk.END, f"{i + 1}. {cn('atomic_action', a)}")
 
     # ---------------- 取值 / 重置 ----------------
     def collect(self) -> dict:
-        def multi(lb):
-            return [lb.get(i) for i in lb.curselection()]
+        def multi(label):
+            lb = self.vars[label]
+            return [en(label, lb.get(i)) for i in lb.curselection()]
         out = {}
         for label in ("scene_family", "scene_subtype", "product_family",
                       "product_variant", "action_group", "shot_scale",
-                      "people_presence", "product_visibility", "quality",
-                      "human_confidence", "review_status", "comment"):
+                      "people_presence", "product_visibility", "quality", "comment"):
             if label in self.vars:
                 out[label] = self.vars[label].get()
-        out["material"] = multi(self.vars["material"])
-        out["component"] = multi(self.vars["component"])
-        out["function"] = multi(self.vars["function"])
-        out["shot_role"] = multi(self.vars["shot_role"])
+        # 中文 → 英文（confidence/status 特殊映射；其他用反查表）
+        out["scene_family"] = en("scene_family", out.get("scene_family", ""))
+        out["scene_subtype"] = en("scene_subtype", out.get("scene_subtype", ""))
+        out["product_family"] = en("product_family", out.get("product_family", ""))
+        out["product_variant"] = en("product_variant", out.get("product_variant", ""))
+        out["action_group"] = en("action_group", out.get("action_group", ""))
+        out["shot_scale"] = en("shot_scale", out.get("shot_scale", ""))
+        out["people_presence"] = en("people_presence", out.get("people_presence", ""))
+        out["product_visibility"] = en("product_visibility", out.get("product_visibility", ""))
+        out["human_confidence"] = {"高": "HIGH", "中": "MEDIUM", "低": "LOW"}.get(
+            self.vars["human_confidence"].get(), "")
+        out["review_status"] = {"已审核": "REVIEWED", "需复核": "NEEDS_SECOND_REVIEW",
+                                "金标准": "GOLD", "排除": "EXCLUDED"}.get(
+            self.vars["review_status"].get(), "")
+        out["material"] = multi("material")
+        out["component"] = multi("component")
+        out["function"] = multi("function")
+        out["shot_role"] = multi("shot_role")
         out["action_sequence"] = list(self.seq)
         return out
 
@@ -297,14 +320,16 @@ class _ReviewBase(tk.Tk):
         self.note.pack(fill=tk.X, pady=4)
         ttk.Button(left, text="▶ 播放完整视频", command=self._play_full).pack(fill=tk.X, padx=6, pady=2)
         ttk.Button(left, text="▶ 播放 Segment ±3s", command=self._play_context).pack(fill=tk.X, padx=6, pady=2)
-        tk.Label(left, text="\n审核提示：隐藏 AI / V1 / V2 答案；"
-                            "material/component/function/shot_role 可多选；"
-                            "动作按发生顺序排列；看不清选 UNKNOWN+LOW+NEEDS_SECOND_REVIEW。",
+        tk.Label(left, text="\n审核提示：已隐藏 AI / 第一次 / 第二次答案；\n"
+                            "材质/组件/功能/镜头角色 可多选（Ctrl 点击）；\n"
+                            "动作按发生顺序添加；\n"
+                            "看不清就选：未知 + 低置信 + 需复核，不要猜。",
                  bg="#f0f0f0", justify=tk.LEFT, font=("Microsoft YaHei", 9), wraplength=440).pack(fill=tk.X, pady=4)
 
         right = ttk.Frame(paned, width=560)
         paned.add(right, weight=0)
         self.form = _V21Form(right, self._save)
+        self.form.pack(fill=tk.BOTH, expand=True)
 
     def _seg_info(self, sid) -> tuple[str, int, int]:
         with sqlite3.connect("file:" + str(self.db_path).replace("\\", "/") + "?mode=ro",
