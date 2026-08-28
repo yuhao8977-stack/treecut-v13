@@ -128,6 +128,77 @@ class AnnotationService:
         conn.close()
         return n
 
+    # ------------------------------------------------------------------
+    # Stage 2 STEP 0 — 统一保存入口（收敛 Standalone/Main 的 3 份 _persist SQL）
+    # ------------------------------------------------------------------
+
+    def save_v3(self, segment_id: str, values: dict, human_confidence: str,
+                review_status: str, operator: str = "",
+                dictionary_version: str = "ANNOTATION_DICTIONARY_V2_1") -> int:
+        """第三次裁决保存（Human V3 → human_annotation_v3）。"""
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            cur = conn.execute(
+                "INSERT OR REPLACE INTO human_annotation_v3(segment_id,scene_family,"
+                "scene_subtype,product_family,product_variant,material_multi,"
+                "component_multi,function_multi,action_group,action_sequence,"
+                "shot_scale,shot_role_multi,people_presence,product_visibility,"
+                "quality,human_confidence,review_status,comment,operator,"
+                "dictionary_version,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (segment_id, values.get("scene_family", ""),
+                 values.get("scene_subtype", ""), values.get("product_family", ""),
+                 values.get("product_variant", ""),
+                 json.dumps(values.get("material", []), ensure_ascii=False),
+                 json.dumps(values.get("component", []), ensure_ascii=False),
+                 json.dumps(values.get("function", []), ensure_ascii=False),
+                 values.get("action_group", ""),
+                 json.dumps(values.get("action_sequence", []), ensure_ascii=False),
+                 values.get("shot_scale", ""),
+                 json.dumps(values.get("shot_role", []), ensure_ascii=False),
+                 values.get("people_presence", ""),
+                 values.get("product_visibility", ""),
+                 values.get("quality"),
+                 human_confidence, review_status, values.get("comment", ""),
+                 operator, dictionary_version, time.time()))
+            conn.commit()
+            return int(cur.lastrowid)
+        finally:
+            conn.close()
+
+    def save_targeted_review(self, segment_id: str, values: dict,
+                             human_confidence: str, review_status: str,
+                             selection_reason: str = "", operator: str = "",
+                             dictionary_version: str = "ANNOTATION_DICTIONARY_V2_1") -> int:
+        """主动学习新样本保存 → targeted_human_review_v1。"""
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            cur = conn.execute(
+                "INSERT OR REPLACE INTO targeted_human_review_v1(segment_id,scene_family,"
+                "scene_subtype,product_family,product_variant,material_multi,"
+                "component_multi,function_multi,action_group,action_sequence,"
+                "shot_scale,shot_role_multi,people_presence,product_visibility,"
+                "quality,human_confidence,review_status,comment,operator,"
+                "dictionary_version,selection_reason,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (segment_id, values.get("scene_family", ""),
+                 values.get("scene_subtype", ""), values.get("product_family", ""),
+                 values.get("product_variant", ""),
+                 json.dumps(values.get("material", []), ensure_ascii=False),
+                 json.dumps(values.get("component", []), ensure_ascii=False),
+                 json.dumps(values.get("function", []), ensure_ascii=False),
+                 values.get("action_group", ""),
+                 json.dumps(values.get("action_sequence", []), ensure_ascii=False),
+                 values.get("shot_scale", ""),
+                 json.dumps(values.get("shot_role", []), ensure_ascii=False),
+                 values.get("people_presence", ""),
+                 values.get("product_visibility", ""),
+                 values.get("quality"),
+                 human_confidence, review_status, values.get("comment", ""),
+                 operator, dictionary_version, selection_reason, time.time()))
+            conn.commit()
+            return int(cur.lastrowid)
+        finally:
+            conn.close()
+
 
 class ReviewQueueService:
     """主动学习审核队列（基础，11）。"""

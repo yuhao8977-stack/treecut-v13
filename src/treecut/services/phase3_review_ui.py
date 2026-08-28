@@ -437,6 +437,8 @@ class _ReviewBase(tk.Tk):
         self._ui_built = False
         self._widget_baseline = None
         self.db_path = Path(db_path)
+        from treecut.services.annotation_governance import AnnotationService
+        self.svc = AnnotationService(self.db_path)
         self.items = self._load_items()
         self.done = self._done_set()
         self.queue = [it for it in self.items if it["segment_id"] not in self.done]
@@ -750,33 +752,10 @@ class AdjudicationV1App(_ReviewBase):
             "· 看不清就选：未知 + 低 + 需复核，不要硬猜")
 
     def _persist(self, values: dict, status: str):
-        conn = sqlite3.connect(str(self.db_path), timeout=30)
-        try:
-            conn.execute(
-                "INSERT OR REPLACE INTO human_annotation_v3(segment_id,scene_family,"
-                "scene_subtype,product_family,product_variant,material_multi,"
-                "component_multi,function_multi,action_group,action_sequence,"
-                "shot_scale,shot_role_multi,people_presence,product_visibility,"
-                "quality,human_confidence,review_status,comment,operator,"
-                "dictionary_version,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                (self.current["segment_id"], values["scene_family"],
-                 values["scene_subtype"], values["product_family"],
-                 values["product_variant"],
-                 json.dumps(values["material"], ensure_ascii=False),
-                 json.dumps(values["component"], ensure_ascii=False),
-                 json.dumps(values["function"], ensure_ascii=False),
-                 values["action_group"],
-                 json.dumps(values["action_sequence"], ensure_ascii=False),
-                 values["shot_scale"],
-                 json.dumps(values["shot_role"], ensure_ascii=False),
-                 values["people_presence"], values["product_visibility"],
-                 float(values["quality"]) if values["quality"].strip() else None,
-                 values["human_confidence"], status, values["comment"],
-                 os.environ.get("USERNAME", ""), DICTIONARY_VERSION_V2_1,
-                 time.time()))
-            conn.commit()
-        finally:
-            conn.close()
+        """Stage 2 STEP 0：统一走 AnnotationService（不直接写 SQL）。"""
+        self.svc.save_v3(self.current["segment_id"], values,
+                         values["human_confidence"], status,
+                         operator=os.environ.get("USERNAME", ""))
 
 
 class TargetedReviewV1App(_ReviewBase):
@@ -793,33 +772,12 @@ class TargetedReviewV1App(_ReviewBase):
             "· 看不清就选：未知 + 低 + 需复核")
 
     def _persist(self, values: dict, status: str):
+        """Stage 2 STEP 0：统一走 AnnotationService（不直接写 SQL）。"""
         it = self.current
-        conn = sqlite3.connect(str(self.db_path), timeout=30)
-        try:
-            conn.execute(
-                "INSERT OR REPLACE INTO targeted_human_review_v1(segment_id,scene_family,"
-                "scene_subtype,product_family,product_variant,material_multi,"
-                "component_multi,function_multi,action_group,action_sequence,"
-                "shot_scale,shot_role_multi,people_presence,product_visibility,"
-                "quality,human_confidence,review_status,comment,operator,"
-                "dictionary_version,selection_reason,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                (it["segment_id"], values["scene_family"], values["scene_subtype"],
-                 values["product_family"], values["product_variant"],
-                 json.dumps(values["material"], ensure_ascii=False),
-                 json.dumps(values["component"], ensure_ascii=False),
-                 json.dumps(values["function"], ensure_ascii=False),
-                 values["action_group"],
-                 json.dumps(values["action_sequence"], ensure_ascii=False),
-                 values["shot_scale"],
-                 json.dumps(values["shot_role"], ensure_ascii=False),
-                 values["people_presence"], values["product_visibility"],
-                 float(values["quality"]) if values["quality"].strip() else None,
-                 values["human_confidence"], status, values["comment"],
-                 os.environ.get("USERNAME", ""), DICTIONARY_VERSION_V2_1,
-                 it.get("selection_reason", ""), time.time()))
-            conn.commit()
-        finally:
-            conn.close()
+        self.svc.save_targeted_review(it["segment_id"], values,
+                                      values["human_confidence"], status,
+                                      selection_reason=it.get("selection_reason", ""),
+                                      operator=os.environ.get("USERNAME", ""))
 
 
 def main():

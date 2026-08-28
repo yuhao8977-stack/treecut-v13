@@ -250,53 +250,19 @@ class ReviewTaskWindow(tk.Toplevel):
         self.mandatory_hint.config(text="" if ok else "⚠ 请完成必选项")
 
     def _persist(self, values, status):
+        """Stage 2 STEP 0：统一走 AnnotationService（不直接写 SQL）。"""
         it = self.current
-        conn = sqlite3.connect(str(self.db_path), timeout=30)
-        try:
-            cols = ("scene_family", "scene_subtype", "product_family", "product_variant",
-                    "material_multi", "component_multi", "function_multi", "action_group",
-                    "action_sequence", "shot_scale", "shot_role_multi", "people_presence",
-                    "product_visibility", "quality", "human_confidence", "review_status",
-                    "comment", "operator", "dictionary_version")
-            if self.task["table"] == "targeted_human_review_v1":
-                sql = ("INSERT OR REPLACE INTO targeted_human_review_v1(segment_id," + ",".join(cols) +
-                       ",selection_reason,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
-                conn.execute(sql, (it["segment_id"], values["scene_family"],
-                                   values["scene_subtype"], values["product_family"],
-                                   values["product_variant"],
-                                   json.dumps(values["material"], ensure_ascii=False),
-                                   json.dumps(values["component"], ensure_ascii=False),
-                                   json.dumps(values["function"], ensure_ascii=False),
-                                   values["action_group"],
-                                   json.dumps(values["action_sequence"], ensure_ascii=False),
-                                   values["shot_scale"],
-                                   json.dumps(values["shot_role"], ensure_ascii=False),
-                                   values["people_presence"], values["product_visibility"],
-                                   float(values["quality"]) if values["quality"].strip() else None,
-                                   values["human_confidence"], status, values["comment"],
-                                   os.environ.get("USERNAME", ""), DICTIONARY_VERSION_V2_1,
-                                   it.get("selection_reason", ""), time.time()))
-            else:
-                sql = ("INSERT OR REPLACE INTO human_annotation_v3(segment_id," + ",".join(cols) +
-                       ",created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
-                conn.execute(sql, (it["segment_id"], values["scene_family"],
-                                   values["scene_subtype"], values["product_family"],
-                                   values["product_variant"],
-                                   json.dumps(values["material"], ensure_ascii=False),
-                                   json.dumps(values["component"], ensure_ascii=False),
-                                   json.dumps(values["function"], ensure_ascii=False),
-                                   values["action_group"],
-                                   json.dumps(values["action_sequence"], ensure_ascii=False),
-                                   values["shot_scale"],
-                                   json.dumps(values["shot_role"], ensure_ascii=False),
-                                   values["people_presence"], values["product_visibility"],
-                                   float(values["quality"]) if values["quality"].strip() else None,
-                                   values["human_confidence"], status, values["comment"],
-                                   os.environ.get("USERNAME", ""), DICTIONARY_VERSION_V2_1,
-                                   time.time()))
-            conn.commit()
-        finally:
-            conn.close()
+        from treecut.services.annotation_governance import AnnotationService
+        svc = AnnotationService(self.db_path)
+        if self.task["table"] == "targeted_human_review_v1":
+            svc.save_targeted_review(it["segment_id"], values,
+                                     values["human_confidence"], status,
+                                     selection_reason=it.get("selection_reason", ""),
+                                     operator=os.environ.get("USERNAME", ""))
+        else:
+            svc.save_v3(it["segment_id"], values,
+                        values["human_confidence"], status,
+                        operator=os.environ.get("USERNAME", ""))
 
     def _save(self):
         if not getattr(self, "current", None):
