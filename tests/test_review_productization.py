@@ -143,8 +143,13 @@ def test_review_center_lifecycle_20_cycles():
 def test_task_stats_complete():
     for t in TASKS:
         st = task_stats(t)
-        assert st["done"] >= st["total"] > 0
-        assert st["status"] == "完成"
+        if t["id"] in ("THIRD_ADJUDICATION_V1", "TARGETED_REVIEW_BATCH_V1"):
+            assert st["done"] >= st["total"] > 0
+            assert st["status"] == "完成"
+        elif t["id"] == "FRESH_HOLDOUT_V1":
+            assert st["total"] == 30
+            assert st["done"] == 0  # 盲审未开始（AI 已交卷锁定）
+            assert st["status"] == "进行中"
 
 
 def test_responsive_sizes(app):

@@ -42,6 +42,14 @@ TASKS = [
     {"id": "TARGETED_REVIEW_BATCH_V1", "name": "主动学习新样本标注", "type": "TARGETED",
      "manifest": os.path.join(DATA_ROOT, "TARGETED_REVIEW_BATCH_V1.json"),
      "table": "targeted_human_review_v1"},
+    {"id": "FRESH_HOLDOUT_V1", "name": "未见样本盲审（考试卷 30 条）", "type": "HOLDOUT",
+     "manifest": os.path.join(DATA_ROOT, "FRESH_HOLDOUT_V1_MANIFEST_LOCK.json"),
+     "table": "fresh_holdout_human_review_v1",
+     "blind": True,  # 盲审：隐藏一切 AI 信息（manifest 仅含题目，无预测）
+     "hint": ("盲审说明：这是 AI 从未见过的考试卷。系统已隐藏 AI 预测/分数/证据，请只看视频独立作答。\n"
+              "· 置信度解释：高=几乎确定；中=大体确定但有一定判断空间；低=自己拿不准\n"
+              "· 材质/组件/功能/镜头角色：点击即多选，再点取消；动作按发生顺序添加\n"
+              "· 看不清就选 未知 + 低 + 需复核，不硬猜")},
 ]
 
 
@@ -50,7 +58,8 @@ def task_stats(task: dict) -> dict:
     total = 0
     if os.path.exists(task["manifest"]):
         try:
-            total = len(json.load(open(task["manifest"], encoding="utf-8")).get("segments", []))
+            d = json.load(open(task["manifest"], encoding="utf-8"))
+            total = len(d.get("segments", d.get("strata", [])))
         except Exception:
             total = 0
     done, needs = 0, 0
@@ -168,7 +177,7 @@ class ReviewTaskWindow(tk.Toplevel):
         self._btn_ctx.pack(fill=tk.X, pady=1)
         self._btn_full = ttk.Button(btn, text="▶ 播放完整视频", command=self._play_full)
         self._btn_full.pack(fill=tk.X, pady=1)
-        ttk.Label(left, text="审核提示：隐藏 AI/历史答案；多选点击即选；看不清选 未知+低+需复核",
+        ttk.Label(left, text=self.task.get("hint", "审核提示：隐藏 AI/历史答案；多选点击即选；看不清选 未知+低+需复核"),
                   wraplength=400, foreground="#666").pack(anchor="w", pady=4)
         right = ttk.Frame(paned, width=600)
         paned.add(right, weight=6, minsize=520)
@@ -192,7 +201,17 @@ class ReviewTaskWindow(tk.Toplevel):
         p = Path(self.task["manifest"])
         if not p.exists():
             return []
-        return json.loads(p.read_text(encoding="utf-8")).get("segments", [])
+        data = json.loads(p.read_text(encoding="utf-8"))
+        # 兼容两种结构：{"segments":[...]} 与 {"strata":[{segment_id,asset_id,stratum}]}
+        if "segments" in data:
+            return data["segments"]
+        if "strata" in data:
+            items = []
+            for s in data["strata"]:
+                items.append({"segment_id": s["segment_id"], "asset_id": s.get("asset_id", ""),
+                              "selection_reason": s.get("stratum", "")})
+            return items
+        return []
 
     def _done_set(self):
         try:
@@ -259,6 +278,34 @@ class ReviewTaskWindow(tk.Toplevel):
                                      values["human_confidence"], status,
                                      selection_reason=it.get("selection_reason", ""),
                                      operator=os.environ.get("USERNAME", ""))
+        elif self.task["table"] == "fresh_holdout_human_review_v1":
+            # 盲审保存：仅存人工结果 + stratum，不存任何 AI 信息
+            conn = sqlite3.connect(str(self.db_path), timeout=30)
+            try:
+                conn.execute(
+                    "INSERT OR REPLACE INTO fresh_holdout_human_review_v1(segment_id,stratum,"
+                    "scene_family,scene_subtype,product_family,product_variant,material_multi,"
+                    "component_multi,function_multi,action_group,action_sequence,shot_scale,"
+                    "shot_role_multi,people_presence,product_visibility,quality,human_confidence,"
+                    "review_status,comment,operator,dictionary_version,created_at) "
+                    "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                    (it["segment_id"], it.get("selection_reason", ""),
+                     values["scene_family"], values["scene_subtype"],
+                     values["product_family"], values["product_variant"],
+                     json.dumps(values["material"], ensure_ascii=False),
+                     json.dumps(values["component"], ensure_ascii=False),
+                     json.dumps(values["function"], ensure_ascii=False),
+                     values["action_group"],
+                     json.dumps(values["action_sequence"], ensure_ascii=False),
+                     values["shot_scale"],
+                     json.dumps(values["shot_role"], ensure_ascii=False),
+                     values["people_presence"], values["product_visibility"],
+                     float(values["quality"]) if values["quality"].strip() else None,
+                     values["human_confidence"], status, values["comment"],
+                     os.environ.get("USERNAME", ""), DICTIONARY_VERSION_V2_1, time.time()))
+                conn.commit()
+            finally:
+                conn.close()
         else:
             svc.save_v3(it["segment_id"], values,
                         values["human_confidence"], status,
