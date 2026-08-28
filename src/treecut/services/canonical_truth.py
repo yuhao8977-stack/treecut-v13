@@ -258,6 +258,201 @@ class CanonicalTruthService:
 
     # ------------------------------------------------------------------
 
+    def init_versioning(self) -> int:
+        """初始化版本链：为 canonical_human_truth 现有 300 行生成 history v1 + current 标记。
+
+        幂等：已存在 history 的段跳过。返回写入 history 行数。
+        """
+        conn = self._write()
+        n = 0
+        try:
+            existing = {r[0] for r in conn.execute(
+                "SELECT segment_id FROM canonical_human_truth_history")}
+            rows = conn.execute("SELECT * FROM canonical_human_truth").fetchall()
+            for r in rows:
+                sid = r[0]
+                if sid in existing:
+                    continue
+                snapshot = {k: r[i] for i, k in enumerate(
+                    ("segment_id", "scene_family", "scene_subtype",
+                     "product_family", "product_variant", "material",
+                     "component", "function", "action_group", "atomic_action",
+                     "shot_scale", "shot_role", "people_presence",
+                     "product_visibility", "quality", "truth_source",
+                     "agreement_level", "human_evidence_count",
+                     "human_confidence", "review_status",
+                     "dictionary_version"))}
+                conn.execute(
+                    "INSERT INTO canonical_human_truth_history(segment_id,truth_version,"
+                    "status,is_current,supersedes_version,snapshot_json,truth_source,"
+                    "agreement_level,human_evidence_count,human_confidence,review_status,"
+                    "dictionary_version,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                    (sid, 1, "CURRENT", 1, None,
+                     json.dumps(snapshot, ensure_ascii=False),
+                     r[15], r[16], r[17], r[18], r[19], r[20], time.time()))
+                conn.execute(
+                    "UPDATE canonical_human_truth SET truth_version=1, status='CURRENT',"
+                    "is_current=1, supersedes_version=NULL WHERE segment_id=?",
+                    (sid,))
+                n += 1
+            conn.commit()
+        finally:
+            conn.close()
+        return n
+
+    def new_version(self, segment_id: str, values: dict, *,
+                    truth_source: str = "SINGLE_REVIEW",
+                    agreement_level: str = "single",
+                    human_confidence: str = "MEDIUM",
+                    review_status: str = "REVIEWED",
+                    dictionary_version: str = "ANNOTATION_DICTIONARY_V2_1") -> int:
+        """写入新版本的 canonical truth（V3 裁决等）。旧版本自动 SUPERSEDED，保留历史。
+
+        返回新 truth_version。values 为 Schema V2 字段（含 multi 列可选）。
+        """
+        conn = self._write()
+        try:
+            row = conn.execute(
+                "SELECT truth_version, status, is_current FROM canonical_human_truth "
+                "WHERE segment_id=?", (segment_id,)).fetchone()
+            prev_ver = row[0] if row else 0
+            new_ver = prev_ver + 1
+            # 旧行 → SUPERSEDED
+            if row is not None:
+                conn.execute(
+                    "UPDATE canonical_human_truth SET status='SUPERSEDED', is_current=0 "
+                    "WHERE segment_id=?", (segment_id,))
+                conn.execute(
+                    "UPDATE canonical_human_truth_history SET status='SUPERSEDED', is_current=0 "
+                    "WHERE segment_id=? AND truth_version=?", (segment_id, prev_ver))
+            now = time.time()
+            snapshot = dict(values)
+            snapshot["segment_id"] = segment_id
+            snapshot["truth_source"] = truth_source
+            snapshot["agreement_level"] = agreement_level
+            snapshot["human_evidence_count"] = values.get("human_evidence_count", 1)
+            snapshot["human_confidence"] = human_confidence
+            snapshot["review_status"] = review_status
+            snapshot["dictionary_version"] = dictionary_version
+            # 写入历史（当前版本）
+            conn.execute(
+                "INSERT INTO canonical_human_truth_history(segment_id,truth_version,"
+                "status,is_current,supersedes_version,snapshot_json,truth_source,"
+                "agreement_level,human_evidence_count,human_confidence,review_status,"
+                "dictionary_version,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (segment_id, new_ver, "CURRENT", 1, prev_ver if prev_ver else None,
+                 json.dumps(snapshot, ensure_ascii=False), truth_source,
+                 agreement_level, snapshot["human_evidence_count"],
+                 human_confidence, review_status, dictionary_version, now))
+            # upsert current 行
+            keys = ("scene_family", "scene_subtype", "product_family",
+                    "product_variant", "material", "component", "function",
+                    "action_group", "atomic_action", "shot_scale", "shot_role",
+                    "people_presence", "product_visibility", "quality")
+            conn.execute(
+                "INSERT OR REPLACE INTO canonical_human_truth(segment_id,scene_family,"
+                "scene_subtype,product_family,product_variant,material,component,"
+                "function,action_group,atomic_action,shot_scale,shot_role,"
+                "people_presence,product_visibility,quality,truth_source,"
+                "agreement_level,human_evidence_count,human_confidence,review_status,"
+                "dictionary_version,v1_record_id,v2_record_id,created_at,updated_at,"
+                "truth_version,status,is_current,supersedes_version,material_multi,"
+                "component_multi,function_multi,shot_role_multi,action_sequence) "
+                "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (segment_id,
+                 values.get("scene_family", "UNKNOWN"),
+                 values.get("scene_subtype", "UNKNOWN"),
+                 values.get("product_family", "UNKNOWN"),
+                 values.get("product_variant", "UNKNOWN"),
+                 values.get("material", "UNKNOWN"),
+                 values.get("component", "UNKNOWN"),
+                 values.get("function", "UNKNOWN"),
+                 values.get("action_group", "UNKNOWN"),
+                 values.get("atomic_action", "UNKNOWN"),
+                 values.get("shot_scale", "UNKNOWN"),
+                 values.get("shot_role", "UNKNOWN"),
+                 values.get("people_presence", "UNKNOWN"),
+                 values.get("product_visibility", "UNKNOWN"),
+                 values.get("quality"), truth_source, agreement_level,
+                 snapshot["human_evidence_count"], human_confidence,
+                 review_status, dictionary_version,
+                 values.get("v1_record_id"), values.get("v2_record_id"),
+                 now, now, new_ver, "CURRENT", 1, prev_ver if prev_ver else None,
+                 json.dumps(values.get("material_multi", []), ensure_ascii=False),
+                 json.dumps(values.get("component_multi", []), ensure_ascii=False),
+                 json.dumps(values.get("function_multi", []), ensure_ascii=False),
+                 json.dumps(values.get("shot_role_multi", []), ensure_ascii=False),
+                 json.dumps(values.get("action_sequence", []), ensure_ascii=False)))
+            conn.commit()
+            return new_ver
+        finally:
+            conn.close()
+
+    def get_history(self, segment_id: str) -> list[dict]:
+        """查询某段完整裁决链（V1 人工 / V2 人工 / V3 裁决 / current truth）。"""
+        with self._ro() as conn:
+            rows = conn.execute(
+                "SELECT truth_version, status, is_current, snapshot_json, "
+                "dictionary_version, created_at FROM canonical_human_truth_history "
+                "WHERE segment_id=? ORDER BY truth_version", (segment_id,)).fetchall()
+        out = []
+        for r in rows:
+            item = {"truth_version": r[0], "status": r[1], "is_current": r[2],
+                    "dictionary_version": r[4], "created_at": r[5]}
+            try:
+                item["snapshot"] = json.loads(r[3])
+            except Exception:
+                item["snapshot"] = {}
+            out.append(item)
+        return out
+
+    def init_multivalue(self) -> int:
+        """V2.1 兼容：把单值列初始化到 multi 列（单元素集合）。幂等。"""
+        conn = self._write()
+        n = 0
+        try:
+            rows = conn.execute(
+                "SELECT segment_id, material, component, function, shot_role, "
+                "atomic_action FROM canonical_human_truth").fetchall()
+            for r in rows:
+                sid, mat, comp, fn, role, atom = r
+                updates = []
+                if mat not in ("UNKNOWN", "NOT_APPLICABLE", ""):
+                    updates.append(("material_multi", json.dumps([mat], ensure_ascii=False)))
+                if comp not in ("UNKNOWN", "NOT_APPLICABLE", ""):
+                    updates.append(("component_multi", json.dumps([comp], ensure_ascii=False)))
+                if fn not in ("UNKNOWN", "NOT_APPLICABLE", ""):
+                    updates.append(("function_multi", json.dumps([fn], ensure_ascii=False)))
+                if role not in ("UNKNOWN", "NOT_APPLICABLE", ""):
+                    updates.append(("shot_role_multi", json.dumps([role], ensure_ascii=False)))
+                if atom not in ("UNKNOWN", "NOT_APPLICABLE", ""):
+                    updates.append(("action_sequence", json.dumps([atom], ensure_ascii=False)))
+                if updates:
+                    sets = ", ".join(f"{k}=?" for k, _ in updates)
+                    vals = [v for _, v in updates] + [sid]
+                    conn.execute(
+                        f"UPDATE canonical_human_truth SET {sets} WHERE segment_id=?", vals)
+                    n += 1
+            conn.commit()
+        finally:
+            conn.close()
+        return n
+
+    def version_stats(self) -> dict:
+        """版本链统计。"""
+        with self._ro() as conn:
+            total = conn.execute("SELECT COUNT(*) FROM canonical_human_truth").fetchone()[0]
+            hist = conn.execute("SELECT COUNT(*) FROM canonical_human_truth_history").fetchone()[0]
+            multi = conn.execute(
+                "SELECT COUNT(*) FROM canonical_human_truth "
+                "WHERE material_multi IS NOT NULL AND material_multi!='[]'").fetchone()[0]
+            cur_ver = conn.execute(
+                "SELECT COUNT(*) FROM canonical_human_truth WHERE is_current=1").fetchone()[0]
+        return {"segments": total, "history_rows": hist, "current_rows": cur_ver,
+                "multi_initialized": multi}
+
+    # ------------------------------------------------------------------
+
     def freeze_dictionary(self) -> int:
         """把 ANNOTATION_DICTIONARY_V2 写入 annotation_dictionary 表。"""
         import subprocess

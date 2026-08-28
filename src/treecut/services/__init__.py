@@ -42,6 +42,7 @@ class Services:
     _review_queue = None
     _coverage = None
     _canonical_truth = None
+    _visual_cognition = None
 
     def __post_init__(self):
         self.context = ServiceContext(db_path=self.db_path)
@@ -166,6 +167,14 @@ class Services:
             from treecut.services.canonical_truth import CanonicalTruthService
             self._canonical_truth = CanonicalTruthService(self.db_path)
         return self._canonical_truth
+
+    @property
+    def visual_cognition(self):
+        """VisualCognitionPipeline：Phase 3 视觉认知原型（采样/静态/时序/技术/融合/门控）。"""
+        if self._visual_cognition is None:
+            from treecut.services.visual_cognition import VisualCognitionPipeline
+            self._visual_cognition = VisualCognitionPipeline(self.db_path)
+        return self._visual_cognition
 
 
 def bootstrap_services(db_path: str | Path | None = None) -> Services:

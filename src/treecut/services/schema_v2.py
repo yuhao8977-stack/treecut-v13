@@ -17,6 +17,13 @@ ANNOTATION_DICTIONARY_V2：唯一业务维度与枚举（架构监工冻结口�
 from __future__ import annotations
 
 DICTIONARY_VERSION = "ANNOTATION_DICTIONARY_V2"
+DICTIONARY_VERSION_V2_1 = "ANNOTATION_DICTIONARY_V2_1"
+
+# V2.1 基数修正：单值维度保持单值；以下维度支持 multi-label（集合）
+MULTI_FIELDS = ("material", "component", "function", "shot_role")
+SINGLE_FIELDS = ("scene_family", "scene_subtype", "product_family",
+                 "product_variant", "shot_scale", "people_presence", "quality")
+# action 不采用简单 multi-label：action_group(单值) + action_sequence[](有序序列)
 
 # ---------------------------------------------------------------------------
 # 枚举（冻结）
@@ -167,3 +174,24 @@ def freeze_schema() -> dict:
             "shot_scale/shot_role 强制分离；全字段支持 UNKNOWN/NOT_APPLICABLE；"
             "组合动作允许 sequence 结构，禁止写死无限枚举。"),
     }
+
+
+def freeze_schema_v2_1() -> dict:
+    """V2.1 兼容升级：基数修正（不推翻 V2 语义）。"""
+    base = freeze_schema()
+    base.update({
+        "dictionary_version": DICTIONARY_VERSION_V2_1,
+        "cardinality": {
+            "single_value": list(SINGLE_FIELDS),
+            "multi_label": list(MULTI_FIELDS),
+            "action": "action_group(单值) + action_sequence[](有序序列)",
+        },
+        "notes": (
+            "ANNOTATION_DICTIONARY_V2_1（Phase 3 Step 0）：V2 语义不变，仅基数兼容修正。"
+            "material/component/function/shot_role 支持集合（JSON array）；"
+            "action 采用 action_group + action_sequence[]（如 [PULL_OUT, RETRACT] 表达 拉出→缩回），"
+            "旧 atomic_action 字段保持兼容读取，未来主结构使用 sequence；"
+            "scene_family/scene_subtype/product_family/product_variant/shot_scale/"
+            "people_presence/quality 保持单值。"),
+    })
+    return base
