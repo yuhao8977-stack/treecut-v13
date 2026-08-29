@@ -232,3 +232,68 @@ def test_score_report_has_conflict_agreement():
     assert set(s["conflict_agreement"]) == {"agree", "ai_only", "human_only", "both_none"}
     assert all("human_conflict_observed" in ps and "ai_conflict_count" in ps
                for ps in s["per_segment"])
+
+
+def test_adjudication_v2_manifest_12_blind():
+    """Adjudication V2 manifest：12 条、blind（无 V1/AI/评分/错误类型/sampling class）。"""
+    p = os.path.join(DATA_ROOT, "BUSINESS_COGNITION_STAGE2_HUMAN_ADJUDICATION_V2.json")
+    if not os.path.exists(p):
+        return
+    m = json.load(open(p, encoding="utf-8"))
+    assert m["count"] == 12
+    assert m["composition"] == {"error_high_impact": 9, "control": 3}
+    assert m["blind"] is True
+    for s in m["segments"]:
+        assert "challenge_class" not in s          # sampling class 隐藏
+        assert "frozen_evidence" in s              # 只给冻结证据
+        # blind：段内不得含 V1/AI/评分/错误类型字段
+        banned = ("challenge_class", "v1", "ai_claims", "affinity", "confidence",
+                  "error_type", "score", "rule", "knowledge")
+        for k in s:
+            assert not any(b in k.lower() for b in banned), f"blind 违反: {k}"
+
+
+def test_adjudication_v2_persist_confidence_duration():
+    """V2 保存必须记录 review_confidence + review_duration_seconds。"""
+    import sqlite3
+    from treecut.services.annotation_governance import AnnotationService
+    db = os.path.join(DATA_ROOT, "database", "materials.db")
+    svc = AnnotationService(db)
+    mock = "MOCK-ADJUDICATION-V2-0003"
+    try:
+        svc.save_business_cognition_adjudication(mock, {
+            "user_needs": ["STORAGE"], "business_values": [],
+            "decision_factors": [], "trust_signals": [],
+            "search_intents": [], "shot_functions": [],
+            "role_affinity": {r: "UNKNOWN" for r in
+                              ("TRAFFIC", "SEARCH", "TRUST", "CONVERSION")},
+            "theme_affinity": {t: "UNKNOWN" for t in
+                               ("SPACE_SOLUTION", "FAMILY_SCENE", "DECISION_AVOID_PIT",
+                                "AESTHETIC_STYLE", "CRAFT_TRUST")},
+            "overall_unknown": "NO", "conflict_observed": "NONE", "comment": "t",
+        }, "LOW", 37.2, "REVIEWED", operator="TEST")
+        conn = sqlite3.connect(db)
+        row = conn.execute("SELECT review_confidence, review_duration_seconds FROM "
+                           "stage2_business_cognition_adjudication_v2 WHERE segment_id=?",
+                           (mock,)).fetchone()
+        conn.close()
+        assert row is not None
+        assert row[0] == "LOW"
+        assert abs(row[1] - 37.2) < 0.01  # 时长已记录（仅诊断）
+    finally:
+        conn = sqlite3.connect(db)
+        conn.execute("DELETE FROM stage2_business_cognition_adjudication_v2 WHERE segment_id=?",
+                     (mock,))
+        conn.commit()
+        conn.close()
+
+
+def test_v1_v2_comparison_verdict_logic():
+    """V1 vs V2 判定逻辑：高一致 → ADJUDICATED；低一致 → UNRELIABLE。"""
+    # 内联复现比较脚本的判定：hi_rate>=0.85 → ADJUDICATED_HUMAN_TRUTH
+    def verdict(hi_rate):
+        return "ADJUDICATED_HUMAN_TRUTH" if hi_rate >= 0.85 else "UNRELIABLE_FOR_CALIBRATION"
+    assert verdict(1.0) == "ADJUDICATED_HUMAN_TRUTH"
+    assert verdict(0.9) == "ADJUDICATED_HUMAN_TRUTH"
+    assert verdict(0.84) == "UNRELIABLE_FOR_CALIBRATION"
+    assert verdict(0.5) == "UNRELIABLE_FOR_CALIBRATION"

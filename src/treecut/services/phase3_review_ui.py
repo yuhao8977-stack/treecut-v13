@@ -836,12 +836,14 @@ class _BusinessCognitionReviewForm(tk.Frame):
     保存内容即 Human Truth；AI 信息零进入。
     """
 
-    def __init__(self, master, on_save, conf_var=None, status_var=None, taxonomy=None):
+    def __init__(self, master, on_save, conf_var=None, status_var=None, taxonomy=None,
+                 adjudication_mode=False):
         super().__init__(master)
         self.on_save = on_save
         self.conf_var = conf_var
         self.status_var = status_var
         self.tax = taxonomy or DEFAULT_TAXONOMY
+        self.adjudication_mode = adjudication_mode
         self.vars = {}
         self._build()
 
@@ -982,6 +984,21 @@ class _BusinessCognitionReviewForm(tk.Frame):
         tk.Entry(form, textvariable=self.vars["comment"], width=46,
                  font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
 
+        if self.adjudication_mode:
+            # Adjudication V2：本次复核把握度（仅质量诊断，不决定真值）
+            tk.Label(form, text="L. 本次复核把握度 review_confidence（质量诊断用）",
+                     bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+                row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+            tk.Label(form, text="高=对本次判断有把握；中=一般；低=不确定（允许，不需硬选）",
+                     bg="#f0f0f0", anchor=tk.W, font=("Microsoft YaHei", 9),
+                     foreground="#666").grid(row=r, column=0, columnspan=2, sticky=tk.W, pady=2); r += 1
+            tk.Label(form, text="把握度", bg="#f0f0f0", anchor=tk.W,
+                     font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.W, pady=2)
+            self.vars["review_confidence"] = tk.StringVar()
+            ttk.Combobox(form, textvariable=self.vars["review_confidence"],
+                         values=("HIGH", "MEDIUM", "LOW"), width=10, state="readonly",
+                         font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
         tk.Label(form, text="* 人工置信度 / 审核状态 在顶部工具栏选择（必选）",
                  bg="#f0f0f0", fg="#b00000", font=("Microsoft YaHei", 9, "bold")).grid(
             row=r, column=0, columnspan=2, sticky=tk.W, pady=(12, 2))
@@ -1021,6 +1038,8 @@ class _BusinessCognitionReviewForm(tk.Frame):
         out["human_confidence"] = {"高": "HIGH", "中": "MEDIUM", "低": "LOW"}.get(conf_raw, "")
         out["review_status"] = {"已审核": "REVIEWED", "需复核": "NEEDS_SECOND_REVIEW",
                                 "金标准": "GOLD", "排除": "EXCLUDED"}.get(status_raw, "")
+        if self.adjudication_mode:
+            out["review_confidence"] = self.vars.get("review_confidence").get() or ""
         return out
 
     def reset(self):

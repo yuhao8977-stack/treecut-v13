@@ -274,6 +274,50 @@ class AnnotationService:
         finally:
             conn.close()
 
+    def save_business_cognition_adjudication(self, segment_id: str, values: dict,
+                                             review_confidence: str,
+                                             review_duration_seconds: float,
+                                             review_status: str, operator: str = "") -> int:
+        """Stage 2 Adjudication V2 保存 → stage2_business_cognition_adjudication_v2。
+
+        独立复核（blind）：不显示 V1/AI/评分；记录 review_confidence（HIGH/MEDIUM/LOW）
+        与 review_duration_seconds（仅质量诊断，不决定真值）。
+        """
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            conn.execute(
+                "CREATE TABLE IF NOT EXISTS stage2_business_cognition_adjudication_v2("
+                "segment_id TEXT PRIMARY KEY,"
+                "user_needs TEXT, business_values TEXT, decision_factors TEXT,"
+                "trust_signals TEXT, search_intents TEXT, shot_functions TEXT,"
+                "role_affinity TEXT, theme_affinity TEXT,"
+                "overall_unknown TEXT, conflict_observed TEXT, comment TEXT,"
+                "review_confidence TEXT, review_duration_seconds REAL,"
+                "review_status TEXT, operator TEXT, created_at REAL)")
+            cur = conn.execute(
+                "INSERT OR REPLACE INTO stage2_business_cognition_adjudication_v2("
+                "segment_id,user_needs,business_values,decision_factors,"
+                "trust_signals,search_intents,shot_functions,role_affinity,theme_affinity,"
+                "overall_unknown,conflict_observed,comment,review_confidence,"
+                "review_duration_seconds,review_status,operator,created_at) "
+                "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (segment_id,
+                 json.dumps(values.get("user_needs", []), ensure_ascii=False),
+                 json.dumps(values.get("business_values", []), ensure_ascii=False),
+                 json.dumps(values.get("decision_factors", []), ensure_ascii=False),
+                 json.dumps(values.get("trust_signals", []), ensure_ascii=False),
+                 json.dumps(values.get("search_intents", []), ensure_ascii=False),
+                 json.dumps(values.get("shot_functions", []), ensure_ascii=False),
+                 json.dumps(values.get("role_affinity", {}), ensure_ascii=False),
+                 json.dumps(values.get("theme_affinity", {}), ensure_ascii=False),
+                 values.get("overall_unknown", ""), values.get("conflict_observed", ""),
+                 values.get("comment", ""), review_confidence, review_duration_seconds,
+                 review_status, operator, time.time()))
+            conn.commit()
+            return int(cur.lastrowid)
+        finally:
+            conn.close()
+
 
 class ReviewQueueService:
     """主动学习审核队列（基础，11）。"""

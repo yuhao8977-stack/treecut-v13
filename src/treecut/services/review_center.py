@@ -102,6 +102,20 @@ TASKS = [
               "· role/theme 全部维度独立 5 级评级（强/中/弱/不支持/未知）\n"
               "· 看不准 → 不勾 / 选未知（宁可 Unknown 不制造过标）\n"
               "· 系统不显示任何 AI 结论；冻结证据中 [MODEL] 标注为模型预测非事实")},
+    {"id": "HUMAN24_ADJUDICATION_V2", "name": "Stage2 Human24 复核（Adjudication V2·12 条盲审）", "type": "BUSINESS_COGNITION",
+     "manifest": os.path.join(DATA_ROOT, "BUSINESS_COGNITION_STAGE2_HUMAN_ADJUDICATION_V2.json"),
+     "table": "stage2_business_cognition_adjudication_v2",
+     "adjudication_mode": True,      # V2 复核：记录 review_confidence + 时长
+     "blind": True,                  # 不显示 AI/V1/评分/错误类型/sampling class
+     "show_frozen_evidence": True,
+     "hide_sampling_class": True,
+     "hint": ("Stage2 Human24 复核（Adjudication V2，12 条盲审）。\n"
+              "这是对第一批 Human24 的独立复核（状态好时再做）。\n"
+              "· 系统不显示第一次的选择，也不显示 AI 答案 / 旧评分 / 错误类型\n"
+              "· 只看视频 + 冻结证据，重新独立判断（可与此前不同，以本次为准）\n"
+              "· 每条允许选择『把握度』：高/中/低（低=不确定，允许，不需硬选）\n"
+              "· 多标签从完整固定清单独立勾选；role/theme 全维度独立评级\n"
+              "· 看不准 → 不勾 / 选未知；宁可 Unknown 不制造过标")},
 ]
 
 
@@ -242,7 +256,9 @@ class ReviewTaskWindow(tk.Toplevel):
             self.form = _BusinessCognitionReviewForm(right, self._save,
                                                      conf_var=self.conf_var,
                                                      status_var=self.status_var,
-                                                     taxonomy=self._load_taxonomy())
+                                                     taxonomy=self._load_taxonomy(),
+                                                     adjudication_mode=bool(
+                                                         self.task.get("adjudication_mode")))
         else:
             self.form = _V21Form(right, self._save,
                                  conf_var=self.conf_var, status_var=self.status_var)
@@ -329,6 +345,7 @@ class ReviewTaskWindow(tk.Toplevel):
         self.idx = idx % len(self.queue)
         it = self.queue[self.idx]
         self.current = it
+        self._review_start = time.time()  # Adjudication V2：记录本段审核耗时（仅诊断）
         sid = it["segment_id"]
         self.pos.config(text=f"{self.idx + 1} / {len(self.queue)}")
         asset, start, end = self._seg_info(sid)
@@ -407,6 +424,12 @@ class ReviewTaskWindow(tk.Toplevel):
             svc.save_business_cognition_review(
                 it["segment_id"], it.get("challenge_class", ""),
                 values, values["human_confidence"], status,
+                operator=os.environ.get("USERNAME", ""))
+        elif self.task["table"] == "stage2_business_cognition_adjudication_v2":
+            duration = max(0.0, time.time() - getattr(self, "_review_start", time.time()))
+            svc.save_business_cognition_adjudication(
+                it["segment_id"], values,
+                values.get("review_confidence", ""), duration, status,
                 operator=os.environ.get("USERNAME", ""))
         else:
             svc.save_v3(it["segment_id"], values,
