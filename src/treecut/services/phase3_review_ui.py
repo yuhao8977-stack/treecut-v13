@@ -790,45 +790,85 @@ class TargetedReviewV1App(_ReviewBase):
 
 # ---------------------------------------------------------------------------
 # Stage 2 — 业务认知评审（Human Business Review 24）
-# 评审对象不是视觉标签，而是"该片段的证据是否支持某用户需求/商业价值主张"。
-# 盲审：不显示 AI claims/affinity/confidence，只给候选清单 + 冻结证据。
+# 评审对象不是视觉标签，而是"该片段的证据支持哪些业务意义"。
+# 盲审：不显示 AI claims/affinity/confidence/rule/knowledge。
+# 独立 Human Truth：每个多标签字段显示完整固定 Taxonomy（非 AI 候选），
+# Human 从全量独立勾选所有成立的标签 → Recall 真正可计算。
 # ---------------------------------------------------------------------------
 
-BUSINESS_NEED_CN = {
-    "STORAGE": "收纳", "DINING": "用餐", "OFFICE": "办公",
-    "CHARGING_POWER": "充电取电", "GUEST_CAPACITY": "待客扩容",
-    "SPACE_EFFICIENCY": "空间利用", "FAMILY_GATHERING": "家庭聚会",
-    "AESTHETICS": "美观", "DURABILITY": "耐用", "DECISION_CONFIDENCE": "决策信心",
-}
-BUSINESS_VALUE_CN = {
-    "STORAGE_EFFICIENCY": "收纳效率", "DINING_CONVENIENCE": "用餐便利",
-    "WORK_FROM_HOME": "居家办公", "POWER_CONVENIENCE": "取电便利",
-    "FLEXIBLE_CAPACITY": "灵活扩容", "QUALITY_TRUST": "品质信任",
-    "SPACE_SAVING": "省空间", "CRAFT": "工艺",
-}
 VERDICT_CN = {"SUPPORTED": "支持", "NOT_SUPPORTED": "不支持", "UNSURE": "不确定"}
+AFFINITY_CN = {"STRONG": "强", "MEDIUM": "中", "WEAK": "弱",
+               "NOT_SUPPORTED": "不支持", "UNKNOWN": "未知"}
+
+# 默认完整 Taxonomy（运行时从 manifest 读取，避免硬编码与 AI 耦合）
+DEFAULT_TAXONOMY = {
+    "user_needs": [], "business_values": [], "decision_factors": [],
+    "search_intents": [], "shot_functions": [], "trust_signals": [],
+    "content_roles": [{"id": "TRAFFIC", "cn": "流量"}, {"id": "SEARCH", "cn": "搜索"},
+                      {"id": "TRUST", "cn": "信任"}, {"id": "CONVERSION", "cn": "转化"}],
+    "mother_themes": [{"id": "SPACE_SOLUTION", "cn": "空间解决方案"},
+                      {"id": "FAMILY_SCENE", "cn": "家庭生活场景"},
+                      {"id": "DECISION_AVOID_PIT", "cn": "决策避坑"},
+                      {"id": "AESTHETIC_STYLE", "cn": "审美风格"},
+                      {"id": "CRAFT_TRUST", "cn": "工艺信任"}],
+    "affinity_levels": ["STRONG", "MEDIUM", "WEAK", "NOT_SUPPORTED", "UNKNOWN"],
+}
 
 
 class _BusinessCognitionReviewForm(tk.Frame):
-    """业务认知评审表单：判定候选需求/价值主张是否被证据支持（blind）。
+    """独立 Human Business Truth 表单（blind）。
 
-    三态判定：SUPPORTED / NOT_SUPPORTED / UNSURE。
-    保存内容：judged_needs（SUPPORTED 的需求）/ judged_values / conflict_observed / comment。
-    置信度与状态由父窗口顶部固定区提供（conf_var/status_var）。
+    - 多标签字段（user_needs/business_values/decision_factors/search_intents/
+      shot_functions/trust_signals）：完整固定 Taxonomy 多选，Human 独立勾选
+      所有成立的标签（可包含 AI 未预测的 → Recall 可计算）
+    - content_role_affinity（4 类）与 mother_theme_affinity（5 类）：
+      每个维度独立 5 级评级（STRONG/MEDIUM/WEAK/NOT_SUPPORTED/UNKNOWN）
+    - overall_unknown_or_insufficient / conflicting_evidence_observed / comment
+    保存内容即 Human Truth；AI 信息零进入。
     """
 
-    def __init__(self, master, on_save, conf_var=None, status_var=None):
+    def __init__(self, master, on_save, conf_var=None, status_var=None, taxonomy=None):
         super().__init__(master)
         self.on_save = on_save
         self.conf_var = conf_var
         self.status_var = status_var
+        self.tax = taxonomy or DEFAULT_TAXONOMY
         self.vars = {}
         self._build()
+
+    # 多选 Listbox（点击即选/再点取消）
+    def _multiselect(self, parent, row, label, options):
+        tk.Label(parent, text=label, bg="#f0f0f0", anchor=tk.NW,
+                 font=("Microsoft YaHei", 10, "bold")).grid(
+            row=row, column=0, sticky=tk.NW, pady=2)
+        wrap = ttk.Frame(parent)
+        wrap.grid(row=row, column=1, sticky=tk.W, padx=6)
+        lb = tk.Listbox(wrap, selectmode=tk.MULTIPLE, height=min(8, max(4, len(options))),
+                        width=46, exportselection=False, font=("Microsoft YaHei", 9))
+        for o in options:
+            lb.insert(tk.END, f"{o['cn']}（{o['id']}）")
+        sb = ttk.Scrollbar(wrap, orient="vertical", command=lb.yview)
+        lb.configure(yscrollcommand=sb.set)
+        lb.pack(side=tk.LEFT)
+        sb.pack(side=tk.RIGHT, fill=tk.Y)
+        self.vars[label] = lb
+        return lb
+
+    def _affinity_row(self, parent, row, label, key):
+        tk.Label(parent, text=label, bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=row, column=0, sticky=tk.W, pady=2)
+        var = tk.StringVar()
+        cb = ttk.Combobox(parent, textvariable=var,
+                          values=[AFFINITY_CN[l] for l in self.tax["affinity_levels"]],
+                          width=10, state="readonly", font=("Microsoft YaHei", 10))
+        cb.grid(row=row, column=1, sticky=tk.W, padx=6)
+        self.vars[key] = var
+        return var
 
     def _build(self):
         canvas = tk.Canvas(self, highlightthickness=0, bg="#f0f0f0")
         vsb = ttk.Scrollbar(self, orient="vertical", command=canvas.yview)
-        inner = ttk.Frame(canvas)
+        inner = tk.Frame(canvas)
         inner_id = canvas.create_window((0, 0), window=inner, anchor="nw")
         canvas.configure(yscrollcommand=vsb.set)
         canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
@@ -840,36 +880,82 @@ class _BusinessCognitionReviewForm(tk.Frame):
         form = ttk.Frame(inner)
         form.pack(fill=tk.BOTH, expand=True, padx=10, pady=6)
 
-        def verdict_row(row, label, key, options_en):
-            tk.Label(form, text=label, bg="#f0f0f0", anchor=tk.W,
-                     font=("Microsoft YaHei", 10)).grid(row=row, column=0, sticky=tk.W, pady=2)
-            var = tk.StringVar()
-            cb = ttk.Combobox(form, textvariable=var,
-                              values=[VERDICT_CN[o] for o in options_en],
-                              width=10, state="readonly", font=("Microsoft YaHei", 10))
-            cb.grid(row=row, column=1, sticky=tk.W, padx=6)
-            self.vars[key] = var
-            return var
-
         r = 0
-        tk.Label(form, text="① 用户需求判定（该片段证据是否支持以下主张）",
+        hint = ("请从【完整清单】独立勾选所有该片段证据支持的标签（可多选，再点取消）。\n"
+                "只判断证据支持的 Business Meaning，不重标视觉事实；不确定就不勾。")
+        tk.Label(form, text=hint, bg="#fff8e1", anchor=tk.W, wraplength=520,
+                 font=("Microsoft YaHei", 9), foreground="#8a6d00").grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(2, 6)); r += 1
+
+        # A. user_needs
+        tk.Label(form, text="A. 用户需求 user_needs[]（多选，完整清单）",
                  bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
             row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
-        for need in sorted(BUSINESS_NEED_CN):
-            verdict_row(r, f"{BUSINESS_NEED_CN[need]}（{need}）", f"need_{need}",
-                        ("SUPPORTED", "NOT_SUPPORTED", "UNSURE")); r += 1
+        self._multiselect(form, r, "user_needs", self.tax["user_needs"]); r += 1
 
-        tk.Label(form, text="② 商业价值判定（该片段证据是否支持以下主张）",
+        # B. business_values
+        tk.Label(form, text="B. 商业价值 business_values[]（多选，完整清单）",
                  bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
-            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(10, 2)); r += 1
-        for val in sorted(BUSINESS_VALUE_CN):
-            verdict_row(r, f"{BUSINESS_VALUE_CN[val]}（{val}）", f"value_{val}",
-                        ("SUPPORTED", "NOT_SUPPORTED", "UNSURE")); r += 1
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        self._multiselect(form, r, "business_values", self.tax["business_values"]); r += 1
 
-        tk.Label(form, text="③ 证据冲突观察（视频中是否出现话语↔画面矛盾）",
+        # C. decision_factors
+        tk.Label(form, text="C. 决策因素 decision_factors[]（多选，完整清单）",
                  bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
-            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(10, 2)); r += 1
-        tk.Label(form, text="例如：讲解提到'家里/客户家'但画面是工厂展台；提到'实木'但画面材质存疑",
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        self._multiselect(form, r, "decision_factors", self.tax["decision_factors"]); r += 1
+
+        # D. trust_signals
+        tk.Label(form, text="D. 信任信号 trust_signals[]（多选，完整清单）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        self._multiselect(form, r, "trust_signals", self.tax["trust_signals"]); r += 1
+
+        # E. search_intents
+        tk.Label(form, text="E. 搜索意图候选 search_intent_candidates[]（多选）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        self._multiselect(form, r, "search_intents", self.tax["search_intents"]); r += 1
+
+        # F. shot_functions
+        tk.Label(form, text="F. 镜头功能候选 shot_function_candidates[]（多选）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        self._multiselect(form, r, "shot_functions", self.tax["shot_functions"]); r += 1
+
+        # G. content_role_affinity（全部 4 维独立评级）
+        tk.Label(form, text="G. 内容角色亲和 content_role_affinity（4 类全部独立评级）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        for role in self.tax["content_roles"]:
+            self._affinity_row(form, r, f"  {role['cn']}（{role['id']}）", f"role_{role['id']}"); r += 1
+
+        # H. mother_theme_affinity（全部 5 维独立评级）
+        tk.Label(form, text="H. 母题亲和 mother_theme_affinity（5 类全部独立评级）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        for th in self.tax["mother_themes"]:
+            self._affinity_row(form, r, f"  {th['cn']}（{th['id']}）", f"theme_{th['id']}"); r += 1
+
+        # I. overall_unknown_or_insufficient
+        tk.Label(form, text="I. 整体证据不足/未知（该片段不足以做业务判断）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        tk.Label(form, text="选『是』表示：宁可 Unknown，不制造 Human 过标",
+                 bg="#f0f0f0", anchor=tk.W, font=("Microsoft YaHei", 9),
+                 foreground="#666").grid(row=r, column=0, columnspan=2, sticky=tk.W, pady=2); r += 1
+        tk.Label(form, text="整体不足/未知", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.W, pady=2)
+        self.vars["overall_unknown"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["overall_unknown"],
+                     values=("NO", "YES"), width=10, state="readonly",
+                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        # J. conflicting_evidence_observed
+        tk.Label(form, text="J. 证据冲突观察（视频中是否出现话语↔画面矛盾）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        tk.Label(form, text="例：讲解说'家里/客户家'但画面是工厂展台；说'实木'但画面材质存疑",
                  bg="#f0f0f0", anchor=tk.W, font=("Microsoft YaHei", 9),
                  foreground="#666").grid(row=r, column=0, columnspan=2, sticky=tk.W, pady=2); r += 1
         tk.Label(form, text="冲突观察", bg="#f0f0f0", anchor=tk.W,
@@ -880,7 +966,8 @@ class _BusinessCognitionReviewForm(tk.Frame):
                      width=28, state="readonly", font=("Microsoft YaHei", 10)).grid(
             row=r, column=1, sticky=tk.W, padx=6); r += 1
 
-        tk.Label(form, text="④ 备注", bg="#f0f0f0", anchor=tk.W,
+        # K. comment
+        tk.Label(form, text="K. 备注", bg="#f0f0f0", anchor=tk.W,
                  font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.NW, pady=3)
         self.vars["comment"] = tk.StringVar()
         tk.Entry(form, textvariable=self.vars["comment"], width=46,
@@ -890,17 +977,35 @@ class _BusinessCognitionReviewForm(tk.Frame):
                  bg="#f0f0f0", fg="#b00000", font=("Microsoft YaHei", 9, "bold")).grid(
             row=r, column=0, columnspan=2, sticky=tk.W, pady=(12, 2))
 
+    def _multi_selected(self, label):
+        lb = self.vars[label]
+        out = []
+        for i in lb.curselection():
+            txt = lb.get(i)
+            # 格式：cn（ID）
+            if "（" in txt and txt.endswith("）"):
+                out.append(txt.split("（", 1)[1][:-1])
+        return out
+
     def collect(self) -> dict:
-        out = {"judged_needs": [], "judged_values": [], "conflict_observed": "",
-               "comment": (self.vars.get("comment").get() if self.vars.get("comment") else "")}
+        out = {
+            "user_needs": self._multi_selected("user_needs"),
+            "business_values": self._multi_selected("business_values"),
+            "decision_factors": self._multi_selected("decision_factors"),
+            "trust_signals": self._multi_selected("trust_signals"),
+            "search_intents": self._multi_selected("search_intents"),
+            "shot_functions": self._multi_selected("shot_functions"),
+            "role_affinity": {},
+            "theme_affinity": {},
+            "overall_unknown": self.vars.get("overall_unknown").get() or "",
+            "conflict_observed": self.vars.get("conflict_observed").get() or "",
+            "comment": (self.vars.get("comment").get() if self.vars.get("comment") else ""),
+        }
         for k, v in self.vars.items():
-            if k.startswith("need_"):
-                if v.get() == "支持":
-                    out["judged_needs"].append(k[len("need_"):])
-            elif k.startswith("value_"):
-                if v.get() == "支持":
-                    out["judged_values"].append(k[len("value_"):])
-        out["conflict_observed"] = self.vars.get("conflict_observed").get() or ""
+            if k.startswith("role_"):
+                out["role_affinity"][k[len("role_"):]] = v.get() or ""
+            elif k.startswith("theme_"):
+                out["theme_affinity"][k[len("theme_"):]] = v.get() or ""
         conf_raw = self.conf_var.get() if self.conf_var is not None else ""
         status_raw = self.status_var.get() if self.status_var is not None else ""
         out["human_confidence"] = {"高": "HIGH", "中": "MEDIUM", "低": "LOW"}.get(conf_raw, "")
@@ -910,7 +1015,9 @@ class _BusinessCognitionReviewForm(tk.Frame):
 
     def reset(self):
         for k, v in self.vars.items():
-            if isinstance(v, tk.StringVar):
+            if isinstance(v, tk.Listbox):
+                v.selection_clear(0, tk.END)
+            else:
                 v.set("")
         if self.conf_var is not None:
             self.conf_var.set("")
@@ -919,7 +1026,10 @@ class _BusinessCognitionReviewForm(tk.Frame):
 
 
 def validate_business_cognition(values: dict) -> tuple[bool, str]:
-    """业务认知评审校验：置信度/状态必选；全部三态 UNSURE 也可保存（诚实优先）。"""
+    """业务认知评审校验：置信度/状态必选；UNKNOWN 纪律：不逼用户选业务意义。
+
+    允许整字段/全部维度 UNKNOWN（宁可 Unknown 不制造过标）。
+    """
     conf = (values.get("human_confidence") or "").strip().upper()
     status = (values.get("review_status") or "").strip().upper()
     if conf not in ("HIGH", "MEDIUM", "LOW"):

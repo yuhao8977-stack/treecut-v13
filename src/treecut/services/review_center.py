@@ -93,14 +93,15 @@ TASKS = [
     {"id": "TARGETED_REVIEW_STAGE2_BUSINESS_COGNITION_V1", "name": "Stage2 业务认知评审（Human24·4×6 盲审）", "type": "BUSINESS_COGNITION",
      "manifest": os.path.join(DATA_ROOT, "BUSINESS_COGNITION_STAGE2_HUMAN_REVIEW_V1.json"),
      "table": "stage2_business_cognition_review_v1",
-     "blind": True,  # 不显示 AI claims/affinity/confidence，只给候选清单 + 冻结证据
-     "show_frozen_evidence": True,
+     "blind": True,  # 不显示 AI claims/affinity/confidence/rule/knowledge/retrieval
+     "show_frozen_evidence": True,   # 冻结 L2 证据（明确标 MODEL + 可靠性）
+     "hide_sampling_class": True,    # 采样类标签（STRONG_SINGLE 等）对用户隐藏
      "hint": ("Stage2 业务认知评审（Human24，盲审，非视觉重标注）。\n"
-              "评审对象：该片段的证据是否支持某用户需求/商业价值主张。\n"
-              "· 只看视频 + 冻结证据（组件/功能/场景/材料/动作/讲解原文），独立判定\n"
-              "· 每个主张三选：支持 / 不支持 / 不确定（诚实优先，不确定=不硬猜）\n"
-              "· 冲突观察：讲解说'家里/客户家'但画面是工厂展台 → 选 SCENE_ASR_CONFLICT\n"
-              "· 系统不显示任何 AI 结论；看不清就选 不确定 + 低 + 需复核")},
+              "目标：独立标注 Human Business Truth（不是对 AI 答案打勾）。\n"
+              "· 多标签字段从【完整固定清单】独立勾选所有成立的标签（可含 AI 未预测的）\n"
+              "· role/theme 全部维度独立 5 级评级（强/中/弱/不支持/未知）\n"
+              "· 看不准 → 不勾 / 选未知（宁可 Unknown 不制造过标）\n"
+              "· 系统不显示任何 AI 结论；冻结证据中 [MODEL] 标注为模型预测非事实")},
 ]
 
 
@@ -240,7 +241,8 @@ class ReviewTaskWindow(tk.Toplevel):
         if self.task.get("type") == "BUSINESS_COGNITION":
             self.form = _BusinessCognitionReviewForm(right, self._save,
                                                      conf_var=self.conf_var,
-                                                     status_var=self.status_var)
+                                                     status_var=self.status_var,
+                                                     taxonomy=self._load_taxonomy())
         else:
             self.form = _V21Form(right, self._save,
                                  conf_var=self.conf_var, status_var=self.status_var)
@@ -273,6 +275,14 @@ class ReviewTaskWindow(tk.Toplevel):
                               "selection_reason": s.get("stratum", "")})
             return items
         return []
+
+    def _load_taxonomy(self):
+        """固定 Human Review Taxonomy（非 AI 生成；独立文件）。"""
+        p = Path(DATA_ROOT) / "BUSINESS_COGNITION_HUMAN_TAXONOMY_V1.json"
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            return None
 
     def _done_set(self):
         """已完成集 = 本任务 manifest 成员 ∩ 表中已审 segment_id（避免共享表跨任务污染）。"""
@@ -325,7 +335,9 @@ class ReviewTaskWindow(tk.Toplevel):
         self.current_start, self.current_end = start, end
         info = [f"片段编号：{sid[:20]}…", f"素材：{asset[:20]}…",
                 f"时间范围：{start} - {end} ms（{(end - start) // 1000} 秒）"]
-        if self.task.get("show_sampling_target"):
+        if self.task.get("hide_sampling_class"):
+            pass  # 采样类标签（STRONG_SINGLE 等）对用户隐藏，避免影响预期
+        elif self.task.get("show_sampling_target"):
             tgt = it.get("sampling_target_cn") or it.get("sampling_target") or ""
             reason = it.get("selection_reason", "")
             info.append(f"采样目标：{tgt}" + (f"（{reason}）" if reason else ""))
@@ -346,20 +358,23 @@ class ReviewTaskWindow(tk.Toplevel):
         if self.task.get("show_frozen_evidence"):
             fe = it.get("frozen_evidence") or {}
             info.append("")
-            info.append("冻结证据（供业务认知判定，非 AI 结论）：")
+            info.append("冻结证据（业务认知判定参考）：")
+            # 视觉/模型证据必须标注 MODEL EVIDENCE + 可靠性，避免被当成事实
             if fe.get("component"):
-                info.append(f"  组件: {', '.join(fe['component'])}")
+                info.append(f"  [MODEL] 组件: {', '.join(fe['component'])} (MEDIUM_HIGH/SIGLIP)")
             if fe.get("function"):
-                info.append(f"  功能: {', '.join(fe['function'])}")
+                info.append(f"  [MODEL] 功能: {', '.join(fe['function'])} (MEDIUM_HIGH/SIGLIP)")
             if fe.get("scene_family"):
-                info.append(f"  场景: {fe['scene_family']}")
+                info.append(f"  [MODEL] 场景: {fe['scene_family']} (LOW/SIGLIP)")
             if fe.get("material"):
-                info.append(f"  材质: {', '.join(fe['material'])}")
+                info.append(f"  [MODEL] 材质: {', '.join(fe['material'])} (LOW/SIGLIP)")
             if fe.get("action_sequence"):
-                info.append(f"  动作: {', '.join(fe['action_sequence'])}")
+                info.append(f"  [MODEL] 动作: {', '.join(fe['action_sequence'])} (VERY_LOW/MOTION_ASR)")
+            if fe.get("human_verified"):
+                info.append(f"  [HUMAN_VERIFIED] {fe['human_verified']}")
             asr = (fe.get("asr_text") or "").strip()
             if asr:
-                info.append(f"  讲解原文: {asr[:200]}")
+                info.append(f"  [ASR] 讲解原文: {asr[:200]}")
         self.info.delete("1.0", tk.END)
         self.info.insert(tk.END, "\n".join(info))
         self.form.reset()
@@ -391,9 +406,7 @@ class ReviewTaskWindow(tk.Toplevel):
         elif self.task["table"] == "stage2_business_cognition_review_v1":
             svc.save_business_cognition_review(
                 it["segment_id"], it.get("challenge_class", ""),
-                values.get("judged_needs", []), values.get("judged_values", []),
-                values.get("conflict_observed", ""), values.get("comment", ""),
-                values["human_confidence"], status,
+                values, values["human_confidence"], status,
                 operator=os.environ.get("USERNAME", ""))
         else:
             svc.save_v3(it["segment_id"], values,

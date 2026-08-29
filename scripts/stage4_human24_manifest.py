@@ -2,9 +2,11 @@
 """Stage 2 — Human Business Review 24 manifest（4×6 平衡，blind）。
 
 从 Challenge60（每类 10）每类固定种子抽 4 → 24 条。
-盲审：manifest 仅含题目 + 冻结证据（视觉摘要 + ASR/OCR 原文），
-不含任何 AI claims / affinity / confidence。
-评审任务 = 业务认知判定（用户需求/商业价值主张是否被视频支持），非视觉重标注。
+盲审：manifest 仅含题目 + 冻结证据（MODEL 标注），不含任何 AI claims/
+affinity/confidence/rule/knowledge/retrieval。
+完整固定 Taxonomy 引用独立文件 BUSINESS_COGNITION_HUMAN_TAXONOMY_V1.json
+（非 AI 生成），Human 从全量独立勾选 → Recall 真实可计算。
+sampling class 保留在 manifest（评分用），UI 隐藏。
 """
 import io
 import json
@@ -16,19 +18,13 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="repla
 
 DATA_ROOT = r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime_data\temp\batch1"
 CHALLENGE = os.path.join(DATA_ROOT, "BUSINESS_COGNITION_STAGE2_CHALLENGE_V1.json")
+TAXONOMY = os.path.join(DATA_ROOT, "BUSINESS_COGNITION_HUMAN_TAXONOMY_V1.json")
 OUT = os.path.join(DATA_ROOT, "BUSINESS_COGNITION_STAGE2_HUMAN_REVIEW_V1.json")
-
-# 评审者可勾选的候选主张（blind 版：只给候选清单，不给 AI 答案）
-NEED_CANDIDATES = ["STORAGE", "DINING", "OFFICE", "CHARGING_POWER", "GUEST_CAPACITY",
-                   "SPACE_EFFICIENCY", "FAMILY_GATHERING", "AESTHETICS", "DURABILITY",
-                   "DECISION_CONFIDENCE"]
-VALUE_CANDIDATES = ["STORAGE_EFFICIENCY", "DINING_CONVENIENCE", "WORK_FROM_HOME",
-                    "POWER_CONVENIENCE", "FLEXIBLE_CAPACITY", "QUALITY_TRUST",
-                    "SPACE_SAVING", "CRAFT"]
 
 
 def main():
     ch = json.load(open(CHALLENGE, encoding="utf-8"))
+    tax = json.load(open(TAXONOMY, encoding="utf-8"))
     segs = ch["segments"]
     by_class = {}
     for s in segs:
@@ -51,7 +47,7 @@ def main():
         segs_out.append({
             "segment_id": s["segment_id"],
             "stratum": "BUSINESS_COGNITION_HUMAN24",
-            "challenge_class": s["challenge_class"],  # 采样结构标签（非 AI 预测）
+            "challenge_class": s["challenge_class"],  # 评分用；UI 隐藏
             "review_target": "business_cognition",
             "frozen_evidence": {
                 "component": fe.get("component_multi", []),
@@ -60,17 +56,19 @@ def main():
                 "material": fe.get("material_multi", []),
                 "action_sequence": fe.get("action_sequence", []),
                 "asr_text": fe.get("asr_text", ""),
+                # MODEL 标注在 UI 展示层（review_center._load）完成
             },
-            "need_candidates": NEED_CANDIDATES,
-            "value_candidates": VALUE_CANDIDATES,
+            "taxonomy_ref": "BUSINESS_COGNITION_HUMAN_TAXONOMY_V1.json",
         })
 
     manifest = {
         "manifest": "BUSINESS_COGNITION_STAGE2_HUMAN_REVIEW_V1",
         "generated_at": "2026-08-29",
-        "guard": "HUMAN_REVIEW_24; blind=true（无 AI claims/affinity/confidence）; "
-                 "评审=业务认知判定，非视觉重标注; 4×6 每类4条平衡; 不与 Validation43/Holdout 重叠",
+        "guard": "HUMAN_REVIEW_24; blind=true（无 AI claims/affinity/confidence/rule/knowledge）; "
+                 "独立 Human Truth（完整固定 Taxonomy 勾选，非 AI 候选）; "
+                 "4×6 每类4条平衡; 不与 Validation43/Holdout 重叠",
         "blind": True,
+        "taxonomy": tax,  # 完整固定 Taxonomy（非 AI 生成）
         "count": len(segs_out),
         "class_counts": {c: sum(1 for s in segs_out if s["challenge_class"] == c)
                          for c in sorted({s["challenge_class"] for s in segs_out})},

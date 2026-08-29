@@ -108,3 +108,82 @@ def test_v12_replay43_no_critical_regression():
                        encoding="utf-8"))
     assert len(r["results"]) == 43
     assert r["critical_regression_count"] == 0
+
+
+# ---------------------------------------------------------------------------
+# Gate：独立 Human Truth（Human24 Review Schema）
+# ---------------------------------------------------------------------------
+
+def test_human_taxonomy_is_fixed_and_complete():
+    """固定 Taxonomy 非 AI 生成：包含完整 user_needs/business_values 等。"""
+    tax = json.load(open(os.path.join(DATA_ROOT, "BUSINESS_COGNITION_HUMAN_TAXONOMY_V1.json"),
+                         encoding="utf-8"))
+    assert len(tax["user_needs"]) >= 21
+    assert len(tax["business_values"]) >= 18
+    assert len(tax["decision_factors"]) >= 16
+    assert len(tax["search_intents"]) >= 13
+    assert len(tax["shot_functions"]) >= 15
+    assert len(tax["content_roles"]) == 4  # TRAFFIC/SEARCH/TRUST/CONVERSION
+    assert len(tax["mother_themes"]) == 5
+    assert set(tax["affinity_levels"]) == {"STRONG", "MEDIUM", "WEAK",
+                                           "NOT_SUPPORTED", "UNKNOWN"}
+    # 关键：包含 AI 引擎不会预测的标签（如 CUSTOMIZATION / AESTHETICS）→ 可补标
+    need_ids = {t["id"] for t in tax["user_needs"]}
+    assert "CUSTOMIZATION" in need_ids and "AESTHETICS" in need_ids
+
+
+def test_human24_manifest_blind_and_balanced():
+    """manifest 4×6 平衡、blind（无 AI claims）、段与 Challenge60 一致。"""
+    man = json.load(open(os.path.join(DATA_ROOT, "BUSINESS_COGNITION_STAGE2_HUMAN_REVIEW_V1.json"),
+                         encoding="utf-8"))
+    assert man["blind"] is True
+    counts = man["class_counts"]
+    assert all(v == 4 for v in counts.values())
+    assert sum(counts.values()) == 24
+    assert "taxonomy" in man  # 固定 Taxonomy 内嵌
+    # blind：任何段都不含 AI claims
+    for s in man["segments"]:
+        assert "ai_claims" not in s and "claims" not in s
+        assert "affinity" not in s and "confidence" not in s
+    # 段身份与 Challenge60 一致
+    ch = json.load(open(os.path.join(DATA_ROOT, "BUSINESS_COGNITION_STAGE2_CHALLENGE_V1.json"),
+                        encoding="utf-8"))
+    ch_ids = {s["segment_id"] for s in ch["segments"]}
+    assert all(s["segment_id"] in ch_ids for s in man["segments"])
+
+
+def test_human_only_label_becomes_fn_in_scoring():
+    """核心：Human-only label（AI 未预测）在评分中计入 FN → Recall 真实可计算。"""
+    import sqlite3
+    from treecut.services.annotation_governance import AnnotationService
+    db = os.path.join(DATA_ROOT, "database", "materials.db")
+    svc = AnnotationService(db)
+    mock = "MOCK-HUMAN24-FN-TEST-0001"
+    try:
+        svc.save_business_cognition_review(mock, "WEAK_EVIDENCE", {
+            "user_needs": ["STORAGE", "CUSTOMIZATION"],  # CUSTOMIZATION = human-only
+            "business_values": [], "decision_factors": [], "trust_signals": [],
+            "search_intents": [], "shot_functions": [],
+            "role_affinity": {r: "UNKNOWN" for r in
+                              ("TRAFFIC", "SEARCH", "TRUST", "CONVERSION")},
+            "theme_affinity": {t: "UNKNOWN" for t in
+                               ("SPACE_SOLUTION", "FAMILY_SCENE", "DECISION_AVOID_PIT",
+                                "AESTHETIC_STYLE", "CRAFT_TRUST")},
+            "overall_unknown": "NO", "conflict_observed": "NONE", "comment": "test",
+        }, "HIGH", "REVIEWED", operator="TEST")
+        conn = sqlite3.connect(db)
+        row = conn.execute("SELECT user_needs FROM stage2_business_cognition_review_v1 "
+                           "WHERE segment_id=?", (mock,)).fetchone()
+        conn.close()
+        assert row is not None
+        stored = json.loads(row[0])
+        assert "CUSTOMIZATION" in stored  # human-only label 已持久化
+        # 评分语义：AI={STORAGE} → TP=1 FN=1
+        ai_set, human_set = {"STORAGE"}, set(stored)
+        assert len(human_set - ai_set) == 1  # FN=1
+        assert len(human_set & ai_set) == 1  # TP=1
+    finally:
+        conn = sqlite3.connect(db)
+        conn.execute("DELETE FROM stage2_business_cognition_review_v1 WHERE segment_id=?", (mock,))
+        conn.commit()
+        conn.close()

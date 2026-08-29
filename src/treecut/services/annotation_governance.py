@@ -233,28 +233,41 @@ class AnnotationService:
             conn.close()
 
     def save_business_cognition_review(self, segment_id: str, challenge_class: str,
-                                       judged_needs: list, judged_values: list,
-                                       conflict_observed: str, comment: str,
-                                       human_confidence: str, review_status: str,
-                                       operator: str = "") -> int:
-        """Stage 2 业务认知评审保存 → stage2_business_cognition_review_v1（blind，无 AI 信息）。"""
+                                       values: dict, human_confidence: str,
+                                       review_status: str, operator: str = "") -> int:
+        """Stage 2 业务认知评审保存 → stage2_business_cognition_review_v1。
+
+        保存独立 Human Truth（完整 taxonomy 勾选 + role/theme 全维度评级），
+        不含任何 AI claims/affinity/confidence。BLIND。
+        """
         conn = sqlite3.connect(str(self.db_path), timeout=30)
         try:
             conn.execute(
                 "CREATE TABLE IF NOT EXISTS stage2_business_cognition_review_v1("
                 "segment_id TEXT PRIMARY KEY, challenge_class TEXT,"
-                "judged_needs TEXT, judged_values TEXT, conflict_observed TEXT,"
-                "comment TEXT, human_confidence TEXT, review_status TEXT,"
+                "user_needs TEXT, business_values TEXT, decision_factors TEXT,"
+                "trust_signals TEXT, search_intents TEXT, shot_functions TEXT,"
+                "role_affinity TEXT, theme_affinity TEXT,"
+                "overall_unknown TEXT, conflict_observed TEXT, comment TEXT,"
+                "human_confidence TEXT, review_status TEXT,"
                 "operator TEXT, created_at REAL)")
             cur = conn.execute(
                 "INSERT OR REPLACE INTO stage2_business_cognition_review_v1("
-                "segment_id,challenge_class,judged_needs,judged_values,conflict_observed,"
-                "comment,human_confidence,review_status,operator,created_at) "
-                "VALUES(?,?,?,?,?,?,?,?,?,?)",
+                "segment_id,challenge_class,user_needs,business_values,decision_factors,"
+                "trust_signals,search_intents,shot_functions,role_affinity,theme_affinity,"
+                "overall_unknown,conflict_observed,comment,human_confidence,review_status,"
+                "operator,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                 (segment_id, challenge_class,
-                 json.dumps(judged_needs, ensure_ascii=False),
-                 json.dumps(judged_values, ensure_ascii=False),
-                 conflict_observed, comment, human_confidence, review_status,
+                 json.dumps(values.get("user_needs", []), ensure_ascii=False),
+                 json.dumps(values.get("business_values", []), ensure_ascii=False),
+                 json.dumps(values.get("decision_factors", []), ensure_ascii=False),
+                 json.dumps(values.get("trust_signals", []), ensure_ascii=False),
+                 json.dumps(values.get("search_intents", []), ensure_ascii=False),
+                 json.dumps(values.get("shot_functions", []), ensure_ascii=False),
+                 json.dumps(values.get("role_affinity", {}), ensure_ascii=False),
+                 json.dumps(values.get("theme_affinity", {}), ensure_ascii=False),
+                 values.get("overall_unknown", ""), values.get("conflict_observed", ""),
+                 values.get("comment", ""), human_confidence, review_status,
                  operator, time.time()))
             conn.commit()
             return int(cur.lastrowid)
