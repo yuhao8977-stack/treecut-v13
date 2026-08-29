@@ -102,3 +102,36 @@ def test_v2_motion_hint_not_label():
     out = az.analyze([], component=["DRAWER"])
     assert out["prediction"] == "UNKNOWN"
     az.unload()
+
+
+# ---------------- Mini18 Post-review ----------------
+
+def test_mini18_human_lock_complete():
+    lock = json.load(open(os.path.join(DATA_ROOT, "TARGETED_REVIEW_STAGE3_MINI_V1_HUMAN_LOCK.json"),
+                          encoding="utf-8"))
+    assert lock["count"] == 18
+    assert len({s["segment_id"] for s in lock["segments"]}) == 18
+    assert len(lock["human_truth_sha256"]) == 64
+    assert lock["review_status_distribution"].get("REVIEWED", 0) == 18
+
+
+def test_mini18_discovery_precision_recorded():
+    p = json.load(open(os.path.join(DATA_ROOT, "STAGE3_MINI18_DISCOVERY_PRECISION.json"),
+                       encoding="utf-8"))
+    assert p["join"]["pass"] is True
+    for cat in ("OPERATE_SOCKET", "CUSTOMER_HOME", "SOLID_WOOD"):
+        d = p["per_category"][cat]
+        assert d["candidate_count"] == (8 if cat == "OPERATE_SOCKET" else 5)
+        assert d["candidate_precision"] == 0.0  # 诚实结果：三类全 0
+        assert p["discovery_verdict"][cat] == "FAILED_DISCOVERY"
+
+
+def test_final_consolidation_input_fields():
+    c = json.load(open(os.path.join(DATA_ROOT, "STAGE3_FINAL_CONSOLIDATION_INPUT.json"),
+                       encoding="utf-8"))
+    allowed = {"READY_CANDIDATE", "LIMITED", "EXPERIMENTAL", "FALLBACK", "LIBRARY_GAP"}
+    for field, st in c["field_status"].items():
+        assert st in allowed, f"{field}: {st}"
+    assert c["field_status"]["people_presence"] == "READY_CANDIDATE"
+    assert c["field_status"]["semantic_action"] == "EXPERIMENTAL"
+    assert c["review_verdict"] == "NO_MORE_MANUAL_REVIEW_FOR_STAGE3"
