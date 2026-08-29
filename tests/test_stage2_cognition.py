@@ -394,3 +394,143 @@ def test_calibration_v3_four_state_scoring():
     true_set = {k for k, v in labels.items() if v == "CLEARLY_SUPPORTED"}
     assert "STORAGE" in (ai_supported & true_set)          # TRUE
     assert "POWER_CONVENIENCE" not in (ai_supported & true_set)  # OVERCONFIDENT 非 TP
+
+
+# ---------------------------------------------------------------------------
+# Stage 2.1 — Claim Gating + Confidence Calibration（TEST A-M）
+# ---------------------------------------------------------------------------
+
+from treecut.services.business_cognition_v2_1 import BusinessCognitionServiceV2_1  # noqa: E402
+
+
+def _v21():
+    return BusinessCognitionServiceV2_1()
+
+
+def _claim_status(bc, value):
+    for c in bc["business_claims"]:
+        if c["claim_value"] == value:
+            return c["claim_status"]
+    return "ABSENT"
+
+
+def _conflict_types(bc):
+    return [c["type"] for c in bc["conflicts"]["conflicts"]]
+
+
+def test_a_drawer_only_not_supported_storage():
+    """TEST A：DRAWER only → STORAGE != SUPPORTED。"""
+    svc = _v21()
+    bc = svc.cognize("tA", {"component": ["DRAWER"]})
+    assert _claim_status(bc, "STORAGE") != "SUPPORTED"
+    assert _claim_status(bc, "STORAGE") in ("CANDIDATE", "WEAK", "UNKNOWN")
+    svc.ks.unload()
+
+
+def test_b_drawer_storage_function_supported():
+    """TEST B：DRAWER + STORAGE function → STORAGE SUPPORTED。"""
+    svc = _v21()
+    bc = svc.cognize("tB", {"component": ["DRAWER"], "function": ["STORAGE"]})
+    assert _claim_status(bc, "STORAGE") == "SUPPORTED"
+    svc.ks.unload()
+
+
+def test_c_drawer_only_not_supported_storage_eff():
+    """TEST C：DRAWER only → STORAGE_EFFICIENCY != SUPPORTED。"""
+    svc = _v21()
+    bc = svc.cognize("tC", {"component": ["DRAWER"]})
+    assert _claim_status(bc, "STORAGE_EFFICIENCY") != "SUPPORTED"
+    svc.ks.unload()
+
+
+def test_d_storage_supported_not_auto_value():
+    """TEST D：STORAGE SUPPORTED 不自动 STORAGE_EFFICIENCY SUPPORTED（Need→Value 解耦）。"""
+    svc = _v21()
+    bc = svc.cognize("tD", {"component": ["DRAWER"], "function": ["STORAGE"]})
+    assert _claim_status(bc, "STORAGE") == "SUPPORTED"
+    assert _claim_status(bc, "STORAGE_EFFICIENCY") != "SUPPORTED"
+    svc.ks.unload()
+
+
+def test_e_drawer_asr_storage_supported():
+    """TEST E：DRAWER + 明确 ASR 收纳 → STORAGE SUPPORTED。"""
+    svc = _v21()
+    bc = svc.cognize("tE", {"component": ["DRAWER"]}, asr_text="这里增加两个抽屉做收纳")
+    assert _claim_status(bc, "STORAGE") == "SUPPORTED"
+    svc.ks.unload()
+
+
+def test_f_socket_only_power_candidate():
+    """TEST F：TRACK_SOCKET component only → POWER_CONVENIENCE 最多 CANDIDATE。"""
+    svc = _v21()
+    bc = svc.cognize("tF", {"component": ["TRACK_SOCKET"]})
+    st = _claim_status(bc, "POWER_CONVENIENCE")
+    assert st in ("CANDIDATE", "WEAK", "UNKNOWN")
+    assert st != "SUPPORTED"
+    svc.ks.unload()
+
+
+def test_g_socket_asr_power_supported():
+    """TEST G：TRACK_SOCKET + 明确供电/充电 ASR → POWER_CONVENIENCE SUPPORTED。"""
+    svc = _v21()
+    bc = svc.cognize("tG", {"component": ["TRACK_SOCKET"]}, asr_text="轨道插座充电方便")
+    assert _claim_status(bc, "POWER_CONVENIENCE") == "SUPPORTED"
+    svc.ks.unload()
+
+
+def test_h_dining_strong_supported():
+    """TEST H：DINING 强证据 → SUPPORTED。"""
+    svc = _v21()
+    bc = svc.cognize("tH", {"component": ["COUNTERTOP"], "function": ["DINING"]})
+    assert _claim_status(bc, "DINING") == "SUPPORTED"
+    svc.ks.unload()
+
+
+def test_i_office_strong_supported():
+    """TEST I：OFFICE 强证据 → SUPPORTED（function + 办公 ASR 语义，符合 V3 4/4 路径）。"""
+    svc = _v21()
+    bc = svc.cognize("tI", {"function": ["OFFICE"]}, asr_text="这里可以办公写作业")
+    assert _claim_status(bc, "OFFICE") == "SUPPORTED"
+    svc.ks.unload()
+
+
+def test_j_semantic_action_only_no_supported():
+    """TEST J：semantic_action only → 无 SUPPORTED business claim。"""
+    svc = _v21()
+    bc = svc.cognize("tJ", {"action_sequence": ["OPEN_DRAWER"]})
+    sups = [c["claim_value"] for c in bc["business_claims"] if c["claim_status"] == "SUPPORTED"]
+    assert sups == []
+    svc.ks.unload()
+
+
+def test_k_hypothetical_no_scene_conflict():
+    """TEST K：假设语境 + FACTORY → 不产生 scene conflict。"""
+    svc = _v21()
+    bc = svc.cognize("tK", {"scene_family": "FACTORY"}, asr_text="如果家里有宝宝我们可以这样设计")
+    assert "CONFLICTING_EVIDENCE" not in _conflict_types(bc)
+    assert "NON_ASSERTED_CONTEXT" in _conflict_types(bc)  # 记录但不算冲突
+    svc.ks.unload()
+
+
+def test_l_asserted_scene_conflict():
+    """TEST L：明确断言客户家 + FACTORY → scene conflict。"""
+    svc = _v21()
+    bc = svc.cognize("tL", {"scene_family": "FACTORY"}, asr_text="这是客户家，我们来看看")
+    assert "CONFLICTING_EVIDENCE" in _conflict_types(bc)
+    svc.ks.unload()
+
+
+def test_m_negative_rule_zero_violation():
+    """TEST M：Negative Rules hard violation = 0。"""
+    svc = _v21()
+    cases = [
+        {"component": ["TRACK_SOCKET"], "function": ["POWER"]},
+        {"scene_family": "FACTORY"},
+        {"people_presence": "YES", "component": ["DRAWER"], "function": ["STORAGE"]},
+    ]
+    for i, seg in enumerate(cases):
+        bc = svc.cognize(f"tM{i}", seg)
+        bad = [c["claim_value"] for c in bc["business_claims"]
+               if c["claim_value"] in ("OPERATE_SOCKET", "REAL_CUSTOMER_CASE", "FAMILY_GATHERING")]
+        assert bad == [], f"NR 违规: {bad}"
+    svc.ks.unload()

@@ -133,6 +133,20 @@ TASKS = [
               "· 证据充分度 / 冲突 / 把握度 必选（无默认）\n"
               "· 系统不显示 AI 答案 / 之前任何选择 / 旧评分\n"
               "· 状态定义见表单顶部；低把握度完全合法")},
+    {"id": "BUSINESS_COGNITION_FRESH_VALIDATION_V1", "name": "Stage2.1 Fresh18 盲审（独立验证·10 标签单状态）", "type": "BUSINESS_COGNITION",
+     "manifest": os.path.join(DATA_ROOT, "BUSINESS_COGNITION_FRESH_VALIDATION_V1.json"),
+     "table": "stage2_business_cognition_calibration_v3",  # 复用 V3 单状态表结构
+     "calibration_v3": True,
+     "blind": True,
+     "show_frozen_evidence": True,
+     "hide_sampling_class": True,
+     "hint": ("Stage2.1 Fresh18 盲审（MINI INDEPENDENT VALIDATION，18 条）。\n"
+              "这是 V2.1 引擎冻结后的独立验证集（与全部旧评估集不重叠）。\n"
+              "· 只看视频 + 冻结证据，独立判断 10 个标签（与 Calibration V3 同界面）\n"
+              "· 点击循环切换：不支持 → 明确支持 → 可能但不足 → 无法判断\n"
+              "· 一个标签只能一个状态；证据充分度 / 冲突 / 把握度 必选\n"
+              "· 系统不显示 AI 预测 / 任何旧答案 / 采样类别\n"
+              "· 判断标准：这个几秒镜头本身证明了什么，不是产品理论上有什么价值")},
 ]
 
 

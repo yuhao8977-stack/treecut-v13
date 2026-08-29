@@ -1,0 +1,391 @@
+{
+ "namespace": "business_rules_v2_1",
+ "count": 9,
+ "records": [
+  {
+   "knowledge_id": "ESV2-001",
+   "namespace": "business_rules_v2_1",
+   "knowledge_type": "EVIDENCE_POLICY",
+   "title": "Evidence Grade A/B/C/D/NONE",
+   "statement": "Grade A: 可靠直接 Evidence + 独立第二 family（非 VERY_LOW）+ 无冲突；B: MEDIUM_HIGH 直接 Evidence + 规则强匹配；C: 同 provider 一致或组件+推断；D: LOW/VERY_LOW/弱关键词/语义动作主导；NONE: 无有效证据",
+   "structured_payload": {
+    "rule_id": "ESV2-001",
+    "grades": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "NONE"
+    ],
+    "policy_version": "EVIDENCE_STRENGTH_V2_POLICY_1",
+    "note": "semantic_action(MOTION_ASR,VERY_LOW) 不得作为独立第二 family 来源"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "2.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2_1",
+    "EVIDENCE_POLICY"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 16:30",
+   "updated_at": null,
+   "supersedes": "business_rules_v2",
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_1_CLAIM_GATING",
+   "review_note": "Stage2.1 Claim Gating 规则冻结（基于 V3 Calibration 结论）"
+  },
+  {
+   "knowledge_id": "ESV2-002",
+   "namespace": "business_rules_v2_1",
+   "knowledge_type": "EVIDENCE_POLICY",
+   "title": "Family 防重复计票（保持）",
+   "statement": "SIGLIP component/function/material/product 同 family 不算独立来源；可提升 semantic_consistency；独立来源仅 ASR/OCR/YOLO/HUMAN/METADATA/OTHER",
+   "structured_payload": {
+    "rule_id": "ESV2-002",
+    "note": "EvidenceResolverV1 family 纪律延续"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "2.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2_1",
+    "EVIDENCE_POLICY"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 16:30",
+   "updated_at": null,
+   "supersedes": "business_rules_v2",
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_1_CLAIM_GATING",
+   "review_note": "Stage2.1 Claim Gating 规则冻结（基于 V3 Calibration 结论）"
+  },
+  {
+   "knowledge_id": "CS-001",
+   "namespace": "business_rules_v2_1",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "Claim Status 六档",
+   "statement": "CONFIRMED(仅 Human Verified/明确事实链) / SUPPORTED(Grade A/B+规则+NR通过+无冲突) / CANDIDATE(Grade B/C 业务合理但 Segment 不足) / WEAK(Grade D 或弱冲突) / UNKNOWN(无足够信息) / BLOCKED(NR 阻断)",
+   "structured_payload": {
+    "rule_id": "CS-001",
+    "statuses": [
+     "CONFIRMED",
+     "SUPPORTED",
+     "CANDIDATE",
+     "WEAK",
+     "UNKNOWN",
+     "BLOCKED"
+    ]
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "2.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2_1",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 16:30",
+   "updated_at": null,
+   "supersedes": "business_rules_v2",
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_1_CLAIM_GATING",
+   "review_note": "Stage2.1 Claim Gating 规则冻结（基于 V3 Calibration 结论）"
+  },
+  {
+   "knowledge_id": "SG-001",
+   "namespace": "business_rules_v2_1",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "STORAGE Gate V2（V3 证明 NEEDS_REWORK）",
+   "statement": "禁止 DRAWER only → STORAGE SUPPORTED；PATH A: DRAWER/CABINET+STORAGE function+Grade>=B（ASR 非空但无收纳语义 → 降级 CANDIDATE）；PATH B: ASR 明确收纳语义 → SUPPORTED；PATH C: 明确视觉使用+可靠 function（semantic_action 不单独满足）；仅组件 → CANDIDATE",
+   "structured_payload": {
+    "rule_id": "SG-001",
+    "paths": [
+     "A_COMP_FUNC_GRADE",
+     "B_ASR_EXPLICIT",
+     "C_VISUAL_USE"
+    ],
+    "asr_words": [
+     "收纳",
+     "储物",
+     "放东西",
+     "抽屉收",
+     "柜内储物"
+    ]
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "2.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2_1",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 16:30",
+   "updated_at": null,
+   "supersedes": "business_rules_v2",
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_1_CLAIM_GATING",
+   "review_note": "Stage2.1 Claim Gating 规则冻结（基于 V3 Calibration 结论）"
+  },
+  {
+   "knowledge_id": "SG-002",
+   "namespace": "business_rules_v2_1",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "STORAGE_EFFICIENCY 更高门槛",
+   "statement": "即使 STORAGE=SUPPORTED 也不自动 STORAGE_EFFICIENCY=SUPPORTED（'可以储物'≠'效率高'）；需 ASR 明确效率语义 或 多存储区+语境支持；否则最多 CANDIDATE",
+   "structured_payload": {
+    "rule_id": "SG-002",
+    "asr_words": [
+     "增加收纳",
+     "提高利用率",
+     "更多储物",
+     "收纳效率"
+    ]
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "2.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2_1",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 16:30",
+   "updated_at": null,
+   "supersedes": "business_rules_v2",
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_1_CLAIM_GATING",
+   "review_note": "Stage2.1 Claim Gating 规则冻结（基于 V3 Calibration 结论）"
+  },
+  {
+   "knowledge_id": "NV-001",
+   "namespace": "business_rules_v2_1",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NEED_VALUE_DERIVATION_GATE",
+   "statement": "Need 不自动升级 Value：STORAGE→STORAGE_EFFICIENCY、CHARGING_POWER→POWER_CONVENIENCE、DINING→DINING_CONVENIENCE、OFFICE→WORK_FROM_HOME 均需 Value 自身 Business Rule+Evidence",
+   "structured_payload": {
+    "rule_id": "NV-001",
+    "pairs": [
+     [
+      "STORAGE",
+      "STORAGE_EFFICIENCY"
+     ],
+     [
+      "CHARGING_POWER",
+      "POWER_CONVENIENCE"
+     ],
+     [
+      "DINING",
+      "DINING_CONVENIENCE"
+     ],
+     [
+      "OFFICE",
+      "WORK_FROM_HOME"
+     ]
+    ]
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "2.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2_1",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 16:30",
+   "updated_at": null,
+   "supersedes": "business_rules_v2",
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_1_CLAIM_GATING",
+   "review_note": "Stage2.1 Claim Gating 规则冻结（基于 V3 Calibration 结论）"
+  },
+  {
+   "knowledge_id": "PG-001",
+   "namespace": "business_rules_v2_1",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "POWER component-only → CANDIDATE",
+   "statement": "TRACK_SOCKET alone → POWER_CONVENIENCE 最多 CANDIDATE；有 function/ASR 供电语义 + Grade>=B → SUPPORTED",
+   "structured_payload": {
+    "rule_id": "PG-001",
+    "asr_words": [
+     "充电",
+     "取电",
+     "供电",
+     "插电"
+    ]
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "2.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2_1",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 16:30",
+   "updated_at": null,
+   "supersedes": "business_rules_v2",
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_1_CLAIM_GATING",
+   "review_note": "Stage2.1 Claim Gating 规则冻结（基于 V3 Calibration 结论）"
+  },
+  {
+   "knowledge_id": "UC-001",
+   "namespace": "business_rules_v2_1",
+   "knowledge_type": "EVIDENCE_POLICY",
+   "title": "UtteranceContextV1",
+   "statement": "话语语境分类：ASSERTED/HYPOTHETICAL/CONDITIONAL/GENERIC_EXAMPLE/NEGATED/QUOTED/UNKNOWN；假设语境（如果/假如/要是/比如/有宝宝的话等）不得作为 CURRENT_CONTEXT=HOME，也不得与 FACTORY 冲突",
+   "structured_payload": {
+    "rule_id": "UC-001",
+    "types": [
+     "ASSERTED",
+     "HYPOTHETICAL",
+     "CONDITIONAL",
+     "GENERIC_EXAMPLE",
+     "NEGATED",
+     "QUOTED",
+     "UNKNOWN"
+    ],
+    "hypothetical_markers": [
+     "如果",
+     "假如",
+     "要是",
+     "比如",
+     "比如说",
+     "有宝宝的话",
+     "家里如果",
+     "客户如果",
+     "假设",
+     "以后如果"
+    ]
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "2.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2_1",
+    "EVIDENCE_POLICY"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 16:30",
+   "updated_at": null,
+   "supersedes": "business_rules_v2",
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_1_CLAIM_GATING",
+   "review_note": "Stage2.1 Claim Gating 规则冻结（基于 V3 Calibration 结论）"
+  },
+  {
+   "knowledge_id": "CF-001",
+   "namespace": "business_rules_v2_1",
+   "knowledge_type": "EVIDENCE_POLICY",
+   "title": "ConflictResolverV2（仅 ASSERTED 触发）",
+   "statement": "只有明确 ASSERTED（'这是客户家'等）+ 另一可靠证据 FACTORY 才允许 CONFLICTING_EVIDENCE；假设/条件/泛例语境记录 NON_ASSERTED_CONTEXT 但不冲突",
+   "structured_payload": {
+    "rule_id": "CF-001",
+    "asserted_patterns": [
+     "这是客户家",
+     "我们现在在客户家",
+     "这个是业主家里的"
+    ]
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "2.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2_1",
+    "EVIDENCE_POLICY"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 16:30",
+   "updated_at": null,
+   "supersedes": "business_rules_v2",
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_1_CLAIM_GATING",
+   "review_note": "Stage2.1 Claim Gating 规则冻结（基于 V3 Calibration 结论）"
+  }
+ ],
+ "source": "Stage2.1 Claim Gating 规则冻结（基于 V3 Calibration：STORAGE NEEDS_REWORK，6 标签 NO_ERROR_OBSERVED，GUEST_CAPACITY/FLEXIBLE UNTESTED）",
+ "supersedes": "business_rules_v2"
+}
