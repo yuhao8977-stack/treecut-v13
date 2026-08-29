@@ -1068,6 +1068,211 @@ def validate_business_cognition(values: dict) -> tuple[bool, str]:
     return True, ""
 
 
+# ---------------------------------------------------------------------------
+# Adjudication V2b — 简化复核表单（四态语义，只审 needs/values/evidence/conflict）
+# ---------------------------------------------------------------------------
+
+class _AdjudicationV2bForm(tk.Frame):
+    """简化版复核表单。
+
+    只复核：user_needs / business_values / evidence sufficiency / conflict / confidence。
+    四态语义：
+      【明确支持】CLEARLY_SUPPORTED —— 当前视频/冻结可靠证据有明确直接支持
+      【可能相关但证据不足】POSSIBLE_BUT_INSUFFICIENT —— 可联想但镜头本身证明不足
+      未选择 = NOT_REVIEWED/NOT_ASSERTED（不计任何 Truth）
+      FIELD_UNKNOWN —— 整个字段无法可靠判断
+    两个多选区（明确支持 / 可能相关），避免 39 行逐项四选一的负担。
+    """
+
+    def __init__(self, master, on_save, conf_var=None, status_var=None, taxonomy=None):
+        super().__init__(master)
+        self.on_save = on_save
+        self.conf_var = conf_var
+        self.status_var = status_var
+        self.tax = taxonomy or DEFAULT_TAXONOMY
+        self.vars = {}
+        self._build()
+
+    def _region(self, parent, row, label, options, key):
+        tk.Label(parent, text=label, bg="#f0f0f0", anchor=tk.NW,
+                 font=("Microsoft YaHei", 10, "bold")).grid(
+            row=row, column=0, sticky=tk.NW, pady=2)
+        wrap = ttk.Frame(parent)
+        wrap.grid(row=row, column=1, sticky=tk.W, padx=6)
+        lb = tk.Listbox(wrap, selectmode=tk.MULTIPLE, height=min(6, max(4, len(options))),
+                        width=46, exportselection=False, font=("Microsoft YaHei", 9))
+        for o in options:
+            lb.insert(tk.END, f"{o['cn']}（{o['id']}）")
+        sb = ttk.Scrollbar(wrap, orient="vertical", command=lb.yview)
+        lb.configure(yscrollcommand=sb.set)
+        lb.pack(side=tk.LEFT)
+        sb.pack(side=tk.RIGHT, fill=tk.Y)
+        self.vars[key] = lb
+        return lb
+
+    def _build(self):
+        canvas = tk.Canvas(self, highlightthickness=0, bg="#f0f0f0")
+        vsb = ttk.Scrollbar(self, orient="vertical", command=canvas.yview)
+        inner = tk.Frame(canvas)
+        inner_id = canvas.create_window((0, 0), window=inner, anchor="nw")
+        canvas.configure(yscrollcommand=vsb.set)
+        canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        vsb.pack(side=tk.RIGHT, fill=tk.Y)
+        inner.bind("<Configure>",
+                   lambda _e: canvas.configure(scrollregion=canvas.bbox("all")))
+        canvas.bind("<Configure>",
+                    lambda e: canvas.itemconfigure(inner_id, width=e.width - 8))
+        form = ttk.Frame(inner)
+        form.pack(fill=tk.BOTH, expand=True, padx=10, pady=6)
+
+        r = 0
+        tk.Label(form, text="只判断两层：① 这个镜头【明确支持】什么（证据充分）；② 什么只是【可能相关】（联想，证据不足）。"
+                            "其余不选 = 未主张。看不准 → 整字段选『无法判断』。",
+                 bg="#fff8e1", anchor=tk.W, wraplength=540,
+                 font=("Microsoft YaHei", 9), foreground="#8a6d00").grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(2, 6)); r += 1
+
+        # A. user_needs：明确支持
+        tk.Label(form, text="A. 用户需求 — 【明确支持】CLEARLY_SUPPORTED（多选）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        self._region(form, r, "（证据充分，明确支持）", self.tax["user_needs"],
+                     "clearly_needs"); r += 1
+
+        # B. user_needs：可能相关但证据不足
+        tk.Label(form, text="B. 用户需求 — 【可能相关但证据不足】POSSIBLE（多选）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        self._region(form, r, "（可联想，但镜头本身证明不了）", self.tax["user_needs"],
+                     "possible_needs"); r += 1
+
+        tk.Label(form, text="用户需求整字段无法判断？", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.W, pady=2)
+        self.vars["needs_field_unknown"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["needs_field_unknown"],
+                     values=("NO", "YES"), width=8, state="readonly",
+                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        # C. business_values：明确支持
+        tk.Label(form, text="C. 商业价值 — 【明确支持】CLEARLY_SUPPORTED（多选）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        self._region(form, r, "（证据充分，明确支持）", self.tax["business_values"],
+                     "clearly_values"); r += 1
+
+        # D. business_values：可能相关
+        tk.Label(form, text="D. 商业价值 — 【可能相关但证据不足】POSSIBLE（多选）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        self._region(form, r, "（可联想，但镜头本身证明不了）", self.tax["business_values"],
+                     "possible_values"); r += 1
+
+        tk.Label(form, text="商业价值整字段无法判断？", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.W, pady=2)
+        self.vars["values_field_unknown"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["values_field_unknown"],
+                     values=("NO", "YES"), width=8, state="readonly",
+                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        # E. evidence sufficiency
+        tk.Label(form, text="E. 整体证据充分度（该片段是否足以做业务判断）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        tk.Label(form, text="证据充分度", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.W, pady=2)
+        self.vars["evidence_sufficiency"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["evidence_sufficiency"],
+                     values=("SUFFICIENT", "PARTIAL", "INSUFFICIENT", "UNKNOWN"),
+                     width=14, state="readonly", font=("Microsoft YaHei", 10)).grid(
+            row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        # F. conflict
+        tk.Label(form, text="F. 是否存在证据冲突（话语↔画面矛盾）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        tk.Label(form, text="冲突", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.W, pady=2)
+        self.vars["conflict_observed"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["conflict_observed"],
+                     values=("YES", "NO", "UNKNOWN"), width=10, state="readonly",
+                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        # G. review confidence（质量诊断）
+        tk.Label(form, text="G. 本次复核把握度（质量诊断用）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        tk.Label(form, text="把握度", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.W, pady=2)
+        self.vars["review_confidence"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["review_confidence"],
+                     values=("HIGH", "MEDIUM", "LOW"), width=10, state="readonly",
+                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        # H. comment
+        tk.Label(form, text="H. 备注（可选）", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.NW, pady=3)
+        self.vars["comment"] = tk.StringVar()
+        tk.Entry(form, textvariable=self.vars["comment"], width=46,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        tk.Label(form, text="* 人工置信度 / 审核状态 在顶部工具栏选择（必选）",
+                 bg="#f0f0f0", fg="#b00000", font=("Microsoft YaHei", 9, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.W, pady=(12, 2))
+
+    def _selected(self, key):
+        lb = self.vars[key]
+        out = []
+        for i in lb.curselection():
+            txt = lb.get(i)
+            if "（" in txt and txt.endswith("）"):
+                out.append(txt.split("（", 1)[1][:-1])
+        return out
+
+    def collect(self) -> dict:
+        conf_raw = self.conf_var.get() if self.conf_var is not None else ""
+        status_raw = self.status_var.get() if self.status_var is not None else ""
+        return {
+            "clearly_needs": self._selected("clearly_needs"),
+            "possible_needs": self._selected("possible_needs"),
+            "clearly_values": self._selected("clearly_values"),
+            "possible_values": self._selected("possible_values"),
+            "needs_field_unknown": self.vars.get("needs_field_unknown").get() == "YES",
+            "values_field_unknown": self.vars.get("values_field_unknown").get() == "YES",
+            "evidence_sufficiency": self.vars.get("evidence_sufficiency").get() or "",
+            "conflict_observed": self.vars.get("conflict_observed").get() or "",
+            "review_confidence": self.vars.get("review_confidence").get() or "",
+            "comment": self.vars.get("comment").get() or "",
+            "human_confidence": {"高": "HIGH", "中": "MEDIUM", "低": "LOW"}.get(conf_raw, ""),
+            "review_status": {"已审核": "REVIEWED", "需复核": "NEEDS_SECOND_REVIEW",
+                              "金标准": "GOLD", "排除": "EXCLUDED"}.get(status_raw, ""),
+        }
+
+    def reset(self):
+        for k, v in self.vars.items():
+            if isinstance(v, tk.Listbox):
+                v.selection_clear(0, tk.END)
+            else:
+                v.set("")
+        if self.conf_var is not None:
+            self.conf_var.set("")
+        if self.status_var is not None:
+            self.status_var.set("")
+
+
+def validate_adjudication_v2b(values: dict) -> tuple[bool, str]:
+    """V2b 校验：置信度/状态必选；review_confidence 必选；允许全字段 UNKNOWN。"""
+    conf = (values.get("human_confidence") or "").strip().upper()
+    status = (values.get("review_status") or "").strip().upper()
+    if conf not in ("HIGH", "MEDIUM", "LOW"):
+        return False, "人工置信度未选择（顶部工具栏）"
+    if status not in ("REVIEWED", "NEEDS_SECOND_REVIEW", "GOLD", "EXCLUDED"):
+        return False, "审核状态未选择（顶部工具栏）"
+    rc = (values.get("review_confidence") or "").strip().upper()
+    if rc not in ("HIGH", "MEDIUM", "LOW"):
+        return False, "本次复核把握度未选择"
+    return True, ""
+
+
 def main():
     import sys as _sys
     mode = _sys.argv[1] if len(_sys.argv) > 1 else "adjudication"

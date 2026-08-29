@@ -318,6 +318,53 @@ class AnnotationService:
         finally:
             conn.close()
 
+    def save_business_cognition_adjudication_v2b(
+            self, segment_id: str, clearly_needs: list, possible_needs: list,
+            clearly_values: list, possible_values: list,
+            needs_field_unknown: bool, values_field_unknown: bool,
+            evidence_sufficiency: str, conflict_observed: str,
+            review_confidence: str, review_duration_seconds: float,
+            review_status: str, comment: str = "", operator: str = "") -> int:
+        """Adjudication V2b（简化版，四态语义）→ stage2_business_cognition_adjudication_v2b。
+
+        只复核 needs/values/evidence/conflict。
+        Human supported truth = clearly_*；possible_* 仅报告不计 SUPPORTED TP。
+        """
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            conn.execute(
+                "CREATE TABLE IF NOT EXISTS stage2_business_cognition_adjudication_v2b("
+                "segment_id TEXT PRIMARY KEY,"
+                "clearly_supported_needs TEXT, possible_needs TEXT,"
+                "clearly_supported_values TEXT, possible_values TEXT,"
+                "needs_field_unknown INTEGER, values_field_unknown INTEGER,"
+                "evidence_sufficiency TEXT, conflict_observed TEXT,"
+                "review_confidence TEXT, review_duration_seconds REAL,"
+                "review_status TEXT, comment TEXT, operator TEXT, created_at REAL)")
+            cur = conn.execute(
+                "INSERT OR REPLACE INTO stage2_business_cognition_adjudication_v2b("
+                "segment_id,clearly_supported_needs,possible_needs,"
+                "clearly_supported_values,possible_values,"
+                "needs_field_unknown,values_field_unknown,"
+                "evidence_sufficiency,conflict_observed,"
+                "review_confidence,review_duration_seconds,"
+                "review_status,comment,operator,created_at) "
+                "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (segment_id,
+                 json.dumps(clearly_needs, ensure_ascii=False),
+                 json.dumps(possible_needs, ensure_ascii=False),
+                 json.dumps(clearly_values, ensure_ascii=False),
+                 json.dumps(possible_values, ensure_ascii=False),
+                 1 if needs_field_unknown else 0,
+                 1 if values_field_unknown else 0,
+                 evidence_sufficiency, conflict_observed,
+                 review_confidence, review_duration_seconds,
+                 review_status, comment, operator, time.time()))
+            conn.commit()
+            return int(cur.lastrowid)
+        finally:
+            conn.close()
+
 
 class ReviewQueueService:
     """主动学习审核队列（基础，11）。"""

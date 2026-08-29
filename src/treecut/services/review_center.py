@@ -28,7 +28,8 @@ from tkinter import messagebox, ttk
 
 from treecut.services.phase3_review_ui import (
     FFMPEG, FIELD_CN, GROUPS, PlaybackController, _V21Form, _BusinessCognitionReviewForm,
-    validate_business_cognition, cn, en, validate_v21,
+    _AdjudicationV2bForm, validate_business_cognition, validate_adjudication_v2b,
+    cn, en, validate_v21,
 )
 from treecut.services.schema_v2 import DICTIONARY_VERSION_V2_1
 
@@ -102,20 +103,22 @@ TASKS = [
               "· role/theme 全部维度独立 5 级评级（强/中/弱/不支持/未知）\n"
               "· 看不准 → 不勾 / 选未知（宁可 Unknown 不制造过标）\n"
               "· 系统不显示任何 AI 结论；冻结证据中 [MODEL] 标注为模型预测非事实")},
-    {"id": "HUMAN24_ADJUDICATION_V2", "name": "Stage2 Human24 复核（Adjudication V2·12 条盲审）", "type": "BUSINESS_COGNITION",
+    {"id": "HUMAN24_ADJUDICATION_V2", "name": "Stage2 Human24 复核（Adjudication V2b·12 条盲审·简化）", "type": "BUSINESS_COGNITION",
      "manifest": os.path.join(DATA_ROOT, "BUSINESS_COGNITION_STAGE2_HUMAN_ADJUDICATION_V2.json"),
-     "table": "stage2_business_cognition_adjudication_v2",
-     "adjudication_mode": True,      # V2 复核：记录 review_confidence + 时长
-     "blind": True,                  # 不显示 AI/V1/评分/错误类型/sampling class
+     "table": "stage2_business_cognition_adjudication_v2b",
+     "adjudication_mode": True,       # V2b：只审 needs/values/evidence/conflict（四态）
+     "simplified_v2b": True,
+     "blind": True,                   # 不显示 AI/V1/评分/错误类型/sampling class
      "show_frozen_evidence": True,
      "hide_sampling_class": True,
-     "hint": ("Stage2 Human24 复核（Adjudication V2，12 条盲审）。\n"
-              "这是对第一批 Human24 的独立复核（状态好时再做）。\n"
-              "· 系统不显示第一次的选择，也不显示 AI 答案 / 旧评分 / 错误类型\n"
-              "· 只看视频 + 冻结证据，重新独立判断（可与此前不同，以本次为准）\n"
-              "· 每条允许选择『把握度』：高/中/低（低=不确定，允许，不需硬选）\n"
-              "· 多标签从完整固定清单独立勾选；role/theme 全维度独立评级\n"
-              "· 看不准 → 不勾 / 选未知；宁可 Unknown 不制造过标")},
+     "hint": ("Stage2 Human24 复核（Adjudication V2b，12 条盲审·简化版）。\n"
+              "目的：验证第一次 Human24 的 needs/values/证据/冲突判断是否可靠。\n"
+              "只判断两层：\n"
+              "· 【明确支持】：这个镜头本身证据充分，明确支持该业务意义\n"
+              "· 【可能相关但证据不足】：可联想到，但镜头本身证明不了\n"
+              "· 其余不选 = 未主张；看不准 → 整字段选『无法判断』\n"
+              "· 系统不显示第一次的选择 / AI 答案 / 旧评分\n"
+              "· 每条选『把握度』：高/中/低（低=不确定，允许，不需硬选）")},
 ]
 
 
@@ -253,12 +256,18 @@ class ReviewTaskWindow(tk.Toplevel):
         right = ttk.Frame(paned, width=600)
         paned.add(right, weight=6)  # 注意：ttk.Panedwindow 不支持 minsize 选项（曾致 _build_review 崩溃）
         if self.task.get("type") == "BUSINESS_COGNITION":
-            self.form = _BusinessCognitionReviewForm(right, self._save,
-                                                     conf_var=self.conf_var,
-                                                     status_var=self.status_var,
-                                                     taxonomy=self._load_taxonomy(),
-                                                     adjudication_mode=bool(
-                                                         self.task.get("adjudication_mode")))
+            if self.task.get("simplified_v2b"):
+                self.form = _AdjudicationV2bForm(right, self._save,
+                                                 conf_var=self.conf_var,
+                                                 status_var=self.status_var,
+                                                 taxonomy=self._load_taxonomy())
+            else:
+                self.form = _BusinessCognitionReviewForm(right, self._save,
+                                                         conf_var=self.conf_var,
+                                                         status_var=self.status_var,
+                                                         taxonomy=self._load_taxonomy(),
+                                                         adjudication_mode=bool(
+                                                             self.task.get("adjudication_mode")))
         else:
             self.form = _V21Form(right, self._save,
                                  conf_var=self.conf_var, status_var=self.status_var)
@@ -431,6 +440,19 @@ class ReviewTaskWindow(tk.Toplevel):
                 it["segment_id"], values,
                 values.get("review_confidence", ""), duration, status,
                 operator=os.environ.get("USERNAME", ""))
+        elif self.task["table"] == "stage2_business_cognition_adjudication_v2b":
+            duration = max(0.0, time.time() - getattr(self, "_review_start", time.time()))
+            svc.save_business_cognition_adjudication_v2b(
+                it["segment_id"],
+                values.get("clearly_needs", []), values.get("possible_needs", []),
+                values.get("clearly_values", []), values.get("possible_values", []),
+                values.get("needs_field_unknown", False),
+                values.get("values_field_unknown", False),
+                values.get("evidence_sufficiency", ""),
+                values.get("conflict_observed", ""),
+                values.get("review_confidence", ""), duration, status,
+                comment=values.get("comment", ""),
+                operator=os.environ.get("USERNAME", ""))
         else:
             svc.save_v3(it["segment_id"], values,
                         values["human_confidence"], status,
@@ -441,7 +463,10 @@ class ReviewTaskWindow(tk.Toplevel):
             return
         values = self.form.collect()
         if self.task.get("type") == "BUSINESS_COGNITION":
-            ok, msg = validate_business_cognition(values)
+            if self.task.get("simplified_v2b"):
+                ok, msg = validate_adjudication_v2b(values)
+            else:
+                ok, msg = validate_business_cognition(values)
             status = values.get("review_status", "REVIEWED")
         else:
             ok, msg, status = validate_v21(values, values["human_confidence"],

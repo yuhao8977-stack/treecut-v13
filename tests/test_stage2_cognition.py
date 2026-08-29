@@ -297,3 +297,54 @@ def test_v1_v2_comparison_verdict_logic():
     assert verdict(0.9) == "ADJUDICATED_HUMAN_TRUTH"
     assert verdict(0.84) == "UNRELIABLE_FOR_CALIBRATION"
     assert verdict(0.5) == "UNRELIABLE_FOR_CALIBRATION"
+
+
+def test_v2b_four_state_scoring_semantics():
+    """四态语义：只有 CLEARLY_SUPPORTED 计 Human positive；POSSIBLE 不计 SUPPORTED TP。"""
+    import sqlite3
+    from treecut.services.annotation_governance import AnnotationService
+    db = os.path.join(DATA_ROOT, "database", "materials.db")
+    svc = AnnotationService(db)
+    mock = "MOCK-ADJUDICATION-V2B-TEST-0005"
+    try:
+        svc.save_business_cognition_adjudication_v2b(
+            mock, clearly_needs=["STORAGE"], possible_needs=["CUSTOMIZATION"],
+            clearly_values=[], possible_values=[],
+            needs_field_unknown=False, values_field_unknown=False,
+            evidence_sufficiency="SUFFICIENT", conflict_observed="NO",
+            review_confidence="HIGH", review_duration_seconds=25.0,
+            review_status="REVIEWED", operator="TEST")
+        conn = sqlite3.connect(db)
+        conn.row_factory = sqlite3.Row
+        row = conn.execute("SELECT clearly_supported_needs, possible_needs FROM "
+                           "stage2_business_cognition_adjudication_v2b WHERE segment_id=?",
+                           (mock,)).fetchone()
+        conn.close()
+        assert row is not None
+        clearly = set(json.loads(row["clearly_supported_needs"]))
+        possible = set(json.loads(row["possible_needs"]))
+        # Human supported truth = clearly only
+        assert clearly == {"STORAGE"} and possible == {"CUSTOMIZATION"}
+        ai_supported = {"STORAGE", "CUSTOMIZATION"}
+        tp = ai_supported & clearly
+        assert tp == {"STORAGE"}  # CUSTOMIZATION 不得 TP
+    finally:
+        conn = sqlite3.connect(db)
+        conn.execute("DELETE FROM stage2_business_cognition_adjudication_v2b "
+                     "WHERE segment_id=?", (mock,))
+        conn.commit()
+        conn.close()
+
+
+def test_v2b_schema_history_archived():
+    """旧 V2 schema 历史必须归档（v2_full_taxonomy → v2b_simplified）。"""
+    p = os.path.join(DATA_ROOT, "ADJUDICATION_V2_SCHEMA_HISTORY.json")
+    if not os.path.exists(p):
+        return
+    h = json.load(open(p, encoding="utf-8"))
+    versions = {v["version"] for v in h["schema_versions"]}
+    assert "v2_full_taxonomy" in versions and "v2b_simplified" in versions
+    cur = [v for v in h["schema_versions"] if v["version"] == "v2b_simplified"][0]
+    assert cur["status"] == "CURRENT"
+    assert "clearly_supported_needs" in cur["fields"]
+    assert "POSSIBLE_BUT_INSUFFICIENT" in str(cur["label_semantics"])
