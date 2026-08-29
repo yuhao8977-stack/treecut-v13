@@ -131,7 +131,7 @@ def test_holdout_v2_prediction_lock():
 
 
 def test_holdout_v2_human_truth_zero():
-    """STEP 3：AI 考试前 Human Truth 必须为 0。"""
+    """考试后状态：Human Truth 已完成 30/30（盲审结束，正确）。"""
     import sqlite3
     m = json.load(open(os.path.join(DATA_ROOT, "FRESH_HOLDOUT_V2_MANIFEST_LOCK.json"),
                        encoding="utf-8"))
@@ -142,7 +142,7 @@ def test_holdout_v2_human_truth_zero():
     n = conn.execute(f"SELECT COUNT(*) FROM fresh_holdout_human_review_v1 WHERE segment_id IN ({ph})",
                      sids).fetchone()[0]
     conn.close()
-    assert n == 0
+    assert n == 30  # 盲审已完成
 
 
 def test_people_invariant_no_fallback():
@@ -167,3 +167,47 @@ def test_semantic_action_no_claim_protected():
         assert "RETRACT" not in seq
         assert "OPERATE_SOCKET" not in seq
         assert "OPEN_SINK_COVER" not in seq
+
+
+# ---------------- Final Evaluation ----------------
+
+def test_v2_human_lock_complete():
+    lock = json.load(open(os.path.join(DATA_ROOT, "FRESH_HOLDOUT_V2_HUMAN_LOCK.json"),
+                          encoding="utf-8"))
+    assert lock["count"] == 30
+    assert len(lock["human_truth_sha256"]) == 64
+    assert lock["status"].get("REVIEWED", 0) == 30
+    assert lock["manifest_sha256"] == "27f751ed402f81e2c3477341ad562218f2b67cf1902c764d5735397767d9e64b"
+
+
+def test_v2_metrics_people_strong():
+    m = json.load(open(os.path.join(DATA_ROOT, "FRESH_HOLDOUT_V2_METRICS.json"), encoding="utf-8"))
+    pp = m["people"]
+    assert pp["NORMAL_NO_FALLBACK_VIOLATIONS"] == 0
+    assert pp["f1"] >= 85
+    assert pp["recall"] == 100.0
+    assert pp["yolo_provider_count"] == 30
+    # 四层存在
+    assert set(m["layers"].keys()) == {"RANDOM", "HARD", "GAP", "ALL"}
+
+
+def test_v2_metrics_component_function():
+    m = json.load(open(os.path.join(DATA_ROOT, "FRESH_HOLDOUT_V2_METRICS.json"), encoding="utf-8"))
+    comp = m["multi_label"]["component"]["ALL"]
+    func = m["multi_label"]["function"]["ALL"]
+    assert comp["micro_f1"] >= 50
+    assert func["micro_f1"] >= 50
+
+
+def test_phase3_final_assessment():
+    a = json.load(open(os.path.join(DATA_ROOT, "PHASE3_FINAL_ASSESSMENT.json"), encoding="utf-8"))
+    assert a["phase3_verdict"] in ("FULL PASS", "PASS_WITH_LIMITATIONS", "FAIL_NEEDS_STAGE3_MORE_WORK")
+    assert a["PHASE4_READY"] in (True, False)
+    assert a["fields_rating"]["people_presence"]["rating"] == "PRODUCTION_CANDIDATE"
+
+
+def test_dual_holdout_comparison():
+    c = json.load(open(os.path.join(DATA_ROOT, "DUAL_HOLDOUT_COMPARISON_V1.json"), encoding="utf-8"))
+    assert "people_presence" in c["fields"]
+    assert c["fields"]["people_presence"]["verdict"].startswith("V1 全 UNKNOWN")
+    assert c["fields"]["component"]["v2"]["microF1"] > c["fields"]["component"]["v1"]["microF1"]

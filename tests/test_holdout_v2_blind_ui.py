@@ -1,13 +1,17 @@
 # -*- coding: utf-8 -*-
 """Stage3 FINAL — FRESH_HOLDOUT_V2 Blind UI 泄漏测试（STEP 13）。
 
-递归检查 Review Center 的 FRESH_HOLDOUT_V2 任务 UI 文本：
-不得出现 HOLDOUT_V2_AI_PREDICTIONS_V1.json 中任何 final prediction 值、
-provider/score/model/routing/evidence。
+用临时 manifest 构造"进行中"盲审任务（真实任务已 30/30 完成 → 结果页）。
+检查审核表单页文本：
+  - 不得出现 AI 术语（provider/score/routing/evidence/prediction/model/yolo/siglip/asr/ocr）
+  - 表单自带合法标签（YES/NO/ISLAND/FACTORY 等是 V2.1 选项，属表单非 AI 泄漏）不判泄漏；
+    仅检查 prediction 中的"AI 特有组合值"（如同时含多个标签的长串）不出现。
 """
 import json
 import os
+import shutil
 import sys
+import tempfile
 import tkinter as tk
 
 DATA_ROOT = os.environ.get(
@@ -38,36 +42,53 @@ def _dump_texts(w):
     return "\n".join(parts)
 
 
-def test_holdout_v2_blind_ui_no_ai_leak():
-    """FRESH_HOLDOUT_V2 盲审 UI 不得含任何 AI prediction 值/provider/score。"""
-    task = [t for t in TASKS if t["id"] == "FRESH_HOLDOUT_V2"][0]
-    root = tk.Tk()
-    root.withdraw()
+def _open_pending_v2(root):
+    """构造临时"进行中"盲审任务（manifest 前 3 条 + 目标表指向空表 → remaining>0）。"""
+    base = [t for t in TASKS if t["id"] == "FRESH_HOLDOUT_V2"][0]
+    tmpdir = tempfile.mkdtemp(prefix="hv2_blind_")
+    data = json.load(open(base["manifest"], encoding="utf-8"))
+    data["strata"] = data["strata"][:3]
+    data["manifest_version"] = "FRESH_HOLDOUT_V2_BLIND_TEST"
+    dst = os.path.join(tmpdir, "FRESH_HOLDOUT_V2_BLIND_TEST.json")
+    json.dump(data, open(dst, "w", encoding="utf-8"), ensure_ascii=False)
+    task = dict(base)
+    task["manifest"] = dst
+    task["table"] = "blind_ui_test_nonexistent_table"
     cen = ReviewCenterWindow(root)
     root.update_idletasks()
     cen._open_task(task)
     root.update_idletasks()
     tw = getattr(cen, "_task_win", None)
+    return cen, tw, tmpdir
+
+
+def test_holdout_v2_blind_ui_no_ai_leak():
+    """FRESH_HOLDOUT_V2 盲审审核页不得含 AI 术语/预测特有值。"""
+    root = tk.Tk()
+    root.withdraw()
+    cen, tw, tmpdir = _open_pending_v2(root)
     try:
-        if tw is None:
-            return  # 结果页或未加载（不崩溃）
+        assert tw is not None, "应打开审核表单页（remaining>0）"
         dump = _dump_texts(tw).lower()
-        # 1) AI 术语不得出现（bundle 是任务名"Bundle V2"的一部分，非 AI 泄漏；单独排除）
+        # 1) AI 术语
         for t in ("yolo", "siglip", "provider", "model_score", "raw_score", "routing",
                   "evidence", "prediction", "semantic_action", "asr", "ocr"):
             assert t not in dump, f"AI 术语泄漏: {t}"
-        # 2) prediction 文件中的具体答案值不得出现
+        # 2) 表单含合法标签（证明表单正常显示）
+        for label in ("场景类别", "产品类别", "材质", "组件", "功能", "动作类别",
+                      "景别", "镜头角色", "人物", "质量分"):
+            assert label in dump, f"表单缺字段: {label}"
+        # 3) AI prediction 文件的"多标签组合值"不得出现在 UI（单个合法标签排除）
         pp = os.path.join(DATA_ROOT, "HOLDOUT_V2_AI_PREDICTIONS_V1.json")
         if os.path.exists(pp):
             pred = json.load(open(pp, encoding="utf-8"))
-            leaked = 0
+            combo_values = set()
             for r in pred["results"]:
                 for f, v in r["final_routed_prediction"].items():
-                    if isinstance(v, list):
-                        v = ",".join(v)
-                    if v and str(v).lower() in dump:
-                        leaked += 1
-            assert leaked == 0, f"UI 泄漏 {leaked} 个 AI 答案值"
+                    if isinstance(v, list) and len(v) >= 2:
+                        combo_values.add(",".join(sorted(v)).lower())
+            leaked = [c for c in combo_values if c and c in dump]
+            assert not leaked, f"UI 泄漏 AI 组合值: {leaked[:3]}"
     finally:
         try:
             tw.destroy()
@@ -75,6 +96,7 @@ def test_holdout_v2_blind_ui_no_ai_leak():
             pass
         cen.destroy()
         root.destroy()
+        shutil.rmtree(tmpdir, ignore_errors=True)
 
 
 def test_holdout_v2_task_registered():
