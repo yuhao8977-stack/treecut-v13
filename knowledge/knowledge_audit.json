@@ -1,0 +1,50 @@
+{
+ "manifest": "KNOWLEDGE_AUDIT_V1",
+ "total": 186,
+ "by_type": {
+  "HYPOTHESIS": 98,
+  "FACT": 78,
+  "PLATFORM_RULE": 10
+ },
+ "by_namespace": {
+  "business_value_rules": 12,
+  "content_roles": 4,
+  "content_types": 10,
+  "craft_trust": 7,
+  "functions": 25,
+  "industry_taxonomy": 23,
+  "materials_styles": 15,
+  "negative_rules": 18,
+  "platform_compliance": 10,
+  "product": 16,
+  "semantic_mappings": 10,
+  "shot_ontology": 22,
+  "user_needs": 14
+ },
+ "by_status": {
+  "DRAFT": 98,
+  "ACTIVE": 88
+ },
+ "by_confidence": {
+  "LOW": 12,
+  "HIGH": 116,
+  "MEDIUM": 58
+ },
+ "duplicate_ids": [],
+ "semantic_duplicates": {},
+ "conflicts": [],
+ "no_source_count": 0,
+ "needs_source_count": 90,
+ "needs_source_by_namespace": {
+  "business_value_rules": 12,
+  "content_roles": 4,
+  "content_types": 10,
+  "negative_rules": 18,
+  "semantic_mappings": 10,
+  "shot_ontology": 22,
+  "user_needs": 14
+ },
+ "manual_review_count": 112,
+ "platform_rule_missing_ttl": [],
+ "records_sha256": "96b4c1ee895444dfcf0bd1be8f6c0f7ad80226fc9e4e14e0ff78b60383cfe029"
+}

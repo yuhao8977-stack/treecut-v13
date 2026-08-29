@@ -1,0 +1,38 @@
+# TreeCut Knowledge Brain V2 — Content Roles（内容角色第一版）
+# 状态：STAGE1 种子（已业务验证，来自知识库）
+content_roles_version: "1.0"
+
+primary_role: 每条内容必须选一个 PRIMARY_ROLE
+secondary_role: 0-N 个 SECONDARY_ROLE
+
+content_roles:
+  - id: TRAFFIC
+    name: 流量
+    purpose: 吸引点击/制造视觉需求冲突/激发兴趣
+    typical_evidence: [强视觉变化, 反差, 空间改造, 伸缩动作, 特殊布局, 审美设计]
+    caveat: Semantic Action 弱，不能因 AI 说"拉伸"直接判 Traffic
+    status: ACTIVE
+
+  - id: SEARCH
+    name: 搜索
+    purpose: 回答明确用户问题（尺寸/小户型/高度/插座/餐岛/伸缩/避坑）
+    typical_evidence: [问题语义, 明确关键词需求]
+    status: ACTIVE
+
+  - id: TRUST
+    name: 信任
+    purpose: 让用户相信产品/工厂/定制能力/真实案例/工艺/专业性
+    typical_evidence: [真实工厂, 加工, 结构, 细节, 测量, 真实住宅案例, 安装]
+    caveat: 工厂场景是 TRUST 候选，不自动 = "真实客户家案例"
+    status: ACTIVE
+
+  - id: CONVERSION
+    name: 转化
+    purpose: 帮助购买/咨询决策（尺寸建议/布局/适配人数/配置/定制方案/CTA前决策信息）
+    typical_evidence: [决策信息, 方案建议]
+    status: ACTIVE
+
+rules:
+  - content_role 不由"视频里有什么"直接决定
+  - 工厂视频可以是 TRUST，也可以是 SEARCH（若主题是"岛台高度怎么定"）
+  - role 来自 Business Meaning + 用户问题 + 内容表达意图

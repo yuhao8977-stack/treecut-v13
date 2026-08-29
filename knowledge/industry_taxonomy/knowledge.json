@@ -1,0 +1,925 @@
+{
+ "namespace": "industry_taxonomy",
+ "count": 23,
+ "records": [
+  {
+   "knowledge_id": "SCENE-0001",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "家具工厂",
+   "statement": "家具生产或成品展示的工厂环境。",
+   "structured_payload": {
+    "aliases": [
+     "工厂",
+     "生产车间"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0002",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "工厂产品展示区",
+   "statement": "位于工厂内，但视频主体为成品讲解/展示，而非生产过程。",
+   "structured_payload": {
+    "aliases": [
+     "工厂展区"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0003",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "生产加工区",
+   "statement": "机器、工人、加工流程为主体的工厂区域。",
+   "structured_payload": {
+    "aliases": [
+     "车间",
+     "加工区"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0004",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "家具展厅",
+   "statement": "用于产品陈列、销售展示的空间。",
+   "structured_payload": {
+    "aliases": [
+     "展厅",
+     "样板间"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0005",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "客户住宅",
+   "statement": "真实客户住宅空间。",
+   "structured_payload": {
+    "aliases": [
+     "客户家",
+     "入户"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0006",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "开放式厨房",
+   "statement": "厨房与餐厅/客厅开放连接。",
+   "structured_payload": {
+    "aliases": [
+     "开放厨房"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "空间"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0007",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "封闭式厨房",
+   "statement": "相对独立封闭的厨房。",
+   "structured_payload": {
+    "aliases": [
+     "独立厨房"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "空间"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0008",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "餐厅",
+   "statement": "主要用于就餐的空间。",
+   "structured_payload": {
+    "aliases": [
+     "餐区"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "空间"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0009",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "客厅",
+   "statement": "主要起居空间。",
+   "structured_payload": {
+    "aliases": [
+     "大横厅",
+     "横厅"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "空间"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0010",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "沙发后区域",
+   "statement": "沙发背后的过渡/办公/餐饮区域。",
+   "structured_payload": {
+    "aliases": [
+     "沙发背"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "空间"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0011",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "安装现场",
+   "statement": "正在搬运、组装、调试或安装的现场。",
+   "structured_payload": {
+    "aliases": [
+     "施工现场"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0012",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "完工实景",
+   "statement": "产品安装完成后的真实空间效果。",
+   "structured_payload": {
+    "aliases": [
+     "落地实景",
+     "完工"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0013",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "细节特写",
+   "statement": "对台面、抽屉、五金、纹理等局部进行近距离展示。",
+   "structured_payload": {
+    "aliases": [
+     "产品细节"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "镜头场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0014",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "功能演示",
+   "statement": "通过动作展示伸缩、开抽屉、插座等功能。",
+   "structured_payload": {
+    "aliases": [
+     "使用演示"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "镜头场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0015",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "人物讲解",
+   "statement": "人物面对镜头或伴随产品进行口播讲解。",
+   "structured_payload": {
+    "aliases": [
+     "真人讲解"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "镜头场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCENE-0016",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "纯空镜",
+   "statement": "无有效人物/动作，仅展示环境或产品。",
+   "structured_payload": {
+    "aliases": [
+     "空镜"
+    ],
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "negative_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "usage_scene": "场景语义/内容意图/镜头组合",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "场景与空间",
+    "category2": "镜头场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "scene",
+    "FACT",
+    "场景与空间"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PROFESSIONAL-0001",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "通道与通行空间",
+   "statement": "厨房/岛台规划应考虑通行、工作区及活动中心之间的空间关系。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "作为知识库拓展方向，不在本版写死具体数值。",
+    "negative_evidence": "跨地区规范不可直接套用",
+    "usage_scene": "空间方案/避坑/尺寸脚本",
+    "content_roles": [
+     "搜索",
+     "信任"
+    ],
+    "category1": "厨房设计专业知识",
+    "category2": "专业设计参考"
+   },
+   "source": "https://nkba.org/planning-guidelines/",
+   "source_type": "professional_institution",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "professional",
+    "FACT",
+    "厨房设计专业知识"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PROFESSIONAL-0002",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "就餐座位规划",
+   "statement": "岛台就餐需考虑座位、人体工学与活动空间。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "作为知识库拓展方向，不在本版写死具体数值。",
+    "negative_evidence": "跨地区规范不可直接套用",
+    "usage_scene": "空间方案/避坑/尺寸脚本",
+    "content_roles": [
+     "搜索",
+     "信任"
+    ],
+    "category1": "厨房设计专业知识",
+    "category2": "专业设计参考"
+   },
+   "source": "https://nkba.org/planning-guidelines/",
+   "source_type": "professional_institution",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "professional",
+    "FACT",
+    "厨房设计专业知识"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PROFESSIONAL-0003",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "功能收纳",
+   "statement": "储物应围绕活动中心、使用频率和功能组织。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "作为知识库拓展方向，不在本版写死具体数值。",
+    "negative_evidence": "跨地区规范不可直接套用",
+    "usage_scene": "空间方案/避坑/尺寸脚本",
+    "content_roles": [
+     "搜索",
+     "信任"
+    ],
+    "category1": "厨房设计专业知识",
+    "category2": "专业设计参考"
+   },
+   "source": "https://nkba.org/planning-guidelines/",
+   "source_type": "professional_institution",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "professional",
+    "FACT",
+    "厨房设计专业知识"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PROFESSIONAL-0004",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "电气规划",
+   "statement": "岛台及厨房空间应纳入电源/照明/设备系统协调。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "作为知识库拓展方向，不在本版写死具体数值。",
+    "negative_evidence": "跨地区规范不可直接套用",
+    "usage_scene": "空间方案/避坑/尺寸脚本",
+    "content_roles": [
+     "搜索",
+     "信任"
+    ],
+    "category1": "厨房设计专业知识",
+    "category2": "专业设计参考"
+   },
+   "source": "https://nkba.org/planning-guidelines/",
+   "source_type": "professional_institution",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "professional",
+    "FACT",
+    "厨房设计专业知识"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PROFESSIONAL-0005",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "设备与系统协调",
+   "statement": "岛台与厨房电器、给排水、通风等需要系统协调。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "作为知识库拓展方向，不在本版写死具体数值。",
+    "negative_evidence": "跨地区规范不可直接套用",
+    "usage_scene": "空间方案/避坑/尺寸脚本",
+    "content_roles": [
+     "搜索",
+     "信任"
+    ],
+    "category1": "厨房设计专业知识",
+    "category2": "专业设计参考"
+   },
+   "source": "https://nkba.org/planning-guidelines/",
+   "source_type": "professional_institution",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "professional",
+    "FACT",
+    "厨房设计专业知识"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PROFESSIONAL-0006",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "无障碍/通用设计",
+   "statement": "空间设计应考虑不同使用者的可达性和安全性。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "作为知识库拓展方向，不在本版写死具体数值。",
+    "negative_evidence": "跨地区规范不可直接套用",
+    "usage_scene": "空间方案/避坑/尺寸脚本",
+    "content_roles": [
+     "搜索",
+     "信任"
+    ],
+    "category1": "厨房设计专业知识",
+    "category2": "专业设计参考"
+   },
+   "source": "https://nkba.org/planning-guidelines/",
+   "source_type": "professional_institution",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "professional",
+    "FACT",
+    "厨房设计专业知识"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PROFESSIONAL-0007",
+   "namespace": "industry_taxonomy",
+   "knowledge_type": "FACT",
+   "title": "材料与饰面",
+   "statement": "材料选择应结合性能、环境、维护及空间用途。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "作为知识库拓展方向，不在本版写死具体数值。",
+    "negative_evidence": "跨地区规范不可直接套用",
+    "usage_scene": "空间方案/避坑/尺寸脚本",
+    "content_roles": [
+     "搜索",
+     "信任"
+    ],
+    "category1": "厨房设计专业知识",
+    "category2": "专业设计参考"
+   },
+   "source": "https://nkba.org/planning-guidelines/",
+   "source_type": "professional_institution",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "professional",
+    "FACT",
+    "厨房设计专业知识"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  }
+ ]
+}

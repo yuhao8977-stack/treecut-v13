@@ -1,0 +1,685 @@
+{
+ "namespace": "product",
+ "count": 16,
+ "records": [
+  {
+   "knowledge_id": "PRODUCT-0001",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "岛台",
+   "statement": "厨房/餐厨空间中的独立或半独立功能台体，可承担备餐、收纳、就餐、社交等功能。",
+   "structured_payload": {
+    "aliases": [
+     "中岛",
+     "厨房岛",
+     "中岛台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现岛台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "核心产品"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0002",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "伸缩岛台",
+   "statement": "具有可拉出/延长/收起结构，可改变使用长度或就餐容量。",
+   "structured_payload": {
+    "aliases": [
+     "伸缩中岛",
+     "延伸岛台",
+     "拉伸岛台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现伸缩岛台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "岛台类型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0003",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "餐岛一体",
+   "statement": "岛台与餐桌/就餐功能整合的产品或布局。",
+   "structured_payload": {
+    "aliases": [
+     "岛台餐桌一体",
+     "餐岛"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现餐岛一体相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "岛台类型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0004",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "落地岛台",
+   "statement": "柜体或台体落地支撑的岛台。",
+   "structured_payload": {
+    "aliases": [
+     "落地中岛"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现落地岛台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "结构类型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0005",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "悬浮岛台",
+   "statement": "视觉上形成悬浮效果或部分悬挑的岛台。",
+   "structured_payload": {
+    "aliases": [
+     "悬浮中岛",
+     "悬挑岛台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现悬浮岛台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "结构类型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0006",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "备餐岛台",
+   "statement": "以备餐、操作台为主要用途的岛台。",
+   "structured_payload": {
+    "aliases": [
+     "备餐台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现备餐岛台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "功能类型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0007",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "水吧岛台",
+   "statement": "包含饮水、洗果、泡茶等水吧相关功能的岛台。",
+   "structured_payload": {
+    "aliases": [
+     "水吧台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现水吧岛台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "功能类型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0008",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "电器岛台",
+   "statement": "预留或嵌入蒸烤箱等电器的岛台。",
+   "structured_payload": {
+    "aliases": [
+     "嵌入电器岛台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现电器岛台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "功能类型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0009",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "带轨道插座岛台",
+   "statement": "配置轨道插座/移动插座模块的岛台。",
+   "structured_payload": {
+    "aliases": [
+     "轨道插座岛台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现带轨道插座岛台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "功能类型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0010",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "收纳岛台",
+   "statement": "强调抽屉、柜门、层板等储物能力的岛台。",
+   "structured_payload": {
+    "aliases": [
+     "储物岛台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现收纳岛台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "功能类型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0011",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "沙发后岛台",
+   "statement": "布置于客厅沙发背后的岛台/长台，用于办公、就餐或分区。",
+   "structured_payload": {
+    "aliases": [
+     "沙发背岛台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现沙发后岛台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "布局类型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0012",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "餐边柜",
+   "statement": "靠墙设置的收纳/备餐家具，可与岛台形成餐厨系统。",
+   "structured_payload": {
+    "aliases": [
+     "边柜",
+     "餐厅边柜"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现餐边柜相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "关联产品"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0013",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "中岛柜",
+   "statement": "以柜体为主体的中岛家具。",
+   "structured_payload": {
+    "aliases": [
+     "岛柜"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现中岛柜相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "关联产品"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0014",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "吧台",
+   "statement": "以高脚坐席、饮品或轻餐为主要使用方式的台体。",
+   "structured_payload": {
+    "aliases": [
+     "bar台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现吧台相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "关联产品"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0015",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "茶桌",
+   "statement": "以泡茶、会客为主的桌体。",
+   "structured_payload": {
+    "aliases": [
+     "茶台"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现茶桌相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "关联产品"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PRODUCT-0016",
+   "namespace": "product",
+   "knowledge_type": "FACT",
+   "title": "橱柜",
+   "statement": "厨房固定柜体系统。",
+   "structured_payload": {
+    "aliases": [
+     "厨房柜"
+    ],
+    "positive_evidence": "ASR/OCR/画面出现橱柜相关结构或用途",
+    "negative_evidence": "仅出现普通桌面且无岛台结构/语义证据",
+    "usage_scene": "素材识别/脚本匹配/模板选材",
+    "content_roles": [
+     "信任",
+     "转化",
+     "搜索"
+    ],
+    "category1": "产品体系",
+    "category2": "关联产品"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "product",
+    "FACT",
+    "产品体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  }
+ ]
+}

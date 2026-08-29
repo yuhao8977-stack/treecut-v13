@@ -1,0 +1,407 @@
+{
+ "namespace": "semantic_mappings",
+ "count": 10,
+ "records": [
+  {
+   "knowledge_id": "SCRIPT-0001",
+   "namespace": "semantic_mappings",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "Hook",
+   "statement": "前1-3秒建立强兴趣点、结果、冲突、反常识或明确收益。",
+   "structured_payload": {
+    "aliases": [
+     "开头",
+     "钩子"
+    ],
+    "positive_evidence": "LLM根据句子语义+上下文识别",
+    "negative_evidence": "不要只用关键词；同一句需结合前后文",
+    "usage_scene": "脚本解析→storyboard→shot slot",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "脚本理解",
+    "category2": "脚本节拍"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "script",
+    "HYPOTHESIS",
+    "脚本理解"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCRIPT-0002",
+   "namespace": "semantic_mappings",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "Problem",
+   "statement": "指出用户痛点、错误、空间限制或使用问题。",
+   "structured_payload": {
+    "aliases": [
+     "痛点"
+    ],
+    "positive_evidence": "LLM根据句子语义+上下文识别",
+    "negative_evidence": "不要只用关键词；同一句需结合前后文",
+    "usage_scene": "脚本解析→storyboard→shot slot",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "脚本理解",
+    "category2": "脚本节拍"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "script",
+    "HYPOTHESIS",
+    "脚本理解"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCRIPT-0003",
+   "namespace": "semantic_mappings",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "Context",
+   "statement": "交代客户、户型、城市、家庭、空间等背景。",
+   "structured_payload": {
+    "aliases": [
+     "背景"
+    ],
+    "positive_evidence": "LLM根据句子语义+上下文识别",
+    "negative_evidence": "不要只用关键词；同一句需结合前后文",
+    "usage_scene": "脚本解析→storyboard→shot slot",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "脚本理解",
+    "category2": "脚本节拍"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "script",
+    "HYPOTHESIS",
+    "脚本理解"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCRIPT-0004",
+   "namespace": "semantic_mappings",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "Solution",
+   "statement": "给出岛台/布局/配置方案。",
+   "structured_payload": {
+    "aliases": [
+     "解决方案"
+    ],
+    "positive_evidence": "LLM根据句子语义+上下文识别",
+    "negative_evidence": "不要只用关键词；同一句需结合前后文",
+    "usage_scene": "脚本解析→storyboard→shot slot",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "脚本理解",
+    "category2": "脚本节拍"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "script",
+    "HYPOTHESIS",
+    "脚本理解"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCRIPT-0005",
+   "namespace": "semantic_mappings",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "Feature",
+   "statement": "解释尺寸、材质、结构、功能卖点。",
+   "structured_payload": {
+    "aliases": [
+     "卖点"
+    ],
+    "positive_evidence": "LLM根据句子语义+上下文识别",
+    "negative_evidence": "不要只用关键词；同一句需结合前后文",
+    "usage_scene": "脚本解析→storyboard→shot slot",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "脚本理解",
+    "category2": "脚本节拍"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "script",
+    "HYPOTHESIS",
+    "脚本理解"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCRIPT-0006",
+   "namespace": "semantic_mappings",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "Demo",
+   "statement": "通过动作验证伸缩、收纳、插座等功能。",
+   "structured_payload": {
+    "aliases": [
+     "演示"
+    ],
+    "positive_evidence": "LLM根据句子语义+上下文识别",
+    "negative_evidence": "不要只用关键词；同一句需结合前后文",
+    "usage_scene": "脚本解析→storyboard→shot slot",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "脚本理解",
+    "category2": "脚本节拍"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "script",
+    "HYPOTHESIS",
+    "脚本理解"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCRIPT-0007",
+   "namespace": "semantic_mappings",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "Evidence",
+   "statement": "客户实景、工艺、细节或数字证据。",
+   "structured_payload": {
+    "aliases": [
+     "证据"
+    ],
+    "positive_evidence": "LLM根据句子语义+上下文识别",
+    "negative_evidence": "不要只用关键词；同一句需结合前后文",
+    "usage_scene": "脚本解析→storyboard→shot slot",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "脚本理解",
+    "category2": "脚本节拍"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "script",
+    "HYPOTHESIS",
+    "脚本理解"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCRIPT-0008",
+   "namespace": "semantic_mappings",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "Comparison",
+   "statement": "正确/错误、前后、收起/展开等对比。",
+   "structured_payload": {
+    "aliases": [
+     "对比"
+    ],
+    "positive_evidence": "LLM根据句子语义+上下文识别",
+    "negative_evidence": "不要只用关键词；同一句需结合前后文",
+    "usage_scene": "脚本解析→storyboard→shot slot",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "脚本理解",
+    "category2": "脚本节拍"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "script",
+    "HYPOTHESIS",
+    "脚本理解"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCRIPT-0009",
+   "namespace": "semantic_mappings",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "Trust",
+   "statement": "工厂、交付、真实案例、工艺等降低顾虑。",
+   "structured_payload": {
+    "aliases": [
+     "信任"
+    ],
+    "positive_evidence": "LLM根据句子语义+上下文识别",
+    "negative_evidence": "不要只用关键词；同一句需结合前后文",
+    "usage_scene": "脚本解析→storyboard→shot slot",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "脚本理解",
+    "category2": "脚本节拍"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "script",
+    "HYPOTHESIS",
+    "脚本理解"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SCRIPT-0010",
+   "namespace": "semantic_mappings",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CTA",
+   "statement": "引导评论、私信、获取方案/尺寸/户型建议等。",
+   "structured_payload": {
+    "aliases": [
+     "行动引导"
+    ],
+    "positive_evidence": "LLM根据句子语义+上下文识别",
+    "negative_evidence": "不要只用关键词；同一句需结合前后文",
+    "usage_scene": "脚本解析→storyboard→shot slot",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "脚本理解",
+    "category2": "脚本节拍"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "script",
+    "HYPOTHESIS",
+    "脚本理解"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  }
+ ]
+}

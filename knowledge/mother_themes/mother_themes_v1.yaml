@@ -1,0 +1,43 @@
+# TreeCut Knowledge Brain V2 — Mother Themes（母题第一版）
+# 状态：STAGE1 种子定义（HYPOTHESIS 级，待历史内容验证）
+mother_theme_version: "1.0"
+
+mother_themes:
+  - id: MOTHER_THEME_SPACE_SOLUTION
+    name: 空间解决方案
+    description: 小户型/大横厅/开放式厨房/餐厨一体/空间分区/多功能空间/伸缩容量
+    evidence_required: 尺寸/空间证据（禁止仅凭"小户型"文案断言）
+    primary_role_candidates: [CONVERSION, SEARCH]
+    status: HYPOTHESIS
+
+  - id: MOTHER_THEME_FAMILY_SCENE
+    name: 家庭生活场景
+    description: 三口之家/父母同住/朋友聚会/多人火锅/儿童家庭/办公用餐切换/日常早餐
+    evidence_required: 多人场景/家庭语境证据（people=YES 不足，需聚会/用餐证据）
+    primary_role_candidates: [CONVERSION, TRAFFIC]
+    status: HYPOTHESIS
+
+  - id: MOTHER_THEME_DECISION_AVOID_PIT
+    name: 决策避坑
+    description: 尺寸/高度/动线/插座/电器位/储物/伸缩结构/安全/安装/材质选择/定制误区
+    evidence_required: 决策问题/错误做法/注意事项语义
+    primary_role_candidates: [SEARCH, TRUST]
+    status: HYPOTHESIS
+
+  - id: MOTHER_THEME_AESTHETIC_STYLE
+    name: 审美风格
+    description: 中古/奶油/意式/黑胡桃/岩板纹理/洞石感/潘多拉/透明渐变亚克力
+    evidence_required: 明确 ASR/OCR/metadata 或高置信视觉证据（material 弱预测不足）
+    primary_role_candidates: [TRAFFIC, SEARCH]
+    status: HYPOTHESIS
+
+  - id: MOTHER_THEME_CRAFT_TRUST
+    name: 工艺信任
+    description: 45度拼接/岩板边缘/底部结构/伸缩轨道/开孔精度/柜体结构/五金/安装/承重/安全细节/工厂制作
+    evidence_required: 工艺画面 + 结构证据
+    primary_role_candidates: [TRUST, CONVERSION]
+    status: HYPOTHESIS
+
+notes:
+  - 母题不互斥：允许 primary + secondary
+  - 全部为 HYPOTHESIS，需历史有效内容统计验证后才可升 ACTIVE

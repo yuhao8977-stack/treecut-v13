@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "treecut://knowledge/schemas/business_cognition.schema.json",
+  "title": "BusinessCognitionV1",
+  "description": "Phase 4 Knowledge Brain V2 业务认知输出。evidence-grounded，可追溯。",
+  "type": "object",
+  "required": ["segment_id", "knowledge_version", "confidence", "created_at"],
+  "properties": {
+    "segment_id": {"type": "string"},
+    "asset_id": {"type": "string"},
+    "evidence_summary": {"type": "object"},
+    "product_meaning": {"type": "array", "items": {"type": "string"}},
+    "user_needs": {"type": "array", "items": {"type": "string"}},
+    "business_values": {"type": "array", "items": {"type": "string"}},
+    "content_roles": {"type": "array", "items": {"type": "string"}},
+    "mother_themes": {"type": "array", "items": {"type": "string"}},
+    "trust_signals": {"type": "array", "items": {"type": "string"}},
+    "decision_factors": {"type": "array", "items": {"type": "string"}},
+    "search_intents": {"type": "array", "items": {"type": "string"}},
+    "shot_functions": {"type": "array", "items": {"type": "string"}},
+    "risks": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "reasoning_trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rule_id", "evidence_ids", "knowledge_ids"],
+        "properties": {
+          "rule_id": {"type": "string"},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}},
+          "knowledge_ids": {"type": "array", "items": {"type": "string"}},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "confidence": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+    "knowledge_version": {"type": "string"},
+    "knowledge_snapshot_id": {"type": "string"},
+    "retrieved_knowledge_ids": {"type": "array", "items": {"type": "string"}},
+    "created_at": {"type": "string"}
+  }
+}

@@ -1,0 +1,158 @@
+{
+ "namespace": "content_roles",
+ "count": 4,
+ "records": [
+  {
+   "knowledge_id": "CONTENT_ROLE-0001",
+   "namespace": "content_roles",
+   "knowledge_type": "FACT",
+   "title": "流量",
+   "statement": "通过开头、冲突、视觉或题材获得点击与停留。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "根据内容结构和CTA判断",
+    "negative_evidence": "一条视频可以多角色，但必须指定主角色",
+    "usage_scene": "内容价值/模板/账号DNA",
+    "content_roles": [
+     "流量"
+    ],
+    "category1": "内容运营",
+    "category2": "内容角色"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "content_role",
+    "FACT",
+    "内容运营"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "CONTENT_ROLE-0002",
+   "namespace": "content_roles",
+   "knowledge_type": "FACT",
+   "title": "搜索",
+   "statement": "承接明确装修/产品问题与关键词搜索。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "根据内容结构和CTA判断",
+    "negative_evidence": "一条视频可以多角色，但必须指定主角色",
+    "usage_scene": "内容价值/模板/账号DNA",
+    "content_roles": [
+     "搜索"
+    ],
+    "category1": "内容运营",
+    "category2": "内容角色"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "content_role",
+    "FACT",
+    "内容运营"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "CONTENT_ROLE-0003",
+   "namespace": "content_roles",
+   "knowledge_type": "FACT",
+   "title": "信任",
+   "statement": "通过真实案例、工艺、团队、交付降低顾虑。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "根据内容结构和CTA判断",
+    "negative_evidence": "一条视频可以多角色，但必须指定主角色",
+    "usage_scene": "内容价值/模板/账号DNA",
+    "content_roles": [
+     "信任"
+    ],
+    "category1": "内容运营",
+    "category2": "内容角色"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "content_role",
+    "FACT",
+    "内容运营"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "CONTENT_ROLE-0004",
+   "namespace": "content_roles",
+   "knowledge_type": "FACT",
+   "title": "转化",
+   "statement": "推动私信、咨询、留资、到店或进一步了解。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "根据内容结构和CTA判断",
+    "negative_evidence": "一条视频可以多角色，但必须指定主角色",
+    "usage_scene": "内容价值/模板/账号DNA",
+    "content_roles": [
+     "转化"
+    ],
+    "category1": "内容运营",
+    "category2": "内容角色"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "content_role",
+    "FACT",
+    "内容运营"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  }
+ ]
+}

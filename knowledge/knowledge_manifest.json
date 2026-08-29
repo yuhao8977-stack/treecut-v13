@@ -1,0 +1,42 @@
+{
+ "manifest": "KNOWLEDGE_MANIFEST_V1",
+ "source_files": {
+  "xlsx": {
+   "file": "knowledge/source/TreeCut_行业认知知识库_V1.0.xlsx",
+   "sha256": "1175CF244FBA5716564B2979CB76E6595A14FEB2C7F2E2754667C4D5F92B23FB"
+  },
+  "docx": {
+   "file": "knowledge/source/TreeCut_行业认知知识库_V1.0.docx",
+   "sha256": "DC3B004B09169314D6723ABFC63DE459AAF90CAC4287DBFE46E493FFADEA1EF8"
+  }
+ },
+ "record_count": 186,
+ "by_type": {
+  "FACT": 78,
+  "HYPOTHESIS": 98,
+  "PLATFORM_RULE": 10
+ },
+ "by_namespace": {
+  "product": 16,
+  "materials_styles": 15,
+  "craft_trust": 7,
+  "functions": 25,
+  "industry_taxonomy": 23,
+  "user_needs": 14,
+  "content_types": 10,
+  "content_roles": 4,
+  "shot_ontology": 22,
+  "semantic_mappings": 10,
+  "business_value_rules": 12,
+  "negative_rules": 18,
+  "platform_compliance": 10
+ },
+ "by_confidence": {
+  "HIGH": 116,
+  "MEDIUM": 58,
+  "LOW": 12
+ },
+ "needs_source_count": 90,
+ "records_sha256": "96b4c1ee895444dfcf0bd1be8f6c0f7ad80226fc9e4e14e0ff78b60383cfe029",
+ "generated_at": "2026-08-29 14:10"
+}

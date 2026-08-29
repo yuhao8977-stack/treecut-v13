@@ -1,0 +1,643 @@
+{
+ "namespace": "materials_styles",
+ "count": 15,
+ "records": [
+  {
+   "knowledge_id": "MATERIAL-0001",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "岩板",
+   "statement": "常用于岛台台面/饰面的材料类别；识别时应与颜色、纹理、表面效果分离。",
+   "structured_payload": {
+    "aliases": [
+     "岩板台面"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "台面材料"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0002",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "木纹岩板",
+   "statement": "具有木纹视觉效果的岩板。",
+   "structured_payload": {
+    "aliases": [
+     "木纹板"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "岩板纹理"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0003",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "大理石纹理",
+   "statement": "视觉呈大理石纹理；不等同于天然大理石材质。",
+   "structured_payload": {
+    "aliases": [
+     "大理石纹"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "纹理"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0004",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "奢石纹理",
+   "statement": "高对比或装饰性石纹视觉类别；具体石种需来源确认。",
+   "structured_payload": {
+    "aliases": [
+     "奢石"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "纹理"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0005",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "潘多拉纹理",
+   "statement": "业务素材中出现的潘多拉纹理/花色称呼；视为业务词，不自动推断材料性能。",
+   "structured_payload": {
+    "aliases": [
+     "潘多拉",
+     "Pandora"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "纹理/商业叫法"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0006",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "黑胡桃",
+   "statement": "北美黑胡桃或黑胡桃视觉/材质称呼；需要区分实木、木皮和颜色仿纹。",
+   "structured_payload": {
+    "aliases": [
+     "北美黑胡桃",
+     "胡桃木"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "木材/色系"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0007",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "实木",
+   "statement": "由天然木材构成的部件或产品表述。",
+   "structured_payload": {
+    "aliases": [
+     "原木"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "木材"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0008",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "木皮/饰面",
+   "statement": "薄木皮或装饰饰面，不应自动等同实木。",
+   "structured_payload": {
+    "aliases": [
+     "木饰面",
+     "木皮"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "饰面"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0009",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "亚克力",
+   "statement": "透明或半透明聚合物部件，常用于视觉支撑/装饰。",
+   "structured_payload": {
+    "aliases": [
+     "透明亚克力"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "结构/饰面"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0010",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "黑色哑光",
+   "statement": "黑色且低光泽的视觉表面效果。",
+   "structured_payload": {
+    "aliases": [
+     "哑黑",
+     "黑色磨砂"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "颜色/表面"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0011",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "白色",
+   "statement": "白色视觉色系。",
+   "structured_payload": {
+    "aliases": [
+     "奶白",
+     "纯白"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "颜色"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0012",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "米色/奶油色",
+   "statement": "暖白/米色/奶油视觉色系。",
+   "structured_payload": {
+    "aliases": [
+     "奶油色",
+     "米白"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "颜色"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0013",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "洞石纹",
+   "statement": "洞石视觉纹理类别；不自动等同天然洞石。",
+   "structured_payload": {
+    "aliases": [
+     "洞石"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "纹理"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0014",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "金属",
+   "statement": "五金、轨道、结构件等金属材料。",
+   "structured_payload": {
+    "aliases": [
+     "铝合金",
+     "不锈钢"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "部件材料"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "MATERIAL-0015",
+   "namespace": "materials_styles",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "玻璃",
+   "statement": "透明/半透明玻璃部件。",
+   "structured_payload": {
+    "aliases": [
+     "钢化玻璃"
+    ],
+    "positive_evidence": "OCR/ASR明确材质词、近景纹理或已验证视觉标签",
+    "negative_evidence": "仅凭颜色/纹理不能断言具体真实材料",
+    "usage_scene": "材质识别/脚本卖点/近景选材",
+    "content_roles": [
+     "搜索",
+     "信任",
+     "转化"
+    ],
+    "category1": "材质与外观",
+    "category2": "部件材料"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "material",
+    "HYPOTHESIS",
+    "材质与外观"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  }
+ ]
+}

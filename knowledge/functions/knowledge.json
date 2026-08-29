@@ -1,0 +1,1076 @@
+{
+ "namespace": "functions",
+ "count": 25,
+ "records": [
+  {
+   "knowledge_id": "FUNCTION-0001",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "伸缩",
+   "statement": "拉出、延长、展开或收回台体/桌板，改变长度或容量。",
+   "structured_payload": {
+    "aliases": [
+     "拉伸",
+     "延伸",
+     "展开",
+     "收起",
+     "加长"
+    ],
+    "positive_evidence": "ASR/OCR出现拉伸|延伸|展开|收起|加长；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "空间扩展"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0002",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "多人就餐",
+   "statement": "岛台满足多人用餐/聚餐/火锅等场景。",
+   "structured_payload": {
+    "aliases": [
+     "聚餐",
+     "多人吃饭",
+     "打火锅"
+    ],
+    "positive_evidence": "ASR/OCR出现聚餐|多人吃饭|打火锅；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "使用场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0003",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "薄抽收纳",
+   "statement": "浅抽用于筷子、勺子、纸巾、茶叶等小物。",
+   "structured_payload": {
+    "aliases": [
+     "薄抽",
+     "浅抽",
+     "饱抽",
+     "飽抽"
+    ],
+    "positive_evidence": "ASR/OCR出现薄抽|浅抽|饱抽|飽抽；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "收纳"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0004",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "柜体收纳",
+   "statement": "柜门、对开门、层板等形成的内部储物。",
+   "structured_payload": {
+    "aliases": [
+     "柜门",
+     "对开门",
+     "活动层板"
+    ],
+    "positive_evidence": "ASR/OCR出现柜门|对开门|活动层板；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "收纳"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0005",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "隐藏收纳",
+   "statement": "视觉上隐藏或封闭的储物空间。",
+   "structured_payload": {
+    "aliases": [
+     "隐藏储物"
+    ],
+    "positive_evidence": "ASR/OCR出现隐藏储物；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "收纳"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0006",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "轨道插座",
+   "statement": "轨道式插座，用于充电、小家电、火锅等。",
+   "structured_payload": {
+    "aliases": [
+     "公牛轨道",
+     "一组轨道",
+     "配置轨道"
+    ],
+    "positive_evidence": "ASR/OCR出现公牛轨道|一组轨道|配置轨道；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "用电"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0007",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "普通插座",
+   "statement": "固定插座或电源接口。",
+   "structured_payload": {
+    "aliases": [
+     "电源插座"
+    ],
+    "positive_evidence": "ASR/OCR出现电源插座；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "用电"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0008",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "手机充电",
+   "statement": "岛台用于手机/电脑等设备充电。",
+   "structured_payload": {
+    "aliases": [
+     "充电"
+    ],
+    "positive_evidence": "ASR/OCR出现充电；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "用电场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0009",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "办公",
+   "statement": "岛台作为临时办公/学习桌面。",
+   "structured_payload": {
+    "aliases": [
+     "工作台",
+     "办公桌"
+    ],
+    "positive_evidence": "ASR/OCR出现工作台|办公桌；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "使用场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0010",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "备餐",
+   "statement": "切配、摆盘、备餐等操作。",
+   "structured_payload": {
+    "aliases": [
+     "操作台"
+    ],
+    "positive_evidence": "ASR/OCR出现操作台；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "厨房功能"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0011",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "泡茶/水吧",
+   "statement": "泡茶、饮水、洗水果等轻水吧使用。",
+   "structured_payload": {
+    "aliases": [
+     "泡茶",
+     "洗水果",
+     "水吧"
+    ],
+    "positive_evidence": "ASR/OCR出现泡茶|洗水果|水吧；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "水吧功能"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0012",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "嵌入烤箱",
+   "statement": "预留或嵌入烤箱。",
+   "structured_payload": {
+    "aliases": [
+     "烤箱位",
+     "烤箱开孔"
+    ],
+    "positive_evidence": "ASR/OCR出现烤箱位|烤箱开孔；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "电器"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0013",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "嵌入蒸烤箱",
+   "statement": "预留或嵌入蒸烤设备。",
+   "structured_payload": {
+    "aliases": [
+     "蒸烤箱"
+    ],
+    "positive_evidence": "ASR/OCR出现蒸烤箱；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "电器"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0014",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "嵌入洗碗机",
+   "statement": "预留或嵌入洗碗设备。",
+   "structured_payload": {
+    "aliases": [
+     "洗碗机"
+    ],
+    "positive_evidence": "ASR/OCR出现洗碗机；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "电器"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0015",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "电器预留",
+   "statement": "为特定电器预留尺寸、散热或开孔位置。",
+   "structured_payload": {
+    "aliases": [
+     "预留位置",
+     "精准开孔"
+    ],
+    "positive_evidence": "ASR/OCR出现预留位置|精准开孔；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "电器"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0016",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "儿童安全圆角",
+   "statement": "通过圆角减少尖锐边角风险。",
+   "structured_payload": {
+    "aliases": [
+     "防磕碰",
+     "圆角"
+    ],
+    "positive_evidence": "ASR/OCR出现防磕碰|圆角；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "安全"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0017",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "空间分区",
+   "statement": "岛台用于厨房/餐厅/客厅的视觉或功能分区。",
+   "structured_payload": {
+    "aliases": [
+     "空间划分"
+    ],
+    "positive_evidence": "ASR/OCR出现空间划分；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "空间"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0018",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "餐厨一体",
+   "statement": "就餐与厨房操作在同一核心区域整合。",
+   "structured_payload": {
+    "aliases": [
+     "餐厨融合"
+    ],
+    "positive_evidence": "ASR/OCR出现餐厨融合；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "空间"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0019",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "沙发后办公",
+   "statement": "沙发后岛台用于办公、阅读或就餐。",
+   "structured_payload": {
+    "aliases": [
+     "沙发背办公"
+    ],
+    "positive_evidence": "ASR/OCR出现沙发背办公；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "空间场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0020",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "储酒",
+   "statement": "酒瓶/酒具收纳。",
+   "structured_payload": {
+    "aliases": [
+     "酒柜功能"
+    ],
+    "positive_evidence": "ASR/OCR出现酒柜功能；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "收纳/生活"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0021",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "临时茶咖",
+   "statement": "茶叶、咖啡、杯具等临时储放。",
+   "structured_payload": {
+    "aliases": [
+     "茶咖收纳"
+    ],
+    "positive_evidence": "ASR/OCR出现茶咖收纳；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "收纳/生活"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0022",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "隐藏电线",
+   "statement": "减少外露拖线、插排等。",
+   "structured_payload": {
+    "aliases": [
+     "不拉线",
+     "隐藏走线"
+    ],
+    "positive_evidence": "ASR/OCR出现不拉线|隐藏走线；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "用电/整洁"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0023",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "清洁维护",
+   "statement": "强调台面日常清洁、易打理等使用场景；材料性能表述需来源支持。",
+   "structured_payload": {
+    "aliases": [
+     "好打理"
+    ],
+    "positive_evidence": "ASR/OCR出现好打理；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "使用"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0024",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "视觉悬浮",
+   "statement": "通过透明支撑/悬挑形成悬浮视觉。",
+   "structured_payload": {
+    "aliases": [
+     "悬浮效果"
+    ],
+    "positive_evidence": "ASR/OCR出现悬浮效果；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "造型"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "FUNCTION-0025",
+   "namespace": "functions",
+   "knowledge_type": "FACT",
+   "title": "一桌多用",
+   "statement": "同一台体承担吃饭、办公、备餐、社交等多重用途。",
+   "structured_payload": {
+    "aliases": [
+     "多功能"
+    ],
+    "positive_evidence": "ASR/OCR出现多功能；或视觉动作明确展示该功能",
+    "negative_evidence": "静态展示不能自动推断功能已发生",
+    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "content_roles": [
+     "搜索",
+     "转化",
+     "用户价值"
+    ],
+    "category1": "功能体系",
+    "category2": "使用场景"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "function",
+    "FACT",
+    "功能体系"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  }
+ ]
+}

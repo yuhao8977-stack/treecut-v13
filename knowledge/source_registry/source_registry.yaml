@@ -1,0 +1,88 @@
+# TreeCut Knowledge Brain V2 — Source Registry
+# 所有知识源必须先登记。平台规则 TTL 短，专业知识长复核周期，内部业务优先（私有）。
+source_registry_version: "1.0"
+updated_at: "2026-08-29"
+
+sources:
+  - source_id: SRC-001
+    name: NKBA Kitchen & Bath Planning Guidelines
+    file: knowledge/source/TreeCut_行业认知知识库_V1.0.xlsx
+    format: XLSX
+    version: "1.0"
+    owner: external_professional
+    scope: industry_taxonomy (厨房空间/储物/电气/材料/通道/通用设计)
+    trust_level: HIGH
+    public_or_private: public
+    imported_at: "2026-08-29"
+    content_sha256: "1175CF244FBA5716564B2979CB76E6595A14FEB2C7F2E2754667C4D5F92B23FB"
+    ttl_days: 365
+
+  - source_id: SRC-002
+    name: 小红书社区公约2.0
+    file: knowledge/source/TreeCut_行业认知知识库_V1.0.xlsx
+    format: XLSX
+    version: "2026-08"
+    owner: platform_official
+    scope: platform_compliance (真实性/原创/社区行为)
+    trust_level: HIGH
+    public_or_private: public
+    imported_at: "2026-08-29"
+    content_sha256: "1175CF244FBA5716564B2979CB76E6595A14FEB2C7F2E2754667C4D5F92B23FB"
+    ttl_days: 30
+
+  - source_id: SRC-003
+    name: 小红书聚光内容审核规则总则
+    file: knowledge/source/TreeCut_行业认知知识库_V1.0.xlsx
+    format: XLSX
+    version: "2026-08"
+    owner: platform_official
+    scope: platform_compliance (广告用语/隐私/导流/文字规范)
+    trust_level: HIGH
+    public_or_private: public
+    imported_at: "2026-08-29"
+    content_sha256: "1175CF244FBA5716564B2979CB76E6595A14FEB2C7F2E2754667C4D5F92B23FB"
+    ttl_days: 30
+
+  - source_id: SRC-004
+    name: 小红书主题规范
+    file: knowledge/source/TreeCut_行业认知知识库_V1.0.xlsx
+    format: XLSX
+    version: "2026-08"
+    owner: platform_official
+    scope: platform_compliance (内容与实际一致/夸张/引流)
+    trust_level: HIGH
+    public_or_private: public
+    imported_at: "2026-08-29"
+    content_sha256: "1175CF244FBA5716564B2979CB76E6595A14FEB2C7F2E2754667C4D5F92B23FB"
+    ttl_days: 30
+
+  - source_id: SRC-005
+    name: 业务人工验证数据
+    file: knowledge/source/TreeCut_行业认知知识库_V1.0.xlsx
+    format: XLSX
+    version: "1.0"
+    owner: internal_business
+    scope: product/functions/user_needs/content (业务词典/运营模型)
+    trust_level: HIGHEST
+    public_or_private: private  # 内部业务裁决，本地/私有保存
+    imported_at: "2026-08-29"
+    content_sha256: "1175CF244FBA5716564B2979CB76E6595A14FEB2C7F2E2754667C4D5F92B23FB"
+    ttl_days: null
+
+  - source_id: SRC-006
+    name: TreeCut 行业认知知识库 V1.0（Word 解释性辅助）
+    file: knowledge/source/TreeCut_行业认知知识库_V1.0.docx
+    format: DOCX
+    version: "1.0"
+    owner: user_compiled
+    scope: 全部（解释性上下文，非独立机器源）
+    trust_level: MEDIUM
+    public_or_private: public
+    imported_at: "2026-08-29"
+    content_sha256: "DC3B004B09169314D6723ABFC63DE459AAF90CAC4287DBFE46E493FFADEA1EF8"
+    ttl_days: null
+    note: Word 版仅作解释性辅助；机器结构化源以 Excel 为准
+
+notes:
+  - 平台规则（SRC-002/003/004）TTL 30 天，过期必须重新联网核验
+  - SRC-005 内部业务数据禁止上传公开 Git（knowledge_private/）

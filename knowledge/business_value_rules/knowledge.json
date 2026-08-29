@@ -1,0 +1,486 @@
+{
+ "namespace": "business_value_rules",
+ "count": 12,
+ "records": [
+  {
+   "knowledge_id": "BUSINESS_VALUE-0001",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "真实住宅实景",
+   "statement": "真实空间能提供使用情境与信任证据。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "正向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0002",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "明确尺寸信息",
+   "statement": "帮助用户做空间/产品决策。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "正向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0003",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "功能完整演示",
+   "statement": "比静态画面更能证明功能。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "正向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0004",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "前后/收起展开对比",
+   "statement": "具备明显视觉变化和信息增量。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "正向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0005",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "空间痛点+解决方案",
+   "statement": "同时具备用户问题与解决路径。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "正向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0006",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "人物+产品互动",
+   "statement": "增强动作可理解性和真实感。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "正向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0007",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "纯工厂空镜",
+   "statement": "若无工艺/产品信息，用户价值通常较低。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "负向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0008",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "长时间人物遮挡产品",
+   "statement": "降低产品可见度与镜头复用价值。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "负向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0009",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "重复画面",
+   "statement": "降低新鲜度，并增加批量内容同质化。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "负向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0010",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "模糊/抖动/曝光异常",
+   "statement": "影响观看与产品呈现。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "负向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0011",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "文案与画面不一致",
+   "statement": "造成理解断裂、低质感与信任下降。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "严重负向"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "BUSINESS_VALUE-0012",
+   "namespace": "business_value_rules",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "硬字幕遮挡主体",
+   "statement": "影响二次字幕和画面可用性。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "人工反馈+历史有效内容+生产验收",
+    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "usage_scene": "候选重排/价值评分/QA",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "商业价值",
+    "category2": "负向价值"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "LOW",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_value",
+    "HYPOTHESIS",
+    "商业价值"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  }
+ ]
+}

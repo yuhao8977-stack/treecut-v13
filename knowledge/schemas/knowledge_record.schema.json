@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "treecut://knowledge/schemas/knowledge_record.schema.json",
+  "title": "KnowledgeRecord",
+  "description": "Phase 4 Knowledge Brain V2 统一知识记录。versioned / traceable / typed / retrievable。",
+  "type": "object",
+  "required": [
+    "knowledge_id", "namespace", "knowledge_type", "title", "statement",
+    "source", "source_type", "confidence", "status", "effective_date",
+    "created_at"
+  ],
+  "properties": {
+    "knowledge_id": {"type": "string", "pattern": "^[A-Z0-9_]+-[0-9]{4}$"},
+    "namespace": {"type": "string", "enum": [
+      "industry_taxonomy", "product", "product_components", "functions",
+      "materials_styles", "dimensions_decisions", "craft_trust", "user_needs",
+      "content_types", "content_roles", "mother_themes", "shot_ontology",
+      "business_value_rules", "semantic_mappings", "template_library",
+      "account_profiles", "content_dna", "feedback_experience",
+      "negative_rules", "platform_compliance"]},
+    "knowledge_type": {"type": "string", "enum": ["FACT", "BUSINESS_RULE", "HYPOTHESIS", "PLATFORM_RULE"]},
+    "title": {"type": "string"},
+    "statement": {"type": "string"},
+    "structured_payload": {"type": "object"},
+    "source": {"type": "string"},
+    "source_type": {"type": "string", "enum": ["business_dictionary", "platform_official", "professional_institution", "operational_model", "production_rule", "internal_business", "user_compiled", "external_article", "UNKNOWN"]},
+    "source_version": {"type": "string"},
+    "confidence": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+    "status": {"type": "string", "enum": ["DRAFT", "REVIEWED", "ACTIVE", "DEPRECATED", "RETIRED", "DISPUTED"]},
+    "effective_date": {"type": "string"},
+    "expires_at": {"type": ["string", "null"]},
+    "ttl_days": {"type": ["integer", "null"]},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "related_entities": {"type": "array", "items": {"type": "string"}},
+    "created_at": {"type": "string"},
+    "updated_at": {"type": "string"},
+    "supersedes": {"type": ["string", "null"]},
+    "superseded_by": {"type": ["string", "null"]},
+    "source_sha256": {"type": ["string", "null"]},
+    "needs_source": {"type": "boolean"}
+  }
+}

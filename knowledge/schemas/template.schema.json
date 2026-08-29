@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "treecut://knowledge/schemas/template.schema.json",
+  "title": "TemplateSchemaV1",
+  "description": "Phase 4 Stage 1 模板 Schema（本 Stage 只建 Schema + 接入接口，不全量重做模板）。",
+  "type": "object",
+  "required": ["template_id", "name", "mother_theme", "primary_content_role", "content_type"],
+  "properties": {
+    "template_id": {"type": "string"},
+    "name": {"type": "string"},
+    "mother_theme": {"type": "string"},
+    "primary_content_role": {"type": "string"},
+    "content_type": {"type": "string"},
+    "target_user_need": {"type": "array", "items": {"type": "string"}},
+    "business_value": {"type": "array", "items": {"type": "string"}},
+    "required_evidence": {"type": "array", "items": {"type": "string"}},
+    "preferred_evidence": {"type": "array", "items": {"type": "string"}},
+    "avoid_evidence": {"type": "array", "items": {"type": "string"}},
+    "shot_slots": {"type": "array", "items": {"type": "object"}},
+    "duration_range": {"type": "object", "properties": {"min_s": {"type": "number"}, "max_s": {"type": "number"}}},
+    "hook_pattern": {"type": "string"},
+    "body_pattern": {"type": "string"},
+    "cta_pattern": {"type": "string"},
+    "source": {"type": "string"},
+    "validation_status": {"type": "string", "enum": ["HYPOTHESIS", "DRAFT", "VALIDATED", "ACTIVE", "DEPRECATED"]},
+    "version": {"type": "string"}
+  }
+}

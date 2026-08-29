@@ -1,0 +1,386 @@
+{
+ "namespace": "platform_compliance",
+ "count": 10,
+ "records": [
+  {
+   "knowledge_id": "PLATFORM-0001",
+   "namespace": "platform_compliance",
+   "knowledge_type": "PLATFORM_RULE",
+   "title": "真实与原创",
+   "statement": "素材应来源于自身经验/创作或取得合法使用权，并保证真实性。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "发布/投流前自动合规扫描",
+    "negative_evidence": "规则过期不得直接作为永久判定",
+    "usage_scene": "脚本检查/字幕检查/成片QA",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "平台合规",
+    "category2": "社区内容"
+   },
+   "source": "https://pgy.xiaohongshu.com/help/detail?id=1eda0a065dd894063c2e029a49e8f6a1&userType=4",
+   "source_type": "platform_official",
+   "source_version": "2026-08",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": 30,
+   "tags": [
+    "platform",
+    "PLATFORM_RULE",
+    "平台合规"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PLATFORM-0002",
+   "namespace": "platform_compliance",
+   "knowledge_type": "PLATFORM_RULE",
+   "title": "内容与实际一致",
+   "statement": "避免虚假、夸张或与实际内容严重不符。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "发布/投流前自动合规扫描",
+    "negative_evidence": "规则过期不得直接作为永久判定",
+    "usage_scene": "脚本检查/字幕检查/成片QA",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "平台合规",
+    "category2": "社区内容"
+   },
+   "source": "https://top.xiaohongshu.com/fe/toph5/rules/subject",
+   "source_type": "platform_official",
+   "source_version": "2026-08",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": 30,
+   "tags": [
+    "platform",
+    "PLATFORM_RULE",
+    "平台合规"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PLATFORM-0003",
+   "namespace": "platform_compliance",
+   "knowledge_type": "PLATFORM_RULE",
+   "title": "绝对化用语风险",
+   "statement": "聚光素材不得涉及“国家级、最高级、最佳、第一、顶级”等绝对化用语及同义表达。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "发布/投流前自动合规扫描",
+    "negative_evidence": "规则过期不得直接作为永久判定",
+    "usage_scene": "脚本检查/字幕检查/成片QA",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "平台合规",
+    "category2": "广告审核"
+   },
+   "source": "https://ad.xiaohongshu.com/next_help/docs/8dc5bd9c45c9a90cb9912f3400d43f92",
+   "source_type": "platform_official",
+   "source_version": "2026-08",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": 30,
+   "tags": [
+    "platform",
+    "PLATFORM_RULE",
+    "平台合规"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PLATFORM-0004",
+   "namespace": "platform_compliance",
+   "knowledge_type": "PLATFORM_RULE",
+   "title": "隐私保护",
+   "statement": "不得未经授权暴露住址、联系方式、身份证号、完整车牌等隐私信息。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "发布/投流前自动合规扫描",
+    "negative_evidence": "规则过期不得直接作为永久判定",
+    "usage_scene": "脚本检查/字幕检查/成片QA",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "平台合规",
+    "category2": "广告审核"
+   },
+   "source": "https://ad.xiaohongshu.com/next_help/docs/8dc5bd9c45c9a90cb9912f3400d43f92",
+   "source_type": "platform_official",
+   "source_version": "2026-08",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": 30,
+   "tags": [
+    "platform",
+    "PLATFORM_RULE",
+    "平台合规"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PLATFORM-0005",
+   "namespace": "platform_compliance",
+   "knowledge_type": "PLATFORM_RULE",
+   "title": "站外导流风险",
+   "statement": "聚光物料不得明示或暗示引导用户通过第三方平台联系或交易。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "发布/投流前自动合规扫描",
+    "negative_evidence": "规则过期不得直接作为永久判定",
+    "usage_scene": "脚本检查/字幕检查/成片QA",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "平台合规",
+    "category2": "广告审核"
+   },
+   "source": "https://ad.xiaohongshu.com/next_help/docs/8dc5bd9c45c9a90cb9912f3400d43f92",
+   "source_type": "platform_official",
+   "source_version": "2026-08",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": 30,
+   "tags": [
+    "platform",
+    "PLATFORM_RULE",
+    "平台合规"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PLATFORM-0006",
+   "namespace": "platform_compliance",
+   "knowledge_type": "PLATFORM_RULE",
+   "title": "字幕语言规范",
+   "statement": "聚光物料中的英语/方言等内容需添加中文字幕。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "发布/投流前自动合规扫描",
+    "negative_evidence": "规则过期不得直接作为永久判定",
+    "usage_scene": "脚本检查/字幕检查/成片QA",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "平台合规",
+    "category2": "广告审核"
+   },
+   "source": "https://ad.xiaohongshu.com/next_help/docs/8dc5bd9c45c9a90cb9912f3400d43f92",
+   "source_type": "platform_official",
+   "source_version": "2026-08",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": 30,
+   "tags": [
+    "platform",
+    "PLATFORM_RULE",
+    "平台合规"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PLATFORM-0007",
+   "namespace": "platform_compliance",
+   "knowledge_type": "PLATFORM_RULE",
+   "title": "规范文字",
+   "statement": "聚光物料不得通过错别字、非标准简化汉字、繁体字等影响规范表达。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "发布/投流前自动合规扫描",
+    "negative_evidence": "规则过期不得直接作为永久判定",
+    "usage_scene": "脚本检查/字幕检查/成片QA",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "平台合规",
+    "category2": "广告审核"
+   },
+   "source": "https://ad.xiaohongshu.com/next_help/docs/8dc5bd9c45c9a90cb9912f3400d43f92",
+   "source_type": "platform_official",
+   "source_version": "2026-08",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": 30,
+   "tags": [
+    "platform",
+    "PLATFORM_RULE",
+    "平台合规"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PLATFORM-0008",
+   "namespace": "platform_compliance",
+   "knowledge_type": "PLATFORM_RULE",
+   "title": "低俗与不良流行语",
+   "statement": "商业物料不得使用低俗烂梗、侮辱性或不良流行语。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "发布/投流前自动合规扫描",
+    "negative_evidence": "规则过期不得直接作为永久判定",
+    "usage_scene": "脚本检查/字幕检查/成片QA",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "平台合规",
+    "category2": "广告审核"
+   },
+   "source": "https://ad.xiaohongshu.com/next_help/docs/8dc5bd9c45c9a90cb9912f3400d43f92",
+   "source_type": "platform_official",
+   "source_version": "2026-08",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": 30,
+   "tags": [
+    "platform",
+    "PLATFORM_RULE",
+    "平台合规"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PLATFORM-0009",
+   "namespace": "platform_compliance",
+   "knowledge_type": "PLATFORM_RULE",
+   "title": "账号行业匹配",
+   "statement": "推广内容应与认证行业/资质相匹配。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "发布/投流前自动合规扫描",
+    "negative_evidence": "规则过期不得直接作为永久判定",
+    "usage_scene": "脚本检查/字幕检查/成片QA",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "平台合规",
+    "category2": "广告审核"
+   },
+   "source": "https://ad.xiaohongshu.com/next_help/docs/8dc5bd9c45c9a90cb9912f3400d43f92",
+   "source_type": "platform_official",
+   "source_version": "2026-08",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": 30,
+   "tags": [
+    "platform",
+    "PLATFORM_RULE",
+    "平台合规"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "PLATFORM-0010",
+   "namespace": "platform_compliance",
+   "knowledge_type": "PLATFORM_RULE",
+   "title": "规则动态更新",
+   "statement": "平台规则会调整，必须记录抓取日期、有效期和来源；过期后重新联网核验。",
+   "structured_payload": {
+    "aliases": [],
+    "positive_evidence": "发布/投流前自动合规扫描",
+    "negative_evidence": "规则过期不得直接作为永久判定",
+    "usage_scene": "脚本检查/字幕检查/成片QA",
+    "content_roles": [
+     "全部"
+    ],
+    "category1": "平台合规",
+    "category2": "系统规则"
+   },
+   "source": "https://ad.xiaohongshu.com/next_help/docs/8dc5bd9c45c9a90cb9912f3400d43f92",
+   "source_type": "platform_official",
+   "source_version": "2026-08",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": 30,
+   "tags": [
+    "platform",
+    "PLATFORM_RULE",
+    "平台合规"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  }
+ ]
+}

@@ -1,0 +1,615 @@
+{
+ "namespace": "user_needs",
+ "count": 14,
+ "records": [
+  {
+   "knowledge_id": "USER_NEED-0001",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "小户型空间利用",
+   "statement": "面积有限，希望增加餐桌/收纳/操作功能。",
+   "structured_payload": {
+    "aliases": [
+     "小户型",
+     "80平",
+     "空间不够"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "空间痛点"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0002",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "大横厅布局",
+   "statement": "横厅尺度较大，需要通过岛台形成分区/办公/餐饮功能。",
+   "structured_payload": {
+    "aliases": [
+     "大横厅",
+     "沙发后"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "空间痛点"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0003",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "多人聚餐",
+   "statement": "家庭聚会或多人用餐需要更大桌面。",
+   "structured_payload": {
+    "aliases": [
+     "多人吃饭",
+     "聚会",
+     "火锅"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "家庭场景"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0004",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "三口之家",
+   "statement": "三人家庭的日常就餐、收纳和办公需求。",
+   "structured_payload": {
+    "aliases": [
+     "一家三口"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "家庭场景"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0005",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "有娃家庭",
+   "statement": "关注圆角、防磕碰、收纳和动线。",
+   "structured_payload": {
+    "aliases": [
+     "孩子",
+     "儿童"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "家庭场景"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0006",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "办公学习",
+   "statement": "需要临时办公、阅读、学习桌面。",
+   "structured_payload": {
+    "aliases": [
+     "办公",
+     "学习"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "生活场景"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0007",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "收纳不足",
+   "statement": "厨房/餐厅小物、电器、茶咖等无处收纳。",
+   "structured_payload": {
+    "aliases": [
+     "储物不够",
+     "收纳"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "痛点"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0008",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "插座不方便",
+   "statement": "火锅、充电、小家电用电时拖线不便。",
+   "structured_payload": {
+    "aliases": [
+     "没有插座",
+     "满屋拉线"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "痛点"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0009",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "电器嵌入",
+   "statement": "需要提前规划电器尺寸、开孔与位置。",
+   "structured_payload": {
+    "aliases": [
+     "蒸烤箱",
+     "烤箱",
+     "洗碗机"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "决策问题"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0010",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "岛台尺寸决策",
+   "statement": "关心长度、宽度、高度、通道与使用人数。",
+   "structured_payload": {
+    "aliases": [
+     "多高",
+     "多宽",
+     "多长"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "决策问题"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0011",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "风格匹配",
+   "statement": "岛台材质/颜色与整体装修风格协调。",
+   "structured_payload": {
+    "aliases": [
+     "中古",
+     "奶油",
+     "意式",
+     "极简"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "审美需求"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0012",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "真实案例参考",
+   "statement": "希望通过同户型/同需求真实案例降低决策不确定性。",
+   "structured_payload": {
+    "aliases": [
+     "实景",
+     "案例"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "信任需求"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0013",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "预算与性价比",
+   "statement": "关注配置、材质、功能与预算匹配。",
+   "structured_payload": {
+    "aliases": [
+     "价格",
+     "预算",
+     "值不值"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "购买决策"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "USER_NEED-0014",
+   "namespace": "user_needs",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "工艺与品质",
+   "statement": "关注收口、五金、加工精度、稳定性。",
+   "structured_payload": {
+    "aliases": [
+     "工艺",
+     "细节",
+     "品质"
+    ],
+    "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
+    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "usage_scene": "脚本理解/内容价值/CTA",
+    "content_roles": [
+     "流量",
+     "搜索",
+     "转化"
+    ],
+    "category1": "用户需求",
+    "category2": "信任需求"
+   },
+   "source": "operational_model",
+   "source_type": "operational_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "user_need",
+    "HYPOTHESIS",
+    "用户需求"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  }
+ ]
+}

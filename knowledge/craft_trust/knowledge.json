@@ -1,0 +1,297 @@
+{
+ "namespace": "craft_trust",
+ "count": 7,
+ "records": [
+  {
+   "knowledge_id": "CRAFT-0001",
+   "namespace": "craft_trust",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "45度海棠角/斜拼",
+   "statement": "台面/板材边缘通过斜切拼接形成连续视觉的收口方式。",
+   "structured_payload": {
+    "aliases": [
+     "海棠角",
+     "45度拼接"
+    ],
+    "positive_evidence": "近景工艺画面+ASR/OCR说明",
+    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
+    "usage_scene": "工艺信任型内容/细节镜头",
+    "content_roles": [
+     "信任",
+     "转化"
+    ],
+    "category1": "工艺与五金",
+    "category2": "收口工艺"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "craft",
+    "HYPOTHESIS",
+    "工艺与五金"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "CRAFT-0002",
+   "namespace": "craft_trust",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "连纹",
+   "statement": "相邻表面纹理视觉连续或对纹。",
+   "structured_payload": {
+    "aliases": [
+     "对纹",
+     "纹理连续"
+    ],
+    "positive_evidence": "近景工艺画面+ASR/OCR说明",
+    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
+    "usage_scene": "工艺信任型内容/细节镜头",
+    "content_roles": [
+     "信任",
+     "转化"
+    ],
+    "category1": "工艺与五金",
+    "category2": "纹理工艺"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "craft",
+    "HYPOTHESIS",
+    "工艺与五金"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "CRAFT-0003",
+   "namespace": "craft_trust",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "精准开孔",
+   "statement": "针对电器、水槽、插座等按尺寸开孔。",
+   "structured_payload": {
+    "aliases": [
+     "精确开孔"
+    ],
+    "positive_evidence": "近景工艺画面+ASR/OCR说明",
+    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
+    "usage_scene": "工艺信任型内容/细节镜头",
+    "content_roles": [
+     "信任",
+     "转化"
+    ],
+    "category1": "工艺与五金",
+    "category2": "加工工艺"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "craft",
+    "HYPOTHESIS",
+    "工艺与五金"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "CRAFT-0004",
+   "namespace": "craft_trust",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "倒圆角",
+   "statement": "边角进行圆弧处理。",
+   "structured_payload": {
+    "aliases": [
+     "圆角",
+     "R角"
+    ],
+    "positive_evidence": "近景工艺画面+ASR/OCR说明",
+    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
+    "usage_scene": "工艺信任型内容/细节镜头",
+    "content_roles": [
+     "信任",
+     "转化"
+    ],
+    "category1": "工艺与五金",
+    "category2": "安全/造型工艺"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "craft",
+    "HYPOTHESIS",
+    "工艺与五金"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "CRAFT-0005",
+   "namespace": "craft_trust",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "封边",
+   "statement": "板件边缘处理。",
+   "structured_payload": {
+    "aliases": [
+     "收边"
+    ],
+    "positive_evidence": "近景工艺画面+ASR/OCR说明",
+    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
+    "usage_scene": "工艺信任型内容/细节镜头",
+    "content_roles": [
+     "信任",
+     "转化"
+    ],
+    "category1": "工艺与五金",
+    "category2": "加工工艺"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "craft",
+    "HYPOTHESIS",
+    "工艺与五金"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "CRAFT-0006",
+   "namespace": "craft_trust",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "抽屉五金",
+   "statement": "抽屉滑轨、阻尼等五金系统。",
+   "structured_payload": {
+    "aliases": [
+     "滑轨",
+     "阻尼"
+    ],
+    "positive_evidence": "近景工艺画面+ASR/OCR说明",
+    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
+    "usage_scene": "工艺信任型内容/细节镜头",
+    "content_roles": [
+     "信任",
+     "转化"
+    ],
+    "category1": "工艺与五金",
+    "category2": "五金"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "craft",
+    "HYPOTHESIS",
+    "工艺与五金"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  },
+  {
+   "knowledge_id": "CRAFT-0007",
+   "namespace": "craft_trust",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "伸缩五金",
+   "statement": "支撑岛台伸缩/延长功能的结构件与滑轨。",
+   "structured_payload": {
+    "aliases": [
+     "伸缩轨道"
+    ],
+    "positive_evidence": "近景工艺画面+ASR/OCR说明",
+    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
+    "usage_scene": "工艺信任型内容/细节镜头",
+    "content_roles": [
+     "信任",
+     "转化"
+    ],
+    "category1": "工艺与五金",
+    "category2": "五金"
+   },
+   "source": "business_dictionary",
+   "source_type": "business_dictionary",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "craft",
+    "HYPOTHESIS",
+    "工艺与五金"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": false,
+   "note": ""
+  }
+ ]
+}

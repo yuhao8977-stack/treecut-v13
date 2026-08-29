@@ -1,0 +1,931 @@
+{
+ "namespace": "shot_ontology",
+ "count": 22,
+ "records": [
+  {
+   "knowledge_id": "SHOT-0001",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "全景/广角",
+   "statement": "展示整体空间关系、布局和产品位置。",
+   "structured_payload": {
+    "aliases": [
+     "wide shot"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "景别"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0002",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "中景",
+   "statement": "人物+产品或产品主要区域。",
+   "structured_payload": {
+    "aliases": [
+     "medium shot"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "景别"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0003",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "近景",
+   "statement": "产品局部、动作、功能细节。",
+   "structured_payload": {
+    "aliases": [
+     "close shot"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "景别"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0004",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "特写",
+   "statement": "纹理、五金、开孔、边角等强细节。",
+   "structured_payload": {
+    "aliases": [
+     "detail shot"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "景别"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0005",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "人物正面讲解",
+   "statement": "人物面对镜头讲解。",
+   "structured_payload": {
+    "aliases": [
+     "talking head"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "人物镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0006",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "人物侧身演示",
+   "statement": "人物与产品互动，展示动作。",
+   "structured_payload": {
+    "aliases": [
+     "demo"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "人物镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0007",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "产品空镜",
+   "statement": "无人物的静态/运动产品展示。",
+   "structured_payload": {
+    "aliases": [
+     "product b-roll"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "产品镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0008",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "空间扫镜",
+   "statement": "横移/环绕/推进展示空间。",
+   "structured_payload": {
+    "aliases": [
+     "pan",
+     "walkthrough"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "运动镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0009",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "推镜",
+   "statement": "镜头向主体靠近，强调细节或结果。",
+   "structured_payload": {
+    "aliases": [
+     "push in"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "运镜"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0010",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "拉镜",
+   "statement": "从局部拉到整体，建立空间关系。",
+   "structured_payload": {
+    "aliases": [
+     "pull out"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "运镜"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0011",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "横移",
+   "statement": "左右移动展示长度或空间。",
+   "structured_payload": {
+    "aliases": [
+     "slide"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "运镜"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0012",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "跟拍",
+   "statement": "跟随人物或动作。",
+   "structured_payload": {
+    "aliases": [
+     "follow"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "运镜"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0013",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "固定镜头",
+   "statement": "机位固定，适合动作演示/稳定口播。",
+   "structured_payload": {
+    "aliases": [
+     "static"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "运镜"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0014",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "伸缩完整动作",
+   "statement": "从收起→展开或展开→收起形成完整动作闭环。",
+   "structured_payload": {
+    "aliases": [
+     "extend action"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "动作镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0015",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "开抽屉完整动作",
+   "statement": "抽屉打开并展示内部收纳。",
+   "structured_payload": {
+    "aliases": [
+     "drawer action"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "动作镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0016",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "轨道插座演示",
+   "statement": "插座模块移动/使用/插电过程。",
+   "structured_payload": {
+    "aliases": [
+     "socket demo"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "动作镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0017",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "电器开门/嵌入",
+   "statement": "展示电器位置或开合。",
+   "structured_payload": {
+    "aliases": [
+     "appliance demo"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "动作镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0018",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "材质纹理特写",
+   "statement": "强调台面纹理、光泽、触感视觉。",
+   "structured_payload": {
+    "aliases": [
+     "texture detail"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "细节镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0019",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "完工结果镜头",
+   "statement": "优先展示完整、整洁、有空间关系的最终效果。",
+   "structured_payload": {
+    "aliases": [
+     "result shot"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "结果镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0020",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "问题镜头",
+   "statement": "表现空间拥挤、线材混乱、收纳不足等痛点。",
+   "structured_payload": {
+    "aliases": [
+     "problem shot"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "叙事镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0021",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "对比镜头",
+   "statement": "前后/收起展开/错误正确的视觉对比。",
+   "structured_payload": {
+    "aliases": [
+     "comparison"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "叙事镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  },
+  {
+   "knowledge_id": "SHOT-0022",
+   "namespace": "shot_ontology",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CTA承接镜头",
+   "statement": "产品整体、人物、案例或可继续咨询的稳定画面。",
+   "structured_payload": {
+    "aliases": [
+     "cta shot"
+    ],
+    "positive_evidence": "视觉形态/动作/景别明确",
+    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "usage_scene": "segment理解/脚本槽位/连续性",
+    "content_roles": [
+     "流量",
+     "信任",
+     "转化"
+    ],
+    "category1": "镜头语言",
+    "category2": "结尾镜头"
+   },
+   "source": "production_rule",
+   "source_type": "production_rule",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-26",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "shot",
+    "HYPOTHESIS",
+    "镜头语言"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:10",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "needs_source": true,
+   "note": ""
+  }
+ ]
+}
