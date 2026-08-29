@@ -799,6 +799,15 @@ class TargetedReviewV1App(_ReviewBase):
 VERDICT_CN = {"SUPPORTED": "支持", "NOT_SUPPORTED": "不支持", "UNSURE": "不确定"}
 AFFINITY_CN = {"STRONG": "强", "MEDIUM": "中", "WEAK": "弱",
                "NOT_SUPPORTED": "不支持", "UNKNOWN": "未知"}
+_AFFINITY_TO_EN = {v: k for k, v in AFFINITY_CN.items()}
+
+
+def _affinity_to_en(raw: str) -> str:
+    """中文亲和度 → 英文（未知/空 → UNKNOWN，保证存库一致）。"""
+    raw = (raw or "").strip()
+    if not raw:
+        return "UNKNOWN"
+    return _AFFINITY_TO_EN.get(raw, raw.upper())
 
 # 默认完整 Taxonomy（运行时从 manifest 读取，避免硬编码与 AI 耦合）
 DEFAULT_TAXONOMY = {
@@ -1003,9 +1012,10 @@ class _BusinessCognitionReviewForm(tk.Frame):
         }
         for k, v in self.vars.items():
             if k.startswith("role_"):
-                out["role_affinity"][k[len("role_"):]] = v.get() or ""
+                # Combobox 显示中文，存库转回英文（AFFINITY_CN 反查）
+                out["role_affinity"][k[len("role_"):]] = _affinity_to_en(v.get())
             elif k.startswith("theme_"):
-                out["theme_affinity"][k[len("theme_"):]] = v.get() or ""
+                out["theme_affinity"][k[len("theme_"):]] = _affinity_to_en(v.get())
         conf_raw = self.conf_var.get() if self.conf_var is not None else ""
         status_raw = self.status_var.get() if self.status_var is not None else ""
         out["human_confidence"] = {"高": "HIGH", "中": "MEDIUM", "低": "LOW"}.get(conf_raw, "")

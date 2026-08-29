@@ -111,7 +111,9 @@ def main():
         h = rows[sid]
         a = ai_by_sid[sid]
         cls = s["challenge_class"]
-        row_stat = {"segment_id": sid, "class": cls, "overall_unknown": h.get("overall_unknown", "")}
+        row_stat = {"segment_id": sid, "class": cls, "overall_unknown": h.get("overall_unknown", ""),
+                    "human_conflict_observed": h.get("conflict_observed", ""),
+                    "ai_conflict_count": a["conflicts"]["conflict_count"]}
         for fld in SET_FIELDS:
             human_set = set(_jlist(h.get(fld)))
             ai_field = AI_FIELD_MAP[fld]
@@ -179,6 +181,22 @@ def main():
         affinity_metrics(theme_stats, [t["id"] for t in tax["mother_themes"]],
                          ai_themes, human_themes, "theme")
 
+    # ---------------- Conflict 对照（AI 检测 vs Human 观察） ----------------
+    conflict_agreement = {"agree": 0, "ai_only": 0, "human_only": 0, "both_none": 0}
+    for ps in per_seg:
+        ai_c = ps.get("ai_conflict_count") or 0
+        hum = (ps.get("human_conflict_observed") or "").upper()
+        hum_c = hum in ("SCENE_ASR_CONFLICT", "MATERIAL_WEAK_CONFLICT")
+        if ai_c > 0 and hum_c:
+            conflict_agreement["agree"] += 1
+        elif ai_c > 0 and not hum_c:
+            conflict_agreement["ai_only"] += 1
+        elif ai_c == 0 and hum_c:
+            conflict_agreement["human_only"] += 1
+        else:
+            conflict_agreement["both_none"] += 1
+    print("\nConflict 对照: AI检测 vs Human观察:", conflict_agreement)
+
     # ---------------- 汇总 ----------------
     print("\n===== Human24 打分（独立 Human Truth vs AI_LOCK）=====")
     for fld in SET_FIELDS:
@@ -228,6 +246,7 @@ def main():
                                    "unsupported_claim_rate": round(ucr, 4)},
         "unsupported_claims": unsupported,
         "human_only_missed_by_ai": missed,   # = FN 明细
+        "conflict_agreement": conflict_agreement,
         "affinity": {"role": role_stats, "theme": theme_stats},
         "by_class": by_class,
         "per_segment": per_seg,

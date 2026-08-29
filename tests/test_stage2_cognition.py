@@ -187,3 +187,48 @@ def test_human_only_label_becomes_fn_in_scoring():
         conn.execute("DELETE FROM stage2_business_cognition_review_v1 WHERE segment_id=?", (mock,))
         conn.commit()
         conn.close()
+
+
+def test_affinity_stored_as_english():
+    """亲和度存库必须为英文（STRONG/MEDIUM/WEAK/NOT_SUPPORTED/UNKNOWN）。"""
+    import sqlite3
+    from treecut.services.annotation_governance import AnnotationService
+    db = os.path.join(DATA_ROOT, "database", "materials.db")
+    svc = AnnotationService(db)
+    mock = "MOCK-HUMAN24-AFF-0002"
+    try:
+        svc.save_business_cognition_review(mock, "WEAK_EVIDENCE", {
+            "user_needs": [], "business_values": [], "decision_factors": [],
+            "trust_signals": [], "search_intents": [], "shot_functions": [],
+            "role_affinity": {"TRAFFIC": "MEDIUM", "SEARCH": "WEAK",
+                              "TRUST": "UNKNOWN", "CONVERSION": "NOT_SUPPORTED"},
+            "theme_affinity": {"SPACE_SOLUTION": "STRONG", "FAMILY_SCENE": "MEDIUM",
+                               "DECISION_AVOID_PIT": "WEAK", "AESTHETIC_STYLE": "UNKNOWN",
+                               "CRAFT_TRUST": "NOT_SUPPORTED"},
+            "overall_unknown": "NO", "conflict_observed": "NONE", "comment": "test",
+        }, "HIGH", "REVIEWED", operator="TEST")
+        conn = sqlite3.connect(db)
+        row = conn.execute("SELECT role_affinity, theme_affinity FROM "
+                           "stage2_business_cognition_review_v1 WHERE segment_id=?",
+                           (mock,)).fetchone()
+        conn.close()
+        ra = json.loads(row[0])
+        assert all(v in ("STRONG", "MEDIUM", "WEAK", "NOT_SUPPORTED", "UNKNOWN")
+                   for v in ra.values()), ra
+    finally:
+        conn = sqlite3.connect(db)
+        conn.execute("DELETE FROM stage2_business_cognition_review_v1 WHERE segment_id=?", (mock,))
+        conn.commit()
+        conn.close()
+
+
+def test_score_report_has_conflict_agreement():
+    """评分输出必须含 conflict 对照（AI vs Human）与 per-segment 明细。"""
+    p = os.path.join(DATA_ROOT, "BUSINESS_COGNITION_STAGE2_SCORE_V1.json")
+    if not os.path.exists(p):
+        return  # 未评分时不强制
+    s = json.load(open(p, encoding="utf-8"))
+    assert "conflict_agreement" in s
+    assert set(s["conflict_agreement"]) == {"agree", "ai_only", "human_only", "both_none"}
+    assert all("human_conflict_observed" in ps and "ai_conflict_count" in ps
+               for ps in s["per_segment"])
