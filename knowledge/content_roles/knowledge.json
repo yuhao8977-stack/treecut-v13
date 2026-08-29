@@ -1,25 +1,24 @@
 {
  "namespace": "content_roles",
- "count": 4,
+ "count": 8,
  "records": [
   {
-   "knowledge_id": "CONTENT_ROLE-0001",
+   "knowledge_id": "KB-07-001",
    "namespace": "content_roles",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "流量",
    "statement": "通过开头、冲突、视觉或题材获得点击与停留。",
    "structured_payload": {
+    "category": "内容角色",
     "aliases": [],
     "positive_evidence": "根据内容结构和CTA判断",
-    "negative_evidence": "一条视频可以多角色，但必须指定主角色",
-    "usage_scene": "内容价值/模板/账号DNA",
+    "exclude_evidence": "一条视频可以多角色，但必须指定主角色",
+    "treecut_usage": "内容价值/模板/账号DNA",
     "content_roles": [
      "流量"
-    ],
-    "category1": "内容运营",
-    "category2": "内容角色"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -28,36 +27,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "content_role",
-    "FACT",
-    "内容运营"
+    "content_roles",
+    "BUSINESS_RULE",
+    "内容角色"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "07_1_内容角色",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CONTENT_ROLE-0002",
+   "knowledge_id": "KB-07-002",
    "namespace": "content_roles",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "搜索",
    "statement": "承接明确装修/产品问题与关键词搜索。",
    "structured_payload": {
+    "category": "内容角色",
     "aliases": [],
     "positive_evidence": "根据内容结构和CTA判断",
-    "negative_evidence": "一条视频可以多角色，但必须指定主角色",
-    "usage_scene": "内容价值/模板/账号DNA",
+    "exclude_evidence": "一条视频可以多角色，但必须指定主角色",
+    "treecut_usage": "内容价值/模板/账号DNA",
     "content_roles": [
      "搜索"
-    ],
-    "category1": "内容运营",
-    "category2": "内容角色"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -66,36 +68,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "content_role",
-    "FACT",
-    "内容运营"
+    "content_roles",
+    "BUSINESS_RULE",
+    "内容角色"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "07_1_内容角色",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CONTENT_ROLE-0003",
+   "knowledge_id": "KB-07-003",
    "namespace": "content_roles",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "信任",
    "statement": "通过真实案例、工艺、团队、交付降低顾虑。",
    "structured_payload": {
+    "category": "内容角色",
     "aliases": [],
     "positive_evidence": "根据内容结构和CTA判断",
-    "negative_evidence": "一条视频可以多角色，但必须指定主角色",
-    "usage_scene": "内容价值/模板/账号DNA",
+    "exclude_evidence": "一条视频可以多角色，但必须指定主角色",
+    "treecut_usage": "内容价值/模板/账号DNA",
     "content_roles": [
      "信任"
-    ],
-    "category1": "内容运营",
-    "category2": "内容角色"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -104,36 +109,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "content_role",
-    "FACT",
-    "内容运营"
+    "content_roles",
+    "BUSINESS_RULE",
+    "内容角色"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "07_1_内容角色",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CONTENT_ROLE-0004",
+   "knowledge_id": "KB-07-004",
    "namespace": "content_roles",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "转化",
    "statement": "推动私信、咨询、留资、到店或进一步了解。",
    "structured_payload": {
+    "category": "内容角色",
     "aliases": [],
     "positive_evidence": "根据内容结构和CTA判断",
-    "negative_evidence": "一条视频可以多角色，但必须指定主角色",
-    "usage_scene": "内容价值/模板/账号DNA",
+    "exclude_evidence": "一条视频可以多角色，但必须指定主角色",
+    "treecut_usage": "内容价值/模板/账号DNA",
     "content_roles": [
      "转化"
-    ],
-    "category1": "内容运营",
-    "category2": "内容角色"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -142,17 +150,162 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "content_role",
-    "FACT",
-    "内容运营"
+    "content_roles",
+    "BUSINESS_RULE",
+    "内容角色"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "07_1_内容角色",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
+  },
+  {
+   "knowledge_id": "P4-CONTENT_ROLE-TRAFFIC",
+   "namespace": "content_roles",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "流量",
+   "statement": "吸引点击、停留与兴趣；不是由单一视觉标签决定",
+   "structured_payload": {
+    "group": "CONTENT_ROLE",
+    "code": "TRAFFIC",
+    "note": "与原V1.0四内容角色一一映射"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "CONTENT_ROLE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-CONTENT_ROLE-SEARCH",
+   "namespace": "content_roles",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "搜索",
+   "statement": "回答明确产品/装修问题与关键词需求",
+   "structured_payload": {
+    "group": "CONTENT_ROLE",
+    "code": "SEARCH",
+    "note": "与原V1.0四内容角色一一映射"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "CONTENT_ROLE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-CONTENT_ROLE-TRUST",
+   "namespace": "content_roles",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "信任",
+   "statement": "证明产品、工厂、真实案例、工艺与专业性",
+   "structured_payload": {
+    "group": "CONTENT_ROLE",
+    "code": "TRUST",
+    "note": "与原V1.0四内容角色一一映射"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "CONTENT_ROLE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-CONTENT_ROLE-CONVERSION",
+   "namespace": "content_roles",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "转化",
+   "statement": "帮助用户做购买/咨询决策并承接行动",
+   "structured_payload": {
+    "group": "CONTENT_ROLE",
+    "code": "CONVERSION",
+    "note": "与原V1.0四内容角色一一映射"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "CONTENT_ROLE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
   }
- ]
+ ],
+ "source": "V1.1 Phase4 结构化补全版"
 }

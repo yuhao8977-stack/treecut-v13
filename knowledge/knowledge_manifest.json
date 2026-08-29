@@ -1,19 +1,16 @@
 {
- "manifest": "KNOWLEDGE_MANIFEST_V1",
- "source_files": {
-  "xlsx": {
-   "file": "knowledge/source/TreeCut_行业认知知识库_V1.0.xlsx",
-   "sha256": "1175CF244FBA5716564B2979CB76E6595A14FEB2C7F2E2754667C4D5F92B23FB"
-  },
-  "docx": {
-   "file": "knowledge/source/TreeCut_行业认知知识库_V1.0.docx",
-   "sha256": "DC3B004B09169314D6723ABFC63DE459AAF90CAC4287DBFE46E493FFADEA1EF8"
-  }
+ "manifest": "KNOWLEDGE_MANIFEST_V1_1",
+ "source": {
+  "file": "knowledge/source/TreeCut_V11_Phase4.xlsx",
+  "sha256": "07AE586D8655F5BB09EAD77012B5595D42AD09B03D00E3F4B0D302CBEABD7C0C",
+  "source_type": "USER_CURATED_STRUCTURED_KB",
+  "extends": "TreeCut_行业认知知识库_V1.0"
  },
- "record_count": 186,
+ "record_count": 361,
  "by_type": {
-  "FACT": 78,
-  "HYPOTHESIS": 98,
+  "BUSINESS_RULE": 320,
+  "HYPOTHESIS": 24,
+  "FACT": 7,
   "PLATFORM_RULE": 10
  },
  "by_namespace": {
@@ -21,22 +18,33 @@
   "materials_styles": 15,
   "craft_trust": 7,
   "functions": 25,
-  "industry_taxonomy": 23,
-  "user_needs": 14,
-  "content_types": 10,
-  "content_roles": 4,
-  "shot_ontology": 22,
-  "semantic_mappings": 10,
-  "business_value_rules": 12,
-  "negative_rules": 18,
-  "platform_compliance": 10
+  "industry_taxonomy.scene_space": 16,
+  "user_needs": 35,
+  "content_roles": 8,
+  "content_types": 6,
+  "shot_ontology": 37,
+  "industry_taxonomy.script_semantics": 10,
+  "business_value_rules": 30,
+  "negative_rules": 30,
+  "dimensions_decisions": 23,
+  "platform_compliance": 10,
+  "mother_themes": 5,
+  "semantic_mappings": 76,
+  "template_library": 12
  },
- "by_confidence": {
-  "HIGH": 116,
-  "MEDIUM": 58,
-  "LOW": 12
+ "by_source_req": {
+  "SOURCE_PRESENT": 77,
+  "EXTERNAL_SOURCE_REQUIRED": 12,
+  "INTERNAL_VALIDATION_REQUIRED": 175,
+  "PLATFORM_SOURCE_REQUIRED": 10,
+  "NO_EXTERNAL_SOURCE_NEEDED": 87
  },
- "needs_source_count": 90,
- "records_sha256": "96b4c1ee895444dfcf0bd1be8f6c0f7ad80226fc9e4e14e0ff78b60383cfe029",
- "generated_at": "2026-08-29 14:10"
+ "by_status": {
+  "ACTIVE": 141,
+  "REVIEWED": 29,
+  "DRAFT": 191
+ },
+ "template_count": 12,
+ "records_sha256": "bf2ed200b48ab2605c3a229ba09dee24444c56241c13d5094cc2075ea8b0565a",
+ "generated_at": "2026-08-29 14:29"
 }

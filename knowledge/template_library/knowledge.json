@@ -1,0 +1,1111 @@
+{
+ "namespace": "template_library",
+ "count": 12,
+ "records": [
+  {
+   "knowledge_id": "TPL-CT01",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT01 小户型空间解决型",
+   "statement": "模板 CT01：小户型空间解决型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT01",
+     "name": "小户型空间解决型",
+     "validation_status": "REVIEWED_SEED",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.0",
+     "source": "原V1.0"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "先给结果或空间冲突",
+      "semantics": "小户型|岛台|空间关系",
+      "preferred_exclude": "优选：完工全景/收起展开对比 排除：无关工厂空镜|产品不可见",
+      "duration": "2.5",
+      "role": "流量"
+     },
+     {
+      "order": "2",
+      "slot": "Pain",
+      "beat": "Problem",
+      "target": "展示空间限制/原始问题",
+      "semantics": "空间不足|动线|小户型",
+      "preferred_exclude": "优选：空间全景/问题镜头 排除：纯细节无空间关系",
+      "duration": "3",
+      "role": "流量|搜索"
+     },
+     {
+      "order": "3",
+      "slot": "Solution",
+      "beat": "Solution",
+      "target": "展示岛台整体方案",
+      "semantics": "岛台|布局|餐厨",
+      "preferred_exclude": "优选：完工实景/广角 排除：无整体关系",
+      "duration": "4",
+      "role": "搜索"
+     },
+     {
+      "order": "4",
+      "slot": "Feature",
+      "beat": "Feature",
+      "target": "伸缩/收纳/插座等功能",
+      "semantics": "伸缩|收纳|轨道插座",
+      "preferred_exclude": "优选：功能完整动作 排除：动作不完整",
+      "duration": "8",
+      "role": "转化"
+     },
+     {
+      "order": "5",
+      "slot": "CTA",
+      "beat": "CTA",
+      "target": "稳定结果镜头承接咨询",
+      "semantics": "完工|结果",
+      "preferred_exclude": "优选：产品全景/人物+产品 排除：低清/乱背景",
+      "duration": "3",
+      "role": "转化"
+     }
+    ]
+   },
+   "source": "原V1.0",
+   "source_type": "internal_business_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT01"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT02",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT02 真实客户伸缩案例型",
+   "statement": "模板 CT02：真实客户伸缩案例型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT02",
+     "name": "真实客户伸缩案例型",
+     "validation_status": "REVIEWED_SEED",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.0",
+     "source": "原V1.0"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Result",
+      "beat": "Hook",
+      "target": "真实客户完工结果",
+      "semantics": "客户住宅|完工|伸缩岛台",
+      "preferred_exclude": "优选：高质量完工全景 排除：工厂场景",
+      "duration": "2.5",
+      "role": "流量|信任"
+     },
+     {
+      "order": "2",
+      "slot": "Context",
+      "beat": "Context",
+      "target": "客户/家庭/空间背景",
+      "semantics": "客户背景|家庭需求",
+      "preferred_exclude": "优选：住宅全景/户型关系 排除：仅客户姓名无实景",
+      "duration": "4",
+      "role": "信任"
+     },
+     {
+      "order": "3",
+      "slot": "Extend",
+      "beat": "Demo",
+      "target": "完整伸缩动作",
+      "semantics": "伸缩|展开",
+      "preferred_exclude": "优选：伸缩完整动作 排除：静态台面",
+      "duration": "5",
+      "role": "转化"
+     },
+     {
+      "order": "4",
+      "slot": "Functions",
+      "beat": "Feature",
+      "target": "收纳/插座/电器卖点",
+      "semantics": "功能展示",
+      "preferred_exclude": "优选：抽屉/轨道/电器动作 排除：无功能证据",
+      "duration": "8",
+      "role": "转化"
+     },
+     {
+      "order": "5",
+      "slot": "ResultCTA",
+      "beat": "CTA",
+      "target": "回到完工结果",
+      "semantics": "完工|客户住宅",
+      "preferred_exclude": "优选：空间全景 排除：工厂空镜",
+      "duration": "3",
+      "role": "信任|转化"
+     }
+    ]
+   },
+   "source": "原V1.0",
+   "source_type": "internal_business_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT02"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT03",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT03 尺寸避坑型",
+   "statement": "模板 CT03：尺寸避坑型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT03",
+     "name": "尺寸避坑型",
+     "validation_status": "REVIEWED_SEED",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.0",
+     "source": "原V1.0"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "错误/数字/结果钩子",
+      "semantics": "尺寸|避坑",
+      "preferred_exclude": "优选：对比/尺寸文字+产品 排除：纯工厂空镜",
+      "duration": "2.5",
+      "role": "流量|搜索"
+     },
+     {
+      "order": "2",
+      "slot": "Problem",
+      "beat": "Problem",
+      "target": "错误尺寸或使用后果",
+      "semantics": "尺寸问题",
+      "preferred_exclude": "优选：空间/使用问题镜头 排除：无问题证据",
+      "duration": "4",
+      "role": "搜索"
+     },
+     {
+      "order": "3",
+      "slot": "Explanation",
+      "beat": "Evidence",
+      "target": "用实际案例解释尺寸",
+      "semantics": "真实案例|尺寸|空间",
+      "preferred_exclude": "优选：测量/整体空间 排除：仅口播无画面证据",
+      "duration": "8",
+      "role": "搜索|信任"
+     },
+     {
+      "order": "4",
+      "slot": "Rule",
+      "beat": "Solution",
+      "target": "给出决策方法而非硬背数值",
+      "semantics": "用户需求|空间关系",
+      "preferred_exclude": "优选：不同案例对比 排除：未经来源支持的绝对数值",
+      "duration": "6",
+      "role": "搜索"
+     },
+     {
+      "order": "5",
+      "slot": "CTA",
+      "beat": "CTA",
+      "target": "引导提供户型/尺寸信息",
+      "semantics": "方案|户型",
+      "preferred_exclude": "优选：稳定产品/空间镜头 排除：违规站外导流",
+      "duration": "3",
+      "role": "转化"
+     }
+    ]
+   },
+   "source": "原V1.0",
+   "source_type": "internal_business_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT03"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT04",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT04 收纳功能型",
+   "statement": "模板 CT04：收纳功能型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT04",
+     "name": "收纳功能型",
+     "validation_status": "REVIEWED_SEED",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.0",
+     "source": "原V1.0"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "打开前/打开后明显变化",
+      "semantics": "收纳|抽屉",
+      "preferred_exclude": "优选：开抽屉/柜门动作 排除：静态台面",
+      "duration": "2",
+      "role": "流量"
+     },
+     {
+      "order": "2",
+      "slot": "Need",
+      "beat": "Problem",
+      "target": "为什么需要这些收纳",
+      "semantics": "小物|厨房收纳",
+      "preferred_exclude": "优选：真实物品/杂乱问题 排除：无生活场景",
+      "duration": "3",
+      "role": "搜索"
+     },
+     {
+      "order": "3",
+      "slot": "Demo1",
+      "beat": "Demo",
+      "target": "薄抽/小物收纳",
+      "semantics": "薄抽",
+      "preferred_exclude": "优选：完整开合+内部 排除：动作不完整",
+      "duration": "4",
+      "role": "转化"
+     },
+     {
+      "order": "4",
+      "slot": "Demo2",
+      "beat": "Demo",
+      "target": "柜体/层板/隐藏收纳",
+      "semantics": "柜体收纳",
+      "preferred_exclude": "优选：柜门/层板近景 排除：无内部画面",
+      "duration": "5",
+      "role": "转化"
+     },
+     {
+      "order": "5",
+      "slot": "Result",
+      "beat": "CTA",
+      "target": "整体收起后的整洁效果",
+      "semantics": "结果|整洁",
+      "preferred_exclude": "优选：完整产品 排除：杂乱背景",
+      "duration": "3",
+      "role": "信任|转化"
+     }
+    ]
+   },
+   "source": "原V1.0",
+   "source_type": "internal_business_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT04"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT05",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT05 工艺信任型",
+   "statement": "模板 CT05：工艺信任型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT05",
+     "name": "工艺信任型",
+     "validation_status": "REVIEWED_SEED",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.0",
+     "source": "原V1.0"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "高价值工艺结果/细节",
+      "semantics": "工艺|细节",
+      "preferred_exclude": "优选：强细节特写 排除：普通空镜",
+      "duration": "2.5",
+      "role": "流量|信任"
+     },
+     {
+      "order": "2",
+      "slot": "Process",
+      "beat": "Evidence",
+      "target": "加工/开孔/拼接过程",
+      "semantics": "工艺动作",
+      "preferred_exclude": "优选：加工近景 排除：与卖点无关机器",
+      "duration": "5",
+      "role": "信任"
+     },
+     {
+      "order": "3",
+      "slot": "Detail",
+      "beat": "Feature",
+      "target": "成品工艺细节",
+      "semantics": "收口|纹理|五金",
+      "preferred_exclude": "优选：特写 排除：低清/遮挡",
+      "duration": "5",
+      "role": "信任"
+     },
+     {
+      "order": "4",
+      "slot": "Why",
+      "beat": "Solution",
+      "target": "说明工艺解决什么问题",
+      "semantics": "品质|使用",
+      "preferred_exclude": "优选：产品+讲解 排除：只说高级无证据",
+      "duration": "5",
+      "role": "信任|转化"
+     },
+     {
+      "order": "5",
+      "slot": "CTA",
+      "beat": "CTA",
+      "target": "成品结果承接",
+      "semantics": "产品整体",
+      "preferred_exclude": "优选：完工/展厅成品 排除：无产品主体",
+      "duration": "3",
+      "role": "转化"
+     }
+    ]
+   },
+   "source": "原V1.0",
+   "source_type": "internal_business_model",
+   "source_version": "1.0",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT05"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT06",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT06 大横厅/沙发后布局型",
+   "statement": "模板 CT06：大横厅/沙发后布局型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT06",
+     "name": "大横厅/沙发后布局型",
+     "validation_status": "DRAFT_HYPOTHESIS",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.1",
+     "source": "Phase4架构补充（非原V1.0）"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "先给大横厅/沙发后成品关系",
+      "semantics": "大横厅|沙发后|岛台|空间关系",
+      "preferred_exclude": "优选：广角全景/沙发+岛台同框；排除：纯产品特写",
+      "duration": "2.5",
+      "role": "流量"
+     },
+     {
+      "order": "2",
+      "slot": "Context",
+      "beat": "Context",
+      "target": "交代横厅尺度和原有空间问题",
+      "semantics": "横厅|客厅|动线|分区",
+      "preferred_exclude": "优选：空间全景/动线；排除：无空间关系",
+      "duration": "4",
+      "role": "搜索"
+     },
+     {
+      "order": "3",
+      "slot": "Solution",
+      "beat": "Solution",
+      "target": "说明岛台如何完成分区/办公/就餐",
+      "semantics": "空间分区|办公|就餐",
+      "preferred_exclude": "优选：岛台与沙发/餐区同框；排除：单一细节",
+      "duration": "6",
+      "role": "搜索|转化"
+     },
+     {
+      "order": "4",
+      "slot": "Feature",
+      "beat": "Feature",
+      "target": "补充收纳/插座/尺寸等配置",
+      "semantics": "收纳|插座|尺寸",
+      "preferred_exclude": "优选：功能证据；排除：无对应证据",
+      "duration": "7",
+      "role": "转化"
+     },
+     {
+      "order": "5",
+      "slot": "ResultCTA",
+      "beat": "CTA",
+      "target": "回到整体布局结果并承接咨询",
+      "semantics": "布局结果|定制方案",
+      "preferred_exclude": "优选：稳定全景；排除：乱背景",
+      "duration": "3",
+      "role": "信任|转化"
+     }
+    ]
+   },
+   "source": "Phase4架构补充（非原V1.0）",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT06"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT07",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT07 餐岛一体对比型",
+   "statement": "模板 CT07：餐岛一体对比型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT07",
+     "name": "餐岛一体对比型",
+     "validation_status": "DRAFT_HYPOTHESIS",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.1",
+     "source": "Phase4架构补充（非原V1.0）"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "餐桌和岛台二选一的冲突/对比",
+      "semantics": "餐桌|岛台|餐岛一体",
+      "preferred_exclude": "优选：两种布局对比/整体空间；排除：无对比关系",
+      "duration": "2.5",
+      "role": "流量"
+     },
+     {
+      "order": "2",
+      "slot": "Problem",
+      "beat": "Problem",
+      "target": "说明传统单一餐桌/岛台的使用限制",
+      "semantics": "就餐|收纳|备餐|空间",
+      "preferred_exclude": "优选：空间问题镜头；排除：纯口播无证据",
+      "duration": "4",
+      "role": "搜索"
+     },
+     {
+      "order": "3",
+      "slot": "Compare",
+      "beat": "Comparison",
+      "target": "比较餐桌、岛台、餐岛一体的功能差异",
+      "semantics": "就餐|备餐|收纳|动线",
+      "preferred_exclude": "优选：多功能证据；排除：不相关工厂空镜",
+      "duration": "7",
+      "role": "搜索"
+     },
+     {
+      "order": "4",
+      "slot": "Decision",
+      "beat": "Solution",
+      "target": "给出适用人群/空间选择逻辑",
+      "semantics": "家庭人数|空间|使用习惯",
+      "preferred_exclude": "优选：多场景使用；排除：绝对化结论",
+      "duration": "6",
+      "role": "转化"
+     },
+     {
+      "order": "5",
+      "slot": "CTA",
+      "beat": "CTA",
+      "target": "引导按户型/需求选择方案",
+      "semantics": "户型|需求|方案",
+      "preferred_exclude": "优选：成品全景；排除：违规导流",
+      "duration": "3",
+      "role": "转化"
+     }
+    ]
+   },
+   "source": "Phase4架构补充（非原V1.0）",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT07"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT08",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT08 儿童家庭安全型",
+   "statement": "模板 CT08：儿童家庭安全型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT08",
+     "name": "儿童家庭安全型",
+     "validation_status": "DRAFT_HYPOTHESIS",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.1",
+     "source": "Phase4架构补充（非原V1.0）"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "用边角/动线安全问题建立关注",
+      "semantics": "儿童安全|圆角|动线",
+      "preferred_exclude": "优选：圆角特写+整体；排除：无儿童安全证据",
+      "duration": "2.5",
+      "role": "流量"
+     },
+     {
+      "order": "2",
+      "slot": "Risk",
+      "beat": "Problem",
+      "target": "说明尖角/拥挤动线等潜在风险",
+      "semantics": "尖角|通道|防磕碰",
+      "preferred_exclude": "优选：边角/通道；排除：夸大伤害",
+      "duration": "4",
+      "role": "搜索"
+     },
+     {
+      "order": "3",
+      "slot": "Solution",
+      "beat": "Solution",
+      "target": "展示圆角、布局、收纳等安全设计",
+      "semantics": "圆角|空间|收纳",
+      "preferred_exclude": "优选：结构证据；排除：仅口播",
+      "duration": "6",
+      "role": "搜索|信任"
+     },
+     {
+      "order": "4",
+      "slot": "Proof",
+      "beat": "Evidence",
+      "target": "用细节或尺寸说明设计依据",
+      "semantics": "工艺|尺寸|细节",
+      "preferred_exclude": "优选：近景/测量；排除：无来源硬说标准",
+      "duration": "6",
+      "role": "信任"
+     },
+     {
+      "order": "5",
+      "slot": "CTA",
+      "beat": "CTA",
+      "target": "承接家庭使用方案咨询",
+      "semantics": "家庭需求|方案",
+      "preferred_exclude": "优选：稳定成品；排除：绝对安全承诺",
+      "duration": "3",
+      "role": "转化"
+     }
+    ]
+   },
+   "source": "Phase4架构补充（非原V1.0）",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT08"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT09",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT09 风格/配色审美型",
+   "statement": "模板 CT09：风格/配色审美型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT09",
+     "name": "风格/配色审美型",
+     "validation_status": "DRAFT_HYPOTHESIS",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.1",
+     "source": "Phase4架构补充（非原V1.0）"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "先给强审美成品/纹理",
+      "semantics": "风格|配色|岛台",
+      "preferred_exclude": "优选：高质量成品全景；排除：色偏/低清",
+      "duration": "2.5",
+      "role": "流量"
+     },
+     {
+      "order": "2",
+      "slot": "Style",
+      "beat": "Context",
+      "target": "说明整体风格与空间基调",
+      "semantics": "中古|奶油|意式|黑胡桃|纹理",
+      "preferred_exclude": "优选：空间关系；排除：弱视觉猜真实材质",
+      "duration": "4",
+      "role": "流量|搜索"
+     },
+     {
+      "order": "3",
+      "slot": "Match",
+      "beat": "Solution",
+      "target": "解释台面/柜体/支撑如何搭配",
+      "semantics": "颜色|纹理|材质表达",
+      "preferred_exclude": "优选：多部位同框；排除：把纹理当材质事实",
+      "duration": "6",
+      "role": "搜索"
+     },
+     {
+      "order": "4",
+      "slot": "Detail",
+      "beat": "Feature",
+      "target": "展示细节质感和收口",
+      "semantics": "纹理|亚克力|收口|五金",
+      "preferred_exclude": "优选：清晰特写；排除：无证据高级感",
+      "duration": "6",
+      "role": "信任"
+     },
+     {
+      "order": "5",
+      "slot": "ResultCTA",
+      "beat": "CTA",
+      "target": "整体效果承接风格方案",
+      "semantics": "风格方案|定制",
+      "preferred_exclude": "优选：整体成品；排除：夸大材质性能",
+      "duration": "3",
+      "role": "转化"
+     }
+    ]
+   },
+   "source": "Phase4架构补充（非原V1.0）",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT09"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT10",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT10 岛台用电/轨道插座型",
+   "statement": "模板 CT10：岛台用电/轨道插座型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT10",
+     "name": "岛台用电/轨道插座型",
+     "validation_status": "DRAFT_HYPOTHESIS",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.1",
+     "source": "Phase4架构补充（非原V1.0）"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "用打火锅/充电/小家电需求切入",
+      "semantics": "岛台用电|轨道插座",
+      "preferred_exclude": "优选：插座结构/使用场景；排除：仅有插座就声称操作动作",
+      "duration": "2.5",
+      "role": "流量|搜索"
+     },
+     {
+      "order": "2",
+      "slot": "Problem",
+      "beat": "Problem",
+      "target": "说明拖线/插排/预留不足的问题",
+      "semantics": "走线|插座|用电",
+      "preferred_exclude": "优选：真实问题证据；排除：夸张危险",
+      "duration": "4",
+      "role": "搜索"
+     },
+     {
+      "order": "3",
+      "slot": "Solution",
+      "beat": "Solution",
+      "target": "展示轨道插座/电源预留方案",
+      "semantics": "轨道插座|电器预留",
+      "preferred_exclude": "优选：结构证据；排除：无供电设计证据",
+      "duration": "6",
+      "role": "搜索|转化"
+     },
+     {
+      "order": "4",
+      "slot": "UseCase",
+      "beat": "Feature",
+      "target": "展示充电/小家电/火锅等用途",
+      "semantics": "充电|小家电|火锅",
+      "preferred_exclude": "优选：明确ASR/画面证据；排除：静态插座自动推断已使用",
+      "duration": "6",
+      "role": "转化"
+     },
+     {
+      "order": "5",
+      "slot": "CTA",
+      "beat": "CTA",
+      "target": "引导提前规划用电需求",
+      "semantics": "用电规划|定制方案",
+      "preferred_exclude": "优选：产品整体；排除：违规导流",
+      "duration": "3",
+      "role": "转化"
+     }
+    ]
+   },
+   "source": "Phase4架构补充（非原V1.0）",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT10"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT11",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT11 嵌入电器/预留型",
+   "statement": "模板 CT11：嵌入电器/预留型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT11",
+     "name": "嵌入电器/预留型",
+     "validation_status": "DRAFT_HYPOTHESIS",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.1",
+     "source": "Phase4架构补充（非原V1.0）"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "用嵌入电器成品结果切入",
+      "semantics": "蒸烤箱|烤箱|洗碗机|电器位",
+      "preferred_exclude": "优选：成品电器位；排除：无主体",
+      "duration": "2.5",
+      "role": "流量|搜索"
+     },
+     {
+      "order": "2",
+      "slot": "Problem",
+      "beat": "Problem",
+      "target": "说明后期加电器可能遇到尺寸/开孔问题",
+      "semantics": "尺寸|开孔|散热|电器位",
+      "preferred_exclude": "优选：开孔/预留证据；排除：无来源硬说标准数值",
+      "duration": "4",
+      "role": "搜索"
+     },
+     {
+      "order": "3",
+      "slot": "Plan",
+      "beat": "Solution",
+      "target": "展示定制前预留和精准开孔逻辑",
+      "semantics": "电器预留|精准开孔|尺寸",
+      "preferred_exclude": "优选：加工/测量；排除：无证据",
+      "duration": "6",
+      "role": "搜索|信任"
+     },
+     {
+      "order": "4",
+      "slot": "Proof",
+      "beat": "Evidence",
+      "target": "展示成品嵌入效果和使用空间",
+      "semantics": "嵌入电器|整体布局",
+      "preferred_exclude": "优选：成品全景+近景；排除：仅机器空镜",
+      "duration": "6",
+      "role": "信任|转化"
+     },
+     {
+      "order": "5",
+      "slot": "CTA",
+      "beat": "CTA",
+      "target": "引导提供电器型号/尺寸做方案",
+      "semantics": "电器尺寸|定制",
+      "preferred_exclude": "优选：稳定成品；排除：绝对化兼容承诺",
+      "duration": "3",
+      "role": "转化"
+     }
+    ]
+   },
+   "source": "Phase4架构补充（非原V1.0）",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT11"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  },
+  {
+   "knowledge_id": "TPL-CT12",
+   "namespace": "template_library",
+   "knowledge_type": "HYPOTHESIS",
+   "title": "CT12 配置清单/综合避坑型",
+   "statement": "模板 CT12：配置清单/综合避坑型，5 槽位",
+   "structured_payload": {
+    "template_meta": {
+     "template_id": "CT12",
+     "name": "配置清单/综合避坑型",
+     "validation_status": "DRAFT_HYPOTHESIS",
+     "knowledge_type": "HYPOTHESIS",
+     "version": "1.1",
+     "source": "Phase4架构补充（非原V1.0）"
+    },
+    "slots": [
+     {
+      "order": "1",
+      "slot": "Hook",
+      "beat": "Hook",
+      "target": "用“做岛台前先确认几件事”切入",
+      "semantics": "岛台避坑|配置清单",
+      "preferred_exclude": "优选：多功能快速蒙太奇；排除：无对应证据",
+      "duration": "2.5",
+      "role": "流量|搜索"
+     },
+     {
+      "order": "2",
+      "slot": "Checklist1",
+      "beat": "Feature",
+      "target": "确认尺寸/高度/动线",
+      "semantics": "尺寸|高度|动线",
+      "preferred_exclude": "优选：测量/空间全景；排除：无来源硬说统一标准",
+      "duration": "5",
+      "role": "搜索"
+     },
+     {
+      "order": "3",
+      "slot": "Checklist2",
+      "beat": "Feature",
+      "target": "确认收纳/插座/电器位",
+      "semantics": "收纳|插座|电器预留",
+      "preferred_exclude": "优选：对应功能镜头；排除：关键词替代证据",
+      "duration": "6",
+      "role": "搜索|转化"
+     },
+     {
+      "order": "4",
+      "slot": "Checklist3",
+      "beat": "Feature",
+      "target": "确认材质/安全/工艺",
+      "semantics": "材质|圆角|工艺",
+      "preferred_exclude": "优选：细节证据；排除：弱材质视觉硬断言",
+      "duration": "6",
+      "role": "信任|转化"
+     },
+     {
+      "order": "5",
+      "slot": "CTA",
+      "beat": "CTA",
+      "target": "引导按户型与生活习惯做清单",
+      "semantics": "户型|需求|方案",
+      "preferred_exclude": "优选：成品整体；排除：违规导流",
+      "duration": "3",
+      "role": "转化"
+     }
+    ]
+   },
+   "source": "Phase4架构补充（非原V1.0）",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "TEMPLATE",
+    "CT12"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "14_模板槽位",
+   "review_note": "CT01-05 原V1.0；CT06-12 V1.1 DRAFT"
+  }
+ ],
+ "source": "V1.1 Phase4 结构化补全版"
+}

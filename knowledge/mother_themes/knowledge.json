@@ -1,0 +1,182 @@
+{
+ "namespace": "mother_themes",
+ "count": 5,
+ "records": [
+  {
+   "knowledge_id": "P4-MOTHER_THEME-MOTHER_THEME_SPACE_SOLUTION",
+   "namespace": "mother_themes",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "空间解决方案",
+   "statement": "小户型、大横厅、开放式厨房、沙发后、餐厨一体、空间分区",
+   "structured_payload": {
+    "group": "MOTHER_THEME",
+    "code": "MOTHER_THEME_SPACE_SOLUTION",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "MOTHER_THEME",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-MOTHER_THEME-MOTHER_THEME_FAMILY_SCENE",
+   "namespace": "mother_themes",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "家庭生活场景",
+   "statement": "三口之家、多人聚餐、火锅、办公与用餐切换等",
+   "structured_payload": {
+    "group": "MOTHER_THEME",
+    "code": "MOTHER_THEME_FAMILY_SCENE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "MOTHER_THEME",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-MOTHER_THEME-MOTHER_THEME_DECISION_AVOID_PIT",
+   "namespace": "mother_themes",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "决策/避坑",
+   "statement": "尺寸、高度、动线、插座、电器位、收纳、安全、安装等",
+   "structured_payload": {
+    "group": "MOTHER_THEME",
+    "code": "MOTHER_THEME_DECISION_AVOID_PIT",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "MOTHER_THEME",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-MOTHER_THEME-MOTHER_THEME_AESTHETIC_STYLE",
+   "namespace": "mother_themes",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "审美/风格",
+   "statement": "中古、奶油、意式、黑胡桃、纹理、亚克力等",
+   "structured_payload": {
+    "group": "MOTHER_THEME",
+    "code": "MOTHER_THEME_AESTHETIC_STYLE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "MOTHER_THEME",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-MOTHER_THEME-MOTHER_THEME_CRAFT_TRUST",
+   "namespace": "mother_themes",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "工艺/信任",
+   "statement": "拼接、开孔、结构、五金、安装、工厂过程等",
+   "structured_payload": {
+    "group": "MOTHER_THEME",
+    "code": "MOTHER_THEME_CRAFT_TRUST",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "MOTHER_THEME",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  }
+ ],
+ "source": "V1.1 Phase4 结构化补全版"
+}

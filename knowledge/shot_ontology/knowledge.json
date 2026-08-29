@@ -1,29 +1,28 @@
 {
  "namespace": "shot_ontology",
- "count": 22,
+ "count": 37,
  "records": [
   {
-   "knowledge_id": "SHOT-0001",
+   "knowledge_id": "KB-08-001",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "全景/广角",
    "statement": "展示整体空间关系、布局和产品位置。",
    "structured_payload": {
+    "category": "景别",
     "aliases": [
      "wide shot"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "景别"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -32,40 +31,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "景别"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0002",
+   "knowledge_id": "KB-08-002",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "中景",
    "statement": "人物+产品或产品主要区域。",
    "structured_payload": {
+    "category": "景别",
     "aliases": [
      "medium shot"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "景别"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -74,40 +76,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "景别"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0003",
+   "knowledge_id": "KB-08-003",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "近景",
    "statement": "产品局部、动作、功能细节。",
    "structured_payload": {
+    "category": "景别",
     "aliases": [
      "close shot"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "景别"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -116,40 +121,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "景别"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0004",
+   "knowledge_id": "KB-08-004",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "特写",
    "statement": "纹理、五金、开孔、边角等强细节。",
    "structured_payload": {
+    "category": "景别",
     "aliases": [
      "detail shot"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "景别"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -158,40 +166,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "景别"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0005",
+   "knowledge_id": "KB-08-005",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "人物正面讲解",
    "statement": "人物面对镜头讲解。",
    "structured_payload": {
+    "category": "人物镜头",
     "aliases": [
      "talking head"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "人物镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -200,40 +211,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "人物镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0006",
+   "knowledge_id": "KB-08-006",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "人物侧身演示",
    "statement": "人物与产品互动，展示动作。",
    "structured_payload": {
+    "category": "人物镜头",
     "aliases": [
      "demo"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "人物镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -242,40 +256,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "人物镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0007",
+   "knowledge_id": "KB-08-007",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "产品空镜",
    "statement": "无人物的静态/运动产品展示。",
    "structured_payload": {
+    "category": "产品镜头",
     "aliases": [
      "product b-roll"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "产品镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -284,41 +301,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "产品镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0008",
+   "knowledge_id": "KB-08-008",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "空间扫镜",
    "statement": "横移/环绕/推进展示空间。",
    "structured_payload": {
+    "category": "运动镜头",
     "aliases": [
      "pan",
      "walkthrough"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "运动镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -327,40 +347,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "运动镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0009",
+   "knowledge_id": "KB-08-009",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "推镜",
    "statement": "镜头向主体靠近，强调细节或结果。",
    "structured_payload": {
+    "category": "运镜",
     "aliases": [
      "push in"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "运镜"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -369,40 +392,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "运镜"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0010",
+   "knowledge_id": "KB-08-010",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "拉镜",
    "statement": "从局部拉到整体，建立空间关系。",
    "structured_payload": {
+    "category": "运镜",
     "aliases": [
      "pull out"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "运镜"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -411,40 +437,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "运镜"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0011",
+   "knowledge_id": "KB-08-011",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "横移",
    "statement": "左右移动展示长度或空间。",
    "structured_payload": {
+    "category": "运镜",
     "aliases": [
      "slide"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "运镜"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -453,40 +482,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "运镜"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0012",
+   "knowledge_id": "KB-08-012",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "跟拍",
    "statement": "跟随人物或动作。",
    "structured_payload": {
+    "category": "运镜",
     "aliases": [
      "follow"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "运镜"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -495,40 +527,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "运镜"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0013",
+   "knowledge_id": "KB-08-013",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "固定镜头",
    "statement": "机位固定，适合动作演示/稳定口播。",
    "structured_payload": {
+    "category": "运镜",
     "aliases": [
      "static"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "运镜"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -537,40 +572,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "运镜"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0014",
+   "knowledge_id": "KB-08-014",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "伸缩完整动作",
    "statement": "从收起→展开或展开→收起形成完整动作闭环。",
    "structured_payload": {
+    "category": "动作镜头",
     "aliases": [
      "extend action"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "动作镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -579,40 +617,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "动作镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0015",
+   "knowledge_id": "KB-08-015",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "开抽屉完整动作",
    "statement": "抽屉打开并展示内部收纳。",
    "structured_payload": {
+    "category": "动作镜头",
     "aliases": [
      "drawer action"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "动作镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -621,40 +662,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "动作镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0016",
+   "knowledge_id": "KB-08-016",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "轨道插座演示",
    "statement": "插座模块移动/使用/插电过程。",
    "structured_payload": {
+    "category": "动作镜头",
     "aliases": [
      "socket demo"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "动作镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -663,40 +707,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "动作镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0017",
+   "knowledge_id": "KB-08-017",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "电器开门/嵌入",
    "statement": "展示电器位置或开合。",
    "structured_payload": {
+    "category": "动作镜头",
     "aliases": [
      "appliance demo"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "动作镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -705,40 +752,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "动作镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0018",
+   "knowledge_id": "KB-08-018",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "材质纹理特写",
    "statement": "强调台面纹理、光泽、触感视觉。",
    "structured_payload": {
+    "category": "细节镜头",
     "aliases": [
      "texture detail"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "细节镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -747,40 +797,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "细节镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0019",
+   "knowledge_id": "KB-08-019",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "完工结果镜头",
    "statement": "优先展示完整、整洁、有空间关系的最终效果。",
    "structured_payload": {
+    "category": "结果镜头",
     "aliases": [
      "result shot"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "结果镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -789,40 +842,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "结果镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0020",
+   "knowledge_id": "KB-08-020",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "问题镜头",
    "statement": "表现空间拥挤、线材混乱、收纳不足等痛点。",
    "structured_payload": {
+    "category": "叙事镜头",
     "aliases": [
      "problem shot"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "叙事镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -831,40 +887,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "叙事镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0021",
+   "knowledge_id": "KB-08-021",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "对比镜头",
    "statement": "前后/收起展开/错误正确的视觉对比。",
    "structured_payload": {
+    "category": "叙事镜头",
     "aliases": [
      "comparison"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "叙事镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -873,40 +932,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "叙事镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "SHOT-0022",
+   "knowledge_id": "KB-08-022",
    "namespace": "shot_ontology",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "CTA承接镜头",
    "statement": "产品整体、人物、案例或可继续咨询的稳定画面。",
    "structured_payload": {
+    "category": "结尾镜头",
     "aliases": [
      "cta shot"
     ],
     "positive_evidence": "视觉形态/动作/景别明确",
-    "negative_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
-    "usage_scene": "segment理解/脚本槽位/连续性",
+    "exclude_evidence": "单帧无法可靠判断完整动作时需查看前后时序",
+    "treecut_usage": "segment理解/脚本槽位/连续性",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "镜头语言",
-    "category2": "结尾镜头"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -915,17 +977,547 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "shot",
-    "HYPOTHESIS",
-    "镜头语言"
+    "shot_ontology",
+    "BUSINESS_RULE",
+    "结尾镜头"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "08_镜头语言",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-HOOK",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "钩子",
+   "statement": "承担开头兴趣/结果/冲突",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "HOOK",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-CONTEXT",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "背景",
+   "statement": "交代空间/人物/条件",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "CONTEXT",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-PROBLEM",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "问题",
+   "statement": "展示痛点/限制/错误",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "PROBLEM",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-SOLUTION",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "解决方案",
+   "statement": "展示如何解决问题",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "SOLUTION",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-PRODUCT_OVERVIEW",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "产品总览",
+   "statement": "展示产品整体",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "PRODUCT_OVERVIEW",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-FUNCTION_PROOF",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "功能证明",
+   "statement": "证明收纳/伸缩/用电等功能",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "FUNCTION_PROOF",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-DETAIL_PROOF",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "细节证明",
+   "statement": "用近景证明结构/细节",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "DETAIL_PROOF",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-CRAFT_PROOF",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "工艺证明",
+   "statement": "证明加工/收口/五金等",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "CRAFT_PROOF",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-TRUST_PROOF",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "信任证明",
+   "statement": "真实案例/工厂/过程",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "TRUST_PROOF",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-BEFORE_AFTER",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "前后对比",
+   "statement": "展示状态/空间变化",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "BEFORE_AFTER",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-TRANSITION",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "转场",
+   "statement": "衔接结构/节拍",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "TRANSITION",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-LIFESTYLE",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "生活场景",
+   "statement": "展示真实使用氛围",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "LIFESTYLE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-CTA_SUPPORT",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "CTA承接",
+   "statement": "稳定结果镜头承接行动",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "CTA_SUPPORT",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-FILLER",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "补充镜头",
+   "statement": "非核心信息的视觉补充",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "FILLER",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-SHOT_FUNCTION-UNKNOWN",
+   "namespace": "shot_ontology",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "未知",
+   "statement": "证据不足无法判断",
+   "structured_payload": {
+    "group": "SHOT_FUNCTION",
+    "code": "UNKNOWN",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "SHOT_FUNCTION",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
   }
- ]
+ ],
+ "source": "V1.1 Phase4 结构化补全版"
 }

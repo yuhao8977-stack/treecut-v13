@@ -3,295 +3,317 @@
  "count": 7,
  "records": [
   {
-   "knowledge_id": "CRAFT-0001",
+   "knowledge_id": "KB-03-001",
    "namespace": "craft_trust",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "45度海棠角/斜拼",
    "statement": "台面/板材边缘通过斜切拼接形成连续视觉的收口方式。",
    "structured_payload": {
+    "category": "收口工艺",
     "aliases": [
      "海棠角",
      "45度拼接"
     ],
     "positive_evidence": "近景工艺画面+ASR/OCR说明",
-    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
-    "usage_scene": "工艺信任型内容/细节镜头",
+    "exclude_evidence": "没有结构证据时不可推断具体工艺等级",
+    "treecut_usage": "工艺信任型内容/细节镜头",
     "content_roles": [
      "信任",
      "转化"
-    ],
-    "category1": "工艺与五金",
-    "category2": "收口工艺"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "MEDIUM",
-   "status": "DRAFT",
+   "status": "REVIEWED",
    "effective_date": "2026-08-26",
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "craft",
-    "HYPOTHESIS",
-    "工艺与五金"
+    "craft_trust",
+    "BUSINESS_RULE",
+    "收口工艺"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "REVIEWED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "03_工艺与五金",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CRAFT-0002",
+   "knowledge_id": "KB-03-002",
    "namespace": "craft_trust",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "连纹",
    "statement": "相邻表面纹理视觉连续或对纹。",
    "structured_payload": {
+    "category": "纹理工艺",
     "aliases": [
      "对纹",
      "纹理连续"
     ],
     "positive_evidence": "近景工艺画面+ASR/OCR说明",
-    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
-    "usage_scene": "工艺信任型内容/细节镜头",
+    "exclude_evidence": "没有结构证据时不可推断具体工艺等级",
+    "treecut_usage": "工艺信任型内容/细节镜头",
     "content_roles": [
      "信任",
      "转化"
-    ],
-    "category1": "工艺与五金",
-    "category2": "纹理工艺"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "MEDIUM",
-   "status": "DRAFT",
+   "status": "REVIEWED",
    "effective_date": "2026-08-26",
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "craft",
-    "HYPOTHESIS",
-    "工艺与五金"
+    "craft_trust",
+    "BUSINESS_RULE",
+    "纹理工艺"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "REVIEWED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "03_工艺与五金",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CRAFT-0003",
+   "knowledge_id": "KB-03-003",
    "namespace": "craft_trust",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "精准开孔",
    "statement": "针对电器、水槽、插座等按尺寸开孔。",
    "structured_payload": {
+    "category": "加工工艺",
     "aliases": [
      "精确开孔"
     ],
     "positive_evidence": "近景工艺画面+ASR/OCR说明",
-    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
-    "usage_scene": "工艺信任型内容/细节镜头",
+    "exclude_evidence": "没有结构证据时不可推断具体工艺等级",
+    "treecut_usage": "工艺信任型内容/细节镜头",
     "content_roles": [
      "信任",
      "转化"
-    ],
-    "category1": "工艺与五金",
-    "category2": "加工工艺"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "MEDIUM",
-   "status": "DRAFT",
+   "status": "REVIEWED",
    "effective_date": "2026-08-26",
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "craft",
-    "HYPOTHESIS",
-    "工艺与五金"
+    "craft_trust",
+    "BUSINESS_RULE",
+    "加工工艺"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "EXTERNAL_SOURCE_REQUIRED",
+   "validation_status": "REVIEWED",
+   "future_validation": null,
+   "needs_external_verification": true,
+   "section": "03_工艺与五金",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CRAFT-0004",
+   "knowledge_id": "KB-03-004",
    "namespace": "craft_trust",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "倒圆角",
    "statement": "边角进行圆弧处理。",
    "structured_payload": {
+    "category": "安全/造型工艺",
     "aliases": [
      "圆角",
      "R角"
     ],
     "positive_evidence": "近景工艺画面+ASR/OCR说明",
-    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
-    "usage_scene": "工艺信任型内容/细节镜头",
+    "exclude_evidence": "没有结构证据时不可推断具体工艺等级",
+    "treecut_usage": "工艺信任型内容/细节镜头",
     "content_roles": [
      "信任",
      "转化"
-    ],
-    "category1": "工艺与五金",
-    "category2": "安全/造型工艺"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "MEDIUM",
-   "status": "DRAFT",
+   "status": "REVIEWED",
    "effective_date": "2026-08-26",
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "craft",
-    "HYPOTHESIS",
-    "工艺与五金"
+    "craft_trust",
+    "BUSINESS_RULE",
+    "安全/造型工艺"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "REVIEWED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "03_工艺与五金",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CRAFT-0005",
+   "knowledge_id": "KB-03-005",
    "namespace": "craft_trust",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "封边",
    "statement": "板件边缘处理。",
    "structured_payload": {
+    "category": "加工工艺",
     "aliases": [
      "收边"
     ],
     "positive_evidence": "近景工艺画面+ASR/OCR说明",
-    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
-    "usage_scene": "工艺信任型内容/细节镜头",
+    "exclude_evidence": "没有结构证据时不可推断具体工艺等级",
+    "treecut_usage": "工艺信任型内容/细节镜头",
     "content_roles": [
      "信任",
      "转化"
-    ],
-    "category1": "工艺与五金",
-    "category2": "加工工艺"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "MEDIUM",
-   "status": "DRAFT",
+   "status": "REVIEWED",
    "effective_date": "2026-08-26",
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "craft",
-    "HYPOTHESIS",
-    "工艺与五金"
+    "craft_trust",
+    "BUSINESS_RULE",
+    "加工工艺"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "REVIEWED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "03_工艺与五金",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CRAFT-0006",
+   "knowledge_id": "KB-03-006",
    "namespace": "craft_trust",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "抽屉五金",
    "statement": "抽屉滑轨、阻尼等五金系统。",
    "structured_payload": {
+    "category": "五金",
     "aliases": [
      "滑轨",
      "阻尼"
     ],
     "positive_evidence": "近景工艺画面+ASR/OCR说明",
-    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
-    "usage_scene": "工艺信任型内容/细节镜头",
+    "exclude_evidence": "没有结构证据时不可推断具体工艺等级",
+    "treecut_usage": "工艺信任型内容/细节镜头",
     "content_roles": [
      "信任",
      "转化"
-    ],
-    "category1": "工艺与五金",
-    "category2": "五金"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "MEDIUM",
-   "status": "DRAFT",
+   "status": "REVIEWED",
    "effective_date": "2026-08-26",
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "craft",
-    "HYPOTHESIS",
-    "工艺与五金"
+    "craft_trust",
+    "BUSINESS_RULE",
+    "五金"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "REVIEWED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "03_工艺与五金",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CRAFT-0007",
+   "knowledge_id": "KB-03-007",
    "namespace": "craft_trust",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "伸缩五金",
    "statement": "支撑岛台伸缩/延长功能的结构件与滑轨。",
    "structured_payload": {
+    "category": "五金",
     "aliases": [
      "伸缩轨道"
     ],
     "positive_evidence": "近景工艺画面+ASR/OCR说明",
-    "negative_evidence": "没有结构证据时不可推断具体工艺等级",
-    "usage_scene": "工艺信任型内容/细节镜头",
+    "exclude_evidence": "没有结构证据时不可推断具体工艺等级",
+    "treecut_usage": "工艺信任型内容/细节镜头",
     "content_roles": [
      "信任",
      "转化"
-    ],
-    "category1": "工艺与五金",
-    "category2": "五金"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "MEDIUM",
-   "status": "DRAFT",
+   "status": "REVIEWED",
    "effective_date": "2026-08-26",
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "craft",
-    "HYPOTHESIS",
-    "工艺与五金"
+    "craft_trust",
+    "BUSINESS_RULE",
+    "五金"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "REVIEWED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "03_工艺与五金",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   }
- ]
+ ],
+ "source": "V1.1 Phase4 结构化补全版"
 }

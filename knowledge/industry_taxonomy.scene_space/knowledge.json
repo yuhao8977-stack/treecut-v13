@@ -1,27 +1,24 @@
 {
- "namespace": "product",
+ "namespace": "industry_taxonomy.scene_space",
  "count": 16,
  "records": [
   {
-   "knowledge_id": "KB-01-001",
-   "namespace": "product",
+   "knowledge_id": "KB-05-001",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "岛台",
-   "statement": "厨房/餐厨空间中的独立或半独立功能台体，可承担备餐、收纳、就餐、社交等功能。",
+   "title": "家具工厂",
+   "statement": "家具生产或成品展示的工厂环境。",
    "structured_payload": {
-    "category": "核心产品",
+    "category": "场景",
     "aliases": [
-     "中岛",
-     "厨房岛",
-     "中岛台"
+     "工厂",
+     "生产车间"
     ],
-    "positive_evidence": "ASR/OCR/画面出现岛台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -33,9 +30,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "核心产品"
+    "场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -46,29 +43,25 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-002",
-   "namespace": "product",
+   "knowledge_id": "KB-05-002",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "伸缩岛台",
-   "statement": "具有可拉出/延长/收起结构，可改变使用长度或就餐容量。",
+   "title": "工厂产品展示区",
+   "statement": "位于工厂内，但视频主体为成品讲解/展示，而非生产过程。",
    "structured_payload": {
-    "category": "岛台类型",
+    "category": "场景",
     "aliases": [
-     "伸缩中岛",
-     "延伸岛台",
-     "拉伸岛台"
+     "工厂展区"
     ],
-    "positive_evidence": "ASR/OCR/画面出现伸缩岛台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -80,9 +73,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "岛台类型"
+    "场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -93,28 +86,26 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-003",
-   "namespace": "product",
+   "knowledge_id": "KB-05-003",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "餐岛一体",
-   "statement": "岛台与餐桌/就餐功能整合的产品或布局。",
+   "title": "生产加工区",
+   "statement": "机器、工人、加工流程为主体的工厂区域。",
    "structured_payload": {
-    "category": "岛台类型",
+    "category": "场景",
     "aliases": [
-     "岛台餐桌一体",
-     "餐岛"
+     "车间",
+     "加工区"
     ],
-    "positive_evidence": "ASR/OCR/画面出现餐岛一体相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -126,9 +117,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "岛台类型"
+    "场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -139,27 +130,26 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-004",
-   "namespace": "product",
+   "knowledge_id": "KB-05-004",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "落地岛台",
-   "statement": "柜体或台体落地支撑的岛台。",
+   "title": "家具展厅",
+   "statement": "用于产品陈列、销售展示的空间。",
    "structured_payload": {
-    "category": "结构类型",
+    "category": "场景",
     "aliases": [
-     "落地中岛"
+     "展厅",
+     "样板间"
     ],
-    "positive_evidence": "ASR/OCR/画面出现落地岛台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -171,9 +161,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "结构类型"
+    "场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -184,28 +174,26 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-005",
-   "namespace": "product",
+   "knowledge_id": "KB-05-005",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "悬浮岛台",
-   "statement": "视觉上形成悬浮效果或部分悬挑的岛台。",
+   "title": "客户住宅",
+   "statement": "真实客户住宅空间。",
    "structured_payload": {
-    "category": "结构类型",
+    "category": "场景",
     "aliases": [
-     "悬浮中岛",
-     "悬挑岛台"
+     "客户家",
+     "入户"
     ],
-    "positive_evidence": "ASR/OCR/画面出现悬浮岛台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -217,9 +205,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "结构类型"
+    "场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -230,27 +218,25 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-006",
-   "namespace": "product",
+   "knowledge_id": "KB-05-006",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "备餐岛台",
-   "statement": "以备餐、操作台为主要用途的岛台。",
+   "title": "开放式厨房",
+   "statement": "厨房与餐厅/客厅开放连接。",
    "structured_payload": {
-    "category": "功能类型",
+    "category": "空间",
     "aliases": [
-     "备餐台"
+     "开放厨房"
     ],
-    "positive_evidence": "ASR/OCR/画面出现备餐岛台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -262,9 +248,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "功能类型"
+    "空间"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -275,27 +261,25 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-007",
-   "namespace": "product",
+   "knowledge_id": "KB-05-007",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "水吧岛台",
-   "statement": "包含饮水、洗果、泡茶等水吧相关功能的岛台。",
+   "title": "封闭式厨房",
+   "statement": "相对独立封闭的厨房。",
    "structured_payload": {
-    "category": "功能类型",
+    "category": "空间",
     "aliases": [
-     "水吧台"
+     "独立厨房"
     ],
-    "positive_evidence": "ASR/OCR/画面出现水吧岛台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -307,9 +291,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "功能类型"
+    "空间"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -320,27 +304,25 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-008",
-   "namespace": "product",
+   "knowledge_id": "KB-05-008",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "电器岛台",
-   "statement": "预留或嵌入蒸烤箱等电器的岛台。",
+   "title": "餐厅",
+   "statement": "主要用于就餐的空间。",
    "structured_payload": {
-    "category": "功能类型",
+    "category": "空间",
     "aliases": [
-     "嵌入电器岛台"
+     "餐区"
     ],
-    "positive_evidence": "ASR/OCR/画面出现电器岛台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -352,9 +334,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "功能类型"
+    "空间"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -365,27 +347,26 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-009",
-   "namespace": "product",
+   "knowledge_id": "KB-05-009",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "带轨道插座岛台",
-   "statement": "配置轨道插座/移动插座模块的岛台。",
+   "title": "客厅",
+   "statement": "主要起居空间。",
    "structured_payload": {
-    "category": "功能类型",
+    "category": "空间",
     "aliases": [
-     "轨道插座岛台"
+     "大横厅",
+     "横厅"
     ],
-    "positive_evidence": "ASR/OCR/画面出现带轨道插座岛台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -397,9 +378,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "功能类型"
+    "空间"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -410,27 +391,25 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-010",
-   "namespace": "product",
+   "knowledge_id": "KB-05-010",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "收纳岛台",
-   "statement": "强调抽屉、柜门、层板等储物能力的岛台。",
+   "title": "沙发后区域",
+   "statement": "沙发背后的过渡/办公/餐饮区域。",
    "structured_payload": {
-    "category": "功能类型",
+    "category": "空间",
     "aliases": [
-     "储物岛台"
+     "沙发背"
     ],
-    "positive_evidence": "ASR/OCR/画面出现收纳岛台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -442,9 +421,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "功能类型"
+    "空间"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -455,27 +434,25 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-011",
-   "namespace": "product",
+   "knowledge_id": "KB-05-011",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "沙发后岛台",
-   "statement": "布置于客厅沙发背后的岛台/长台，用于办公、就餐或分区。",
+   "title": "安装现场",
+   "statement": "正在搬运、组装、调试或安装的现场。",
    "structured_payload": {
-    "category": "布局类型",
+    "category": "场景",
     "aliases": [
-     "沙发背岛台"
+     "施工现场"
     ],
-    "positive_evidence": "ASR/OCR/画面出现沙发后岛台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -487,9 +464,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "布局类型"
+    "场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -500,28 +477,26 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-012",
-   "namespace": "product",
+   "knowledge_id": "KB-05-012",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "餐边柜",
-   "statement": "靠墙设置的收纳/备餐家具，可与岛台形成餐厨系统。",
+   "title": "完工实景",
+   "statement": "产品安装完成后的真实空间效果。",
    "structured_payload": {
-    "category": "关联产品",
+    "category": "场景",
     "aliases": [
-     "边柜",
-     "餐厅边柜"
+     "落地实景",
+     "完工"
     ],
-    "positive_evidence": "ASR/OCR/画面出现餐边柜相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -533,9 +508,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "关联产品"
+    "场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -546,27 +521,25 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-013",
-   "namespace": "product",
+   "knowledge_id": "KB-05-013",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "中岛柜",
-   "statement": "以柜体为主体的中岛家具。",
+   "title": "细节特写",
+   "statement": "对台面、抽屉、五金、纹理等局部进行近距离展示。",
    "structured_payload": {
-    "category": "关联产品",
+    "category": "镜头场景",
     "aliases": [
-     "岛柜"
+     "产品细节"
     ],
-    "positive_evidence": "ASR/OCR/画面出现中岛柜相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -578,9 +551,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "关联产品"
+    "镜头场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -591,27 +564,25 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-014",
-   "namespace": "product",
+   "knowledge_id": "KB-05-014",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "吧台",
-   "statement": "以高脚坐席、饮品或轻餐为主要使用方式的台体。",
+   "title": "功能演示",
+   "statement": "通过动作展示伸缩、开抽屉、插座等功能。",
    "structured_payload": {
-    "category": "关联产品",
+    "category": "镜头场景",
     "aliases": [
-     "bar台"
+     "使用演示"
     ],
-    "positive_evidence": "ASR/OCR/画面出现吧台相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -623,9 +594,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "关联产品"
+    "镜头场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -636,27 +607,25 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-015",
-   "namespace": "product",
+   "knowledge_id": "KB-05-015",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "茶桌",
-   "statement": "以泡茶、会客为主的桌体。",
+   "title": "人物讲解",
+   "statement": "人物面对镜头或伴随产品进行口播讲解。",
    "structured_payload": {
-    "category": "关联产品",
+    "category": "镜头场景",
     "aliases": [
-     "茶台"
+     "真人讲解"
     ],
-    "positive_evidence": "ASR/OCR/画面出现茶桌相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -668,9 +637,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "关联产品"
+    "镜头场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -681,27 +650,25 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "KB-01-016",
-   "namespace": "product",
+   "knowledge_id": "KB-05-016",
+   "namespace": "industry_taxonomy.scene_space",
    "knowledge_type": "BUSINESS_RULE",
-   "title": "橱柜",
-   "statement": "厨房固定柜体系统。",
+   "title": "纯空镜",
+   "statement": "无有效人物/动作，仅展示环境或产品。",
    "structured_payload": {
-    "category": "关联产品",
+    "category": "镜头场景",
     "aliases": [
-     "厨房柜"
+     "空镜"
     ],
-    "positive_evidence": "ASR/OCR/画面出现橱柜相关结构或用途",
-    "exclude_evidence": "仅出现普通桌面且无岛台结构/语义证据",
-    "treecut_usage": "素材识别/脚本匹配/模板选材",
+    "positive_evidence": "视觉+ASR/OCR联合证据",
+    "exclude_evidence": "场景位置不等同内容类型，例如工厂场景≠工厂实力内容",
+    "treecut_usage": "场景语义/内容意图/镜头组合",
     "content_roles": [
-     "信任",
-     "转化",
-     "搜索"
+     "全部"
     ]
    },
    "source": "SRC-005",
@@ -713,9 +680,9 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "product",
+    "industry_taxonomy.scene_space",
     "BUSINESS_RULE",
-    "关联产品"
+    "镜头场景"
    ],
    "related_entities": [],
    "created_at": "2026-08-29 14:29",
@@ -726,7 +693,7 @@
    "validation_status": "VALIDATED",
    "future_validation": null,
    "needs_external_verification": false,
-   "section": "01_产品体系",
+   "section": "05_场景与空间",
    "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   }
  ],

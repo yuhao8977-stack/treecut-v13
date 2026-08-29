@@ -1,190 +1,27 @@
 {
  "namespace": "content_types",
- "count": 10,
+ "count": 6,
  "records": [
   {
-   "knowledge_id": "CONTENT_TYPE-0001",
+   "knowledge_id": "KB-07-005",
    "namespace": "content_types",
-   "knowledge_type": "FACT",
-   "title": "客户案例",
-   "statement": "以真实客户需求、住宅、落地效果或使用结果为主体。",
-   "structured_payload": {
-    "aliases": [
-     "案例",
-     "入户案例"
-    ],
-    "positive_evidence": "按视频主要意图与证据判断",
-    "negative_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
-    "usage_scene": "内容分类/模板选择",
-    "content_roles": [
-     "全部"
-    ],
-    "category1": "内容运营",
-    "category2": "主内容类型"
-   },
-   "source": "operational_model",
-   "source_type": "operational_model",
-   "source_version": "1.0",
-   "confidence": "HIGH",
-   "status": "ACTIVE",
-   "effective_date": "2026-08-26",
-   "expires_at": null,
-   "ttl_days": null,
-   "tags": [
-    "content_type",
-    "FACT",
-    "内容运营"
-   ],
-   "related_entities": [],
-   "created_at": "2026-08-29 14:10",
-   "updated_at": null,
-   "supersedes": null,
-   "superseded_by": null,
-   "needs_source": true,
-   "note": ""
-  },
-  {
-   "knowledge_id": "CONTENT_TYPE-0002",
-   "namespace": "content_types",
-   "knowledge_type": "FACT",
-   "title": "产品介绍",
-   "statement": "以产品尺寸、结构、材质、功能、配置等讲解为主体。",
-   "structured_payload": {
-    "aliases": [
-     "产品讲解"
-    ],
-    "positive_evidence": "按视频主要意图与证据判断",
-    "negative_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
-    "usage_scene": "内容分类/模板选择",
-    "content_roles": [
-     "全部"
-    ],
-    "category1": "内容运营",
-    "category2": "主内容类型"
-   },
-   "source": "operational_model",
-   "source_type": "operational_model",
-   "source_version": "1.0",
-   "confidence": "HIGH",
-   "status": "ACTIVE",
-   "effective_date": "2026-08-26",
-   "expires_at": null,
-   "ttl_days": null,
-   "tags": [
-    "content_type",
-    "FACT",
-    "内容运营"
-   ],
-   "related_entities": [],
-   "created_at": "2026-08-29 14:10",
-   "updated_at": null,
-   "supersedes": null,
-   "superseded_by": null,
-   "needs_source": true,
-   "note": ""
-  },
-  {
-   "knowledge_id": "CONTENT_TYPE-0003",
-   "namespace": "content_types",
-   "knowledge_type": "FACT",
-   "title": "工厂实力",
-   "statement": "以生产能力、制造流程、品质管理、工厂实力为主体。",
-   "structured_payload": {
-    "aliases": [
-     "工厂展示"
-    ],
-    "positive_evidence": "按视频主要意图与证据判断",
-    "negative_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
-    "usage_scene": "内容分类/模板选择",
-    "content_roles": [
-     "全部"
-    ],
-    "category1": "内容运营",
-    "category2": "主内容类型"
-   },
-   "source": "operational_model",
-   "source_type": "operational_model",
-   "source_version": "1.0",
-   "confidence": "HIGH",
-   "status": "ACTIVE",
-   "effective_date": "2026-08-26",
-   "expires_at": null,
-   "ttl_days": null,
-   "tags": [
-    "content_type",
-    "FACT",
-    "内容运营"
-   ],
-   "related_entities": [],
-   "created_at": "2026-08-29 14:10",
-   "updated_at": null,
-   "supersedes": null,
-   "superseded_by": null,
-   "needs_source": true,
-   "note": ""
-  },
-  {
-   "knowledge_id": "CONTENT_TYPE-0004",
-   "namespace": "content_types",
-   "knowledge_type": "FACT",
-   "title": "装修方案",
-   "statement": "以户型、动线、布局、空间解决方案为主体。",
-   "structured_payload": {
-    "aliases": [
-     "空间方案",
-     "设计方案"
-    ],
-    "positive_evidence": "按视频主要意图与证据判断",
-    "negative_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
-    "usage_scene": "内容分类/模板选择",
-    "content_roles": [
-     "全部"
-    ],
-    "category1": "内容运营",
-    "category2": "主内容类型"
-   },
-   "source": "operational_model",
-   "source_type": "operational_model",
-   "source_version": "1.0",
-   "confidence": "HIGH",
-   "status": "ACTIVE",
-   "effective_date": "2026-08-26",
-   "expires_at": null,
-   "ttl_days": null,
-   "tags": [
-    "content_type",
-    "FACT",
-    "内容运营"
-   ],
-   "related_entities": [],
-   "created_at": "2026-08-29 14:10",
-   "updated_at": null,
-   "supersedes": null,
-   "superseded_by": null,
-   "needs_source": true,
-   "note": ""
-  },
-  {
-   "knowledge_id": "CONTENT_TYPE-0005",
-   "namespace": "content_types",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "避坑知识",
    "statement": "以错误做法、决策注意事项、选择建议为主体。",
    "structured_payload": {
+    "category": "主内容类型",
     "aliases": [
      "避坑",
      "注意事项"
     ],
     "positive_evidence": "按视频主要意图与证据判断",
-    "negative_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
-    "usage_scene": "内容分类/模板选择",
+    "exclude_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
+    "treecut_usage": "内容分类/模板选择",
     "content_roles": [
      "全部"
-    ],
-    "category1": "内容运营",
-    "category2": "主内容类型"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -193,38 +30,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "content_type",
-    "FACT",
-    "内容运营"
+    "content_types",
+    "BUSINESS_RULE",
+    "主内容类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "07_内容类型",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CONTENT_TYPE-0006",
+   "knowledge_id": "KB-07-006",
    "namespace": "content_types",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "功能展示",
    "statement": "以具体功能动作和使用效果为主体。",
    "structured_payload": {
+    "category": "主内容类型",
     "aliases": [
      "功能演示"
     ],
     "positive_evidence": "按视频主要意图与证据判断",
-    "negative_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
-    "usage_scene": "内容分类/模板选择",
+    "exclude_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
+    "treecut_usage": "内容分类/模板选择",
     "content_roles": [
      "全部"
-    ],
-    "category1": "内容运营",
-    "category2": "主内容类型"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -233,38 +73,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "content_type",
-    "FACT",
-    "内容运营"
+    "content_types",
+    "BUSINESS_RULE",
+    "主内容类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "07_内容类型",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CONTENT_TYPE-0007",
+   "knowledge_id": "KB-07-007",
    "namespace": "content_types",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "材质介绍",
    "statement": "以材质、颜色、纹理、搭配为主体。",
    "structured_payload": {
+    "category": "主内容类型",
     "aliases": [
      "材料介绍"
     ],
     "positive_evidence": "按视频主要意图与证据判断",
-    "negative_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
-    "usage_scene": "内容分类/模板选择",
+    "exclude_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
+    "treecut_usage": "内容分类/模板选择",
     "content_roles": [
      "全部"
-    ],
-    "category1": "内容运营",
-    "category2": "主内容类型"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -273,38 +116,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "content_type",
-    "FACT",
-    "内容运营"
+    "content_types",
+    "BUSINESS_RULE",
+    "主内容类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "07_内容类型",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CONTENT_TYPE-0008",
+   "knowledge_id": "KB-07-008",
    "namespace": "content_types",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "品牌信任",
    "statement": "以品牌、服务、工厂、团队、交付能力建立信任。",
    "structured_payload": {
+    "category": "主内容类型",
     "aliases": [
      "品牌宣传"
     ],
     "positive_evidence": "按视频主要意图与证据判断",
-    "negative_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
-    "usage_scene": "内容分类/模板选择",
+    "exclude_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
+    "treecut_usage": "内容分类/模板选择",
     "content_roles": [
      "全部"
-    ],
-    "category1": "内容运营",
-    "category2": "主内容类型"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -313,38 +159,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "content_type",
-    "FACT",
-    "内容运营"
+    "content_types",
+    "BUSINESS_RULE",
+    "主内容类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "07_内容类型",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CONTENT_TYPE-0009",
+   "knowledge_id": "KB-07-009",
    "namespace": "content_types",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "活动/直播预告",
    "statement": "以直播、活动、促销或时间信息为主体。",
    "structured_payload": {
+    "category": "主内容类型",
     "aliases": [
      "直播预告"
     ],
     "positive_evidence": "按视频主要意图与证据判断",
-    "negative_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
-    "usage_scene": "内容分类/模板选择",
+    "exclude_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
+    "treecut_usage": "内容分类/模板选择",
     "content_roles": [
      "全部"
-    ],
-    "category1": "内容运营",
-    "category2": "主内容类型"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -353,38 +202,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "content_type",
-    "FACT",
-    "内容运营"
+    "content_types",
+    "BUSINESS_RULE",
+    "主内容类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "07_内容类型",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "CONTENT_TYPE-0010",
+   "knowledge_id": "KB-07-010",
    "namespace": "content_types",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "其他",
    "statement": "无法归入稳定业务类型的内容。",
    "structured_payload": {
+    "category": "兜底类型",
     "aliases": [
      "未知"
     ],
     "positive_evidence": "按视频主要意图与证据判断",
-    "negative_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
-    "usage_scene": "内容分类/模板选择",
+    "exclude_evidence": "客户称呼、场景地点、单一关键词不能独立决定主类型",
+    "treecut_usage": "内容分类/模板选择",
     "content_roles": [
      "全部"
-    ],
-    "category1": "内容运营",
-    "category2": "兜底类型"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -393,17 +245,22 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "content_type",
-    "FACT",
-    "内容运营"
+    "content_types",
+    "BUSINESS_RULE",
+    "兜底类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "07_内容类型",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   }
- ]
+ ],
+ "source": "V1.1 Phase4 结构化补全版"
 }

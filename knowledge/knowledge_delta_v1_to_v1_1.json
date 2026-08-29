@@ -1,0 +1,25 @@
+{
+ "manifest": "KNOWLEDGE_DELTA_V1_TO_V1_1",
+ "base": "KNOWLEDGE_SNAPSHOT_V1（2111b0b3）",
+ "delta_source": "TreeCut_V11_Phase4.xlsx（USER_CURATED_STRUCTURED_KB）",
+ "v1_existing_retained": 186,
+ "v1_1_new_count": 175,
+ "v1_1_updated_count": 0,
+ "unchanged_count": 186,
+ "conflict_count": 0,
+ "duplicate_prevented_count": 11,
+ "sections": {
+  "knowledge_master": 186,
+  "p4_core_taxonomy": 92,
+  "p4_mapping_negative": 27,
+  "p4_evidence_reliability": 50,
+  "templates_ct01_12": 12
+ },
+ "by_type_final": {
+  "BUSINESS_RULE": 320,
+  "HYPOTHESIS": 24,
+  "FACT": 7,
+  "PLATFORM_RULE": 10
+ },
+ "records_sha256": "bf2ed200b48ab2605c3a229ba09dee24444c56241c13d5094cc2075ea8b0565a"
+}

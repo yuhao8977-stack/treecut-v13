@@ -1,0 +1,24 @@
+{
+ "manifest": "SOURCE_REQUIREMENT_AUDIT",
+ "classification": {
+  "SOURCE_PRESENT": 77,
+  "EXTERNAL_SOURCE_REQUIRED": 12,
+  "INTERNAL_VALIDATION_REQUIRED": 175,
+  "PLATFORM_SOURCE_REQUIRED": 10,
+  "NO_EXTERNAL_SOURCE_NEEDED": 87
+ },
+ "external_required_details": {
+  "note": "12 条需外部专业来源：厨房尺寸/通道/人体工学/材料性能/安全/电气规范",
+  "by_namespace": {
+   "craft_trust": 1,
+   "functions": 1,
+   "user_needs": 1,
+   "industry_taxonomy.script_semantics": 2,
+   "dimensions_decisions": 7
+  },
+  "action": "待联网核验；未核验前保持非 ACTIVE HIGH（当前已保证）"
+ },
+ "internal_validation": 175,
+ "hypothesis_all_draft": true,
+ "unverified_fact_active_high": []
+}

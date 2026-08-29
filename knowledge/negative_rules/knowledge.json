@@ -1,25 +1,24 @@
 {
  "namespace": "negative_rules",
- "count": 18,
+ "count": 30,
  "records": [
   {
-   "knowledge_id": "NEGATIVE-0001",
+   "knowledge_id": "KB-11-001",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "语义不匹配",
    "statement": "画面与当前脚本句子/节拍不匹配",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -28,36 +27,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0002",
+   "knowledge_id": "KB-11-002",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "动作不完整",
    "statement": "只出现动作中间状态，无法看出功能开始/结果",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -66,36 +68,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0003",
+   "knowledge_id": "KB-11-003",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "画面重复",
    "statement": "同一segment或近似segment在同一视频/近期视频重复",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -104,36 +109,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0004",
+   "knowledge_id": "KB-11-004",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "主体被遮挡",
    "statement": "人物/字幕/物体遮挡核心产品",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -142,36 +150,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0005",
+   "knowledge_id": "KB-11-005",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "产品不可见",
    "statement": "镜头无法明确看到脚本要求的产品/部件",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -180,36 +191,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0006",
+   "knowledge_id": "KB-11-006",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "场景跳变突兀",
    "statement": "相邻镜头空间、人物、光线或动作连续性过差",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -218,36 +232,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0007",
+   "knowledge_id": "KB-11-007",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "人物连续性冲突",
    "statement": "同一叙事段突然切换不同人物且无逻辑",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -256,36 +273,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0008",
+   "knowledge_id": "KB-11-008",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "色温/风格突变",
    "statement": "相邻镜头色调差异明显影响连贯",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -294,36 +314,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0009",
+   "knowledge_id": "KB-11-009",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "低清晰度",
    "statement": "严重模糊、失焦、压缩损伤",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -332,36 +355,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0010",
+   "knowledge_id": "KB-11-010",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "高抖动",
    "statement": "手持晃动影响观看",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -370,36 +396,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0011",
+   "knowledge_id": "KB-11-011",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "曝光异常",
    "statement": "过曝/欠曝导致主体不可读",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -408,36 +437,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0012",
+   "knowledge_id": "KB-11-012",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "硬字幕冲突",
    "statement": "旧字幕与新字幕叠加或冲突",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -446,36 +478,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0013",
+   "knowledge_id": "KB-11-013",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "水印/第三方标识",
    "statement": "存在不希望出现的标识",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -484,36 +519,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0014",
+   "knowledge_id": "KB-11-014",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "无信息空镜",
    "statement": "缺少脚本对应信息、动作或空间价值",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -522,36 +560,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0015",
+   "knowledge_id": "KB-11-015",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "重复口播人物",
    "statement": "多个视频持续重复同一人物同一姿态造成同质化",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -560,36 +601,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0016",
+   "knowledge_id": "KB-11-016",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "脚本证据不足",
    "statement": "脚本说某功能，但画面没有对应证据",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -598,36 +642,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0017",
+   "knowledge_id": "KB-11-017",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "违规/敏感表达",
    "statement": "平台规则或广告审核风险",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -636,36 +683,39 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "NEGATIVE-0018",
+   "knowledge_id": "KB-11-018",
    "namespace": "negative_rules",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "隐私风险",
    "statement": "出现联系方式、完整地址、车牌等敏感信息",
    "structured_payload": {
+    "category": "错误类型",
     "aliases": [],
     "positive_evidence": "生产QA/人工拒绝理由",
-    "negative_evidence": "仅软判定，不自动删除原素材",
-    "usage_scene": "候选过滤/成片QA/反馈学习",
+    "exclude_evidence": "仅软判定，不自动删除原素材",
+    "treecut_usage": "候选过滤/成片QA/反馈学习",
     "content_roles": [
      "全部"
-    ],
-    "category1": "负向与错误",
-    "category2": "错误类型"
+    ]
    },
-   "source": "production_rule",
+   "source": "SRC-005",
    "source_type": "production_rule",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -674,17 +724,454 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "negative",
-    "HYPOTHESIS",
-    "负向与错误"
+    "negative_rules",
+    "BUSINESS_RULE",
+    "错误类型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "11_负向与错误",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
+  },
+  {
+   "knowledge_id": "NR001",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR001",
+   "statement": "component=TRACK_SOCKET -> 禁止推出 OPERATE_SOCKET",
+   "structured_payload": {
+    "pattern": "component=TRACK_SOCKET",
+    "meaning": "禁止推出 OPERATE_SOCKET",
+    "reliability": "有插座 ≠ 正在插电/操作",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR002",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR002",
+   "statement": "scene=FACTORY -> 禁止推出 REAL_CUSTOMER_CASE",
+   "structured_payload": {
+    "pattern": "scene=FACTORY",
+    "meaning": "禁止推出 REAL_CUSTOMER_CASE",
+    "reliability": "工厂场景 ≠ 客户家案例",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR003",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR003",
+   "statement": "material=weak_prediction -> 禁止高置信推出 PREMIUM_MATERIAL_CLAIM",
+   "structured_payload": {
+    "pattern": "material=weak_prediction",
+    "meaning": "禁止高置信推出 PREMIUM_MATERIAL_CLAIM",
+    "reliability": "弱材质识别不能支撑真实材质/性能",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR004",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR004",
+   "statement": "people_presence=YES -> 禁止推出 FAMILY_GATHERING",
+   "structured_payload": {
+    "pattern": "people_presence=YES",
+    "meaning": "禁止推出 FAMILY_GATHERING",
+    "reliability": "有人 ≠ 家庭/聚会关系",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR005",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR005",
+   "statement": "semantic_action=experimental -> 禁止单独触发 FUNCTION_PROOF",
+   "structured_payload": {
+    "pattern": "semantic_action=experimental",
+    "meaning": "禁止单独触发 FUNCTION_PROOF",
+    "reliability": "需component/temporal/human等额外证据",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR006",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR006",
+   "statement": "function=EXTENDABLE -> 禁止自动推出 SMALL_APARTMENT",
+   "structured_payload": {
+    "pattern": "function=EXTENDABLE",
+    "meaning": "禁止自动推出 SMALL_APARTMENT",
+    "reliability": "伸缩说明弹性容量，不代表空间小",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR007",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR007",
+   "statement": "wood_texture_only -> 禁止推出 SOLID_WOOD/BLACK_WALNUT",
+   "structured_payload": {
+    "pattern": "wood_texture_only",
+    "meaning": "禁止推出 SOLID_WOOD/BLACK_WALNUT",
+    "reliability": "木纹视觉可能是岩板/饰面/仿纹",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR008",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR008",
+   "statement": "factory_scene_only -> 禁止推出 HIGH_QUALITY_FACTORY",
+   "structured_payload": {
+    "pattern": "factory_scene_only",
+    "meaning": "禁止推出 HIGH_QUALITY_FACTORY",
+    "reliability": "场景本身不证明品质等级",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR009",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR009",
+   "statement": "static_socket_image -> 禁止推出 CHARGING/HOT_POT_ACTION",
+   "structured_payload": {
+    "pattern": "static_socket_image",
+    "meaning": "禁止推出 CHARGING/HOT_POT_ACTION",
+    "reliability": "静态插座只能证明组件存在",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR010",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR010",
+   "statement": "platform_rule expired -> 禁止继续作为 ACTIVE PLATFORM_RULE",
+   "structured_payload": {
+    "pattern": "platform_rule expired",
+    "meaning": "禁止继续作为 ACTIVE PLATFORM_RULE",
+    "reliability": "TTL到期需重新核验官方来源",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR011",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR011",
+   "statement": "dimension_without_source -> 禁止输出统一标准数值",
+   "structured_payload": {
+    "pattern": "dimension_without_source",
+    "meaning": "禁止输出统一标准数值",
+    "reliability": "具体尺寸/法规需可靠来源与适用地区",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
+  },
+  {
+   "knowledge_id": "NR012",
+   "namespace": "negative_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "NR012",
+   "statement": "content_type keyword only -> 禁止由“客户/工厂/家”等单词直接决定主内容类型",
+   "structured_payload": {
+    "pattern": "content_type keyword only",
+    "meaning": "禁止由“客户/工厂/家”等单词直接决定主内容类型",
+    "reliability": "必须结合主要表达意图与证据",
+    "note": "ACTIVE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "negative_rules",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_MAPPING_NEGATIVE",
+   "review_note": "V1.1 新增映射/负规则"
   }
- ]
+ ],
+ "source": "V1.1 Phase4 结构化补全版"
 }

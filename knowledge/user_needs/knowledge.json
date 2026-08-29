@@ -1,31 +1,30 @@
 {
  "namespace": "user_needs",
- "count": 14,
+ "count": 35,
  "records": [
   {
-   "knowledge_id": "USER_NEED-0001",
+   "knowledge_id": "KB-06-001",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "小户型空间利用",
    "statement": "面积有限，希望增加餐桌/收纳/操作功能。",
    "structured_payload": {
+    "category": "空间痛点",
     "aliases": [
      "小户型",
      "80平",
      "空间不够"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "空间痛点"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -34,41 +33,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "空间痛点"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0002",
+   "knowledge_id": "KB-06-002",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "大横厅布局",
    "statement": "横厅尺度较大，需要通过岛台形成分区/办公/餐饮功能。",
    "structured_payload": {
+    "category": "空间痛点",
     "aliases": [
      "大横厅",
      "沙发后"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "空间痛点"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -77,42 +79,45 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "空间痛点"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0003",
+   "knowledge_id": "KB-06-003",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "多人聚餐",
    "statement": "家庭聚会或多人用餐需要更大桌面。",
    "structured_payload": {
+    "category": "家庭场景",
     "aliases": [
      "多人吃饭",
      "聚会",
      "火锅"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "家庭场景"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -121,40 +126,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "家庭场景"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0004",
+   "knowledge_id": "KB-06-004",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "三口之家",
    "statement": "三人家庭的日常就餐、收纳和办公需求。",
    "structured_payload": {
+    "category": "家庭场景",
     "aliases": [
      "一家三口"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "家庭场景"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -163,41 +171,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "家庭场景"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0005",
+   "knowledge_id": "KB-06-005",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "有娃家庭",
    "statement": "关注圆角、防磕碰、收纳和动线。",
    "structured_payload": {
+    "category": "家庭场景",
     "aliases": [
      "孩子",
      "儿童"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "家庭场景"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -206,41 +217,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "家庭场景"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0006",
+   "knowledge_id": "KB-06-006",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "办公学习",
    "statement": "需要临时办公、阅读、学习桌面。",
    "structured_payload": {
+    "category": "生活场景",
     "aliases": [
      "办公",
      "学习"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "生活场景"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -249,41 +263,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "生活场景"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0007",
+   "knowledge_id": "KB-06-007",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "收纳不足",
    "statement": "厨房/餐厅小物、电器、茶咖等无处收纳。",
    "structured_payload": {
+    "category": "痛点",
     "aliases": [
      "储物不够",
      "收纳"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "痛点"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -292,41 +309,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "痛点"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0008",
+   "knowledge_id": "KB-06-008",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "插座不方便",
    "statement": "火锅、充电、小家电用电时拖线不便。",
    "structured_payload": {
+    "category": "痛点",
     "aliases": [
      "没有插座",
      "满屋拉线"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "痛点"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -335,42 +355,45 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "痛点"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0009",
+   "knowledge_id": "KB-06-009",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "电器嵌入",
    "statement": "需要提前规划电器尺寸、开孔与位置。",
    "structured_payload": {
+    "category": "决策问题",
     "aliases": [
      "蒸烤箱",
      "烤箱",
      "洗碗机"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "决策问题"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -379,42 +402,45 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "决策问题"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "EXTERNAL_SOURCE_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": true,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0010",
+   "knowledge_id": "KB-06-010",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "岛台尺寸决策",
    "statement": "关心长度、宽度、高度、通道与使用人数。",
    "structured_payload": {
+    "category": "决策问题",
     "aliases": [
      "多高",
      "多宽",
      "多长"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "决策问题"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -423,25 +449,30 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "决策问题"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0011",
+   "knowledge_id": "KB-06-011",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "风格匹配",
    "statement": "岛台材质/颜色与整体装修风格协调。",
    "structured_payload": {
+    "category": "审美需求",
     "aliases": [
      "中古",
      "奶油",
@@ -449,17 +480,15 @@
      "极简"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "审美需求"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -468,41 +497,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "审美需求"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0012",
+   "knowledge_id": "KB-06-012",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "真实案例参考",
    "statement": "希望通过同户型/同需求真实案例降低决策不确定性。",
    "structured_payload": {
+    "category": "信任需求",
     "aliases": [
      "实景",
      "案例"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "信任需求"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -511,42 +543,45 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "信任需求"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0013",
+   "knowledge_id": "KB-06-013",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "预算与性价比",
    "statement": "关注配置、材质、功能与预算匹配。",
    "structured_payload": {
+    "category": "购买决策",
     "aliases": [
      "价格",
      "预算",
      "值不值"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "购买决策"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -555,42 +590,45 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "购买决策"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "USER_NEED-0014",
+   "knowledge_id": "KB-06-014",
    "namespace": "user_needs",
-   "knowledge_type": "HYPOTHESIS",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "工艺与品质",
    "statement": "关注收口、五金、加工精度、稳定性。",
    "structured_payload": {
+    "category": "信任需求",
     "aliases": [
      "工艺",
      "细节",
      "品质"
     ],
     "positive_evidence": "脚本痛点、评论/咨询、ASR语义",
-    "negative_evidence": "不要仅凭单一画面推断用户真实家庭情况",
-    "usage_scene": "脚本理解/内容价值/CTA",
+    "exclude_evidence": "不要仅凭单一画面推断用户真实家庭情况",
+    "treecut_usage": "脚本理解/内容价值/CTA",
     "content_roles": [
      "流量",
      "搜索",
      "转化"
-    ],
-    "category1": "用户需求",
-    "category2": "信任需求"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "MEDIUM",
@@ -599,17 +637,757 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "user_need",
-    "HYPOTHESIS",
-    "用户需求"
+    "user_needs",
+    "BUSINESS_RULE",
+    "信任需求"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "06_用户需求",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-SPACE_EFFICIENCY",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "空间效率",
+   "statement": "在有限空间内增加使用能力",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "SPACE_EFFICIENCY",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-STORAGE",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "收纳",
+   "statement": "需要抽屉、柜体、层板等储物能力",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "STORAGE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-DINING",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "日常就餐",
+   "statement": "承担日常吃饭与用餐",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "DINING",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-FAMILY_GATHERING",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "家庭聚会",
+   "statement": "家庭成员共同用餐或互动",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "FAMILY_GATHERING",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-GUEST_CAPACITY",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "多人容量",
+   "statement": "需要容纳更多客人/座位",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "GUEST_CAPACITY",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-OFFICE",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "办公学习",
+   "statement": "岛台用于办公、阅读或学习",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "OFFICE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-CHARGING_POWER",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "充电用电",
+   "statement": "手机、电脑、小家电等用电需求",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "CHARGING_POWER",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-COOKING_PREP",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "备餐操作",
+   "statement": "切配、摆盘、操作台需求",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "COOKING_PREP",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-SMALL_APPLIANCE",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "小家电使用",
+   "statement": "火锅、电水壶、咖啡机等设备使用",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "SMALL_APPLIANCE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-AESTHETICS",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "审美",
+   "statement": "关注视觉效果、质感与空间美感",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "AESTHETICS",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-STYLE_MATCH",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "风格匹配",
+   "statement": "产品与整体装修风格协调",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "STYLE_MATCH",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-CHILD_SAFETY",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "儿童安全",
+   "statement": "圆角、动线、防磕碰等家庭安全需求",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "CHILD_SAFETY",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-CLEANING_MAINTENANCE",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "清洁维护",
+   "statement": "日常清洁与维护便利",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "CLEANING_MAINTENANCE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-DURABILITY",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "耐用稳定",
+   "statement": "关注结构、五金、长期使用稳定性",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "DURABILITY",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-SPACE_DIVISION",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "空间分区",
+   "statement": "通过岛台形成厨房/餐厅/客厅分区",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "SPACE_DIVISION",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-DINING_KITCHEN_INTEGRATION",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "餐厨一体",
+   "statement": "就餐与厨房操作空间整合",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "DINING_KITCHEN_INTEGRATION",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-LIVING_ROOM_LAYOUT",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "客厅布局",
+   "statement": "横厅、沙发后等客厅空间组织",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "LIVING_ROOM_LAYOUT",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-CUSTOMIZATION",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "定制适配",
+   "statement": "按户型、尺寸、电器、功能定制",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "CUSTOMIZATION",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-DECISION_CONFIDENCE",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "决策信心",
+   "statement": "帮助用户确认尺寸、配置与选择",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "DECISION_CONFIDENCE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-INSTALLATION_CONFIDENCE",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "安装信心",
+   "statement": "关注测量、安装、落地可行性",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "INSTALLATION_CONFIDENCE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-USER_NEED-QUALITY_TRUST",
+   "namespace": "user_needs",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "品质信任",
+   "statement": "关注工艺、结构、制造和专业可信度",
+   "structured_payload": {
+    "group": "USER_NEED",
+    "code": "QUALITY_TRUST",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "USER_NEED",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
   }
- ]
+ ],
+ "source": "V1.1 Phase4 结构化补全版"
 }

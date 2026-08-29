@@ -3,12 +3,13 @@
  "count": 25,
  "records": [
   {
-   "knowledge_id": "FUNCTION-0001",
+   "knowledge_id": "KB-04-001",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "伸缩",
    "statement": "拉出、延长、展开或收回台体/桌板，改变长度或容量。",
    "structured_payload": {
+    "category": "空间扩展",
     "aliases": [
      "拉伸",
      "延伸",
@@ -17,17 +18,15 @@
      "加长"
     ],
     "positive_evidence": "ASR/OCR出现拉伸|延伸|展开|收起|加长；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "空间扩展"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -36,42 +35,45 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "空间扩展"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0002",
+   "knowledge_id": "KB-04-002",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "多人就餐",
    "statement": "岛台满足多人用餐/聚餐/火锅等场景。",
    "structured_payload": {
+    "category": "使用场景",
     "aliases": [
      "聚餐",
      "多人吃饭",
      "打火锅"
     ],
     "positive_evidence": "ASR/OCR出现聚餐|多人吃饭|打火锅；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "使用场景"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -80,25 +82,30 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "使用场景"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0003",
+   "knowledge_id": "KB-04-003",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "薄抽收纳",
    "statement": "浅抽用于筷子、勺子、纸巾、茶叶等小物。",
    "structured_payload": {
+    "category": "收纳",
     "aliases": [
      "薄抽",
      "浅抽",
@@ -106,17 +113,15 @@
      "飽抽"
     ],
     "positive_evidence": "ASR/OCR出现薄抽|浅抽|饱抽|飽抽；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "收纳"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -125,42 +130,45 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "收纳"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0004",
+   "knowledge_id": "KB-04-004",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "柜体收纳",
    "statement": "柜门、对开门、层板等形成的内部储物。",
    "structured_payload": {
+    "category": "收纳",
     "aliases": [
      "柜门",
      "对开门",
      "活动层板"
     ],
     "positive_evidence": "ASR/OCR出现柜门|对开门|活动层板；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "收纳"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -169,40 +177,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "收纳"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0005",
+   "knowledge_id": "KB-04-005",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "隐藏收纳",
    "statement": "视觉上隐藏或封闭的储物空间。",
    "structured_payload": {
+    "category": "收纳",
     "aliases": [
      "隐藏储物"
     ],
     "positive_evidence": "ASR/OCR出现隐藏储物；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "收纳"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -211,42 +222,45 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "收纳"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0006",
+   "knowledge_id": "KB-04-006",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "轨道插座",
    "statement": "轨道式插座，用于充电、小家电、火锅等。",
    "structured_payload": {
+    "category": "用电",
     "aliases": [
      "公牛轨道",
      "一组轨道",
      "配置轨道"
     ],
     "positive_evidence": "ASR/OCR出现公牛轨道|一组轨道|配置轨道；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "用电"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -255,40 +269,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "用电"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0007",
+   "knowledge_id": "KB-04-007",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "普通插座",
    "statement": "固定插座或电源接口。",
    "structured_payload": {
+    "category": "用电",
     "aliases": [
      "电源插座"
     ],
     "positive_evidence": "ASR/OCR出现电源插座；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "用电"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -297,40 +314,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "用电"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0008",
+   "knowledge_id": "KB-04-008",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "手机充电",
    "statement": "岛台用于手机/电脑等设备充电。",
    "structured_payload": {
+    "category": "用电场景",
     "aliases": [
      "充电"
     ],
     "positive_evidence": "ASR/OCR出现充电；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "用电场景"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -339,41 +359,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "用电场景"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0009",
+   "knowledge_id": "KB-04-009",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "办公",
    "statement": "岛台作为临时办公/学习桌面。",
    "structured_payload": {
+    "category": "使用场景",
     "aliases": [
      "工作台",
      "办公桌"
     ],
     "positive_evidence": "ASR/OCR出现工作台|办公桌；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "使用场景"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -382,40 +405,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "使用场景"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0010",
+   "knowledge_id": "KB-04-010",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "备餐",
    "statement": "切配、摆盘、备餐等操作。",
    "structured_payload": {
+    "category": "厨房功能",
     "aliases": [
      "操作台"
     ],
     "positive_evidence": "ASR/OCR出现操作台；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "厨房功能"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -424,42 +450,45 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "厨房功能"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0011",
+   "knowledge_id": "KB-04-011",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "泡茶/水吧",
    "statement": "泡茶、饮水、洗水果等轻水吧使用。",
    "structured_payload": {
+    "category": "水吧功能",
     "aliases": [
      "泡茶",
      "洗水果",
      "水吧"
     ],
     "positive_evidence": "ASR/OCR出现泡茶|洗水果|水吧；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "水吧功能"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -468,41 +497,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "水吧功能"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0012",
+   "knowledge_id": "KB-04-012",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "嵌入烤箱",
    "statement": "预留或嵌入烤箱。",
    "structured_payload": {
+    "category": "电器",
     "aliases": [
      "烤箱位",
      "烤箱开孔"
     ],
     "positive_evidence": "ASR/OCR出现烤箱位|烤箱开孔；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "电器"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -511,40 +543,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "电器"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0013",
+   "knowledge_id": "KB-04-013",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "嵌入蒸烤箱",
    "statement": "预留或嵌入蒸烤设备。",
    "structured_payload": {
+    "category": "电器",
     "aliases": [
      "蒸烤箱"
     ],
     "positive_evidence": "ASR/OCR出现蒸烤箱；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "电器"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -553,40 +588,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "电器"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0014",
+   "knowledge_id": "KB-04-014",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "嵌入洗碗机",
    "statement": "预留或嵌入洗碗设备。",
    "structured_payload": {
+    "category": "电器",
     "aliases": [
      "洗碗机"
     ],
     "positive_evidence": "ASR/OCR出现洗碗机；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "电器"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -595,41 +633,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "电器"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0015",
+   "knowledge_id": "KB-04-015",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "电器预留",
    "statement": "为特定电器预留尺寸、散热或开孔位置。",
    "structured_payload": {
+    "category": "电器",
     "aliases": [
      "预留位置",
      "精准开孔"
     ],
     "positive_evidence": "ASR/OCR出现预留位置|精准开孔；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "电器"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -638,41 +679,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "电器"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "EXTERNAL_SOURCE_REQUIRED",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": true,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0016",
+   "knowledge_id": "KB-04-016",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "儿童安全圆角",
    "statement": "通过圆角减少尖锐边角风险。",
    "structured_payload": {
+    "category": "安全",
     "aliases": [
      "防磕碰",
      "圆角"
     ],
     "positive_evidence": "ASR/OCR出现防磕碰|圆角；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "安全"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -681,40 +725,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "安全"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0017",
+   "knowledge_id": "KB-04-017",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "空间分区",
    "statement": "岛台用于厨房/餐厅/客厅的视觉或功能分区。",
    "structured_payload": {
+    "category": "空间",
     "aliases": [
      "空间划分"
     ],
     "positive_evidence": "ASR/OCR出现空间划分；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "空间"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -723,40 +770,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "空间"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0018",
+   "knowledge_id": "KB-04-018",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "餐厨一体",
    "statement": "就餐与厨房操作在同一核心区域整合。",
    "structured_payload": {
+    "category": "空间",
     "aliases": [
      "餐厨融合"
     ],
     "positive_evidence": "ASR/OCR出现餐厨融合；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "空间"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -765,40 +815,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "空间"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0019",
+   "knowledge_id": "KB-04-019",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "沙发后办公",
    "statement": "沙发后岛台用于办公、阅读或就餐。",
    "structured_payload": {
+    "category": "空间场景",
     "aliases": [
      "沙发背办公"
     ],
     "positive_evidence": "ASR/OCR出现沙发背办公；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "空间场景"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -807,40 +860,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "空间场景"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0020",
+   "knowledge_id": "KB-04-020",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "储酒",
    "statement": "酒瓶/酒具收纳。",
    "structured_payload": {
+    "category": "收纳/生活",
     "aliases": [
      "酒柜功能"
     ],
     "positive_evidence": "ASR/OCR出现酒柜功能；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "收纳/生活"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -849,40 +905,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "收纳/生活"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0021",
+   "knowledge_id": "KB-04-021",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "临时茶咖",
    "statement": "茶叶、咖啡、杯具等临时储放。",
    "structured_payload": {
+    "category": "收纳/生活",
     "aliases": [
      "茶咖收纳"
     ],
     "positive_evidence": "ASR/OCR出现茶咖收纳；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "收纳/生活"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -891,41 +950,44 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "收纳/生活"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0022",
+   "knowledge_id": "KB-04-022",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "隐藏电线",
    "statement": "减少外露拖线、插排等。",
    "structured_payload": {
+    "category": "用电/整洁",
     "aliases": [
      "不拉线",
      "隐藏走线"
     ],
     "positive_evidence": "ASR/OCR出现不拉线|隐藏走线；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "用电/整洁"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -934,40 +996,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "用电/整洁"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0023",
+   "knowledge_id": "KB-04-023",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "清洁维护",
    "statement": "强调台面日常清洁、易打理等使用场景；材料性能表述需来源支持。",
    "structured_payload": {
+    "category": "使用",
     "aliases": [
      "好打理"
     ],
     "positive_evidence": "ASR/OCR出现好打理；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "使用"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -976,40 +1041,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "使用"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0024",
+   "knowledge_id": "KB-04-024",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "视觉悬浮",
    "statement": "通过透明支撑/悬挑形成悬浮视觉。",
    "structured_payload": {
+    "category": "造型",
     "aliases": [
      "悬浮效果"
     ],
     "positive_evidence": "ASR/OCR出现悬浮效果；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "造型"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -1018,40 +1086,43 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "造型"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "FUNCTION-0025",
+   "knowledge_id": "KB-04-025",
    "namespace": "functions",
-   "knowledge_type": "FACT",
+   "knowledge_type": "BUSINESS_RULE",
    "title": "一桌多用",
    "statement": "同一台体承担吃饭、办公、备餐、社交等多重用途。",
    "structured_payload": {
+    "category": "使用场景",
     "aliases": [
      "多功能"
     ],
     "positive_evidence": "ASR/OCR出现多功能；或视觉动作明确展示该功能",
-    "negative_evidence": "静态展示不能自动推断功能已发生",
-    "usage_scene": "功能识别/脚本场景/槽位匹配",
+    "exclude_evidence": "静态展示不能自动推断功能已发生",
+    "treecut_usage": "功能识别/脚本场景/槽位匹配",
     "content_roles": [
      "搜索",
      "转化",
      "用户价值"
-    ],
-    "category1": "功能体系",
-    "category2": "使用场景"
+    ]
    },
-   "source": "business_dictionary",
+   "source": "SRC-005",
    "source_type": "business_dictionary",
    "source_version": "1.0",
    "confidence": "HIGH",
@@ -1060,17 +1131,22 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "function",
-    "FACT",
-    "功能体系"
+    "functions",
+    "BUSINESS_RULE",
+    "使用场景"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": false,
-   "note": ""
+   "source_requirement_class": "SOURCE_PRESENT",
+   "validation_status": "VALIDATED",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "04_功能体系",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   }
- ]
+ ],
+ "source": "V1.1 Phase4 结构化补全版"
 }

@@ -189,12 +189,17 @@ class BusinessCognitionServiceV1:
                               "knowledge_ids": retrieved_ids[:3], "note": "theme derived from needs"})
 
         # 4) Content Role（Business Meaning + 表达意图；不硬绑定）
-        if any(v in user_needs for v in ("GUEST_CAPACITY", "SPACE_EFFICIENCY", "FAMILY_GATHERING")):
+        if any(v in user_needs for v in ("GUEST_CAPACITY", "SPACE_EFFICIENCY", "FAMILY_GATHERING",
+                                         "CHARGING_POWER")):
             content_roles.append("CONVERSION")
-        if any(v in user_needs for v in ("DECISION_CONFIDENCE", "INSTALLATION_CONFIDENCE", "SIZE")):
+        if any(v in user_needs for v in ("DECISION_CONFIDENCE", "INSTALLATION_CONFIDENCE",
+                                         "SIZE", "STORAGE", "DINING")):
             content_roles.append("SEARCH")
         if "QUALITY_TRUST" in user_needs or ev.get("scene_family", {}).get("value") in ("FACTORY",):
             content_roles.append("TRUST")
+        if "POWER_CONVENIENCE" in business_values:
+            content_roles.append("CONVERSION")  # 电源便利是转化决策点
+            content_roles.append("SEARCH")      # 也是搜索问题（"岛台插座怎么留"）
 
         # 5) Shot Function（与 shot_role 分离）
         if any(v in business_values for v in ("STORAGE_EFFICIENCY", "FLEXIBLE_CAPACITY", "POWER_CONVENIENCE")):

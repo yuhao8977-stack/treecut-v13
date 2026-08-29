@@ -1,0 +1,183 @@
+{
+ "manifest": "KNOWLEDGE_AUDIT_V1_1",
+ "total": 361,
+ "by_type": {
+  "BUSINESS_RULE": 320,
+  "HYPOTHESIS": 24,
+  "FACT": 7,
+  "PLATFORM_RULE": 10
+ },
+ "by_namespace": {
+  "product": 16,
+  "materials_styles": 15,
+  "craft_trust": 7,
+  "functions": 25,
+  "industry_taxonomy.scene_space": 16,
+  "user_needs": 35,
+  "content_roles": 8,
+  "content_types": 6,
+  "shot_ontology": 37,
+  "industry_taxonomy.script_semantics": 10,
+  "business_value_rules": 30,
+  "negative_rules": 30,
+  "dimensions_decisions": 23,
+  "platform_compliance": 10,
+  "mother_themes": 5,
+  "semantic_mappings": 76,
+  "template_library": 12
+ },
+ "by_source_req": {
+  "SOURCE_PRESENT": 77,
+  "EXTERNAL_SOURCE_REQUIRED": 12,
+  "INTERNAL_VALIDATION_REQUIRED": 175,
+  "PLATFORM_SOURCE_REQUIRED": 10,
+  "NO_EXTERNAL_SOURCE_NEEDED": 87
+ },
+ "by_status": {
+  "ACTIVE": 141,
+  "REVIEWED": 29,
+  "DRAFT": 191
+ },
+ "by_confidence": {
+  "HIGH": 112,
+  "MEDIUM": 237,
+  "LOW": 12
+ },
+ "by_validation_status": {
+  "VALIDATED": 77,
+  "REVIEWED": 29,
+  "DRAFT": 171,
+  "UNVALIDATED": 24,
+  "SYSTEM_GUARDRAIL": 12,
+  "SYSTEM_DESIGN": 48
+ },
+ "duplicate": [],
+ "conflicts": [],
+ "related_cross_ns": [
+  {
+   "title": "伸缩岛台",
+   "n": 2,
+   "ids": [
+    "KB-01-002",
+    "P4-SEARCH_INTENT-EXTENDABLE_ISLAND"
+   ]
+  },
+  {
+   "title": "餐岛一体",
+   "n": 2,
+   "ids": [
+    "KB-01-003",
+    "P4-SEARCH_INTENT-ISLAND_DINING_COMBO"
+   ]
+  },
+  {
+   "title": "沙发后岛台",
+   "n": 2,
+   "ids": [
+    "KB-01-011",
+    "P4-SEARCH_INTENT-SOFA_BACK_ISLAND"
+   ]
+  },
+  {
+   "title": "空间分区",
+   "n": 2,
+   "ids": [
+    "KB-04-017",
+    "P4-USER_NEED-SPACE_DIVISION"
+   ]
+  },
+  {
+   "title": "餐厨一体",
+   "n": 2,
+   "ids": [
+    "KB-04-018",
+    "P4-USER_NEED-DINING_KITCHEN_INTEGRATION"
+   ]
+  },
+  {
+   "title": "清洁维护",
+   "n": 2,
+   "ids": [
+    "KB-04-023",
+    "P4-USER_NEED-CLEANING_MAINTENANCE"
+   ]
+  },
+  {
+   "title": "定制适配",
+   "n": 2,
+   "ids": [
+    "P4-USER_NEED-CUSTOMIZATION",
+    "P4-BUSINESS_VALUE-CUSTOM_FIT"
+   ]
+  },
+  {
+   "title": "信任证明",
+   "n": 2,
+   "ids": [
+    "P4-BUSINESS_VALUE-TRUST_PROOF",
+    "P4-SHOT_FUNCTION-TRUST_PROOF"
+   ]
+  }
+ ],
+ "semantic_dup_candidates": [
+  {
+   "title": "办公学习",
+   "n": 2,
+   "ids": [
+    "KB-06-006",
+    "P4-USER_NEED-OFFICE"
+   ]
+  },
+  {
+   "title": "风格匹配",
+   "n": 2,
+   "ids": [
+    "KB-06-011",
+    "P4-USER_NEED-STYLE_MATCH"
+   ]
+  },
+  {
+   "title": "流量",
+   "n": 2,
+   "ids": [
+    "KB-07-001",
+    "P4-CONTENT_ROLE-TRAFFIC"
+   ]
+  },
+  {
+   "title": "搜索",
+   "n": 2,
+   "ids": [
+    "KB-07-002",
+    "P4-CONTENT_ROLE-SEARCH"
+   ]
+  },
+  {
+   "title": "信任",
+   "n": 2,
+   "ids": [
+    "KB-07-003",
+    "P4-CONTENT_ROLE-TRUST"
+   ]
+  },
+  {
+   "title": "转化",
+   "n": 2,
+   "ids": [
+    "KB-07-004",
+    "P4-CONTENT_ROLE-CONVERSION"
+   ]
+  }
+ ],
+ "stale_platform": [],
+ "external_required_count": 12,
+ "external_by_namespace": {
+  "craft_trust": 1,
+  "functions": 1,
+  "user_needs": 1,
+  "industry_taxonomy.script_semantics": 2,
+  "dimensions_decisions": 7
+ },
+ "hypothesis_all_draft": true,
+ "unverified_fact_active_high": []
+}

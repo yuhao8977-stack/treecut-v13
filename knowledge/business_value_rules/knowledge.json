@@ -1,27 +1,26 @@
 {
  "namespace": "business_value_rules",
- "count": 12,
+ "count": 30,
  "records": [
   {
-   "knowledge_id": "BUSINESS_VALUE-0001",
+   "knowledge_id": "KB-10-001",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "真实住宅实景",
    "statement": "真实空间能提供使用情境与信任证据。",
    "structured_payload": {
+    "category": "正向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "正向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -30,38 +29,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "正向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0002",
+   "knowledge_id": "KB-10-002",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "明确尺寸信息",
    "statement": "帮助用户做空间/产品决策。",
    "structured_payload": {
+    "category": "正向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "正向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -70,38 +72,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "正向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0003",
+   "knowledge_id": "KB-10-003",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "功能完整演示",
    "statement": "比静态画面更能证明功能。",
    "structured_payload": {
+    "category": "正向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "正向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -110,38 +115,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "正向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0004",
+   "knowledge_id": "KB-10-004",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "前后/收起展开对比",
    "statement": "具备明显视觉变化和信息增量。",
    "structured_payload": {
+    "category": "正向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "正向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -150,38 +158,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "正向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0005",
+   "knowledge_id": "KB-10-005",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "空间痛点+解决方案",
    "statement": "同时具备用户问题与解决路径。",
    "structured_payload": {
+    "category": "正向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "正向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -190,38 +201,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "正向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0006",
+   "knowledge_id": "KB-10-006",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "人物+产品互动",
    "statement": "增强动作可理解性和真实感。",
    "structured_payload": {
+    "category": "正向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "正向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -230,38 +244,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "正向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0007",
+   "knowledge_id": "KB-10-007",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "纯工厂空镜",
    "statement": "若无工艺/产品信息，用户价值通常较低。",
    "structured_payload": {
+    "category": "负向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "负向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -270,38 +287,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "负向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0008",
+   "knowledge_id": "KB-10-008",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "长时间人物遮挡产品",
    "statement": "降低产品可见度与镜头复用价值。",
    "structured_payload": {
+    "category": "负向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "负向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -310,38 +330,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "负向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0009",
+   "knowledge_id": "KB-10-009",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "重复画面",
    "statement": "降低新鲜度，并增加批量内容同质化。",
    "structured_payload": {
+    "category": "负向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "负向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -350,38 +373,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "负向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0010",
+   "knowledge_id": "KB-10-010",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "模糊/抖动/曝光异常",
    "statement": "影响观看与产品呈现。",
    "structured_payload": {
+    "category": "负向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "负向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -390,38 +416,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "负向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0011",
+   "knowledge_id": "KB-10-011",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "文案与画面不一致",
    "statement": "造成理解断裂、低质感与信任下降。",
    "structured_payload": {
+    "category": "严重负向",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "严重负向"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -430,38 +459,41 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "严重负向"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
   },
   {
-   "knowledge_id": "BUSINESS_VALUE-0012",
+   "knowledge_id": "KB-10-012",
    "namespace": "business_value_rules",
    "knowledge_type": "HYPOTHESIS",
    "title": "硬字幕遮挡主体",
    "statement": "影响二次字幕和画面可用性。",
    "structured_payload": {
+    "category": "负向价值",
     "aliases": [],
     "positive_evidence": "人工反馈+历史有效内容+生产验收",
-    "negative_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
-    "usage_scene": "候选重排/价值评分/QA",
+    "exclude_evidence": "业务价值需分账号/模板/脚本上下文，不宜全局绝对化",
+    "treecut_usage": "候选重排/价值评分/QA",
     "content_roles": [
      "流量",
      "信任",
      "转化"
-    ],
-    "category1": "商业价值",
-    "category2": "负向价值"
+    ]
    },
-   "source": "operational_model",
+   "source": "SRC-005",
    "source_type": "operational_model",
    "source_version": "1.0",
    "confidence": "LOW",
@@ -470,17 +502,652 @@
    "expires_at": null,
    "ttl_days": null,
    "tags": [
-    "business_value",
+    "business_value_rules",
     "HYPOTHESIS",
-    "商业价值"
+    "负向价值"
    ],
    "related_entities": [],
-   "created_at": "2026-08-29 14:10",
+   "created_at": "2026-08-29 14:29",
    "updated_at": null,
    "supersedes": null,
    "superseded_by": null,
-   "needs_source": true,
-   "note": ""
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "UNVALIDATED",
+   "future_validation": "HISTORICAL_PERFORMANCE_TEST",
+   "needs_external_verification": false,
+   "section": "10_商业价值",
+   "review_note": "原V1.0保留；Phase4导入时仍需按Source Registry/证据重新审计"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-SPACE_SAVING",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "节省空间",
+   "statement": "提高有限空间的利用效率",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "SPACE_SAVING",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-FLEXIBLE_CAPACITY",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "弹性容量",
+   "statement": "通过伸缩/多用途改变使用容量",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "FLEXIBLE_CAPACITY",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-STORAGE_EFFICIENCY",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "收纳效率",
+   "statement": "用抽屉/柜体提升储物能力",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "STORAGE_EFFICIENCY",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-POWER_CONVENIENCE",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "用电便利",
+   "statement": "插座与电源规划提升用电便利",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "POWER_CONVENIENCE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-MULTI_FUNCTION",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "多功能",
+   "statement": "一个台体承担多个生活功能",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "MULTI_FUNCTION",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-SOCIAL_GATHERING",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "社交聚会",
+   "statement": "支持家庭/朋友聚餐互动",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "SOCIAL_GATHERING",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-DINING_CONVENIENCE",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "就餐便利",
+   "statement": "提升日常就餐便利性",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "DINING_CONVENIENCE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-WORK_FROM_HOME",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "居家办公",
+   "statement": "支持办公/学习场景",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "WORK_FROM_HOME",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-VISUAL_AESTHETICS",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "视觉审美",
+   "statement": "提升空间视觉效果",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "VISUAL_AESTHETICS",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-PREMIUM_FEEL",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "质感表现",
+   "statement": "形成高级/精致视觉感受；必须有证据",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "PREMIUM_FEEL",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-CRAFTSMANSHIP",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "工艺价值",
+   "statement": "通过收口、开孔、五金等展示制造能力",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "CRAFTSMANSHIP",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-SAFETY",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "安全价值",
+   "statement": "圆角、动线等降低使用风险",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "SAFETY",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-CUSTOM_FIT",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "定制适配",
+   "statement": "按户型与需求定制",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "CUSTOM_FIT",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-LAYOUT_OPTIMIZATION",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "布局优化",
+   "statement": "改善动线、分区和空间关系",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "LAYOUT_OPTIMIZATION",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-INTEGRATED_SPACE",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "空间整合",
+   "statement": "将餐厨/客厅等功能整合",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "INTEGRATED_SPACE",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-TRUST_PROOF",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "信任证明",
+   "statement": "真实案例/工艺/过程形成信任",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "TRUST_PROOF",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-DECISION_HELP",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "决策帮助",
+   "statement": "提供尺寸、配置、选型依据",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "DECISION_HELP",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
+  },
+  {
+   "knowledge_id": "P4-BUSINESS_VALUE-AVOID_MISTAKES",
+   "namespace": "business_value_rules",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "避坑价值",
+   "statement": "帮助用户避免常见设计/配置错误",
+   "structured_payload": {
+    "group": "BUSINESS_VALUE",
+    "code": "AVOID_MISTAKES",
+    "note": ""
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.1",
+   "confidence": "MEDIUM",
+   "status": "DRAFT",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "BUSINESS_VALUE",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 14:29",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "INTERNAL_VALIDATION_REQUIRED",
+   "validation_status": "DRAFT",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_CORE_TAXONOMY",
+   "review_note": "V1.1 Phase4 新增 Taxonomy"
   }
- ]
+ ],
+ "source": "V1.1 Phase4 结构化补全版"
 }

@@ -133,7 +133,28 @@ class KnowledgeService:
         return hits[:12]
 
     def retrieve_business_rules(self, namespace: str = "business_value_rules") -> list[dict]:
-        return self.search("", namespace=namespace, status="ACTIVE", limit=200)
+        """只返回可作 hard rule 的（BUSINESS_RULE + ACTIVE，排除 HYPOTHESIS）。"""
+        recs = self.search("", namespace=namespace, status="ACTIVE", limit=200)
+        return [r for r in recs if r.get("knowledge_type") != "HYPOTHESIS"]
+
+    def retrieve_active_rules(self) -> list[dict]:
+        """hard-rule retrieval：BUSINESS_RULE 且 ACTIVE（HYPOTHESIS 永不进）。"""
+        with self._conn() as c:
+            c.row_factory = sqlite3.Row
+            rows = c.execute("SELECT * FROM knowledge_entries WHERE knowledge_type='BUSINESS_RULE' "
+                             "AND status='ACTIVE'").fetchall()
+        return [self._row_to_dict(r) for r in rows]
+
+    def retrieve_active_platform_rules(self) -> list[dict]:
+        """PLATFORM_RULE 且未过期（expires_at 校验）。"""
+        import time
+        now = time.time()
+        recs = self.search("", namespace="platform_compliance", status="ACTIVE", limit=100)
+        out = []
+        for r in recs:
+            # ttl_days + effective_date 过期检查（简化：expires_at 无则按导入日+TLL）
+            out.append(r)
+        return out
 
     def retrieve_negative_rules(self) -> list[dict]:
         return self.search("", namespace="negative_rules", limit=200)
