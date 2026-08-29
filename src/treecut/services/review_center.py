@@ -50,6 +50,14 @@ TASKS = [
               "· 置信度解释：高=几乎确定；中=大体确定但有一定判断空间；低=自己拿不准\n"
               "· 材质/组件/功能/镜头角色：点击即多选，再点取消；动作按发生顺序添加\n"
               "· 看不清就选 未知 + 低 + 需复核，不硬猜")},
+    {"id": "FRESH_HOLDOUT_V2", "name": "Bundle V2 未见样本盲审（考试卷 30 条）", "type": "HOLDOUT",
+     "manifest": os.path.join(DATA_ROOT, "FRESH_HOLDOUT_V2_MANIFEST_LOCK.json"),
+     "table": "fresh_holdout_human_review_v1",
+     "blind": True,  # 盲审：隐藏一切 AI 信息（Bundle V2 交卷答案绝不显示）
+     "hint": ("盲审说明：这是 Bundle V2 从未见过的全新考试卷。系统已隐藏 AI 预测/分数/证据，请只看视频独立作答。\n"
+              "· 置信度解释：高=几乎确定；中=大体确定但有一定判断空间；低=自己拿不准\n"
+              "· 材质/组件/功能/镜头角色：点击即多选，再点取消；动作按发生顺序添加\n"
+              "· 看不清就选 未知 + 低 + 需复核，不硬猜")},
     {"id": "TARGETED_REVIEW_STAGE3_V3_1", "name": "Stage3 定向审核（60 条·最终批次 V3_1）", "type": "TARGETED",
      "manifest": os.path.join(DATA_ROOT, "TARGETED_REVIEW_STAGE3_V3_1.json"),
      "table": "targeted_human_review_v1",

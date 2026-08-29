@@ -94,3 +94,76 @@ def test_holdout_v2_neardup_audit():
     assert nd["vs_all_seen_dev_holdout1"].get("NEAR", 0) == 0
     assert nd["internal"].get("EXACT", 0) == 0
     assert nd["internal"].get("NEAR", 0) == 0
+
+
+def test_holdout_v2_manifest_unchanged():
+    """STEP 2：Manifest 内容未变化（provenance 修复不得重新挑题）。"""
+    m = json.load(open(os.path.join(DATA_ROOT, "FRESH_HOLDOUT_V2_MANIFEST_LOCK.json"),
+                       encoding="utf-8"))
+    assert m["manifest_sha256"] == "27f751ed402f81e2c3477341ad562218f2b67cf1902c764d5735397767d9e64b"
+    assert len(m["strata"]) == 30
+
+
+def test_bundle_v2_lock_provenance_fixed():
+    """STEP 0/1：provenance 修复 —— inference commit = 813fc5a（含 People YOLO NO 修复）。"""
+    lock = json.load(open(os.path.join(DATA_ROOT, "VISION_MODEL_BUNDLE_V2_LOCK.json"),
+                          encoding="utf-8"))
+    assert lock["inference_git_commit"].startswith("813fc5a")
+    assert lock["packaging_commit"] == "813fc5a"
+    assert lock["bundle_lock_sha256"] == "a87d31246066bf8c6b0b1410d7e0b3598d626dfd2163274de5b1a77ef3871852"
+    assert len(lock["bundle_lock_sha256"]) == 64
+    assert "supersedes" in lock
+
+
+def test_holdout_v2_prediction_lock():
+    """STEP 8-10：prediction lock 状态机。"""
+    pl = json.load(open(os.path.join(DATA_ROOT, "FRESH_HOLDOUT_V2_PREDICTION_LOCK.json"),
+                        encoding="utf-8"))
+    assert len(pl["predictions"]) == 30
+    assert pl["state"]["AI_PREDICTION_COUNT"] == 30
+    assert pl["state"]["PREDICTION_LOCKED"] is True
+    assert pl["state"]["DO_NOT_REPREDICT"] is True
+    assert pl["state"]["DO_NOT_TRAIN"] is True
+    assert pl["state"]["DO_NOT_CALIBRATE"] is True
+    assert pl["state"]["HUMAN_REVIEW_STARTED"] is False
+    assert len(pl["prediction_sha256"]) == 64
+    assert pl["bundle_lock_sha256"] == "a87d31246066bf8c6b0b1410d7e0b3598d626dfd2163274de5b1a77ef3871852"
+
+
+def test_holdout_v2_human_truth_zero():
+    """STEP 3：AI 考试前 Human Truth 必须为 0。"""
+    import sqlite3
+    m = json.load(open(os.path.join(DATA_ROOT, "FRESH_HOLDOUT_V2_MANIFEST_LOCK.json"),
+                       encoding="utf-8"))
+    sids = [s["segment_id"] for s in m["strata"]]
+    conn = sqlite3.connect("file:" + os.path.join(
+        DATA_ROOT, "database", "materials.db").replace("\\", "/") + "?mode=ro", uri=True)
+    ph = ",".join("?" * len(sids))
+    n = conn.execute(f"SELECT COUNT(*) FROM fresh_holdout_human_review_v1 WHERE segment_id IN ({ph})",
+                     sids).fetchone()[0]
+    conn.close()
+    assert n == 0
+
+
+def test_people_invariant_no_fallback():
+    """STEP 6：prediction 中 NORMAL NO 不 fallback。"""
+    pred = json.load(open(os.path.join(DATA_ROOT, "HOLDOUT_V2_AI_PREDICTIONS_V1.json"),
+                          encoding="utf-8"))
+    violations = 0
+    for r in pred["results"]:
+        pe = r["raw_provider_evidence"].get("people", {})
+        if pe.get("provider") == "yolo" and pe.get("fallback_used") is True:
+            violations += 1
+    assert violations == 0
+
+
+def test_semantic_action_no_claim_protected():
+    """STEP 7：NO_CLAIM（OPEN_CABINET/RETRACT）不得出现在 routed prediction。"""
+    pred = json.load(open(os.path.join(DATA_ROOT, "HOLDOUT_V2_AI_PREDICTIONS_V1.json"),
+                          encoding="utf-8"))
+    for r in pred["results"]:
+        seq = r["final_routed_prediction"].get("action_sequence", [])
+        assert "OPEN_CABINET" not in seq
+        assert "RETRACT" not in seq
+        assert "OPERATE_SOCKET" not in seq
+        assert "OPEN_SINK_COVER" not in seq

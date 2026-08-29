@@ -163,12 +163,35 @@ def main():
     }
     fields["semantic_action"]["action_router"] = action_router
 
-    # ---- Bundle V2 Lock（STEP 14-16）----
-    git_commit = "c4ff7e5b866b6fd2203b78a9d5fe8c4aeb969407"  # Stage3 MINI18 POST-REVIEW 提交
+    # ---- Bundle V2 Lock（STEP 14-16 + PROVENANCE FIX）----
+    # Git 证据：People NORMAL_YOLO_NO 修复（ran/合法NO）仅在 813fc5a 存在；
+    # c4ff7e5 仍为旧 fallback 逻辑（if hits: → SigLIP fallback）。
+    # 情况 B → inference_git_commit 必须 = 813fc5a。
+    INFERENCE_COMMIT = "813fc5a"  # 含最终 People 路由修复的 Inference 代码
+    # 查完整 hash
+    import subprocess
+    try:
+        full = subprocess.run(["git", "-C", r"C:\Users\admin\github\treecut-v13",
+                               "rev-parse", INFERENCE_COMMIT],
+                              capture_output=True, text=True, timeout=10).stdout.strip()
+    except Exception:
+        full = INFERENCE_COMMIT
+    git_commit = full or INFERENCE_COMMIT
+    packaging_commit = "813fc5a"  # Final Consolidation 冻结/打包提交
+    # 若 packaging 与 inference 相同，记录差异说明
+    provenance_note = ("inference_git_commit 与 packaging_commit 均指向 813fc5a："
+                       "People YOLO NO 修复、SemanticActionRouterV2、Bundle Lock 全部在该提交冻结；"
+                       "旧 Lock（01b7afa9）记录 c4ff7e5 为 provenance 错误（该提交仍是旧 fallback 逻辑），"
+                       "已 SUPERSEDED_PROVENANCE_LOCK")
     lock = {
         "bundle_id": "VISION_MODEL_BUNDLE_V2",
         "created_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "git_code_commit": git_commit,
+        "inference_git_commit": git_commit,
+        "packaging_commit": packaging_commit,
+        "evaluation_commit": packaging_commit,
+        "provenance_note": provenance_note,
+        "supersedes": "VISION_MODEL_BUNDLE_V2_LOCK（旧 sha 01b7afa9... 标 SUPERSEDED_PROVENANCE_LOCK，未删除）",
         "stage3_dev_snapshot_hash": snapshot_sha,
         "dictionary_version": "ANNOTATION_DICTIONARY_V2_1",
         "stage3_status": "COMPLETE",

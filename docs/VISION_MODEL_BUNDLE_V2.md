@@ -1,8 +1,8 @@
 # VISION_MODEL_BUNDLE_V2
 
-> bundle_id: VISION_MODEL_BUNDLE_V2 · created: 2026-08-29 10:49 · git: c4ff7e5b866b6fd2203b78a9d5fe8c4aeb969407
-> bundle_lock_sha256: `01b7afa9b75986c53bf871005b47f3f3e4e565b2c22c086c5065164d7187aec9`
-> stage3_dev_snapshot_hash: `f4d2a8f594175b4eef533734a0f5261be20dee6909961c01bc1a11bf240cdfd2`
+> bundle_id: VISION_MODEL_BUNDLE_V2 · created: 2026-08-29 11:01 · git: 813fc5aa578dee55ba0cac8c61d5092859bd555a
+> bundle_lock_sha256: `a87d31246066bf8c6b0b1410d7e0b3598d626dfd2163274de5b1a77ef3871852`
+> stage3_dev_snapshot_hash: `59b6d52777a5ec7f37094953860b32f05bae2e3bb9f8a866a802d8c015932e29`
 
 ## 9 字段状态
 
