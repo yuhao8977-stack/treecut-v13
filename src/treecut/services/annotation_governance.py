@@ -329,6 +329,7 @@ class AnnotationService:
 
         只复核 needs/values/evidence/conflict。
         Human supported truth = clearly_*；possible_* 仅报告不计 SUPPORTED TP。
+        注：V2b 已被 V3 取代（V2 = UI_CONTAMINATED），本方法保留供历史/诊断。
         """
         conn = sqlite3.connect(str(self.db_path), timeout=30)
         try:
@@ -360,6 +361,44 @@ class AnnotationService:
                  evidence_sufficiency, conflict_observed,
                  review_confidence, review_duration_seconds,
                  review_status, comment, operator, time.time()))
+            conn.commit()
+            return int(cur.lastrowid)
+        finally:
+            conn.close()
+
+    def save_business_cognition_calibration_v3(
+            self, segment_id: str, label_states: dict,
+            evidence_sufficiency: str, conflict_observed: str, conflict_type: str,
+            review_confidence: str, review_duration_seconds: float,
+            review_status: str, comment: str = "", operator: str = "") -> int:
+        """V3 校准保存 → stage2_business_cognition_calibration_v3（单状态 10 标签）。
+
+        一致性：10 标签每恰一状态（CLEARLY/POSSIBLE/NOT_SUPPORTED/UNKNOWN），
+        数据库层禁止同 label 同时进入 CLEARLY 与 POSSIBLE（label_states 为 dict 天然互斥）。
+        """
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            conn.execute(
+                "CREATE TABLE IF NOT EXISTS stage2_business_cognition_calibration_v3("
+                "segment_id TEXT PRIMARY KEY,"
+                "label_states TEXT, evidence_sufficiency TEXT,"
+                "conflict_observed TEXT, conflict_type TEXT,"
+                "review_confidence TEXT, review_duration_seconds REAL,"
+                "review_status TEXT, comment TEXT, operator TEXT,"
+                "schema_version TEXT, created_at REAL)")
+            cur = conn.execute(
+                "INSERT OR REPLACE INTO stage2_business_cognition_calibration_v3("
+                "segment_id,label_states,evidence_sufficiency,"
+                "conflict_observed,conflict_type,"
+                "review_confidence,review_duration_seconds,"
+                "review_status,comment,operator,schema_version,created_at) "
+                "VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
+                (segment_id,
+                 json.dumps(label_states, ensure_ascii=False, sort_keys=True),
+                 evidence_sufficiency, conflict_observed, conflict_type,
+                 review_confidence, review_duration_seconds,
+                 review_status, comment, operator,
+                 "CALIBRATION_V3", time.time()))
             conn.commit()
             return int(cur.lastrowid)
         finally:

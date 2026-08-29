@@ -1284,5 +1284,233 @@ def main():
     app.mainloop()
 
 
+# ---------------------------------------------------------------------------
+# Human Calibration V3 — 单状态 10 标签校准表单
+# 只审引擎实际可输出的 10 个标签；每标签严格单状态（循环按钮）。
+# ---------------------------------------------------------------------------
+
+V3_STATE_CN = {
+    "NOT_SUPPORTED": "不支持",
+    "CLEARLY_SUPPORTED": "明确支持",
+    "POSSIBLE_BUT_INSUFFICIENT": "可能但不足",
+    "UNKNOWN": "无法判断",
+}
+_V3_STATE_CYCLE = ["NOT_SUPPORTED", "CLEARLY_SUPPORTED",
+                   "POSSIBLE_BUT_INSUFFICIENT", "UNKNOWN"]
+
+
+class _CalibrationV3Form(tk.Frame):
+    """V3 校准表单：10 标签 × 单状态（循环按钮），每标签唯一状态。
+
+    无默认 evidence/confidence（未选禁止保存）；联动 warning 非阻塞。
+    """
+
+    def __init__(self, master, on_save, conf_var=None, status_var=None, taxonomy=None):
+        super().__init__(master)
+        self.on_save = on_save
+        self.conf_var = conf_var
+        self.status_var = status_var
+        self.tax = taxonomy or {}
+        self.vars = {}
+        self.state_btns = {}   # label -> tk.Label（可点击状态显示）
+        self._build()
+
+    def _state_cycle(self, label_key):
+        cur = self.vars[label_key].get()
+        nxt = _V3_STATE_CYCLE[(_V3_STATE_CYCLE.index(cur) + 1) % len(_V3_STATE_CYCLE)]
+        self.vars[label_key].set(nxt)
+        self.state_btns[label_key].config(
+            text=V3_STATE_CN[nxt], bg=self._state_color(nxt))
+        return nxt
+
+    @staticmethod
+    def _state_color(state):
+        return {"CLEARLY_SUPPORTED": "#c8e6c9", "POSSIBLE_BUT_INSUFFICIENT": "#fff9c4",
+                "NOT_SUPPORTED": "#f5f5f5", "UNKNOWN": "#eceff1"}.get(state, "#f5f5f5")
+
+    def _label_row(self, parent, row, label_id, label_cn):
+        tk.Label(parent, text=f"{label_cn}（{label_id}）", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=row, column=0, sticky=tk.W, pady=2)
+        var = tk.StringVar(value="NOT_SUPPORTED")  # 默认 NOT_SUPPORTED
+        self.vars[label_id] = var
+        btn = tk.Label(parent, text=V3_STATE_CN["NOT_SUPPORTED"], bg=self._state_color("NOT_SUPPORTED"),
+                       relief="ridge", width=14, font=("Microsoft YaHei", 9, "bold"),
+                       cursor="hand2")
+        btn.grid(row=row, column=1, sticky=tk.W, padx=6)
+        btn.bind("<Button-1>", lambda _e, k=label_id: self._state_cycle(k))
+        self.state_btns[label_id] = btn
+        return var
+
+    def _build(self):
+        canvas = tk.Canvas(self, highlightthickness=0, bg="#f0f0f0")
+        vsb = ttk.Scrollbar(self, orient="vertical", command=canvas.yview)
+        inner = tk.Frame(canvas)
+        inner_id = canvas.create_window((0, 0), window=inner, anchor="nw")
+        canvas.configure(yscrollcommand=vsb.set)
+        canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        vsb.pack(side=tk.RIGHT, fill=tk.Y)
+        inner.bind("<Configure>",
+                   lambda _e: canvas.configure(scrollregion=canvas.bbox("all")))
+        canvas.bind("<Configure>",
+                    lambda e: canvas.itemconfigure(inner_id, width=e.width - 8))
+        form = ttk.Frame(inner)
+        form.pack(fill=tk.BOTH, expand=True, padx=10, pady=6)
+
+        r = 0
+        # 顶部：四态定义（Gate §6）
+        tk.Label(form, text="状态定义（点击标签循环切换）：", bg="#fff8e1", anchor=tk.W,
+                 font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.W, pady=(2, 2)); r += 1
+        for st, desc in (("CLEARLY_SUPPORTED", "仅根据当前视频和可靠证据，这个业务意义已经被明确证明。"),
+                         ("POSSIBLE_BUT_INSUFFICIENT", "这个方向可能成立，但当前镜头本身不足以证明。"),
+                         ("NOT_SUPPORTED", "当前视频不支持这个业务意义。"),
+                         ("UNKNOWN", "信息不足，我无法可靠判断。")):
+            tk.Label(form, text=f"· {V3_STATE_CN[st]}：{desc}", bg="#fff8e1", anchor=tk.W,
+                     wraplength=520, font=("Microsoft YaHei", 9)).grid(
+                row=r, column=0, columnspan=2, sticky=tk.W); r += 1
+
+        # 用户需求 5 项
+        tk.Label(form, text="【用户需求】（当前引擎可输出的 5 类）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(8, 2)); r += 1
+        for n in self.tax.get("user_needs", []):
+            self._label_row(form, r, n["id"], n["cn"]); r += 1
+
+        # 商业价值 5 项
+        tk.Label(form, text="【商业价值】（当前引擎可输出的 5 类）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(8, 2)); r += 1
+        for v in self.tax.get("business_values", []):
+            self._label_row(form, r, v["id"], v["cn"]); r += 1
+
+        # 证据充分度（无默认，必选）
+        tk.Label(form, text="证据充分度 *（必选，无默认）", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, sticky=tk.W, pady=(8, 2))
+        self.vars["evidence_sufficiency"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["evidence_sufficiency"],
+                     values=("SUFFICIENT", "PARTIAL", "INSUFFICIENT", "UNKNOWN"),
+                     width=14, state="readonly", font=("Microsoft YaHei", 10)).grid(
+            row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        # 冲突（无默认，必选）
+        tk.Label(form, text="证据冲突 *（必选，无默认）", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, sticky=tk.W, pady=(8, 2))
+        self.vars["conflict_observed"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["conflict_observed"],
+                     values=("YES", "NO", "UNKNOWN"), width=10, state="readonly",
+                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        # 冲突类型（YES 时可选）
+        tk.Label(form, text="冲突类型（冲突=YES 时可选）", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.W, pady=2)
+        self.vars["conflict_type"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["conflict_type"],
+                     values=("SCENE_CONTEXT", "ASR_CONTEXT", "MATERIAL", "OTHER"),
+                     width=14, state="readonly", font=("Microsoft YaHei", 10)).grid(
+            row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        # 把握度（无默认，必选）
+        tk.Label(form, text="本次复核把握度 *（必选，无默认；低=完全合法）", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, sticky=tk.W, pady=(8, 2))
+        self.vars["review_confidence"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["review_confidence"],
+                     values=("HIGH", "MEDIUM", "LOW"), width=10, state="readonly",
+                     font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        # 备注
+        tk.Label(form, text="备注（可选）", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.NW, pady=3)
+        self.vars["comment"] = tk.StringVar()
+        tk.Entry(form, textvariable=self.vars["comment"], width=46,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        tk.Label(form, text="* 人工置信度 / 审核状态 在顶部工具栏选择（必选）",
+                 bg="#f0f0f0", fg="#b00000", font=("Microsoft YaHei", 9, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.W, pady=(12, 2))
+
+    # ---------------- 收集 / 校验 ----------------
+    LABEL_KEYS = {"STORAGE", "CHARGING_POWER", "GUEST_CAPACITY", "DINING", "OFFICE",
+                  "STORAGE_EFFICIENCY", "POWER_CONVENIENCE", "FLEXIBLE_CAPACITY",
+                  "DINING_CONVENIENCE", "WORK_FROM_HOME"}
+
+    def collect(self) -> dict:
+        labels = {}
+        for k, v in self.vars.items():
+            if k in self.LABEL_KEYS:
+                labels[k] = v.get() or "NOT_SUPPORTED"
+        conf_raw = self.conf_var.get() if self.conf_var is not None else ""
+        status_raw = self.status_var.get() if self.status_var is not None else ""
+        return {
+            "label_states": labels,
+            "evidence_sufficiency": self.vars.get("evidence_sufficiency").get() or "",
+            "conflict_observed": self.vars.get("conflict_observed").get() or "",
+            "conflict_type": self.vars.get("conflict_type").get() or "",
+            "review_confidence": self.vars.get("review_confidence").get() or "",
+            "comment": self.vars.get("comment").get() or "",
+            "human_confidence": {"高": "HIGH", "中": "MEDIUM", "低": "LOW"}.get(conf_raw, ""),
+            "review_status": {"已审核": "REVIEWED", "需复核": "NEEDS_SECOND_REVIEW",
+                              "金标准": "GOLD", "排除": "EXCLUDED"}.get(status_raw, ""),
+        }
+
+    def reset(self):
+        for k, v in self.vars.items():
+            if k in self.LABEL_KEYS:
+                v.set("NOT_SUPPORTED")
+                self.state_btns[k].config(text=V3_STATE_CN["NOT_SUPPORTED"],
+                                          bg=self._state_color("NOT_SUPPORTED"))
+            else:
+                v.set("")
+        if self.conf_var is not None:
+            self.conf_var.set("")
+        if self.status_var is not None:
+            self.status_var.set("")
+
+
+def validate_calibration_v3(values: dict) -> tuple[bool, str, list]:
+    """V3 校验：10 标签每恰一状态 + evidence/confidence 必选；联动 warning（非阻塞）。
+
+    返回 (是否通过, 错误信息, warnings)。
+    """
+    labels = values.get("label_states", {})
+    # 必须恰好 10 标签，每标签一个合法状态
+    if len(labels) != 10:
+        return False, f"标签数应为 10，实际 {len(labels)}", []
+    valid = {"CLEARLY_SUPPORTED", "POSSIBLE_BUT_INSUFFICIENT", "NOT_SUPPORTED", "UNKNOWN"}
+    for k, v in labels.items():
+        if v not in valid:
+            return False, f"标签 {k} 状态非法: {v}", []
+    # evidence / confidence 必选
+    ev = (values.get("evidence_sufficiency") or "").strip().upper()
+    if ev not in ("SUFFICIENT", "PARTIAL", "INSUFFICIENT", "UNKNOWN"):
+        return False, "证据充分度未选择（必选，无默认）", []
+    rc = (values.get("review_confidence") or "").strip().upper()
+    if rc not in ("HIGH", "MEDIUM", "LOW"):
+        return False, "本次复核把握度未选择（必选，无默认）", []
+    cf = (values.get("conflict_observed") or "").strip().upper()
+    if cf not in ("YES", "NO", "UNKNOWN"):
+        return False, "证据冲突未选择（必选，无默认）", []
+    # 人工置信度/状态（顶部）
+    hc = (values.get("human_confidence") or "").strip().upper()
+    if hc not in ("HIGH", "MEDIUM", "LOW"):
+        return False, "人工置信度未选择（顶部工具栏）", []
+    rs = (values.get("review_status") or "").strip().upper()
+    if rs not in ("REVIEWED", "NEEDS_SECOND_REVIEW", "GOLD", "EXCLUDED"):
+        return False, "审核状态未选择（顶部工具栏）", []
+    # 联动 warning（非阻塞）
+    warnings = []
+    n_clearly = sum(1 for v in labels.values() if v == "CLEARLY_SUPPORTED")
+    n_possible = sum(1 for v in labels.values() if v == "POSSIBLE_BUT_INSUFFICIENT")
+    if ev == "INSUFFICIENT" and n_clearly > 0:
+        warnings.append("你将证据标为不足，但同时标记了明确支持。请确认是否符合你的判断。")
+    if n_clearly > 6:
+        warnings.append("当前选择了较多明确支持标签（%d/10），请确认这些由该镜头本身直接证明，而不是仅仅可以联想到。" % n_clearly)
+    if n_possible > 5:
+        warnings.append("可能相关标签较多（%d），请确认你是在判断当前镜头，而不是整个产品/行业可能性。" % n_possible)
+    return True, "", warnings
+
+
 if __name__ == "__main__":
     main()

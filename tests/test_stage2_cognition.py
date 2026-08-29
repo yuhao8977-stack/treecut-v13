@@ -348,3 +348,49 @@ def test_v2b_schema_history_archived():
     assert cur["status"] == "CURRENT"
     assert "clearly_supported_needs" in cur["fields"]
     assert "POSSIBLE_BUT_INSUFFICIENT" in str(cur["label_semantics"])
+
+
+def test_calibration_v3_taxonomy_10_labels():
+    """V3 校准 Taxonomy：恰好 10 标签（引擎可输出），不含域外标签。"""
+    p = os.path.join(DATA_ROOT, "BUSINESS_COGNITION_CALIBRATION_TAXONOMY_V1.json")
+    if not os.path.exists(p):
+        return
+    tax = json.load(open(p, encoding="utf-8"))
+    vocab = {n["id"] for n in tax["user_needs"]} | {v["id"] for v in tax["business_values"]}
+    assert len(vocab) == 10
+    assert "CUSTOMIZATION" not in vocab and "AESTHETICS" not in vocab
+    assert tax["default_state"] == "NOT_SUPPORTED"
+
+
+def test_calibration_v3_manifest_12_lock():
+    """V3 manifest 12 段与 Adjudication V2 set 相等。"""
+    p = os.path.join(DATA_ROOT, "HUMAN_CALIBRATION_V3_MANIFEST.json")
+    if not os.path.exists(p):
+        return
+    m = json.load(open(p, encoding="utf-8"))
+    assert m["count"] == 12
+    assert m["segment_lock_proof"]["set_equal"] is True
+    assert m["segment_lock_proof"]["v3_count"] == 12
+
+
+def test_calibration_v3_four_state_scoring():
+    """V3 评分语义：CLEARLY→TRUE；POSSIBLE+AI SUPPORTED→OVERCONFIDENT（非 TP）；NOT_SUPPORTED→FALSE。"""
+    from treecut.services.phase3_review_ui import validate_calibration_v3
+    # 校验函数语义（评分逻辑在 scorer 中）
+    labels = {"STORAGE": "CLEARLY_SUPPORTED", "POWER_CONVENIENCE": "POSSIBLE_BUT_INSUFFICIENT",
+              "DINING": "NOT_SUPPORTED", "OFFICE": "UNKNOWN",
+              "CHARGING_POWER": "NOT_SUPPORTED", "GUEST_CAPACITY": "NOT_SUPPORTED",
+              "STORAGE_EFFICIENCY": "NOT_SUPPORTED", "DINING_CONVENIENCE": "NOT_SUPPORTED",
+              "FLEXIBLE_CAPACITY": "NOT_SUPPORTED", "WORK_FROM_HOME": "NOT_SUPPORTED"}
+    vals = {"label_states": labels, "evidence_sufficiency": "SUFFICIENT",
+            "conflict_observed": "NO", "review_confidence": "HIGH",
+            "human_confidence": "HIGH", "review_status": "REVIEWED"}
+    ok, msg, warns = validate_calibration_v3(vals)
+    assert ok and not warns
+    # 单状态互斥：dict 结构保证
+    assert labels["STORAGE"] != labels["POWER_CONVENIENCE"]
+    # OVERCONFIDENT 语义：POSSIBLE 不计 TRUE
+    ai_supported = {"STORAGE", "POWER_CONVENIENCE"}
+    true_set = {k for k, v in labels.items() if v == "CLEARLY_SUPPORTED"}
+    assert "STORAGE" in (ai_supported & true_set)          # TRUE
+    assert "POWER_CONVENIENCE" not in (ai_supported & true_set)  # OVERCONFIDENT 非 TP

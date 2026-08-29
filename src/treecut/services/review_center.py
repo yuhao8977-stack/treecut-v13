@@ -28,8 +28,8 @@ from tkinter import messagebox, ttk
 
 from treecut.services.phase3_review_ui import (
     FFMPEG, FIELD_CN, GROUPS, PlaybackController, _V21Form, _BusinessCognitionReviewForm,
-    _AdjudicationV2bForm, validate_business_cognition, validate_adjudication_v2b,
-    cn, en, validate_v21,
+    _AdjudicationV2bForm, _CalibrationV3Form, validate_business_cognition,
+    validate_adjudication_v2b, validate_calibration_v3, cn, en, validate_v21,
 )
 from treecut.services.schema_v2 import DICTIONARY_VERSION_V2_1
 
@@ -119,6 +119,20 @@ TASKS = [
               "· 其余不选 = 未主张；看不准 → 整字段选『无法判断』\n"
               "· 系统不显示第一次的选择 / AI 答案 / 旧评分\n"
               "· 每条选『把握度』：高/中/低（低=不确定，允许，不需硬选）")},
+    {"id": "HUMAN_CALIBRATION_V3", "name": "Stage2 Human Calibration V3（12 条·10 标签单状态校准）", "type": "BUSINESS_COGNITION",
+     "manifest": os.path.join(DATA_ROOT, "HUMAN_CALIBRATION_V3_MANIFEST.json"),
+     "table": "stage2_business_cognition_calibration_v3",
+     "calibration_v3": True,
+     "blind": True,                   # 不显示 AI/V1/V2/旧评分/sampling class/入选原因
+     "show_frozen_evidence": True,
+     "hide_sampling_class": True,
+     "hint": ("Stage2 Human Calibration V3（12 条·只校准当前引擎可输出的 10 个标签）。\n"
+              "目标：AI 当前会说的这 10 种业务结论，到底说得准不准。\n"
+              "· 每标签一行，点击循环切换状态：不支持 → 明确支持 → 可能但不足 → 无法判断\n"
+              "· 一个标签只能一个状态（默认『不支持』，只改真正要改的）\n"
+              "· 证据充分度 / 冲突 / 把握度 必选（无默认）\n"
+              "· 系统不显示 AI 答案 / 之前任何选择 / 旧评分\n"
+              "· 状态定义见表单顶部；低把握度完全合法")},
 ]
 
 
@@ -256,7 +270,12 @@ class ReviewTaskWindow(tk.Toplevel):
         right = ttk.Frame(paned, width=600)
         paned.add(right, weight=6)  # 注意：ttk.Panedwindow 不支持 minsize 选项（曾致 _build_review 崩溃）
         if self.task.get("type") == "BUSINESS_COGNITION":
-            if self.task.get("simplified_v2b"):
+            if self.task.get("calibration_v3"):
+                self.form = _CalibrationV3Form(right, self._save,
+                                               conf_var=self.conf_var,
+                                               status_var=self.status_var,
+                                               taxonomy=self._load_calibration_taxonomy())
+            elif self.task.get("simplified_v2b"):
                 self.form = _AdjudicationV2bForm(right, self._save,
                                                  conf_var=self.conf_var,
                                                  status_var=self.status_var,
@@ -304,6 +323,14 @@ class ReviewTaskWindow(tk.Toplevel):
     def _load_taxonomy(self):
         """固定 Human Review Taxonomy（非 AI 生成；独立文件）。"""
         p = Path(DATA_ROOT) / "BUSINESS_COGNITION_HUMAN_TAXONOMY_V1.json"
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            return None
+
+    def _load_calibration_taxonomy(self):
+        """V3 校准 Taxonomy（引擎可输出 10 标签；独立文件，非 segment AI 答案）。"""
+        p = Path(DATA_ROOT) / "BUSINESS_COGNITION_CALIBRATION_TAXONOMY_V1.json"
         try:
             return json.loads(p.read_text(encoding="utf-8"))
         except Exception:
@@ -453,6 +480,17 @@ class ReviewTaskWindow(tk.Toplevel):
                 values.get("review_confidence", ""), duration, status,
                 comment=values.get("comment", ""),
                 operator=os.environ.get("USERNAME", ""))
+        elif self.task["table"] == "stage2_business_cognition_calibration_v3":
+            duration = max(0.0, time.time() - getattr(self, "_review_start", time.time()))
+            svc.save_business_cognition_calibration_v3(
+                it["segment_id"],
+                values.get("label_states", {}),
+                values.get("evidence_sufficiency", ""),
+                values.get("conflict_observed", ""),
+                values.get("conflict_type", ""),
+                values.get("review_confidence", ""), duration, status,
+                comment=values.get("comment", ""),
+                operator=os.environ.get("USERNAME", ""))
         else:
             svc.save_v3(it["segment_id"], values,
                         values["human_confidence"], status,
@@ -463,7 +501,11 @@ class ReviewTaskWindow(tk.Toplevel):
             return
         values = self.form.collect()
         if self.task.get("type") == "BUSINESS_COGNITION":
-            if self.task.get("simplified_v2b"):
+            if self.task.get("calibration_v3"):
+                ok, msg, warnings = validate_calibration_v3(values)
+                for w in warnings:
+                    messagebox.showwarning("请确认", w)
+            elif self.task.get("simplified_v2b"):
                 ok, msg = validate_adjudication_v2b(values)
             else:
                 ok, msg = validate_business_cognition(values)
