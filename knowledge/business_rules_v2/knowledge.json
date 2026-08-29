@@ -1,0 +1,1119 @@
+{
+ "namespace": "business_rules_v2",
+ "count": 24,
+ "records": [
+  {
+   "knowledge_id": "EF001",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "EVIDENCE_POLICY",
+   "title": "Evidence Family 防重复计票",
+   "statement": "SigLIP 家族（component/function/material/product_family 等）同属一源，不得当作多票；独立来源仅按 family 计数：YOLO/SIGLIP/ASR/OCR/MOTION_ASR/HUMAN/METADATA。",
+   "structured_payload": {
+    "rule_id": "EF001",
+    "field_reliability": {
+     "people_presence": [
+      "HIGH",
+      "YOLO"
+     ],
+     "component": [
+      "MEDIUM_HIGH",
+      "SIGLIP"
+     ],
+     "function": [
+      "MEDIUM_HIGH",
+      "SIGLIP"
+     ],
+     "product_family": [
+      "MEDIUM",
+      "SIGLIP"
+     ],
+     "scene_family": [
+      "LOW",
+      "SIGLIP"
+     ],
+     "product_variant": [
+      "LOW",
+      "SIGLIP"
+     ],
+     "material": [
+      "LOW",
+      "SIGLIP"
+     ],
+     "shot_role": [
+      "LOW",
+      "SIGLIP"
+     ],
+     "action_sequence": [
+      "VERY_LOW",
+      "MOTION_ASR"
+     ],
+     "semantic_action": [
+      "VERY_LOW",
+      "MOTION_ASR"
+     ],
+     "asr_text": [
+      "MEDIUM",
+      "ASR"
+     ],
+     "ocr_text": [
+      "MEDIUM",
+      "OCR"
+     ]
+    },
+    "independent_families": [
+     "YOLO",
+     "SIGLIP",
+     "ASR",
+     "OCR",
+     "MOTION_ASR",
+     "HUMAN",
+     "METADATA"
+    ],
+    "note": "同 provider 多字段 = 1 票；≥2 family 才计为 multi-source"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "EVIDENCE_POLICY"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "EF002",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "EVIDENCE_POLICY",
+   "title": "semantic_action 永远 VERY_LOW",
+   "statement": "action_sequence/semantic_action 的 reliability 强制 VERY_LOW（Phase3 纪律）；不得单独作为功能演示/家庭聚会/操作动作的高置信证据。",
+   "structured_payload": {
+    "rule_id": "EF002",
+    "forced_reliability": "VERY_LOW",
+    "fields": [
+     "action_sequence",
+     "semantic_action"
+    ],
+    "note": "NR005 依赖此策略"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "HIGH",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "EVIDENCE_POLICY"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "CF001",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "EVIDENCE_POLICY",
+   "title": "ASR 口语 vs 视觉场景冲突",
+   "statement": "ASR 出现 客户家/家里/入户/客厅/卧室 等词而 scene=FACTORY → CONFLICTING_EVIDENCE，resolution=CUSTOMER_HOME=UNKNOWN（不强行二选一）。",
+   "structured_payload": {
+    "rule_id": "CF001",
+    "pattern": "scene=FACTORY + ASR home_words",
+    "resolution": "CUSTOMER_HOME=UNKNOWN",
+    "reason": "scene LIMITTED 且 ASR 口语不可作为场景硬证据"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "EVIDENCE_POLICY"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "CF002",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "EVIDENCE_POLICY",
+   "title": "材质弱预测 vs ASR 材质词",
+   "statement": "material 为 LOW 可靠且 ASR 出现 实木/原木/大理石 等词 → WEAK_EVIDENCE_CONFLICT，resolution=MATERIAL_CLAIM=WEAK/UNKNOWN（NR003）。",
+   "structured_payload": {
+    "rule_id": "CF002",
+    "pattern": "material reliability=LOW + ASR material_words",
+    "resolution": "MATERIAL_CLAIM=WEAK/UNKNOWN",
+    "reason": "弱材质识别不能支撑真实材质/性能断言"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "EVIDENCE_POLICY"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "SEM_001",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "SEM_001 语义映射",
+   "statement": "pattern {'component': ['EXTENDABLE_SECTION'], 'function': ['EXTENDABLE']} → claims [('USER_NEED', 'GUEST_CAPACITY'), ('BUSINESS_VALUE', 'FLEXIBLE_CAPACITY')]（SUPPORTED 级，SEGMENT_SCOPE）",
+   "structured_payload": {
+    "rule_id": "SEM_001",
+    "pattern": {
+     "component": [
+      "EXTENDABLE_SECTION"
+     ],
+     "function": [
+      "EXTENDABLE"
+     ]
+    },
+    "claims": [
+     {
+      "category": "USER_NEED",
+      "value": "GUEST_CAPACITY",
+      "status": "SUPPORTED"
+     },
+     {
+      "category": "BUSINESS_VALUE",
+      "value": "FLEXIBLE_CAPACITY",
+      "status": "SUPPORTED"
+     }
+    ],
+    "context_scope": "SEGMENT_SCOPE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "SEM_002",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "SEM_002 语义映射",
+   "statement": "pattern {'component': ['DRAWER'], 'function': ['STORAGE']} → claims [('USER_NEED', 'STORAGE'), ('BUSINESS_VALUE', 'STORAGE_EFFICIENCY')]（SUPPORTED 级，SEGMENT_SCOPE）",
+   "structured_payload": {
+    "rule_id": "SEM_002",
+    "pattern": {
+     "component": [
+      "DRAWER"
+     ],
+     "function": [
+      "STORAGE"
+     ]
+    },
+    "claims": [
+     {
+      "category": "USER_NEED",
+      "value": "STORAGE",
+      "status": "SUPPORTED"
+     },
+     {
+      "category": "BUSINESS_VALUE",
+      "value": "STORAGE_EFFICIENCY",
+      "status": "SUPPORTED"
+     }
+    ],
+    "context_scope": "SEGMENT_SCOPE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "SEM_003",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "SEM_003 语义映射",
+   "statement": "pattern {'component': ['TRACK_SOCKET'], 'function': ['POWER', 'OFFICE', 'SMALL_APPLIANCE']} → claims [('USER_NEED', 'CHARGING_POWER'), ('BUSINESS_VALUE', 'POWER_CONVENIENCE')]（SUPPORTED 级，SEGMENT_SCOPE）",
+   "structured_payload": {
+    "rule_id": "SEM_003",
+    "pattern": {
+     "component": [
+      "TRACK_SOCKET"
+     ],
+     "function": [
+      "POWER",
+      "OFFICE",
+      "SMALL_APPLIANCE"
+     ]
+    },
+    "claims": [
+     {
+      "category": "USER_NEED",
+      "value": "CHARGING_POWER",
+      "status": "SUPPORTED"
+     },
+     {
+      "category": "BUSINESS_VALUE",
+      "value": "POWER_CONVENIENCE",
+      "status": "SUPPORTED"
+     }
+    ],
+    "context_scope": "SEGMENT_SCOPE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "SEM_004",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "SEM_004 语义映射",
+   "statement": "pattern {'component': ['TRACK_SOCKET']} → claims [('BUSINESS_VALUE', 'POWER_CONVENIENCE')]（SUPPORTED 级，SEGMENT_SCOPE）",
+   "structured_payload": {
+    "rule_id": "SEM_004",
+    "pattern": {
+     "component": [
+      "TRACK_SOCKET"
+     ]
+    },
+    "claims": [
+     {
+      "category": "BUSINESS_VALUE",
+      "value": "POWER_CONVENIENCE",
+      "status": "SUPPORTED"
+     }
+    ],
+    "context_scope": "SEGMENT_SCOPE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "SEM_005",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "SEM_005 语义映射",
+   "statement": "pattern {'component': ['COUNTERTOP'], 'function': ['DINING']} → claims [('USER_NEED', 'DINING'), ('BUSINESS_VALUE', 'DINING_CONVENIENCE')]（SUPPORTED 级，SEGMENT_SCOPE）",
+   "structured_payload": {
+    "rule_id": "SEM_005",
+    "pattern": {
+     "component": [
+      "COUNTERTOP"
+     ],
+     "function": [
+      "DINING"
+     ]
+    },
+    "claims": [
+     {
+      "category": "USER_NEED",
+      "value": "DINING",
+      "status": "SUPPORTED"
+     },
+     {
+      "category": "BUSINESS_VALUE",
+      "value": "DINING_CONVENIENCE",
+      "status": "SUPPORTED"
+     }
+    ],
+    "context_scope": "SEGMENT_SCOPE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "SEM_006",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "SEM_006 语义映射",
+   "statement": "pattern {'component': ['CABINET_DOOR'], 'function': ['STORAGE']} → claims [('USER_NEED', 'STORAGE'), ('BUSINESS_VALUE', 'STORAGE_EFFICIENCY')]（SUPPORTED 级，SEGMENT_SCOPE）",
+   "structured_payload": {
+    "rule_id": "SEM_006",
+    "pattern": {
+     "component": [
+      "CABINET_DOOR"
+     ],
+     "function": [
+      "STORAGE"
+     ]
+    },
+    "claims": [
+     {
+      "category": "USER_NEED",
+      "value": "STORAGE",
+      "status": "SUPPORTED"
+     },
+     {
+      "category": "BUSINESS_VALUE",
+      "value": "STORAGE_EFFICIENCY",
+      "status": "SUPPORTED"
+     }
+    ],
+    "context_scope": "SEGMENT_SCOPE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "SEM_007",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "BUSINESS_RULE",
+   "title": "SEM_007 语义映射",
+   "statement": "pattern {'function': ['OFFICE']} → claims [('USER_NEED', 'OFFICE'), ('BUSINESS_VALUE', 'WORK_FROM_HOME')]（SUPPORTED 级，SEGMENT_SCOPE）",
+   "structured_payload": {
+    "rule_id": "SEM_007",
+    "pattern": {
+     "function": [
+      "OFFICE"
+     ]
+    },
+    "claims": [
+     {
+      "category": "USER_NEED",
+      "value": "OFFICE",
+      "status": "SUPPORTED"
+     },
+     {
+      "category": "BUSINESS_VALUE",
+      "value": "WORK_FROM_HOME",
+      "status": "SUPPORTED"
+     }
+    ],
+    "context_scope": "SEGMENT_SCOPE"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "BUSINESS_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "NR001",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "NEGATIVE_RULE",
+   "title": "NR001 负规则（V2）",
+   "statement": "cond {'component': ['TRACK_SOCKET']} → block ['OPERATE_SOCKET']；命中则 claim 置 BLOCKED 并移除",
+   "structured_payload": {
+    "rule_id": "NR001",
+    "cond": {
+     "component": [
+      "TRACK_SOCKET"
+     ]
+    },
+    "block": [
+     "OPERATE_SOCKET"
+    ],
+    "reason": "插座存在 ≠ 正在插电/操作"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "NEGATIVE_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "NR002",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "NEGATIVE_RULE",
+   "title": "NR002 负规则（V2）",
+   "statement": "cond {'scene_family': ['FACTORY']} → block ['REAL_CUSTOMER_CASE']；命中则 claim 置 BLOCKED 并移除",
+   "structured_payload": {
+    "rule_id": "NR002",
+    "cond": {
+     "scene_family": [
+      "FACTORY"
+     ]
+    },
+    "block": [
+     "REAL_CUSTOMER_CASE"
+    ],
+    "reason": "工厂场景 ≠ 客户家案例"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "NEGATIVE_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "NR004",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "NEGATIVE_RULE",
+   "title": "NR004 负规则（V2）",
+   "statement": "cond {'people_presence': ['YES']} → block ['FAMILY_GATHERING']；命中则 claim 置 BLOCKED 并移除",
+   "structured_payload": {
+    "rule_id": "NR004",
+    "cond": {
+     "people_presence": [
+      "YES"
+     ]
+    },
+    "block": [
+     "FAMILY_GATHERING"
+    ],
+    "reason": "有人 ≠ 家庭/聚会关系"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "NEGATIVE_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "NR005",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "NEGATIVE_RULE",
+   "title": "NR005 负规则（V2）",
+   "statement": "cond {'semantic_action_reliability': ['VERY_LOW']} → block ['FUNCTION_PROOF', 'OPERATE_SOCKET', 'FAMILY_GATHERING']；命中则 claim 置 BLOCKED 并移除",
+   "structured_payload": {
+    "rule_id": "NR005",
+    "cond": {
+     "semantic_action_reliability": [
+      "VERY_LOW"
+     ]
+    },
+    "block": [
+     "FUNCTION_PROOF",
+     "OPERATE_SOCKET",
+     "FAMILY_GATHERING"
+    ],
+    "reason": "semantic_action 不能单独触发"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "NEGATIVE_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "THEME_001",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "CONTENT_STRATEGY_RULE",
+   "title": "THEME_001 母题亲和",
+   "statement": "needs ['SPACE_EFFICIENCY', 'GUEST_CAPACITY', 'SPACE_DIVISION'] → mother_theme_affinity SPACE_SOLUTION（MEDIUM 候选，非 primary）",
+   "structured_payload": {
+    "rule_id": "THEME_001",
+    "needs": [
+     "SPACE_EFFICIENCY",
+     "GUEST_CAPACITY",
+     "SPACE_DIVISION"
+    ],
+    "theme": "SPACE_SOLUTION",
+    "affinity": "MEDIUM",
+    "scope": "CANDIDATE_ONLY"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "CONTENT_STRATEGY_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "THEME_002",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "CONTENT_STRATEGY_RULE",
+   "title": "THEME_002 母题亲和",
+   "statement": "needs ['FAMILY_GATHERING', 'DINING', 'GUEST_CAPACITY'] → mother_theme_affinity FAMILY_SCENE（MEDIUM 候选，非 primary）",
+   "structured_payload": {
+    "rule_id": "THEME_002",
+    "needs": [
+     "FAMILY_GATHERING",
+     "DINING",
+     "GUEST_CAPACITY"
+    ],
+    "theme": "FAMILY_SCENE",
+    "affinity": "MEDIUM",
+    "scope": "CANDIDATE_ONLY"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "CONTENT_STRATEGY_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "THEME_003",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "CONTENT_STRATEGY_RULE",
+   "title": "THEME_003 母题亲和",
+   "statement": "needs ['DECISION_CONFIDENCE', 'INSTALLATION_CONFIDENCE', 'DURABILITY'] → mother_theme_affinity DECISION_AVOID_PIT（MEDIUM 候选，非 primary）",
+   "structured_payload": {
+    "rule_id": "THEME_003",
+    "needs": [
+     "DECISION_CONFIDENCE",
+     "INSTALLATION_CONFIDENCE",
+     "DURABILITY"
+    ],
+    "theme": "DECISION_AVOID_PIT",
+    "affinity": "MEDIUM",
+    "scope": "CANDIDATE_ONLY"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "CONTENT_STRATEGY_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "THEME_004",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "CONTENT_STRATEGY_RULE",
+   "title": "THEME_004 母题亲和",
+   "statement": "needs ['AESTHETICS', 'STYLE_MATCH'] → mother_theme_affinity AESTHETIC_STYLE（MEDIUM 候选，非 primary）",
+   "structured_payload": {
+    "rule_id": "THEME_004",
+    "needs": [
+     "AESTHETICS",
+     "STYLE_MATCH"
+    ],
+    "theme": "AESTHETIC_STYLE",
+    "affinity": "MEDIUM",
+    "scope": "CANDIDATE_ONLY"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "CONTENT_STRATEGY_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "THEME_005",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "CONTENT_STRATEGY_RULE",
+   "title": "THEME_005 母题亲和",
+   "statement": "needs ['QUALITY_TRUST', 'DURABILITY', 'CRAFT'] → mother_theme_affinity CRAFT_TRUST（MEDIUM 候选，非 primary）",
+   "structured_payload": {
+    "rule_id": "THEME_005",
+    "needs": [
+     "QUALITY_TRUST",
+     "DURABILITY",
+     "CRAFT"
+    ],
+    "theme": "CRAFT_TRUST",
+    "affinity": "MEDIUM",
+    "scope": "CANDIDATE_ONLY"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "CONTENT_STRATEGY_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "ROLE_001",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "CONTENT_STRATEGY_RULE",
+   "title": "ROLE_001 内容角色亲和",
+   "statement": "needs ['GUEST_CAPACITY', 'SPACE_EFFICIENCY', 'FAMILY_GATHERING', 'CHARGING_POWER'] → content_role_affinity CONVERSION（MEDIUM 候选，非 primary）",
+   "structured_payload": {
+    "rule_id": "ROLE_001",
+    "needs": [
+     "GUEST_CAPACITY",
+     "SPACE_EFFICIENCY",
+     "FAMILY_GATHERING",
+     "CHARGING_POWER"
+    ],
+    "role": "CONVERSION",
+    "affinity": "MEDIUM",
+    "scope": "CANDIDATE_ONLY"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "CONTENT_STRATEGY_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "ROLE_002",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "CONTENT_STRATEGY_RULE",
+   "title": "ROLE_002 内容角色亲和",
+   "statement": "needs ['DECISION_CONFIDENCE', 'STORAGE', 'DINING', 'SIZE'] → content_role_affinity SEARCH（MEDIUM 候选，非 primary）",
+   "structured_payload": {
+    "rule_id": "ROLE_002",
+    "needs": [
+     "DECISION_CONFIDENCE",
+     "STORAGE",
+     "DINING",
+     "SIZE"
+    ],
+    "role": "SEARCH",
+    "affinity": "MEDIUM",
+    "scope": "CANDIDATE_ONLY"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "CONTENT_STRATEGY_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "ROLE_003",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "CONTENT_STRATEGY_RULE",
+   "title": "ROLE_003 内容角色亲和",
+   "statement": "needs ['QUALITY_TRUST'] → content_role_affinity TRUST（MEDIUM 候选，非 primary）",
+   "structured_payload": {
+    "rule_id": "ROLE_003",
+    "needs": [
+     "QUALITY_TRUST"
+    ],
+    "role": "TRUST",
+    "affinity": "MEDIUM",
+    "scope": "CANDIDATE_ONLY"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "CONTENT_STRATEGY_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  },
+  {
+   "knowledge_id": "SF001",
+   "namespace": "business_rules_v2",
+   "knowledge_type": "CONTENT_STRATEGY_RULE",
+   "title": "Shot Function 候选",
+   "statement": "needs_values 含 STORAGE_EFFICIENCY/FLEXIBLE_CAPACITY/POWER_CONVENIENCE 且无 semantic_action → shot_function_candidates FUNCTION_PROOF（MEDIUM 候选）",
+   "structured_payload": {
+    "rule_id": "SF001",
+    "needs_vals": [
+     "STORAGE_EFFICIENCY",
+     "FLEXIBLE_CAPACITY",
+     "POWER_CONVENIENCE"
+    ],
+    "function": "FUNCTION_PROOF",
+    "affinity": "MEDIUM",
+    "scope": "CANDIDATE_ONLY"
+   },
+   "source": "USER_CURATED_STRUCTURED_KB",
+   "source_type": "internal_business_model",
+   "source_version": "1.2",
+   "confidence": "MEDIUM",
+   "status": "ACTIVE",
+   "effective_date": "2026-08-29",
+   "expires_at": null,
+   "ttl_days": null,
+   "tags": [
+    "business_rules_v2",
+    "CONTENT_STRATEGY_RULE"
+   ],
+   "related_entities": [],
+   "created_at": "2026-08-29 15:20",
+   "updated_at": null,
+   "supersedes": null,
+   "superseded_by": null,
+   "source_requirement_class": "NO_EXTERNAL_SOURCE_NEEDED",
+   "validation_status": "SYSTEM_GUARDRAIL",
+   "future_validation": null,
+   "needs_external_verification": false,
+   "section": "P4_STAGE2_BUSINESS_COGNITION_V2",
+   "review_note": "Stage2 Business Cognition 认知引擎规则冻结（V1.2 知识快照之上）"
+  }
+ ],
+ "source": "Stage2 Business Cognition V2 规则冻结（Knowledge Snapshot V1.2 之上）",
+ "guard": "SEGMENT_SCOPE 仅产出 affinity/candidates；primary 由 Script/Template/Production 决定"
+}

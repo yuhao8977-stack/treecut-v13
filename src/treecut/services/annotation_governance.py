@@ -232,6 +232,35 @@ class AnnotationService:
         finally:
             conn.close()
 
+    def save_business_cognition_review(self, segment_id: str, challenge_class: str,
+                                       judged_needs: list, judged_values: list,
+                                       conflict_observed: str, comment: str,
+                                       human_confidence: str, review_status: str,
+                                       operator: str = "") -> int:
+        """Stage 2 业务认知评审保存 → stage2_business_cognition_review_v1（blind，无 AI 信息）。"""
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            conn.execute(
+                "CREATE TABLE IF NOT EXISTS stage2_business_cognition_review_v1("
+                "segment_id TEXT PRIMARY KEY, challenge_class TEXT,"
+                "judged_needs TEXT, judged_values TEXT, conflict_observed TEXT,"
+                "comment TEXT, human_confidence TEXT, review_status TEXT,"
+                "operator TEXT, created_at REAL)")
+            cur = conn.execute(
+                "INSERT OR REPLACE INTO stage2_business_cognition_review_v1("
+                "segment_id,challenge_class,judged_needs,judged_values,conflict_observed,"
+                "comment,human_confidence,review_status,operator,created_at) "
+                "VALUES(?,?,?,?,?,?,?,?,?,?)",
+                (segment_id, challenge_class,
+                 json.dumps(judged_needs, ensure_ascii=False),
+                 json.dumps(judged_values, ensure_ascii=False),
+                 conflict_observed, comment, human_confidence, review_status,
+                 operator, time.time()))
+            conn.commit()
+            return int(cur.lastrowid)
+        finally:
+            conn.close()
+
 
 class ReviewQueueService:
     """主动学习审核队列（基础，11）。"""

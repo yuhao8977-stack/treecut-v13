@@ -788,6 +788,147 @@ class TargetedReviewV1App(_ReviewBase):
                                       operator=os.environ.get("USERNAME", ""))
 
 
+# ---------------------------------------------------------------------------
+# Stage 2 — 业务认知评审（Human Business Review 24）
+# 评审对象不是视觉标签，而是"该片段的证据是否支持某用户需求/商业价值主张"。
+# 盲审：不显示 AI claims/affinity/confidence，只给候选清单 + 冻结证据。
+# ---------------------------------------------------------------------------
+
+BUSINESS_NEED_CN = {
+    "STORAGE": "收纳", "DINING": "用餐", "OFFICE": "办公",
+    "CHARGING_POWER": "充电取电", "GUEST_CAPACITY": "待客扩容",
+    "SPACE_EFFICIENCY": "空间利用", "FAMILY_GATHERING": "家庭聚会",
+    "AESTHETICS": "美观", "DURABILITY": "耐用", "DECISION_CONFIDENCE": "决策信心",
+}
+BUSINESS_VALUE_CN = {
+    "STORAGE_EFFICIENCY": "收纳效率", "DINING_CONVENIENCE": "用餐便利",
+    "WORK_FROM_HOME": "居家办公", "POWER_CONVENIENCE": "取电便利",
+    "FLEXIBLE_CAPACITY": "灵活扩容", "QUALITY_TRUST": "品质信任",
+    "SPACE_SAVING": "省空间", "CRAFT": "工艺",
+}
+VERDICT_CN = {"SUPPORTED": "支持", "NOT_SUPPORTED": "不支持", "UNSURE": "不确定"}
+
+
+class _BusinessCognitionReviewForm(tk.Frame):
+    """业务认知评审表单：判定候选需求/价值主张是否被证据支持（blind）。
+
+    三态判定：SUPPORTED / NOT_SUPPORTED / UNSURE。
+    保存内容：judged_needs（SUPPORTED 的需求）/ judged_values / conflict_observed / comment。
+    置信度与状态由父窗口顶部固定区提供（conf_var/status_var）。
+    """
+
+    def __init__(self, master, on_save, conf_var=None, status_var=None):
+        super().__init__(master)
+        self.on_save = on_save
+        self.conf_var = conf_var
+        self.status_var = status_var
+        self.vars = {}
+        self._build()
+
+    def _build(self):
+        canvas = tk.Canvas(self, highlightthickness=0, bg="#f0f0f0")
+        vsb = ttk.Scrollbar(self, orient="vertical", command=canvas.yview)
+        inner = ttk.Frame(canvas)
+        inner_id = canvas.create_window((0, 0), window=inner, anchor="nw")
+        canvas.configure(yscrollcommand=vsb.set)
+        canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        vsb.pack(side=tk.RIGHT, fill=tk.Y)
+        inner.bind("<Configure>",
+                   lambda _e: canvas.configure(scrollregion=canvas.bbox("all")))
+        canvas.bind("<Configure>",
+                    lambda e: canvas.itemconfigure(inner_id, width=e.width - 8))
+        form = ttk.Frame(inner)
+        form.pack(fill=tk.BOTH, expand=True, padx=10, pady=6)
+
+        def verdict_row(row, label, key, options_en):
+            tk.Label(form, text=label, bg="#f0f0f0", anchor=tk.W,
+                     font=("Microsoft YaHei", 10)).grid(row=row, column=0, sticky=tk.W, pady=2)
+            var = tk.StringVar()
+            cb = ttk.Combobox(form, textvariable=var,
+                              values=[VERDICT_CN[o] for o in options_en],
+                              width=10, state="readonly", font=("Microsoft YaHei", 10))
+            cb.grid(row=row, column=1, sticky=tk.W, padx=6)
+            self.vars[key] = var
+            return var
+
+        r = 0
+        tk.Label(form, text="① 用户需求判定（该片段证据是否支持以下主张）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(6, 2)); r += 1
+        for need in sorted(BUSINESS_NEED_CN):
+            verdict_row(r, f"{BUSINESS_NEED_CN[need]}（{need}）", f"need_{need}",
+                        ("SUPPORTED", "NOT_SUPPORTED", "UNSURE")); r += 1
+
+        tk.Label(form, text="② 商业价值判定（该片段证据是否支持以下主张）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(10, 2)); r += 1
+        for val in sorted(BUSINESS_VALUE_CN):
+            verdict_row(r, f"{BUSINESS_VALUE_CN[val]}（{val}）", f"value_{val}",
+                        ("SUPPORTED", "NOT_SUPPORTED", "UNSURE")); r += 1
+
+        tk.Label(form, text="③ 证据冲突观察（视频中是否出现话语↔画面矛盾）",
+                 bg="#e8f0fe", anchor=tk.W, font=("Microsoft YaHei", 10, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.EW, pady=(10, 2)); r += 1
+        tk.Label(form, text="例如：讲解提到'家里/客户家'但画面是工厂展台；提到'实木'但画面材质存疑",
+                 bg="#f0f0f0", anchor=tk.W, font=("Microsoft YaHei", 9),
+                 foreground="#666").grid(row=r, column=0, columnspan=2, sticky=tk.W, pady=2); r += 1
+        tk.Label(form, text="冲突观察", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.W, pady=2)
+        self.vars["conflict_observed"] = tk.StringVar()
+        ttk.Combobox(form, textvariable=self.vars["conflict_observed"],
+                     values=("NONE", "SCENE_ASR_CONFLICT", "MATERIAL_WEAK_CONFLICT", "UNSURE"),
+                     width=28, state="readonly", font=("Microsoft YaHei", 10)).grid(
+            row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        tk.Label(form, text="④ 备注", bg="#f0f0f0", anchor=tk.W,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=0, sticky=tk.NW, pady=3)
+        self.vars["comment"] = tk.StringVar()
+        tk.Entry(form, textvariable=self.vars["comment"], width=46,
+                 font=("Microsoft YaHei", 10)).grid(row=r, column=1, sticky=tk.W, padx=6); r += 1
+
+        tk.Label(form, text="* 人工置信度 / 审核状态 在顶部工具栏选择（必选）",
+                 bg="#f0f0f0", fg="#b00000", font=("Microsoft YaHei", 9, "bold")).grid(
+            row=r, column=0, columnspan=2, sticky=tk.W, pady=(12, 2))
+
+    def collect(self) -> dict:
+        out = {"judged_needs": [], "judged_values": [], "conflict_observed": "",
+               "comment": (self.vars.get("comment").get() if self.vars.get("comment") else "")}
+        for k, v in self.vars.items():
+            if k.startswith("need_"):
+                if v.get() == "支持":
+                    out["judged_needs"].append(k[len("need_"):])
+            elif k.startswith("value_"):
+                if v.get() == "支持":
+                    out["judged_values"].append(k[len("value_"):])
+        out["conflict_observed"] = self.vars.get("conflict_observed").get() or ""
+        conf_raw = self.conf_var.get() if self.conf_var is not None else ""
+        status_raw = self.status_var.get() if self.status_var is not None else ""
+        out["human_confidence"] = {"高": "HIGH", "中": "MEDIUM", "低": "LOW"}.get(conf_raw, "")
+        out["review_status"] = {"已审核": "REVIEWED", "需复核": "NEEDS_SECOND_REVIEW",
+                                "金标准": "GOLD", "排除": "EXCLUDED"}.get(status_raw, "")
+        return out
+
+    def reset(self):
+        for k, v in self.vars.items():
+            if isinstance(v, tk.StringVar):
+                v.set("")
+        if self.conf_var is not None:
+            self.conf_var.set("")
+        if self.status_var is not None:
+            self.status_var.set("")
+
+
+def validate_business_cognition(values: dict) -> tuple[bool, str]:
+    """业务认知评审校验：置信度/状态必选；全部三态 UNSURE 也可保存（诚实优先）。"""
+    conf = (values.get("human_confidence") or "").strip().upper()
+    status = (values.get("review_status") or "").strip().upper()
+    if conf not in ("HIGH", "MEDIUM", "LOW"):
+        return False, "人工置信度未选择（顶部工具栏）"
+    if status not in ("REVIEWED", "NEEDS_SECOND_REVIEW", "GOLD", "EXCLUDED"):
+        return False, "审核状态未选择（顶部工具栏）"
+    return True, ""
+
+
 def main():
     import sys as _sys
     mode = _sys.argv[1] if len(_sys.argv) > 1 else "adjudication"

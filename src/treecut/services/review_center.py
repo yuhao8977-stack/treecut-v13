@@ -27,7 +27,8 @@ from pathlib import Path
 from tkinter import messagebox, ttk
 
 from treecut.services.phase3_review_ui import (
-    FFMPEG, FIELD_CN, GROUPS, PlaybackController, _V21Form, cn, en, validate_v21,
+    FFMPEG, FIELD_CN, GROUPS, PlaybackController, _V21Form, _BusinessCognitionReviewForm,
+    validate_business_cognition, cn, en, validate_v21,
 )
 from treecut.services.schema_v2 import DICTIONARY_VERSION_V2_1
 
@@ -89,6 +90,17 @@ TASKS = [
               "· action_group 是主类别（如 静态展示/讲解/抽屉/柜门）\n"
               "· action_sequence 是按发生顺序的完整动作流\n"
               "· 系统不显示任何 AI 猜测；看不清就选 未知 + 低 + 需复核")},
+    {"id": "TARGETED_REVIEW_STAGE2_BUSINESS_COGNITION_V1", "name": "Stage2 业务认知评审（Human24·4×6 盲审）", "type": "BUSINESS_COGNITION",
+     "manifest": os.path.join(DATA_ROOT, "BUSINESS_COGNITION_STAGE2_HUMAN_REVIEW_V1.json"),
+     "table": "stage2_business_cognition_review_v1",
+     "blind": True,  # 不显示 AI claims/affinity/confidence，只给候选清单 + 冻结证据
+     "show_frozen_evidence": True,
+     "hint": ("Stage2 业务认知评审（Human24，盲审，非视觉重标注）。\n"
+              "评审对象：该片段的证据是否支持某用户需求/商业价值主张。\n"
+              "· 只看视频 + 冻结证据（组件/功能/场景/材料/动作/讲解原文），独立判定\n"
+              "· 每个主张三选：支持 / 不支持 / 不确定（诚实优先，不确定=不硬猜）\n"
+              "· 冲突观察：讲解说'家里/客户家'但画面是工厂展台 → 选 SCENE_ASR_CONFLICT\n"
+              "· 系统不显示任何 AI 结论；看不清就选 不确定 + 低 + 需复核")},
 ]
 
 
@@ -225,8 +237,13 @@ class ReviewTaskWindow(tk.Toplevel):
                   wraplength=400, foreground="#666").pack(anchor="w", pady=4)
         right = ttk.Frame(paned, width=600)
         paned.add(right, weight=6)  # 注意：ttk.Panedwindow 不支持 minsize 选项（曾致 _build_review 崩溃）
-        self.form = _V21Form(right, self._save,
-                             conf_var=self.conf_var, status_var=self.status_var)
+        if self.task.get("type") == "BUSINESS_COGNITION":
+            self.form = _BusinessCognitionReviewForm(right, self._save,
+                                                     conf_var=self.conf_var,
+                                                     status_var=self.status_var)
+        else:
+            self.form = _V21Form(right, self._save,
+                                 conf_var=self.conf_var, status_var=self.status_var)
         self.form.pack(fill=tk.BOTH, expand=True)
 
         # 载入待审队列
@@ -326,6 +343,23 @@ class ReviewTaskWindow(tk.Toplevel):
                     info.append(f"  原comment: {cur.get('comment')}")
         if it.get("conflict_fields"):
             info.append(f"冲突字段：{', '.join(d['field'] for d in it['conflict_fields'][:8])}")
+        if self.task.get("show_frozen_evidence"):
+            fe = it.get("frozen_evidence") or {}
+            info.append("")
+            info.append("冻结证据（供业务认知判定，非 AI 结论）：")
+            if fe.get("component"):
+                info.append(f"  组件: {', '.join(fe['component'])}")
+            if fe.get("function"):
+                info.append(f"  功能: {', '.join(fe['function'])}")
+            if fe.get("scene_family"):
+                info.append(f"  场景: {fe['scene_family']}")
+            if fe.get("material"):
+                info.append(f"  材质: {', '.join(fe['material'])}")
+            if fe.get("action_sequence"):
+                info.append(f"  动作: {', '.join(fe['action_sequence'])}")
+            asr = (fe.get("asr_text") or "").strip()
+            if asr:
+                info.append(f"  讲解原文: {asr[:200]}")
         self.info.delete("1.0", tk.END)
         self.info.insert(tk.END, "\n".join(info))
         self.form.reset()
@@ -354,6 +388,13 @@ class ReviewTaskWindow(tk.Toplevel):
                                     it.get("selection_reason", ""),
                                     values["human_confidence"], status,
                                     operator=os.environ.get("USERNAME", ""))
+        elif self.task["table"] == "stage2_business_cognition_review_v1":
+            svc.save_business_cognition_review(
+                it["segment_id"], it.get("challenge_class", ""),
+                values.get("judged_needs", []), values.get("judged_values", []),
+                values.get("conflict_observed", ""), values.get("comment", ""),
+                values["human_confidence"], status,
+                operator=os.environ.get("USERNAME", ""))
         else:
             svc.save_v3(it["segment_id"], values,
                         values["human_confidence"], status,
@@ -363,8 +404,12 @@ class ReviewTaskWindow(tk.Toplevel):
         if not getattr(self, "current", None):
             return
         values = self.form.collect()
-        ok, msg, status = validate_v21(values, values["human_confidence"],
-                                       values["review_status"], values["comment"])
+        if self.task.get("type") == "BUSINESS_COGNITION":
+            ok, msg = validate_business_cognition(values)
+            status = values.get("review_status", "REVIEWED")
+        else:
+            ok, msg, status = validate_v21(values, values["human_confidence"],
+                                           values["review_status"], values["comment"])
         if not ok:
             messagebox.showerror("无法保存", msg)
             return
