@@ -60,6 +60,16 @@ TASKS = [
               "· 置信度解释：高=几乎确定；中=大体确定但有一定判断空间；低=自己拿不准\n"
               "· 材质/组件/功能/镜头角色：点击即多选，再点取消；动作按发生顺序添加\n"
               "· 看不清就选 未知 + 低 + 需复核，不硬猜")},
+    {"id": "TARGETED_REVIEW_STAGE3_MINI_V1", "name": "Stage3 最小验证批（18 条·插座/客户家/实木）", "type": "TARGETED",
+     "manifest": os.path.join(DATA_ROOT, "TARGETED_REVIEW_STAGE3_MINI_V1.json"),
+     "table": "targeted_human_review_v1",
+     "blind": True,  # 只显示采样目标，隐藏一切 AI 猜测/candidate score/关键词/provider
+     "show_sampling_target": True,
+     "hint": ("Stage3 最小验证批（18 条，DEV，非考试卷）。用于验证候选发现器 precision。\n"
+              "只显示采样目标（插座动作/客户家/实木），不显示任何 AI 猜测。\n"
+              "· 置信度解释：高=几乎确定；中=大体确定但有一定判断空间；低=自己拿不准\n"
+              "· 材质/组件/功能/镜头角色：点击即多选，再点取消；动作按发生顺序添加\n"
+              "· 看不清就选 未知 + 低 + 需复核，不硬猜")},
     {"id": "STAGE3_ACTION_QA_ADJUDICATION", "name": "Stage3 动作 QA 二次裁决（仅 3 条）", "type": "ADJUDICATION",
      "manifest": os.path.join(DATA_ROOT, "STAGE3_ACTION_QA_ADJUDICATION.json"),
      "table": "targeted_human_review_v1",
