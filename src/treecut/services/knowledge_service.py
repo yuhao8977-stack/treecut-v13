@@ -137,12 +137,33 @@ class KnowledgeService:
         recs = self.search("", namespace=namespace, status="ACTIVE", limit=200)
         return [r for r in recs if r.get("knowledge_type") != "HYPOTHESIS"]
 
+    def retrieve_facts(self, namespace: str | None = None) -> list[dict]:
+        """FACT 检索（概念/实体定义）。"""
+        return self.search("", namespace=namespace, knowledge_type="FACT", limit=300)
+
+    def retrieve_hypotheses(self) -> list[dict]:
+        """HYPOTHESIS 检索（candidate / exploratory signal）。"""
+        return self.search("", knowledge_type="HYPOTHESIS", limit=200)
+
+    def retrieve_platform_rules(self) -> list[dict]:
+        return self.search("", knowledge_type="PLATFORM_RULE", limit=100)
+
     def retrieve_active_rules(self) -> list[dict]:
         """hard-rule retrieval：BUSINESS_RULE 且 ACTIVE（HYPOTHESIS 永不进）。"""
         with self._conn() as c:
             c.row_factory = sqlite3.Row
             rows = c.execute("SELECT * FROM knowledge_entries WHERE knowledge_type='BUSINESS_RULE' "
                              "AND status='ACTIVE'").fetchall()
+        return [self._row_to_dict(r) for r in rows]
+
+    def retrieve_hard_reasoning_knowledge(self) -> list[dict]:
+        """hard reasoning：ACTIVE FACT + ACTIVE BUSINESS_RULE + non-stale PLATFORM_RULE（合规场景）。"""
+        with self._conn() as c:
+            c.row_factory = sqlite3.Row
+            rows = c.execute(
+                "SELECT * FROM knowledge_entries WHERE "
+                "((knowledge_type='FACT' OR knowledge_type='BUSINESS_RULE') AND status='ACTIVE') "
+                "OR (knowledge_type='PLATFORM_RULE' AND status='ACTIVE')").fetchall()
         return [self._row_to_dict(r) for r in rows]
 
     def retrieve_active_platform_rules(self) -> list[dict]:

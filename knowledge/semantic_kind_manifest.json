@@ -1,0 +1,28 @@
+{
+ "manifest": "SEMANTIC_KIND_MANIFEST",
+ "semantic_kinds": {
+  "ENTITY_DEFINITION": "实体/概念定义（是什么）",
+  "TAXONOMY_TERM": "分类术语",
+  "RELATION_DEFINITION": "关系定义",
+  "PROFESSIONAL_FACT": "专业事实",
+  "INFERENCE_RULE": "推理规则（Evidence→Meaning）",
+  "NEGATIVE_RULE": "负规则（不得推出）",
+  "EVIDENCE_POLICY": "证据门槛/可靠性策略",
+  "BUSINESS_TAXONOMY": "业务分类概念",
+  "CONTENT_STRATEGY_RULE": "内容策略假设",
+  "TEMPLATE_HYPOTHESIS": "模板假设",
+  "PLATFORM_POLICY": "平台策略",
+  "SYSTEM_SCHEMA": "系统数据模型"
+ },
+ "distribution": {
+  "ENTITY_DEFINITION": 93,
+  "INFERENCE_RULE": 17,
+  "BUSINESS_TAXONOMY": 58,
+  "CONTENT_STRATEGY_RULE": 1,
+  "NEGATIVE_RULE": 30,
+  "PLATFORM_POLICY": 10,
+  "TAXONOMY_TERM": 92,
+  "EVIDENCE_POLICY": 48,
+  "TEMPLATE_HYPOTHESIS": 12
+ }
+}

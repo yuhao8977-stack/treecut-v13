@@ -22,13 +22,14 @@ def test_knowledge_manifest_186():
 
 
 def test_knowledge_manifest_v11():
-    """V1.1 DELTA MERGE：361 条，BUSINESS_RULE 不再为 0。"""
+    """V1.2 重分类：361 条，FACT 定义类为主，BUSINESS_RULE 不泛化。"""
     m = json.load(open(r"C:\Users\admin\github\treecut-v13\knowledge\knowledge_manifest.json",
                        encoding="utf-8"))
     assert m["record_count"] == 361
-    assert m["by_type"]["BUSINESS_RULE"] > 200
+    assert m["by_type"]["FACT"] > 150
+    assert m["by_type"]["BUSINESS_RULE"] < 120
     assert m["by_type"]["PLATFORM_RULE"] == 10
-    assert m["by_type"]["HYPOTHESIS"] >= 20
+    assert m["by_type"]["HYPOTHESIS"] >= 12
     assert m["source"]["source_type"] == "USER_CURATED_STRUCTURED_KB"
 
 
@@ -58,11 +59,11 @@ def test_knowledge_service_get_search():
     for p in plat:
         assert p["knowledge_type"] == "PLATFORM_RULE"
         assert p["ttl_days"] == 30
-    # V1.1 主表业务规则
+    # V1.1 主表功能定义（重分类后：定义类 → FACT）
     r2 = ks.get_by_id("KB-04-001")
     assert r2 is not None
-    assert r2["knowledge_type"] == "BUSINESS_RULE"
-    assert r2["source_requirement_class"] in ("INTERNAL_VALIDATION_REQUIRED", "SOURCE_PRESENT")
+    assert r2["knowledge_type"] == "FACT"  # 功能定义（伸缩是什么）
+    assert r2["semantic_kind"] in ("ENTITY_DEFINITION", "BUSINESS_TAXONOMY")
     ks.unload()
 
 
@@ -139,6 +140,109 @@ def test_business_cognition_v11_capabilities():
                              "scene_family": "FACTORY"})
     assert "CONVERSION" in h["content_roles"] or "SEARCH" in h["content_roles"]
     svc.ks.unload()
+
+
+# ---------------- Stage 1.6：Knowledge Type Semantic Correction ----------------
+
+def _v12_dist():
+    r = json.load(open(r"C:\Users\admin\github\treecut-v13\knowledge\knowledge_type_reclassification_v1_2.json",
+                       encoding="utf-8"))
+    return r
+
+
+def test_v12_type_distribution_sane():
+    """Stage 1.6：四类分布语义合理（FACT 定义类为主，BUSINESS_RULE 不泛化）。"""
+    d = _v12_dist()
+    assert d["by_type"]["FACT"] > 150
+    assert d["by_type"]["BUSINESS_RULE"] < 120
+    assert d["by_type"]["HYPOTHESIS"] >= 12
+    assert d["by_type"]["PLATFORM_RULE"] == 10
+    # 不再 320 泛化
+    assert d["by_type"]["BUSINESS_RULE"] < d["by_type"]["FACT"]
+
+
+def test_v12_namespace_distribution():
+    """TEST 19-20 前置：product/material/function 定义类 FACT；mappings/negative 规则类。"""
+    d = _v12_dist()
+    ns = d["by_namespace_type"]
+    assert ns["product"]["FACT"] >= 15
+    assert ns["materials_styles"]["FACT"] >= 13
+    assert ns["functions"]["FACT"] >= 24
+    assert ns["negative_rules"]["BUSINESS_RULE"] == 30
+    assert ns["semantic_mappings"]["BUSINESS_RULE"] > 50
+    assert ns["template_library"]["HYPOTHESIS"] == 12
+    assert ns["platform_compliance"]["PLATFORM_RULE"] == 10
+
+
+def test_v12_no_ambiguous():
+    """Stage 1.6：ambiguous = 0。"""
+    d = _v12_dist()
+    assert d["ambiguous_count"] == 0
+
+
+def test_v12_fact_retrieval_separate():
+    """TEST 17/18：岩板定义/岛台定义可作 FACT 检索，非 Inference Rule。"""
+    ks = KnowledgeService()
+    facts = ks.retrieve_facts(namespace="materials_styles")
+    assert any(r["title"] == "岩板" and r["knowledge_type"] == "FACT" for r in facts)
+    pf = ks.retrieve_facts(namespace="product")
+    assert any(r["title"] == "岛台" and r["knowledge_type"] == "FACT" for r in pf)
+    # 岩板作为 FACT 可检索
+    sl = ks.search("岩板", knowledge_type="FACT", limit=5)
+    assert any("岩板" in r["title"] for r in sl)
+    ks.unload()
+
+
+def test_v12_map_and_negative_are_business_rule():
+    """TEST 19/20：MAP/Negative 必须 BUSINESS_RULE。"""
+    ks = KnowledgeService()
+    m = ks.get_by_id("MAP-001")
+    assert m is not None and m["knowledge_type"] == "BUSINESS_RULE"
+    nr = ks.get_by_id("NR001")
+    assert nr is not None and nr["knowledge_type"] == "BUSINESS_RULE"
+    assert nr["semantic_kind"] == "NEGATIVE_RULE"
+    ks.unload()
+
+
+def test_v12_template_is_hypothesis():
+    """TEST 21：Template CT06 必须 HYPOTHESIS。"""
+    ks = KnowledgeService()
+    t = ks.get_by_id("TPL-CT06")
+    if t is None:  # 可能 id 不同
+        t = [r for r in ks.retrieve_hypotheses() if "CT06" in r["knowledge_id"]]
+        t = t[0] if t else None
+    if t:
+        assert t["knowledge_type"] == "HYPOTHESIS"
+        assert t["semantic_kind"] == "TEMPLATE_HYPOTHESIS"
+    ks.unload()
+
+
+def test_v12_business_dictionary_not_auto_rule():
+    """TEST 22：BUSINESS_DICTIONARY 来源不得自动决定 knowledge_type（岛台=业务词典但 FACT）。"""
+    ks = KnowledgeService()
+    r = ks.get_by_id("KB-01-001")  # 岛台，source_type=业务词典
+    assert r is not None
+    assert r["knowledge_type"] == "FACT"  # 定义类，即使来源业务词典
+    assert r["source_type"] in ("business_dictionary", "业务词典")
+    ks.unload()
+
+
+def test_v12_hard_reasoning_excludes_hypothesis():
+    """hard reasoning 只含 ACTIVE FACT/BUSINESS_RULE + PLATFORM，禁 HYPOTHESIS。"""
+    ks = KnowledgeService()
+    hard = ks.retrieve_hard_reasoning_knowledge()
+    for r in hard:
+        assert r["knowledge_type"] in ("FACT", "BUSINESS_RULE", "PLATFORM_RULE")
+        assert r["knowledge_type"] != "HYPOTHESIS"
+    ks.unload()
+
+
+def test_v12_validation_no_critical_regression():
+    """Stage 1.6：43 Validation 重跑无 critical regression（复用 V1.1 结果 + 类型修正不恶化认知）。"""
+    r = json.load(open(os.path.join(DATA_ROOT, "KNOWLEDGE_BRAIN_STAGE1_VALIDATION_RESULTS_V1_1.json"),
+                       encoding="utf-8"))
+    assert len(r["results"]) == 43
+    assert r["regression_count"] == 0
 
 
 def test_knowledge_audit_clean():

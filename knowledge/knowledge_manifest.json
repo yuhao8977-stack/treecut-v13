@@ -1,5 +1,5 @@
 {
- "manifest": "KNOWLEDGE_MANIFEST_V1_1",
+ "manifest": "KNOWLEDGE_MANIFEST_V1_2",
  "source": {
   "file": "knowledge/source/TreeCut_V11_Phase4.xlsx",
   "sha256": "07AE586D8655F5BB09EAD77012B5595D42AD09B03D00E3F4B0D302CBEABD7C0C",
@@ -8,9 +8,9 @@
  },
  "record_count": 361,
  "by_type": {
-  "BUSINESS_RULE": 320,
-  "HYPOTHESIS": 24,
-  "FACT": 7,
+  "FACT": 243,
+  "BUSINESS_RULE": 95,
+  "HYPOTHESIS": 13,
   "PLATFORM_RULE": 10
  },
  "by_namespace": {
@@ -46,5 +46,74 @@
  },
  "template_count": 12,
  "records_sha256": "bf2ed200b48ab2605c3a229ba09dee24444c56241c13d5094cc2075ea8b0565a",
- "generated_at": "2026-08-29 14:29"
+ "generated_at": "2026-08-29 14:29",
+ "by_semantic_kind": {
+  "ENTITY_DEFINITION": 93,
+  "INFERENCE_RULE": 17,
+  "BUSINESS_TAXONOMY": 58,
+  "CONTENT_STRATEGY_RULE": 1,
+  "NEGATIVE_RULE": 30,
+  "PLATFORM_POLICY": 10,
+  "TAXONOMY_TERM": 92,
+  "EVIDENCE_POLICY": 48,
+  "TEMPLATE_HYPOTHESIS": 12
+ },
+ "by_namespace_type": {
+  "product": {
+   "FACT": 16
+  },
+  "materials_styles": {
+   "FACT": 14,
+   "BUSINESS_RULE": 1
+  },
+  "craft_trust": {
+   "FACT": 7
+  },
+  "functions": {
+   "FACT": 25
+  },
+  "industry_taxonomy.scene_space": {
+   "FACT": 16
+  },
+  "user_needs": {
+   "FACT": 35
+  },
+  "content_roles": {
+   "FACT": 8
+  },
+  "content_types": {
+   "FACT": 6
+  },
+  "shot_ontology": {
+   "FACT": 36,
+   "BUSINESS_RULE": 1
+  },
+  "industry_taxonomy.script_semantics": {
+   "FACT": 10
+  },
+  "business_value_rules": {
+   "FACT": 29,
+   "HYPOTHESIS": 1
+  },
+  "negative_rules": {
+   "BUSINESS_RULE": 30
+  },
+  "dimensions_decisions": {
+   "FACT": 23
+  },
+  "platform_compliance": {
+   "PLATFORM_RULE": 10
+  },
+  "mother_themes": {
+   "FACT": 5
+  },
+  "semantic_mappings": {
+   "FACT": 13,
+   "BUSINESS_RULE": 63
+  },
+  "template_library": {
+   "HYPOTHESIS": 12
+  }
+ },
+ "reclassification": "V1.2 Semantic Correction（Stage 1.6）"
 }

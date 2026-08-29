@@ -1,0 +1,103 @@
+{
+ "manifest": "KNOWLEDGE_TYPE_RECLASSIFICATION_V1_2",
+ "by_type": {
+  "FACT": 243,
+  "BUSINESS_RULE": 95,
+  "HYPOTHESIS": 13,
+  "PLATFORM_RULE": 10
+ },
+ "by_semantic_kind": {
+  "ENTITY_DEFINITION": 93,
+  "INFERENCE_RULE": 17,
+  "BUSINESS_TAXONOMY": 58,
+  "CONTENT_STRATEGY_RULE": 1,
+  "NEGATIVE_RULE": 30,
+  "PLATFORM_POLICY": 10,
+  "TAXONOMY_TERM": 92,
+  "EVIDENCE_POLICY": 48,
+  "TEMPLATE_HYPOTHESIS": 12
+ },
+ "by_namespace_type": {
+  "product": {
+   "FACT": 16
+  },
+  "materials_styles": {
+   "FACT": 14,
+   "BUSINESS_RULE": 1
+  },
+  "craft_trust": {
+   "FACT": 7
+  },
+  "functions": {
+   "FACT": 25
+  },
+  "industry_taxonomy.scene_space": {
+   "FACT": 16
+  },
+  "user_needs": {
+   "FACT": 35
+  },
+  "content_roles": {
+   "FACT": 8
+  },
+  "content_types": {
+   "FACT": 6
+  },
+  "shot_ontology": {
+   "FACT": 36,
+   "BUSINESS_RULE": 1
+  },
+  "industry_taxonomy.script_semantics": {
+   "FACT": 10
+  },
+  "business_value_rules": {
+   "FACT": 29,
+   "HYPOTHESIS": 1
+  },
+  "negative_rules": {
+   "BUSINESS_RULE": 30
+  },
+  "dimensions_decisions": {
+   "FACT": 23
+  },
+  "platform_compliance": {
+   "PLATFORM_RULE": 10
+  },
+  "mother_themes": {
+   "FACT": 5
+  },
+  "semantic_mappings": {
+   "FACT": 13,
+   "BUSINESS_RULE": 63
+  },
+  "template_library": {
+   "HYPOTHESIS": 12
+  }
+ },
+ "reclassified_count": 19,
+ "reclassified_ids": [
+  "P4-BUSINESS_VALUE-AVOID_MISTAKES",
+  "P4-MOTHER_THEME-MOTHER_THEME_SPACE_SOLUTION",
+  "P4-MOTHER_THEME-MOTHER_THEME_FAMILY_SCENE",
+  "P4-MOTHER_THEME-MOTHER_THEME_DECISION_AVOID_PIT",
+  "P4-MOTHER_THEME-MOTHER_THEME_AESTHETIC_STYLE",
+  "P4-MOTHER_THEME-MOTHER_THEME_CRAFT_TRUST",
+  "P4-SEARCH_INTENT-ISLAND_SIZE",
+  "P4-SEARCH_INTENT-ISLAND_HEIGHT",
+  "P4-SEARCH_INTENT-SMALL_APARTMENT_ISLAND",
+  "P4-SEARCH_INTENT-ISLAND_STORAGE",
+  "P4-SEARCH_INTENT-ISLAND_SOCKET",
+  "P4-SEARCH_INTENT-EXTENDABLE_ISLAND",
+  "P4-SEARCH_INTENT-ISLAND_DINING_COMBO",
+  "P4-SEARCH_INTENT-LIVING_ROOM_ISLAND",
+  "P4-SEARCH_INTENT-SOFA_BACK_ISLAND",
+  "P4-SEARCH_INTENT-ISLAND_AVOID_PIT",
+  "P4-SEARCH_INTENT-ISLAND_MATERIAL",
+  "P4-SEARCH_INTENT-ISLAND_STYLE",
+  "P4-SEARCH_INTENT-CUSTOM_ISLAND"
+ ],
+ "ambiguous_count": 0,
+ "ambiguous_queue": [],
+ "split_required_count": 0,
+ "split_required": []
+}
