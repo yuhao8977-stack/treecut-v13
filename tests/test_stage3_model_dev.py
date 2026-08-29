@@ -68,6 +68,29 @@ def test_people_no_identity_output():
     az.unload()
 
 
+def test_people_yolo_no_no_siglip_fallback():
+    """FINAL CONSOLIDATION 路由纪律：YOLO 正常运行且无 person = 合法 NO，不得 fallback SigLIP。"""
+    az = PeoplePresenceAnalyzerV2()
+    # 模拟 YOLO 正常运行（ran=True）但无检测（hits=[]）
+    az._yolo_frames = lambda paths: ([], True)
+    az._siglip_predict = lambda paths: "YES"  # 若被调用则暴露 bug
+    r = az.analyze(["dummy_frame_1.png", "dummy_frame_2.png"])
+    assert r.prediction == "NO"
+    assert r.provider == "yolo"
+    az.unload()
+
+
+def test_people_yolo_technical_failure_fallback():
+    """仅技术失败（ran=False）才允许 SigLIP fallback。"""
+    az = PeoplePresenceAnalyzerV2()
+    az._yolo_frames = lambda paths: ([], False)
+    az._siglip_predict = lambda paths: "YES"
+    r = az.analyze(["dummy_frame_1.png"])
+    assert r.prediction == "YES"
+    assert r.provider == "siglip_fallback"
+    az.unload()
+
+
 # ---------------- SemanticActionAnalyzerV1 ----------------
 
 def test_asr_rules_no_收纳_retract():

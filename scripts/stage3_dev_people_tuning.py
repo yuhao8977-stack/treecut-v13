@@ -78,7 +78,7 @@ def main():
     for sid in all_sids:
         fr = kfs(sid)
         if fr:
-            hits = az._yolo_frames(fr)
+            hits, _ran = az._yolo_frames(fr)
             per_seg[sid] = {"max_conf": max(hits) if hits else 0.0,
                             "frame_hit_count": len(hits), "frames_sampled": len(fr[:8])}
     az.unload()

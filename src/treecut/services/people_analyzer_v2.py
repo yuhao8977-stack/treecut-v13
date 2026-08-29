@@ -57,23 +57,29 @@ class PeoplePresenceAnalyzerV2:
             self._model = YOLO(self.weights)
         return self._model
 
-    def _yolo_frames(self, frames_paths: list[str]) -> list[dict]:
-        """逐帧检测 person（COCO class 0），返回 conf 列表。"""
+    def _yolo_frames(self, frames_paths: list[str]) -> tuple[list[float], bool]:
+        """逐帧检测 person（COCO class 0）。
+
+        返回 (hits, ok)：hits = 各帧最高 person conf（无检测则空）；
+        ok = YOLO 至少成功推理一帧（True 表示正常运行，无人=合法 NO）。
+        """
         from treecut.services.visual_cognition import _imread
         model = self._ensure_yolo()
         hits = []
+        ran = False
         for p in frames_paths[: self.max_frames]:
             img = _imread(p)
             if img is None:
                 continue
             try:
                 res = model.predict(img, conf=self.conf_floor, classes=[0], verbose=False)
+                ran = True
                 if len(res) and res[0].boxes is not None and len(res[0].boxes):
                     confs = res[0].boxes.conf.cpu().numpy()
                     hits.append(float(confs.max()))
             except Exception:
                 continue
-        return hits
+        return hits, ran
 
     # ---------------- SigLIP fallback ----------------
     def _ensure_siglip(self):
@@ -96,22 +102,27 @@ class PeoplePresenceAnalyzerV2:
         if not frames_paths:
             return PeopleResult("UNKNOWN", provider="none", frames_sampled=0)
         try:
-            hits = self._yolo_frames(frames_paths)
+            hits, ran = self._yolo_frames(frames_paths)
         except Exception:
-            hits = []
-        if hits:
-            best = max(hits)
-            pred = "YES" if best >= self.threshold else "NO"
-            return PeopleResult(pred, max_person_conf=round(best, 4),
-                                frame_hit_count=len(hits),
+            hits, ran = [], False
+        if ran:
+            # YOLO 正常运行：无 person 检测 = 合法 NO；不 fallback SigLIP
+            if hits:
+                best = max(hits)
+                pred = "YES" if best >= self.threshold else "NO"
+                return PeopleResult(pred, max_person_conf=round(best, 4),
+                                    frame_hit_count=len(hits),
+                                    frames_sampled=len(frames_paths[: self.max_frames]),
+                                    threshold=self.threshold, provider="yolo")
+            return PeopleResult("NO", max_person_conf=0.0, frame_hit_count=0,
                                 frames_sampled=len(frames_paths[: self.max_frames]),
                                 threshold=self.threshold, provider="yolo")
-        # YOLO 无命中（无人 or 失败）→ SigLIP fallback
+        # YOLO 技术失败（模型加载/推理异常/帧不可用）→ SigLIP fallback 或 UNKNOWN
         sig = self._siglip_predict(frames_paths)
         if sig in ("YES", "NO"):
             return PeopleResult(sig, provider="siglip_fallback",
                                 frames_sampled=len(frames_paths[:5]))
-        return PeopleResult("UNKNOWN", provider="no_evidence",
+        return PeopleResult("UNKNOWN", provider="technical_failure",
                             frames_sampled=len(frames_paths[: self.max_frames]))
 
     def summary(self) -> dict:
