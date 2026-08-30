@@ -79,9 +79,17 @@ class BrowserRuntime:
             raise RuntimeError("browser not started")
         return self.tabs
 
-    # ---- §4/§5 三站自动状态检测（Single Worker 串行） ----
+    # ---- §4/§5 三站自动状态检测（Single Worker 串行，SPA 渲染有界重试） ----
+    SPA_RETRY_TRIES = 4
+    SPA_RETRY_DELAY = 1.2
+
     def check_roles(self) -> dict:
-        """返回每站 {session, identity, account_name, account_id, binding}。"""
+        """返回每站 {session, identity, account_name, account_id, binding}。
+
+        XHS 为 SPA，启动后页面可能尚未渲染完 → 检测到 UNKNOWN 时做有界重试
+        （最多 SPA_RETRY_TRIES 次，每次间隔 SPA_RETRY_DELAY），避免误报"状态未知"。
+        """
+        import time as _time
         binding = self.workspace.load_binding()
         roles = {}
         specs = [
@@ -94,18 +102,25 @@ class BrowserRuntime:
             tab_alive = tab is not None and not tab.is_closed()
             session, identity, account_name, account_id = SESSION_UNKNOWN, "UNKNOWN", None, None
             if tab_alive:
-                try:
-                    session = self.session_detector.check(tab, kind).status
-                except Exception:
-                    session = SESSION_UNKNOWN
-                try:
-                    detected = detector.detect(tab)
-                    identity, _reason = detector.gate(detected)
-                    if detected:
-                        account_name = detected.display_name
-                        account_id = detected.primary_id
-                except Exception:
-                    identity = "UNKNOWN"
+                for attempt in range(self.SPA_RETRY_TRIES):
+                    try:
+                        session = self.session_detector.check(tab, kind).status
+                    except Exception:
+                        session = SESSION_UNKNOWN
+                    try:
+                        detected = detector.detect(tab)
+                        identity, _reason = detector.gate(detected)
+                        if detected:
+                            account_name = detected.display_name
+                            account_id = detected.primary_id
+                    except Exception:
+                        identity = "UNKNOWN"
+                    # 已获得明确 Session 结论（已登录/需要登录/过期）→ 停止重试
+                    # （身份可能因未绑定保持 UNKNOWN，属正常，不因此空转）
+                    if session != SESSION_UNKNOWN:
+                        break
+                    if attempt < self.SPA_RETRY_TRIES - 1:
+                        _time.sleep(self.SPA_RETRY_DELAY)
             binding_state = self._binding_state(role, identity, account_id,
                                                 binding, bound_field)
             roles[role] = {

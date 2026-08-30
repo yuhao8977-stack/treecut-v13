@@ -33,6 +33,7 @@ class ProfileManager:
         self.config = config
         self.workspace = workspace
         self._context = None
+        self._browser = None
         self._playwright = None
         self._proc: subprocess.Popen | None = None
         self._edge_path: Path | None = None
@@ -110,6 +111,7 @@ class ProfileManager:
             raise XhsWorkBrowserError(f"CDP 连接 Edge 失败：{error}") from error
 
         self._playwright = pw
+        self._browser = browser
         self._context = browser.contexts[0] if browser.contexts else None
         if self._context is None:  # pragma: no cover
             self._kill_proc()
@@ -145,10 +147,17 @@ class ProfileManager:
                 time.sleep(delay)
         raise last  # type: ignore[misc]
 
-    # ---- 关闭：先干净断开 CDP → 再整树终止进程 → 清理临时 debug 日志（§27） ----
+    # ---- 关闭：先优雅关闭浏览器（LevelDB 落盘）→ 再断开 CDP → 强杀仅兜底 ----
     def close(self) -> None:
-        # CDP 默认 context 关闭行为不可靠，且强杀进程会使 websocket 异常断开 →
-        # 先 pw.stop() 干净断开，再 taskkill 整树，避免 playwright 后台任务残留（退出码 1）。
+        # 1) CDP Browser.close：让 Edge 优雅退出 → localStorage/登录态可靠落盘
+        #    （taskkill /F 强杀可能丢未落盘的 LevelDB 写入，导致"关闭重开登录丢失"）
+        if self._browser is not None:
+            try:
+                self._browser.close()
+            except Exception:  # pragma: no cover — 已断开等情况
+                pass
+            self._browser = None
+        # 2) 断开 playwright（干净断开，避免后台任务残留退出码 1）
         if self._playwright is not None:
             try:
                 self._playwright.stop()
@@ -156,7 +165,14 @@ class ProfileManager:
                 pass
             self._playwright = None
         self._context = None
-        self._kill_proc()
+        # 3) 等待优雅退出；仍在运行则强杀整树
+        if self._proc is not None:
+            deadline = time.time() + 8
+            while time.time() < deadline and self._proc.poll() is None:
+                time.sleep(0.2)
+            if self._proc.poll() is None:
+                self._kill_proc()
+        self._proc = None
         self._cleanup_debug_logs()
 
     def _kill_proc(self) -> None:

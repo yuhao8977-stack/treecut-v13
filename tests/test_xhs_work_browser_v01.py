@@ -494,6 +494,81 @@ class TestTabManager:
 
 
 # ============================================================
+# BrowserRuntime.check_roles（SPA 渲染有界重试）
+# ============================================================
+class ProgressivePage:
+    """模拟 SPA：前 ready_at 次检测返回"加载中"，之后出现功能页内容。"""
+
+    def __init__(self, url: str, name: str, html: str, ready_at: int = 2):
+        self._url = url
+        self._name = name
+        self._html = html
+        self._ready_at = ready_at
+        self.content_calls = 0
+        self.text_calls = 0
+
+    @property
+    def url(self) -> str:
+        return self._url
+
+    def is_closed(self) -> bool:
+        return False
+
+    def content(self) -> str:
+        self.content_calls += 1
+        return self._html if self.content_calls >= self._ready_at else "页面加载中..."
+
+    def title(self) -> str:
+        return ""
+
+    def text_content(self, _selector: str) -> str | None:
+        self.text_calls += 1
+        return self._name if self.content_calls >= self._ready_at else None
+
+
+class _FakeTabs:
+    def __init__(self, pages: dict):
+        self._pages = pages
+
+    def get(self, role: str):
+        return self._pages.get(role)
+
+
+class TestCheckRolesSpaRetry:
+    def _runtime(self, tmp_path, monkeypatch):
+        monkeypatch.setenv("TREECUT_DATA_ROOT", str(tmp_path / "data"))
+        from treecut.browser.main import BrowserRuntime
+        cfg = make_config(tmp_path / "profiles")
+        return BrowserRuntime(cfg)
+
+    def test_session_recovers_after_spa_render(self, tmp_path, monkeypatch):
+        """SPA 前几秒未渲染 → 有界重试后得出 已登录 + 识别账号（真实验收 C/D 的机制保障）。"""
+        runtime = self._runtime(tmp_path, monkeypatch)
+        page = ProgressivePage(url="https://creator.xiaohongshu.com/",
+                               name="KUBON坤宝高端岛台工厂",
+                               html="创作中心 发布笔记 小红书号: xhsB007", ready_at=2)
+        runtime.tabs = _FakeTabs({"CREATOR": page})
+        roles = runtime.check_roles()
+        creator = roles["CREATOR"]
+        assert creator["session"] == SESSION_VALID
+        assert creator["account_name"] == "KUBON坤宝高端岛台工厂"
+        assert creator["account_id"] == "xhsB007"
+        # 第 2 次尝试即成功（每次尝试 session+body 各读一次 content → 2 次尝试 = 4 次封顶），未空转
+        assert page.content_calls <= 4
+
+    def test_never_ready_bounded(self, tmp_path, monkeypatch):
+        """页面始终无信号 → 有界重试（SPA_RETRY_TRIES 次）后保持 UNKNOWN，不无限循环。"""
+        runtime = self._runtime(tmp_path, monkeypatch)
+        page = ProgressivePage(url="https://creator.xiaohongshu.com/",
+                               name=None, html="", ready_at=99)
+        runtime.tabs = _FakeTabs({"CREATOR": page})
+        roles = runtime.check_roles()
+        assert roles["CREATOR"]["session"] == SESSION_UNKNOWN
+        # 每次尝试 session+body 各读一次 → 总调用 = 2 × SPA_RETRY_TRIES（有界）
+        assert page.content_calls == runtime.SPA_RETRY_TRIES * 2
+
+
+# ============================================================
 # Local Bridge（Test D）
 # ============================================================
 class TestLocalBridge:

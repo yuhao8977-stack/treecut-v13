@@ -17,6 +17,8 @@
 | 2 | 三身份检测与绑定 UX | 面板内**绑定按钮**：[绑定当前 Creator 为 B007] / [绑定为 B007 聚光账户]（检测到未绑定时自动启用）；Creator 以 XHS ID 为主锚（同 ID 昵称变更仍 VALID + 更新显示名）；聚光名字允许 ≠ Creator |
 | 3 | 实际出现 4 个 Tab（重复 Frontend） | TabManager **role ownership 去重**（§12）：同托管域非 canonical 页 → 确认 TreeCut 创建 → 关闭；用户页（非托管域/有内容）一律不动；启动与 reconcile 均执行；严格 3 托管 Tab |
 | 4 | 日志空白 + `--no-sandbox` + 英文 UI | 日志修复（insert 前临时 NORMAL）；启动事件全量入面板（面板先建、日志 handler 早挂）；**生产启动路径移除 `--no-sandbox`**（自启 Edge 参数完全可控 + CDP 接管，实证子进程命令行不再含该参数）；控制台**全中文** |
+| 5 | SPA 未渲染完误判 UNKNOWN（真实验收风险） | `check_roles` **有界重试**（最多 4 次、间隔 1.2s，Session 决定性即停）——启动后页面渐进渲染也能在合理时间给出 已登录/需要登录 而非 状态未知 |
+| 6 | 强杀导致登录态偶发丢失（同 Profile 重启） | close 先 **CDP 优雅关闭浏览器**（LevelDB 落盘）→ 断开 → 强杀仅兜底；修复"关闭重开登录丢失"的落盘竞态 |
 
 ## 2. `--no-sandbox` 根因与修复（§19）
 
@@ -72,7 +74,7 @@ Session 判定分层（消除误报 + 提高命中）：
 | `--no-sandbox` 移除 | ✅ 实证（Edge 命令行无该参数） |
 | 安全审计 | ✅ PASS |
 
-统计：V0.1.2 套件 `37 passed`；全量回归 `250 passed`（无回归）。
+统计：V0.1.2 套件 `39 passed`；全量回归 `250 passed`（无回归）。
 
 ## 8. 真实验收清单（用户执行，§24）
 
