@@ -13,6 +13,7 @@
 """
 from __future__ import annotations
 
+import logging
 import re
 from dataclasses import dataclass, field
 from urllib.parse import urlsplit
@@ -25,6 +26,8 @@ from treecut.browser.workspace_manager import (
     WorkspaceBinding,
     WorkspaceManager,
 )
+
+log = logging.getLogger("treecut.browser")
 
 # 页面上的候选账号名选择器（保守清单；"取到才用"）
 ACCOUNT_NAME_SELECTORS = (
@@ -119,6 +122,38 @@ class _BaseDetector:
         except Exception:
             return ""
 
+    @staticmethod
+    def _diagnose(page) -> str:
+        """检测失败时的真实页面诊断（仅 URL origin / title / 候选元素类名；无内容、无凭证）。"""
+        try:
+            url = urlsplit(page.url or "").netloc
+        except Exception:
+            url = "?"
+        try:
+            title = (page.title() or "")[:60]
+        except Exception:
+            title = "?"
+        classes: list[str] = []
+        try:
+            qsa = page.query_selector_all
+        except Exception:
+            qsa = None
+        if qsa is not None:
+            try:
+                for el in qsa("[class]"):
+                    try:
+                        cls = (el.get_attribute("class") or "").strip()
+                    except Exception:
+                        cls = ""
+                    if any(k in cls.lower() for k in ("name", "user", "nick", "account", "avatar")):
+                        if cls not in classes:
+                            classes.append(cls[:60])
+                    if len(classes) >= 5:
+                        break
+            except Exception:
+                pass
+        return f"url={url} title='{title}' candidate_classes={classes}"
+
 
 class CreatorIdentityDetector(_BaseDetector):
     """Creator：主身份锚点。XHS ID 不变 → 仍为 B007。
@@ -136,6 +171,7 @@ class CreatorIdentityDetector(_BaseDetector):
         name = self._find_text(page, ACCOUNT_NAME_SELECTORS)
         xhs_id = _extract(body, XHS_ID_PATTERNS)
         if not name and not xhs_id:
+            log.info("Creator 身份未检测到（诊断：%s）", self._diagnose(page))
             return None
         # 主锚 = ID；ID 缺失时退化为 name（绝不凭空捏造）
         return RoleIdentity(role="creator",
@@ -179,6 +215,7 @@ class SpotlightIdentityDetector(_BaseDetector):
         name = self._find_text(page, AD_ACCOUNT_SELECTORS)
         ad_id = _extract(body, AD_ID_PATTERNS)
         if not name and not ad_id:
+            log.info("聚光广告账户未检测到（诊断：%s）", self._diagnose(page))
             return None
         return RoleIdentity(role="spotlight", primary_id=ad_id or name,
                             display_name=name, source_page=_safe_source(url))

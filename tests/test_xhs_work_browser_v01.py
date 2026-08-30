@@ -394,6 +394,13 @@ class TestIdentityGates:
         det = CreatorIdentityDetector(ws)
         assert det.detect(FakePage(url="https://creator.xiaohongshu.com/", name=None)) is None
 
+    def test_detect_none_logs_diagnose_no_crash(self, tmp_path):
+        """检测失败不崩溃，且输出安全诊断（FakePage 无 query_selector_all 也兼容）。"""
+        ws = self._ws(tmp_path)
+        det = SpotlightIdentityDetector(ws)
+        page = FakePage(url="https://ad.xiaohongshu.com/plan", name=None, title="聚光后台")
+        assert det.detect(page) is None  # 未检测到 → None（不猜测）
+
 
 # ============================================================
 # Session Detector（三站独立 + 误报消除）
@@ -622,11 +629,17 @@ class TestDashboardPipeline:
             assert "工作区启动：B007" in text
             assert "Creator 已登录" in text
 
-            # 绑定按钮：PENDING 时启用（验收绑定 UX）
-            dashboard.post_status(creator_binding="PENDING")
+            # 绑定按钮：NONE/PENDING 时启用（点击会重试检测并输出诊断）；BOUND 时禁用
+            dashboard.post_status(creator_binding="PENDING", spotlight_binding="NONE")
             dashboard._drain()
             dashboard._refresh_bind_buttons()
             assert dashboard._bind_creator_btn.instate(("!disabled",))
+            assert dashboard._bind_spotlight_btn.instate(("!disabled",))
+
+            dashboard.post_status(creator_binding="BOUND", spotlight_binding="BOUND")
+            dashboard._drain()
+            dashboard._refresh_bind_buttons()
+            assert dashboard._bind_creator_btn.instate(("disabled",))
             assert dashboard._bind_spotlight_btn.instate(("disabled",))
         finally:
             root.destroy()

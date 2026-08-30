@@ -240,13 +240,17 @@ class MinimalDashboard:
         return root
 
     def _refresh_bind_buttons(self) -> None:
+        """绑定按钮启用条件：未绑定 或 未检测到（NONE/PENDING）——点击会重试检测并输出诊断；
+        BOUND/MISMATCH 时禁用（已绑定或身份冲突，需人工处理）。"""
         if self._bind_creator_btn is None or self._bind_spotlight_btn is None:
             return
-        if self._values.get("creator_binding") == "PENDING":
+        creator = str(self._values.get("creator_binding", "NONE"))
+        spotlight = str(self._values.get("spotlight_binding", "NONE"))
+        if creator in ("NONE", "PENDING"):
             self._bind_creator_btn.state(["!disabled"])
         else:
             self._bind_creator_btn.state(["disabled"])
-        if self._values.get("spotlight_binding") == "PENDING":
+        if spotlight in ("NONE", "PENDING"):
             self._bind_spotlight_btn.state(["!disabled"])
         else:
             self._bind_spotlight_btn.state(["disabled"])

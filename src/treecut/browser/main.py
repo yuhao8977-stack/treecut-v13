@@ -278,11 +278,27 @@ def run_smoke(config) -> int:
         runtime.close()
 
 
+def setup_file_logging(paths: RuntimePaths) -> None:
+    """日志落盘：{data_root}/logs/xhs_work_browser.log（用户可随时让我调取，§26/27）。
+    控制台 + 文件双写；禁止写入 cookie/token/签名（日志内容由各处自行保证）。"""
+    from logging.handlers import RotatingFileHandler
+    log_dir = paths.data_root / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    handler = RotatingFileHandler(log_dir / "xhs_work_browser.log", maxBytes=2_000_000,
+                                  backupCount=3, encoding="utf-8")
+    handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s",
+                                           datefmt="%Y-%m-%d %H:%M:%S"))
+    root = logging.getLogger()
+    root.addHandler(handler)
+    log.info("文件日志已启用：%s", log_dir / "xhs_work_browser.log")
+
+
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s",
                         datefmt="%H:%M:%S")
     config = load_config()
+    setup_file_logging(RuntimePaths.discover())  # 日志落盘，供随时调取
     if args.workspace:
         config.workspace_id = args.workspace
     if args.profile_root:
