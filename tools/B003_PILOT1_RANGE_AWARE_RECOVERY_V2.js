@@ -2,6 +2,12 @@
 // B003_PILOT1_RANGE_AWARE_RECOVERY_V2.js
 // Stage 3A.6 — Pilot1 完整媒体 Range-Aware 重建（只处理 Pilot1，不扩 Pilot20）
 //
+// ⚠️ V2_RANGE_LOGIC_DEFECT_CONFIRMED（2026-08-30 浏览器实测）
+//   Probe 实际返回 status=200, content_type=video/mp4, content_length=7579070（无 content-range）
+//   → 该场景应走【Full GET 完整响应恢复】（见 B003_PILOT1_FULL_RESPONSE_RECOVERY_V3.js）
+//   V2 的 Range 路线仅在 Probe 返回 206 + Content-Range 时才作为 fallback 使用。
+//   修正：HTTP 206 Partial Content 对 Range Request 是【正常成功状态】，不得判失败。
+//
 // 目标：把该 note 实际加载的媒体资源重建为完整 MP4：
 //       B003_6a8d75aa000000002503e3e2_FULL.mp4
 //
@@ -9,7 +15,7 @@
 //   Step1 Response Probe：请求 media resource，判断 HTTP 200 / 206，
 //                         输出安全摘要（status/content-type/content-length/
 //                         content-range/accept-ranges），不打印 URL
-//   Step2a HTTP 200 → 保存完整 response bytes
+//   Step2a HTTP 200 → 保存完整 response bytes（等价 V3 Full GET）
 //   Step2b HTTP 206 → 解析 Content-Range 得 TOTAL → 标准 Range 重建
 //   Step3 首块从 byte 0 开始，验证 ftyp 存在，否则 STOP
 //   Step4 每块验证 206 + Content-Range 一致，按 offset 严格顺序拼接
