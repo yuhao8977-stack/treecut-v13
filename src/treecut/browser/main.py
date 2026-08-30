@@ -329,6 +329,13 @@ def main(argv: list[str] | None = None) -> int:
 
     def auto_check() -> None:
         try:
+            # 检测前先收束 Tab（重复托管页/空白弹窗），并记录实际 Tab 数（验收 F / 日志可见性）
+            tabs = runtime.tabs
+            if tabs is not None:
+                reconcile = tabs.reconcile()
+                log.info("标签页数量=%s（重复页关闭=%s，用户页保留=%s）",
+                         reconcile["actual"], reconcile["closed_duplicates"],
+                         reconcile["left_untouched"])
             roles = runtime.check_roles()
             post_roles(roles)
         except Exception as error:  # 检测失败不阻塞面板

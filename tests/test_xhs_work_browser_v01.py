@@ -334,6 +334,20 @@ class TestIdentityGates:
         status, _ = det.gate(det.detect(renamed))
         assert status == "ACCOUNT_IDENTITY_VALID"
 
+    def test_creator_id_only_detection(self, tmp_path):
+        """昵称选择器未命中但 body 有小红书号 → 仅凭 ID 识别并绑定（ID 是主锚）。"""
+        ws = self._ws(tmp_path)
+        det = CreatorIdentityDetector(ws)
+        page = FakePage(url="https://creator.xiaohongshu.com/", name=None,
+                        html="页面加载中 ... 小红书号: 63083262719")
+        ident = det.detect(page)
+        assert ident is not None
+        assert ident.primary_id == "63083262719"
+        assert ident.display_name is None  # 昵称未知 → 诚实为 None，不冒充
+        det.bind(ident)
+        status, _ = det.gate(det.detect(page))
+        assert status == "ACCOUNT_IDENTITY_VALID"
+
     def test_creator_mismatch_blocks(self, tmp_path):
         ws = self._ws(tmp_path)
         det = CreatorIdentityDetector(ws)

@@ -121,7 +121,11 @@ class _BaseDetector:
 
 
 class CreatorIdentityDetector(_BaseDetector):
-    """Creator：主身份锚点。XHS ID 不变 → 仍为 B007。"""
+    """Creator：主身份锚点。XHS ID 不变 → 仍为 B007。
+
+    昵称选择器可能未命中真实 DOM，但小红书号（ID）是主锚：
+    只要 body 中稳定取得 ID，即可识别与绑定（display_name 可为 None）。
+    """
 
     def detect(self, page) -> RoleIdentity | None:
         try:
@@ -129,12 +133,15 @@ class CreatorIdentityDetector(_BaseDetector):
         except Exception:
             url = ""
         body = self._body(page)
-        name = self._find_text(page, ACCOUNT_NAME_SELECTORS) or _extract(body, XHS_ID_PATTERNS)
-        if not name:
-            return None
+        name = self._find_text(page, ACCOUNT_NAME_SELECTORS)
         xhs_id = _extract(body, XHS_ID_PATTERNS)
-        return RoleIdentity(role="creator", primary_id=xhs_id or name,
-                            display_name=name, source_page=_safe_source(url))
+        if not name and not xhs_id:
+            return None
+        # 主锚 = ID；ID 缺失时退化为 name（绝不凭空捏造）
+        return RoleIdentity(role="creator",
+                            primary_id=xhs_id or name,
+                            display_name=name,
+                            source_page=_safe_source(url))
 
     def bind(self, detected: RoleIdentity) -> WorkspaceBinding:
         binding = self.workspace.load_binding() or WorkspaceBinding(
