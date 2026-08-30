@@ -96,3 +96,18 @@ desktop.ini
 # Phase 0 backups
 backups/
 BACKUP_MANIFEST.json
+
+# ============================================================
+# XHS Work Browser（§4/5/51）— 浏览器持久 Profile 与登录态，仅本地，绝不入库
+# ============================================================
+browser_profiles/
+profiles/
+*.part
+# 浏览器内部登录数据文件（若 profile 目录被误放仓库则拒绝）
+Cookies
+Login Data
+Local State
+Network Persistent State
+Preferences
+Secure Preferences
+

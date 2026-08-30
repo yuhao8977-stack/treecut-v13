@@ -12,6 +12,7 @@ build-backend = "setuptools.build_meta"
 treecut = "treecut.main:main"
 treecut-desktop = "treecut.desktop:main"
 treecut-api = "treecut.api:main"
+treecut-xhs-browser = "treecut.browser.main:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
@@ -22,3 +23,6 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+markers = [
+    "integration: 需要真实浏览器（Edge headless）的集成测试",
+]
