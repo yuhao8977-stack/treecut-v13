@@ -20,10 +20,12 @@ from treecut.browser.errors import XhsWorkBrowserError, classify
 from treecut.browser.retry_policy import BoundedRetry, RetryDecision
 
 TASK_STATES = ("IDLE", "RUNNING", "PAUSED", "SUCCESS", "FAILED", "NEEDS_HUMAN")
-TASK_STEPS = ("START", "VERIFY_SESSION", "VERIFY_ACCOUNT", "NAVIGATE", "WAIT_READY",
-              "ACTION", "VALIDATE", "SAVE", "COMMIT", "DONE")
+# V0.1.1：任务带页面角色（required_tab），SELECT_TAB 为首步（§22）
+TASK_STEPS = ("SELECT_TAB", "VERIFY_SESSION", "VERIFY_IDENTITY", "NAVIGATE", "WAIT_READY",
+              "ACTION", "VALIDATE", "SAVE", "CHECKPOINT", "DONE")
 # NEEDS_HUMAN 视为可继续（人工处理后 Resume），FAILED/SUCCESS 为终态
 RESUMABLE_STATES = {"RUNNING", "PAUSED", "NEEDS_HUMAN"}
+TAB_ROLES = ("CREATOR", "SPOTLIGHT", "FRONTEND")
 
 
 @dataclass
@@ -52,15 +54,19 @@ class TaskEngine:
         self._step_index = 0
 
     # ---- 新建任务 ----
-    def new_task(self, target: str = "", idempotency_key: str | None = None) -> str:
+    def new_task(self, target: str = "", required_tab: str = "CREATOR",
+                 idempotency_key: str | None = None) -> str:
+        if required_tab not in TAB_ROLES:
+            raise ValueError(f"required_tab 必须是 {TAB_ROLES} 之一: {required_tab}")
         task_id = f"{self.task_type.lower()}_{uuid.uuid4().hex[:12]}"
         self.checkpoint = Checkpoint(
             task_id=task_id,
             workspace_id=self.workspace_id,
             task_type=self.task_type,
             state="RUNNING",
-            step="START",
+            step=TASK_STEPS[0],
             target=target,
+            required_tab=required_tab,
             attempt=1,
             idempotency_key=idempotency_key or task_id,
         )

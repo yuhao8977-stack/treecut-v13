@@ -25,29 +25,60 @@ def default_profile_root(paths: RuntimePaths | None = None) -> Path:
 
 
 @dataclass
-class AccountBindingRecord:
-    """第一次真实检测到账号后，用户人工确认一次的绑定记录（§9）。不含凭证。"""
+class CreatorIdentity:
+    """§9 主身份锚点：XHS ID 不变即仍为 B007（昵称可改）。"""
+    xhs_id: str
+    display_name: str
+    detected_at: str = field(default_factory=utcnow_iso)
+
+
+@dataclass
+class SpotlightIdentity:
+    """§10 聚光广告账户：名字允许与 Creator 不一致，单独人工确认绑定。"""
+    ad_account_id: str
+    ad_account_name: str
+    detected_at: str = field(default_factory=utcnow_iso)
+
+
+@dataclass
+class FrontendIdentity:
+    """§11 前台账号：可能与 Creator 不一致；未确认不得假装已确认。"""
+    user_id: str | None = None
+    display_name: str | None = None
+    confirmed: bool = False
+    detected_at: str = field(default_factory=utcnow_iso)
+
+
+@dataclass
+class WorkspaceBinding:
+    """B007 工作区三身份绑定记录（§8/9/10/11）。不含任何凭证。"""
     workspace_id: str
-    platform_account_name: str
-    xiaohongshu_id: str | None = None
-    current_page_indicator: str = ""
-    source_page: str = ""
+    platform: str = "xiaohongshu"
+    creator_xhs_id: str = ""              # PRIMARY ANCHOR（不可变）
+    creator_display_name: str = ""
+    spotlight_ad_account_id: str = ""
+    spotlight_ad_account_name: str = ""
+    frontend_user_id: str | None = None
+    frontend_display_name: str | None = None
+    frontend_confirmed: bool = False
     bound_at: str = field(default_factory=utcnow_iso)
-    detector_version: str = "V0.1"
 
     def to_dict(self) -> dict:
         return {
             "workspace_id": self.workspace_id,
-            "platform_account_name": self.platform_account_name,
-            "xiaohongshu_id": self.xiaohongshu_id,
-            "current_page_indicator": self.current_page_indicator,
-            "source_page": self.source_page,
+            "platform": self.platform,
+            "creator_xhs_id": self.creator_xhs_id,
+            "creator_display_name": self.creator_display_name,
+            "spotlight_ad_account_id": self.spotlight_ad_account_id,
+            "spotlight_ad_account_name": self.spotlight_ad_account_name,
+            "frontend_user_id": self.frontend_user_id,
+            "frontend_display_name": self.frontend_display_name,
+            "frontend_confirmed": self.frontend_confirmed,
             "bound_at": self.bound_at,
-            "detector_version": self.detector_version,
         }
 
     @classmethod
-    def from_dict(cls, data: dict) -> "AccountBindingRecord":
+    def from_dict(cls, data: dict) -> "WorkspaceBinding":
         return cls(**{k: v for k, v in data.items() if k in cls.__dataclass_fields__})
 
 
@@ -118,24 +149,24 @@ class WorkspaceManager:
                 status["writable"] = False
         return status
 
-    # ---- §9 Account Binding Record（无凭证） ----
+    # ---- §9/10/11 Workspace Binding（三身份，无凭证） ----
     def binding_path(self) -> Path:
         return self.workspace_dir / "account_binding.json"
 
-    def load_binding(self) -> AccountBindingRecord | None:
+    def load_binding(self) -> WorkspaceBinding | None:
         path = self.binding_path()
         if not path.is_file():
             return None
         try:
-            return AccountBindingRecord.from_dict(json.loads(path.read_text(encoding="utf-8")))
+            return WorkspaceBinding.from_dict(json.loads(path.read_text(encoding="utf-8")))
         except (OSError, json.JSONDecodeError, TypeError):
             return None
 
-    def save_binding(self, record: AccountBindingRecord) -> Path:
+    def save_binding(self, binding: WorkspaceBinding) -> Path:
         self.ensure_workspace()
         path = self.binding_path()
         path.write_text(
-            json.dumps(record.to_dict(), ensure_ascii=False, indent=1), encoding="utf-8"
+            json.dumps(binding.to_dict(), ensure_ascii=False, indent=1), encoding="utf-8"
         )
         return path
 

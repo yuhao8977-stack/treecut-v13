@@ -18,6 +18,7 @@ class ErrorCategory(str, Enum):
     TREECUT_DISCONNECTED = "TREECUT_DISCONNECTED"
     PAGE_STRUCTURE_CHANGED = "PAGE_STRUCTURE_CHANGED"
     CAPTCHA_VERIFICATION = "CAPTCHA_VERIFICATION"
+    NOTE_ID_MISMATCH = "NOTE_ID_MISMATCH"  # expected note_id ≠ actual（§24 硬停）
     UNKNOWN_ERROR = "UNKNOWN_ERROR"
 
 
@@ -60,12 +61,18 @@ class CaptchaVerificationError(XhsWorkBrowserError):
     category = ErrorCategory.CAPTCHA_VERIFICATION
 
 
+class NoteIdMismatchError(XhsWorkBrowserError):
+    """expected note_id ≠ actual（§24/35：媒体/数据身份真实性硬停，绝不猜）。"""
+    category = ErrorCategory.NOTE_ID_MISMATCH
+
+
 # 硬停：不得自动猜测解决，必须 NEEDS_HUMAN（§24）
 HARD_STOP_CATEGORIES = frozenset({
     ErrorCategory.SESSION_EXPIRED,
     ErrorCategory.ACCOUNT_IDENTITY_MISMATCH,
     ErrorCategory.CAPTCHA_VERIFICATION,
     ErrorCategory.PAGE_STRUCTURE_CHANGED,
+    ErrorCategory.NOTE_ID_MISMATCH,
 })
 
 # 允许自动恢复：bounded retry / refresh / renavigate（§25）

@@ -21,6 +21,7 @@ class Checkpoint:
     state: str = "RUNNING"
     step: str = "START"
     target: str = ""
+    required_tab: str = ""  # CREATOR | SPOTLIGHT | FRONTEND（§22 任务带页面角色）
     attempt: int = 1
     idempotency_key: str = ""
     created_at: str = field(default_factory=utcnow_iso)

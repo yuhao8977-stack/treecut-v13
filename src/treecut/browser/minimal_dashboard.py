@@ -1,98 +1,155 @@
-"""XHS Work Browser V0.1 — 极简控制台（§13/14/31）。
+"""XHS Work Browser V0.1.1 — 极简控制台（§12/14/26/31）。
 
-两个主要区域：A. TreeCut Control Panel（本窗口） B. Single Work Tab（浏览器窗口）。
-V0.1 无复杂 Dashboard / 动画 / 图表；状态更新事件驱动（queue + after），不做高频轮询。
+三区块面板：
+  Creator / Spotlight / Frontend —— 各自 Session + Account + Binding
+  TreeCut Local / Current Task / Last Checkpoint
+日志面板（用户日志可见，§28 修复）+ 安全退出。
 
-按钮：打开 Creator / 打开聚光 / 检查账号 / 重新检查登录 / 继续任务 / 查看错误
+非阻塞（§28 修复）：所有浏览器/任务操作在线程中执行，经 queue 回投状态，
+Tk 主循环只做事件驱动刷新（§31），绝不阻塞 UI。
+
+按钮：同步数据 / 恢复训练媒体 / 继续任务 / 查看异常 / 检查状态 / 安全退出
+（同步数据、恢复训练媒体 = V0.1.1 占位 NOT_IMPLEMENTED）
 """
 from __future__ import annotations
 
+import logging
 import queue
 import threading
 import tkinter as tk
-from tkinter import ttk
+from tkinter import scrolledtext, ttk
 
-from treecut.browser.checkpoint_store import CheckpointStore
 from treecut.browser.workspace_manager import WorkspaceManager
 
-FIELD_KEYS = ("workspace_id", "creator", "spotlight", "account",
-              "treecut_local", "current_task", "last_checkpoint")
+ROLE_LABELS = {"CREATOR": "Creator", "SPOTLIGHT": "Spotlight", "FRONTEND": "XHS Frontend"}
+
+
+class _QueueLogHandler(logging.Handler):
+    """把日志写入 dashboard 事件队列（UI 可见）。"""
+
+    def __init__(self, events: queue.Queue):
+        super().__init__()
+        self.events = events
+
+    def emit(self, record: logging.LogRecord) -> None:  # noqa: A003
+        try:
+            self.events.put({"__log__": self.format(record)})
+        except Exception:  # pragma: no cover
+            pass
 
 
 class MinimalDashboard:
-    """回调注入：on_open_creator / on_open_spotlight / on_check_account /
-    on_recheck_login / on_resume_task / on_view_errors（测试可注入假回调）。"""
+    """回调（可注入假实现供测试）：
+    on_sync_data / on_recover_media / on_resume_task / on_view_errors / on_check_status / on_safe_exit
+    回调会在工作线程执行（非阻塞 UI）。"""
 
-    def __init__(self, workspace: WorkspaceManager, checkpoint_store: CheckpointStore,
-                 callbacks: dict | None = None):
+    def __init__(self, workspace: WorkspaceManager,
+                 callbacks: dict | None = None,
+                 log_level: int = logging.INFO):
         self.workspace = workspace
-        self.checkpoint_store = checkpoint_store
         self.callbacks = callbacks or {}
         self.events: queue.Queue = queue.Queue()
         self._values = {
-            "workspace_id": workspace.config.workspace_id,
-            "creator": "UNKNOWN", "spotlight": "UNKNOWN", "account": "UNKNOWN",
+            "creator_session": "UNKNOWN", "creator_account": "—", "creator_binding": "—",
+            "spotlight_session": "UNKNOWN", "spotlight_account": "—", "spotlight_binding": "—",
+            "frontend_session": "UNKNOWN", "frontend_account": "—", "frontend_binding": "—",
             "treecut_local": "UNKNOWN", "current_task": "IDLE", "last_checkpoint": "—",
         }
         self._labels: dict[str, tk.StringVar] = {}
+        self._log_var = None
         self.root: tk.Tk | None = None
-        self._thread: threading.Thread | None = None
+        self._busy = False
 
-    # ---- 事件驱动更新（可从任意线程调用） ----
+        handler = _QueueLogHandler(self.events)
+        handler.setLevel(log_level)
+        handler.setFormatter(logging.Formatter("%(asctime)s %(message)s", datefmt="%H:%M:%S"))
+        logging.getLogger("treecut.browser").addHandler(handler)
+
+    # ---- 事件驱动更新（任意线程可调） ----
     def post_status(self, **status: object) -> None:
         self.events.put(dict(status))
 
     def _drain(self) -> None:
+        logs: list[str] = []
         try:
             while True:
-                status = self.events.get_nowait()
-                for key, value in status.items():
+                event = self.events.get_nowait()
+                if "__log__" in event:
+                    logs.append(event["__log__"])
+                    continue
+                for key, value in event.items():
                     if key in self._values and value is not None:
                         self._values[key] = str(value)
-                    elif key == "last_checkpoint" and value:
-                        self._values["last_checkpoint"] = str(value)
         except queue.Empty:
             pass
-        self._refresh_labels()
-
-    def _refresh_labels(self) -> None:
+        if logs:
+            for line in logs:
+                self._log_var.insert(tk.END, line + "\n")
+            self._log_var.see(tk.END)
         for key, var in self._labels.items():
-            var.set(f"{key}: {self._values.get(key, '')}")
+            var.set(self._values.get(key, ""))
 
-    # ---- UI 构建 ----
+    # ---- UI ----
     def build(self) -> tk.Tk:
         root = tk.Tk()
         self.root = root
-        root.title("TreeCut XHS Work Browser")
-        root.geometry("420x300")
+        root.title("TreeCut XHS Work Browser — Workspace " + self.workspace.config.workspace_id)
+        root.geometry("560x520")
         root.resizable(False, False)
-        frame = ttk.Frame(root, padding=12)
+        frame = ttk.Frame(root, padding=10)
         frame.pack(fill="both", expand=True)
 
-        ttk.Label(frame, text="TreeCut XHS Work Browser", font=("", 12, "bold")).pack(anchor="w")
-        ttk.Label(frame, text="Workspace: " + self.workspace.config.workspace_id).pack(anchor="w", pady=(2, 6))
+        ttk.Label(frame, text="TreeCut XHS Work Browser",
+                  font=("", 12, "bold")).grid(row=0, column=0, sticky="w")
+        ttk.Label(frame, text="Workspace: " + self.workspace.config.workspace_id
+                  ).grid(row=0, column=1, sticky="e")
 
-        for key in FIELD_KEYS:
-            if key == "workspace_id":
-                continue
+        row = 1
+        for role in ("CREATOR", "SPOTLIGHT", "FRONTEND"):
+            label = ROLE_LABELS[role]
+            ttk.Label(frame, text=f"── {label} ──", font=("", 9, "bold")).grid(
+                row=row, column=0, columnspan=2, sticky="w", pady=(6, 0))
+            row += 1
+            for field, key in (("Session", f"{role.lower()}_session"),
+                               ("Account", f"{role.lower()}_account"),
+                               ("Binding", f"{role.lower()}_binding")):
+                var = tk.StringVar(value="")
+                self._labels[key] = var
+                ttk.Label(frame, text=f"{field}:").grid(row=row, column=0, sticky="w")
+                ttk.Label(frame, textvariable=var, width=44, anchor="w").grid(
+                    row=row, column=1, sticky="w")
+                row += 1
+
+        ttk.Separator(frame).grid(row=row, column=0, columnspan=2, sticky="ew", pady=6)
+        row += 1
+        for field, key in (("TreeCut Local", "treecut_local"),
+                           ("Current Task", "current_task"),
+                           ("Last Checkpoint", "last_checkpoint")):
             var = tk.StringVar(value="")
             self._labels[key] = var
-            row = ttk.Frame(frame)
-            row.pack(anchor="w", fill="x")
-            ttk.Label(row, textvariable=var, width=38, anchor="w").pack(side="left")
-        self._refresh_labels()
+            ttk.Label(frame, text=f"{field}:").grid(row=row, column=0, sticky="w")
+            ttk.Label(frame, textvariable=var, width=44, anchor="w").grid(
+                row=row, column=1, sticky="w")
+            row += 1
 
-        ttk.Separator(frame).pack(fill="x", pady=8)
+        # 日志面板（用户日志可见）
+        ttk.Label(frame, text="Log:").grid(row=row, column=0, columnspan=2, sticky="w", pady=(6, 0))
+        row += 1
+        self._log_var = scrolledtext.ScrolledText(frame, height=6, width=70,
+                                                  state=tk.NORMAL, font=("Consolas", 8))
+        self._log_var.grid(row=row, column=0, columnspan=2, sticky="ew", pady=(2, 6))
+        self._log_var.configure(state=tk.DISABLED)
+        row += 1
 
         buttons = ttk.Frame(frame)
-        buttons.pack(fill="x")
+        buttons.grid(row=row, column=0, columnspan=2, sticky="ew")
         specs = [
-            ("打开 Creator", "on_open_creator"),
-            ("打开聚光", "on_open_spotlight"),
-            ("检查账号", "on_check_account"),
-            ("重新检查登录", "on_recheck_login"),
+            ("同步数据", "on_sync_data"),
+            ("恢复训练媒体", "on_recover_media"),
             ("继续任务", "on_resume_task"),
-            ("查看错误", "on_view_errors"),
+            ("查看异常", "on_view_errors"),
+            ("检查状态", "on_check_status"),
+            ("安全退出", "on_safe_exit"),
         ]
         for i, (text, key) in enumerate(specs):
             cb = self.callbacks.get(key)
@@ -100,18 +157,35 @@ class MinimalDashboard:
                              command=lambda k=key, fn=cb: self._invoke(k, fn))
             btn.grid(row=i // 3, column=i % 3, padx=3, pady=3, sticky="ew")
             buttons.columnconfigure(i % 3, weight=1)
+        self._drain()
         return root
 
-    def _invoke(self, key: str, fn) -> None:
-        if fn is None:
-            return
-        try:
-            fn()
-        except Exception as error:  # 面板回调异常不得打断 UI
-            self.post_status(current_task=f"FAILED: {type(error).__name__}")
+    def _log(self, text: str) -> None:
+        self.events.put({"__log__": text})
 
+    def _invoke(self, key: str, fn) -> None:
+        """回调在工作线程执行 → UI 不阻塞（§28 修复）。"""
+        if fn is None:
+            self._log(f"[panel] {key}: 未注册")
+            return
+        if self._busy:
+            self._log("[panel] 上一操作仍在执行")
+            return
+
+        def worker() -> None:
+            self._busy = True
+            try:
+                fn()
+            except Exception as error:
+                self.post_status(current_task=f"FAILED: {type(error).__name__}")
+                self._log(f"[panel] {key} 失败: {error}")
+            finally:
+                self._busy = False
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    # ---- 运行 ----
     def run(self) -> None:
-        """阻塞运行控制台事件循环（close 由窗口关闭触发）。"""
         if self.root is None:
             self.build()
         root = self.root
@@ -126,14 +200,20 @@ class MinimalDashboard:
         root.mainloop()
 
     def _on_close(self) -> None:
+        safe_exit = self.callbacks.get("on_safe_exit")
+        if safe_exit is not None:
+            try:
+                safe_exit()
+            except Exception:  # pragma: no cover
+                pass
         if self.root is not None:
             self.root.destroy()
             self.root = None
 
-    # ---- §14 查看错误 ----
-    def view_errors(self) -> str:
-        """返回最近 checkpoint 的 last_error（无敏感信息）。"""
+    # ---- §14 查看异常 ----
+    def view_errors_text(self, unfinished: list) -> str:
         lines = []
-        for cp in self.checkpoint_store.unfinished(self.workspace.config.workspace_id)[-5:]:
-            lines.append(f"[{cp.updated_at}] {cp.task_type}/{cp.task_id} {cp.state} @{cp.step}: {cp.last_error or '—'}")
+        for cp in unfinished[-5:]:
+            lines.append(f"[{cp.updated_at}] {cp.task_type}/{cp.task_id} {cp.state} "
+                         f"@{cp.step} tab={cp.required_tab}: {cp.last_error or '—'}")
         return "\n".join(lines) or "无错误记录"

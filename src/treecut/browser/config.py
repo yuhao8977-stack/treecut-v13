@@ -21,12 +21,19 @@ DEFAULT_CONFIG_PATH = "config/xhs_work_browser.yaml"
 
 DEFAULT_SESSION_MARKERS = {
     "creator": {
-        "login": ["扫码登录", "登录后查看", "请登录", "安全验证", "验证码", "登录小红书"],
+        "login": ["扫码登录", "登录后查看", "请登录", "登录小红书"],
         "valid": ["发布笔记", "创作中心", "笔记管理", "数据中心", "首页"],
+        "expired": ["登录已过期", "请重新登录", "登录状态已失效", "session expired"],
     },
     "spotlight": {
-        "login": ["登录", "扫码", "验证码", "安全验证"],
+        "login": ["扫码登录", "请登录"],
         "valid": ["推广", "广告管理", "创建广告", "数据概览"],
+        "expired": ["登录已过期", "请重新登录", "登录状态已失效", "session expired"],
+    },
+    "frontend": {
+        "login": ["扫码登录", "登录小红书"],
+        "valid": ["首页", "发现", "关注", "我的"],
+        "expired": ["登录已过期", "请重新登录", "登录状态已失效", "session expired"],
     },
 }
 
@@ -42,15 +49,17 @@ class XhsWorkBrowserConfig:
     # Browser Runtime（§2）：优先现有 Chromium/Edge persistent context
     browser_channel: str = "msedge"
     headless: bool = False
-    # 固定窗口：Single Work Tab（§13/15/16）
-    work_tab_max: int = 1
+    # 固定窗口：3 Fixed Functional Tabs（Creator / Spotlight / Frontend）（§13-16）
+    expected_tab_count: int = 3
+    allow_temporary_popup: int = 1
     # 统一 Retry Policy（§22）
     retry_max_attempts: int = 3
     retry_delay_seconds: float = 2.0
     # 导航目标：仅 origin 级静态 URL，无 query（安全纪律）
     creator_home_url: str = "https://creator.xiaohongshu.com/"
     spotlight_home_url: str = "https://ad.xiaohongshu.com/"
-    # Session 判定 marker（§11：页面能打开 ≠ SESSION_VALID）
+    frontend_home_url: str = "https://www.xiaohongshu.com/"
+    # Session 判定 marker（§11：页面能打开 ≠ SESSION_VALID；三站分别判定）
     session_markers: dict = field(
         default_factory=lambda: {k: dict(v) for k, v in DEFAULT_SESSION_MARKERS.items()}
     )
@@ -58,13 +67,15 @@ class XhsWorkBrowserConfig:
     def validate(self) -> None:
         if not self.workspace_id or not self.workspace_id.strip():
             raise ValueError("workspace_id 不能为空")
-        if self.work_tab_max != 1:
-            raise ValueError("V0.1 仅支持 Single Work Tab（work_tab_max=1）")
+        if self.expected_tab_count != 3:
+            raise ValueError("V0.1.1 固定 3 个功能 Tab（expected_tab_count=3）")
+        if not (0 <= self.allow_temporary_popup <= 2):
+            raise ValueError("allow_temporary_popup 必须在 0–2 之间")
         if not (1 <= self.retry_max_attempts <= 5):
             raise ValueError("retry_max_attempts 必须在 1–5 之间")
         if not self.treecut_local_url.startswith("http"):
             raise ValueError("treecut_local_url 必须是 http(s) URL")
-        for kind in ("creator", "spotlight"):
+        for kind in ("creator", "spotlight", "frontend"):
             if kind not in self.session_markers:
                 raise ValueError(f"session_markers 缺少 {kind}")
 

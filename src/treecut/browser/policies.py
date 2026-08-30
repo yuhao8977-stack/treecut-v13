@@ -87,6 +87,12 @@ class InboxManager:
     def quarantine_path(self) -> Path:
         return self.root / "quarantine"
 
+    def published_media_path(self, workspace_id: str) -> Path:
+        """§18：正式媒体不进桌面/Downloads → treecut_inbox/published_media/{workspace}/"""
+        path = self.root / "published_media" / workspace_id
+        path.mkdir(parents=True, exist_ok=True)
+        return path
+
     def write_quarantine(self, entry: QuarantineEntry) -> Path:
         """异常数据不得直接丢失，统一进入 quarantine/（§29）。"""
         self.ensure()
