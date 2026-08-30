@@ -36,8 +36,49 @@ log = logging.getLogger("treecut.browser")
 FRONTEND_VIEW_ZH = {SESSION_VALID: "正常 ✅", SESSION_UNKNOWN: "未知"}
 
 
+class BrowserExecutor:
+    """单一线程执行所有 Playwright 操作（V0.1.2 修复 greenlet 跨线程竞争）。
+
+    Playwright Sync API 不是线程安全的：不同线程同时调用会在回调切换时抛
+    `greenlet.error: Cannot switch to a different thread`，把真实结果全部打掉。
+    所有浏览器操作（启动/检测/绑定/导航/关闭）必须经 submit() 投递到唯一的
+    owner 线程串行执行；调用线程阻塞等待结果。
+    """
+
+    def __init__(self):
+        import queue as _queue
+        self._queue: _queue.Queue = _queue.Queue()
+        self._results: _queue.Queue = _queue.Queue()
+        self._thread = threading.Thread(target=self._loop, daemon=True,
+                                        name="browser-owner")
+        self._thread.start()
+
+    def _loop(self) -> None:
+        while True:
+            job = self._queue.get()
+            if job is None:  # stop 信号
+                return
+            fn, result_q = job
+            try:
+                result_q.put((True, fn()))
+            except Exception as error:  # noqa: BLE001
+                result_q.put((False, error))
+
+    def submit(self, fn, timeout: float = 240.0):
+        """投递任务并阻塞等待结果；fn 抛出的异常在调用线程重抛。"""
+        result_q = self._results.__class__()
+        self._queue.put((fn, result_q))
+        ok, value = result_q.get(timeout=timeout)
+        if not ok:
+            raise value
+        return value
+
+    def stop(self) -> None:
+        self._queue.put(None)
+
+
 class BrowserRuntime:
-    """V0.1.2 运行时容器。"""
+    """V0.1.2 运行时容器（所有 Playwright 操作经单线程 executor 执行）。"""
 
     def __init__(self, config, paths: RuntimePaths | None = None):
         self.config = config
@@ -57,6 +98,9 @@ class BrowserRuntime:
         self.frontend_detector = FrontendIdentityDetector(self.workspace)
         self.tabs: TabManager | None = None
         self._context = None
+        self._exec = BrowserExecutor()
+        self._closed = False
+        self._exec_owns_browser = False
 
     # ---- §17/18/46 Local Bridge ----
     def local_status(self) -> str:
@@ -64,14 +108,19 @@ class BrowserRuntime:
         log.info("TreeCut 本地服务：%s", "已连接" if health.connected else "未连接")
         return health.status
 
-    # ---- 自启 Edge + 3 固定 Tab ----
+    # ---- 自启 Edge + 3 固定 Tab（全部在 executor 单线程内执行） ----
     def start_browser(self, headless: bool | None = None) -> None:
+        """投递到浏览器 owner 线程执行（Playwright 单线程纪律）。"""
+        self._exec.submit(lambda: self._launch_browser(headless))
+
+    def _launch_browser(self, headless: bool | None = None) -> None:
         self.workspace.acquire_lock()  # PROFILE_LOCKED → RuntimeError
         log.info("工作区启动：%s", self.config.workspace_id)
         context, _browser = self.profile.launch_persistent_context(headless=headless)
         self._context = context
         self.tabs = TabManager(context, self.config)
         self.tabs.create_fixed_tabs()
+        self._exec_owns_browser = True
         log.info("三固定页已建立（Creator / 聚光 / 前台）")
 
     def ensure_tabs(self) -> TabManager:
@@ -84,11 +133,13 @@ class BrowserRuntime:
     SPA_RETRY_DELAY = 1.2
 
     def check_roles(self) -> dict:
-        """返回每站 {session, identity, account_name, account_id, binding}。
+        """投递到浏览器 owner 线程执行；返回每站
+        {session, identity, account_name, account_id, binding}。"""
+        return self._exec.submit(self._check_roles)
 
-        XHS 为 SPA，启动后页面可能尚未渲染完 → 检测到 UNKNOWN 时做有界重试
-        （最多 SPA_RETRY_TRIES 次，每次间隔 SPA_RETRY_DELAY），避免误报"状态未知"。
-        """
+    def _check_roles(self) -> dict:
+        """（executor 线程内）XHS 为 SPA，启动后页面可能尚未渲染完 →
+        检测到 UNKNOWN 时做有界重试（最多 SPA_RETRY_TRIES 次，间隔 SPA_RETRY_DELAY）。"""
         import time as _time
         binding = self.workspace.load_binding()
         roles = {}
@@ -145,8 +196,11 @@ class BrowserRuntime:
             return "MISMATCH"
         return "NONE"
 
-    # ---- 绑定（面板按钮，非 CLI） ----
+    # ---- 绑定（面板按钮，非 CLI；executor 单线程内执行） ----
     def bind_creator(self) -> str:
+        return self._exec.submit(self._bind_creator)
+
+    def _bind_creator(self) -> str:
         tab = self.ensure_tabs().get("CREATOR")
         detected = self.creator_detector.detect(tab) if tab else None
         if not detected:
@@ -158,6 +212,9 @@ class BrowserRuntime:
         return msg
 
     def bind_spotlight(self) -> str:
+        return self._exec.submit(self._bind_spotlight)
+
+    def _bind_spotlight(self) -> str:
         tab = self.ensure_tabs().get("SPOTLIGHT")
         detected = self.spotlight_detector.detect(tab) if tab else None
         if not detected:
@@ -184,6 +241,24 @@ class BrowserRuntime:
         return "NOT_IMPLEMENTED: 训练媒体恢复留待 V0.6"
 
     def close(self) -> None:
+        """安全退出。浏览器由 executor 启动时 → 关闭也在 executor 单线程内执行（优雅落盘）；
+        smoke/probe 直接启动（主线程）时 → 在主线程直接关闭，避免跨线程操作 Playwright。"""
+        if self._closed:
+            return
+        self._closed = True
+        if self._exec_owns_browser:
+            try:
+                self._exec.submit(self._do_close, timeout=60)
+            except Exception:  # pragma: no cover — 已断开等情况
+                pass
+            finally:
+                self._exec.stop()
+        else:
+            self.profile.close()
+            self.workspace.release_lock()
+            log.info("安全退出完成")
+
+    def _do_close(self) -> None:
         self.profile.close()
         self.workspace.release_lock()
         log.info("安全退出完成")

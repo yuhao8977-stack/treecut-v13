@@ -565,28 +565,74 @@ class TestCheckRolesSpaRetry:
     def test_session_recovers_after_spa_render(self, tmp_path, monkeypatch):
         """SPA 前几秒未渲染 → 有界重试后得出 已登录 + 识别账号（真实验收 C/D 的机制保障）。"""
         runtime = self._runtime(tmp_path, monkeypatch)
-        page = ProgressivePage(url="https://creator.xiaohongshu.com/",
-                               name="KUBON坤宝高端岛台工厂",
-                               html="创作中心 发布笔记 小红书号: xhsB007", ready_at=2)
-        runtime.tabs = _FakeTabs({"CREATOR": page})
-        roles = runtime.check_roles()
-        creator = roles["CREATOR"]
-        assert creator["session"] == SESSION_VALID
-        assert creator["account_name"] == "KUBON坤宝高端岛台工厂"
-        assert creator["account_id"] == "xhsB007"
-        # 第 2 次尝试即成功（每次尝试 session+body 各读一次 content → 2 次尝试 = 4 次封顶），未空转
-        assert page.content_calls <= 4
+        try:
+            page = ProgressivePage(url="https://creator.xiaohongshu.com/",
+                                   name="KUBON坤宝高端岛台工厂",
+                                   html="创作中心 发布笔记 小红书号: xhsB007", ready_at=2)
+            runtime.tabs = _FakeTabs({"CREATOR": page})
+            roles = runtime.check_roles()
+            creator = roles["CREATOR"]
+            assert creator["session"] == SESSION_VALID
+            assert creator["account_name"] == "KUBON坤宝高端岛台工厂"
+            assert creator["account_id"] == "xhsB007"
+            # 第 2 次尝试即成功（每次尝试 session+body 各读一次 content → 2 次尝试 = 4 次封顶），未空转
+            assert page.content_calls <= 4
+        finally:
+            runtime.close()
 
     def test_never_ready_bounded(self, tmp_path, monkeypatch):
         """页面始终无信号 → 有界重试（SPA_RETRY_TRIES 次）后保持 UNKNOWN，不无限循环。"""
         runtime = self._runtime(tmp_path, monkeypatch)
-        page = ProgressivePage(url="https://creator.xiaohongshu.com/",
-                               name=None, html="", ready_at=99)
-        runtime.tabs = _FakeTabs({"CREATOR": page})
-        roles = runtime.check_roles()
-        assert roles["CREATOR"]["session"] == SESSION_UNKNOWN
-        # 每次尝试 session+body 各读一次 → 总调用 = 2 × SPA_RETRY_TRIES（有界）
-        assert page.content_calls == runtime.SPA_RETRY_TRIES * 2
+        try:
+            page = ProgressivePage(url="https://creator.xiaohongshu.com/",
+                                   name=None, html="", ready_at=99)
+            runtime.tabs = _FakeTabs({"CREATOR": page})
+            roles = runtime.check_roles()
+            assert roles["CREATOR"]["session"] == SESSION_UNKNOWN
+            # 每次尝试 session+body 各读一次 → 总调用 = 2 × SPA_RETRY_TRIES（有界）
+            assert page.content_calls == runtime.SPA_RETRY_TRIES * 2
+        finally:
+            runtime.close()
+
+
+# ============================================================
+# BrowserExecutor（Playwright 单线程纪律：跨线程调用不串扰）
+# ============================================================
+class TestBrowserExecutor:
+    def test_serialized_results_and_exception_propagation(self):
+        from treecut.browser.main import BrowserExecutor
+        ex = BrowserExecutor()
+        try:
+            assert [ex.submit(lambda i=i: i * 2) for i in range(5)] == [0, 2, 4, 6, 8]
+            with pytest.raises(ValueError):
+                ex.submit(lambda: (_ for _ in ()).throw(ValueError("boom")))
+        finally:
+            ex.stop()
+
+    def test_concurrent_submits_no_crosstalk(self):
+        """多线程并发投递 → 单线程串行执行，结果一一对应（greenlet 竞争修复的机制保障）。"""
+        import threading
+        from treecut.browser.main import BrowserExecutor
+        ex = BrowserExecutor()
+        try:
+            outputs = {}
+            errors = []
+
+            def worker(idx: int) -> None:
+                try:
+                    outputs[idx] = ex.submit(lambda i=idx: i * 10 + 1)
+                except Exception as error:  # noqa: BLE001
+                    errors.append((idx, error))
+
+            threads = [threading.Thread(target=worker, args=(i,)) for i in range(8)]
+            for t in threads:
+                t.start()
+            for t in threads:
+                t.join()
+            assert not errors
+            assert all(outputs[i] == i * 10 + 1 for i in range(8))
+        finally:
+            ex.stop()
 
 
 # ============================================================
