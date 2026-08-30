@@ -2,26 +2,37 @@
 
 - 日期：2026-08-30
 - 阶段：Stage 3A.7（Pilot20 已发布媒体恢复）
-- 最终状态：**STAGE3A7_PILOT20_TOOLING_READY（等待用户浏览器执行 19 条恢复）** — 最终裁定（PASS / PASS_WITH_LIMITATIONS / NEEDS_MEDIA_REPAIR / RECOVERY_BIAS_DETECTED）仅在浏览器恢复 + 本地验证完成后出具
+- 最终状态：**STAGE3A7_PILOT20_TOOLING_READY（sample_definition=CORRECTED_AND_FROZEN，等待用户浏览器执行 20 条 Formal Pilot20 恢复；TECH_PILOT1 单独统计）** — 最终裁定（PASS / PASS_WITH_LIMITATIONS / NEEDS_MEDIA_REPAIR / RECOVERY_BIAS_DETECTED）仅在浏览器恢复 + 本地验证完成后出具
 - 前序：Stage 3A.6 Pilot1 EXACT PUBLISHED MEDIA 端到端 PASS（commit `c46b1b8`）
 
 ---
 
 ## 1. 范围与架构师批准（§0-55 固化）
 
-架构师批准（Stage3A.7 约束）：
+架构师批准（Stage3A.7 约束，含 Sample Definition 修正裁定）：
 
-- **Pilot20 = 总共 20 条**。Pilot1 已完成，本轮只恢复**剩余 19 条**，不是再加 20 条。
-- **不再研发新恢复路线**；目标从"研究怎么恢复视频"切换为"**验证路线在高中低表现 20 条上稳定，形成可靠媒体样本集**"。
+- **Pilot20 = 原始冻结 20 条，全部待恢复（PILOT20_TOTAL = 20，PENDING = 20）**。
+- **TECH_PILOT1（6a8d75aa000000002503e3e2）= 独立技术验证样本，不计入正式 Pilot20 统计**（第 21 条 Known Good Reference）。
+- 不再研发新恢复路线；目标从"研究怎么恢复视频"切换为"**验证路线在高中低表现 20 条上稳定，形成可靠媒体样本集**"。
+- **19 → 20 是 Sample Definition Correction，不是样本扩容**：未新增任何笔记；'Remaining 19' 基于 'Pilot20 = Pilot1 + 19' 的错误文字假设（Pilot1 从未属于 Frozen Pilot20），程序化核验 V1/V2/V3 历史 manifest 均不含 6a8d75aa。强行事后删 1 条凑 19 将改变预选 strata / duration / publish-time / diversity → POST_HOC_SAMPLE_SELECTION_BIAS。**Frozen Manifest Truth 优先于文字假设**。
 - 禁止自动扩展到 155 条（155 库身份已建，媒体恢复不在本轮）。
 - 禁止：Content DNA、Template Mining、Account DNA、Script Intelligence、Director、AutoCut。
 
-## 2. 数据事实澄清（必须知会用户）
+## 2. 样本定义修正（CORRECTED_AND_FROZEN）
 
-- **Pilot1（note 6a8d75aa）不在本轮 20 条清单内**。Pilot1 是 Stage3A.6 的独立技术侦察样本（KNOWN_GOOD_REFERENCE / PILOT20_SAMPLE_01），程序化核验过：Pilot20 V1/V2/V3 清单均不含 6a8d75aa。
-- 架构师表述"剩余 19 条"与本轮清单 **20 条**的差异 = **Pilot1 的位置归属**：20 条 = Pilot1（已完成）+ 19 条（本轮恢复），清单本身保持原 Pilot20 的 20 条选择（HIGH 7/MID 7/LOW 6 的原始分层，无重抽）。
-- 本报告清单 `B003_PILOT20_REMAINING19_MANIFEST_V1.json` 记录 20 条待恢复（HIGH 6/MID 7/LOW 7 —— 该 JSON 独立分层，Pilot1 单独挂靠为参考）。
-- **待用户确认**：20 条清单是否为预期恢复集（见末尾用户操作指令）。
+架构师裁定（已接受，执行记录见 `B003_PILOT20_SAMPLE_DEFINITION_CORRECTION_V1.json`）：
+
+- **TECH_PILOT1**：1 条独立技术验证样本（note `6a8d75aa000000002503e3e2`），用途=验证 Published Playback → Exact Media → Canonical Asset → Segment → ASR → Business Cognition 技术链路。**不计入正式 Pilot20 统计样本**。
+- **FORMAL PILOT20**：使用此前已冻结的**原始 20 条 manifest**，全部待恢复（PENDING_RECOVERY = 20）。**不得**因 Pilot1 成功而从原 Pilot20 删除任意 1 条。
+- 整个 Stage3A 最多形成 **21 条 Exact Published Media 样本 = 1 Tech Pilot + 20 Formal Pilot20**。
+- **性能分层（冻结）**：HIGH = 6，MID = 7，LOW = 7（冻结 manifest 实际结果，保持不变）；此前 "HIGH 7/MID 7/LOW 6" 描述标记 **SUPERSEDED_BY_FROZEN_MANIFEST_AUDIT**。
+- **Pilot1 处置**：KNOWN_GOOD_REFERENCE / TECHNICAL_BASELINE；不得重新下载、不得重复注册、不得混入 Pilot20 恢复成功率分子/分母。
+- **统计必须分开**：TECH PILOT = 1/1 Exact；FORMAL PILOT20 = X/20 Exact（+ Blocked / Invalid / Conflict + High X/6 / Mid X/7 / Low X/7）。**禁止报告 X/21 作为 Pilot20 成功率**；允许额外报告 TOTAL_RECOVERED_REFERENCE_MEDIA = Pilot1 + Formal Pilot20 Exact。
+- **Content DNA 纪律**：Pilot20 正式 20 条 = stratified analytical sample；Pilot1 不得因技术恢复成功自动加入 winner/control 分析样本（须满足 Candidate Selection Policy 才可作为额外内容样本）。
+- **Recovery Bias 仅针对 Formal Pilot20** 计算（performance stratum / 发布时间 / duration / codec / 媒体形式），Pilot1 不混入。
+
+正式恢复清单：`B003_PILOT20_RECOVERY_MANIFEST_V2.json`（20 条，字段 pilot_index/note_id/title/publish_time/published_duration/performance_stratum/cover_sha256/current_status/expected_filename，不含 Pilot1）。
+旧 `B003_PILOT20_REMAINING19_MANIFEST_V1.json`：**保留文件**，标 `SUPERSEDED_SAMPLE_DEFINITION_ERROR`，禁止继续消费。
 
 ## 3. 冻结的有效技术事实（Pilot1 验证）
 
@@ -94,8 +105,10 @@ WAVE1=5 → WAVE2=5 → WAVE3=10。**Wave1 门**：同一系统性错误 ≥3/5 
 
 | # | 问题 | 状态 |
 |---|---|---|
-| 1 | Pilot20 总样本是否 20 条 | ✅ 是（清单 20；Pilot1 已完成为参考，不在清单） |
-| 2 | 是否重抽分层 | ✅ 否（保持原 HIGH 7/MID 7/LOW 6 选择） |
+| 1 | Pilot20 总样本是否 20 条 | ✅ 是（冻结 20 条全部待恢复；Pilot1=TECH_PILOT1 排除在正式样本外） |
+| 2 | 是否重抽分层 | ✅ 否（保持冻结 HIGH 6/MID 7/LOW 7；7/7/6 描述 SUPERSEDED_BY_FROZEN_MANIFEST_AUDIT） |
+| 2a | 19→20 是否样本扩容 | ✅ 否（Sample Definition Correction：未新增笔记，'Remaining19' 基于错误文字假设，Pilot1 从未属于 Frozen Pilot20） |
+| 2b | 是否事后删除原 Pilot20 任一条 | ✅ 否（避免 POST_HOC_SAMPLE_SELECTION_BIAS，Frozen Manifest Truth 优先） |
 | 3 | 是否新增恢复路线 | ✅ 否（沿用 Pilot1 验证路线） |
 | 4 | 是否废弃随机 blob 拾取 | ✅ 已废弃 |
 | 5 | 是否废弃 206 Range 逻辑 | ✅ V2_RANGE_LOGIC_DEFECT_CONFIRMED 废弃 |
@@ -136,17 +149,19 @@ WAVE1=5 → WAVE2=5 → WAVE3=10。**Wave1 门**：同一系统性错误 ≥3/5 
 
 | # | 文件（DATA_ROOT = runtime_data/temp/batch1） | 状态 |
 |---|---|---|
-| 1 | `B003_PILOT20_REMAINING19_MANIFEST_V1.json` | ✅ 完成（20 条，含 cover sha256/路径） |
-| 2 | `B003_PILOT20_BROWSER_RECOVERY_RESULTS_V1.json` | ✅ 模板就位（PENDING） |
+| 0 | `B003_PILOT20_SAMPLE_DEFINITION_CORRECTION_V1.json` | ✅ 完成（19→20 修正裁定执行记录） |
+| 1 | `B003_PILOT20_RECOVERY_MANIFEST_V2.json` | ✅ 完成（正式 20 条，无 Pilot1，字段合规） |
+| 1a | `B003_PILOT20_REMAINING19_MANIFEST_V1.json` | ⚠️ 保留，标 `SUPERSEDED_SAMPLE_DEFINITION_ERROR`，禁止继续消费 |
+| 2 | `B003_PILOT20_BROWSER_RECOVERY_RESULTS_V1.json` | ✅ 模板就位（引用 V2，PENDING） |
 | 3 | `B003_PILOT20_MEDIA_VALIDATION_V1.json` | ✅ 桩就位（PENDING） |
-| 4 | `B003_PLATFORM_REFERENCE_ASSETS_V5.json` | ✅ 桩就位（V4 含 Pilot1 EXACT，exact_count=1） |
+| 4 | `B003_PLATFORM_REFERENCE_ASSETS_V5.json` | ✅ 桩就位（V4 含 Pilot1 EXACT，exact_count=1，TECH_PILOT 单独统计） |
 | 5 | `B003_PILOT20_CANONICAL_ASSET_LINKS_V1.json` | ✅ 桩就位（PENDING） |
 | 6 | `B003_PILOT20_REPOST_CLUSTERS_V3.json` | ✅ 桩就位（PENDING） |
 | 7 | `B003_PILOT20_SEGMENT_VALIDATION_V1.json` | ✅ 桩就位（PENDING） |
 | 8 | `B003_PILOT20_ASR_COVERAGE_V1.json` | ✅ 桩就位（PENDING） |
 | 9 | `B003_PILOT20_BUSINESS_COGNITION_V21.json` | ✅ 桩就位（PENDING） |
 | 10 | `B003_PILOT20_END_TO_END_COVERAGE_V1.json` | ✅ 桩就位（PENDING） |
-| 11 | `B003_PILOT20_RECOVERY_BIAS_AUDIT_V1.json` | ✅ 桩就位（PENDING） |
+| 11 | `B003_PILOT20_RECOVERY_BIAS_AUDIT_V1.json` | ✅ 桩就位（PENDING；仅 Formal Pilot20） |
 | 12 | `B003_PILOT20_LOCAL_REVERSE_MATCH_V1.json` | ✅ 桩就位（PENDING） |
 
 工具：`tools/B003_PILOT20_RECOVER_CURRENT_NOTE_V1.js`（node 语法核验通过，6,472 B）。
@@ -154,6 +169,14 @@ WAVE1=5 → WAVE2=5 → WAVE3=10。**Wave1 门**：同一系统性错误 ≥3/5 
 
 ## 11. 当前裁定与后续
 
-**STAGE3A7_PILOT20_TOOLING_READY** —— 清单、工具、验证规格、输出桩全部就位。阶段性 STOP（不自动扩展、不推进任何被禁模块）。
+**STAGE3A7_PILOT20_TOOLING_READY**
 
-用户浏览器执行后（每条 `explore/{note_id}` → 贴工具 → 播放 → `__B003Pilot20RecoverCurrent()` → 保存 `B003_{note_id}_FULL.mp4`，建议波次 5+5+10），把文件交回 Harness → 本地验证 → EXACT 升级 → 资产/分段/ASR/认知/端到端/偏倚 → 最终 STAGE3A.7 裁定 → STAGE3B_READY 判定。
+- sample_definition = **CORRECTED_AND_FROZEN**
+- formal_pilot20 = **20**（HIGH 6 / MID 7 / LOW 7）
+- pending = **20**
+- tech_pilot1 = **EXACT / OUTSIDE_FORMAL_SAMPLE**
+- PHASE4_STAGE3B_READY = **FALSE**（仅本报告后由 Formal Pilot20 结果裁定）
+
+浏览器恢复已正式批准：**Formal Pilot20 全部 20 条**（无需再次 Stage 审批），Wave1=5 / Wave2=5 / Wave3=10，Wave1 门同种系统性错误 ≥3/5 → STOP 修工具。阶段性 STOP（不自动扩展、不推进任何被禁模块）。
+
+用户浏览器执行后（每条 `explore/{note_id}` → 贴工具 → 播放 → `__B003Pilot20RecoverCurrent()` → 保存 `B003_{note_id}_FULL.mp4`，建议波次 5+5+10），把文件交回 Harness → 本地验证 → EXACT 升级 → 资产/分段/ASR/认知/端到端/偏倚 → 最终 Stage3A.7 统计（**TECH PILOT 1/1 与 FORMAL PILOT20 X/20 分开报告；High X/6 / Mid X/7 / Low X/7；禁止 X/21**）→ STAGE3B_READY 判定。
