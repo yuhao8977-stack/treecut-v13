@@ -583,6 +583,56 @@ class TestCheckRolesSpaRetry:
 
 
 # ============================================================
+# Dashboard 管线（验收 G：日志面板有事件；中文渲染；绑定按钮）
+# ============================================================
+class TestDashboardPipeline:
+    def test_log_and_status_reach_panel(self, tmp_path):
+        try:
+            import tkinter  # noqa: F401
+        except Exception:
+            pytest.skip("tkinter 不可用（无桌面会话）")
+        from treecut.browser.minimal_dashboard import MinimalDashboard
+        ws = WorkspaceManager(make_config(tmp_path))
+        dashboard = MinimalDashboard(ws, callbacks={})
+        root = dashboard.build()
+        root.withdraw()  # 不显示窗口（无打扰验证）
+        try:
+            dashboard.post_status(
+                creator_session="SESSION_VALID",
+                creator_account="KUBON坤宝高端岛台工厂",
+                creator_xhs_id="63083262719",
+                creator_binding="BOUND",
+                treecut_local="CONNECTED",
+                current_task="IDLE",
+                last_checkpoint=None,
+            )
+            dashboard._log("工作区启动：B007")
+            dashboard._log("Creator 已登录")
+            dashboard._drain()
+
+            # 状态进入面板并中文渲染
+            assert dashboard._values["creator_session"] == "SESSION_VALID"
+            assert "已登录" in dashboard._render("creator_session")
+            assert dashboard._render("creator_xhs_id") == "小红书号：63083262719"
+            assert dashboard._render("current_task") == "当前任务：空闲"
+            assert dashboard._render("last_checkpoint") == "上次进度：暂无"
+
+            # 日志已进入面板文本（验收 G）
+            text = dashboard._log_var.get("1.0", "end")
+            assert "工作区启动：B007" in text
+            assert "Creator 已登录" in text
+
+            # 绑定按钮：PENDING 时启用（验收绑定 UX）
+            dashboard.post_status(creator_binding="PENDING")
+            dashboard._drain()
+            dashboard._refresh_bind_buttons()
+            assert dashboard._bind_creator_btn.instate(("!disabled",))
+            assert dashboard._bind_spotlight_btn.instate(("disabled",))
+        finally:
+            root.destroy()
+
+
+# ============================================================
 # Local Bridge（Test D）
 # ============================================================
 class TestLocalBridge:
