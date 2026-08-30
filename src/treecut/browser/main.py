@@ -1,21 +1,19 @@
-"""TreeCut XHS Work Browser V0.1.1 — 启动流（三固定 Tab + Single Worker）。
+"""TreeCut XHS Work Browser V0.1.2 — 启动流（三固定 Tab + 自动状态检测 + 中文面板）。
 
 用法：
-  python -m treecut.browser.main --workspace B007                       # 图形控制台 + 3 固定功能 Tab
-  python -m treecut.browser.main --workspace B007 --smoke               # headless 自检（3 Tab/持久化/reconcile/重建）
-  python -m treecut.browser.main --workspace B007 --bind-account 昵称   # §9 Creator 主身份绑定（人工确认）
-  python -m treecut.browser.main --workspace B007 --bind-spotlight "广告账户ID|名称"  # §10 聚光绑定
-  python -m treecut.browser.main --workspace B007 --confirm-frontend 昵称           # §11 前台绑定确认
+  python -m treecut.browser.main --workspace B007            # 图形控制台（中文）+ 3 固定 Tab + 自动检测
+  python -m treecut.browser.main --workspace B007 --smoke    # headless 自检（3 Tab/持久化/去重/收束/重建）
 
-启动流：加载 Profile → Profile Lock → TreeCut Local health → Persistent Context →
-3 Fixed Functional Tabs（Creator/Spotlight/Frontend）→ 控制台。
-V0.1.1 不抓任何业务数据；【同步数据】【恢复训练媒体】为占位（NOT_IMPLEMENTED）。
+启动：Profile Lock → TreeCut Local health → 自启 Edge（无 --no-sandbox，CDP 接管）
+→ 3 Fixed Tabs → 自动串行检测 Creator/Spotlight/Frontend 状态并显示到面板。
+V0.1.2 不抓业务数据；同步数据/恢复训练视频按钮 disabled（下一阶段启用）。
 """
 from __future__ import annotations
 
 import argparse
 import logging
 import sys
+import threading
 
 from treecut.browser.account_detector import (
     CreatorIdentityDetector,
@@ -27,7 +25,7 @@ from treecut.browser.config import load_config
 from treecut.browser.local_bridge import LocalBridge
 from treecut.browser.profile_manager import ProfileManager
 from treecut.browser.retry_policy import BoundedRetry
-from treecut.browser.session_detector import SESSION_UNKNOWN, SessionDetector
+from treecut.browser.session_detector import SESSION_VALID, SESSION_UNKNOWN, SessionDetector
 from treecut.browser.tab_manager import TabManager
 from treecut.browser.task_engine import TaskEngine
 from treecut.browser.workspace_manager import WorkspaceManager
@@ -35,9 +33,11 @@ from treecut.platform.paths import RuntimePaths
 
 log = logging.getLogger("treecut.browser")
 
+FRONTEND_VIEW_ZH = {SESSION_VALID: "正常 ✅", SESSION_UNKNOWN: "未知"}
+
 
 class BrowserRuntime:
-    """V0.1.1 运行时容器：Workspace / Profile / Tabs / Bridge / Store / Engine / Detectors。"""
+    """V0.1.2 运行时容器。"""
 
     def __init__(self, config, paths: RuntimePaths | None = None):
         self.config = config
@@ -61,92 +61,109 @@ class BrowserRuntime:
     # ---- §17/18/46 Local Bridge ----
     def local_status(self) -> str:
         health = self.bridge.health()
-        log.info("TREECUT_%s", health.status)
+        log.info("TreeCut 本地服务：%s", "已连接" if health.connected else "未连接")
         return health.status
 
-    # ---- §6/13 固定工作浏览器 + 3 固定 Tab ----
+    # ---- 自启 Edge + 3 固定 Tab ----
     def start_browser(self, headless: bool | None = None) -> None:
         self.workspace.acquire_lock()  # PROFILE_LOCKED → RuntimeError
+        log.info("工作区启动：%s", self.config.workspace_id)
         context, _browser = self.profile.launch_persistent_context(headless=headless)
         self._context = context
         self.tabs = TabManager(context, self.config)
         self.tabs.create_fixed_tabs()
+        log.info("三固定页已建立（Creator / 聚光 / 前台）")
 
     def ensure_tabs(self) -> TabManager:
         if self.tabs is None:
             raise RuntimeError("browser not started")
         return self.tabs
 
-    # ---- §26 三站独立健康检查 ----
+    # ---- §4/§5 三站自动状态检测（Single Worker 串行） ----
     def check_roles(self) -> dict:
+        """返回每站 {session, identity, account_name, account_id, binding}。"""
+        binding = self.workspace.load_binding()
         roles = {}
-        for role, kind in (("CREATOR", "creator"), ("SPOTLIGHT", "spotlight"),
-                           ("FRONTEND", "frontend")):
+        specs = [
+            ("CREATOR", "creator", self.creator_detector, "creator_xhs_id"),
+            ("SPOTLIGHT", "spotlight", self.spotlight_detector, "spotlight_ad_account_id"),
+            ("FRONTEND", "frontend", self.frontend_detector, "frontend_user_id"),
+        ]
+        for role, kind, detector, bound_field in specs:
             tab = self.ensure_tabs().get(role)
             tab_alive = tab is not None and not tab.is_closed()
-            session = SESSION_UNKNOWN
-            identity = "UNKNOWN"
-            account = "—"
+            session, identity, account_name, account_id = SESSION_UNKNOWN, "UNKNOWN", None, None
             if tab_alive:
                 try:
                     session = self.session_detector.check(tab, kind).status
                 except Exception:
                     session = SESSION_UNKNOWN
-                detector = {"CREATOR": self.creator_detector,
-                            "SPOTLIGHT": self.spotlight_detector,
-                            "FRONTEND": self.frontend_detector}[role]
                 try:
                     detected = detector.detect(tab)
                     identity, _reason = detector.gate(detected)
-                    account = detected.display_name if detected else "—"
+                    if detected:
+                        account_name = detected.display_name
+                        account_id = detected.primary_id
                 except Exception:
                     identity = "UNKNOWN"
-            roles[role] = {"tab_alive": tab_alive, "session": session,
-                           "identity": identity, "account": account}
-            log.info("%s TAB_ALIVE=%s SESSION=%s IDENTITY=%s",
-                     role, tab_alive, session, identity)
+            binding_state = self._binding_state(role, identity, account_id,
+                                                binding, bound_field)
+            roles[role] = {
+                "tab_alive": tab_alive, "session": session, "identity": identity,
+                "account_name": account_name, "account_id": account_id,
+                "binding": binding_state,
+            }
+            log.info("%s 登录状态=%s 身份=%s 绑定=%s",
+                     role, session, identity, binding_state)
         return roles
 
-    # ---- §10/11 绑定 ----
-    def bind_creator(self, name: str) -> str:
+    @staticmethod
+    def _binding_state(role, identity, account_id, binding, bound_field) -> str:
+        if role == "FRONTEND":
+            return "OPTIONAL"  # §10 前台绑定可选，不作 B007 硬性要求
+        bound = bool(binding and getattr(binding, bound_field, ""))
+        if not bound:
+            return "PENDING" if account_id else "NONE"
+        if identity == "ACCOUNT_IDENTITY_VALID":
+            return "BOUND"
+        if identity == "ACCOUNT_IDENTITY_MISMATCH":
+            return "MISMATCH"
+        return "NONE"
+
+    # ---- 绑定（面板按钮，非 CLI） ----
+    def bind_creator(self) -> str:
         tab = self.ensure_tabs().get("CREATOR")
         detected = self.creator_detector.detect(tab) if tab else None
         if not detected:
-            return "Creator 页面未检测到账号，无法绑定"
+            log.info("未检测到 Creator 账号，无法绑定")
+            return "未检测到 Creator 账号"
         self.creator_detector.bind(detected)
-        return f"Creator 已绑定 {detected.display_name} (xhs_id={detected.primary_id}) -> {self.config.workspace_id}"
+        msg = f"Creator 已绑定：{detected.display_name}（小红书号 {detected.primary_id}）→ {self.config.workspace_id}"
+        log.info(msg)
+        return msg
 
-    def bind_spotlight(self, spec: str) -> str:
-        """spec 格式：广告账户ID|名称（用户从聚光后台人工确认后传入）。"""
-        if "|" in spec:
-            ad_id, name = spec.split("|", 1)
-        else:
-            ad_id, name = spec, spec
-        from treecut.browser.account_detector import RoleIdentity
-        self.spotlight_detector.bind(RoleIdentity(role="spotlight",
-                                                  primary_id=ad_id.strip(),
-                                                  display_name=name.strip(),
-                                                  source_page="cli:confirm"))
-        return f"聚光广告账户已绑定 {name.strip()} ({ad_id.strip()}) -> {self.config.workspace_id}"
+    def bind_spotlight(self) -> str:
+        tab = self.ensure_tabs().get("SPOTLIGHT")
+        detected = self.spotlight_detector.detect(tab) if tab else None
+        if not detected:
+            log.info("未检测到聚光广告账户，无法绑定")
+            return "未检测到聚光广告账户"
+        self.spotlight_detector.bind(detected)
+        msg = f"聚光广告账户已绑定：{detected.display_name}（{detected.primary_id}）→ {self.config.workspace_id}"
+        log.info(msg)
+        return msg
 
-    def confirm_frontend(self, name: str) -> str:
-        from treecut.browser.account_detector import RoleIdentity
-        self.frontend_detector.confirm(RoleIdentity(role="frontend",
-                                                    primary_id=name.strip(),
-                                                    display_name=name.strip(),
-                                                    source_page="cli:confirm"))
-        return f"前台账号已确认绑定 {name.strip()} -> {self.config.workspace_id}"
-
-    # ---- §19/21 任务（V0.1.1 仅 mock/续跑，无业务 Action） ----
+    # ---- 任务（V0.1.2 仅续跑，无业务 Action） ----
     def resume_task(self) -> str:
         if self.engine.resume_unfinished():
             result = self.engine.run()
-            return f"resumed -> {result.state} @{result.step}"
+            msg = f"任务续跑 -> {result.state} @{result.step}"
+            log.info(msg)
+            return msg
         return "无未完成任务"
 
-    # ---- 占位（V0.1.1 不抓业务数据） ----
     def sync_data(self) -> str:
-        return "NOT_IMPLEMENTED: 数据同步（Creator/Spotlight）留待 V0.2/V0.3"
+        return "NOT_IMPLEMENTED: 数据同步留待 V0.2/V0.3"
 
     def recover_media(self) -> str:
         return "NOT_IMPLEMENTED: 训练媒体恢复留待 V0.6"
@@ -154,29 +171,23 @@ class BrowserRuntime:
     def close(self) -> None:
         self.profile.close()
         self.workspace.release_lock()
+        log.info("安全退出完成")
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="treecut-xhs-browser",
-                                     description="TreeCut XHS Work Browser V0.1.1")
+                                     description="TreeCut 小红书工作浏览器 V0.1.2")
     parser.add_argument("--workspace", default="B007")
     parser.add_argument("--headless", action="store_true")
     parser.add_argument("--profile-root", default="", help="覆盖 Profile 根目录（测试用）")
     parser.add_argument("--treecut-url", default="", help="覆盖 TreeCut Local URL")
-    parser.add_argument("--bind-account", default="", help="Creator 主身份绑定（人工确认）")
-    parser.add_argument("--bind-spotlight", default="", help="聚光广告账户绑定 广告ID|名称")
-    parser.add_argument("--confirm-frontend", default="", help="前台账号绑定确认")
     parser.add_argument("--smoke", action="store_true", help="无 UI 自检模式")
     return parser
 
 
 def run_smoke(config) -> int:
-    """Test A 机制（三站持久化）+ §13-16 三 Tab + §14 reconcile + §25 重建（headless）。
-
-    本地临时 HTTP 页面承载 localStorage；不访问真实站点，真实登录人工验收。
-    """
+    """Test A 机制 + 三 Tab + 重复页去重 + 收束 + 重建 + 持久化（headless，离线本地页）。"""
     import http.server
-    import threading
 
     from treecut.browser.policies import utcnow_iso
 
@@ -197,7 +208,6 @@ def run_smoke(config) -> int:
     threading.Thread(target=page_server.serve_forever, daemon=True).start()
     page_url = f"http://127.0.0.1:{page_port}/"
 
-    # smoke 离线：三个固定 Tab 的导航目标指向本地页面服务器（不访问真实站点）
     config.creator_home_url = page_url
     config.spotlight_home_url = page_url
     config.frontend_home_url = page_url
@@ -208,49 +218,38 @@ def run_smoke(config) -> int:
         context, _ = runtime.profile.launch_persistent_context(headless=True)
         runtime._context = context
         runtime.tabs = TabManager(context, config)
-        runtime.tabs.create_fixed_tabs()  # 3 个固定 Tab
+        runtime.tabs.create_fixed_tabs()
         three_tabs = len(context.pages) == 3
-        frontend = runtime.tabs.get("FRONTEND")
-        frontend.evaluate("localStorage.setItem('v011_key', 'persisted_three_tab')")
+        runtime.tabs.get("FRONTEND").evaluate(
+            "localStorage.setItem('v012_key', 'persisted_v012')")
 
-        # §13：Frontend Tab 反复导航仍是同一 Tab（不为每条视频开新 Tab）
+        # 重复 Frontend 页（§12）：同 origin 非 canonical → 关闭
+        dup = context.new_page()
+        dup.goto(page_url)  # 与托管页同 origin
+        dedupe = runtime.tabs.dedupe_managed()
+        dedupe_closed = len(context.pages) == 3 and len(dedupe["closed_duplicates"]) == 1
+
+        # §13：Frontend 反复导航不新增 Tab
         for _ in range(3):
             runtime.tabs.get("FRONTEND").goto(page_url)
         reuse = len(context.pages) == 3
 
-        # §14：3 固定 + 1 允许弹窗不动作；弹窗处理完关闭；再多空白页收束；用户页不盲目关闭
-        popup = context.new_page()
-        popup.goto("about:blank")
-        result = runtime.tabs.reconcile()
-        popup_allowed = result["actual"] == 4 and result["closed_extras"] == []
-        popup.close()
-        blank2 = context.new_page()  # 超限空白页
-        user_page = context.new_page()
-        user_page.goto(page_url + "user-like-page")  # 模拟用户页（非 blank、非我方）
-        result2 = runtime.tabs.reconcile()
-        reconcile_closed = result2["actual"] == 4 and \
-            result2["closed_extras"] == ["blank-temp"] and result2["left_untouched"] == 1
-        user_page.close()  # 收束测试结束，清理模拟用户页
-
-        # §25：Frontend Tab 崩溃 → 重建，仍是 3 Tab
-        frontend.close()
+        # §25：Tab 崩溃重建
+        runtime.tabs.get("FRONTEND").close()
         runtime.tabs.rebuild("FRONTEND")
         rebuild = len(context.pages) == 3
 
-        runtime.profile.close()  # 模拟退出
-
+        runtime.profile.close()
         context2, _ = runtime.profile.launch_persistent_context(headless=True)
         page2 = context2.pages[0]
         page2.goto(page_url)
-        readback = page2.evaluate("localStorage.getItem('v011_key')")
-        persist = readback == "persisted_three_tab"
+        persist = page2.evaluate("localStorage.getItem('v012_key')") == "persisted_v012"
         runtime.profile.close()
 
         results = {
             "three_fixed_tabs": three_tabs,
+            "duplicate_tab_deduped": dedupe_closed,
             "tab_reuse_no_new_tabs": reuse,
-            "popup_allowed_within_limit": popup_allowed,
-            "reconcile_closes_blank_extras": reconcile_closed,
             "tab_crash_rebuild": rebuild,
             "persistent_profile": persist,
         }
@@ -281,45 +280,72 @@ def main(argv: list[str] | None = None) -> int:
         return run_smoke(config)
 
     runtime = BrowserRuntime(config)
-    try:
-        runtime.workspace.acquire_lock()
-    except RuntimeError as error:
-        print(f"PROFILE_LOCKED: {error}")
-        return 2
 
-    if args.bind_account or args.bind_spotlight or args.confirm_frontend:
-        if args.bind_account:
-            print(runtime.bind_creator(args.bind_account))
-        if args.bind_spotlight:
-            print(runtime.bind_spotlight(args.bind_spotlight))
-        if args.confirm_frontend:
-            print(runtime.confirm_frontend(args.confirm_frontend))
-        runtime.close()
-        return 0
-
-    local = runtime.local_status()
-    print(f"TreeCut Local: {local}")
-
-    if not args.headless:
-        try:
-            runtime.start_browser(headless=False)
-        except Exception as error:
-            print(f"浏览器启动失败: {error}")
-            runtime.close()
-            return 3
-
-    if args.headless:
-        print("startup chain OK: workspace, lock, bridge, detectors ready (3-tab UI off)")
-        runtime.close()
-        return 0
-
+    # ---- 面板先行（日志 handler 早挂，启动事件全部入面板） ----
     from treecut.browser.minimal_dashboard import MinimalDashboard
 
+    def post_roles(roles: dict) -> None:
+        def _ident(role):
+            r = roles[role]
+            identity = r["identity"]
+            if identity == "ACCOUNT_IDENTITY_VALID":
+                return "BOUND"
+            if identity == "ACCOUNT_IDENTITY_MISMATCH":
+                return "MISMATCH"
+            if r["account_id"]:
+                return "PENDING"
+            return "NONE"
+
+        dashboard.post_status(
+            creator_session=roles["CREATOR"]["session"],
+            creator_account=roles["CREATOR"]["account_name"] or "—",
+            creator_xhs_id=roles["CREATOR"]["account_id"] or "—",
+            creator_binding=roles["CREATOR"]["binding"],
+            spotlight_session=roles["SPOTLIGHT"]["session"],
+            spotlight_account=roles["SPOTLIGHT"]["account_name"] or "—",
+            spotlight_ad_id=roles["SPOTLIGHT"]["account_id"] or "—",
+            spotlight_binding=roles["SPOTLIGHT"]["binding"],
+            frontend_session=roles["FRONTEND"]["session"],
+            frontend_view=FRONTEND_VIEW_ZH.get(roles["FRONTEND"]["session"], "未知"),
+            frontend_binding="OPTIONAL",
+            current_task="IDLE",
+            last_checkpoint=runtime.checkpoint_store.last_timestamp(config.workspace_id),
+        )
+
+    def auto_check() -> None:
+        try:
+            roles = runtime.check_roles()
+            post_roles(roles)
+        except Exception as error:  # 检测失败不阻塞面板
+            log.error("状态检测失败：%s", error)
+
+    def startup() -> None:
+        try:
+            runtime.workspace.acquire_lock()
+        except RuntimeError as error:
+            log.error("PROFILE_LOCKED：%s", error)
+            dashboard.post_status(current_task="FAILED")
+            return
+        local = runtime.local_status()
+        dashboard.post_status(treecut_local=local)
+        try:
+            runtime.start_browser(headless=False)
+            auto_check()  # §4 启动后自动检测（不要求用户先点按钮）
+        except Exception as error:
+            log.error("浏览器启动失败：%s", error)
+            dashboard.post_status(current_task="FAILED")
+
     def check_status() -> None:
-        roles = runtime.check_roles()
-        for role, info in roles.items():
-            log.info("%s -> session=%s identity=%s account=%s",
-                     role, info["session"], info["identity"], info["account"])
+        auto_check()
+        dashboard.post_status(current_task="IDLE")
+
+    def bind_creator() -> None:
+        runtime.bind_creator()
+        auto_check()
+
+    def bind_spotlight() -> None:
+        runtime.bind_spotlight()
+        auto_check()
 
     def safe_exit() -> None:
         log.info("SAFE_SHUTDOWN")
@@ -327,20 +353,24 @@ def main(argv: list[str] | None = None) -> int:
 
     def view_errors() -> None:
         unfinished = runtime.checkpoint_store.unfinished(config.workspace_id)
-        print(runtime.engine.checkpoint_store.unfinished(config.workspace_id) or "无错误记录")
+        text = dashboard.view_errors_text(unfinished)
+        log.info("异常列表：%s", text.replace("\n", " / ") if text else "无异常记录")
 
     dashboard = MinimalDashboard(
         runtime.workspace,
         callbacks={
-            "on_sync_data": lambda: print(runtime.sync_data()),
-            "on_recover_media": lambda: print(runtime.recover_media()),
-            "on_resume_task": lambda: print(runtime.resume_task()),
+            "on_sync_data": lambda: log.info("同步数据：尚未实现（下一阶段启用）"),
+            "on_recover_media": lambda: log.info("恢复训练视频：尚未实现（下一阶段启用）"),
+            "on_resume_task": lambda: log.info(runtime.resume_task()),
             "on_view_errors": view_errors,
             "on_check_status": check_status,
+            "on_bind_creator": bind_creator,
+            "on_bind_spotlight": bind_spotlight,
             "on_safe_exit": safe_exit,
         },
     )
-    dashboard.post_status(treecut_local=local, current_task="IDLE")
+    dashboard.post_status(current_task="IDLE", last_checkpoint=None)
+    threading.Thread(target=startup, daemon=True).start()
     try:
         dashboard.run()
     finally:

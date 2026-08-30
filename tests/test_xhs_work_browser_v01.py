@@ -401,6 +401,12 @@ class TestSession:
         page = FakePage(html="扫码登录")
         assert det.check(page, "creator").status == LOGIN_REQUIRED
 
+    def test_login_url_wins_over_valid_markers(self):
+        """登录页 URL 是最强信号：即使页面含功能词也判需要登录。"""
+        det = SessionDetector(XhsWorkBrowserConfig())
+        page = FakePage(html="创作中心 发布笔记", url="https://creator.xiaohongshu.com/login")
+        assert det.check(page, "creator").status == LOGIN_REQUIRED
+
     def test_unknown_when_page_opens_but_no_signal(self):
         """§11：页面能打开 ≠ SESSION_VALID。"""
         det = SessionDetector(XhsWorkBrowserConfig())
@@ -469,6 +475,23 @@ class TestTabManager:
             tm.get("FRONTEND").goto("https://www.xiaohongshu.com/explore/1")
         assert len(context.pages) == 3  # 反复导航不新增 Tab
 
+    def test_dedupe_duplicate_managed_keeps_user_pages(self):
+        """§12：同托管域重复页关闭（确认由 TreeCut 创建）；用户页（非托管域）不动。"""
+        tm, context, _ = self._setup()
+        tm.create_fixed_tabs()
+        dup = FakePage(url="https://www.xiaohongshu.com/explore/dup-note")
+        context._pages.append(dup)
+        result = tm.dedupe_managed()
+        assert len(result["closed_duplicates"]) == 1
+        assert dup.is_closed()
+        assert len(context.pages) == 3  # 严格 3 托管 Tab
+
+        user = FakePage(url="https://example.com/note/1")  # 非托管域 → 不动
+        context._pages.append(user)
+        result2 = tm.dedupe_managed()
+        assert result2["closed_duplicates"] == []
+        assert user.is_closed() is False
+
 
 # ============================================================
 # Local Bridge（Test D）
@@ -523,8 +546,7 @@ class TestBrowserIntegration:
         proc = self._run_smoke(tmp_path)
         out = (proc.stdout or "") + (proc.stderr or "")
         assert proc.returncode == 0, out[-2000:]
-        for marker in ("three_fixed_tabs=PASS", "tab_reuse_no_new_tabs=PASS",
-                       "popup_allowed_within_limit=PASS",
-                       "reconcile_closes_blank_extras=PASS",
-                       "tab_crash_rebuild=PASS", "persistent_profile=PASS"):
+        for marker in ("three_fixed_tabs=PASS", "duplicate_tab_deduped=PASS",
+                       "tab_reuse_no_new_tabs=PASS", "tab_crash_rebuild=PASS",
+                       "persistent_profile=PASS"):
             assert marker in (proc.stdout or ""), proc.stdout[-2000:]

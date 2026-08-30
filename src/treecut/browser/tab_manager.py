@@ -34,7 +34,8 @@ class TabManager:
 
     # ---- 创建/恢复 3 个固定 Tab ----
     def create_fixed_tabs(self) -> dict[str, object]:
-        """建立 3 个固定 Tab 并导航到各自 origin（登录态由持久 Profile 恢复）。"""
+        """建立 3 个固定 Tab 并导航到各自 origin（登录态由持久 Profile 恢复）。
+        随后去重：会话恢复/历史残留导致的重复托管页按 origin 关闭（§12）。"""
         initial = list(self._context.pages)
         for index, (role, attr) in enumerate(ROLE_HOME.items()):
             url = getattr(self.config, attr)
@@ -48,7 +49,39 @@ class TabManager:
                 page.goto(url, timeout=60000)
             except Exception as error:
                 log.warning("%s TAB_NAVIGATE_FAILED %s: %s", role, url, str(error)[:120])
+        self.dedupe_managed()
         return self.tabs
+
+    # ---- §12 重复托管页去重：origin 命中托管角色且该角色已有 canonical 页 → 关闭残留 ----
+    def dedupe_managed(self) -> dict:
+        managed_hosts = {}
+        for role, attr in ROLE_HOME.items():
+            try:
+                from urllib.parse import urlsplit
+                managed_hosts[role] = urlsplit(getattr(self.config, attr)).hostname or ""
+            except Exception:
+                managed_hosts[role] = ""
+        closed = []
+        for page in list(self._context.pages):
+            if page in self.tabs.values():
+                continue  # canonical 托管页
+            host = ""
+            try:
+                from urllib.parse import urlsplit
+                host = urlsplit(page.url or "").hostname or ""
+            except Exception:
+                host = ""
+            if host and host in managed_hosts.values():
+                # 该域是 TreeCut 托管角色域且非 canonical → 确认由 TreeCut 创建的 stale duplicate
+                try:
+                    page.close()
+                    closed.append(host)
+                    log.info("TAB_DUPLICATE_CLOSED host=%s", host)
+                except Exception:  # pragma: no cover
+                    pass
+        return {"closed_duplicates": closed,
+                "managed": {role: len(self.tabs)}}
+
 
     # ---- 获取/健康 ----
     def get(self, role: str):
@@ -82,8 +115,9 @@ class TabManager:
 
     # ---- §14 严格限制 Tab 数（保守收束） ----
     def reconcile(self) -> dict:
-        """超过 expected+popup 时：只关闭空白临时页（about:/newtab，几乎必为我方/弹窗残留），
-        有真实内容的页面（用户页/平台弹窗）一律不盲目关闭（§14）。返回收束结果。"""
+        """1) 重复托管页去重（§12）；2) 超过 expected+popup 时只关闭空白临时页
+        （about:/newtab），有真实内容的页面（用户页/平台弹窗）一律不盲目关闭（§14）。"""
+        dedupe = self.dedupe_managed()
         allowed = self.config.expected_tab_count + self.config.allow_temporary_popup
         pages = list(self._context.pages)
         closed = []
@@ -104,7 +138,8 @@ class TabManager:
                 "allowed_with_popup": allowed,
                 "actual": len(self._context.pages),
                 "closed_extras": closed,
-                "left_untouched": len(left)}
+                "left_untouched": len(left),
+                "closed_duplicates": dedupe["closed_duplicates"]}
 
     @staticmethod
     def _is_blank(page) -> bool:

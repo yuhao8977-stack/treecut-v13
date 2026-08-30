@@ -34,6 +34,10 @@ ACCOUNT_NAME_SELECTORS = (
     "[class*='user-name']",
     "[class*='account-name']",
     "img[alt*='头像']",
+    "[class*='header'] [class*='name']",
+    "[class*='user'] [class*='name']",
+    "a[href*='user/profile']",
+    "[class*='creator'] [class*='name']",
 )
 # 聚光广告账户名选择器候选
 AD_ACCOUNT_SELECTORS = (
@@ -42,6 +46,11 @@ AD_ACCOUNT_SELECTORS = (
     "[class*='company-name']",
     ".user-info .name",
     ".header-user .name",
+    "[class*='account'] [class*='name']",
+    "[class*='user-info'] .name",
+    "[class*='header'] .name",
+    "[class*='advertiser']",
+    "[class*='biz-name']",
 )
 XHS_ID_PATTERNS = (
     r"小红书号[:：]\s*([0-9a-zA-Z]+)",

@@ -9,7 +9,7 @@ V0.1.1 只做基础设施：三站登录保持 / 三站 Session 独立检测 / �
 """
 from __future__ import annotations
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 from treecut.browser.config import XhsWorkBrowserConfig, load_config
 from treecut.browser.workspace_manager import (

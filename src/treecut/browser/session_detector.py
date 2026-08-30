@@ -27,6 +27,9 @@ SESSION_UNKNOWN = "SESSION_UNKNOWN"
 KINDS = ("creator", "spotlight", "frontend")
 
 
+LOGIN_PATH_HINTS = ("login", "signin", "sign-in", "passport", "account/login", "qrcode")
+
+
 @dataclass
 class SessionCheckResult:
     kind: str  # creator | spotlight | frontend
@@ -40,6 +43,11 @@ class SessionCheckResult:
 class SessionDetector:
     def __init__(self, config):
         self.config = config
+
+    @staticmethod
+    def _on_login_page(url: str) -> bool:
+        path = urlsplit(url or "").path.lower()
+        return any(hint in path for hint in LOGIN_PATH_HINTS)
 
     def check(self, page, kind: str) -> SessionCheckResult:
         if kind not in KINDS:
@@ -58,11 +66,14 @@ class SessionDetector:
         expired_hits = [m for m in markers.get("expired", []) if m and m in body]
         login_hits = [m for m in markers.get("login", []) if m and m in body]
         valid_hits = [m for m in markers.get("valid", []) if m and m in body]
+        on_login = self._on_login_page(url)
 
         if expired_hits:
             status = SESSION_EXPIRED
+        elif on_login:
+            status = LOGIN_REQUIRED  # 登录页 URL → 明确需要登录
         elif valid_hits:
-            status = SESSION_VALID
+            status = SESSION_VALID  # 已进入功能页（多信号）
         elif login_hits:
             status = LOGIN_REQUIRED
         else:
