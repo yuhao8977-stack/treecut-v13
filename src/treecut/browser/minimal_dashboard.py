@@ -78,7 +78,7 @@ class MinimalDashboard:
         self._labels: dict[str, tk.StringVar] = {}
         self._log_var: scrolledtext.ScrolledText | None = None
         self.root: tk.Tk | None = None
-        self._busy = False
+        self._inflight: set[str] = set()
         self._bind_creator_btn: ttk.Button | None = None
         self._bind_spotlight_btn: ttk.Button | None = None
 
@@ -256,22 +256,24 @@ class MinimalDashboard:
             self._bind_spotlight_btn.state(["disabled"])
 
     def _invoke(self, key: str, fn) -> None:
+        """回调在工作线程执行 → UI 不阻塞；同一操作不重复堆积（其余排队由
+        BrowserExecutor 单线程串行消化），绝不出现"假死"提示。"""
         if fn is None:
             self._log(f"[面板] {key} 未注册")
             return
-        if self._busy:
-            self._log("[面板] 上一操作仍在执行")
+        if key in self._inflight:
+            self._log(f"[面板] {key} 正在执行，请稍候")
             return
+        self._inflight.add(key)
 
         def worker() -> None:
-            self._busy = True
             try:
                 fn()
             except Exception as error:
                 self.post_status(current_task="FAILED")
                 self._log(f"[面板] {key} 失败: {error}")
             finally:
-                self._busy = False
+                self._inflight.discard(key)
 
         threading.Thread(target=worker, daemon=True).start()
 

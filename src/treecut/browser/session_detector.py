@@ -49,14 +49,33 @@ class SessionDetector:
         path = urlsplit(url or "").path.lower()
         return any(hint in path for hint in LOGIN_PATH_HINTS)
 
+    @staticmethod
+    def _page_text(page, limit: int = 150_000) -> str:
+        """轻量读取页面文本：JS textContent 截断（XHS 大页面 content() 需数分钟、
+        innerText 触发布局计算也需数十秒；textContent 免布局，数秒内返回）。
+        无 evaluate 的测试桩回退到 content()。"""
+        if hasattr(page, "evaluate"):
+            try:
+                value = page.evaluate(
+                    "(limit) => document.title + '\\n' + "
+                    "(document.documentElement ? "
+                    "document.documentElement.textContent.slice(0, limit) : '')",
+                    limit,
+                )
+                if isinstance(value, str) and value.strip():
+                    return value
+            except Exception:
+                pass
+        try:
+            return page.content() or ""
+        except Exception:
+            return ""
+
     def check(self, page, kind: str) -> SessionCheckResult:
         if kind not in KINDS:
             return SessionCheckResult(kind=kind, status=SESSION_UNKNOWN)
         markers = (self.config.session_markers or {}).get(kind) or {}
-        try:
-            body = (page.content() or "") + "\n" + (page.title() or "")
-        except Exception:
-            body = ""
+        body = self._page_text(page)
         try:
             url = page.url or ""
         except Exception:

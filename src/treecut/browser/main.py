@@ -128,19 +128,32 @@ class BrowserRuntime:
             raise RuntimeError("browser not started")
         return self.tabs
 
+    def reconcile_tabs(self) -> dict:
+        """Tab 治理（去重/收束）在浏览器 owner 线程内执行（避免跨线程 Playwright）。"""
+        return self._in_browser(lambda: self.ensure_tabs().reconcile(), timeout=60)
+
     # ---- §4/§5 三站自动状态检测（Single Worker 串行，SPA 渲染有界重试） ----
-    SPA_RETRY_TRIES = 4
-    SPA_RETRY_DELAY = 1.2
+    SPA_RETRY_TRIES = 3
+    SPA_RETRY_DELAY = 1.0
+    CHECK_DEADLINE_SECONDS = 40.0  # 硬时限：绝不长时间占用浏览器执行队列
 
     def check_roles(self) -> dict:
-        """投递到浏览器 owner 线程执行；返回每站
-        {session, identity, account_name, account_id, binding}。"""
-        return self._exec.submit(self._check_roles)
+        """返回每站 {session, identity, account_name, account_id, binding}。
+        浏览器由 executor 启动（GUI）→ 投递到 owner 线程；直接启动（探针/smoke）
+        → 当前线程直接执行（Playwright 对象本就属于当前线程）。"""
+        return self._in_browser(self._check_roles, timeout=300)
+
+    def _in_browser(self, fn, timeout: float = 300.0):
+        if self._exec_owns_browser:
+            return self._exec.submit(fn, timeout=timeout)
+        return fn()
 
     def _check_roles(self) -> dict:
         """（executor 线程内）XHS 为 SPA，启动后页面可能尚未渲染完 →
-        检测到 UNKNOWN 时做有界重试（最多 SPA_RETRY_TRIES 次，间隔 SPA_RETRY_DELAY）。"""
+        检测到 UNKNOWN 时做有界重试（SPA_RETRY_TRIES 次 × 间隔），
+        并有整体硬时限（CHECK_DEADLINE_SECONDS）——绝不长时间占用浏览器执行队列。"""
         import time as _time
+        deadline = _time.time() + self.CHECK_DEADLINE_SECONDS
         binding = self.workspace.load_binding()
         roles = {}
         specs = [
@@ -170,7 +183,7 @@ class BrowserRuntime:
                     # （身份可能因未绑定保持 UNKNOWN，属正常，不因此空转）
                     if session != SESSION_UNKNOWN:
                         break
-                    if attempt < self.SPA_RETRY_TRIES - 1:
+                    if attempt < self.SPA_RETRY_TRIES - 1 and _time.time() < deadline:
                         _time.sleep(self.SPA_RETRY_DELAY)
             binding_state = self._binding_state(role, identity, account_id,
                                                 binding, bound_field)
@@ -196,9 +209,9 @@ class BrowserRuntime:
             return "MISMATCH"
         return "NONE"
 
-    # ---- 绑定（面板按钮，非 CLI；executor 单线程内执行） ----
+    # ---- 绑定（面板按钮，非 CLI；executor 单线程内执行或当前线程直调） ----
     def bind_creator(self) -> str:
-        return self._exec.submit(self._bind_creator)
+        return self._in_browser(self._bind_creator)
 
     def _bind_creator(self) -> str:
         tab = self.ensure_tabs().get("CREATOR")
@@ -212,7 +225,7 @@ class BrowserRuntime:
         return msg
 
     def bind_spotlight(self) -> str:
-        return self._exec.submit(self._bind_spotlight)
+        return self._in_browser(self._bind_spotlight)
 
     def _bind_spotlight(self) -> str:
         tab = self.ensure_tabs().get("SPOTLIGHT")
@@ -242,15 +255,21 @@ class BrowserRuntime:
 
     def close(self) -> None:
         """安全退出。浏览器由 executor 启动时 → 关闭也在 executor 单线程内执行（优雅落盘）；
-        smoke/probe 直接启动（主线程）时 → 在主线程直接关闭，避免跨线程操作 Playwright。"""
+        smoke/probe 直接启动（主线程）时 → 在主线程直接关闭，避免跨线程操作 Playwright。
+        若优雅关闭排队超时（如上一任务卡住）→ 强制 taskkill 兜底，绝不留 Edge 残留。"""
         if self._closed:
             return
         self._closed = True
         if self._exec_owns_browser:
             try:
                 self._exec.submit(self._do_close, timeout=60)
-            except Exception:  # pragma: no cover — 已断开等情况
-                pass
+            except Exception:  # 优雅关闭超时/失败 → 强制终止 Edge，防残留
+                try:
+                    self.profile._kill_proc()
+                except Exception:  # pragma: no cover
+                    pass
+                self.workspace.release_lock()
+                log.info("安全退出完成（强制终止兜底）")
             finally:
                 self._exec.stop()
         else:
@@ -421,9 +440,8 @@ def main(argv: list[str] | None = None) -> int:
     def auto_check() -> None:
         try:
             # 检测前先收束 Tab（重复托管页/空白弹窗），并记录实际 Tab 数（验收 F / 日志可见性）
-            tabs = runtime.tabs
-            if tabs is not None:
-                reconcile = tabs.reconcile()
+            if runtime.tabs is not None:
+                reconcile = runtime.reconcile_tabs()  # executor 内执行（避免跨线程）
                 log.info("标签页数量=%s（重复页关闭=%s，用户页保留=%s）",
                          reconcile["actual"], reconcile["closed_duplicates"],
                          reconcile["left_untouched"])

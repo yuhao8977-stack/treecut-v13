@@ -9,6 +9,7 @@ Playwright 延迟导入：无 playwright 环境下（纯单元测试）不报错
 """
 from __future__ import annotations
 
+import logging
 import os
 import subprocess
 import time
@@ -17,6 +18,8 @@ from pathlib import Path
 from treecut.browser.config import XhsWorkBrowserConfig
 from treecut.browser.errors import XhsWorkBrowserError
 from treecut.browser.workspace_manager import WorkspaceManager
+
+log = logging.getLogger("treecut.browser")
 
 
 def _default_edge_paths() -> list[Path]:
@@ -86,17 +89,21 @@ class ProfileManager:
             port_file.unlink(missing_ok=True)
         except OSError:  # pragma: no cover
             pass
-        try:
-            proc = subprocess.Popen(
-                args,
-                stdout=open(stdout_log, "w", encoding="utf-8", errors="replace"),
-                stderr=open(stderr_log, "w", encoding="utf-8", errors="replace"),
-            )
-        except OSError as error:
-            raise XhsWorkBrowserError(f"Edge 启动失败：{error}") from error
+        proc = self._launch_edge_once(edge, profile, args, stdout_log, stderr_log)
         self._proc = proc
-
         port = self._wait_devtools_port(profile, proc, stderr_log)
+        if port is None and proc.poll() is None:
+            # 可能 attach 到残留旧实例/陈旧锁文件 → 强制终止 + 清理陈旧锁文件后重试一次
+            log.warning("EDGE_LAUNCH_PORT_TIMEOUT retry（清理陈旧锁文件）")
+            self._kill_proc()
+            for stale in ("SingletonLock", "lockfile", "DevToolsActivePort"):
+                try:
+                    (profile / stale).unlink(missing_ok=True)
+                except OSError:  # pragma: no cover
+                    pass
+            proc = self._launch_edge_once(edge, profile, args, stdout_log, stderr_log)
+            self._proc = proc
+            port = self._wait_devtools_port(profile, proc, stderr_log)
         if port is None:
             self._kill_proc()
             raise XhsWorkBrowserError(
@@ -117,6 +124,18 @@ class ProfileManager:
             self._kill_proc()
             raise XhsWorkBrowserError("CDP 默认 context 未就绪")
         return self._context, browser
+
+    @staticmethod
+    def _launch_edge_once(edge: Path, profile: Path, args: list[str],
+                          stdout_log: Path, stderr_log: Path) -> subprocess.Popen:
+        try:
+            return subprocess.Popen(
+                args,
+                stdout=open(stdout_log, "w", encoding="utf-8", errors="replace"),
+                stderr=open(stderr_log, "w", encoding="utf-8", errors="replace"),
+            )
+        except OSError as error:
+            raise XhsWorkBrowserError(f"Edge 启动失败：{error}") from error
 
     @staticmethod
     def _wait_devtools_port(profile: Path, proc, stderr_log: Path) -> int | None:

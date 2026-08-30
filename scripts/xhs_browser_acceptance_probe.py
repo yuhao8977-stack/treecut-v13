@@ -32,6 +32,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--workspace", default="B007")
     parser.add_argument("--profile-root", default="", help="覆盖 Profile 根目录")
     parser.add_argument("--headless", action="store_true", help="无窗口模式（无法验证真实登录态）")
+    parser.add_argument("--bind", action="store_true",
+                        help="检测到未绑定时自动绑定 Creator/聚光（人工授权后使用）")
     args = parser.parse_args(argv)
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s",
@@ -58,11 +60,32 @@ def main(argv: list[str] | None = None) -> int:
         print("treecut_local =", local)
 
         runtime.start_browser(headless=args.headless)
-        tabs = runtime.ensure_tabs()
-        reconcile = tabs.reconcile()
+        reconcile = runtime.reconcile_tabs()  # executor 内执行（避免跨线程 Playwright）
         print(f"tabs_after_reconcile = {reconcile['actual']} "
               f"(closed_duplicates={reconcile['closed_duplicates']}, "
               f"left_untouched={reconcile['left_untouched']})")
+
+        if args.bind:
+            # 绑定优先：跳过全站状态检测（SPA 大页面读取慢），直接检测并绑定
+            print("---- BIND (人工授权后台绑定) ----")
+            for role, bind_fn in (
+                ("CREATOR", runtime.bind_creator),
+                ("SPOTLIGHT", runtime.bind_spotlight),
+            ):
+                try:
+                    msg = bind_fn()  # 内部在 executor 线程检测+落盘
+                except Exception as error:  # noqa: BLE001
+                    msg = f"绑定失败：{error}"
+                print(f"{role}: {msg}")
+            binding = runtime.workspace.load_binding()
+            print("binding_record =", bool(binding))
+            if binding:
+                print(f"creator_xhs_id={binding.creator_xhs_id} "
+                      f"creator_name={binding.creator_display_name} "
+                      f"spotlight_id={binding.spotlight_ad_account_id} "
+                      f"spotlight_name={binding.spotlight_ad_account_name}")
+            print("ACCEPTANCE_PROBE BIND_DONE")
+            return 0
 
         roles = runtime.check_roles()
         print("---- PER-ROLE REAL STATUS ----")
@@ -71,6 +94,7 @@ def main(argv: list[str] | None = None) -> int:
                   f"session={info['session']} identity={info['identity']} "
                   f"account_name={info['account_name']} account_id={info['account_id']} "
                   f"binding={info['binding']}")
+
         ok = all(r["tab_alive"] for r in roles.values())
         valid_count = sum(1 for r in roles.values() if r["session"] == "SESSION_VALID")
         print(f"---- RESULT: tabs={len(runtime._context.pages)} sessions_valid={valid_count}/3 ----")

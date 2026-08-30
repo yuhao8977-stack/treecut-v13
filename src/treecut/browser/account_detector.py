@@ -56,9 +56,9 @@ AD_ACCOUNT_SELECTORS = (
     "[class*='biz-name']",
 )
 XHS_ID_PATTERNS = (
-    r"小红书号[:：]\s*([0-9a-zA-Z]+)",
-    r"xiaohongshu[号iI][dD]?[:：]\s*([0-9a-zA-Z]+)",
-    r"xhs[_\-]?id[:：]\s*([0-9a-zA-Z]+)",
+    r"小红书号[:：]?\s*([0-9a-zA-Z]{6,})",
+    r"xiaohongshu[号iI][dD]?[:：]?\s*([0-9a-zA-Z]{6,})",
+    r"xhs[_\-]?id[:：]?\s*([0-9a-zA-Z]{6,})",
 )
 AD_ID_PATTERNS = (
     r"广告账户[ID号号]?[:：\s]*([0-9a-zA-Z]+)",
@@ -117,6 +117,18 @@ class _BaseDetector:
 
     @staticmethod
     def _body(page) -> str:
+        """轻量读取页面文本：textContent JS 求值（XHS 大页面 content() 需数分钟、
+        innerText 触发布局计算也需数十秒；textContent 免布局，数秒内返回）。
+        无 evaluate 的测试桩回退到 content()。"""
+        if hasattr(page, "evaluate"):
+            try:
+                value = page.evaluate(
+                    "() => document.documentElement ? "
+                    "document.documentElement.textContent.slice(0, 150000) : ''")
+                if isinstance(value, str) and value.strip():
+                    return value
+            except Exception:
+                pass
         try:
             return page.content() or ""
         except Exception:
@@ -124,7 +136,7 @@ class _BaseDetector:
 
     @staticmethod
     def _diagnose(page) -> str:
-        """检测失败时的真实页面诊断（仅 URL origin / title / 候选元素类名；无内容、无凭证）。"""
+        """检测失败时的真实页面诊断（仅 URL origin / title；无内容、无凭证、无重 DOM 扫描）。"""
         try:
             url = urlsplit(page.url or "").netloc
         except Exception:
@@ -133,26 +145,7 @@ class _BaseDetector:
             title = (page.title() or "")[:60]
         except Exception:
             title = "?"
-        classes: list[str] = []
-        try:
-            qsa = page.query_selector_all
-        except Exception:
-            qsa = None
-        if qsa is not None:
-            try:
-                for el in qsa("[class]"):
-                    try:
-                        cls = (el.get_attribute("class") or "").strip()
-                    except Exception:
-                        cls = ""
-                    if any(k in cls.lower() for k in ("name", "user", "nick", "account", "avatar")):
-                        if cls not in classes:
-                            classes.append(cls[:60])
-                    if len(classes) >= 5:
-                        break
-            except Exception:
-                pass
-        return f"url={url} title='{title}' candidate_classes={classes}"
+        return f"url={url} title='{title}'"
 
 
 class CreatorIdentityDetector(_BaseDetector):
@@ -170,6 +163,17 @@ class CreatorIdentityDetector(_BaseDetector):
         body = self._body(page)
         name = self._find_text(page, ACCOUNT_NAME_SELECTORS)
         xhs_id = _extract(body, XHS_ID_PATTERNS)
+        if not xhs_id and hasattr(page, "evaluate"):
+            # 定向提取：全文搜索"小红书号"（不受截断影响；仅首次绑定慢一次）
+            try:
+                value = page.evaluate(
+                    "() => { const t = document.body ? document.body.innerText : ''; "
+                    "const m = t.match(/小红书号[:：]?\\s*([0-9A-Za-z]{6,})/); "
+                    "return m ? m[1] : null; }")
+                if isinstance(value, str) and value.strip():
+                    xhs_id = value.strip()
+            except Exception:
+                pass
         if not name and not xhs_id:
             log.info("Creator 身份未检测到（诊断：%s）", self._diagnose(page))
             return None
