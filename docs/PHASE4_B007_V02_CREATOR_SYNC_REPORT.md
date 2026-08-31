@@ -19,37 +19,37 @@
 
 ## 2. 真机运行结果（真实 B007 Profile，多次运行）
 
-- **账号门**：`ACCOUNT_IDENTITY_VALID`（detected 昵称 == binding 昵称；binding xhs_id=63083262719）✅
-- **管线**：engine_state=SUCCESS → DONE；Raw 快照落盘（IMMUTABLE + sha256）；8 个产物生成；DB 幂等 upsert ✅
-- **PublishedContent 捕获**：1 条 note_id（SSR 首屏游离 id；无实质字段）⚠️
-- **Performance**：0（官方导出 DOM 未实现）⚠️
+- **账号门**：`ACCOUNT_IDENTITY_VALID`（快速检测 + 已确认绑定复用；冲突硬停保留）✅
+- **管线**：engine_state=SUCCESS → DONE；Raw 快照落盘（IMMUTABLE + sha256）；8 个产物 ✅
+- **真实笔记列表（突破）**：经页面自发 `api/galaxy/v2/creator/note/user/posted` 响应捕获并幂等入库
+  **471 条 B007 PublishedContent**（note_id 全；16 条含标题、12 条含时长/封面——如
+  「给餐厅做了个大手术😭通透感绝了」38s/video/2026-08-30，与用户页面截图吻合）✅
+- **关键修复**：挂载监听后必须 **reload**（首次 goto 的 posted 响应 json 解析失败/空；
+  reload 后返回 `data.notes[]`）；字段适配 galaxy 结构（video_info.duration / images_list / 毫秒 time）
+- **Performance**：0（官方导出 DOM 待校准）⚠️
 
 ## 3. 关键限制（PASS_WITH_LIMITATIONS 依据）
 
-**XHS 自动化检测软阻断（核心限制）**：
-- 笔记列表 API（`edith.xiaohongshu.com/api/sns/web/v1/user_posted` 及 note-manager 列表接口）
-  在脚本化（Playwright/CDP）会话中返回 `{"data": null, "success": true}`——即使已登录、
-  即使强制导航到 `new/note-manager`；SSR 首屏仅含 1 个游离 24-hex id，DOM 无 explore 链接。
-- 同一浏览器打开 creator 首页/聚光计划列表正常（会话有效、昵称可检测）→ 判定为
-  **列表接口对自动化会话的软阻断**（非全站封锁）。
-- **唯一待解锁路径**：用户在面板（playwright Edge）里打开 note-manager，若能亲眼看到
-  笔记列表渲染（说明该会话未被软阻断）→ 点【同步数据】→ stay-on-current + SSR/DOM 提取
-  即可捕获。此路径已实现，待用户实机确认。
+- **笔记身份已解决**（471 条真实 note_id 入库）；**富化待补**：多数笔记仅 note_id
+  （列表响应只回 id），title/duration/cover 需逐条详情或后续分页全量再同步补全；
+- 全量分页：当前捕获 posted 响应覆盖范围（471 条），账号共 2851 条，完整分页循环待增强；
+- **Performance（观看/曝光等）**：需官方导出（内容分析导出按钮 DOM 校准）——V0.2 后段或 V0.3；
+- 面板【同步数据】现已可直接出真实数据（reload 修复已并入）。
 
 ## 4. 三十问（§36）如实回答
 
 1. Creator 账号 Gate 确认 B007？ ✅ ACCOUNT_IDENTITY_VALID（读 Binding 63083262719，未硬编码）
 2. 平台账号 ID？ 63083262719
-3. 同步到多少 PublishedContent？ 1（游离 id；完整列表待面板流程）
-4. note_id coverage？ 1
-5. title coverage？ 0（完整列表待捕获）
-6. publish_time coverage？ 0
-7. media_type coverage？ 0
-8. duration coverage？ 0
-9. cover metadata coverage？ 0
+3. 同步到多少 PublishedContent？ **471**（真实 note_id，幂等入库）
+4. note_id coverage？ **471**
+5. title coverage？ 16（其余 UNKNOWN，待富化）
+6. publish_time coverage？ 部分（galaxy 毫秒 time 已适配；富化中）
+7. media_type coverage？ 部分
+8. duration coverage？ 12
+9. cover metadata coverage？ 12（images_list origin+path）
 10. cover bytes recovery？ 0（COVER_PENDING 机制预留，不阻塞）
 11. Performance 覆盖多少 note？ 0（官方导出 DOM 待校准）
-12. 官方导出实际字段？ 未取得（NOT_IMPLEMENTED_DOM）
+12. 官方导出实际字段？ 未取得（导出按钮 DOM 待校准）
 13. 官方导出日期范围？ 未知
 14. 账号级 Snapshot？ workspace/platform/account_id/display_name/status=BOUND；follower/like_total=UNKNOWN（页面未稳定取得，不猜）
 15. Performance Window？ UNKNOWN（无导出）
