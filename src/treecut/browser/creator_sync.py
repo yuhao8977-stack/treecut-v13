@@ -356,7 +356,9 @@ class CreatorSyncRunner:
         observer = CreatorResponseObserver(tab)
         observer.attach()
         try:
-            if url is None:
+            # 显式 URL（前台回退）或用户提供的 note_list_url 覆盖 → 总是导航（跳过 stay）
+            forced = url is not None or getattr(self, "note_list_url", None)
+            if url is None and not forced:
                 try:
                     current = tab.url or ""
                 except Exception:
@@ -372,10 +374,11 @@ class CreatorSyncRunner:
                 else:
                     log.info("观察：保留当前 Creator 内容页 %s", sanitize_url(current))
             else:
+                target = url or self.note_list_url
                 try:
-                    tab.goto(url, timeout=60000)
+                    tab.goto(target, timeout=60000)
                 except Exception as error:
-                    log.warning("观察导航失败 %s：%s", url, str(error)[:120])
+                    log.warning("观察导航失败 %s：%s", target, str(error)[:120])
             # 滚动加载更多（给 SPA 渲染与分页留时间）
             for _ in range(8):
                 try:
