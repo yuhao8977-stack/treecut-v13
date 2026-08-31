@@ -1,0 +1,139 @@
+{
+ "temp_dir": "C:\\Users\\admin\\AppData\\Local\\Temp",
+ "stale_threshold_days": 7,
+ "bytes_before": 18771089050,
+ "bytes_deleted": 13733146083,
+ "bytes_skipped": 5037942967,
+ "deleted_entries": 4331,
+ "skipped_recent": 1174,
+ "skipped_locked_or_other": 5,
+ "deleted_gb": 12.79,
+ "skipped_gb": 4.69,
+ "skipped_samples": [
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\.ses",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\.tmpA2ar3o",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\.tmpdlzrhP",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\.tmpEZYaZm",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\.tmpqB6RVH",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\.tmpxS1w4L",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\.tmpygMVUx",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\06a925f8-100f-471b-a7bf-2e2301f53425.tmp",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\0809038b-3e25-4cad-8809-baa13e5d5c7f.tmp",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\080aadab-39e1-4721-b0d1-5edb38cd9689.tmp",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\14c65e0c-108a-4748-94a9-b9d940b049ae.tmp",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\1ac22221-e7b5-4bc2-b45d-f45ef4f90c32.tmp",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\1b3439ee-6996-4ec8-b364-2d40e0b068d4.tmp",
+   "reason": "recent",
+   "size_gb": 0.02
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\1c773599-cdf6-433b-8b0c-38f79ed3ef30.tmp",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\282e6d4f-0e8d-4404-86d9-909bc33f0f4d.tmp",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\2f2ae958-b7b6-47bb-87b9-cb86ed362ed9.tmp",
+   "reason": "recent",
+   "size_gb": 0.01
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\2f966fd4-c40c-4b03-9b2d-ae1f237ad1f6.tmp",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\3e2beb61-16f0-4151-b9d6-c046bafe1460.tmp",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\3f4c78c4-b190-4383-848f-022170734ffe.tmp",
+   "reason": "recent",
+   "size_gb": 0.02
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\458fdaa8-90c9-487a-830e-09dbbf14ce6a.tmp",
+   "reason": "recent",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\55157066-33ea-43ea-bedd-629e625c15b7_longmao_edge.zip.longmao_edge.zip",
+   "reason": "locked/in-use",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\baidu",
+   "reason": "locked/in-use",
+   "size_gb": 0.01
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\HONOR_SUITE_DOWNLOADER",
+   "reason": "locked/in-use",
+   "size_gb": 0.01
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\itunes_fix",
+   "reason": "locked/in-use",
+   "size_gb": 0.0
+  },
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\treecut-v13-audit",
+   "reason": "locked/in-use",
+   "size_gb": 0.04
+  }
+ ]
+}

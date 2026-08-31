@@ -1,0 +1,14 @@
+{
+ "checked_at": "2026-08-31T14:47:56",
+ "warnings": [
+  "C盘可用 55.2GB < 80.0GB：系统盘空间偏低"
+ ],
+ "criticals": [],
+ "c_free_gb": 55.2,
+ "e_free_gb": 155.7,
+ "z_free_gb": 12172.5,
+ "c_level": "WARNING",
+ "e_level": "OK",
+ "z_level": "OK",
+ "ai_cache_on_system_drive": []
+}

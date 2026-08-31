@@ -1,0 +1,15 @@
+{
+ "generated_at": "2026-08-31 14:48:19",
+ "status": "MIGRATED_VERIFIED",
+ "source": "C:\\Users\\admin\\.cache\\huggingface",
+ "target": "G:\\AI\\hf_cache",
+ "copied_bytes": 14632680978,
+ "copied_gb": 13.63,
+ "models_count": 10,
+ "env": {
+  "HF_HOME": "G:\\AI\\hf_cache",
+  "HF_HUB_CACHE": "G:\\AI\\hf_cache\\hub"
+ },
+ "verify": "snapshot_download(Systran/faster-whisper-small, local_files_only=True) -> G OK",
+ "old_copy": "RETAINED (delete only after Cleanup Gate approval)"
+}

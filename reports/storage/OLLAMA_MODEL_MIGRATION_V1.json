@@ -1,0 +1,12 @@
+{
+ "generated_at": "2026-08-31 14:48:19",
+ "status": "MIGRATED_VERIFIED",
+ "source": "C:\\Users\\admin\\.ollama\\models",
+ "target": "G:\\AI\\ollama_models",
+ "copied_gb": 5.56,
+ "env": {
+  "OLLAMA_MODELS": "G:\\AI\\ollama_models"
+ },
+ "verify": "ollama list with OLLAMA_MODELS=G -> qwen2.5vl:7b present",
+ "old_copy": "RETAINED"
+}

@@ -1,0 +1,26 @@
+{
+ "generated_at": "2026-08-31 14:48:19",
+ "c_free_before_gb": 42.47,
+ "c_free_after_gb": 55.18,
+ "actual_released_gb": 12.71,
+ "temp_deleted_gb": 12.79,
+ "success_line": "C_FREE >= 70GB",
+ "met": false,
+ "gap_gb": 14.82,
+ "db": {
+  "b007_rows": 471,
+  "b003_rows": 155,
+  "integrity": "ok"
+ },
+ "models": {
+  "hf_on_g": true,
+  "ollama_on_g": true,
+  "dsh": "SKIPPED"
+ },
+ "guard": {
+  "ai_cache_on_c": false,
+  "c_level": "WARNING"
+ },
+ "b007_profile": "UNTOUCHED (already on E)",
+ "v02": "PAUSED"
+}

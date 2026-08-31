@@ -536,6 +536,19 @@ def main(argv: list[str] | None = None) -> int:
             log.error("PROFILE_LOCKED：%s", error)
             dashboard.post_status(current_task="FAILED")
             return
+        # StorageHealthGuard：启动时记录磁盘健康（不阻塞）
+        try:
+            from treecut.browser.storage_guard import StorageHealthGuard
+            guard = StorageHealthGuard().check()
+            log.info("磁盘健康：C=%s(%s) E=%s Z=%s",
+                     guard.get("c_free_gb"), guard.get("c_level"),
+                     guard.get("e_free_gb"), guard.get("z_level"))
+            for w in guard.get("warnings", []):
+                log.warning("磁盘警告：%s", w)
+            for c in guard.get("criticals", []):
+                log.error("磁盘严重：%s", c)
+        except Exception as error:  # pragma: no cover — 守卫失败不阻塞
+            log.warning("磁盘守卫检查失败：%s", str(error)[:120])
         local = runtime.local_status()
         dashboard.post_status(treecut_local=local)
         try:

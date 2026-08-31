@@ -1,0 +1,7 @@
+{
+ "generated_at": "2026-08-31 14:48:19",
+ "status": "SKIP_WITH_REASON",
+ "source": "C:\\Users\\admin\\dsh_models",
+ "size_gb": 1.9,
+ "reason": "消费方为 DSH/Harness 自身 HF 缓存，其配置机制无法确认；按用户指示不为 1.9GB 冒险破坏 Harness"
+}
