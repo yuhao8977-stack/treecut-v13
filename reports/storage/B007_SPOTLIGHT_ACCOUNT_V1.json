@@ -1,0 +1,21 @@
+{
+  "account_id": "62ea6099000000001f004e37",
+  "account_name": "T-KUBON坤宝高端岛台工厂-zx",
+  "platform": "XIAOHONGSHU_SPOTLIGHT (聚光)",
+  "seller_id": "",
+  "role_type": 602,
+  "professional_name": "家居装饰",
+  "id_calibration": "CANONICAL_ANCHOR (PAGE_OWNED_RESPONSE: leona/user/info -> userId)",
+  "id_source": "PAGE_OWNED_RESPONSE:leona_user_info:20260831_185007",
+  "aggregate_metrics_report_range": {
+    "start": "2026-08-31",
+    "end": "2026-08-31"
+  },
+  "aggregate_metrics": {
+    "dataValueJson": "{\"ctr\":\"9.8%\",\"cpm\":\"26.61\",\"feeChainRatio\":\"-64.29%\",\"ctrChainRatio\":\"9.99%\",\"fee\":\"90.16\",\"messageConsult\":\"5\",\"msgLeadsCost\":\"90.16\",\"msgLeadsCostChainRatio\":\"-\",\"acpChainRatio\":\"-3.57%\",\"impressionChainRatio\":\"-66.57%\",\"clickChainRatio\":\"-63.23%\",\"click\":\"332\",\"acp\":\"0.27\",\"interaction\":\"14\",\"impression\":\"3388\",\"cpmChainRatio\":\"6.82%\",\"cpiChainRatio\":\"7.15%\",\"time\":\"2026-08-31~2026-08-31\",\"cpi\":\"6.44\",\"interactionChainRatio\":\"-66.67%\",\"messageConsultChainRatio\":\"-54.55%\"}",
+    "time": "2026-08-31~2026-08-31",
+    "id": 0
+  },
+  "snapshot_time": "2026-08-31 18:52:16",
+  "attribution_note": "账户级聚合独立保存，不摊分到 creative/note（§24）"
+}

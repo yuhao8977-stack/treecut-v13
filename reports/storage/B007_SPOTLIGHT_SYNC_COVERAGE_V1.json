@@ -1,0 +1,97 @@
+{
+  "spotlight_account": {
+    "name": "T-KUBON坤宝高端岛台工厂-zx",
+    "id": "62ea6099000000001f004e37",
+    "id_status": "CALIBRATED_CANONICAL_ANCHOR"
+  },
+  "available_paid_date_range": {
+    "status": "UNKNOWN_TODAY_DEFAULT",
+    "note": "默认今日视图 2026-08-31~2026-08-31；日期选择器文本未探测到，全范围待扩展（§26）"
+  },
+  "campaign_count": 48,
+  "adgroup_unit_count": 48,
+  "creative_count": "SOURCE_NOT_PROVIDED (unit grain only)",
+  "unique_promoted_notes": 2322,
+  "paid_snapshot_count": 97,
+  "snapshot_by_entity": {
+    "ACCOUNT": 1,
+    "CAMPAIGN": 48,
+    "UNIT": 48
+  },
+  "metric_coverage_campaign": {
+    "fee": {
+      "count": 48,
+      "pct": 100.0
+    },
+    "impression": {
+      "count": 28,
+      "pct": 58.3
+    },
+    "click": {
+      "count": 28,
+      "pct": 58.3
+    },
+    "ctr": {
+      "count": 28,
+      "pct": 58.3
+    },
+    "cpm": {
+      "count": 28,
+      "pct": 58.3
+    },
+    "messageConsult": {
+      "count": 28,
+      "pct": 58.3
+    },
+    "msgLeadsNum": {
+      "count": 28,
+      "pct": 58.3
+    },
+    "msgLeadsCost": {
+      "count": 28,
+      "pct": 58.3
+    }
+  },
+  "metric_coverage_unit": {
+    "fee": {
+      "count": 48,
+      "pct": 100.0
+    },
+    "impression": {
+      "count": 48,
+      "pct": 100.0
+    },
+    "click": {
+      "count": 48,
+      "pct": 100.0
+    },
+    "ctr": {
+      "count": 48,
+      "pct": 100.0
+    },
+    "cpm": {
+      "count": 48,
+      "pct": 100.0
+    },
+    "messageConsult": {
+      "count": 48,
+      "pct": 100.0
+    },
+    "msgLeadsNum": {
+      "count": 48,
+      "pct": 100.0
+    },
+    "msgLeadsCost": {
+      "count": 48,
+      "pct": 100.0
+    }
+  },
+  "note_id_linkage": "DIRECT (unit.noteIds)",
+  "published_join": {
+    "ACTIVE_PUBLISHED_MATCH": 2322,
+    "LEGACY_IDENTITY_MATCH": 0,
+    "UNMATCHED_PAID_NOTE": 0,
+    "active_universe": 2851
+  },
+  "creator_performance_missing": 11
+}

@@ -1,0 +1,35 @@
+{
+  "exceptions": [
+    {
+      "stage": "EXPORT_LOCATOR",
+      "severity": "INFO",
+      "detail": "聚光无官方导出按钮定位（页面自有响应已提供全量数据；官方导出=OPTIONAL_SECONDARY_SOURCE）"
+    },
+    {
+      "stage": "DATE_RANGE",
+      "severity": "INFO",
+      "detail": "默认今日视图；全历史/自定义范围待后续分批 snapshot（§26 AVAILABLE_PAID_DATE_RANGE 未完成）"
+    },
+    {
+      "stage": "CREATIVE_GRAIN",
+      "severity": "LIMITATION",
+      "detail": "独立 creative 实体未暴露（/aurora/ad/manage/creative 404）；以单元(unit)为最细稳定粒度"
+    },
+    {
+      "stage": "ACCOUNT_7D_30D",
+      "severity": "LIMITATION",
+      "detail": "账号级 7d/30d 窗口指标未捕获（SOURCE_NOT_PROVIDED）"
+    },
+    {
+      "stage": "PAGINATION",
+      "severity": "RESOLVED",
+      "detail": "JS click 不触发 SPA 翻页；已用 Playwright 真实点击解决（48/48 计划与单元全分页）"
+    },
+    {
+      "stage": "UNIT_PAGE_MISSING_RESPONSES",
+      "severity": "INFO",
+      "detail": "leona/rtb/unit/extra/list 捕获 6 份（含去重）；extra 仅状态字段"
+    }
+  ],
+  "human_intervention_needed": "无（会话有效、账户匹配、无验证码；后续自定义日期范围如需选择器操作可 NEEDS_HUMAN）"
+}

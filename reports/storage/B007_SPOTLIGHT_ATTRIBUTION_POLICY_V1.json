@@ -1,0 +1,24 @@
+{
+  "attribution_classes": {
+    "PLATFORM_ATTRIBUTED_PAID_CONVERSION": "聚光页面自有响应明确提供的 creative/unit/note -> lead/conversion 字段",
+    "UNATTRIBUTABLE_CENTRALIZED_B007": "公司总表 added_wechat 集中归 B007；不拆给 note/creative/campaign（§19/21）",
+    "SOURCE_NOT_PROVIDED": "creative 级、账号 7d/30d 窗口等未由平台暴露的字段"
+  },
+  "rules": [
+    "公司 added_wechat 默认 UNATTRIBUTABLE_CENTRALIZED_B007，禁止分摊",
+    "仅平台 source 明确提供 note->lead/conversion 才入库为 PLATFORM_ATTRIBUTED",
+    "平台 CTR/CPC/CPM 原样保存（SOURCE_METRIC）；TreeCut 重算需标 DERIVED_METRIC（§13）",
+    "账户级/计划级聚合独立保存，不摊分（§24）"
+  ],
+  "metric_field_classes": {
+    "fee": "PLATFORM_ATTRIBUTED",
+    "impression": "PLATFORM_ATTRIBUTED",
+    "click": "PLATFORM_ATTRIBUTED",
+    "ctr": "PLATFORM_ATTRIBUTED",
+    "cpm": "PLATFORM_ATTRIBUTED",
+    "messageConsult": "PLATFORM_ATTRIBUTED",
+    "msgLeadsNum": "PLATFORM_ATTRIBUTED",
+    "msgLeadsCost": "PLATFORM_ATTRIBUTED"
+  },
+  "creator_performance": "2840 snapshots (SRC-B007-POSTED-OBSERVED) 未修改（§22）"
+}

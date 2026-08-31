@@ -1,0 +1,68 @@
+{
+  "run": "20260831_184517",
+  "account": {
+    "account_id": "62ea6099000000001f004e37",
+    "account_name": "T-KUBON坤宝高端岛台工厂-zx",
+    "id_source": "PAGE_OWNED_RESPONSE:leona/user/info",
+    "id_calibration": "CANONICAL_ANCHOR_UPGRADED"
+  },
+  "report_range": {
+    "start": "2026-08-31",
+    "end": "2026-08-31",
+    "note": "今日默认视图（日期选择器文本未探测到 → AVAILABLE_PAID_DATE_RANGE 待扩展）"
+  },
+  "campaigns": 48,
+  "units": 48,
+  "unique_promoted_notes": 2322,
+  "note_links": 4625,
+  "paid_snapshots_inserted": 97,
+  "join": {
+    "ACTIVE_PUBLISHED_MATCH": 4625,
+    "LEGACY_IDENTITY_MATCH": 0,
+    "UNMATCHED_PAID_NOTE": 0
+  },
+  "attribution": {
+    "metric_fields": [
+      "fee",
+      "impression",
+      "click",
+      "ctr",
+      "acp",
+      "cpm",
+      "interaction",
+      "cpi",
+      "videoPlay5sCnt",
+      "videoPlay5sRate",
+      "iUserNum",
+      "iUserPrice",
+      "tiUserNum",
+      "tiUserPrice",
+      "messageConsult",
+      "initiativeMessage",
+      "msgLeadsNum",
+      "messageConsultCpl",
+      "initiativeMessageCpl",
+      "msgLeadsCost",
+      "externalGoodsOrder15",
+      "externalGoodsOrderRate15New",
+      "outClickEnterStoreCnt15d",
+      "outClickEnterStoreCvr15dNew",
+      "leads",
+      "leadsCvr",
+      "validLeadsCpl",
+      "collect",
+      "follow",
+      "goodsOrder",
+      "wechatCopyCnt",
+      "appActivateAmount1d",
+      "appActivateAmount3d",
+      "appActivateAmount7d",
+      "externalGoodsOrderPrice30",
+      "externalRgmv15",
+      "externalRgmv30",
+      "externalLeads"
+    ],
+    "class": "PLATFORM_ATTRIBUTED (平台字段原样保存)",
+    "company_centralized_wechat": "UNATTRIBUTABLE_CENTRALIZED_B007 (未导入，不参与 note attribution)"
+  }
+}
