@@ -287,16 +287,25 @@ class CreatorSyncRunner:
             # 用户提供真实笔记列表页 URL 时优先使用（覆盖默认候选）
             self.NOTE_LIST_CANDIDATES = (note_list_url, "https://creator.xiaohongshu.com/")
 
-    # ---- §8 Identity Gate ----
+    # ---- §8 Identity Gate（含 SPA 渲染重试：UNKNOWN 时最多 4 次、间隔 2s） ----
     def identity_gate(self, runtime) -> dict:
+        binding = self.workspace.load_binding()
+
         def _detect():
             tab = runtime.ensure_tabs().get("CREATOR")
             return runtime.creator_detector.detect(tab) if tab else None
 
         # detect 涉及 Playwright → 必须在浏览器 owner 线程内执行
-        detected = runtime._in_browser(_detect)
-        status, reason = runtime.creator_detector.gate(detected)  # gate 纯逻辑，任意线程安全
-        binding = self.workspace.load_binding()
+        import time as _t
+        detected = None
+        status, reason = "ACCOUNT_IDENTITY_UNKNOWN", "未检测到"
+        for attempt in range(4):
+            detected = runtime._in_browser(_detect)
+            status, reason = runtime.creator_detector.gate(detected)  # gate 纯逻辑，任意线程安全
+            if status != "ACCOUNT_IDENTITY_UNKNOWN":
+                break
+            if attempt < 3:
+                _t.sleep(2.0)  # SPA 昵称渲染等待（有界）
         return {"status": status, "reason": reason,
                 "binding_creator_xhs_id": binding.creator_xhs_id if binding else None,
                 "detected_primary_id": detected.primary_id if detected else None,

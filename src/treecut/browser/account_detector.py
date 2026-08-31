@@ -105,10 +105,10 @@ class _BaseDetector:
 
     @staticmethod
     def _find_text(page, selectors: tuple[str, ...]) -> str | None:
-        """短超时逐选择器探测（text_content 默认等 30s/选择器，XHS 重页面会把检测拖到分钟级）。"""
+        """逐选择器探测（8s/个：XHS SPA 昵称渲染通常 2-8s；30s 太慢、2s 太激进）。"""
         for selector in selectors:
             try:
-                text = page.text_content(selector, timeout=2000)
+                text = page.text_content(selector, timeout=8000)
             except Exception:
                 continue
             text = (text or "").strip()
