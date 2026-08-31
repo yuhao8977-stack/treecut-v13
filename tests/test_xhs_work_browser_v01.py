@@ -81,7 +81,7 @@ class FakePage:
     def content(self) -> str:
         return self._html + " " + self._title
 
-    def text_content(self, _selector: str) -> str | None:
+    def text_content(self, _selector: str, timeout: int | None = None) -> str | None:
         return self._name
 
     def goto(self, url: str, timeout: int | None = None) -> None:
@@ -542,7 +542,7 @@ class ProgressivePage:
     def title(self) -> str:
         return ""
 
-    def text_content(self, _selector: str) -> str | None:
+    def text_content(self, _selector: str, timeout: int | None = None) -> str | None:
         self.text_calls += 1
         return self._name if self.content_calls >= self._ready_at else None
 
