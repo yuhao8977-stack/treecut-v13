@@ -168,13 +168,17 @@ class CreatorResponseObserver:
                 if "note_id" not in entry:
                     entry["note_id"] = note_id
                     entry["title"] = normalize_title(
-                        node.get("display_title") or node.get("title") or node.get("desc"))
+                        node.get("display_title") or node.get("displayTitle")
+                        or node.get("title") or node.get("desc"))
                     entry["publish_time"] = normalize_publish_time(
-                        node.get("publish_time") or node.get("time"))
+                        node.get("publish_time") or node.get("time")
+                        or node.get("lastUpdateTime"))
                     entry["media_type"] = str(node.get("type") or node.get("media_type") or "")
-                    dur = node.get("video", {})
-                    if isinstance(dur, dict):
-                        duration = dur.get("duration") or dur.get("durationSec")
+                    # galaxy: video_info.duration；通用: video.duration
+                    vi = node.get("video_info") or node.get("video")
+                    duration = None
+                    if isinstance(vi, dict):
+                        duration = vi.get("duration") or vi.get("durationSec")
                     else:
                         duration = node.get("duration")
                     if duration is not None:
@@ -182,7 +186,10 @@ class CreatorResponseObserver:
                             entry["duration"] = round(float(duration), 3)
                         except (TypeError, ValueError):
                             pass
-                    cover = extract_cover_meta(node.get("image_list") or node.get("cover")
+                    # galaxy: images_list；通用: image_list / cover / imageInfo
+                    cover = extract_cover_meta(node.get("images_list")
+                                               or node.get("image_list")
+                                               or node.get("cover")
                                                or node.get("imageInfo"))
                     if cover:
                         entry["cover"] = cover
@@ -355,6 +362,7 @@ class CreatorSyncRunner:
         "https://creator.xiaohongshu.com/data/overview",
         "https://creator.xiaohongshu.com/",
     )
+    MAX_PAGES = 20  # 分页上限（有界，防无限循环）
 
     def run_observation(self, runtime) -> list[dict]:
         """在 executor 内：attach observer → （必要时）导航笔记列表页 → 滚动加载 → 收集。
@@ -403,6 +411,28 @@ class CreatorSyncRunner:
                     tab.goto(target, timeout=60000)
                 except Exception as error:
                     log.warning("观察导航失败 %s：%s", target, str(error)[:120])
+            # 关键：B003 已验证 — 首次 goto 的 posted 响应常为 json 解析失败/空；
+            # 挂载监听后 reload 一次，触发页面自身 posted 请求（json=True 带 data.notes[]）
+            import time as _t
+            try:
+                tab.reload(timeout=60000)
+                _t.sleep(3)
+            except Exception as error:
+                log.warning("观察 reload 失败：%s", str(error)[:120])
+            # 分页：点击「下一页」触发页面自身 posted?page=N 请求（有界，防死循环）
+            for page_idx in range(self.MAX_PAGES):
+                clicked = False
+                try:
+                    clicked = tab.evaluate(
+                        "() => { const btns = Array.from(document.querySelectorAll('button, a, [class*=btn]'));"
+                        " const nxt = btns.find(b => /下一页|next/i.test((b.textContent||'').trim())"
+                        "   || /next/i.test(b.className||''));"
+                        " if (nxt) { nxt.click(); return true; } return false; }")
+                except Exception:
+                    clicked = False
+                if not clicked:
+                    break
+                _t.sleep(2.0)
             # 滚动加载更多（给 SPA 渲染与分页留时间）
             for _ in range(8):
                 try:
@@ -578,18 +608,13 @@ class CreatorSyncRunner:
 
         # ---- 校验 + 归一化 + 入库（幂等） ----
         valid = []
-        id_only: list[str] = []  # 仅有 note_id 无实质字段 → 诊断记录，不入库（防空记录污染）
         for note in notes:
             if not note.get("note_id"):
                 result.exceptions.append({"stage": "VALIDATE", "reason": "missing note_id",
                                           "title": note.get("title", "")[:50]})
                 continue
-            substantive = (note.get("title") or note.get("cover")
-                          or note.get("duration") is not None
-                          or note.get("publish_time") or note.get("media_type"))
-            if not substantive:
-                id_only.append(note["note_id"])
-                continue
+            # note_id 是 canonical identity（§9）；列表响应可能只回 id，
+            # title/duration/cover 等可选字段 UNKNOWN 如实保留（§15），不虚构
             record = {
                 "account_id": "B007",
                 "note_id": note["note_id"],
@@ -602,11 +627,6 @@ class CreatorSyncRunner:
             }
             self.adapter.upsert_published_content(record)
             valid.append(note)
-        if id_only:
-            result.exceptions.append({"stage": "VALIDATE",
-                                      "reason": "note_id_only_skipped",
-                                      "count": len(id_only),
-                                      "note_ids": id_only[:20]})
         result.published_count = len(valid)
         result.note_id_cover = len(valid)
         result.title_cover = sum(1 for n in valid if n.get("title"))
