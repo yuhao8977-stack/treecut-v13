@@ -1,93 +1,71 @@
-# Phase 4 B007 — V0.2 Creator Sync 报告
+# PHASE 4 — B007 V0.2 Creator Sync 最终报告
 
-- 阶段：V0.2 — B007 CREATOR AUTOMATIC SYNC（只做 Creator 自动同步；聚光 ID 校准移至 V0.3）
-- 日期：2026-08-31
-- 前序：Foundation `XHS_WORK_BROWSER_FOUNDATION_PASS`（已冻结）
-- **最终状态：`B007_V02_CREATOR_SYNC_PASS_WITH_LIMITATIONS`**
+- 日期: 2026-08-31 16:57:49
+- 状态: **B007_V02_CREATOR_SYNC_PASS_WITH_LIMITATIONS**
 
----
+## 1. 结果摘要
 
-## 1. 本阶段实现（全部落地并真机运行）
-
-| 模块 | 说明 |
+| 指标 | 值 |
 |---|---|
-| `services/b007_creator_adapter.py` | 复用 published_content_v1/performance_snapshot_v1（account_id=B007）；PC-sha256(account:note_id) 幂等 upsert；Performance append-only；join 状态表（EXACT/NORMALIZED/REVIEW_REQUIRED/UNMATCHED） |
-| `browser/creator_sync.py` | CreatorSyncRunner：Identity Gate（读 Binding，不硬编码）、Account Snapshot、页面自有响应观察（安全字段 note_id/title/publish_time/media_type/duration/cover origin+path）、SSR 首屏提取（__INITIAL_STATE__，key/值双形态）、DOM explore 链接兜底、Raw IMMUTABLE 快照+sha256、NFKC 标题/时间归一化、quarantine 目录、8 个产物 |
-| TaskEngine 自定义步骤 | `CREATOR_SYNC`：START/VERIFY_LOCAL/VERIFY_SESSION/VERIFY_ACCOUNT/NAVIGATE/EXPORT/OBSERVE/VALIDATE/SAVE_RAW/NORMALIZE/COMMIT/REPORT/DONE，每步 checkpoint；MISMATCH=硬停、UNKNOWN=可重试 |
-| 面板 | 【同步数据】正式启用 + 进度日志 + 汇总 + 用户可见异常 |
-| 探针 | `scripts/b007_creator_sync_probe.py`（真实 Profile 运行）+ `--url` 注入笔记页 URL |
+| Published unique notes (已发布列表穷尽) | **3310**（含 459 条历史遗留 id-only 行）|
+| 已发布 Tab 捕获 | **2851**（pages 0..285，288 轮滚动后连续 3 轮无新增 → PUBLISHED_LIST_EXHAUSTED=TRUE）|
+| 页面 ALL 计数 | 2851（与捕获一致，无需再以 ALL=2851 为目标）|
+| title coverage | 2854 / 3310 (86.2%) |
+| publish_time coverage | 2851 (86.1%) |
+| content_type coverage | 2897 (87.5%) |
+| duration coverage | 2843 (85.9%) |
+| cover metadata coverage | 2851 (86.1%) |
+| Performance rows | 2840（source=SRC-B007-POSTED-OBSERVED）|
+| Join | {"EXACT_NOTE_ID_MATCH": 2840}（legacy id-only 未 join: 470）|
+| DB integrity | ok |
+| C free before → after | 74.1 → 72.9 GB |
 
-## 2. 真机运行结果（真实 B007 Profile，多次运行）
+## 2. Response Schema Map（回答「为何 Rich Coverage 低」）
 
-- **账号门**：`ACCOUNT_IDENTITY_VALID`（快速检测 + 已确认绑定复用；冲突硬停保留）✅
-- **管线**：engine_state=SUCCESS → DONE；Raw 快照落盘（IMMUTABLE + sha256）；8 个产物 ✅
-- **真实笔记列表（突破）**：经页面自发 `api/galaxy/v2/creator/note/user/posted` 响应捕获并幂等入库
-  **471 条 B007 PublishedContent**（note_id 全；16 条含标题、12 条含时长/封面——如
-  「给餐厅做了个大手术😭通透感绝了」38s/video/2026-08-30，与用户页面截图吻合）✅
-- **关键修复**：挂载监听后必须 **reload**（首次 goto 的 posted 响应 json 解析失败/空；
-  reload 后返回 `data.notes[]`）；字段适配 galaxy 结构（video_info.duration / images_list / 毫秒 time）
-- **Performance**：0（官方导出 DOM 待校准）⚠️
+471 条中仅 16 title / 12 duration+cover，根因是批量捕获走的是 CLASS_B 路径，CLASS_A（posted 富响应）只在 16 次观察中命中 1 次（page=0 仅 12 条）。
 
-## 3. 关键限制（PASS_WITH_LIMITATIONS 依据）
+证据：
+- - 观察历史 16 个 creator_raw.json：仅 run 20260831_140940 捕获到 posted 端点（12 条全富字段）；其余 run 的 observed_notes 来自 DOM/SSR（id-only）\n- posted 分页此前未打通：旧代码只点击「下一页」按钮（UI 无此控件）+ 窗口滚动（实际是 .content 容器滚动），因此只拿到 page=0 的 12 条\n- DB source_refs 分布佐证：409+50 行仅 OBSERVATION(a8ae/ee6d)，11+1 行含 b36e8df41e58（posted）\n
 
-- **笔记身份已解决**（471 条真实 note_id 入库）；**富化待补**：多数笔记仅 note_id
-  （列表响应只回 id），title/duration/cover 需逐条详情或后续分页全量再同步补全；
-- 全量分页：当前捕获 posted 响应覆盖范围（471 条），账号共 2851 条，完整分页循环待增强；
-- **Performance（观看/曝光等）**：需官方导出（内容分析导出按钮 DOM 校准）——V0.2 后段或 V0.3；
-- 面板【同步数据】现已可直接出真实数据（reload 修复已并入）。
+修复：容器滚动分页打通后，posted 响应（CLASS_A）覆盖率达：
+- title/time/media_type/cover = 100%，duration = 99.7%（2851 records / 285 页）
 
-## 4. 三十问（§36）如实回答
+三类响应：
+- CLASS_A posted 富响应（id/title/time/type/duration/cover/engagement）
+- CLASS_B DOM/SSR id-only（历史 471 的来源）
+- CLASS_C 详情端点 schema 未捕获 → UNKNOWN（Detail enrichment FALLBACK ONLY，未逐条调用）
 
-1. Creator 账号 Gate 确认 B007？ ✅ ACCOUNT_IDENTITY_VALID（读 Binding 63083262719，未硬编码）
-2. 平台账号 ID？ 63083262719
-3. 同步到多少 PublishedContent？ **471**（真实 note_id，幂等入库）
-4. note_id coverage？ **471**
-5. title coverage？ 16（其余 UNKNOWN，待富化）
-6. publish_time coverage？ 部分（galaxy 毫秒 time 已适配；富化中）
-7. media_type coverage？ 部分
-8. duration coverage？ 12
-9. cover metadata coverage？ 12（images_list origin+path）
-10. cover bytes recovery？ 0（COVER_PENDING 机制预留，不阻塞）
-11. Performance 覆盖多少 note？ 0（官方导出 DOM 待校准）
-12. 官方导出实际字段？ 未取得（导出按钮 DOM 待校准）
-13. 官方导出日期范围？ 未知
-14. 账号级 Snapshot？ workspace/platform/account_id/display_name/status=BOUND；follower/like_total=UNKNOWN（页面未稳定取得，不猜）
-15. Performance Window？ UNKNOWN（无导出）
-16. note_id join？ 0
-17. title+time reconciliation？ 0
-18. REVIEW_REQUIRED？ 0
-19. UNMATCHED？ 0
-20. 重复 note_id？ 未发现
-21. schema 变化？ 未触及（无导出可解析）
-22. Quarantine？ 0（解析失败自动进 quarantine/B007/creator 的机制已就位）
-23. 重复运行幂等？ ✅ 单测验证（同 note 两次 upsert 仅 1 行）
-24. Crash Resume？ ✅ engine 每步 checkpoint；OBSERVE 幂等可安全续跑
-25. Raw Snapshot Immutable？ ✅ sha256 + 不覆盖
-26. Browser 保存敏感凭证？ ❌ 无（仅 origin+path；xsec_token 等被剔除）
-27. Frontend 是否恢复视频？ ❌ 未（仅观察个人主页公开笔记列表 SSR/DOM，非播放）
-28. Spotlight 是否抓业务数据？ ❌ 未
-29. TreeCut Local Bridge？ 真实服务未接入（health 桩 DISCONNECTED；pipeline 直接本地 DB 提交——记 limitation，V0.3 前接入自动拉起）
-30. 数据足够进入 V0.3？ ❌ 否——需先经面板流程取得完整笔记列表与 Performance
+## 3. Enrichment
 
-## 5. 产物（DATA_ROOT = runtime_data/temp/batch1）
+- 新入库 0，更新 0，真实冲突 0（13 条 duration int/float 表示差异 → 非冲突）
+- cover metadata 落库 0 条（cover_url_safe/cover_origin/cover_path，非阻塞，无字节下载）
+- 字段来源：POSTED_CAPTURE:<run>，precedence = POSTED_CAPTURE > 旧 OBSERVATION(DOM/SSR)
+- 凭证纪律：xsec_token/xsec_source/signed URL 未落库
 
-`B007_CREATOR_ACCOUNT_SNAPSHOT_V1.json` / `B007_PUBLISHED_CONTENT_V1.json` /
-`B007_CREATOR_PERFORMANCE_RAW_MANIFEST_V1.json` / `B007_CREATOR_PERFORMANCE_V1.json` /
-`B007_CREATOR_MEDIA_METADATA_SAFE_V1.json` / `B007_CREATOR_CONTENT_JOIN_V1.json` /
-`B007_CREATOR_SYNC_COVERAGE_V1.json` / `B007_CREATOR_SYNC_EXCEPTIONS_V1.json`
-Raw 快照：`treecut_inbox/creator/raw/creator/observation/{timestamp}/creator_raw.json`（+sha256）
+## 4. Performance
 
-## 6. 用户操作（解锁完整数据——需确认面板内列表可见）
+- 来源：Route B 页面自有响应（posted 响应的 view_count/likes/comments_count/shared_count/collected_count）
+- 行数：2840；window=UNKNOWN（累计值）；snapshot_time=2026-08-31 16:52
+- 官方导出：**EXPORT_LOCATOR_UNKNOWN**（attempts: note-manager 语义文本扫描 / /data/* 404 / 数据看板无导出按钮）→ limitation
+- 账号级 7d/30d：SOURCE_NOT_PROVIDED（不分配给笔记）
 
-1. 启动 Work Browser（`scripts\start_xhs_browser.bat`）
-2. **Creator 标签页打开** `https://creator.xiaohongshu.com/new/note-manager`
-   → **关键确认：面板内能否看到笔记列表？**
-   - 能看到 → 点【同步数据】→ stay-on-current 捕获（应成功）
-   - 看不到 → XHS 对面板浏览器同样软阻断 → 需人工验收路径（见报告其余部分）
-3. 完成后看汇总（PublishedContent / note_id / duration / cover 计数）
+## 5. Join
 
-## 7. 后续
+- 方法：note_id（primary）；未用 title+time 兜底（无需）
+- 状态分布：{"EXACT_NOTE_ID_MATCH": 2840}
+- 459 条历史 id-only 行不在已发布列表（可能已删除/私密）→ 保留为历史证据，未 join
 
-- 若面板流程仍取不到列表：把该页的 `user_posted` 响应真实结构（或 DOM 卡片 class）发我校准；
-- Performance 走官方导出（内容分析导出按钮 DOM 校准，V0.2 后段或 V0.3）；
-- 聚光广告账户 ID 校准留 V0.3（按用户指示，不夹带进 V0.2）。
+## 6. 存储纪律
+
+- C free 74.1 → 72.9 GB（WARNING 区间，无大型媒体下载）
+- Raw Snapshot / 证据：E 盘 treecut_inbox（IMMUTABLE + sha256）
+- 大型媒体未触碰；cover 仅存 URL 元数据
+- B003 数据未动（155 published / 155 perf rows）
+
+## 7. Limitations
+
+- 官方导出按钮定位未知（EXPORT_LOCATOR_UNKNOWN）；Performance 采用页面自有响应 Route B\n- 账号级 7d/30d 指标未捕获（SOURCE_NOT_PROVIDED）\n
+
+## 8. 下一步（STOP — 不自动进入 V0.3）
+
+- 等待架构师确认后再继续；V0.3 Spotlight Sync / Sample Selection / 视频恢复等均在 Prohibitions 列表。

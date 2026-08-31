@@ -1,0 +1,53 @@
+{
+  "status": "B007_V02_CREATOR_SYNC_PASS_WITH_LIMITATIONS",
+  "published_total": 3310,
+  "published_exhausted": 2851,
+  "coverage": {
+    "note_id": {
+      "count": 3310,
+      "pct": 100.0
+    },
+    "title": {
+      "count": 2854,
+      "pct": 86.2
+    },
+    "publish_time": {
+      "count": 2851,
+      "pct": 86.1
+    },
+    "content_type": {
+      "count": 2897,
+      "pct": 87.5
+    },
+    "duration": {
+      "count": 2843,
+      "pct": 85.9
+    },
+    "cover_url_safe": {
+      "count": 2851,
+      "pct": 86.1
+    }
+  },
+  "perf_rows": 2840,
+  "join": {
+    "EXACT_NOTE_ID_MATCH": 2840
+  },
+  "legacy_id_only": 470,
+  "db_integrity": "ok",
+  "c_free_gb": {
+    "before": 74.1,
+    "after": 72.9
+  },
+  "export": {
+    "status": "EXPORT_LOCATOR_UNKNOWN",
+    "attempts": [
+      "note-manager 已发布 tab 语义文本扫描（导出/下载报表/下载数据/导出报表/下载）",
+      "datacenter /data/overview /data/note /data/content → 404",
+      "平台首页 数据看板 → 粉丝概览卡，无导出按钮"
+    ]
+  },
+  "limitations": [
+    "官方导出按钮定位未知（EXPORT_LOCATOR_UNKNOWN）；Performance 采用页面自有响应 Route B",
+    "账号级 7d/30d 指标未捕获（SOURCE_NOT_PROVIDED）"
+  ]
+}

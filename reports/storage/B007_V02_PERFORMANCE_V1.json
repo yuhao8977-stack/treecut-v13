@@ -1,0 +1,30 @@
+{
+  "run": "20260831_165144",
+  "source": "SRC-B007-POSTED-OBSERVED",
+  "source_note": "creator note/user/posted 页面自有响应（官方页面数据，非模拟 signed API）；官方导出按钮定位在本会话未找到 → EXPORT_LOCATOR_UNKNOWN（limitation）",
+  "snapshot_time": "2026-08-31 16:52",
+  "window": "UNKNOWN（列表为累计值，非 7d/30d 窗口）",
+  "inserted": 2840,
+  "skipped_idempotent": 0,
+  "engagement_field_coverage": {
+    "view_count": 2840,
+    "likes": 2840,
+    "comments_count": 2840,
+    "shared_count": 2840,
+    "collected_count": 2840
+  },
+  "join": {
+    "EXACT_NOTE_ID_MATCH": 2840,
+    "UNMATCHED": 470
+  },
+  "account_level_7d_30d": "UNKNOWN / SOURCE_NOT_PROVIDED（datacenter overview 未在本轮页面观察捕获；账号级指标不分配给笔记）",
+  "total_perf_rows_b007": 2840,
+  "export": {
+    "status": "EXPORT_LOCATOR_UNKNOWN",
+    "attempts": [
+      "note-manager 已发布 tab 语义文本扫描（导出/下载报表/下载数据/导出报表/下载）",
+      "datacenter /data/overview /data/note /data/content → 404",
+      "平台首页 数据看板 → 粉丝概览卡，无导出按钮"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "run": "20260831_163355",
+  "source_ref": "POSTED_CAPTURE:20260831_163355",
+  "precedence": "POSTED_CAPTURE > old OBSERVATION(DOM/SSR)",
+  "stats": {
+    "new": 0,
+    "updated": 0,
+    "conflicts": {},
+    "cover_filled": 0,
+    "notes_in_evidence": 2851
+  },
+  "conflicts_sample": [],
+  "conflict_count": 0,
+  "coverage_after": {
+    "note_id": {
+      "count": 3310,
+      "pct": 100.0
+    },
+    "title": {
+      "count": 2854,
+      "pct": 86.2
+    },
+    "publish_time": {
+      "count": 2851,
+      "pct": 86.1
+    },
+    "content_type": {
+      "count": 2897,
+      "pct": 87.5
+    },
+    "duration": {
+      "count": 2843,
+      "pct": 85.9
+    },
+    "cover_url_safe": {
+      "count": 2851,
+      "pct": 86.1
+    },
+    "total": {
+      "count": 3310,
+      "pct": 100.0
+    }
+  }
+}

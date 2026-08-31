@@ -362,7 +362,7 @@ class CreatorSyncRunner:
         "https://creator.xiaohongshu.com/data/overview",
         "https://creator.xiaohongshu.com/",
     )
-    MAX_PAGES = 20  # 分页上限（有界，防无限循环）
+    MAX_PAGES = 300  # 分页上限（有界，防无限循环；B007 已发布 ~2850 条 ≈ 285 页）
 
     def run_observation(self, runtime) -> list[dict]:
         """在 executor 内：attach observer → （必要时）导航笔记列表页 → 滚动加载 → 收集。
@@ -411,36 +411,70 @@ class CreatorSyncRunner:
                     tab.goto(target, timeout=60000)
                 except Exception as error:
                     log.warning("观察导航失败 %s：%s", target, str(error)[:120])
-            # 关键：B003 已验证 — 首次 goto 的 posted 响应常为 json 解析失败/空；
-            # 挂载监听后 reload 一次，触发页面自身 posted 请求（json=True 带 data.notes[]）
             import time as _t
-            try:
-                tab.reload(timeout=60000)
-                _t.sleep(3)
-            except Exception as error:
-                log.warning("观察 reload 失败：%s", str(error)[:120])
-            # 分页：点击「下一页」触发页面自身 posted?page=N 请求（有界，防死循环）
-            for page_idx in range(self.MAX_PAGES):
-                clicked = False
+            _t.sleep(3)
+            # 点击「已发布」tab（语义文本，禁固定坐标）；SPA 可能延迟渲染，重试 2 次
+            for _try in range(2):
                 try:
                     clicked = tab.evaluate(
-                        "() => { const btns = Array.from(document.querySelectorAll('button, a, [class*=btn]'));"
-                        " const nxt = btns.find(b => /下一页|next/i.test((b.textContent||'').trim())"
-                        "   || /next/i.test(b.className||''));"
-                        " if (nxt) { nxt.click(); return true; } return false; }")
+                        "() => { const els = Array.from(document.querySelectorAll('div,span,li,a,button'));"
+                        " const t = els.find(e => (e.textContent||'').trim() === '已发布' && e.children.length <= 2);"
+                        " if (t) { t.click(); return true; } return false; }")
+                    if clicked:
+                        _t.sleep(2)
+                        break
                 except Exception:
-                    clicked = False
-                if not clicked:
                     break
-                _t.sleep(2.0)
-            # 滚动加载更多（给 SPA 渲染与分页留时间）
-            for _ in range(8):
+            # 关键：B003 已验证 — 首次 goto 的 posted 响应常为 json 解析失败/空；
+            # 挂载监听后 reload 触发页面自身 posted 请求（json=True 带 data.notes[]）。
+            # 重试 ≤3 次直到捕获 posted 响应（端点出现在 observer.endpoints）。
+            posted_path = "/api/galaxy/v2/creator/note/user/posted"
+            for _r in range(3):
                 try:
-                    tab.evaluate("() => window.scrollBy(0, document.body.scrollHeight)")
-                    import time as _t
-                    _t.sleep(1.5)
-                except Exception:
+                    tab.reload(timeout=60000)
+                    _t.sleep(3)
+                except Exception as error:
+                    log.warning("观察 reload 失败：%s", str(error)[:120])
+                if any(posted_path in e for e in observer.endpoints):
                     break
+                try:
+                    tab.evaluate(
+                        "() => { const els = Array.from(document.querySelectorAll('div,span,li,a,button'));"
+                        " const t = els.find(e => (e.textContent||'').trim() === '已发布' && e.children.length <= 2);"
+                        " if (t) { t.click(); return true; } return false; }")
+                    _t.sleep(1)
+                except Exception:
+                    pass
+            # 分页：滚动所有可滚动容器 + 窗口 → 触发页面自身 posted?page=N 请求（有界，§13 穷尽规则）
+            last_notes = 0
+            no_new_streak = 0
+            for _page_idx in range(self.MAX_PAGES):
+                try:
+                    tab.evaluate(
+                        "() => { const els = Array.from(document.querySelectorAll('*'));"
+                        " const sc = els.filter(e => e.scrollHeight > e.clientHeight + 100"
+                        "   && getComputedStyle(e).overflowY !== 'visible');"
+                        " for (const e of sc) e.scrollTop = e.scrollHeight;"
+                        " window.scrollTo(0, document.body.scrollHeight); }")
+                except Exception:
+                    pass
+                _t.sleep(2.2)
+                if len(observer.notes) > last_notes:
+                    last_notes = len(observer.notes)
+                    no_new_streak = 0
+                else:
+                    no_new_streak += 1
+                    if no_new_streak >= 3:   # 连续 3 轮无新增 → 穷尽
+                        break
+            # 兜底：尝试点击「下一页」（若 UI 存在）
+            try:
+                tab.evaluate(
+                    "() => { const btns = Array.from(document.querySelectorAll('button,a,[class*=btn],[class*=page]'));"
+                    " const nxt = btns.find(b => /下一页|next/i.test((b.textContent||'').trim()) || /next/i.test(b.className||''));"
+                    " if (nxt) { nxt.click(); return true; } return false; }")
+                _t.sleep(2.0)
+            except Exception:
+                pass
             # XHS 常把首屏数据内嵌 window.__INITIAL_STATE__（SSR），不走 JSON 响应 → 额外提取
             state_notes = self._extract_state_notes(tab)
             for note in state_notes:
