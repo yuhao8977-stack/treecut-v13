@@ -1,0 +1,57 @@
+{
+ "generated_at": "2026-08-31 14:34:54",
+ "status": "PENDING_APPROVAL",
+ "note": "仅规划，未执行任何删除。DELETE 须在 Phase B 迁移验证全部 PASS 且用户批准后独立执行。",
+ "candidates": [
+  {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp",
+   "size_gb": 17.48,
+   "category": "TEMP",
+   "delete_safe": "审查后（仅过期/无用临时文件）",
+   "est_release_gb": "10-15（需审查）"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface",
+   "size_gb": 14.93,
+   "category": "MODEL_CACHE",
+   "delete_safe": "迁移到 G 并验证后可清（HF blobs 硬链接按实占算约 8-10）",
+   "est_release_gb": "8-10"
+  },
+  {
+   "path": "C:\\Users\\admin\\.ollama",
+   "size_gb": 5.56,
+   "category": "MODEL_CACHE",
+   "delete_safe": "迁移到 G 并验证后可清",
+   "est_release_gb": "5.5"
+  },
+  {
+   "path": "C:\\Users\\admin\\dsh_models",
+   "size_gb": 1.89,
+   "category": "MODEL_CACHE",
+   "delete_safe": "确认消费方后迁 G",
+   "est_release_gb": "1.9"
+  },
+  {
+   "path": "C:\\Users\\admin\\Downloads",
+   "size_gb": 21.33,
+   "category": "USER_FILES",
+   "delete_safe": "需用户人工审查",
+   "est_release_gb": "用户决定"
+  },
+  {
+   "path": "C:\\Users\\admin\\Desktop",
+   "size_gb": 7.5,
+   "category": "USER_FILES",
+   "delete_safe": "需用户人工审查",
+   "est_release_gb": "用户决定"
+  },
+  {
+   "path": "C:\\Users\\admin\\github\\treecut-v13",
+   "size_gb": 0.07,
+   "category": "REPO",
+   "delete_safe": "canonical E 验证通过后保留备份一段时间再清",
+   "est_release_gb": "0.07"
+  }
+ ],
+ "est_total_release_gb": "26-33（不含用户文件审查项）→ C 可回到约 70-80GB；含用户文件审查可达 100GB+"
+}

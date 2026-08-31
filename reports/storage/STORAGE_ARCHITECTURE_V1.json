@@ -1,0 +1,56 @@
+{
+ "generated_at": "2026-08-31 14:34:54",
+ "version": "V1",
+ "layers": {
+  "C": {
+   "role": "系统 + 用户配置 + 必要小文件",
+   "free_gb": 42.7
+  },
+  "E": {
+   "role": "TreeCut 程序 + 运行数据（DB/browser_profile/checkpoint/inbox/logs/temp/staging）",
+   "root": "E:\\TreeCut\\",
+   "free_gb": 155.7
+  },
+  "G": {
+   "role": "AI 模型 + 大型可复用缓存（models/huggingface_cache/modelscope_cache/ollama）",
+   "root": "G:\\AI\\",
+   "free_gb": 167.1
+  },
+  "Z": {
+   "role": "大型媒体（视频/图片/cover/导出/归档）",
+   "root": "Z:\\TreeCut_Media\\",
+   "free_gb": 12172.5
+  }
+ },
+ "constraints": [
+  "Z 仅放 media，不放 SQLite/Profile/LevelDB/Git working tree（网络/IO 延迟）",
+  "媒体先写 E:\\TreeCut\\runtime\\staging\\*.part → 验证 PASS → 原子移至 Z",
+  "MEDIA_ROOT 不可用 → MEDIA_STORAGE_UNAVAILABLE，STOP，绝不 fallback C",
+  "C free < 80GB → WARNING；< 50GB → CRITICAL（禁媒体/缓存写 C）"
+ ],
+ "env_vars": {
+  "TREECUT_REPO_ROOT": "E:\\TreeCut\\repo\\treecut-v13",
+  "TREECUT_DATA_ROOT": "E:\\TreeCut\\runtime",
+  "TREECUT_MEDIA_ROOT": "Z:\\TreeCut_Media",
+  "TREECUT_MODEL_ROOT": "G:\\AI",
+  "TREECUT_TEMP_ROOT": "E:\\TreeCut\\runtime\\temp",
+  "HF_HOME": "G:\\AI\\huggingface_cache",
+  "OLLAMA_MODELS": "G:\\AI\\ollama"
+ },
+ "media_tree": {
+  "Z:\\TreeCut_Media\\": [
+   "B003",
+   "B007",
+   "B008",
+   "B010",
+   "UNASSIGNED_LEGACY"
+  ],
+  "B007": [
+   "covers",
+   "published_media",
+   "creator_exports",
+   "raw_media",
+   "archive"
+  ]
+ }
+}

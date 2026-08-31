@@ -1,0 +1,328 @@
+{
+ "generated_at": "2026-08-31 14:25:21",
+ "disks": {
+  "C": {
+   "free_gb": 42.7,
+   "total_gb": 449.2
+  },
+  "D": {
+   "free_gb": 140.3,
+   "total_gb": 481.2
+  },
+  "E": {
+   "free_gb": 155.7,
+   "total_gb": 500.0
+  },
+  "G": {
+   "free_gb": 167.1,
+   "total_gb": 431.5
+  },
+  "Z": {
+   "free_gb": 12172.5,
+   "total_gb": 14902.0
+  }
+ },
+ "paths": {
+  "github": {
+   "path": "C:\\Users\\admin\\github",
+   "size_bytes": 73800937,
+   "file_count": 2174,
+   "status": "OK",
+   "size_gb": 0.07
+  },
+  ".treecut": {
+   "path": "C:\\Users\\admin\\.treecut",
+   "size_bytes": 0,
+   "file_count": 0,
+   "status": "OK",
+   "size_gb": 0.0
+  },
+  ".cache": {
+   "path": "C:\\Users\\admin\\.cache",
+   "size_bytes": 16035088536,
+   "file_count": 22255,
+   "status": "OK",
+   "size_gb": 14.93
+  },
+  ".modelscope": {
+   "path": "C:\\Users\\admin\\.modelscope",
+   "size_bytes": 32,
+   "file_count": 1,
+   "status": "OK",
+   "size_gb": 0.0
+  },
+  ".ollama": {
+   "path": "C:\\Users\\admin\\.ollama",
+   "size_bytes": 5969248470,
+   "file_count": 11,
+   "status": "OK",
+   "size_gb": 5.56
+  },
+  ".dsh": {
+   "path": "C:\\Users\\admin\\.dsh",
+   "size_bytes": 866027656,
+   "file_count": 118204,
+   "status": "SCAN_TIMEOUT_PARTIAL",
+   "size_gb": 0.81
+  },
+  "deepseek-harness": {
+   "path": "C:\\Users\\admin\\deepseek-harness",
+   "size_bytes": 1148581814,
+   "file_count": 138790,
+   "status": "SCAN_TIMEOUT_PARTIAL",
+   "size_gb": 1.07
+  },
+  "harness_workspace": {
+   "path": "C:\\Users\\admin\\harness_workspace",
+   "size_bytes": 17076826,
+   "file_count": 770,
+   "status": "OK",
+   "size_gb": 0.02
+  },
+  "dsh_models": {
+   "path": "C:\\Users\\admin\\dsh_models",
+   "size_bytes": 2029893706,
+   "file_count": 32,
+   "status": "OK",
+   "size_gb": 1.89
+  },
+  "AppData_Local_Temp": {
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp",
+   "size_bytes": 18771087094,
+   "file_count": 30136,
+   "status": "OK",
+   "size_gb": 17.48
+  },
+  "Desktop": {
+   "path": "C:\\Users\\admin\\Desktop",
+   "size_bytes": 8049602507,
+   "file_count": 358,
+   "status": "OK",
+   "size_gb": 7.5
+  },
+  "Downloads": {
+   "path": "C:\\Users\\admin\\Downloads",
+   "size_bytes": 22899596488,
+   "file_count": 31470,
+   "status": "OK",
+   "size_gb": 21.33
+  }
+ },
+ "top_files": [
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--Systran--faster-whisper-large-v3\\snapshots\\edaa852ec7e145841d8ffdb056a99866b5f0a478\\model.bin",
+   "size_bytes": 3087284237,
+   "type": ".bin",
+   "modified": "2026-06-10"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--BAAI--bge-m3\\snapshots\\5617a9f61b028005a4858fdac845db406aefb181\\pytorch_model.bin",
+   "size_bytes": 2271145830,
+   "type": ".bin",
+   "modified": "2026-06-09"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--BAAI--bge-m3\\snapshots\\9a0624b896d81da7492a910ffa53731274b6cf3d\\model.safetensors",
+   "size_bytes": 2271064456,
+   "type": ".safetensors",
+   "modified": "2026-06-09"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--timm--vit_large_patch14_clip_224.openai\\blobs\\9ce2e8a8ebfff3793d7d375ad6d3c35cb9aebf3de7ace0fc7308accab7cd207e",
+   "size_bytes": 1710517724,
+   "type": "",
+   "modified": "2026-06-10"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--timm--vit_large_patch14_clip_224.openai\\snapshots\\18d0535469bb561bf468d76c1d73aa35156c922b\\open_clip_model.safetensors",
+   "size_bytes": 1710517724,
+   "type": ".safetensors",
+   "modified": "2026-06-10"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--openai--clip-vit-base-patch32\\snapshots\\3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268\\pytorch_model.bin",
+   "size_bytes": 605247071,
+   "type": ".bin",
+   "modified": "2026-06-10"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--openai--clip-vit-base-patch32\\snapshots\\c237dc49a33fc61debc9276459120b7eac67e7ef\\model.safetensors",
+   "size_bytes": 605157884,
+   "type": ".safetensors",
+   "modified": "2026-06-10"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--Systran--faster-whisper-small\\snapshots\\536b0662742c02347bc0e980a01041f333bce120\\model.bin",
+   "size_bytes": 483546902,
+   "type": ".bin",
+   "modified": "2026-06-07"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--sentence-transformers--paraphrase-multilingual-MiniLM-L12-v2\\snapshots\\e8f8c211226b894fcb81acc59f3b34ba3efd5f42\\model.safetensors",
+   "size_bytes": 470641600,
+   "type": ".safetensors",
+   "modified": "2026-07-13"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--microsoft--Florence-2-base\\snapshots\\5ca5edf5bd017b9919c05d08aebef5e4c7ac3bac\\pytorch_model.bin",
+   "size_bytes": 464421827,
+   "type": ".bin",
+   "modified": "2026-06-10"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--microsoft--Florence-2-base\\snapshots\\5ca5edf5bd017b9919c05d08aebef5e4c7ac3bac\\model.safetensors",
+   "size_bytes": 463221266,
+   "type": ".safetensors",
+   "modified": "2026-06-10"
+  },
+  {
+   "path": "C:\\Users\\admin\\.codex\\plugins\\.plugin-appserver\\codex.exe",
+   "size_bytes": 313923888,
+   "type": ".exe",
+   "modified": "2026-08-30"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--sentence-transformers--paraphrase-multilingual-MiniLM-L12-v2\\blobs\\eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b.12f35e0b.incomplete",
+   "size_bytes": 209715200,
+   "type": ".incomplete",
+   "modified": "2026-07-13"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--openai--clip-vit-base-patch32\\blobs\\a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f.1c0b0193.incomplete",
+   "size_bytes": 139729774,
+   "type": ".incomplete",
+   "modified": "2026-06-10"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+   "size_bytes": 92825416,
+   "type": ".exe",
+   "modified": "2026-08-03"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\artifact_tool_v2\\bin\\artifact_tool_rpc_daemon.exe",
+   "size_bytes": 92825416,
+   "type": ".exe",
+   "modified": "2026-08-27"
+  },
+  {
+   "path": "C:\\Users\\admin\\.cache\\huggingface\\hub\\models--sentence-transformers--all-MiniLM-L6-v2\\snapshots\\1110a243fdf4706b3f48f1d95db1a4f5529b4d41\\model.safetensors",
+   "size_bytes": 90868376,
+   "type": ".safetensors",
+   "modified": "2026-06-09"
+  },
+  {
+   "path": "C:\\Users\\admin\\.codex\\logs_2.sqlite",
+   "size_bytes": 90324992,
+   "type": ".sqlite",
+   "modified": "2026-08-31"
+  },
+  {
+   "path": "C:\\Users\\admin\\.codex\\plugins\\.plugin-appserver\\codex-code-mode-host.exe",
+   "size_bytes": 72301872,
+   "type": ".exe",
+   "modified": "2026-08-30"
+  }
+ ],
+ "top_dirs": [
+  {
+   "name": "Downloads",
+   "path": "C:\\Users\\admin\\Downloads",
+   "size_gb": 21.33
+  },
+  {
+   "name": "AppData_Local_Temp",
+   "path": "C:\\Users\\admin\\AppData\\Local\\Temp",
+   "size_gb": 17.48
+  },
+  {
+   "name": ".cache",
+   "path": "C:\\Users\\admin\\.cache",
+   "size_gb": 14.93
+  },
+  {
+   "name": "Desktop",
+   "path": "C:\\Users\\admin\\Desktop",
+   "size_gb": 7.5
+  },
+  {
+   "name": ".ollama",
+   "path": "C:\\Users\\admin\\.ollama",
+   "size_gb": 5.56
+  },
+  {
+   "name": "dsh_models",
+   "path": "C:\\Users\\admin\\dsh_models",
+   "size_gb": 1.89
+  },
+  {
+   "name": "deepseek-harness",
+   "path": "C:\\Users\\admin\\deepseek-harness",
+   "size_gb": 1.07
+  },
+  {
+   "name": ".dsh",
+   "path": "C:\\Users\\admin\\.dsh",
+   "size_gb": 0.81
+  },
+  {
+   "name": "github",
+   "path": "C:\\Users\\admin\\github",
+   "size_gb": 0.07
+  },
+  {
+   "name": "harness_workspace",
+   "path": "C:\\Users\\admin\\harness_workspace",
+   "size_gb": 0.02
+  },
+  {
+   "name": ".treecut",
+   "path": "C:\\Users\\admin\\.treecut",
+   "size_gb": 0.0
+  },
+  {
+   "name": ".modelscope",
+   "path": "C:\\Users\\admin\\.modelscope",
+   "size_gb": 0.0
+  }
+ ],
+ "e_treecut_candidates": [
+  {
+   "path": "E:\\树剪整理",
+   "size_bytes": 74899627419,
+   "file_count": 112624,
+   "status": "SCAN_TIMEOUT_PARTIAL",
+   "size_gb": 69.76
+  }
+ ],
+ "model_caches": {
+  ".modelscope": {
+   "path": "C:\\Users\\admin\\.modelscope",
+   "size_bytes": 32,
+   "file_count": 1,
+   "status": "OK",
+   "size_gb": 0.0
+  },
+  ".ollama": {
+   "path": "C:\\Users\\admin\\.ollama",
+   "size_bytes": 5969248470,
+   "file_count": 11,
+   "status": "OK",
+   "size_gb": 5.56
+  },
+  ".cache": {
+   "path": "C:\\Users\\admin\\.cache",
+   "size_bytes": 16035088536,
+   "file_count": 22255,
+   "status": "OK",
+   "size_gb": 14.93
+  },
+  "dsh_models": {
+   "path": "C:\\Users\\admin\\dsh_models",
+   "size_bytes": 2029893706,
+   "file_count": 32,
+   "status": "OK",
+   "size_gb": 1.89
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "generated_at": "2026-08-31 14:34:54",
+ "canonical_dev_repo": {
+  "path": "C:\\Users\\admin\\github\\treecut-v13",
+  "is_git": true,
+  "head": "e5c4f65",
+  "dirty": false,
+  "size_gb": 0.07,
+  "verdict": "CURRENT_CANONICAL（唯一 git 仓库）"
+ },
+ "e_candidates": [
+  {
+   "path": "E:\\树剪整理\\01_主程序源码",
+   "is_git": false,
+   "size_gb": null,
+   "content": "树剪软件相关文件（旧源码转储）",
+   "verdict": "LEGACY_SOURCE_DUMP / NEEDS_REVIEW（无 git，需人工确认是否含独有工作）"
+  },
+  {
+   "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13",
+   "is_git": false,
+   "size_gb": null,
+   "content": "安装版产物（src+runtime+models+runtime_data）",
+   "verdict": "INSTALLED_PRODUCT（非 git；其 runtime_data 即当前运行数据，MUST_PRESERVE）"
+  }
+ ],
+ "migration_policy": [
+  "以 C 仓库为源，E:\\TreeCut\\repo\\treecut-v13 为唯一 canonical（clone/复制+checkout 同 commit）",
+  "E 旧源码/安装版：本轮不删除；待 canonical E 验证通过后再分类清理",
+  "禁止文件覆盖式合并"
+ ]
+}

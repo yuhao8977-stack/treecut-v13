@@ -1,0 +1,34 @@
+{
+ "generated_at": "2026-08-31 14:34:54",
+ "caches": {
+  ".cache/huggingface": {
+   "path": "C:\\Users\\admin\\.cache\\huggingface",
+   "size_gb": 14.93,
+   "note": "HF 缓存含硬链接（blobs+snapshots 共享磁盘），实测占用小于表观值；含 faster-whisper-large-v3/bge-m3/vit_clip/florence 等",
+   "can_redirect": true,
+   "redirect": "HF_HOME=G:\\AI\\huggingface_cache",
+   "action": "Phase B：设 HF_HOME + 迁移现有 hub 目录后验证"
+  },
+  ".ollama": {
+   "path": "C:\\Users\\admin\\.ollama",
+   "size_gb": 5.56,
+   "can_redirect": true,
+   "redirect": "OLLAMA_MODELS=G:\\AI\\ollama",
+   "action": "Phase B：设 OLLAMA_MODELS + 迁移 models 后验证"
+  },
+  "dsh_models": {
+   "path": "C:\\Users\\admin\\dsh_models",
+   "size_gb": 1.89,
+   "can_redirect": true,
+   "redirect": "G:\\AI\\dsh_models",
+   "action": "Phase B：确认消费方支持后迁移"
+  },
+  ".modelscope": {
+   "path": "C:\\Users\\admin\\.modelscope",
+   "size_gb": 0.0,
+   "can_redirect": true,
+   "redirect": "MODELSCOPE_CACHE=G:\\AI\\modelscope_cache"
+  }
+ },
+ "rule": "不得直接剪切未知 AI 运行目录；须经支持的环境变量/配置重定向并验证。"
+}

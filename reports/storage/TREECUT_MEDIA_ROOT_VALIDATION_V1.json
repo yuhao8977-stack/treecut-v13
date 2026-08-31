@@ -1,0 +1,12 @@
+{
+ "status": "PENDING_PHASE_B",
+ "scope": "media root → Z",
+ "checks": [
+  "目录可写",
+  "字节数一致",
+  "登录持久化（profile）",
+  "DB integrity（runtime）",
+  "读写验证（media）"
+ ],
+ "result": null
+}
