@@ -253,8 +253,10 @@ class BrowserRuntime:
                           "NAVIGATE", "EXPORT", "OBSERVE", "VALIDATE", "SAVE_RAW",
                           "NORMALIZE", "COMMIT", "REPORT", "DONE")
 
-    def run_creator_sync(self, export_enabled: bool = False) -> dict:
-        """【同步数据】：Creator 自动同步（账号/笔记身份/媒体元数据；Performance 视导出）。"""
+    def run_creator_sync(self, export_enabled: bool = False,
+                         note_list_url: str | None = None) -> dict:
+        """【同步数据】：Creator 自动同步（账号/笔记身份/媒体元数据；Performance 视导出）。
+        note_list_url：用户提供的 Creator 笔记列表页真实 URL（可选覆盖）。"""
         from treecut.browser.task_engine import TaskEngine
         task_engine = TaskEngine(self.checkpoint_store, self.retry,
                                  workspace_id=self.config.workspace_id,
@@ -264,7 +266,8 @@ class BrowserRuntime:
             task_engine.new_task(target="creator_sync", required_tab="CREATOR")
         task_id = task_engine.checkpoint.task_id
         runner = CreatorSyncRunner(self.workspace, self.paths.data_root,
-                                   export_enabled=export_enabled)
+                                   export_enabled=export_enabled,
+                                   note_list_url=note_list_url)
         holder: dict = {}
 
         def handler(_engine, step, _cp):

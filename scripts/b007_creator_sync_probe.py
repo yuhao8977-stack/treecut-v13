@@ -29,6 +29,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--profile-root", default="")
     parser.add_argument("--headless", action="store_true")
     parser.add_argument("--export", action="store_true", help="尝试官方导出（DOM 依赖）")
+    parser.add_argument("--url", default="", help="Creator 笔记列表页真实 URL（覆盖默认候选）")
     args = parser.parse_args(argv)
 
     config = load_config()
@@ -52,7 +53,8 @@ def main(argv: list[str] | None = None) -> int:
         runtime.start_browser(headless=args.headless)
         reconcile = runtime.reconcile_tabs()
         print(f"tabs_after_reconcile = {reconcile['actual']}")
-        summary = runtime.run_creator_sync(export_enabled=args.export)
+        summary = runtime.run_creator_sync(export_enabled=args.export,
+                                           note_list_url=args.url or None)
         print("---- CREATOR SYNC SUMMARY ----")
         for key, value in summary.items():
             print(f"{key} = {value}")

@@ -272,7 +272,7 @@ class CreatorSyncRunner:
 
     def __init__(self, workspace, data_root: Path, db_path: str | None = None,
                  inbox_root: Path | None = None, artifact_root: Path | None = None,
-                 export_enabled: bool = False):
+                 export_enabled: bool = False, note_list_url: str | None = None):
         self.workspace = workspace
         self.data_root = Path(data_root)
         self.db_path = db_path or str(self.data_root / "database" / "materials.db")
@@ -283,6 +283,9 @@ class CreatorSyncRunner:
         self.quarantine_dir = inbox / "quarantine" / "B007" / "creator"
         self.artifact_root = artifact_root or self.data_root
         self.export_enabled = export_enabled
+        if note_list_url:
+            # 用户提供真实笔记列表页 URL 时优先使用（覆盖默认候选）
+            self.NOTE_LIST_CANDIDATES = (note_list_url, "https://creator.xiaohongshu.com/")
 
     # ---- §8 Identity Gate ----
     def identity_gate(self, runtime) -> dict:
@@ -325,26 +328,47 @@ class CreatorSyncRunner:
     def run_observation(self, runtime) -> list[dict]:
         """在 executor 内：attach observer → （必要时）导航笔记列表页 → 滚动加载 → 收集。
 
-        若当前 Creator 页已是内容页（用户手动停在笔记管理），不导航，直接滚动观察——
-        这样面板里用户先打开笔记管理再点【同步数据】也能工作。"""
+        若当前 Creator 页已是内容页（用户手动停在笔记管理），不导航，直接滚动观察。
+        仅当捕获到"实质数据"（title/cover/duration 之一）才视为成功；
+        否则自动回退到前台个人主页公开笔记列表（user/profile/{xhs_id}）。"""
         tab = runtime.ensure_tabs().get("CREATOR")
+        notes = self._observe_page(tab, runtime)
+        if any(n.get("title") or n.get("cover") or n.get("duration") is not None for n in notes):
+            return notes
+        # 回退：前台公开笔记列表（SSR 首屏状态含 note 列表；非视频播放，合规）
+        binding = self.workspace.load_binding()
+        xhs_id = binding.creator_xhs_id if binding else None
+        if xhs_id:
+            log.info("观察回退：前台个人主页 user/profile/%s", xhs_id)
+            front = runtime.ensure_tabs().get("FRONTEND")
+            notes = self._observe_page(front, runtime,
+                                       url=f"https://www.xiaohongshu.com/user/profile/{xhs_id}")
+        return notes
+
+    def _observe_page(self, tab, runtime, url: str | None = None) -> list[dict]:
         observer = CreatorResponseObserver(tab)
         observer.attach()
         try:
-            try:
-                current = tab.url or ""
-            except Exception:
-                current = ""
-            stay = "creator.xiaohongshu.com" in current and "publish/publish" not in current
-            if not stay:
-                for url in self.NOTE_LIST_CANDIDATES:
-                    try:
-                        tab.goto(url, timeout=45000)
-                        break
-                    except Exception:
-                        continue
+            if url is None:
+                try:
+                    current = tab.url or ""
+                except Exception:
+                    current = ""
+                stay = "creator.xiaohongshu.com" in current and "publish/publish" not in current
+                if not stay:
+                    for cand in self.NOTE_LIST_CANDIDATES:
+                        try:
+                            tab.goto(cand, timeout=45000)
+                            break
+                        except Exception:
+                            continue
+                else:
+                    log.info("观察：保留当前 Creator 内容页 %s", sanitize_url(current))
             else:
-                log.info("观察：保留当前 Creator 内容页 %s", sanitize_url(current))
+                try:
+                    tab.goto(url, timeout=60000)
+                except Exception as error:
+                    log.warning("观察导航失败 %s：%s", url, str(error)[:120])
             # 滚动加载更多（给 SPA 渲染与分页留时间）
             for _ in range(8):
                 try:
@@ -353,17 +377,127 @@ class CreatorSyncRunner:
                     _t.sleep(1.5)
                 except Exception:
                     break
+            # XHS 常把首屏数据内嵌 window.__INITIAL_STATE__（SSR），不走 JSON 响应 → 额外提取
+            state_notes = self._extract_state_notes(tab)
+            for note in state_notes:
+                observer.notes.setdefault(note["note_id"], {}).update(note)
+            # DOM 兜底：已渲染页面里 explore 链接的 note_id + 卡片标题
+            dom_notes = self._extract_dom_notes(tab)
+            for note in dom_notes:
+                observer.notes.setdefault(note["note_id"], {}).update(note)
         finally:
             observer.detach()
         self._last_observation_diag = {
             "json_responses": observer.observed_responses,
             "parsed": observer.parsed,
             "endpoints": observer.endpoints,
+            "state_extracted": len(state_notes),
+            "dom_extracted": len(dom_notes),
         }
-        log.info("观察：json响应=%s 解析=%s 端点=%s 笔记=%s",
+        log.info("观察：json响应=%s 解析=%s 端点=%s 笔记=%s 首屏=%s DOM=%s",
                  observer.observed_responses, observer.parsed,
-                 len(observer.endpoints), len(observer.notes))
+                 len(observer.endpoints), len(observer.notes), len(state_notes), len(dom_notes))
         return observer.take()
+
+    # ---- DOM 兜底：已渲染页面 explore 链接（面板里用户打开笔记管理后有效） ----
+    @staticmethod
+    def _extract_dom_notes(tab, cap: int = 500) -> list[dict]:
+        try:
+            raw = tab.evaluate(
+                "() => {"
+                "  const out = []; const seen = new Set();"
+                "  const els = document.querySelectorAll('a[href*=\"/explore/\"]');"
+                "  for (const a of els) {"
+                "    if (out.length >= 500) break;"
+                "    const m = (a.getAttribute('href') || '').match(/\\/explore\\/([0-9a-f]{24})/i);"
+                "    if (!m || seen.has(m[1])) continue;"
+                "    seen.add(m[1]); const card = a.closest('[class]');"
+                "    let title = '';"
+                "    if (card) { const t = card.querySelector('[class*=\"title\"], [class*=\"desc\"]');"
+                "      if (t) title = (t.textContent || '').trim(); }"
+                "    if (!title) title = (a.textContent || '').trim().slice(0, 60);"
+                "    out.push({ note_id: m[1], title: title });"
+                "  }"
+                "  return out;"
+                "}"
+            )
+        except Exception as error:
+            log.warning("DOM 笔记提取失败：%s", str(error)[:120])
+            return []
+        notes = []
+        if isinstance(raw, list):
+            for item in raw:
+                if isinstance(item, dict) and item.get("note_id"):
+                    notes.append({"note_id": item["note_id"],
+                                  "title": normalize_title(item.get("title"))})
+        return notes
+
+    # ---- SSR 首屏状态提取（window.__INITIAL_STATE__，支持 key 与值两种 id 形态） ----
+    STATE_EXTRACT_JS = r"""() => {
+  const out = []; const seen = new Set(); const seenObjs = new Set();
+  const isId = (v) => typeof v === 'string' && /^[0-9a-f]{24}$/i.test(v);
+  const grab = (rec, node) => {
+    for (const f of ['title','display_title','displayTitle','type','media_type','time','publish_time','lastUpdateTime']) {
+      if (node[f] !== undefined && node[f] !== null && rec[f] === undefined) rec[f] = node[f];
+    }
+    const nc = node.noteCard || node.noteDetail;
+    if (nc && typeof nc === 'object') grab(rec, nc);
+    const vi = node.video;
+    if (vi && typeof vi === 'object' && vi.duration !== undefined) rec.duration = vi.duration;
+    const im = node.image_list || node.cover || node.imageInfo || (node.coverList && node.coverList[0]);
+    if (Array.isArray(im) && im[0] && im[0].url) rec.cover = im[0].url;
+    else if (im && typeof im === 'object' && im.url) rec.cover = im.url;
+    else if (im && typeof im === 'string') rec.cover = im;
+  };
+  const walk = (node) => {
+    if (!node || typeof node !== 'object' || seenObjs.has(node) || out.length >= 500) return;
+    seenObjs.add(node);
+    if (Array.isArray(node)) { for (const it of node) walk(it); return; }
+    for (const k of Object.keys(node)) {
+      const v = node[k];
+      if (isId(k) && v && typeof v === 'object' && !seen.has(k)) {
+        seen.add(k); const rec = { note_id: k }; grab(rec, v); out.push(rec);
+        walk(v); continue;
+      }
+      if (isId(v) && (k === 'note_id' || k === 'id' || k === 'noteId') && !seen.has(v)) {
+        seen.add(v); const rec = { note_id: v }; grab(rec, node); out.push(rec);
+      }
+      if (v && typeof v === 'object') walk(v);
+    }
+  };
+  walk(window.__INITIAL_STATE__ || window.__INITIAL_SSR_STATE__ || null);
+  return out.slice(0, 500);
+}"""
+
+    @staticmethod
+    def _extract_state_notes(tab, cap: int = 500) -> list[dict]:
+        try:
+            raw = tab.evaluate(CreatorSyncRunner.STATE_EXTRACT_JS)
+        except Exception as error:
+            log.warning("首屏状态提取失败：%s", str(error)[:120])
+            return []
+        notes = []
+        if isinstance(raw, list):
+            for item in raw:
+                if not isinstance(item, dict) or not item.get("note_id"):
+                    continue
+                note = {"note_id": item["note_id"],
+                        "title": normalize_title(item.get("display_title")
+                                                 or item.get("displayTitle") or item.get("title")),
+                        "publish_time": normalize_publish_time(
+                            item.get("publish_time") or item.get("time")
+                            or item.get("lastUpdateTime")),
+                        "media_type": str(item.get("media_type") or item.get("type") or "")}
+                if item.get("duration") is not None:
+                    try:
+                        note["duration"] = round(float(item["duration"]), 3)
+                    except (TypeError, ValueError):
+                        pass
+                cover = extract_cover_meta(item.get("cover"))
+                if cover:
+                    note["cover"] = cover
+                notes.append(note)
+        return notes
 
     # ---- 主流程 ----
     def run(self, runtime, task_id: str) -> CreatorSyncResult:
