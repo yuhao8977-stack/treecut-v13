@@ -221,7 +221,7 @@ class MinimalDashboard:
         buttons = ttk.Frame(frame)
         buttons.grid(row=row, column=0, columnspan=2, sticky="ew")
         specs = [
-            ("同步数据（下一阶段）", "on_sync_data", True),
+            ("同步数据", "on_sync_data", False),
             ("恢复训练视频（下一阶段）", "on_recover_media", True),
             ("继续上次任务", "on_resume_task", False),
             ("查看异常", "on_view_errors", False),

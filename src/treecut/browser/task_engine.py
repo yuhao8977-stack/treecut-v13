@@ -42,14 +42,17 @@ class TaskEngine:
 
     step_handler(engine, step, checkpoint) -> None（正常）或 raise XhsWorkBrowserError
     或返回 {"needs_human": reason}。
+    V0.2：允许自定义 steps（如 CREATOR_SYNC 的专用序列）。
     """
 
     def __init__(self, store: CheckpointStore, retry: BoundedRetry,
-                 workspace_id: str, task_type: str = "MOCK"):
+                 workspace_id: str, task_type: str = "MOCK",
+                 steps: tuple[str, ...] | None = None):
         self.store = store
         self.retry = retry
         self.workspace_id = workspace_id
         self.task_type = task_type
+        self.steps = steps or TASK_STEPS
         self.checkpoint: Checkpoint | None = None
         self._step_index = 0
 
@@ -83,7 +86,10 @@ class TaskEngine:
         if cp is None or cp.state not in RESUMABLE_STATES:
             return False
         self.checkpoint = cp
-        self._step_index = TASK_STEPS.index(cp.step) if cp.step in TASK_STEPS else 0
+        if cp.step in self.steps:
+            self._step_index = self.steps.index(cp.step)
+        else:
+            self._step_index = 0
         return True
 
     def has_unfinished(self) -> bool:
@@ -97,8 +103,8 @@ class TaskEngine:
         if self.checkpoint is None:
             self.new_task()
         cp = self.checkpoint
-        steps = TASK_STEPS
-        self._step_index = max(self._step_index, steps.index(cp.step))
+        steps = self.steps
+        self._step_index = max(self._step_index, steps.index(cp.step) if cp.step in steps else 0)
         attempts = 0
 
         while self._step_index < len(steps):

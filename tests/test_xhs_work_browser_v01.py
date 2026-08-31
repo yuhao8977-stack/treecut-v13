@@ -692,6 +692,84 @@ class TestDashboardPipeline:
 
 
 # ============================================================
+# V0.2 Creator Sync（归一化 / 观察器 / 幂等入库）
+# ============================================================
+class TestCreatorSyncV02:
+    def test_normalize_title_nfkc(self):
+        from treecut.browser.creator_sync import normalize_title
+        assert normalize_title("　全　角\u3000空格　") == "全 角 空格"
+        assert normalize_title(None) == ""
+
+    def test_normalize_publish_time_formats(self):
+        from treecut.browser.creator_sync import normalize_publish_time
+        assert normalize_publish_time("2026-08-30 11:30") == "2026-08-30 11:30"
+        assert normalize_publish_time("2026-08-30T11:30:05") == "2026-08-30 11:30"
+        assert normalize_publish_time("2026-08-30") == "2026-08-30 00:00"
+        assert normalize_publish_time(1780000000) != ""
+
+    def test_sanitize_url_strips_query(self):
+        from treecut.browser.creator_sync import sanitize_url
+        url = "https://sns-img-qc.xhscdn.com/abc.jpg?xsec_token=SECRET&sign=XYZ"
+        safe = sanitize_url(url)
+        assert "xsec_token" not in safe and "sign" not in safe
+        assert safe == "https://sns-img-qc.xhscdn.com/abc.jpg"
+
+    def test_observer_scan_safe_fields(self):
+        from treecut.browser.creator_sync import CreatorResponseObserver
+        observer = CreatorResponseObserver.__new__(CreatorResponseObserver)
+        observer.notes = {}
+        observer.observed_responses = 0
+        payload = {"data": {"notes": [{
+            "note_id": "6a92bc22000000002501b154",
+            "display_title": "全家反对买岛台😭现在真香了",
+            "publish_time": "2026-08-30 11:30",
+            "type": "video",
+            "video": {"duration": 39.2},
+            "image_list": [{"url": "https://sns-img.xhscdn.com/cover1.jpg?xsec_token=SECRET"}],
+        }]}}
+        observer._scan(payload)
+        notes = observer.take()
+        assert len(notes) == 1
+        note = notes[0]
+        assert note["note_id"] == "6a92bc22000000002501b154"
+        assert note["duration"] == 39.2
+        assert "xsec_token" not in json.dumps(note)
+        assert note["cover"]["cover_url_safe"] == "https://sns-img.xhscdn.com/cover1.jpg"
+
+    def test_adapter_idempotent_upsert(self, tmp_path):
+        from treecut.services.b007_creator_adapter import B007CreatorImportAdapterV1
+        db = tmp_path / "t.db"
+        adapter = B007CreatorImportAdapterV1(str(db))
+        rec = {"account_id": "B007", "note_id": "6a92bc22000000002501b154",
+               "title": "岛台", "publish_time": "2026-08-30 11:30",
+               "content_type": "视频", "duration": 39.0, "source_refs": ["OBSERVATION:t1"]}
+        pc1 = adapter.upsert_published_content(rec)
+        pc2 = adapter.upsert_published_content(rec)  # 重复 → 幂等
+        assert pc1 == pc2
+        import sqlite3
+        con = sqlite3.connect(db)
+        n = con.execute("SELECT COUNT(*) FROM published_content_v1 WHERE account_id='B007'").fetchone()[0]
+        assert n == 1  # §26：不重复创建 PublishedContent
+        con.close()
+
+    def test_adapter_performance_append_only(self, tmp_path):
+        from treecut.services.b007_creator_adapter import B007CreatorImportAdapterV1
+        db = tmp_path / "t2.db"
+        adapter = B007CreatorImportAdapterV1(str(db))
+        pc = adapter.upsert_published_content(
+            {"account_id": "B007", "note_id": "6a92bc22000000002501b154",
+             "title": "岛台", "source_refs": []})
+        adapter.add_performance_snapshot(pc, {"views": 100, "window": "D1", "source": "T1"})
+        adapter.add_performance_snapshot(pc, {"views": 150, "window": "D7", "source": "T2"})
+        import sqlite3
+        con = sqlite3.connect(db)
+        n = con.execute("SELECT COUNT(*) FROM performance_snapshot_v1 WHERE published_content_id=?",
+                        (pc,)).fetchone()[0]
+        assert n == 2  # append-only，不覆盖历史（§26）
+        con.close()
+
+
+# ============================================================
 # Local Bridge（Test D）
 # ============================================================
 class TestLocalBridge:

@@ -22,6 +22,7 @@ from treecut.browser.account_detector import (
 )
 from treecut.browser.checkpoint_store import CheckpointStore
 from treecut.browser.config import load_config
+from treecut.browser.creator_sync import CreatorSyncRunner
 from treecut.browser.local_bridge import LocalBridge
 from treecut.browser.profile_manager import ProfileManager
 from treecut.browser.retry_policy import BoundedRetry
@@ -246,6 +247,87 @@ class BrowserRuntime:
             log.info(msg)
             return msg
         return "无未完成任务"
+
+    # ---- V0.2：Creator 自动同步（§24/25：CREATOR_SYNC 任务，各阶段 checkpoint） ----
+    CREATOR_SYNC_STEPS = ("START", "VERIFY_LOCAL", "VERIFY_SESSION", "VERIFY_ACCOUNT",
+                          "NAVIGATE", "EXPORT", "OBSERVE", "VALIDATE", "SAVE_RAW",
+                          "NORMALIZE", "COMMIT", "REPORT", "DONE")
+
+    def run_creator_sync(self, export_enabled: bool = False) -> dict:
+        """【同步数据】：Creator 自动同步（账号/笔记身份/媒体元数据；Performance 视导出）。"""
+        from treecut.browser.task_engine import TaskEngine
+        task_engine = TaskEngine(self.checkpoint_store, self.retry,
+                                 workspace_id=self.config.workspace_id,
+                                 task_type="CREATOR_SYNC",
+                                 steps=self.CREATOR_SYNC_STEPS)
+        if not task_engine.resume_unfinished():
+            task_engine.new_task(target="creator_sync", required_tab="CREATOR")
+        task_id = task_engine.checkpoint.task_id
+        runner = CreatorSyncRunner(self.workspace, self.paths.data_root,
+                                   export_enabled=export_enabled)
+        holder: dict = {}
+
+        def handler(_engine, step, _cp):
+            if step == "VERIFY_LOCAL":
+                local = self.local_status()
+                log.info("Creator 同步 [VERIFY_LOCAL] TreeCut 本地=%s", local)
+            elif step == "VERIFY_SESSION":
+                session = self._in_browser(
+                    lambda: self.session_detector.check(
+                        self.ensure_tabs().get("CREATOR"), "creator").status)
+                log.info("Creator 同步 [VERIFY_SESSION] %s", session)
+                if session not in ("SESSION_VALID", "SESSION_UNKNOWN"):
+                    raise XhsWorkBrowserError(f"Creator 会话状态：{session}",
+                                              category=ErrorCategory.SESSION_EXPIRED)
+            elif step == "VERIFY_ACCOUNT":
+                gate = runner.identity_gate(self)
+                log.info("Creator 同步 [VERIFY_ACCOUNT] %s %s",
+                         gate["status"], gate.get("reason") or "")
+                if gate["status"] == "ACCOUNT_IDENTITY_MISMATCH":
+                    raise XhsWorkBrowserError(
+                        f"账号门未通过：{gate['status']} {gate.get('reason') or ''}",
+                        category=ErrorCategory.ACCOUNT_IDENTITY_MISMATCH)
+                if gate["status"] != "ACCOUNT_IDENTITY_VALID":
+                    # UNKNOWN（页面未渲染/未检测到）→ 可重试，不是硬停
+                    raise XhsWorkBrowserError(
+                        f"账号待检测：{gate['status']}",
+                        category=ErrorCategory.PAGE_LOAD_TIMEOUT)
+            elif step == "NAVIGATE":
+                log.info("Creator 同步 [NAVIGATE] 进入笔记列表")
+            elif step == "OBSERVE":
+                log.info("Creator 同步 [OBSERVE] 观察页面自有响应…")
+                result = runner.run(self, task_id=task_id)
+                holder["result"] = result
+                log.info("Creator 同步 [OBSERVE] 完成：笔记=%s", result.published_count)
+            elif step == "REPORT":
+                result = holder.get("result")
+                if result:
+                    log.info("Creator 同步 [REPORT] 汇总：PublishedContent=%s "
+                             "note_id=%s duration=%s cover=%s",
+                             result.published_count, result.note_id_cover,
+                             result.duration_cover, result.cover_metadata_cover)
+            return None
+
+        result = task_engine.run(handler)
+        payload = holder.get("result")
+        summary = {
+            "task_id": task_id,
+            "engine_state": result.state,
+            "engine_step": result.step,
+            "gate": payload.gate if payload else None,
+            "published_count": payload.published_count if payload else 0,
+            "note_id_cover": payload.note_id_cover if payload else 0,
+            "title_cover": payload.title_cover if payload else 0,
+            "duration_cover": payload.duration_cover if payload else 0,
+            "cover_metadata_cover": payload.cover_metadata_cover if payload else 0,
+            "performance_count": payload.performance_count if payload else 0,
+            "join": payload.join if payload else {},
+            "exceptions": payload.exceptions if payload else [],
+            "artifacts": payload.artifacts if payload else {},
+            "raw_snapshot": payload.raw_snapshot if payload else {},
+        }
+        log.info("Creator 同步结束：%s @%s", result.state, result.step)
+        return summary
 
     def sync_data(self) -> str:
         return "NOT_IMPLEMENTED: 数据同步留待 V0.2/V0.3"
@@ -490,8 +572,8 @@ def main(argv: list[str] | None = None) -> int:
     dashboard = MinimalDashboard(
         runtime.workspace,
         callbacks={
-            "on_sync_data": lambda: log.info("同步数据：尚未实现（下一阶段启用）"),
-            "on_recover_media": lambda: log.info("恢复训练视频：尚未实现（下一阶段启用）"),
+            "on_sync_data": lambda: run_sync(),
+            "on_recover_media": lambda: log.info("恢复训练视频：尚未实现（V0.6 启用）"),
             "on_resume_task": lambda: log.info(runtime.resume_task()),
             "on_view_errors": view_errors,
             "on_check_status": check_status,
@@ -501,6 +583,29 @@ def main(argv: list[str] | None = None) -> int:
         },
     )
     dashboard.post_status(current_task="IDLE", last_checkpoint=None)
+
+    def run_sync() -> None:
+        """【同步数据】：Creator 自动同步（V0.2）。"""
+        dashboard.post_status(current_task="RUNNING")
+        log.info("—— 同步数据：Creator 自动同步开始 ——")
+        try:
+            summary = runtime.run_creator_sync(export_enabled=False)
+            dashboard.post_status(
+                current_task="SUCCESS" if summary["engine_state"] == "SUCCESS" else summary["engine_state"],
+                last_checkpoint=runtime.checkpoint_store.last_timestamp(config.workspace_id),
+            )
+            log.info("同步完成：PublishedContent=%s note_id=%s duration=%s cover=%s performance=%s",
+                     summary["published_count"], summary["note_id_cover"],
+                     summary["duration_cover"], summary["cover_metadata_cover"],
+                     summary["performance_count"])
+            if summary["exceptions"]:
+                log.info("同步完成，有 %s 项需要检查（[查看异常]）", len(summary["exceptions"]))
+        except Exception as error:  # noqa: BLE001
+            dashboard.post_status(current_task="FAILED")
+            log.error("同步失败：%s", error)
+        finally:
+            dashboard.post_status(current_task="IDLE")
+
     threading.Thread(target=startup, daemon=True).start()
     try:
         dashboard.run()
