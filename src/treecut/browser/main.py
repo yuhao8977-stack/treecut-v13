@@ -533,7 +533,7 @@ def main(argv: list[str] | None = None) -> int:
             roles = runtime.check_roles()
             post_roles(roles)
         except Exception as error:  # 检测失败不阻塞面板
-            log.error("状态检测失败：%s", error)
+            log.error("状态检测失败：%s: %s", type(error).__name__, str(error)[:200])
 
     def startup() -> None:
         try:
