@@ -591,6 +591,10 @@ def main(argv: list[str] | None = None) -> int:
     def run_sync() -> None:
         """【同步数据】：Creator 自动同步（V0.2）。"""
         dashboard.post_status(current_task="RUNNING")
+        if runtime.tabs is None:
+            log.error("同步未执行：浏览器未启动（PROFILE_LOCKED 或启动失败）——请先安全退出并重启面板")
+            dashboard.post_status(current_task="IDLE")
+            return
         log.info("—— 同步数据：Creator 自动同步开始 ——")
         try:
             summary = runtime.run_creator_sync(export_enabled=False)

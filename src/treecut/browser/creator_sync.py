@@ -219,25 +219,49 @@ class RawSnapshotStore:
 
 
 # ============================================================
-# 官方导出（§5：尽力而为，DOM 依赖记 limitation）
+# 官方导出（§5/§6：Source Route A，Performance 优先）
 # ============================================================
 class OfficialExportDriver:
-    """进入内容分析 → 时间范围 → 官方导出。真实 DOM 未知时返回
-    PAGE_STRUCTURE_CHANGED / NOT_IMPLEMENTED_DOM，不阻塞 Observation 路径。"""
+    """在 note-manager 等当前页寻找「导出/下载」按钮并触发平台官方导出。
 
-    def __init__(self, page):
+    导出流程是平台自身功能（下载官方生成的文件），通常不受笔记列表 API 的
+    自动化软阻断影响。找不到按钮 → EXPORT_BUTTON_NOT_FOUND（PAGE_STRUCTURE_CHANGED 类）。
+    """
+
+    TRIGGER_TEXTS = ("导出", "下载报表", "下载数据", "导出报表")
+
+    def __init__(self, page, raw_dir):
         self._page = page
+        self._raw_dir = raw_dir
 
-    def run(self, task_id: str) -> dict:
-        # 首次实现：尝试导航到内容分析（若平台提供导出页）。
-        # 若选择器/URL 未命中 → 返回 NOT_IMPLEMENTED_DOM（PASS_WITH_LIMITATIONS 依据）。
+    def run(self) -> dict:
         try:
-            self._page.goto("https://creator.xiaohongshu.com/publish/publish?source=official",
-                            timeout=45000)
+            target = None
+            for text in self.TRIGGER_TEXTS:
+                try:
+                    loc = self._page.get_by_text(text, exact=False).first
+                    if loc.count() > 0:
+                        target = loc
+                        break
+                except Exception:
+                    continue
+            if target is None:
+                return {"status": "EXPORT_BUTTON_NOT_FOUND",
+                        "note": "当前页未找到 导出/下载 按钮（PAGE_STRUCTURE_CHANGED 类，需 DOM 校准）"}
+            with self._page.expect_download(timeout=20000) as dl_info:
+                try:
+                    target.click(timeout=8000)
+                except Exception:
+                    return {"status": "EXPORT_CLICK_FAILED",
+                            "note": "按钮点击失败（可能需要先选择时间范围等）"}
+            download = dl_info.value
+            self._raw_dir.mkdir(parents=True, exist_ok=True)
+            target_path = self._raw_dir / (download.suggested_filename or "creator_export.xlsx")
+            download.save_as(str(target_path))
+            return {"status": "EXPORT_DOWNLOADED", "file": str(target_path),
+                    "filename": download.suggested_filename or ""}
         except Exception as error:
-            return {"status": "EXPORT_NAVIGATE_FAILED", "error": str(error)[:120]}
-        return {"status": "NOT_IMPLEMENTED_DOM",
-                "note": "官方导出入口需真实 DOM 校准（V0.2 记录 limitation，Performance 走观察/后续导出）"}
+            return {"status": "EXPORT_ERROR", "error": str(error)[:200]}
 
 
 # ============================================================
@@ -530,12 +554,14 @@ class CreatorSyncRunner:
             notes = []
             result.exceptions.append({"stage": "OBSERVE", "error": str(error)[:200]})
 
-        # 官方导出（Performance；DOM 依赖）
+        # 官方导出（Performance；在观察后的当前页上尝试导出按钮）
         export_result: dict = {"status": "SKIPPED"}
         if self.export_enabled:
             try:
+                export_dir = self.raw_store.root / "creator" / "exports"
                 export_result = runtime._in_browser(
-                    lambda: OfficialExportDriver(runtime.ensure_tabs().get("CREATOR")).run(task_id))
+                    lambda: OfficialExportDriver(
+                        runtime.ensure_tabs().get("CREATOR"), export_dir).run())
             except Exception as error:
                 export_result = {"status": "EXPORT_ERROR", "error": str(error)[:200]}
 
