@@ -26,10 +26,15 @@
 
 ## 3. 关键限制（PASS_WITH_LIMITATIONS 依据）
 
-**XHS 签名墙**：笔记列表真实数据的获取遇到平台签名/令牌约束：
-- 笔记列表 API `edith.xiaohongshu.com/api/sns/web/v1/user_posted` 在无有效 `xsec_token` 时返回 `{"data": null, "success": true}`（页面自身也需要签名令牌）；
-- 全新导航的 note-manager / 前台个人主页，其 SSR 首屏状态仅含 1 个游离 24-hex id（非完整列表）；
-- **有效路径**：用户在面板 Creator 标签页**先打开笔记管理页**（页面已用自身有效令牌渲染出列表）→ 点【同步数据】→ 观察器"保留当前页 + 滚动 + SSR/DOM 提取"即可捕获。此路径已实现（stay-on-current + 双兜底），待用户实机验证。
+**XHS 自动化检测软阻断（核心限制）**：
+- 笔记列表 API（`edith.xiaohongshu.com/api/sns/web/v1/user_posted` 及 note-manager 列表接口）
+  在脚本化（Playwright/CDP）会话中返回 `{"data": null, "success": true}`——即使已登录、
+  即使强制导航到 `new/note-manager`；SSR 首屏仅含 1 个游离 24-hex id，DOM 无 explore 链接。
+- 同一浏览器打开 creator 首页/聚光计划列表正常（会话有效、昵称可检测）→ 判定为
+  **列表接口对自动化会话的软阻断**（非全站封锁）。
+- **唯一待解锁路径**：用户在面板（playwright Edge）里打开 note-manager，若能亲眼看到
+  笔记列表渲染（说明该会话未被软阻断）→ 点【同步数据】→ stay-on-current + SSR/DOM 提取
+  即可捕获。此路径已实现，待用户实机确认。
 
 ## 4. 三十问（§36）如实回答
 
@@ -72,12 +77,14 @@
 `B007_CREATOR_SYNC_COVERAGE_V1.json` / `B007_CREATOR_SYNC_EXCEPTIONS_V1.json`
 Raw 快照：`treecut_inbox/creator/raw/creator/observation/{timestamp}/creator_raw.json`（+sha256）
 
-## 6. 用户操作（解锁完整数据）
+## 6. 用户操作（解锁完整数据——需确认面板内列表可见）
 
 1. 启动 Work Browser（`scripts\start_xhs_browser.bat`）
-2. **Creator 标签页打开笔记管理**：`https://creator.xiaohongshu.com/new/note-manager`
-3. 点面板【同步数据】→ 观察器保留当前页滚动捕获（SSR/DOM 双兜底）
-4. 完成后看汇总（PublishedContent / note_id / duration / cover 计数）
+2. **Creator 标签页打开** `https://creator.xiaohongshu.com/new/note-manager`
+   → **关键确认：面板内能否看到笔记列表？**
+   - 能看到 → 点【同步数据】→ stay-on-current 捕获（应成功）
+   - 看不到 → XHS 对面板浏览器同样软阻断 → 需人工验收路径（见报告其余部分）
+3. 完成后看汇总（PublishedContent / note_id / duration / cover 计数）
 
 ## 7. 后续
 
