@@ -1,0 +1,24 @@
+{
+  "available_paid_date_range": {
+    "picker_component": "d-daterangepicker（报告页/计划页通用）",
+    "presets_found": [
+      "昨天",
+      "最近7天",
+      "最近14天",
+      "最近30天"
+    ],
+    "presets_absent": [
+      "今日(preset)",
+      "最近90天",
+      "LIFETIME/全部时间"
+    ],
+    "custom_range": "日历控件存在（可自定义起止日期）",
+    "current_default": "2026-08-24 ~ 2026-08-30 (最近7天)",
+    "verified_30d_set": "2026-08-01 ~ 2026-08-30（点击最近30天 preset 后输入框实测）",
+    "max_preset_span_days": 30,
+    "earliest_selectable": "SOURCE_NOT_PROVIDED（未遍历日历全部月份）",
+    "latest_selectable": "2026-08-31（今日）",
+    "max_custom_window": "UNKNOWN（未测试自定义上限；平台可能限制跨度）",
+    "note": "预设无 90 天/全部时间；如需更长历史需自定义按月分块（§9）"
+  }
+}

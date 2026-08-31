@@ -1,0 +1,36 @@
+{
+  "lowest_grain_audit": {
+    "found_note_level_metrics": true,
+    "note_level_endpoint": "leona/rtb/common/data/report（datareports-basic/note 笔记报表）",
+    "note_level_fields": [
+      "noteId",
+      "fee",
+      "impression",
+      "click",
+      "ctr",
+      "cpm",
+      "acp",
+      "messageConsult",
+      "msgLeadsNum",
+      "msgLeadsCost",
+      "videoPlay5sCnt",
+      "interaction",
+      "iUserNum",
+      "iUserPrice",
+      "noteCreateTime",
+      "noteTitle"
+    ],
+    "note_id_is_platform_field": true,
+    "creative_level": {
+      "found": false,
+      "detail": "/aurora/ad/manage/creative 404；聚光以单元(unit)为创意载体",
+      "creative_metrics": "SOURCE_NOT_PROVIDED"
+    },
+    "final": {
+      "PAID_METRIC_LOWEST_GRAIN": "NOTE",
+      "NOTE_LEVEL_PAID_METRICS": "AVAILABLE（笔记报表页自有响应）",
+      "CREATIVE_LEVEL_PAID_METRICS": "SOURCE_NOT_PROVIDED"
+    },
+    "note": "Unit 级指标仍保留（fee 等属于 UNIT_LEVEL_PAID_TRUTH）；note 级指标来自平台笔记报表，两者都是真实 source，不互相摊分"
+  }
+}

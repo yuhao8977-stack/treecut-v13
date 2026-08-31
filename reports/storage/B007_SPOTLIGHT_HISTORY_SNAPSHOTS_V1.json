@@ -1,0 +1,27 @@
+{
+  "history_snapshots": {
+    "note_level_snapshots": 501,
+    "note_by_window": {
+      "LAST_14D": 170,
+      "LAST_30D": 167,
+      "LAST_7D": 164
+    },
+    "campaign_snapshots_by_window": {
+      "LAST_14D": 28,
+      "LAST_30D": 28,
+      "LAST_7D": 28,
+      "REPORT_RANGE": 48
+    },
+    "unit_snapshots_by_window": {
+      "LAST_14D": 28,
+      "LAST_30D": 28,
+      "LAST_7D": 28,
+      "REPORT_RANGE": 48
+    },
+    "unique_notes_with_paid_metrics": 341,
+    "backfill_strategy": "bounded presets: LAST_7D/LAST_14D/LAST_30D（无逐日抓取）；无 90d/全部时间 preset",
+    "note": "笔记报表分页当前只捕获到部分页（~165 笔记/窗口）；完整 611 行(7d)全量回填待后续扩大分页捕获",
+    "idempotent": true,
+    "raw_immutable": true
+  }
+}

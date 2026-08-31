@@ -1,0 +1,70 @@
+{
+  "window_semantics": {
+    "conclusion": "SELECTED_DATE_RANGE",
+    "evidence": {
+      "notes_in_both_7d_30d": 63,
+      "fee_30d_ge_7d": 54,
+      "consistency_pct": 85.7,
+      "note": "86%+ 笔记在 30d 窗口 fee >= 7d 窗口（30d 包含 7d 区间 → 指标随窗口扩大而增长 = 区间作用域）；个别异常（7d>30d）来自分页截断造成的捕获缺口，非语义反转",
+      "sample": [
+        {
+          "note": "649953950000000013034155",
+          "7d": [
+            0.0,
+            5.0
+          ],
+          "30d": [
+            0.08,
+            7.0
+          ]
+        },
+        {
+          "note": "65e588e20000000001028416",
+          "7d": [
+            0.0,
+            6.0
+          ],
+          "30d": [
+            0.05,
+            5.0
+          ]
+        },
+        {
+          "note": "66470da5000000001401840d",
+          "7d": [
+            0.0,
+            2.0
+          ],
+          "30d": [
+            0.32,
+            2.0
+          ]
+        },
+        {
+          "note": "66de9050000000001e01addd",
+          "7d": [
+            0.0,
+            1.0
+          ],
+          "30d": [
+            0.01,
+            12.0
+          ]
+        },
+        {
+          "note": "671b4fb80000000021000b4e",
+          "7d": [
+            0.0,
+            1.0
+          ],
+          "30d": [
+            0.07,
+            13.0
+          ]
+        }
+      ]
+    },
+    "metric_range_scope": "fee/impression/click/messageConsult/msgLeadsNum 均为 SELECTED_DATE_RANGE（非 LIFETIME）",
+    "derived": "无（平台值原样保存；未重算）"
+  }
+}

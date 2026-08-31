@@ -1,0 +1,18 @@
+{
+  "campaign": {
+    "campaign_create_time": "48/48（来源 campaignInfo.campaignCreateTime）",
+    "delivery_start": "campaignInfo.startTime（如 2026-08-13）",
+    "delivery_end": "campaignInfo.expireTime（如 2919-01-01=长期）",
+    "time_period": "campaignInfo.timePeriod（每日投放时段掩码）",
+    "note": "campaign create_time ≠ note paid_start；不同层级时间分别保存（§12）"
+  },
+  "unit": {
+    "unit_create_time": "48/48",
+    "delivery_start": "unit.startTime",
+    "delivery_end": "unit.expireTime"
+  },
+  "note": {
+    "note_create_time": "leona/rtb/common/data/report 的 noteCreateTime（epoch ms）→ 已存入 spotlight_note_paid_snapshot_v1.note_create_time",
+    "note_paid_start": "SOURCE_NOT_PROVIDED（平台未暴露 note 级投放起始时间；不得用 campaign create_time 推断）"
+  }
+}
