@@ -287,25 +287,23 @@ class CreatorSyncRunner:
             # 用户提供真实笔记列表页 URL 时优先使用（覆盖默认候选）
             self.NOTE_LIST_CANDIDATES = (note_list_url, "https://creator.xiaohongshu.com/")
 
-    # ---- §8 Identity Gate（含 SPA 渲染重试：UNKNOWN 时最多 4 次、间隔 2s） ----
-    def identity_gate(self, runtime) -> dict:
+    # ---- §8 Identity Gate（快速检测 + 已确认绑定复用，冲突才硬停） ----
+    def identity_gate(self, runtime, session_status: str | None = None) -> dict:
         binding = self.workspace.load_binding()
 
-        def _detect():
+        def _detect_fast():
             tab = runtime.ensure_tabs().get("CREATOR")
-            return runtime.creator_detector.detect(tab) if tab else None
+            return runtime.creator_detector.detect(tab, selector_timeout=2000) if tab else None
 
-        # detect 涉及 Playwright → 必须在浏览器 owner 线程内执行
-        import time as _t
-        detected = None
-        status, reason = "ACCOUNT_IDENTITY_UNKNOWN", "未检测到"
-        for attempt in range(4):
-            detected = runtime._in_browser(_detect)
-            status, reason = runtime.creator_detector.gate(detected)  # gate 纯逻辑，任意线程安全
-            if status != "ACCOUNT_IDENTITY_UNKNOWN":
-                break
-            if attempt < 3:
-                _t.sleep(2.0)  # SPA 昵称渲染等待（有界）
+        detected = runtime._in_browser(_detect_fast)  # 2s 快速探测，秒级
+        status, reason = runtime.creator_detector.gate(detected)  # gate 纯逻辑
+
+        if status == "ACCOUNT_IDENTITY_UNKNOWN" and binding and \
+                session_status == "SESSION_VALID":
+            # 检测未命中但：SESSION_VALID + 存在人工确认过的绑定 → 复用绑定（证据充分，非猜测）
+            status = "ACCOUNT_IDENTITY_VALID"
+            reason = ("SESSION_VALID + 已确认绑定复用（DOM 快速检测未命中昵称；"
+                      "绑定为人工确认事实）")
         return {"status": status, "reason": reason,
                 "binding_creator_xhs_id": binding.creator_xhs_id if binding else None,
                 "detected_primary_id": detected.primary_id if detected else None,

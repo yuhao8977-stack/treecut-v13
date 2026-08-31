@@ -104,11 +104,11 @@ class _BaseDetector:
         self.workspace = workspace
 
     @staticmethod
-    def _find_text(page, selectors: tuple[str, ...]) -> str | None:
-        """逐选择器探测（8s/个：XHS SPA 昵称渲染通常 2-8s；30s 太慢、2s 太激进）。"""
+    def _find_text(page, selectors: tuple[str, ...], timeout: int = 8000) -> str | None:
+        """逐选择器探测。timeout 默认 8s（SPA 昵称渲染 2-8s）；快速探测可传 2000。"""
         for selector in selectors:
             try:
-                text = page.text_content(selector, timeout=8000)
+                text = page.text_content(selector, timeout=timeout)
             except Exception:
                 continue
             text = (text or "").strip()
@@ -156,13 +156,13 @@ class CreatorIdentityDetector(_BaseDetector):
     只要 body 中稳定取得 ID，即可识别与绑定（display_name 可为 None）。
     """
 
-    def detect(self, page) -> RoleIdentity | None:
+    def detect(self, page, selector_timeout: int = 8000) -> RoleIdentity | None:
         try:
             url = page.url or ""
         except Exception:
             url = ""
         body = self._body(page)
-        name = self._find_text(page, ACCOUNT_NAME_SELECTORS)
+        name = self._find_text(page, ACCOUNT_NAME_SELECTORS, timeout=selector_timeout)
         xhs_id = _extract(body, XHS_ID_PATTERNS)
         if not xhs_id and hasattr(page, "evaluate"):
             # 定向提取：全文搜索"小红书号"（不受截断影响；仅首次绑定慢一次）

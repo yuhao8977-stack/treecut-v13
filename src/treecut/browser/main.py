@@ -278,12 +278,13 @@ class BrowserRuntime:
                 session = self._in_browser(
                     lambda: self.session_detector.check(
                         self.ensure_tabs().get("CREATOR"), "creator").status)
+                holder["session"] = session
                 log.info("Creator 同步 [VERIFY_SESSION] %s", session)
                 if session not in ("SESSION_VALID", "SESSION_UNKNOWN"):
                     raise XhsWorkBrowserError(f"Creator 会话状态：{session}",
                                               category=ErrorCategory.SESSION_EXPIRED)
             elif step == "VERIFY_ACCOUNT":
-                gate = runner.identity_gate(self)
+                gate = runner.identity_gate(self, session_status=holder.get("session"))
                 log.info("Creator 同步 [VERIFY_ACCOUNT] %s %s",
                          gate["status"], gate.get("reason") or "")
                 if gate["status"] == "ACCOUNT_IDENTITY_MISMATCH":
