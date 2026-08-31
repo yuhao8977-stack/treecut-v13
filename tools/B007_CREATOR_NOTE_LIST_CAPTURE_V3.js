@@ -77,7 +77,12 @@
       var p = of.apply(this, args);
       try {
         p.then(function (resp) {
-          try { resp.clone().json().then(scan).catch(function () {}); } catch (e) {}
+          try {
+            // text 解析：兼容非 json content-type 的 JSON 响应
+            resp.clone().text().then(function (txt) {
+              try { scan(JSON.parse(txt)); } catch (e) {}
+            }).catch(function () {});
+          } catch (e) {}
         }).catch(function () {});
       } catch (e) {}
       return p;
