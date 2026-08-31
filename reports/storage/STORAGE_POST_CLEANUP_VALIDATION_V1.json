@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-08-31 15:13:04",
+  "checks": {
+    "old_copies_deleted": {
+      "hf_hub_on_c": false,
+      "ollama_models_blobs_on_c": false,
+      "keep_intact": {
+        "hf_modules": true,
+        "hf_xet": true,
+        "ollama_keys": true,
+        "ollama_history": true
+      }
+    },
+    "hf_from_g": {
+      "exit": 0,
+      "path_in_g": true
+    },
+    "ollama_list": {
+      "exit": 0,
+      "has_model": true
+    },
+    "db": {
+      "b007": 471,
+      "b003": 155,
+      "snapshots": 155,
+      "integrity": "ok"
+    },
+    "g_payload": {
+      "ollama_blobs": 6,
+      "hf_models_dir": true
+    }
+  },
+  "c_free_gb": 74.0,
+  "target_met": true,
+  "all_pass": true
+}

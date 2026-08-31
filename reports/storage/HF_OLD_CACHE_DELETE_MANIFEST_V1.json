@@ -1,0 +1,21 @@
+{
+  "manifest_id": "HF_OLD_CACHE_DELETE_MANIFEST_V1",
+  "generated_at_utc": "2026-08-31T07:01:44.860893+00:00",
+  "policy": "delete_safe=TRUE only; exact directory only; nothing else in parent dir touched",
+  "target": {
+    "path": "C:\\Users\\admin\\.cache\\huggingface\\hub",
+    "size_bytes": 14631593705,
+    "size_gb": 13.63,
+    "file_count": 123
+  },
+  "verified_backup_source": "G:\\AI\\hf_cache\\hub",
+  "verified_by_fresh_process": {
+    "hf": "faster-whisper-small snapshot_download local_files_only -> G:\\AI\\hf_cache\\hub\\models--Systran--faster-whisper-small PASS",
+    "ollama": "ollama run qwen2.5vl:7b -> 'OK' exit=0 with OLLAMA_MODELS=G:\\AI\\ollama_models PASS"
+  },
+  "keep": "Keep .cache\\huggingface\\modules, xet, .agent_harnesses.json, .check_for_update_done; no token file present here.",
+  "delete_safe": true,
+  "status": "DELETED",
+  "executed_at_utc": "2026-08-31T15:13:00+00:00",
+  "post_cleanup_validation": "STORAGE_POST_CLEANUP_VALIDATION_V1.json all_pass=true, C free 74.0GB"
+}

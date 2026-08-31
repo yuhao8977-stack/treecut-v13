@@ -1,0 +1,28 @@
+{
+  "run_id": "CLEANUP_GATE_A",
+  "executed_at_utc": "2026-08-31T07:01:45.699364+00:00",
+  "c_free_gb_before": 55.3,
+  "c_free_gb_after": 74.5,
+  "c_free_gb_delta": 19.2,
+  "results": [
+    {
+      "id": "HF_OLD_CACHE",
+      "action": "DELETED",
+      "target": "C:\\Users\\admin\\.cache\\huggingface\\hub",
+      "size_gb_before": 13.63,
+      "elapsed_s": 0.0,
+      "errors": [],
+      "error_count": 0
+    },
+    {
+      "id": "OLLAMA_OLD_MODEL",
+      "action": "DELETED",
+      "target": "C:\\Users\\admin\\.ollama\\models",
+      "size_gb_before": 5.56,
+      "elapsed_s": 0.8,
+      "errors": [],
+      "error_count": 0
+    }
+  ],
+  "policy": "deleted ONLY C:\\Users\\admin\\.cache\\huggingface\\hub and C:\\Users\\admin\\.ollama\\models; nothing else touched"
+}
