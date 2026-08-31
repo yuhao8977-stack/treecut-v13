@@ -496,21 +496,14 @@ def main(argv: list[str] | None = None) -> int:
     from treecut.browser.minimal_dashboard import MinimalDashboard
 
     def post_roles(roles: dict) -> None:
-        def _ident(role):
-            r = roles[role]
-            identity = r["identity"]
-            if identity == "ACCOUNT_IDENTITY_VALID":
-                return "BOUND"
-            if identity == "ACCOUNT_IDENTITY_MISMATCH":
-                return "MISMATCH"
-            if r["account_id"]:
-                return "PENDING"
-            return "NONE"
-
+        binding = runtime.workspace.load_binding()
+        # 小红书号显示绑定确认值（detected 在页面取不到 ID 时会回退成昵称，误导）
+        creator_id_display = (binding.creator_xhs_id if binding and binding.creator_xhs_id
+                              else roles["CREATOR"]["account_id"] or "—")
         dashboard.post_status(
             creator_session=roles["CREATOR"]["session"],
             creator_account=roles["CREATOR"]["account_name"] or "—",
-            creator_xhs_id=roles["CREATOR"]["account_id"] or "—",
+            creator_xhs_id=creator_id_display,
             creator_binding=roles["CREATOR"]["binding"],
             spotlight_session=roles["SPOTLIGHT"]["session"],
             spotlight_account=roles["SPOTLIGHT"]["account_name"] or "—",
