@@ -542,10 +542,17 @@ class CreatorSyncRunner:
 
         # ---- 校验 + 归一化 + 入库（幂等） ----
         valid = []
+        id_only: list[str] = []  # 仅有 note_id 无实质字段 → 诊断记录，不入库（防空记录污染）
         for note in notes:
             if not note.get("note_id"):
                 result.exceptions.append({"stage": "VALIDATE", "reason": "missing note_id",
                                           "title": note.get("title", "")[:50]})
+                continue
+            substantive = (note.get("title") or note.get("cover")
+                          or note.get("duration") is not None
+                          or note.get("publish_time") or note.get("media_type"))
+            if not substantive:
+                id_only.append(note["note_id"])
                 continue
             record = {
                 "account_id": "B007",
@@ -559,6 +566,11 @@ class CreatorSyncRunner:
             }
             self.adapter.upsert_published_content(record)
             valid.append(note)
+        if id_only:
+            result.exceptions.append({"stage": "VALIDATE",
+                                      "reason": "note_id_only_skipped",
+                                      "count": len(id_only),
+                                      "note_ids": id_only[:20]})
         result.published_count = len(valid)
         result.note_id_cover = len(valid)
         result.title_cover = sum(1 for n in valid if n.get("title"))

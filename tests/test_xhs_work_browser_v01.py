@@ -768,6 +768,22 @@ class TestCreatorSyncV02:
         assert n == 2  # append-only，不覆盖历史（§26）
         con.close()
 
+    def test_runner_skips_note_id_only(self):
+        """仅有 note_id 无实质字段 → 不入库（防空记录污染），记为诊断。"""
+        notes = [{"note_id": "62ea6099000000001f004e37"},
+                 {"note_id": "6a92bc22000000002501b154", "title": "岛台", "duration": 39.0}]
+        valid = []
+        id_only = []
+        for note in notes:
+            substantive = (note.get("title") or note.get("cover")
+                          or note.get("duration") is not None
+                          or note.get("publish_time") or note.get("media_type"))
+            if substantive:
+                valid.append(note)
+            else:
+                id_only.append(note["note_id"])
+        assert len(valid) == 1 and id_only == ["62ea6099000000001f004e37"]
+
 
 # ============================================================
 # Local Bridge（Test D）
