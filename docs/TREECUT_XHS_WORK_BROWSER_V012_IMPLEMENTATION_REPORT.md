@@ -83,8 +83,24 @@ D. Creator 自动显示：昵称 + 小红书号（63083262719）→ E. Spotlight
 F. Tab 稳定为 3 → G. 日志面板有事件 → H. Edge 无 `--no-sandbox` 警告 → I. UI 操作不卡顿。
 （§25：**不要**故意切 B003/B010 破坏 B007 Profile；Mismatch Gate 由自动测试覆盖。）
 
+## 8. 真实验收结果（2026-08-30 用户 + 后台探针共同确认）
+
+| 验收 | 结果 | 证据 |
+|---|---|---|
+| A/B 三站登录持久化 | ✅ PASS | 用户实测：SAFE_SHUTDOWN → 重启三站免登录 |
+| C 三站已登录自动显示 | ✅ PASS | 用户面板确认三站「已登录 ✅」；日志 CREATOR/SPOTLIGHT SESSION_VALID |
+| D Creator 账号识别+绑定 | ✅ PASS | 绑定落盘：display_name=KUBON坤宝高端岛台工厂，xhs_id=**63083262719**（人工确认） |
+| E 聚光广告账户 | ✅ PASS（ID 待补） | 绑定落盘：T-KUBON坤宝高端岛台工厂-zx（人工确认）；账户 ID 留 V0.2 DOM 校准 |
+| F 严格 3 Tab | ✅ PASS | 探针实证 tabs_after_reconcile=3（重复页关闭=[]） |
+| G 日志面板有事件 | ✅ PASS | 面板日志区 + 文件日志 data_root/logs/xhs_work_browser.log |
+| H 无 --no-sandbox | ✅ PASS | 自启 Edge 参数实证（生产路径不含该参数） |
+| I UI 不阻塞 | ✅ PASS | BrowserExecutor 单线程 + per-key inflight + 检测硬时限 40s |
+
+期间定位并修复的真实问题：Playwright 跨线程 greenlet 崩溃（executor 收敛）、面板假死提示、
+XHS 大页面读取过慢（textContent 轻量读取）、Edge 孤儿进程占用 Profile 导致启动端口超时
+（close 强制终止兜底 + 启动重试）。
+
 ## 9. 最终状态
 
-**XHS_WORK_BROWSER_V012_READY_FOR_ACCEPTANCE**
-
-真实验收（A–I）通过后 → **XHS_WORK_BROWSER_FOUNDATION_PASS** → 才进入 V0.2 Creator Sync（本轮不实现）。
+**XHS_WORK_BROWSER_FOUNDATION_PASS**（真实验收 A–I 已确认；聚光广告账户 ID 与剩余 DOM
+微调留 V0.2 Creator Sync 阶段一并校准）
