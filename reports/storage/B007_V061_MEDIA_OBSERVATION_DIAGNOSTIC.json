@@ -1,0 +1,2121 @@
+{
+  "pages_seen": [
+    "CREATOR",
+    "SPOTLIGHT",
+    "FRONTEND",
+    "NEW"
+  ],
+  "responses": [
+    {
+      "page": "FRONTEND",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "edith.xiaohongshu.com/api/im/web/chat/get_unread",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/leona/small-and-medium/getQrCode",
+      "ctype": "application/json;charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/leona/rtb/account/balance",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "adsmessage.xiaohongshu.com/api/adsmessage/latest/message/fetch",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "adsmessage.xiaohongshu.com/api/adsmessage/unread/message/get",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/light/partner/assign/entrance",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "fe.xiaohongshu.com/api/edith/redbreast/api/toc/robin/application/116",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "fe.xiaohongshu.com/api/robin/ads/applications",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "fe.xiaohongshu.com/api/edith/redbreast/api/toc/robin/trigger",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "picasso-static.xiaohongshu.com/fe-platform/0014d22afee72e538cadbe0be76e06bd1ebe55ec.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "edith.xiaohongshu.com/api/sns/web/worldcup/live_bar",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "creator.xiaohongshu.com/new/note-manager",
+      "ctype": "text/html; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/bundler-runtime.d3240feb.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-delight.6420c4ba.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-polyfill.f66fc5f3.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/project-publish-vue.feda2e02.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-yam-beer.6845c36a.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-element-plus.4f97423e.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-launcher.2e14ecff.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-lodash.e92a8ee0.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/project-publish-components.f62a986b.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-axios.8cd8627b.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-vue.c952611e.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-zeus-engine.1cc8bc98.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-protobuf.9e28229e.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-cos-sdk.46bfb0c0.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-swiper.7ce41414.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-onnxruntime.e27065b2.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-draggable.05ec9c12.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-shepherd.f8c40c1b.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-dexie.e46fcb39.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/library-cropper.18277c8a.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/mp4box.72e273e0.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/9920.20b76ae5.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/index.04d7904e.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/library-delight.bbfacb54.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/project-publish-vue.d3d60e6c.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/library-element-plus.230ac8bf.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/library-launcher.d1f5fad0.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/project-publish-components.33badcae.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/library-swiper.fb30ae03.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/library-shepherd.4752e570.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/library-cropper.90fe89d2.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/9920.9f3e9ae5.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/index.b445a040.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/image/delete.1d1c19d7.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/image/rotate.b15866a9.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/image/copy.8d6a3751.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/image/plus.d6c322bd.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-video-qc.xhscdn.com/fe-platform-file/104101b831udegmhb2q06chlqrg9000000000018ckkuf4.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/async/1517.598998f7.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/content.js-e4490f5d.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/runtime-dom.esm-bundler-90e72f46.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/util-ff1b650c.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/light/campaign/extra/list",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/light/campaign/extra/list",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/index-9000aff5.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/tool-13238bfa.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/Jsq-4d01198b.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/stat-e9139785.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "edith.xiaohongshu.com/api/redcaptcha/v2/getconfig",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "as.xiaohongshu.com/api/p/pj",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "as.xiaohongshu.com/api/sec/v1/sbtsource",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "as.xiaohongshu.com/api/sec/v1/scripting",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "creator.xiaohongshu.com/api/galaxy/user/info",
+      "ctype": "application/json;charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/async/2298.6056bbb1.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/async/5783.98bcfd15.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/async/3506.48aa5807.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/async/7339.48625e87.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/async/3506.e5154b64.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/async/5797.b7ad6a00.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/async/4839.fc89ae58.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/css/async/9812.a3ea53a6.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/async/7339.544e2835.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/js/async/9812.4a9a2331.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "edith.xiaohongshu.com/api/sns/web/racing_get",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "as.xiaohongshu.com/api/sec/v1/shield/webprofile",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "spider-tracker.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-avatar-qc.xhscdn.com/avatar/65dd7b3f32377300019291d2.jpg",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-img-qc.xhscdn.com/48fd625e5dfe43f5a44ea81f99668b223802391d",
+      "ctype": "application/octet-stream",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/ugc/public/resource/image/noContent.ae04777a.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/as/v1/f218/a15/public/04b29480233f4def5c875875b6bdc3b1.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/as/v1/3e44/public/bf7d4e32677698655a5cadc581fd09b3.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/formula-static/redcaptcha/captcha/2c764b8704b102c706b61a963dd0abbd.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "creator.xiaohongshu.com/api/galaxy/creator/user/video",
+      "ctype": "application/json;charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-static.xhscdn.com/as/v2/fp/a71d4e44a15a6c75bdf683e6aa05e37e.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "creator.xiaohongshu.com/api/galaxy/v2/creator/note/user/posted",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/1040g00830r86oi0ph85g5onac2cnojhnbmq4afg",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/spectrum/1040g34o324hhn3ilgm105onac2cnojhn5009358",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/spectrum/1040g34o324hhmhd0n4105onac2cnojhntdvll08",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/1040g00830r7hqf97hc605onac2cnojhnnmj3bb8",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/spectrum/1040g34o324b6mu1l0s105onac2cnojhnevvtpp0",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/spectrum/1040g34o324cd7uk3gm105onac2cnojhn3050t50",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/spectrum/1040g34o324b6lfksgs105onac2cnojhnqh1sing",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/spectrum/1040g34o324dq9idl0m105onac2cnojhn4v1v478",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/spectrum/1040g34o324eve01vgs105onac2cnojhnrt75cn0",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/spectrum/1040g34o324evd36on2105onac2cnojhnb0e7uko",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/spectrum/1040g34o324cd79fmgm105onac2cnojhnnp6mgng",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/spectrum/1040g34o324dqa796n2805onac2cnojhn6an2368",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-platform.xhscdn.com/platform/104101l03240ecmc00o06cluusst00000000001csoms68",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "as.xiaohongshu.com/api/sec/v1/shield/webprofile",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "fe-platform.xhscdn.com/platform/104101l031udehquhiq06chlqrg900000000001asvebiq.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "fe-platform.xhscdn.com/platform/104101l031udehquhiq06chlqrg900000000001asvebiq.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "fe-platform.xhscdn.com/platform/104101l031udehquhiq06chlqrg900000000001asvebiq.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/light/pgy/confirm/create",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/edith/ads/lite/task/center/resource/info",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-platform.xhscdn.com/platform/104101l031udehquhiq06chlqrg900000000001asvebiq.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-platform.xhscdn.com/platform/104101l031udehquhiq06chlqrg900000000001asvebiq.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "fe-platform.xhscdn.com/platform/104101l031udehquhiq06chlqrg900000000001asvebiq.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "as.xiaohongshu.com/api/sec/v1/shield/webprofile",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/leona/apollo/getValue",
+      "ctype": "application/json;charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/leona/apollo/getValue",
+      "ctype": "application/json;charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/leona/rtb/campaign/base/list",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/leona/rtb/unit/base/list",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/light/campaign/extra/list",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/leona/rtb/unit/base/list",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "ad.xiaohongshu.com/api/leona/rtb/unit/base/list",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "fe2.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "SPOTLIGHT",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "as.xiaohongshu.com/api/sec/v1/shield/webprofile",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "edith.xiaohongshu.com/web_api/sns/v5/creator/note/managemaent/search",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "sns-na-i4.xhscdn.com/1040g00831vo8tluoia205onac2cnojhnc8mce58",
+      "ctype": "image/jpeg",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "as.xiaohongshu.com/api/sec/v1/shield/webprofile",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "as.xiaohongshu.com/api/sec/v1/shield/webprofile",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "FRONTEND",
+      "safe": "as.xiaohongshu.com/api/sec/v1/shield/webprofile",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "CREATOR",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "www.xiaohongshu.com/explore/69f9a0ac000000003701d937",
+      "ctype": "text/html; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/content.js-e4490f5d.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/vendor.ff19aca8.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/index.20c4d942.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/runtime-dom.esm-bundler-90e72f46.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/as/v1/3e44/public/04b29480233f4def5c875875b6bdc3b1.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/util-ff1b650c.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/index-9000aff5.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/stat-e9139785.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/tool-13238bfa.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "popomkonnjgcdagdhgcpcekbdeoibglc/assets/Jsq-4d01198b.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "as.xiaohongshu.com/api/sec/v1/ds",
+      "ctype": "application/javascript;charset",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-video-qc.xhscdn.com/fe-platform/ebf234fe97561cc2242114a0c5ba836eaf0848f8.json",
+      "ctype": "application/json",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "www.xiaohongshu.com/web-static/svg-sprite.6.47.0.svg",
+      "ctype": "image/svg+xml; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/svg/standardSearchIcon.8bb9dd9c.svg",
+      "ctype": "image/svg+xml",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "sns-webpic-qc.xhscdn.com/202609011616/7f6c71d164a7eb42aa310a9237423cb6/1040g00831vo8tluoia205onac2cnojhnc8mce58!nd_prv_wlteh_webp_3",
+      "ctype": "image/webp",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/as/v1/3e44/public/a9ef723c54cfdb63556bffe75cf06ae7.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/bundler-runtime.2eaae9d7.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/library-polyfill.d9182cd6.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/library-axios.1c2d8386.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/library-lodash.c2803696.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/library-vue.d8da6db6.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/vendor-dynamic.e774423f.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/vendor.ce9f19ea.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/index.b95ee564.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/8019.6ff0577f.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-video-qc.xhscdn.com/fe-platform-file/104101b831udegmhb2q06chlqrg9000000000018ckkuf4.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/Track.6c788004.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/9760.adcdb880.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "as.xiaohongshu.com/api/p/pj",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/Explore.cf5b5693.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/Note.32bdb28f.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "pages.xiaohongshu.com/data/sem_sdk",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "as.xiaohongshu.com/api/sec/v1/sbtsource",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "as.xiaohongshu.com/api/sec/v1/scripting",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/redcaptcha/v2/getconfig",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/as/v2/ds/6545c70e73d7e06896b3c574a70b5438.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/async/AiHeaderNormal.c19723e5.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/async/NPS.0fee7ba1.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/async/6831.6f8e24e2.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/async/5894.49592206.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/async/7604.5e013dad.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/async/3244.4df80d30.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/async/2067.311213b6.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/async/4831.eaafc0d2.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "sns-avatar-qc.xhscdn.com/avatar/65dd7b3f32377300019291d2.jpg",
+      "ctype": "image/webp",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/AiHeaderNormal.75f55cb0.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/as/v1/f218/a15/public/04b29480233f4def5c875875b6bdc3b1.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/as/v1/3e44/public/bf7d4e32677698655a5cadc581fd09b3.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/as/v2/fp/a71d4e44a15a6c75bdf683e6aa05e37e.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/redcaptcha/captcha/2c764b8704b102c706b61a963dd0abbd.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/NPS.d211c3d2.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/6831.bae37028.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/5894.a65741ae.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/7604.4de8516e.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/3244.8fc47e6e.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/2067.e3db2705.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/9878.4c4672d6.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/8529.16c0361e.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/xhs-web-player-mp4.014556b6.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/2024.0bc48e1a.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/703.895fc450.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/4831.11186f2a.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/xhs-web-player.f368ad7a.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/395.6ce4f169.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "pages.xiaohongshu.com/data/xhs_pc_nps",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/web/v1/config",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "sns-avatar-qc.xhscdn.com/avatar/65dd7b3f32377300019291d2.jpg",
+      "ctype": "image/webp",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "sns-avatar-qc.xhscdn.com/avatar/65dd7b3f32377300019291d2.jpg",
+      "ctype": "image/webp",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/css/async/3362.4b0ac9dc.css",
+      "ctype": "text/css",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/web/unread_count",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/web/v1/system/config",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/web/v2/user/me",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/799.29b29f18.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/1863.b78bffb0.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/v6/message/web/detect",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/v1/im/web/get_recent_chats",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/im/web/chats/group",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/im/web/users/following/all",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/web/unread_count",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/web/v2/widgets",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/web/v2/comment/page",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/im/web/emoji/config",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/im/redmoji/version",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/im/web/v3/chats",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/web/v1/search/trending/query",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "so.xiaohongshu.com/api/sns/web/search/history/sync",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-static.xhscdn.com/formula-static/xhs-pc-web/public/resource/js/async/6399.1ac57d49.js",
+      "ctype": "application/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/im/web/users/following/all",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/im/redmoji/version",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "sns-webpic-qc.xhscdn.com/202609011616/475db6e1cbf4168806aaf575000565d6/1040g00831vo8tluoia205onac2cnojhnc8mce58!nd_dft_wlteh_webp_3",
+      "ctype": "image/webp",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "https://www.xiaohongshu.com/4471f0c1-7208-45eb-a6ea-7cc15202578e",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/im/web/chat/get_unread",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "sns-video-v3.xhscdn.com/stream/79/110/114/01e9f9a0ac135f484f0370019df71bffcf_114.mp4",
+      "ctype": "video/mp4",
+      "status": 206
+    },
+    {
+      "page": "NEW",
+      "safe": "sns-video-v3.xhscdn.com/stream/79/110/114/01e9f9a0ac135f484f0370019df71bffcf_114.mp4",
+      "ctype": "video/mp4",
+      "status": 206
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "sns-video-v3.xhscdn.com/stream/79/110/114/01e9f9a0ac135f484f0370019df71bffcf_114.mp4",
+      "ctype": "video/mp4",
+      "status": 206
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "as.xiaohongshu.com/api/sec/v1/shield/webprofile",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "https://www.xiaohongshu.com/7c3c6d34-73cf-4530-bb1f-a82fa1d4ba0d",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-video-qc.xhscdn.com/fe-platform-file/104101b831o2j4obrmg06c2glcd400000000002e9b6unq.js",
+      "ctype": "text/javascript",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-platform.xhscdn.com/platform/104101l031udehquhiq06chlqrg900000000001asvebiq.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-platform.xhscdn.com/platform/104101l031udehquhiq06chlqrg900000000001asvebiq.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "fe-platform.xhscdn.com/platform/104101l031udehquhiq06chlqrg900000000001asvebiq.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "apm-fe.xiaohongshu.com/api/data",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "picasso-static.xiaohongshu.com/fe-platform/0014d22afee72e538cadbe0be76e06bd1ebe55ec.png",
+      "ctype": "image/png",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/v1/history/report_web",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/web/v1/note/metrics_report",
+      "ctype": "application/json; charset=utf-",
+      "status": 200
+    },
+    {
+      "page": "NEW",
+      "safe": "t2.xiaohongshu.com/api/v2/collect",
+      "ctype": "text/json; charset=utf-8",
+      "status": 200
+    }
+  ],
+  "media_candidates": [
+    {
+      "page": "NEW",
+      "safe": "sns-video-v3.xhscdn.com/stream/79/110/114/01e9f9a0ac135f484f0370019df71bffcf_114.mp4",
+      "ctype": "video/mp4",
+      "status": 206,
+      "len": "390625",
+      "range": "bytes 0-390624/1641507"
+    },
+    {
+      "page": "NEW",
+      "safe": "sns-video-v3.xhscdn.com/stream/79/110/114/01e9f9a0ac135f484f0370019df71bffcf_114.mp4",
+      "ctype": "video/mp4",
+      "status": 206,
+      "len": "687182",
+      "range": "bytes 19628-706809/1641507"
+    },
+    {
+      "page": "NEW",
+      "safe": "sns-video-v3.xhscdn.com/stream/79/110/114/01e9f9a0ac135f484f0370019df71bffcf_114.mp4",
+      "ctype": "video/mp4",
+      "status": 206,
+      "len": "704415",
+      "range": "bytes 661163-1365577/1641507"
+    },
+    {
+      "page": "SESSION_DOWNLOAD",
+      "safe": "sns-video-v3.xhscdn.com/stream/79/110/114/01e9f9a0ac135f484f0370019df71bffcf_114.mp4",
+      "ctype": "video/mp4",
+      "status": 200,
+      "captured_to": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\staging\\B007\\69f9a0ac000000003701d937.mp4.part",
+      "captured_bytes": 1641507
+    }
+  ],
+  "identity_evidence": [
+    {
+      "page": "NEW",
+      "safe": "edith.xiaohongshu.com/api/sns/web/v2/comment/page"
+    }
+  ],
+  "errors": []
+}

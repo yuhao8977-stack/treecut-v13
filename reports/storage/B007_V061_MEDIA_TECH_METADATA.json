@@ -1,0 +1,19 @@
+{
+  "file": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\quarantine\\69f9a0ac000000003701d937.part",
+  "size": 1641507,
+  "ffprobe_ok": true,
+  "duration": 21.966077,
+  "video_codec": "hevc",
+  "width": 720,
+  "height": 1280,
+  "fps": 30.0,
+  "audio_codec": "aac",
+  "full_decode_ok": true,
+  "sha256": "6df9062aa0fc95ab1f1386113695eada88dd6b682a7fd936208bd9efb8f0710e",
+  "duration_crosscheck": {
+    "creator": 21.0,
+    "ffprobe": 21.97,
+    "tolerance": 5.0,
+    "pass": true
+  }
+}
