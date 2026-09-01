@@ -1,0 +1,2079 @@
+{
+ "phase": "V0.8",
+ "final_status": "B007_V08_DNA_EVIDENCE_PASS_WITH_LIMITATIONS",
+ "generated_at": "2026-09-01 21:21:36",
+ "input": {
+  "V0.7 tables": "b007_*_v1",
+  "facts": "B007_SAMPLE20_V1.json (V0.4 dual-source + V0.5 strata)"
+ },
+ "dna_records": [
+  {
+   "note_id": "6544d761000000001f038f12",
+   "sample_id": "SA-6544d761",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "publish_time": "2023-11-03 20:19",
+   "creator_duration": 120.0,
+   "media_duration": 120.77,
+   "n_segments": 48,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 48,
+   "asr_chars": 646,
+   "has_speech": true,
+   "ocr_items": 349,
+   "has_subtitle": true,
+   "visual_frames": 48,
+   "scene_distribution": {
+    "OTHER": 40,
+    "CUSTOMER_HOME": 7,
+    "SHOWROOM": 1
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.83,
+   "scene_known_ratio": 0.17,
+   "claim_status": {
+    "UNKNOWN": 479,
+    "SUPPORTED": 1
+   },
+   "n_claims": 480,
+   "supported_claim_values": [
+    "DINING"
+   ],
+   "creator_view": 347451.0,
+   "creator_view_pct": 100.0,
+   "paid_status": "NO_PAID_ASSOCIATION_OBSERVED",
+   "paid_fee": null,
+   "paid_imp": null,
+   "paid_clicks": null,
+   "paid_leads": null,
+   "paid_months": 0
+  },
+  {
+   "note_id": "64f158f4000000001d014203",
+   "sample_id": "SA-64f158f4",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "publish_time": "2023-09-01 17:00",
+   "creator_duration": 23.0,
+   "media_duration": 23.94,
+   "n_segments": 2,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 2,
+   "asr_chars": 26,
+   "has_speech": true,
+   "ocr_items": 11,
+   "has_subtitle": false,
+   "visual_frames": 2,
+   "scene_distribution": {
+    "CUSTOMER_HOME": 2
+   },
+   "scene_dominant": "CUSTOMER_HOME",
+   "scene_dominant_ratio": 1.0,
+   "scene_known_ratio": 1.0,
+   "claim_status": {
+    "UNKNOWN": 20
+   },
+   "n_claims": 20,
+   "supported_claim_values": [],
+   "creator_view": 40126.0,
+   "creator_view_pct": 99.6,
+   "paid_status": "NO_PAID_ASSOCIATION_OBSERVED",
+   "paid_fee": null,
+   "paid_imp": null,
+   "paid_clicks": null,
+   "paid_leads": null,
+   "paid_months": 0
+  },
+  {
+   "note_id": "64e42823000000000800c82d",
+   "sample_id": "SA-64e42823",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "publish_time": "2023-08-22 11:14",
+   "creator_duration": 158.0,
+   "media_duration": 158.5,
+   "n_segments": 73,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 117,
+   "asr_chars": 890,
+   "has_speech": true,
+   "ocr_items": 541,
+   "has_subtitle": true,
+   "visual_frames": 73,
+   "scene_distribution": {
+    "OTHER": 50,
+    "CUSTOMER_HOME": 19,
+    "FACTORY": 4
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.68,
+   "scene_known_ratio": 0.32,
+   "claim_status": {
+    "UNKNOWN": 728,
+    "SUPPORTED": 2
+   },
+   "n_claims": 730,
+   "supported_claim_values": [
+    "DINING",
+    "GUEST_CAPACITY"
+   ],
+   "creator_view": 35187.0,
+   "creator_view_pct": 99.6,
+   "paid_status": "NO_PAID_ASSOCIATION_OBSERVED",
+   "paid_fee": null,
+   "paid_imp": null,
+   "paid_clicks": null,
+   "paid_leads": null,
+   "paid_months": 0
+  },
+  {
+   "note_id": "66f672d6000000001902efbb",
+   "sample_id": "SA-66f672d6",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "publish_time": "2024-09-29 21:00",
+   "creator_duration": 49.0,
+   "media_duration": 49.0,
+   "n_segments": 24,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 21,
+   "asr_chars": 217,
+   "has_speech": true,
+   "ocr_items": 77,
+   "has_subtitle": true,
+   "visual_frames": 24,
+   "scene_distribution": {
+    "OTHER": 23,
+    "CUSTOMER_HOME": 1
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.96,
+   "scene_known_ratio": 0.04,
+   "claim_status": {
+    "UNKNOWN": 240
+   },
+   "n_claims": 240,
+   "supported_claim_values": [],
+   "creator_view": 15404.0,
+   "creator_view_pct": 99.2,
+   "paid_status": "NO_PAID_ASSOCIATION_OBSERVED",
+   "paid_fee": null,
+   "paid_imp": null,
+   "paid_clicks": null,
+   "paid_leads": null,
+   "paid_months": 0
+  },
+  {
+   "note_id": "63c5675a000000001c034435",
+   "sample_id": "SB-63c5675a",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "publish_time": "2023-01-16 23:03",
+   "creator_duration": 9.0,
+   "media_duration": 9.87,
+   "n_segments": 4,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 8,
+   "asr_chars": 58,
+   "has_speech": true,
+   "ocr_items": 16,
+   "has_subtitle": true,
+   "visual_frames": 4,
+   "scene_distribution": {
+    "OTHER": 2,
+    "CUSTOMER_HOME": 2
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.5,
+   "scene_known_ratio": 0.5,
+   "claim_status": {
+    "UNKNOWN": 40
+   },
+   "n_claims": 40,
+   "supported_claim_values": [],
+   "creator_view": 367.0,
+   "creator_view_pct": 49.9,
+   "paid_status": "NO_PAID_ASSOCIATION_OBSERVED",
+   "paid_fee": null,
+   "paid_imp": null,
+   "paid_clicks": null,
+   "paid_leads": null,
+   "paid_months": 0
+  },
+  {
+   "note_id": "682edce4000000001101e878",
+   "sample_id": "SB-682edce4",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "publish_time": "2025-06-01 17:00",
+   "creator_duration": 38.0,
+   "media_duration": 38.08,
+   "n_segments": 18,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 27,
+   "asr_chars": 261,
+   "has_speech": true,
+   "ocr_items": 44,
+   "has_subtitle": true,
+   "visual_frames": 18,
+   "scene_distribution": {
+    "OTHER": 18
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 1.0,
+   "scene_known_ratio": 0.0,
+   "claim_status": {
+    "UNKNOWN": 180
+   },
+   "n_claims": 180,
+   "supported_claim_values": [],
+   "creator_view": 367.0,
+   "creator_view_pct": 49.9,
+   "paid_status": "NO_PAID_ASSOCIATION_OBSERVED",
+   "paid_fee": null,
+   "paid_imp": null,
+   "paid_clicks": null,
+   "paid_leads": null,
+   "paid_months": 0
+  },
+  {
+   "note_id": "66d7c509000000000c018964",
+   "sample_id": "SB-66d7c509",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "publish_time": "2024-09-05 17:00",
+   "creator_duration": 51.0,
+   "media_duration": 51.92,
+   "n_segments": 26,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 26,
+   "asr_chars": 288,
+   "has_speech": true,
+   "ocr_items": 112,
+   "has_subtitle": true,
+   "visual_frames": 26,
+   "scene_distribution": {
+    "OTHER": 25,
+    "FACTORY": 1
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.96,
+   "scene_known_ratio": 0.04,
+   "claim_status": {
+    "UNKNOWN": 260
+   },
+   "n_claims": 260,
+   "supported_claim_values": [],
+   "creator_view": 366.0,
+   "creator_view_pct": 49.8,
+   "paid_status": "NO_PAID_ASSOCIATION_OBSERVED",
+   "paid_fee": null,
+   "paid_imp": null,
+   "paid_clicks": null,
+   "paid_leads": null,
+   "paid_months": 0
+  },
+  {
+   "note_id": "64fbe901000000001d01424c",
+   "sample_id": "SC-64fbe901",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "publish_time": "2023-09-09 11:39",
+   "creator_duration": 23.0,
+   "media_duration": 23.75,
+   "n_segments": 5,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 10,
+   "asr_chars": 121,
+   "has_speech": true,
+   "ocr_items": 29,
+   "has_subtitle": true,
+   "visual_frames": 5,
+   "scene_distribution": {
+    "OTHER": 4,
+    "CUSTOMER_HOME": 1
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.8,
+   "scene_known_ratio": 0.2,
+   "claim_status": {
+    "UNKNOWN": 49,
+    "SUPPORTED": 1
+   },
+   "n_claims": 50,
+   "supported_claim_values": [
+    "GUEST_CAPACITY"
+   ],
+   "creator_view": 827.0,
+   "creator_view_pct": 88.4,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 0.08,
+   "paid_imp": 22.0,
+   "paid_clicks": 2.0,
+   "paid_leads": 1.0,
+   "paid_months": 5
+  },
+  {
+   "note_id": "65bc60fe0000000008022950",
+   "sample_id": "SC-65bc60fe",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "publish_time": "2024-02-14 17:00",
+   "creator_duration": 37.0,
+   "media_duration": 37.62,
+   "n_segments": 11,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 19,
+   "asr_chars": 192,
+   "has_speech": true,
+   "ocr_items": 72,
+   "has_subtitle": true,
+   "visual_frames": 11,
+   "scene_distribution": {
+    "OTHER": 10,
+    "CUSTOMER_HOME": 1
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.91,
+   "scene_known_ratio": 0.09,
+   "claim_status": {
+    "UNKNOWN": 109,
+    "SUPPORTED": 1
+   },
+   "n_claims": 110,
+   "supported_claim_values": [
+    "FLEXIBLE_CAPACITY"
+   ],
+   "creator_view": 407.0,
+   "creator_view_pct": 52.5,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 2.92,
+   "paid_imp": 15.0,
+   "paid_clicks": 1.0,
+   "paid_leads": 1.0,
+   "paid_months": 4
+  },
+  {
+   "note_id": "69f9a0ac000000003701d937",
+   "sample_id": "SC-69f9a0ac",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "publish_time": "2026-05-06 12:01",
+   "creator_duration": 21.0,
+   "media_duration": 21.97,
+   "n_segments": 10,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 10,
+   "asr_chars": 154,
+   "has_speech": true,
+   "ocr_items": 11,
+   "has_subtitle": true,
+   "visual_frames": 10,
+   "scene_distribution": {
+    "OTHER": 5,
+    "CUSTOMER_HOME": 5
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.5,
+   "scene_known_ratio": 0.5,
+   "claim_status": {
+    "UNKNOWN": 100
+   },
+   "n_claims": 100,
+   "supported_claim_values": [],
+   "creator_view": 125.0,
+   "creator_view_pct": 35.9,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 1.18,
+   "paid_imp": 19.0,
+   "paid_clicks": 2.0,
+   "paid_leads": 0.0,
+   "paid_months": 4
+  },
+  {
+   "note_id": "63c8d157000000001f02357d",
+   "sample_id": "SC-63c8d157",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "publish_time": "2023-01-19 13:12",
+   "creator_duration": 20.0,
+   "media_duration": 20.04,
+   "n_segments": 11,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 1,
+   "asr_chars": 7,
+   "has_speech": false,
+   "ocr_items": 69,
+   "has_subtitle": true,
+   "visual_frames": 11,
+   "scene_distribution": {
+    "CUSTOMER_HOME": 5,
+    "OTHER": 5,
+    "SHOWROOM": 1
+   },
+   "scene_dominant": "CUSTOMER_HOME",
+   "scene_dominant_ratio": 0.45,
+   "scene_known_ratio": 0.55,
+   "claim_status": {
+    "UNKNOWN": 110
+   },
+   "n_claims": 110,
+   "supported_claim_values": [],
+   "creator_view": 716.0,
+   "creator_view_pct": 84.0,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 0.04,
+   "paid_imp": 20.0,
+   "paid_clicks": 4.0,
+   "paid_leads": 0.0,
+   "paid_months": 5
+  },
+  {
+   "note_id": "66de90b3000000000c01a935",
+   "sample_id": "SD-66de90b3",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "publish_time": "2024-09-09 19:01",
+   "creator_duration": 44.0,
+   "media_duration": 44.67,
+   "n_segments": 9,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 34,
+   "asr_chars": 340,
+   "has_speech": true,
+   "ocr_items": 17,
+   "has_subtitle": true,
+   "visual_frames": 9,
+   "scene_distribution": {
+    "OTHER": 9
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 1.0,
+   "scene_known_ratio": 0.0,
+   "claim_status": {
+    "UNKNOWN": 90
+   },
+   "n_claims": 90,
+   "supported_claim_values": [],
+   "creator_view": 926.0,
+   "creator_view_pct": 90.7,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 57.61,
+   "paid_imp": 1135.0,
+   "paid_clicks": 155.0,
+   "paid_leads": 0.0,
+   "paid_months": 5
+  },
+  {
+   "note_id": "670630e9000000001a023e3f",
+   "sample_id": "SD-670630e9",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "publish_time": "2024-10-11 17:00",
+   "creator_duration": 34.0,
+   "media_duration": 34.79,
+   "n_segments": 22,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 18,
+   "asr_chars": 185,
+   "has_speech": true,
+   "ocr_items": 46,
+   "has_subtitle": true,
+   "visual_frames": 22,
+   "scene_distribution": {
+    "OTHER": 21,
+    "CUSTOMER_HOME": 1
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.95,
+   "scene_known_ratio": 0.05,
+   "claim_status": {
+    "UNKNOWN": 220
+   },
+   "n_claims": 220,
+   "supported_claim_values": [],
+   "creator_view": 277.0,
+   "creator_view_pct": 45.1,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 45.76,
+   "paid_imp": 900.0,
+   "paid_clicks": 95.0,
+   "paid_leads": 0.0,
+   "paid_months": 5
+  },
+  {
+   "note_id": "69367987000000001b027d8f",
+   "sample_id": "SD-69367987",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "publish_time": "2025-12-09 18:01",
+   "creator_duration": 78.0,
+   "media_duration": 78.02,
+   "n_segments": 20,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 40,
+   "asr_chars": 467,
+   "has_speech": true,
+   "ocr_items": 39,
+   "has_subtitle": true,
+   "visual_frames": 20,
+   "scene_distribution": {
+    "OTHER": 15,
+    "FACTORY": 4,
+    "SHOWROOM": 1
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.75,
+   "scene_known_ratio": 0.25,
+   "claim_status": {
+    "UNKNOWN": 198,
+    "SUPPORTED": 2
+   },
+   "n_claims": 200,
+   "supported_claim_values": [
+    "FLEXIBLE_CAPACITY",
+    "OFFICE"
+   ],
+   "creator_view": 1234.0,
+   "creator_view_pct": 94.5,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 38.9,
+   "paid_imp": 826.0,
+   "paid_clicks": 127.0,
+   "paid_leads": 0.0,
+   "paid_months": 5
+  },
+  {
+   "note_id": "64db4e87000000001701a578",
+   "sample_id": "SD-64db4e87",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "publish_time": "2023-08-15 18:08",
+   "creator_duration": 74.0,
+   "media_duration": 74.47,
+   "n_segments": 35,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 49,
+   "asr_chars": 434,
+   "has_speech": true,
+   "ocr_items": 305,
+   "has_subtitle": true,
+   "visual_frames": 35,
+   "scene_distribution": {
+    "OTHER": 31,
+    "FACTORY": 2,
+    "CUSTOMER_HOME": 2
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.89,
+   "scene_known_ratio": 0.11,
+   "claim_status": {
+    "UNKNOWN": 350
+   },
+   "n_claims": 350,
+   "supported_claim_values": [],
+   "creator_view": 5850.0,
+   "creator_view_pct": 98.6,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 26.32,
+   "paid_imp": 165.0,
+   "paid_clicks": 18.0,
+   "paid_leads": 0.0,
+   "paid_months": 5
+  },
+  {
+   "note_id": "643363910000000013036c3a",
+   "sample_id": "SE-64336391",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "publish_time": "2023-04-10 10:58",
+   "creator_duration": 13.0,
+   "media_duration": 13.05,
+   "n_segments": 4,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 8,
+   "asr_chars": 74,
+   "has_speech": true,
+   "ocr_items": 24,
+   "has_subtitle": true,
+   "visual_frames": 4,
+   "scene_distribution": {
+    "OTHER": 3,
+    "FACTORY": 1
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.75,
+   "scene_known_ratio": 0.25,
+   "claim_status": {
+    "UNKNOWN": 39,
+    "SUPPORTED": 1
+   },
+   "n_claims": 40,
+   "supported_claim_values": [
+    "FLEXIBLE_CAPACITY"
+   ],
+   "creator_view": 318.0,
+   "creator_view_pct": 47.6,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 2.34,
+   "paid_imp": 6.0,
+   "paid_clicks": 2.0,
+   "paid_leads": 0.0,
+   "paid_months": 2
+  },
+  {
+   "note_id": "66ebc041000000000c01b331",
+   "sample_id": "SE-66ebc041",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "publish_time": "2024-09-20 21:00",
+   "creator_duration": 37.0,
+   "media_duration": 37.76,
+   "n_segments": 13,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 17,
+   "asr_chars": 165,
+   "has_speech": true,
+   "ocr_items": 64,
+   "has_subtitle": true,
+   "visual_frames": 13,
+   "scene_distribution": {
+    "CUSTOMER_HOME": 3,
+    "OTHER": 10
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.77,
+   "scene_known_ratio": 0.23,
+   "claim_status": {
+    "UNKNOWN": 129,
+    "SUPPORTED": 1
+   },
+   "n_claims": 130,
+   "supported_claim_values": [
+    "DINING"
+   ],
+   "creator_view": 338.0,
+   "creator_view_pct": 48.5,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 4.06,
+   "paid_imp": 89.0,
+   "paid_clicks": 6.0,
+   "paid_leads": 0.0,
+   "paid_months": 5
+  },
+  {
+   "note_id": "6718abc70000000021009845",
+   "sample_id": "SE-6718abc7",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "publish_time": "2024-10-24 19:01",
+   "creator_duration": 65.0,
+   "media_duration": 65.27,
+   "n_segments": 19,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 53,
+   "asr_chars": 466,
+   "has_speech": true,
+   "ocr_items": 88,
+   "has_subtitle": true,
+   "visual_frames": 19,
+   "scene_distribution": {
+    "OTHER": 18,
+    "CUSTOMER_HOME": 1
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.95,
+   "scene_known_ratio": 0.05,
+   "claim_status": {
+    "UNKNOWN": 190
+   },
+   "n_claims": 190,
+   "supported_claim_values": [],
+   "creator_view": 109.0,
+   "creator_view_pct": 33.5,
+   "paid_status": "NOTE_PAID_METRIC_PRESENT",
+   "paid_fee": 2.63,
+   "paid_imp": 101.0,
+   "paid_clicks": 8.0,
+   "paid_leads": 0.0,
+   "paid_months": 5
+  },
+  {
+   "note_id": "63a6a53f000000001f00d5e2",
+   "sample_id": "SF-63a6a53f",
+   "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+   "publish_time": "2022-12-24 15:07",
+   "creator_duration": 27.0,
+   "media_duration": 27.56,
+   "n_segments": 9,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 11,
+   "asr_chars": 164,
+   "has_speech": true,
+   "ocr_items": 27,
+   "has_subtitle": true,
+   "visual_frames": 9,
+   "scene_distribution": {
+    "OTHER": 6,
+    "CUSTOMER_HOME": 3
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 0.67,
+   "scene_known_ratio": 0.33,
+   "claim_status": {
+    "UNKNOWN": 90
+   },
+   "n_claims": 90,
+   "supported_claim_values": [],
+   "creator_view": null,
+   "creator_view_pct": null,
+   "paid_status": "PAID_ASSOCIATED_NO_METRIC_RECORD",
+   "paid_fee": null,
+   "paid_imp": null,
+   "paid_clicks": null,
+   "paid_leads": null,
+   "paid_months": 0
+  },
+  {
+   "note_id": "640dc1050000000014025280",
+   "sample_id": "SF-640dc105",
+   "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+   "publish_time": "2023-03-12 20:09",
+   "creator_duration": 33.0,
+   "media_duration": 33.55,
+   "n_segments": 11,
+   "timeline_coverage": 1.0,
+   "asr_utterances": 17,
+   "asr_chars": 167,
+   "has_speech": true,
+   "ocr_items": 49,
+   "has_subtitle": true,
+   "visual_frames": 10,
+   "scene_distribution": {
+    "OTHER": 10
+   },
+   "scene_dominant": "OTHER",
+   "scene_dominant_ratio": 1.0,
+   "scene_known_ratio": 0.0,
+   "claim_status": {
+    "UNKNOWN": 107,
+    "SUPPORTED": 3
+   },
+   "n_claims": 110,
+   "supported_claim_values": [
+    "DINING",
+    "GUEST_CAPACITY"
+   ],
+   "creator_view": 355.0,
+   "creator_view_pct": 49.5,
+   "paid_status": "PAID_ASSOCIATED_NO_METRIC_RECORD",
+   "paid_fee": null,
+   "paid_imp": null,
+   "paid_clicks": null,
+   "paid_leads": null,
+   "paid_months": 0
+  }
+ ],
+ "feature_matrix": [
+  {
+   "note_id": "6544d761000000001f038f12",
+   "sample_id": "SA-6544d761",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": true,
+   "paid_associated": false,
+   "paid_high_input": false,
+   "paid_weak_outcome": false,
+   "n_claims": 480,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "64f158f4000000001d014203",
+   "sample_id": "SA-64f158f4",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "video": false,
+   "multi_segment": false,
+   "speech": true,
+   "subtitle": false,
+   "scene_customer_home": true,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": true,
+   "paid_associated": false,
+   "paid_high_input": false,
+   "paid_weak_outcome": false,
+   "n_claims": 20,
+   "scene_dominant": "CUSTOMER_HOME"
+  },
+  {
+   "note_id": "64e42823000000000800c82d",
+   "sample_id": "SA-64e42823",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": true,
+   "paid_associated": false,
+   "paid_high_input": false,
+   "paid_weak_outcome": false,
+   "n_claims": 730,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "66f672d6000000001902efbb",
+   "sample_id": "SA-66f672d6",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": true,
+   "paid_associated": false,
+   "paid_high_input": false,
+   "paid_weak_outcome": false,
+   "n_claims": 240,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "63c5675a000000001c034435",
+   "sample_id": "SB-63c5675a",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "video": false,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": false,
+   "paid_high_input": false,
+   "paid_weak_outcome": false,
+   "n_claims": 40,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "682edce4000000001101e878",
+   "sample_id": "SB-682edce4",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": false,
+   "paid_high_input": false,
+   "paid_weak_outcome": false,
+   "n_claims": 180,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "66d7c509000000000c018964",
+   "sample_id": "SB-66d7c509",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": false,
+   "paid_high_input": false,
+   "paid_weak_outcome": false,
+   "n_claims": 260,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "64fbe901000000001d01424c",
+   "sample_id": "SC-64fbe901",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "video": false,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": true,
+   "paid_associated": true,
+   "paid_high_input": false,
+   "paid_weak_outcome": false,
+   "n_claims": 50,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "65bc60fe0000000008022950",
+   "sample_id": "SC-65bc60fe",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": true,
+   "paid_high_input": true,
+   "paid_weak_outcome": false,
+   "n_claims": 110,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "69f9a0ac000000003701d937",
+   "sample_id": "SC-69f9a0ac",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "video": false,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": true,
+   "paid_high_input": false,
+   "paid_weak_outcome": true,
+   "n_claims": 100,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "63c8d157000000001f02357d",
+   "sample_id": "SC-63c8d157",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "video": false,
+   "multi_segment": true,
+   "speech": false,
+   "subtitle": true,
+   "scene_customer_home": true,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": true,
+   "paid_associated": true,
+   "paid_high_input": false,
+   "paid_weak_outcome": true,
+   "n_claims": 110,
+   "scene_dominant": "CUSTOMER_HOME"
+  },
+  {
+   "note_id": "66de90b3000000000c01a935",
+   "sample_id": "SD-66de90b3",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": true,
+   "paid_associated": true,
+   "paid_high_input": true,
+   "paid_weak_outcome": true,
+   "n_claims": 90,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "670630e9000000001a023e3f",
+   "sample_id": "SD-670630e9",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": true,
+   "paid_high_input": true,
+   "paid_weak_outcome": true,
+   "n_claims": 220,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "69367987000000001b027d8f",
+   "sample_id": "SD-69367987",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": true,
+   "paid_associated": true,
+   "paid_high_input": true,
+   "paid_weak_outcome": true,
+   "n_claims": 200,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "64db4e87000000001701a578",
+   "sample_id": "SD-64db4e87",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": true,
+   "paid_associated": true,
+   "paid_high_input": true,
+   "paid_weak_outcome": true,
+   "n_claims": 350,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "643363910000000013036c3a",
+   "sample_id": "SE-64336391",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "video": false,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": true,
+   "paid_high_input": true,
+   "paid_weak_outcome": true,
+   "n_claims": 40,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "66ebc041000000000c01b331",
+   "sample_id": "SE-66ebc041",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": true,
+   "paid_high_input": true,
+   "paid_weak_outcome": true,
+   "n_claims": 130,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "6718abc70000000021009845",
+   "sample_id": "SE-6718abc7",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": true,
+   "paid_high_input": true,
+   "paid_weak_outcome": true,
+   "n_claims": 190,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "63a6a53f000000001f00d5e2",
+   "sample_id": "SF-63a6a53f",
+   "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+   "video": false,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": true,
+   "paid_high_input": false,
+   "paid_weak_outcome": false,
+   "n_claims": 90,
+   "scene_dominant": "OTHER"
+  },
+  {
+   "note_id": "640dc1050000000014025280",
+   "sample_id": "SF-640dc105",
+   "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+   "video": true,
+   "multi_segment": true,
+   "speech": true,
+   "subtitle": true,
+   "scene_customer_home": false,
+   "scene_factory": false,
+   "scene_showroom": false,
+   "scene_installation": false,
+   "scene_unknown_dom": false,
+   "high_creator_view": false,
+   "paid_associated": true,
+   "paid_high_input": false,
+   "paid_weak_outcome": false,
+   "n_claims": 110,
+   "scene_dominant": "OTHER"
+  }
+ ],
+ "stratum_summary": {
+  "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED": {
+   "notes": [
+    "SA-6544d761",
+    "SA-64f158f4",
+    "SA-64e42823",
+    "SA-66f672d6"
+   ],
+   "scene": {
+    "OTHER": 3,
+    "CUSTOMER_HOME": 1
+   },
+   "speech": 4,
+   "subtitle": 3,
+   "claims": 1470,
+   "paid_fee": []
+  },
+  "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED": {
+   "notes": [
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509"
+   ],
+   "scene": {
+    "OTHER": 3
+   },
+   "speech": 3,
+   "subtitle": 3,
+   "claims": 480,
+   "paid_fee": []
+  },
+  "C_PAID_HIGH_EFFICIENCY_CANDIDATE": {
+   "notes": [
+    "SC-64fbe901",
+    "SC-65bc60fe",
+    "SC-69f9a0ac",
+    "SC-63c8d157"
+   ],
+   "scene": {
+    "OTHER": 3,
+    "CUSTOMER_HOME": 1
+   },
+   "speech": 3,
+   "subtitle": 4,
+   "claims": 370,
+   "paid_fee": [
+    0.04,
+    0.08,
+    1.18,
+    2.92
+   ]
+  },
+  "D_PAID_HIGH_INPUT_WEAK_OUTCOME": {
+   "notes": [
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87"
+   ],
+   "scene": {
+    "OTHER": 4
+   },
+   "speech": 4,
+   "subtitle": 4,
+   "claims": 860,
+   "paid_fee": [
+    26.32,
+    38.9,
+    45.76,
+    57.61
+   ]
+  },
+  "E_CROSS_SOURCE_CONTRAST": {
+   "notes": [
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7"
+   ],
+   "scene": {
+    "OTHER": 3
+   },
+   "speech": 3,
+   "subtitle": 3,
+   "claims": 360,
+   "paid_fee": [
+    2.34,
+    2.63,
+    4.06
+   ]
+  },
+  "F_PAID_ASSOCIATED_NO_NOTE_METRIC": {
+   "notes": [
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "scene": {
+    "OTHER": 2
+   },
+   "speech": 2,
+   "subtitle": 2,
+   "claims": 200,
+   "paid_fee": []
+  }
+ },
+ "pattern_candidates": [
+  {
+   "pattern": "multi_segment CO-OCCURS subtitle",
+   "supporting_samples": [
+    "SA-6544d761",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509",
+    "SC-64fbe901",
+    "SC-65bc60fe",
+    "SC-69f9a0ac",
+    "SC-63c8d157",
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "support_count": 19,
+   "contradicting_samples": [],
+   "strata": [
+    "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+    "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "E_CROSS_SOURCE_CONTRAST",
+    "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+   ],
+   "confidence": 1.0,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS speech",
+   "supporting_samples": [
+    "SA-6544d761",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509",
+    "SC-64fbe901",
+    "SC-65bc60fe",
+    "SC-69f9a0ac",
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "support_count": 18,
+   "contradicting_samples": [
+    "SC-63c8d157",
+    "SA-64f158f4"
+   ],
+   "strata": [
+    "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+    "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "E_CROSS_SOURCE_CONTRAST",
+    "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+   ],
+   "confidence": 0.9,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "speech CO-OCCURS subtitle",
+   "supporting_samples": [
+    "SA-6544d761",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509",
+    "SC-64fbe901",
+    "SC-65bc60fe",
+    "SC-69f9a0ac",
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "support_count": 18,
+   "contradicting_samples": [
+    "SA-64f158f4",
+    "SC-63c8d157"
+   ],
+   "strata": [
+    "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+    "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "E_CROSS_SOURCE_CONTRAST",
+    "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+   ],
+   "confidence": 0.9,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_associated",
+   "supporting_samples": [
+    "SC-64fbe901",
+    "SC-65bc60fe",
+    "SC-69f9a0ac",
+    "SC-63c8d157",
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "support_count": 13,
+   "contradicting_samples": [
+    "SA-6544d761",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509"
+   ],
+   "strata": [
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "E_CROSS_SOURCE_CONTRAST",
+    "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+   ],
+   "confidence": 0.684,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS subtitle",
+   "supporting_samples": [
+    "SC-64fbe901",
+    "SC-65bc60fe",
+    "SC-69f9a0ac",
+    "SC-63c8d157",
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "support_count": 13,
+   "contradicting_samples": [
+    "SA-6544d761",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509"
+   ],
+   "strata": [
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "E_CROSS_SOURCE_CONTRAST",
+    "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+   ],
+   "confidence": 0.684,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS speech",
+   "supporting_samples": [
+    "SC-64fbe901",
+    "SC-65bc60fe",
+    "SC-69f9a0ac",
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "support_count": 12,
+   "contradicting_samples": [
+    "SC-63c8d157",
+    "SA-6544d761",
+    "SA-64f158f4",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509"
+   ],
+   "strata": [
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "E_CROSS_SOURCE_CONTRAST",
+    "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+   ],
+   "confidence": 0.6,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "supporting_samples": [
+    "SC-69f9a0ac",
+    "SC-63c8d157",
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7"
+   ],
+   "support_count": 9,
+   "contradicting_samples": [
+    "SA-6544d761",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509",
+    "SC-64fbe901",
+    "SC-65bc60fe",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "strata": [
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "E_CROSS_SOURCE_CONTRAST"
+   ],
+   "confidence": 0.474,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS paid_weak_outcome",
+   "supporting_samples": [
+    "SC-69f9a0ac",
+    "SC-63c8d157",
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7"
+   ],
+   "support_count": 9,
+   "contradicting_samples": [
+    "SC-64fbe901",
+    "SC-65bc60fe",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "strata": [
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "E_CROSS_SOURCE_CONTRAST"
+   ],
+   "confidence": 0.692,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "supporting_samples": [
+    "SC-69f9a0ac",
+    "SC-63c8d157",
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7"
+   ],
+   "support_count": 9,
+   "contradicting_samples": [
+    "SA-6544d761",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509",
+    "SC-64fbe901",
+    "SC-65bc60fe",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "strata": [
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "E_CROSS_SOURCE_CONTRAST"
+   ],
+   "confidence": 0.474,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "supporting_samples": [
+    "SC-65bc60fe",
+    "SD-66de90b3",
+    "SD-670630e9",
+    "SD-69367987",
+    "SD-64db4e87",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7"
+   ],
+   "support_count": 8,
+   "contradicting_samples": [
+    "SA-6544d761",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509",
+    "SC-64fbe901",
+    "SC-69f9a0ac",
+    "SC-63c8d157",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "strata": [
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "E_CROSS_SOURCE_CONTRAST"
+   ],
+   "confidence": 0.421,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "supporting_samples": [
+    "SA-6544d761",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SC-64fbe901",
+    "SC-63c8d157",
+    "SD-66de90b3",
+    "SD-69367987",
+    "SD-64db4e87"
+   ],
+   "support_count": 8,
+   "contradicting_samples": [
+    "SA-64f158f4",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509",
+    "SC-65bc60fe",
+    "SC-69f9a0ac",
+    "SD-670630e9",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "strata": [
+    "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+   ],
+   "confidence": 0.4,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "supporting_samples": [
+    "SA-6544d761",
+    "SA-64f158f4",
+    "SA-64e42823",
+    "SA-66f672d6",
+    "SC-64fbe901",
+    "SD-66de90b3",
+    "SD-69367987",
+    "SD-64db4e87"
+   ],
+   "support_count": 8,
+   "contradicting_samples": [
+    "SC-63c8d157",
+    "SB-63c5675a",
+    "SB-682edce4",
+    "SB-66d7c509",
+    "SC-65bc60fe",
+    "SC-69f9a0ac",
+    "SD-670630e9",
+    "SE-64336391",
+    "SE-66ebc041",
+    "SE-6718abc7",
+    "SF-63a6a53f",
+    "SF-640dc105"
+   ],
+   "strata": [
+    "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+    "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+    "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+   ],
+   "confidence": 0.4,
+   "limitations": [
+    "sample-level association only (n=20)",
+    "no causality",
+    "feature = single-note aggregate"
+   ]
+  }
+ ],
+ "counterexamples": [
+  {
+   "pattern": "multi_segment CO-OCCURS speech",
+   "sample_id": "SC-63c8d157"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS speech",
+   "sample_id": "SA-64f158f4"
+  },
+  {
+   "pattern": "speech CO-OCCURS subtitle",
+   "sample_id": "SA-64f158f4"
+  },
+  {
+   "pattern": "speech CO-OCCURS subtitle",
+   "sample_id": "SC-63c8d157"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_associated",
+   "sample_id": "SA-6544d761"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_associated",
+   "sample_id": "SA-64e42823"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_associated",
+   "sample_id": "SA-66f672d6"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_associated",
+   "sample_id": "SB-63c5675a"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_associated",
+   "sample_id": "SB-682edce4"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_associated",
+   "sample_id": "SB-66d7c509"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS subtitle",
+   "sample_id": "SA-6544d761"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS subtitle",
+   "sample_id": "SA-64e42823"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS subtitle",
+   "sample_id": "SA-66f672d6"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS subtitle",
+   "sample_id": "SB-63c5675a"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS subtitle",
+   "sample_id": "SB-682edce4"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS subtitle",
+   "sample_id": "SB-66d7c509"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS speech",
+   "sample_id": "SC-63c8d157"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS speech",
+   "sample_id": "SA-6544d761"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS speech",
+   "sample_id": "SA-64f158f4"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS speech",
+   "sample_id": "SA-64e42823"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS speech",
+   "sample_id": "SA-66f672d6"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS speech",
+   "sample_id": "SB-63c5675a"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS speech",
+   "sample_id": "SB-682edce4"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS speech",
+   "sample_id": "SB-66d7c509"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "sample_id": "SA-6544d761"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "sample_id": "SA-64e42823"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "sample_id": "SA-66f672d6"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "sample_id": "SB-63c5675a"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "sample_id": "SB-682edce4"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "sample_id": "SB-66d7c509"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "sample_id": "SC-64fbe901"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "sample_id": "SC-65bc60fe"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "sample_id": "SF-63a6a53f"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+   "sample_id": "SF-640dc105"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS paid_weak_outcome",
+   "sample_id": "SC-64fbe901"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS paid_weak_outcome",
+   "sample_id": "SC-65bc60fe"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS paid_weak_outcome",
+   "sample_id": "SF-63a6a53f"
+  },
+  {
+   "pattern": "paid_associated CO-OCCURS paid_weak_outcome",
+   "sample_id": "SF-640dc105"
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "sample_id": "SA-6544d761"
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "sample_id": "SA-64e42823"
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "sample_id": "SA-66f672d6"
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "sample_id": "SB-63c5675a"
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "sample_id": "SB-682edce4"
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "sample_id": "SB-66d7c509"
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "sample_id": "SC-64fbe901"
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "sample_id": "SC-65bc60fe"
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "sample_id": "SF-63a6a53f"
+  },
+  {
+   "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+   "sample_id": "SF-640dc105"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SA-6544d761"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SA-64e42823"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SA-66f672d6"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SB-63c5675a"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SB-682edce4"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SB-66d7c509"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SC-64fbe901"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SC-69f9a0ac"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SC-63c8d157"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SF-63a6a53f"
+  },
+  {
+   "pattern": "multi_segment CO-OCCURS paid_high_input",
+   "sample_id": "SF-640dc105"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SA-64f158f4"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SB-63c5675a"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SB-682edce4"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SB-66d7c509"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SC-65bc60fe"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SC-69f9a0ac"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SD-670630e9"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SE-64336391"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SE-66ebc041"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SE-6718abc7"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SF-63a6a53f"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS multi_segment",
+   "sample_id": "SF-640dc105"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SC-63c8d157"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SB-63c5675a"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SB-682edce4"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SB-66d7c509"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SC-65bc60fe"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SC-69f9a0ac"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SD-670630e9"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SE-64336391"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SE-66ebc041"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SE-6718abc7"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SF-63a6a53f"
+  },
+  {
+   "pattern": "high_creator_view CO-OCCURS speech",
+   "sample_id": "SF-640dc105"
+  }
+ ],
+ "coverage": {
+  "notes": 20,
+  "segments_present": 20,
+  "asr_present": 19,
+  "ocr_present": 20,
+  "visual_present": 20,
+  "cognition_present": 20,
+  "scene_unknown_dominant_notes": []
+ },
+ "limitations": [
+  "n=20 single account; sample-level association only; no causality/winner/score; scene = CLIP 5-class; ASR = faster-whisper-large-v3; OCR = RapidOCR; business cognition = rule-based evidence with UNKNOWN discipline"
+ ]
+}
