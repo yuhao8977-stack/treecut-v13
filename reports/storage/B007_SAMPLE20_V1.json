@@ -1,0 +1,1009 @@
+{
+  "rule_version": "SAMPLE_SELECTION_RULE_V1",
+  "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+  "generated_at": "2026-09-01 12:05:16",
+  "fee_unit": "YUAN (MONEY_UNIT_VALIDATED=TRUE, B007_V05_FEE_UNIT_CHECK_V1.json)",
+  "video_eligible_universe": 2843,
+  "strata": {
+    "A": {
+      "target": 4,
+      "actual": 4,
+      "eligible": 74,
+      "rule": "video + NO_PAID_ASSOCIATION_OBSERVED + creator present + creator_view percentile>=P75",
+      "threshold": "view>=P75(597.0)",
+      "selected": [
+        "6544d761000000001f038f12",
+        "64f158f4000000001d014203",
+        "64e42823000000000800c82d",
+        "66f672d6000000001902efbb"
+      ]
+    },
+    "B": {
+      "target": 3,
+      "actual": 3,
+      "eligible": 182,
+      "rule": "video + NO_PAID_ASSOCIATION_OBSERVED + creator view P25<=pct<P50",
+      "threshold": "P25=78.0 <= view < P50=370.0",
+      "selected": [
+        "63c5675a000000001c034435",
+        "682edce4000000001101e878",
+        "66d7c509000000000c018964"
+      ]
+    },
+    "C": {
+      "target": 4,
+      "actual": 4,
+      "eligible": {
+        "gate_pool": 514,
+        "leads>0": 20,
+        "msg>0": 44,
+        "clicks>0": 514
+      },
+      "rule": "volume gate(fee>=P25&imp>=P25) + lead/message/click 效率独立",
+      "selected": [
+        "64fbe901000000001d01424c",
+        "65bc60fe0000000008022950",
+        "69f9a0ac000000003701d937",
+        "63c8d157000000001f02357d"
+      ]
+    },
+    "D": {
+      "target": 4,
+      "actual": 4,
+      "eligible": 102,
+      "rule": "video + fee>=P75 & imp>=P75 + platform leads=0 & msg=0 (WEAK_OUTCOME_OBSERVED)",
+      "threshold": "fee>=P75(1.63) imp>=P75(51)",
+      "selected": [
+        "66de90b3000000000c01a935",
+        "670630e9000000001a023e3f",
+        "69367987000000001b027d8f",
+        "64db4e87000000001701a578"
+      ]
+    },
+    "E": {
+      "target": 3,
+      "actual": 3,
+      "eligible": 321,
+      "rule": "creator high + paid weak OR creator mid + paid strong",
+      "window": "WINDOW_ALIGNMENT=UNALIGNED NO_CAUSAL_COMPARISON",
+      "selected": [
+        "643363910000000013036c3a",
+        "66ebc041000000000c01b331",
+        "6718abc70000000021009845"
+      ]
+    },
+    "F": {
+      "target": 2,
+      "actual": 2,
+      "eligible": 467,
+      "rule": "video + PAID_ASSOCIATED_NO_METRIC_RECORD (数据/关联控制)",
+      "selected": [
+        "63a6a53f000000001f00d5e2",
+        "640dc1050000000014025280"
+      ]
+    }
+  },
+  "diversity": {
+    "normalized_title_duplicates": 0,
+    "publish_month_distribution": {
+      "2023-11": 1,
+      "2023-09": 2,
+      "2023-08": 2,
+      "2024-09": 4,
+      "2023-01": 2,
+      "2025-06": 1,
+      "2024-02": 1,
+      "2026-05": 1,
+      "2024-10": 2,
+      "2025-12": 1,
+      "2023-04": 1,
+      "2022-12": 1,
+      "2023-03": 1
+    },
+    "duration_range_seconds": 149.0,
+    "distinct_units_in_paid_samples": 20,
+    "note": "METADATA_DIVERSITY only; no visual dedup claim (V0.6/V0.7)"
+  },
+  "samples": [
+    {
+      "sample_id": "SA-6544d761",
+      "note_id": "6544d761000000001f038f12",
+      "title": "请大数据把我推给🔥小户型进门就是厨房",
+      "publish_time": "2023-11-03 20:19",
+      "duration": 120.0,
+      "primary_stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 347451.0,
+        "like": 2700.0,
+        "collect": 2102.0,
+        "comment": 93.0,
+        "share": 442.0,
+        "view_percentile": 100.0
+      },
+      "paid": {
+        "status": "NO_PAID_ASSOCIATION_OBSERVED",
+        "associated_units": 0,
+        "associated_campaigns": 0,
+        "observed_fee": null,
+        "impressions": null,
+        "clicks": null,
+        "msg": null,
+        "leads": null,
+        "months": 0,
+        "fee_percentile": null,
+        "imp_percentile": null,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": null,
+        "ctr_derived": null
+      },
+      "reason": "video + 未观察到投放关联；creator_view 分位 100.0%（>=P75 高分组）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SA-64f158f4",
+      "note_id": "64f158f4000000001d014203",
+      "title": "小户型进门就是厨房❗岛台这样做好看又好用",
+      "publish_time": "2023-09-01 17:00",
+      "duration": 23.0,
+      "primary_stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 40126.0,
+        "like": 241.0,
+        "collect": 324.0,
+        "comment": 1.0,
+        "share": 95.0,
+        "view_percentile": 99.6
+      },
+      "paid": {
+        "status": "NO_PAID_ASSOCIATION_OBSERVED",
+        "associated_units": 0,
+        "associated_campaigns": 0,
+        "observed_fee": null,
+        "impressions": null,
+        "clicks": null,
+        "msg": null,
+        "leads": null,
+        "months": 0,
+        "fee_percentile": null,
+        "imp_percentile": null,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": null,
+        "ctr_derived": null
+      },
+      "reason": "video + 未观察到投放关联；creator_view 分位 99.6%（>=P75 高分组）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SA-64e42823",
+      "note_id": "64e42823000000000800c82d",
+      "title": "我发现🆘2023年岛台灯光万能🔥6个逻辑",
+      "publish_time": "2023-08-22 11:14",
+      "duration": 158.0,
+      "primary_stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 35187.0,
+        "like": 541.0,
+        "collect": 809.0,
+        "comment": 25.0,
+        "share": 313.0,
+        "view_percentile": 99.6
+      },
+      "paid": {
+        "status": "NO_PAID_ASSOCIATION_OBSERVED",
+        "associated_units": 0,
+        "associated_campaigns": 0,
+        "observed_fee": null,
+        "impressions": null,
+        "clicks": null,
+        "msg": null,
+        "leads": null,
+        "months": 0,
+        "fee_percentile": null,
+        "imp_percentile": null,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": null,
+        "ctr_derived": null
+      },
+      "reason": "video + 未观察到投放关联；creator_view 分位 99.6%（>=P75 高分组）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SA-66f672d6",
+      "note_id": "66f672d6000000001902efbb",
+      "title": "造孽啊🤯岛台内嵌烤箱翻倒到地上!?️",
+      "publish_time": "2024-09-29 21:00",
+      "duration": 49.0,
+      "primary_stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 15404.0,
+        "like": 285.0,
+        "collect": 339.0,
+        "comment": 28.0,
+        "share": 166.0,
+        "view_percentile": 99.2
+      },
+      "paid": {
+        "status": "NO_PAID_ASSOCIATION_OBSERVED",
+        "associated_units": 0,
+        "associated_campaigns": 0,
+        "observed_fee": null,
+        "impressions": null,
+        "clicks": null,
+        "msg": null,
+        "leads": null,
+        "months": 0,
+        "fee_percentile": null,
+        "imp_percentile": null,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": null,
+        "ctr_derived": null
+      },
+      "reason": "video + 未观察到投放关联；creator_view 分位 99.2%（>=P75 高分组）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SB-63c5675a",
+      "note_id": "63c5675a000000001c034435",
+      "title": "餐厅布局案例:错位岛台让餐厅提高档次❗",
+      "publish_time": "2023-01-16 23:03",
+      "duration": 9.0,
+      "primary_stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 367.0,
+        "like": 2.0,
+        "collect": 1.0,
+        "comment": 0.0,
+        "share": 0.0,
+        "view_percentile": 49.9
+      },
+      "paid": {
+        "status": "NO_PAID_ASSOCIATION_OBSERVED",
+        "associated_units": 0,
+        "associated_campaigns": 0,
+        "observed_fee": null,
+        "impressions": null,
+        "clicks": null,
+        "msg": null,
+        "leads": null,
+        "months": 0,
+        "fee_percentile": null,
+        "imp_percentile": null,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": null,
+        "ctr_derived": null
+      },
+      "reason": "video + 未观察到投放关联；creator_view 分位 49.9%（P25-P50 中低组，对照组）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SB-682edce4",
+      "note_id": "682edce4000000001101e878",
+      "title": "岛台水电如何预留布局?才合理不翻车?",
+      "publish_time": "2025-06-01 17:00",
+      "duration": 38.0,
+      "primary_stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 367.0,
+        "like": 0.0,
+        "collect": 0.0,
+        "comment": 1.0,
+        "share": 0.0,
+        "view_percentile": 49.9
+      },
+      "paid": {
+        "status": "NO_PAID_ASSOCIATION_OBSERVED",
+        "associated_units": 0,
+        "associated_campaigns": 0,
+        "observed_fee": null,
+        "impressions": null,
+        "clicks": null,
+        "msg": null,
+        "leads": null,
+        "months": 0,
+        "fee_percentile": null,
+        "imp_percentile": null,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": null,
+        "ctr_derived": null
+      },
+      "reason": "video + 未观察到投放关联；creator_view 分位 49.9%（P25-P50 中低组，对照组）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SB-66d7c509",
+      "note_id": "66d7c509000000000c018964",
+      "title": "岛台水电布局不想返工❌一定要看👀",
+      "publish_time": "2024-09-05 17:00",
+      "duration": 51.0,
+      "primary_stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 366.0,
+        "like": 1.0,
+        "collect": 1.0,
+        "comment": 1.0,
+        "share": 0.0,
+        "view_percentile": 49.8
+      },
+      "paid": {
+        "status": "NO_PAID_ASSOCIATION_OBSERVED",
+        "associated_units": 0,
+        "associated_campaigns": 0,
+        "observed_fee": null,
+        "impressions": null,
+        "clicks": null,
+        "msg": null,
+        "leads": null,
+        "months": 0,
+        "fee_percentile": null,
+        "imp_percentile": null,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": null,
+        "ctr_derived": null
+      },
+      "reason": "video + 未观察到投放关联；creator_view 分位 49.8%（P25-P50 中低组，对照组）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SC-64fbe901",
+      "note_id": "64fbe901000000001d01424c",
+      "title": "8m2小厨房✅,被问爆的岛台安装&设计来啦!",
+      "publish_time": "2023-09-09 11:39",
+      "duration": 23.0,
+      "primary_stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 827.0,
+        "like": 2.0,
+        "collect": 2.0,
+        "comment": 2.0,
+        "share": 1.0,
+        "view_percentile": 88.4
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 0.08,
+        "impressions": 22.0,
+        "clicks": 2.0,
+        "msg": 1.0,
+        "leads": 1.0,
+        "months": 5,
+        "fee_percentile": 33.8,
+        "imp_percentile": 56.3,
+        "lead_cost_derived": 0.08,
+        "msg_cost_derived": 0.08,
+        "cpc_derived": 0.04,
+        "ctr_derived": 0.0909
+      },
+      "reason": "有效投放量(fee>0&imp>0, >=P25)内；lead_cost 效率维度：lead_cost=0.08 msg_cost=0.08 cpc=0.04 ctr=0.0909；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SC-65bc60fe",
+      "note_id": "65bc60fe0000000008022950",
+      "title": "奶呼呼的岛台太哇塞了🔥颜值扛把子!!",
+      "publish_time": "2024-02-14 17:00",
+      "duration": 37.0,
+      "primary_stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 407.0,
+        "like": 0.0,
+        "collect": 0.0,
+        "comment": 1.0,
+        "share": 0.0,
+        "view_percentile": 52.5
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 2.92,
+        "impressions": 15.0,
+        "clicks": 1.0,
+        "msg": 1.0,
+        "leads": 1.0,
+        "months": 4,
+        "fee_percentile": 81.5,
+        "imp_percentile": 43.9,
+        "lead_cost_derived": 2.92,
+        "msg_cost_derived": 2.92,
+        "cpc_derived": 2.92,
+        "ctr_derived": 0.0667
+      },
+      "reason": "有效投放量(fee>0&imp>0, >=P25)内；lead_cost 效率维度：lead_cost=2.92 msg_cost=2.92 cpc=2.92 ctr=0.0667；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SC-69f9a0ac",
+      "note_id": "69f9a0ac000000003701d937",
+      "title": "通透又显大的开放式厨房标配岛台🤔",
+      "publish_time": "2026-05-06 12:01",
+      "duration": 21.0,
+      "primary_stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 125.0,
+        "like": 2.0,
+        "collect": 1.0,
+        "comment": 0.0,
+        "share": 0.0,
+        "view_percentile": 35.9
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 1.18,
+        "impressions": 19.0,
+        "clicks": 2.0,
+        "msg": 1.0,
+        "leads": 0.0,
+        "months": 4,
+        "fee_percentile": 70.2,
+        "imp_percentile": 51.7,
+        "lead_cost_derived": null,
+        "msg_cost_derived": 1.18,
+        "cpc_derived": 0.59,
+        "ctr_derived": 0.1053
+      },
+      "reason": "有效投放量(fee>0&imp>0, >=P25)内；message_cost 效率维度：lead_cost=None msg_cost=1.18 cpc=0.59 ctr=0.1053；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SC-63c8d157",
+      "note_id": "63c8d157000000001f02357d",
+      "title": "岛台不做收纳储物真的很可惜❗再配个水槽",
+      "publish_time": "2023-01-19 13:12",
+      "duration": 20.0,
+      "primary_stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 716.0,
+        "like": 2.0,
+        "collect": 5.0,
+        "comment": 0.0,
+        "share": 3.0,
+        "view_percentile": 84.0
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 0.04,
+        "impressions": 20.0,
+        "clicks": 4.0,
+        "msg": 0.0,
+        "leads": 0.0,
+        "months": 5,
+        "fee_percentile": 29.1,
+        "imp_percentile": 53.8,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": 0.01,
+        "ctr_derived": 0.2
+      },
+      "reason": "有效投放量(fee>0&imp>0, >=P25)内；click_efficiency 效率维度：lead_cost=None msg_cost=None cpc=0.01 ctr=0.2；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SD-66de90b3",
+      "note_id": "66de90b3000000000c01a935",
+      "title": "岛台餐椅咋配😭",
+      "publish_time": "2024-09-09 19:01",
+      "duration": 44.0,
+      "primary_stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 926.0,
+        "like": 1.0,
+        "collect": 2.0,
+        "comment": 1.0,
+        "share": 0.0,
+        "view_percentile": 90.7
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 57.61,
+        "impressions": 1135.0,
+        "clicks": 155.0,
+        "msg": 0.0,
+        "leads": 0.0,
+        "months": 5,
+        "fee_percentile": 99.5,
+        "imp_percentile": 99.1,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": 0.37,
+        "ctr_derived": 0.1366
+      },
+      "reason": "fee 分位 99.5% / imp 分位 99.1%（高投入）；平台 leads=0 & msg=0（WEAK_OUTCOME_OBSERVED）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SD-670630e9",
+      "note_id": "670630e9000000001a023e3f",
+      "title": "有了这款餐椅🪑终于实现梦想的岛台氛围",
+      "publish_time": "2024-10-11 17:00",
+      "duration": 34.0,
+      "primary_stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 277.0,
+        "like": 1.0,
+        "collect": 0.0,
+        "comment": 2.0,
+        "share": 0.0,
+        "view_percentile": 45.1
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 45.76,
+        "impressions": 900.0,
+        "clicks": 95.0,
+        "msg": 0.0,
+        "leads": 0.0,
+        "months": 5,
+        "fee_percentile": 99.2,
+        "imp_percentile": 98.9,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": 0.48,
+        "ctr_derived": 0.1056
+      },
+      "reason": "fee 分位 99.2% / imp 分位 98.9%（高投入）；平台 leads=0 & msg=0（WEAK_OUTCOME_OBSERVED）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SD-69367987",
+      "note_id": "69367987000000001b027d8f",
+      "title": "还愁电器没地方放?这款岛台真的很实用",
+      "publish_time": "2025-12-09 18:01",
+      "duration": 78.0,
+      "primary_stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 1234.0,
+        "like": 4.0,
+        "collect": 5.0,
+        "comment": 0.0,
+        "share": 1.0,
+        "view_percentile": 94.5
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 38.9,
+        "impressions": 826.0,
+        "clicks": 127.0,
+        "msg": 0.0,
+        "leads": 0.0,
+        "months": 5,
+        "fee_percentile": 98.9,
+        "imp_percentile": 98.5,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": 0.31,
+        "ctr_derived": 0.1538
+      },
+      "reason": "fee 分位 98.9% / imp 分位 98.5%（高投入）；平台 leads=0 & msg=0（WEAK_OUTCOME_OBSERVED）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SD-64db4e87",
+      "note_id": "64db4e87000000001701a578",
+      "title": "救命🆘岛台工厂大牌平替被我找到了❗💡",
+      "publish_time": "2023-08-15 18:08",
+      "duration": 74.0,
+      "primary_stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 5850.0,
+        "like": 30.0,
+        "collect": 46.0,
+        "comment": 85.0,
+        "share": 12.0,
+        "view_percentile": 98.6
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 26.32,
+        "impressions": 165.0,
+        "clicks": 18.0,
+        "msg": 0.0,
+        "leads": 0.0,
+        "months": 5,
+        "fee_percentile": 98.1,
+        "imp_percentile": 89.1,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": 1.46,
+        "ctr_derived": 0.1091
+      },
+      "reason": "fee 分位 98.1% / imp 分位 89.1%（高投入）；平台 leads=0 & msg=0（WEAK_OUTCOME_OBSERVED）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SE-64336391",
+      "note_id": "643363910000000013036c3a",
+      "title": "高能预警🔥智能未来3.0降临餐桌岛台",
+      "publish_time": "2023-04-10 10:58",
+      "duration": 13.0,
+      "primary_stratum": "E_CROSS_SOURCE_CONTRAST",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 318.0,
+        "like": 4.0,
+        "collect": 3.0,
+        "comment": 0.0,
+        "share": 1.0,
+        "view_percentile": 47.6
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 2.34,
+        "impressions": 6.0,
+        "clicks": 2.0,
+        "msg": 0.0,
+        "leads": 0.0,
+        "months": 2,
+        "fee_percentile": 78.8,
+        "imp_percentile": 22.3,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": 1.17,
+        "ctr_derived": 0.3333
+      },
+      "reason": "跨源反差：CREATOR_MID_PAID_STRONG；WINDOW_ALIGNMENT=UNALIGNED，仅并排事实不比较因果；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SE-66ebc041",
+      "note_id": "66ebc041000000000c01b331",
+      "title": "对天发誓 这个沙发后岛台真的....",
+      "publish_time": "2024-09-20 21:00",
+      "duration": 37.0,
+      "primary_stratum": "E_CROSS_SOURCE_CONTRAST",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 338.0,
+        "like": 0.0,
+        "collect": 1.0,
+        "comment": 0.0,
+        "share": 1.0,
+        "view_percentile": 48.5
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 4.06,
+        "impressions": 89.0,
+        "clicks": 6.0,
+        "msg": 0.0,
+        "leads": 0.0,
+        "months": 5,
+        "fee_percentile": 84.5,
+        "imp_percentile": 82.4,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": 0.68,
+        "ctr_derived": 0.0674
+      },
+      "reason": "跨源反差：CREATOR_MID_PAID_STRONG；WINDOW_ALIGNMENT=UNALIGNED，仅并排事实不比较因果；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SE-6718abc7",
+      "note_id": "6718abc70000000021009845",
+      "title": "我怎么没早点看到岛台收纳🔥",
+      "publish_time": "2024-10-24 19:01",
+      "duration": 65.0,
+      "primary_stratum": "E_CROSS_SOURCE_CONTRAST",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 109.0,
+        "like": 0.0,
+        "collect": 1.0,
+        "comment": 2.0,
+        "share": 1.0,
+        "view_percentile": 33.5
+      },
+      "paid": {
+        "status": "NOTE_PAID_METRIC_PRESENT",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": 2.63,
+        "impressions": 101.0,
+        "clicks": 8.0,
+        "msg": 0.0,
+        "leads": 0.0,
+        "months": 5,
+        "fee_percentile": 80.5,
+        "imp_percentile": 84.0,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": 0.33,
+        "ctr_derived": 0.0792
+      },
+      "reason": "跨源反差：CREATOR_MID_PAID_STRONG；WINDOW_ALIGNMENT=UNALIGNED，仅并排事实不比较因果；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SF-63a6a53f",
+      "note_id": "63a6a53f000000001f00d5e2",
+      "title": "传统餐桌换成岛台🎃简直不要太美!",
+      "publish_time": "2022-12-24 15:07",
+      "duration": 27.0,
+      "primary_stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_MISSING",
+        "view": null,
+        "like": null,
+        "collect": null,
+        "comment": null,
+        "share": null,
+        "view_percentile": null
+      },
+      "paid": {
+        "status": "PAID_ASSOCIATED_NO_METRIC_RECORD",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": null,
+        "impressions": null,
+        "clicks": null,
+        "msg": null,
+        "leads": null,
+        "months": 0,
+        "fee_percentile": null,
+        "imp_percentile": null,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": null,
+        "ctr_derived": null
+      },
+      "reason": "video + PAID_ASSOCIATED_NO_METRIC_RECORD（投放关联但 Apr-Aug 无 note 记录 → 数据/关联控制样本）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    },
+    {
+      "sample_id": "SF-640dc105",
+      "note_id": "640dc1050000000014025280",
+      "title": "不做岛台不知道的“坑”,太真实啦❗",
+      "publish_time": "2023-03-12 20:09",
+      "duration": 33.0,
+      "primary_stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+      "secondary_eligible_strata": [],
+      "creator": {
+        "status": "CREATOR_PERFORMANCE_PRESENT",
+        "view": 355.0,
+        "like": 3.0,
+        "collect": 3.0,
+        "comment": 0.0,
+        "share": 0.0,
+        "view_percentile": 49.5
+      },
+      "paid": {
+        "status": "PAID_ASSOCIATED_NO_METRIC_RECORD",
+        "associated_units": 2,
+        "associated_campaigns": 2,
+        "observed_fee": null,
+        "impressions": null,
+        "clicks": null,
+        "msg": null,
+        "leads": null,
+        "months": 0,
+        "fee_percentile": null,
+        "imp_percentile": null,
+        "lead_cost_derived": null,
+        "msg_cost_derived": null,
+        "cpc_derived": null,
+        "ctr_derived": null
+      },
+      "reason": "video + PAID_ASSOCIATED_NO_METRIC_RECORD（投放关联但 Apr-Aug 无 note 记录 → 数据/关联控制样本）；未与其他已选样本形成明显 metadata 重复",
+      "limitations": [
+        "Creator/Paid window UNALIGNED; 不解释为自然表现或因果关系",
+        "NO_PAID_ASSOCIATION_OBSERVED 仅=当前 Spotlight 事实未观察到（非 NEVER_PAID）"
+      ],
+      "provenance": {
+        "fact_version": "B007_V04_DUAL_SOURCE_JOIN_PASS",
+        "rule_version": "SAMPLE_SELECTION_RULE_V1",
+        "source": "b007_note_dual_source_fact_v1 (V0.4)"
+      }
+    }
+  ]
+}

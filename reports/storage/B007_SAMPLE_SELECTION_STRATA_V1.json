@@ -1,0 +1,103 @@
+{
+  "rule_version": "SAMPLE_SELECTION_RULE_V1",
+  "strata": {
+    "A": {
+      "target": 4,
+      "actual": 4,
+      "eligible": 74,
+      "rule": "video + NO_PAID_ASSOCIATION_OBSERVED + creator present + creator_view percentile>=P75",
+      "threshold": "view>=P75(597.0)",
+      "selected": [
+        "6544d761000000001f038f12",
+        "64f158f4000000001d014203",
+        "64e42823000000000800c82d",
+        "66f672d6000000001902efbb"
+      ]
+    },
+    "B": {
+      "target": 3,
+      "actual": 3,
+      "eligible": 182,
+      "rule": "video + NO_PAID_ASSOCIATION_OBSERVED + creator view P25<=pct<P50",
+      "threshold": "P25=78.0 <= view < P50=370.0",
+      "selected": [
+        "63c5675a000000001c034435",
+        "682edce4000000001101e878",
+        "66d7c509000000000c018964"
+      ]
+    },
+    "C": {
+      "target": 4,
+      "actual": 4,
+      "eligible": {
+        "gate_pool": 514,
+        "leads>0": 20,
+        "msg>0": 44,
+        "clicks>0": 514
+      },
+      "rule": "volume gate(fee>=P25&imp>=P25) + lead/message/click 效率独立",
+      "selected": [
+        "64fbe901000000001d01424c",
+        "65bc60fe0000000008022950",
+        "69f9a0ac000000003701d937",
+        "63c8d157000000001f02357d"
+      ]
+    },
+    "D": {
+      "target": 4,
+      "actual": 4,
+      "eligible": 102,
+      "rule": "video + fee>=P75 & imp>=P75 + platform leads=0 & msg=0 (WEAK_OUTCOME_OBSERVED)",
+      "threshold": "fee>=P75(1.63) imp>=P75(51)",
+      "selected": [
+        "66de90b3000000000c01a935",
+        "670630e9000000001a023e3f",
+        "69367987000000001b027d8f",
+        "64db4e87000000001701a578"
+      ]
+    },
+    "E": {
+      "target": 3,
+      "actual": 3,
+      "eligible": 321,
+      "rule": "creator high + paid weak OR creator mid + paid strong",
+      "window": "WINDOW_ALIGNMENT=UNALIGNED NO_CAUSAL_COMPARISON",
+      "selected": [
+        "643363910000000013036c3a",
+        "66ebc041000000000c01b331",
+        "6718abc70000000021009845"
+      ]
+    },
+    "F": {
+      "target": 2,
+      "actual": 2,
+      "eligible": 467,
+      "rule": "video + PAID_ASSOCIATED_NO_METRIC_RECORD (数据/关联控制)",
+      "selected": [
+        "63a6a53f000000001f00d5e2",
+        "640dc1050000000014025280"
+      ]
+    }
+  },
+  "diversity": {
+    "normalized_title_duplicates": 0,
+    "publish_month_distribution": {
+      "2023-11": 1,
+      "2023-09": 2,
+      "2023-08": 2,
+      "2024-09": 4,
+      "2023-01": 2,
+      "2025-06": 1,
+      "2024-02": 1,
+      "2026-05": 1,
+      "2024-10": 2,
+      "2025-12": 1,
+      "2023-04": 1,
+      "2022-12": 1,
+      "2023-03": 1
+    },
+    "duration_range_seconds": 149.0,
+    "distinct_units_in_paid_samples": 20,
+    "note": "METADATA_DIVERSITY only; no visual dedup claim (V0.6/V0.7)"
+  }
+}

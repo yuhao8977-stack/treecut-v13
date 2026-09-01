@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-09-01 12:03:41",
+  "SOURCE_FEE_UNIT": "YUAN (平台原生元；dataValueJson fee 为 '82.24' 形式 2 位小数字符串)",
+  "NORMALIZED_FEE_UNIT": "YUAN (float 直接解析，无缩放)",
+  "CONVERSION_RULE": "NONE (无 fen/cent 转换；raw '82.24' -> 82.24 yuan)",
+  "raw_sample_evidence": [
+    {
+      "note": "644f7e59000000001300a680",
+      "fee_raw": "0.00",
+      "impression_raw": "1"
+    },
+    {
+      "note": "649953950000000013034155",
+      "fee_raw": "0.00",
+      "impression_raw": "1"
+    },
+    {
+      "note": "65b8abf1000000002c016b7a",
+      "fee_raw": "0.00",
+      "impression_raw": "1"
+    }
+  ],
+  "platform_display_evidence": [
+    {
+      "source": "spotlight 页面头部（browser 观察）",
+      "text": "账户余额(元): 627.72",
+      "unit_hint": "元"
+    },
+    {
+      "source": "spotlight 页面头部（browser 观察）",
+      "text": "日消耗(元): 89.42 / 89.93",
+      "unit_hint": "元"
+    },
+    {
+      "source": "数据报表核心数据",
+      "text": "消费 89.94 元 / 展现量 3,270 / 点击 315",
+      "unit_hint": "元"
+    }
+  ],
+  "aggregate_reconciliation": {
+    "totalData_fee_vs_page_sum": [
+      {
+        "file": "leona_rtb_common_data_report.json",
+        "totalData_fee": "82.24",
+        "page_dataList_fee_sum": 4.52,
+        "note": "totalData 为窗口聚合（跨页），dataList 为当前页 → 数量级应一致（yuan）"
+      },
+      {
+        "file": "light_ad_report_data_overall.json",
+        "totalData_fee": "82.24",
+        "page_dataList_fee_sum": 0.0,
+        "note": "totalData 为窗口聚合（跨页），dataList 为当前页 → 数量级应一致（yuan）"
+      }
+    ],
+    "account_overall_fee": null,
+    "note_report_totalData_fee": "82.24",
+    "db_obs_total_fee_apr_aug": 3448.77,
+    "db_max_single_note_monthly_fee": 287.54,
+    "business_reasoning": "若 fee 单位为分，Apr-Aug 观察总额 3448.77 分=34.49 元，对投流账号 5 个月明显不合理；且平台页面显示'元'口径（余额 627.72 元/日消耗 89.42 元），与 raw 数字同量级"
+  },
+  "MONEY_UNIT_VALIDATED": true,
+  "note": "费用单位确认为元；Paid cost/efficiency 可进入样本选择"
+}
