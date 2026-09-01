@@ -1,10 +1,10 @@
 {
-  "overall": "2 / 20",
+  "overall": "20 / 20",
   "current": {
-    "sample_id": "SD-69367987",
-    "note_id": "69367987000000001b027d8f",
-    "title": "\u8fd8\u6101\u7535\u5668\u6ca1\u5730\u65b9\u653e?\u8fd9\u6b3e\u5c9b\u53f0\u771f\u7684\u5f88\u5b9e\u7528",
-    "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "sample_id": "SF-63a6a53f",
+    "note_id": "63a6a53f000000001f00d5e2",
+    "title": "\u4f20\u7edf\u9910\u684c\u6362\u6210\u5c9b\u53f0\ud83c\udf83\u7b80\u76f4\u4e0d\u8981\u592a\u7f8e!",
+    "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
     "phase": "\u5df2\u4fdd\u5b58",
     "status": "RECOVERED_EXACT"
   },

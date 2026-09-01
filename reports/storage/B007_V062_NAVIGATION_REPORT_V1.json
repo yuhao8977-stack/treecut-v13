@@ -1,0 +1,125 @@
+{
+  "generated_at": "2026-09-01 20:22:38",
+  "scope": "19 remaining (Pilot1 excluded, ALREADY_RECOVERED_VALID)",
+  "auto_creator_navigation_success": 0,
+  "human_assisted_navigation": 19,
+  "human_assisted_attempted_total": 19,
+  "navigation_failed": 0,
+  "detail": [
+    {
+      "sample_id": "SA-6544d761",
+      "note_id": "6544d761000000001f038f12",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SA-64f158f4",
+      "note_id": "64f158f4000000001d014203",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SA-64e42823",
+      "note_id": "64e42823000000000800c82d",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SA-66f672d6",
+      "note_id": "66f672d6000000001902efbb",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SB-63c5675a",
+      "note_id": "63c5675a000000001c034435",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SB-682edce4",
+      "note_id": "682edce4000000001101e878",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SB-66d7c509",
+      "note_id": "66d7c509000000000c018964",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SC-64fbe901",
+      "note_id": "64fbe901000000001d01424c",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SC-65bc60fe",
+      "note_id": "65bc60fe0000000008022950",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SC-63c8d157",
+      "note_id": "63c8d157000000001f02357d",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SD-66de90b3",
+      "note_id": "66de90b3000000000c01a935",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SD-670630e9",
+      "note_id": "670630e9000000001a023e3f",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SD-69367987",
+      "note_id": "69367987000000001b027d8f",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SD-64db4e87",
+      "note_id": "64db4e87000000001701a578",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SE-64336391",
+      "note_id": "643363910000000013036c3a",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SE-66ebc041",
+      "note_id": "66ebc041000000000c01b331",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SE-6718abc7",
+      "note_id": "6718abc70000000021009845",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SF-63a6a53f",
+      "note_id": "63a6a53f000000001f00d5e2",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    },
+    {
+      "sample_id": "SF-640dc105",
+      "note_id": "640dc1050000000014025280",
+      "nav_mode": "HUMAN",
+      "status": "RECOVERED_EXACT"
+    }
+  ],
+  "conclusion": "决定后续是否仍需用户点击的量化依据"
+}
