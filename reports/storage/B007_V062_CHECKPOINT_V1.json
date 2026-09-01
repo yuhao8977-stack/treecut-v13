@@ -1,0 +1,63 @@
+{
+  "rule": "V0.6.2-SAMPLE20-BATCH-EXACT-MEDIA-RECOVERY",
+  "started_at": "2026-09-01 16:35:34",
+  "notes": {
+    "69f9a0ac000000003701d937": {
+      "sample_id": "SC-69f9a0ac",
+      "status": "ALREADY_RECOVERED_VALID",
+      "attempts": 0,
+      "nav_mode": "PILOT1",
+      "updated_at": "2026-09-01 18:55:26",
+      "sha256": "6df9062aa0fc95ab1f1386113695eada88dd6b682a7fd936208bd9efb8f0710e",
+      "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\69f9a0ac000000003701d937__6df9062aa0fc.mp4",
+      "sha256_match": true,
+      "ffprobe_ok": true,
+      "duration": 21.97
+    },
+    "69367987000000001b027d8f": {
+      "sample_id": "SD-69367987",
+      "status": "RECOVERED_EXACT",
+      "attempts": 1,
+      "nav_mode": "HUMAN",
+      "sha256": "4bf56cc279f542a542021cb116b104c1eef0f97af7c53286892e9408a695d9e6",
+      "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\69367987000000001b027d8f__4bf56cc279f5.mp4",
+      "tech": {
+        "file": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\staging\\B007\\69367987000000001b027d8f.0.part",
+        "size": 9498849,
+        "ffprobe_ok": true,
+        "duration": 78.019002,
+        "video_codec": "hevc",
+        "width": 720,
+        "height": 1280,
+        "fps": 30.0,
+        "audio_codec": "aac",
+        "full_decode_ok": true,
+        "sha256": "4bf56cc279f542a542021cb116b104c1eef0f97af7c53286892e9408a695d9e6",
+        "duration_crosscheck": {
+          "creator": 78.0,
+          "ffprobe": 78.02,
+          "tolerance": 11.7,
+          "pass": true
+        },
+        "duration_match_status": "MATCH_WITHIN_TOLERANCE",
+        "ok": true,
+        "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\69367987000000001b027d8f__4bf56cc279f5.mp4",
+        "blob_mode": "NEW_BLOB"
+      },
+      "updated_at": "2026-09-01 19:02:42"
+    }
+  },
+  "updated_at": "2026-09-01 19:02:42",
+  "pilot_validated": {
+    "sample_id": "SC-69f9a0ac",
+    "status": "ALREADY_RECOVERED_VALID",
+    "attempts": 0,
+    "nav_mode": "PILOT1",
+    "updated_at": "2026-09-01 18:55:26",
+    "sha256": "6df9062aa0fc95ab1f1386113695eada88dd6b682a7fd936208bd9efb8f0710e",
+    "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\69f9a0ac000000003701d937__6df9062aa0fc.mp4",
+    "sha256_match": true,
+    "ffprobe_ok": true,
+    "duration": 21.97
+  }
+}
