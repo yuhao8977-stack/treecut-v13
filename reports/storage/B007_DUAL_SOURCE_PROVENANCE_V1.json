@@ -1,0 +1,10 @@
+{
+  "join_key": "account(B007) + note_id",
+  "active_universe": "2851 (B007_ACTIVE_PUBLISHED_UNIVERSE, POSTED_CAPTURE source)",
+  "creator_source": "SRC-B007-POSTED-OBSERVED (page-owned posted responses)",
+  "paid_association_source": "spotlight_note_link_v1 (unit.noteIds)",
+  "paid_metric_source": "leona_rtb_common_data_report (spotlight note report, page-owned)",
+  "paid_window": "2026-04-01 ~ 2026-08-31 (closed months, fully exhausted)",
+  "normalization_version": "V0.4-PREFLIGHT-RATE-DERIVED",
+  "immutability": "creator 2840 snapshots NOT rewritten; source tables untouched"
+}

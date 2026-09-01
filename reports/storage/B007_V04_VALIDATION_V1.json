@@ -1,0 +1,15 @@
+{
+  "active_fact_rows": 2851,
+  "expected": 2851,
+  "duplicate_note_id": 0,
+  "creator_present": 2840,
+  "creator_missing": 11,
+  "paid_associated": 2322,
+  "paid_metric_unique": 1855,
+  "paid_assoc_no_metric": 467,
+  "no_paid_assoc_observed": 529,
+  "legacy_excluded": 459,
+  "consistency_1855_467_529_eq_2851": true,
+  "consistency_2851": true,
+  "consistency_2322": true
+}

@@ -1,0 +1,17 @@
+{
+  "no_exceptions_or_limitations": [
+    "creator window (current aggregate) vs paid window (Apr-Aug closed months): WINDOW_ALIGNMENT_STATUS=UNALIGNED — creator observed metrics 与 paid observed metrics 并排，不做直接对比结论",
+    "529 notes: NO_PAID_ASSOCIATION_OBSERVED（仅已观察到的 Spotlight 事实，不译 NEVER_PAID）",
+    "467 notes: PAID_ASSOCIATED_NO_METRIC_RECORD（关联但回填窗口无 note-level record，NO_RECORD 不填 0）"
+  ],
+  "hard_stops_respected": [
+    "no organic inference",
+    "no unit->note allocation",
+    "no NO_RECORD->0",
+    "no 7d/14d/30d overlap mix",
+    "no legacy mix",
+    "no company wechat attribution",
+    "no scoring/ranking",
+    "no ROAS/ROI"
+  ]
+}

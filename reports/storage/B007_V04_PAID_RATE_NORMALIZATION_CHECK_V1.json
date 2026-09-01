@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-09-01 11:44:56",
+  "snapshot_count": 5193,
+  "count_unchanged": true,
+  "before_totals": {
+    "fee": 3448.77,
+    "imp": 83405.0,
+    "clk": 9877.0,
+    "leads": 36.0,
+    "msg": 97.0
+  },
+  "after_totals": {
+    "fee": 3448.77,
+    "imp": 83405.0,
+    "clk": 9877.0,
+    "leads": 36.0,
+    "msg": 97.0
+  },
+  "base_totals_unchanged": true,
+  "rate_derivation": {
+    "ctr": "SUM(click)/SUM(impression)",
+    "cpc_acp": "SUM(fee)/SUM(click)",
+    "cpm": "SUM(fee)/SUM(impression)*1000",
+    "msg_leads_cost": "SUM(fee)/SUM(msgLeadsNum)",
+    "message_consult_cost": "SUM(fee)/SUM(messageConsult)",
+    "denominator_zero": "NULL (never Infinity/0)"
+  },
+  "derived_flag": "DERIVED_FROM_AGGREGATED_BASE_METRICS",
+  "source_preservation": "每日 source 率保留在 Raw/Daily（未删除）",
+  "updated_rows": 5193,
+  "rows_with_null_denominator_rate": 5165,
+  "no_recapture": true,
+  "pass": true
+}
