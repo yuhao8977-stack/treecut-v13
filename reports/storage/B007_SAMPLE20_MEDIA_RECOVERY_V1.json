@@ -1,0 +1,152 @@
+{
+  "target_samples": 20,
+  "identity_verified": 0,
+  "media_observed": 0,
+  "recovered_exact": 0,
+  "already_recovered": 0,
+  "quarantined": 0,
+  "failed_needs_human": 20,
+  "note_unavailable": 0,
+  "samples": [
+    {
+      "sample_id": "SA-6544d761",
+      "note_id": "6544d761000000001f038f12",
+      "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SA-64f158f4",
+      "note_id": "64f158f4000000001d014203",
+      "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SA-64e42823",
+      "note_id": "64e42823000000000800c82d",
+      "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SA-66f672d6",
+      "note_id": "66f672d6000000001902efbb",
+      "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SB-63c5675a",
+      "note_id": "63c5675a000000001c034435",
+      "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SB-682edce4",
+      "note_id": "682edce4000000001101e878",
+      "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SB-66d7c509",
+      "note_id": "66d7c509000000000c018964",
+      "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SC-64fbe901",
+      "note_id": "64fbe901000000001d01424c",
+      "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SC-65bc60fe",
+      "note_id": "65bc60fe0000000008022950",
+      "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SC-69f9a0ac",
+      "note_id": "69f9a0ac000000003701d937",
+      "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SC-63c8d157",
+      "note_id": "63c8d157000000001f02357d",
+      "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SD-66de90b3",
+      "note_id": "66de90b3000000000c01a935",
+      "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SD-670630e9",
+      "note_id": "670630e9000000001a023e3f",
+      "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SD-69367987",
+      "note_id": "69367987000000001b027d8f",
+      "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SD-64db4e87",
+      "note_id": "64db4e87000000001701a578",
+      "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SE-64336391",
+      "note_id": "643363910000000013036c3a",
+      "stratum": "E_CROSS_SOURCE_CONTRAST",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SE-66ebc041",
+      "note_id": "66ebc041000000000c01b331",
+      "stratum": "E_CROSS_SOURCE_CONTRAST",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SE-6718abc7",
+      "note_id": "6718abc70000000021009845",
+      "stratum": "E_CROSS_SOURCE_CONTRAST",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SF-63a6a53f",
+      "note_id": "63a6a53f000000001f00d5e2",
+      "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    },
+    {
+      "sample_id": "SF-640dc105",
+      "note_id": "640dc1050000000014025280",
+      "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+      "status": "FAILED_NEEDS_HUMAN",
+      "blocker": "PLATFORM_MEDIA_OBSERVATION_BLOCKED"
+    }
+  ]
+}

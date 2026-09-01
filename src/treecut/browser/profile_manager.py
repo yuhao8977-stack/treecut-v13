@@ -77,7 +77,8 @@ class ProfileManager:
         profile = self.user_data_dir
 
         args = [str(edge), f"--user-data-dir={profile}",
-                "--remote-debugging-port=0", "--no-first-run", "--lang=zh-CN"]
+                "--remote-debugging-port=0", "--no-first-run", "--lang=zh-CN",
+                "--autoplay-policy=no-user-gesture-required"]
         if headless:
             args.append("--headless=new")
 

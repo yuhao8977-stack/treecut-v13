@@ -1,0 +1,9 @@
+{
+  "sha256_coverage": 0,
+  "ffprobe_coverage": 0,
+  "full_decode_coverage": 0,
+  "duration_crosscheck_coverage": 0,
+  "resolution_coverage": 0,
+  "audio_coverage": 0,
+  "note": "0/20 媒体恢复；无技术元数据（平台媒体观察被阻断）"
+}
