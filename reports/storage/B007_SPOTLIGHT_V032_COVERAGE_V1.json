@@ -1,0 +1,75 @@
+{
+  "A_windows_attempted": [
+    "M2026-04",
+    "M2026-05",
+    "M2026-06",
+    "M2026-07",
+    "M2026-08"
+  ],
+  "B_windows_exhausted_TRUE": [
+    "M2026-04",
+    "M2026-05",
+    "M2026-06",
+    "M2026-07",
+    "M2026-08"
+  ],
+  "C_windows_partial": [],
+  "D_total_note_report_rows": 5193,
+  "E_unique_paid_metric_notes": 1855,
+  "F_paid_associated_notes": 2322,
+  "G_paid_metric_coverage_ratio": 79.9,
+  "H_active_published_matches": 1855,
+  "I_legacy_matches": 0,
+  "J_unmatched": 0,
+  "K_page_count_per_window": {
+    "M2026-04": 51,
+    "M2026-05": 77,
+    "M2026-06": 38,
+    "M2026-07": 31,
+    "M2026-08": 28
+  },
+  "L_row_count_per_window": {
+    "M2026-04": 1230,
+    "M2026-05": 1308,
+    "M2026-06": 963,
+    "M2026-07": 881,
+    "M2026-08": 811
+  },
+  "M_zero_metrics_notes": 1698,
+  "N_missing_no_record": 467,
+  "O_failed_quarantined_windows": [],
+  "windows_detail": {
+    "M2026-04": {
+      "rows": 1230,
+      "fee_nonnull": 1230,
+      "leads_nonnull": 1230,
+      "unique_notes": 1230
+    },
+    "M2026-05": {
+      "rows": 1308,
+      "fee_nonnull": 1308,
+      "leads_nonnull": 1308,
+      "unique_notes": 1308
+    },
+    "M2026-06": {
+      "rows": 963,
+      "fee_nonnull": 963,
+      "leads_nonnull": 963,
+      "unique_notes": 963
+    },
+    "M2026-07": {
+      "rows": 881,
+      "fee_nonnull": 881,
+      "leads_nonnull": 881,
+      "unique_notes": 881
+    },
+    "M2026-08": {
+      "rows": 811,
+      "fee_nonnull": 811,
+      "leads_nonnull": 811,
+      "unique_notes": 811
+    }
+  },
+  "zero_vs_missing": "PLATFORM_ZERO 仅当平台记录 fee=0；无记录 = NO_RECORD_IN_WINDOW（不填 0）",
+  "observed_paid_total": "OBSERVED_PAID_TOTAL（互不重叠月度窗口加总；非 LIFETIME）"
+}

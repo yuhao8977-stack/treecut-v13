@@ -1,0 +1,7 @@
+{
+  "IDENTITY_JOIN_READY": true,
+  "ASSOCIATION_JOIN_READY": true,
+  "NOTE_PAID_METRIC_JOIN_READY": true,
+  "HISTORICAL_PAID_JOIN_READY": true,
+  "historical_note": "1855 unique notes with paid metrics across 5 non-overlapping months (5193 month-note rows); coverage 79.9% of 2322 paid-associated"
+}

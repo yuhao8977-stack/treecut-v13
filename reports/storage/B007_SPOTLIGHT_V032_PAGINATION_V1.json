@@ -1,0 +1,13 @@
+{
+  "root_cause_of_10_page_limit": "分页省略号：页码按钮只渲染 1 2 3 4 5 ... N，省略号后的目标页码无对应 DOM 元素，原实现按页码数字点击在省略号后失效（卡 ~10 页）",
+  "mechanism_chosen": "页大小 100 条/页（真实 UI 选择器）+ 下一页 icon 按钮持续点击（真实 Playwright click）",
+  "jump_to_page": "存在（跳至页），未使用（next 已够）",
+  "page_size": "100 条/页（d-select 选择器实测生效：133页→27页@2641行；April 255页→51页）",
+  "note_report_exhausted": {
+    "M2026-04": "UNKNOWN",
+    "M2026-05": "UNKNOWN",
+    "M2026-06": "UNKNOWN",
+    "M2026-07": "UNKNOWN",
+    "M2026-08": "UNKNOWN"
+  }
+}

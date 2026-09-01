@@ -1,0 +1,100 @@
+{
+  "run": "20260901_105421",
+  "stats": {
+    "note_snaps_new": 5193,
+    "note_snaps_skipped": 0
+  },
+  "window_stats": {
+    "M2026-04": {
+      "pages": 51,
+      "rows_captured": 5091,
+      "unique_notes": 1230,
+      "snapshots_new": 1230,
+      "exhausted": "see checkpoint (next-disabled based)",
+      "zero_fee_notes": 781,
+      "nonzero_fee_notes": 449
+    },
+    "M2026-05": {
+      "pages": 77,
+      "rows_captured": 7619,
+      "unique_notes": 1308,
+      "snapshots_new": 1308,
+      "exhausted": "see checkpoint (next-disabled based)",
+      "zero_fee_notes": 856,
+      "nonzero_fee_notes": 452
+    },
+    "M2026-06": {
+      "pages": 38,
+      "rows_captured": 3751,
+      "unique_notes": 963,
+      "snapshots_new": 963,
+      "exhausted": "see checkpoint (next-disabled based)",
+      "zero_fee_notes": 679,
+      "nonzero_fee_notes": 284
+    },
+    "M2026-07": {
+      "pages": 31,
+      "rows_captured": 3010,
+      "unique_notes": 881,
+      "snapshots_new": 881,
+      "exhausted": "see checkpoint (next-disabled based)",
+      "zero_fee_notes": 639,
+      "nonzero_fee_notes": 242
+    },
+    "M2026-08": {
+      "pages": 28,
+      "rows_captured": 2785,
+      "unique_notes": 811,
+      "snapshots_new": 811,
+      "exhausted": "see checkpoint (next-disabled based)",
+      "zero_fee_notes": 585,
+      "nonzero_fee_notes": 226
+    }
+  },
+  "unique_notes_with_paid_metrics": 1855,
+  "paid_associated_notes": 2322,
+  "join": {
+    "ACTIVE_PUBLISHED_MATCH": 1855,
+    "LEGACY_IDENTITY_MATCH": 0,
+    "UNMATCHED_PAID_NOTE": 0
+  },
+  "observed_paid_total_note_count": 1855,
+  "observed_paid_total_sample": {
+    "63a6a3e9000000001c0076f9": {
+      "fee": 0.0,
+      "impressions": 4.0,
+      "clicks": 0.0,
+      "leads": 0.0,
+      "message_consult": 0.0
+    },
+    "63a6a7af000000001e03f0a2": {
+      "fee": 0.0,
+      "impressions": 7.0,
+      "clicks": 0.0,
+      "leads": 0.0,
+      "message_consult": 0.0
+    },
+    "63a6a8b90000000022039f3f": {
+      "fee": 0.01,
+      "impressions": 3.0,
+      "clicks": 1.0,
+      "leads": 0.0,
+      "message_consult": 0.0
+    },
+    "63aa6adf000000001f020eb5": {
+      "fee": 0.0,
+      "impressions": 3.0,
+      "clicks": 0.0,
+      "leads": 0.0,
+      "message_consult": 0.0
+    },
+    "63aab8ca000000001f00d6e0": {
+      "fee": 0.0,
+      "impressions": 1.0,
+      "clicks": 0.0,
+      "leads": 0.0,
+      "message_consult": 0.0
+    }
+  },
+  "naming": "OBSERVED_PAID_TOTAL（互不重叠月度窗口加总；非 LIFETIME）"
+}
