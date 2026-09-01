@@ -1,0 +1,52 @@
+{
+  "phase": "V0.7",
+  "final_status": "B007_V07_PASS_WITH_LIMITATIONS",
+  "generated_at": "2026-09-01 21:21:08",
+  "pipeline_version": "B007-V0.7-SERIAL-1",
+  "coverage": {
+    "media_references": 20,
+    "canonical_asset_count": 20,
+    "asset_reuse_new": {
+      "new": 20,
+      "reuse": 0
+    },
+    "segment_total": 374,
+    "segments_per_asset": 18.7,
+    "timeline_coverage": 1.0,
+    "asr_success_notes": 20,
+    "asr_utterance_count": 536,
+    "asr_text_chars": 4806,
+    "ocr_items": 1990,
+    "visual_frames": 373,
+    "visual_known_ratio": 0.182,
+    "cognition_segments": 374,
+    "cognition_claim_count": 3740,
+    "claim_status_distribution": {
+      "UNKNOWN": 3728,
+      "SUPPORTED": 12
+    },
+    "unknown_ratio": 0.997,
+    "scene_family_distribution": {
+      "CUSTOMER_HOME": 53,
+      "FACTORY": 12,
+      "OTHER": 305,
+      "SHOWROOM": 3
+    }
+  },
+  "exceptions": [],
+  "quarantine": [],
+  "db_integrity": {
+    "media_vs_registry": true,
+    "segment_within_duration": true,
+    "keyframe_paths_exist": true,
+    "claims_json_valid": true,
+    "asr_segment_consistent": true
+  },
+  "storage": {
+    "c_free_gb": 67.4,
+    "e_free_gb": 155.1,
+    "z_ok": true,
+    "z_media_files": 20
+  },
+  "done_notes": 20
+}
