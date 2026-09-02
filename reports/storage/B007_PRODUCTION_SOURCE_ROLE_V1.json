@@ -1,0 +1,9 @@
+{
+  "roles": {
+    "published_media_z": "PUBLISHED_REFERENCE",
+    "X1_processed_sources": "PRODUCTION_CLEAN_CANDIDATE",
+    "X1_unprocessed_factory": "PRODUCTION_CLEAN_CANDIDATE",
+    "platform_reference_e": "PUBLISHED_REFERENCE"
+  },
+  "note": "生产默认只允许 PRODUCTION_CLEAN；published 仅 REFERENCE"
+}

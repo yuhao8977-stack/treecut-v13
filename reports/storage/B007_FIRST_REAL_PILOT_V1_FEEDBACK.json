@@ -1,0 +1,28 @@
+{
+  "phase": "V0.9.1",
+  "event_type": "feedback_event",
+  "target": "B007_FIRST_REAL_PILOT_V1",
+  "human_verdict": "REJECT",
+  "reasons": [
+    "SOURCE_HAS_BURNED_CAPTIONS",
+    "SOURCE_HAS_PLATFORM_WATERMARK",
+    "NEW_CAPTION_NOT_RENDERED",
+    "AV_DURATION_MISMATCH",
+    "VOICE_TOO_SYNTHETIC",
+    "NARRATION_TOO_SLOW",
+    "BEAT_VISUAL_MISMATCH",
+    "FUNCTION_ACTION_NOT_SHOWN",
+    "STORY_ENTITY_INCONSISTENCY",
+    "SCENE_CONTINUITY_BREAK",
+    "NO_BGM",
+    "CLAIM_EVIDENCE_TOO_COARSE"
+  ],
+  "recorded_at": "2026-09-02 17:02:17",
+  "lesson": "技术链可跑通 ≠ 内容可发布；Published media 只作 REFERENCE，不作默认生产源",
+  "V1_known_issue": {
+    "video_stream_s": 22.67,
+    "audio_stream_s": 27.35,
+    "delta_s": 4.68,
+    "qa_false_pass": "DURATION_VALID 用容器时长，未做 stream 级音画校验"
+  }
+}
