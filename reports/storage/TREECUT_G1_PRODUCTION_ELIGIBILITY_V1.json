@@ -1,7 +1,6 @@
 {
   "generated_at": "2026-09-02 18:05:03",
   "role_table_total": 28282,
-  "eligible_strict_count": 13617,
   "eligible_relaxed_count": 22233,
   "by_source_by_role": {
     "1": {
@@ -21,5 +20,9 @@
     }
   },
   "eligible_rule": "strict = role CLEAN* 且全部污染=ABSENT 且未REJECTED; relaxed = 无 PRESENT 但允许 UNCERTAIN",
-  "strict_pool_share_pct": 48.15
+  "strict_pool_share_pct": 48.15,
+  "note_l3": "NULL/UNCERTAIN=无证据不得静默入池; 机器验证五字段ABSENT=13617; L3 人工核准(APPROVED,30条)覆盖机器候选后=13642; 其余(UNKNOWN态/REVIEW_REQUIRED/REJECTED)不具默认生产资格",
+  "updated_at": "2026-09-02 19:17:56",
+  "eligible_strict_machine_verified": 13617,
+  "eligible_strict_post_l3": 13642
 }

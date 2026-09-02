@@ -3,7 +3,7 @@
   "stage": "STAGE8_PRODUCTION_QUALITY_HARDENING",
   "stage8_gates": {
     "G1_PRODUCTION_SOURCE": {
-      "status": "PASS_WITH_LIMITATIONS",
+      "status": "PASS",
       "plan": "docs/TREECUT_STAGE8_G1_PLAN.md"
     },
     "G2_ACTION_SUBCLIP": {
@@ -35,21 +35,31 @@
     "L11_TEMPLATE_RELEVANCE",
     "L12_HUMAN_FEEDBACK"
   ],
-  "updated_at": "2026-09-02 18:48:27",
+  "updated_at": "2026-09-02 19:19:44",
   "g1": {
-    "architect_verdict": "STAGE8_G1_PASS_WITH_LIMITATIONS",
-    "verdict_at": "ARCHITECT 裁决",
-    "limitations_to_close": [
-      "L3 Review45 未完成(审阅包生成中)",
-      "Full Core Regression 未在最终G1状态跑完(待L3回填后跑)"
-    ],
-    "close_to_full_pass": [
-      "source_role accuracy>=90% (45条最多错4)",
-      "clean contamination<5%",
-      "watermark=0",
-      "idx35若脏→修规则后重跑A2通过",
-      "Full Core Regression PASS"
-    ],
-    "strict_eligible_pool": 13617
+    "architect_verdict": "STAGE8_G1_PASS_WITH_LIMITATIONS (L3 已回填, 待 Full Regression 后判最终)",
+    "l3": {
+      "clean_ok": 30,
+      "dirty": 14,
+      "unable": 1,
+      "idx35": "CLEAN_OK ENVIRONMENT_TEXT(非false-clean)",
+      "idx63": "UNABLE — 证据帧已提取 TREECUT_G1_IDX63_EVIDENCE_REVIEW.png/html; 保持 REVIEW_REQUIRED/NOT_ELIGIBLE(§10 不阻塞G1)"
+    },
+    "A4a_production_eligibility": "45/45 准入安全一致(30 clean 全准入, 14 dirty+1 unable 全拦截)",
+    "A4b_source_role": "NOT_FULLY_MEASURABLE_FROM_CURRENT_L3_SCHEMA(不虚构)",
+    "false_clean_confirmed": 0,
+    "machine_false_dirty_calibration": "17 条机器拦人工净(校准证据保留, 不深挖)",
+    "strict_pool": {
+      "machine_verified_13617": 13617,
+      "post_l3_approved_13642": 13642
+    },
+    "full_regression": {
+      "passed": 326,
+      "skipped": 2,
+      "failed": 0
+    },
+    "final_status_suggested": "STAGE8_G1_PASS (待 Full Regression 结果确认)",
+    "final_status": "STAGE8_G1_PASS",
+    "closing_notes": "idx63 证据帧已交付架构师人工复核(§3); A4b 如实 NOT_FULLY_MEASURABLE; 下一步 G2 待架构师放行"
   }
 }

@@ -50,21 +50,27 @@ class ProductionSourceService:
 
     def is_production_eligible(self, entity_kind: str, entity_id: str | int,
                                strict: bool = True) -> tuple[bool, dict]:
-        """资格 = 角色∈CLEAN* 且 无污染 PRESENT 且 未被 REJECT。
-        strict=True（默认）：任一污染字段为 UNCERTAIN 也不得静默入池（NO FALSE PASS）。
-        strict=False：允许 UNCERTAIN（调用方自行承担，不推荐默认）。
+        """资格 = 角色∈CLEAN* 且 未被 REJECTED；
+        review_status=APPROVED（L3 人工核准干净）→ 覆盖机器污染候选（历史保留）；
+        否则（PENDING/REVIEW_REQUIRED）：机器污染 PRESENT 一律排除；strict=True 时 UNCERTAIN 也不得入池（NO FALSE PASS）。
         """
         row = self.role_row(entity_kind, entity_id)
         if row is None:
             return False, {"reason": "NO_ROLE_ROW"}
         reasons = []
         ok = True
-        if row["source_role"] not in ELIGIBLE_ROLES:
+        role = row["source_role"]
+        rev = row["review_status"]
+        if role not in ELIGIBLE_ROLES:
             ok = False
-            reasons.append(f"ROLE_NOT_ELIGIBLE:{row['source_role']}")
-        if row["review_status"] == "REJECTED":
+            reasons.append(f"ROLE_NOT_ELIGIBLE:{role}")
+        if rev == "REJECTED":
             ok = False
             reasons.append("HUMAN_REJECTED")
+        if rev == "APPROVED":
+            reasons.append("L3_HUMAN_APPROVED")
+            return ok, {"eligible": ok, "reasons": reasons, "source_role": role,
+                        "review_status": rev, "human_override": True}
         for f in CONTAM_FIELDS:
             v = row.get(f)
             if v == "PRESENT":
@@ -73,8 +79,8 @@ class ProductionSourceService:
             elif strict and v == "UNCERTAIN":
                 ok = False
                 reasons.append(f"{f}=UNCERTAIN_STRICT_BLOCK")
-        return ok, {"eligible": ok, "reasons": reasons, "source_role": row["source_role"],
-                    "review_status": row["review_status"]}
+        return ok, {"eligible": ok, "reasons": reasons, "source_role": role,
+                    "review_status": rev, "human_override": False}
 
     def production_pool(self, strict: bool = True) -> Iterable[dict]:
         """全量合格生产池（media_file 维度）。"""

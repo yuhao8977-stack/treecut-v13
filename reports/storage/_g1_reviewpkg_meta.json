@@ -1,0 +1,1522 @@
+[
+ {
+  "idx": 18,
+  "kind": "S2-clean",
+  "expectation": "clean",
+  "source_id": 2,
+  "media_id": "4575",
+  "asset_id": "a3cf38e2fae04162b7cad25353bb02fe",
+  "basename": " 【95】【威水尼奶油+深黑色】新疆李小姐【餐桌半圆的设计很符合法式的元素】-1.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "ABSENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "PENDING",
+   "evidence": "[]"
+  },
+  "qwen_l2": {
+   "burned": "ABSENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位女性在工厂环境中展示一张圆形桌子。"
+  },
+  "why": "s2_mixed_validation_clean_control",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\ 【95】【威水尼奶油+深黑色】新疆李小姐【餐桌半圆的设计很符合法式的元素】\\ 【95】【威水尼奶油+深黑色】新疆李小姐【餐桌半圆的设计很符合法式的元素】-1.mp4",
+  "duration": 7.220998,
+  "frames": [
+   "idx18_a.jpg",
+   "idx18_b.jpg",
+   "idx18_c.jpg"
+  ]
+ },
+ {
+  "idx": 19,
+  "kind": "S2-clean",
+  "expectation": "clean",
+  "source_id": 2,
+  "media_id": "4413",
+  "asset_id": "6c5de4569d4740948fa381465cf7be8a",
+  "basename": "【97】【纯黑+北美黑胡桃】【岛台狗都不干+干干的就是中古风岛台】-2.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "ABSENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "PENDING",
+   "evidence": "[]"
+  },
+  "qwen_l2": {
+   "burned": "ABSENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位穿着印有“VANDISNG”字样的黑色T恤的女性，她站在一个室内环境中，背景是工业风格的仓库或工厂。"
+  },
+  "why": "s2_mixed_validation_clean_control",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【03】颜色展示\\【97】【纯黑+北美黑胡桃】【岛台狗都不干+干干的就是中古风岛台】\\【97】【纯黑+北美黑胡桃】【岛台狗都不干+干干的就是中古风岛台】-2.mp4",
+  "duration": 6.25,
+  "frames": [
+   "idx19_a.jpg",
+   "idx19_b.jpg",
+   "idx19_c.jpg"
+  ]
+ },
+ {
+  "idx": 20,
+  "kind": "S2-clean",
+  "expectation": "clean",
+  "source_id": 2,
+  "media_id": "5025",
+  "asset_id": "2f6ef6fedd1a4c4aa474b8045b68acd0",
+  "basename": "【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【木纹复古风岛台】-3.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "ABSENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "PENDING",
+   "evidence": "[]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位女性在工厂环境中展示家具样品。"
+  },
+  "why": "s2_mixed_validation_clean_control",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【木纹复古风岛台】\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【木纹复古风岛台】-3.mp4",
+  "duration": 3.900998,
+  "frames": [
+   "idx20_a.jpg",
+   "idx20_b.jpg",
+   "idx20_c.jpg"
+  ]
+ },
+ {
+  "idx": 21,
+  "kind": "S2-clean",
+  "expectation": "clean",
+  "source_id": 2,
+  "media_id": "5409",
+  "asset_id": "d01034af3c0445d5bff8532d1497939c",
+  "basename": "【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台水磨圆弧边工艺】【铁牛】03-2.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "ABSENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "PENDING",
+   "evidence": "[]"
+  },
+  "qwen_l2": {
+   "burned": "ABSENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体为一位女性在展示大理石台面，她用手触摸台面边缘。"
+  },
+  "why": "s2_mixed_validation_clean_control",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台水磨圆弧边工艺】【铁牛】03\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台水磨圆弧边工艺】【铁牛】03-2.mp4",
+  "duration": 4.782993,
+  "frames": [
+   "idx21_a.jpg",
+   "idx21_b.jpg",
+   "idx21_c.jpg"
+  ]
+ },
+ {
+  "idx": 35,
+  "kind": "S2-clean",
+  "expectation": "clean",
+  "source_id": 2,
+  "media_id": "5421",
+  "asset_id": "c303304bdb5d4421a889337f90fb8494",
+  "basename": "【27】【纯白色+卡拉卡塔白】江苏朱先生【空镜岛头整体展示】-2.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "ABSENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "PENDING",
+   "evidence": "[]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体为工厂内部展示的家具样品。"
+  },
+  "why": "qwen_false_clean_candidate",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【27】【纯白色+卡拉卡塔白】江苏朱先生【空镜岛头整体展示】\\【27】【纯白色+卡拉卡塔白】江苏朱先生【空镜岛头整体展示】-2.mp4",
+  "duration": 4.133333,
+  "frames": [
+   "idx35_a.jpg",
+   "idx35_b.jpg",
+   "idx35_c.jpg",
+   "idx35_d.jpg",
+   "idx35_e.jpg"
+  ]
+ },
+ {
+  "idx": 54,
+  "kind": "S1-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 1,
+  "media_id": "512",
+  "asset_id": "c84d8ec5e034429bb067adbf3417536d",
+  "basename": "【07】【中古风】长春市邵小姐【空镜岛台下层抽屉收纳细节特写展示】01-2.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 2, \"sample_text\": \"333 | 333\"}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "semi",
+   "content": "画面主体为一个展示柜，柜内放置了四盒黑色包装的物品，背景中有人在工作。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【07】【中古风】长春市邵小姐【空镜岛台下层抽屉收纳细节特写展示】01\\【07】【中古风】长春市邵小姐【空镜岛台下层抽屉收纳细节特写展示】01-2.mp4",
+  "duration": 8.289002,
+  "frames": [
+   "idx54_a.jpg",
+   "idx54_b.jpg",
+   "idx54_c.jpg"
+  ]
+ },
+ {
+  "idx": 55,
+  "kind": "S1-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 1,
+  "media_id": "1928",
+  "asset_id": "0c9e1dfee10b4626bffef63e2920f4ab",
+  "basename": "【52】【宝格丽白哑光+尼木黑】长沙朱小姐【公牛轨道插座】【铁牛01】 -2.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"0-0-06\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "finished",
+   "content": "画面主体与动作：一位女性在展示大理石台面的电源插座。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【52】【宝格丽白哑光+尼木黑】长沙朱小姐【公牛轨道插座】【铁牛01】 \\【52】【宝格丽白哑光+尼木黑】长沙朱小姐【公牛轨道插座】【铁牛01】 -2.mp4",
+  "duration": 3.506009,
+  "frames": [
+   "idx55_a.jpg",
+   "idx55_b.jpg",
+   "idx55_c.jpg"
+  ]
+ },
+ {
+  "idx": 56,
+  "kind": "S1-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 1,
+  "media_id": "88",
+  "asset_id": "30b54623a34343f1940355b54048f1bb",
+  "basename": "【106】【散花潘多拉+纯黑哑光】佛山高先生【空镜岛台上层薄抽展示】-1.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "PRESENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 2, \"sample_text\": \"签收后并不代表我们的服务结束，质保五年，后续产品出现使用问 | 签收后并不代表我们的服务结束，质保五年，后续产品出现使用问\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体为一张抽屉，里面放有文件和小盒子。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【106】【散花潘多拉+纯黑哑光】佛山高先生【空镜岛台上层薄抽展示】\\【106】【散花潘多拉+纯黑哑光】佛山高先生【空镜岛台上层薄抽展示】-1.mp4",
+  "duration": 4.69,
+  "frames": [
+   "idx56_a.jpg",
+   "idx56_b.jpg",
+   "idx56_c.jpg"
+  ]
+ },
+ {
+  "idx": 57,
+  "kind": "S1-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 1,
+  "media_id": "1979",
+  "asset_id": "46da45ad71984253a1d48589a3b43f41",
+  "basename": "【60】【微水泥奶油白+兰亭香樟木纹岩板】深圳于小姐 【岛头公牛轨道插座】-1.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"0-0-0\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位女性在工厂环境中，似乎在介绍或演示某种设备。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【60】【微水泥奶油白+兰亭香樟木纹岩板】深圳于小姐 【岛头公牛轨道插座】\\【60】【微水泥奶油白+兰亭香樟木纹岩板】深圳于小姐 【岛头公牛轨道插座】-1.mp4",
+  "duration": 7.43,
+  "frames": [
+   "idx57_a.jpg",
+   "idx57_b.jpg",
+   "idx57_c.jpg"
+  ]
+ },
+ {
+  "idx": 58,
+  "kind": "S1-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 1,
+  "media_id": "1606",
+  "asset_id": "3ebf87f1ab6e4a31a47aff35b4ebbcd2",
+  "basename": " 【14】【黑白简约风】江苏殷先生【岛台配置了公牛轨道插座】【铁牛】-2.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"9-O-OR\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "finished",
+   "content": "画面主体是一位女性站在室内环境中，手部动作自然，背景为工业风格的仓库。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\ 【14】【黑白简约风】江苏殷先生【岛台配置了公牛轨道插座】【铁牛】\\ 【14】【黑白简约风】江苏殷先生【岛台配置了公牛轨道插座】【铁牛】-2.mp4",
+  "duration": 8.95,
+  "frames": [
+   "idx58_a.jpg",
+   "idx58_b.jpg",
+   "idx58_c.jpg"
+  ]
+ },
+ {
+  "idx": 59,
+  "kind": "S1-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 1,
+  "media_id": "468",
+  "asset_id": "e13aa3d3410b494683995247f843d487",
+  "basename": "【01】【水泥奶油白】汕尾陈小姐【3节脱离的轨道下层薄抽】-1.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "PRESENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 6, \"sample_text\": \"做的非常的聪明 | 这边还有两个抽屉 | 三节脱离的轨道非常的扎实 | 三节脱离的轨道非常的扎实 | 三节脱离的轨道非常的扎实 | 我们拉出来非常的方便\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "finished",
+   "content": "画面主体是一位女性正在打开柜门，背景为工厂环境。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【01】【水泥奶油白】汕尾陈小姐【3节脱离的轨道下层薄抽】\\【01】【水泥奶油白】汕尾陈小姐【3节脱离的轨道下层薄抽】-1.mp4",
+  "duration": 14.489002,
+  "frames": [
+   "idx59_a.jpg",
+   "idx59_b.jpg",
+   "idx59_c.jpg"
+  ]
+ },
+ {
+  "idx": 60,
+  "kind": "S2-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 2,
+  "media_id": "3334",
+  "asset_id": "9352395e35484f76b6e9bdce34e96c5e",
+  "basename": "【01】【水泥奶油白】汕尾陈小姐【导头70公分+宽度80公分】-1.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 3, \"sample_text\": \"岛头长度70公分 | 岛头长度70公分 | 宽度80公分\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体为一名女性站在一个白色岛头前，展示岛头长度为70公分。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【02】尺寸展示\\【01】【水泥奶油白】汕尾陈小姐【导头70公分+宽度80公分】\\【01】【水泥奶油白】汕尾陈小姐【导头70公分+宽度80公分】-1.mp4",
+  "duration": 2.971995,
+  "frames": [
+   "idx60_a.jpg",
+   "idx60_b.jpg",
+   "idx60_c.jpg"
+  ]
+ },
+ {
+  "idx": 61,
+  "kind": "S2-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 2,
+  "media_id": "3384",
+  "asset_id": "17b14920337641369bc80124d23a8b06",
+  "basename": "【07】【中古风】长春市邵小姐【壁炉+岛台空间】01-1.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"坤宝岛台\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体与动作：一位穿着粉色连体衣的人在工厂环境中摆出双手举起的姿势。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【02】尺寸展示\\【07】【中古风】长春市邵小姐【壁炉+岛台空间】01\\【07】【中古风】长春市邵小姐【壁炉+岛台空间】01-1.mp4",
+  "duration": 7.36,
+  "frames": [
+   "idx61_a.jpg",
+   "idx61_b.jpg",
+   "idx61_c.jpg"
+  ]
+ },
+ {
+  "idx": 62,
+  "kind": "S2-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 2,
+  "media_id": "5565",
+  "asset_id": "b1f396b335f8475898ccaeb65ae4f003",
+  "basename": "【35】【奶白色+北美黑胡桃】深圳陈先生【定制的一款中古风茶台】-1.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 2, \"sample_text\": \"0-0-0- | 0-0-0--\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位女性在工厂环境中挥手，背景有其他人在工作。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【35】【奶白色+北美黑胡桃】深圳陈先生【定制的一款中古风茶台】\\【35】【奶白色+北美黑胡桃】深圳陈先生【定制的一款中古风茶台】-1.mp4",
+  "duration": 8.103991,
+  "frames": [
+   "idx62_a.jpg",
+   "idx62_b.jpg",
+   "idx62_c.jpg"
+  ]
+ },
+ {
+  "idx": 63,
+  "kind": "S2-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 2,
+  "media_id": "3331",
+  "asset_id": "425b5470786a4a56a9ff54c397315ea0",
+  "basename": "152】【维多利亚加纯白哑光】浙江台州梅小姐【岛台餐桌有两米+伸缩60公分】-1.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "ABSENT",
+   "wm": "PRESENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "PRESENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"PLATFORM_TEXT\", \"frames\": 3, \"sample_text\": \"NEWPRONOUNCE@\"}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位女性在工厂环境中检查一张白色桌子。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【02】尺寸展示\\152】【维多利亚加纯白哑光】浙江台州梅小姐【岛台餐桌有两米+伸缩60公分】\\152】【维多利亚加纯白哑光】浙江台州梅小姐【岛台餐桌有两米+伸缩60公分】-1.mp4",
+  "duration": 10.426009,
+  "frames": [
+   "idx63_a.jpg",
+   "idx63_b.jpg",
+   "idx63_c.jpg"
+  ]
+ },
+ {
+  "idx": 64,
+  "kind": "S2-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 2,
+  "media_id": "5836",
+  "asset_id": "53500857124d436bac5e6dd581451808",
+  "basename": "【48】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【岛台餐桌一体】【铁牛】-2.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"OO\"}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "semi",
+   "content": "画面主体在工厂展示大理石台面，双手比出胜利手势。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【48】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【岛台餐桌一体】【铁牛】\\【48】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【岛台餐桌一体】【铁牛】-2.mp4",
+  "duration": 7.05,
+  "frames": [
+   "idx64_a.jpg",
+   "idx64_b.jpg",
+   "idx64_c.jpg"
+  ]
+ },
+ {
+  "idx": 65,
+  "kind": "S2-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 2,
+  "media_id": "4745",
+  "asset_id": "daa9e279b4354794a4f5f604de46dc4a",
+  "basename": "【07】【中古风】长春市邵小姐【岛台收纳】01-2.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"中宝鸟台\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位穿着粉色连体衣的人站在工厂车间内。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【07】【中古风】长春市邵小姐【岛台收纳】01\\【07】【中古风】长春市邵小姐【岛台收纳】01-2.mp4",
+  "duration": 4.852993,
+  "frames": [
+   "idx65_a.jpg",
+   "idx65_b.jpg",
+   "idx65_c.jpg"
+  ]
+ },
+ {
+  "idx": 66,
+  "kind": "S2-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 2,
+  "media_id": "4335",
+  "asset_id": "cbd8443bc294493780289ba43f8afee0",
+  "basename": "【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台网纹大花白加兰亭香樟营造出低调雅致的氛围感】【铁牛】-2.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"O-0-03\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位女性在工厂环境中展示产品，双手张开，似乎在介绍或演示。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【03】颜色展示\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台网纹大花白加兰亭香樟营造出低调雅致的氛围感】【铁牛】\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台网纹大花白加兰亭香樟营造出低调雅致的氛围感】【铁牛】-2.mp4",
+  "duration": 8.520998,
+  "frames": [
+   "idx66_a.jpg",
+   "idx66_b.jpg",
+   "idx66_c.jpg"
+  ]
+ },
+ {
+  "idx": 67,
+  "kind": "S2-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 2,
+  "media_id": "5019",
+  "asset_id": "00fcb73559f4482da41e691ebf73f422",
+  "basename": "【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【定制的木纹复古风】-3.mp4",
+  "source_role_candidate": "PRODUCTION_CLEAN_SEMI",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"V2IcuAV\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体与动作：一位穿着黑色T恤的女性在工厂环境中做出比V手势。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【定制的木纹复古风】\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【定制的木纹复古风】-3.mp4",
+  "duration": 5.641995,
+  "frames": [
+   "idx67_a.jpg",
+   "idx67_b.jpg",
+   "idx67_c.jpg"
+  ]
+ },
+ {
+  "idx": 68,
+  "kind": "S4-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 4,
+  "media_id": "7471",
+  "asset_id": "5777338522324f22b807d1f1d56876d6",
+  "basename": "DJI_20251129140700_0191_D_GS0.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "ABSENT",
+   "wm": "ABSENT",
+   "unrel": "PRESENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"PERSISTENT_PROMO\", \"frames\": 8, \"sample_text\": \"厂拍视频抖音直播，\"}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体为一位女性在工厂环境中展示柜子，似乎在进行某种说明或演示。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\11.29 产品视频拍摄（已整理）\\【05】【20251129】北京王先生 L型岛台\\小户型\\DJI_20251129140700_0191_D_GS0.MP4",
+  "duration": 11.328,
+  "frames": [
+   "idx68_a.jpg",
+   "idx68_b.jpg",
+   "idx68_c.jpg"
+  ]
+ },
+ {
+  "idx": 69,
+  "kind": "S4-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 4,
+  "media_id": "14130",
+  "asset_id": "41b28716f31a40b988054baff11337bd",
+  "basename": "DJI_20250529114111_0322_D.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "UNCERTAIN",
+   "env": "PRESENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 3, \"sample_text\": \"交货日期：KB20250610 | 交货日期：KB20250610 | 交货日期：KB20250610\"}, {\"reason_code\": \"PERSISTENT_DATETIME\", \"fr"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体为展示工厂内家具样品及其标签。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【065】【20250602】郑州张斌\\空镜\\DJI_20250529114111_0322_D.MP4",
+  "duration": 1.267933,
+  "frames": [
+   "idx69_a.jpg",
+   "idx69_b.jpg",
+   "idx69_c.jpg"
+  ]
+ },
+ {
+  "idx": 70,
+  "kind": "S4-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 4,
+  "media_id": "13318",
+  "asset_id": "83c598899ed04802b873799806f25292",
+  "basename": "16.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"W | W\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位坐在工业风格车间内的女性，双手抓着头发，背景是各种工业设备和材料。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【054】【20250526】长沙朱小佳\\口播\\铁牛\\16.MP4",
+  "duration": 7.490833,
+  "frames": [
+   "idx70_a.jpg",
+   "idx70_b.jpg",
+   "idx70_c.jpg"
+  ]
+ },
+ {
+  "idx": 71,
+  "kind": "S4-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 4,
+  "media_id": "7451",
+  "asset_id": "61a0f50e94fa4afe9c04563668556c12",
+  "basename": "DJI_20251129140859_0196_D_GS0.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "ABSENT",
+   "wm": "ABSENT",
+   "unrel": "PRESENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"PERSISTENT_PROMO\", \"frames\": 4, \"sample_text\": \"只允许拍自己下单\"}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "semi",
+   "content": "画面主体为一个白色台面，背景为工厂内部，有人手扶台面。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\11.29 产品视频拍摄（已整理）\\【05】【20251129】北京王先生 L型岛台\\产品空镜\\DJI_20251129140859_0196_D_GS0.MP4",
+  "duration": 6.756767,
+  "frames": [
+   "idx71_a.jpg",
+   "idx71_b.jpg",
+   "idx71_c.jpg"
+  ]
+ },
+ {
+  "idx": 72,
+  "kind": "S4-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 4,
+  "media_id": "14715",
+  "asset_id": "321ca4a93a3643648c96824d9108eede",
+  "basename": "DJI_20250611161505_0481_D_GS0.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"坤宝岛\"}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体为一位女性站在一个工业风格的仓库内，背景有各种工业设备和材料。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【079】【20250611】山东刘亚梅\\产品介绍\\铁牛\\DJI_20250611161505_0481_D_GS0.MP4",
+  "duration": 12.245333,
+  "frames": [
+   "idx72_a.jpg",
+   "idx72_b.jpg",
+   "idx72_c.jpg"
+  ]
+ },
+ {
+  "idx": 73,
+  "kind": "S4-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 4,
+  "media_id": "12116",
+  "asset_id": "52ef157484cc43ef87b938ec40daeaa0",
+  "basename": "DJI_20250514164324_0115_D.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"物。可以全部拉开，铝合金的一个g形拉手（铝合金相\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体与动作：一位女性在工厂环境中手持文件阅读。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【038】【20250515】东莞万生\\铁牛\\东莞万生脚本1\\口播\\DJI_20250514164324_0115_D.MP4",
+  "duration": 10.368,
+  "frames": [
+   "idx73_a.jpg",
+   "idx73_b.jpg",
+   "idx73_c.jpg"
+  ]
+ },
+ {
+  "idx": 74,
+  "kind": "S4-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 4,
+  "media_id": "20386",
+  "asset_id": "1d038dbed54f46f6bb1a085cbbb32025",
+  "basename": "DJI_20251223102934_0852_D.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 1, \"sample_text\": \"50\"}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "finished",
+   "content": "画面主体为一位女性站在大理石纹理的展示柜前。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【2025.11.23】坤宝产品视频（已整理）\\产品视频 (3)\\产品介绍\\DJI_20251223102934_0852_D.MP4",
+  "duration": 7.324,
+  "frames": [
+   "idx74_a.jpg",
+   "idx74_b.jpg",
+   "idx74_c.jpg"
+  ]
+ },
+ {
+  "idx": 75,
+  "kind": "S4-flagged",
+  "expectation": "dirty_or_review",
+  "source_id": 4,
+  "media_id": "12097",
+  "asset_id": "63afeedb88374129b07efece00f6cc9a",
+  "basename": "DJI_20250512142025_0147_D.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"SUBTITLE_FLAG\", \"frames\": 2, \"sample_text\": \"0-0-0- | FO-O-O\"}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位站在工厂车间内的女性，双手交叉放在身前。"
+  },
+  "why": "machine_flagged",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【037】【20250519】深圳泡茶台\\口播\\铁牛\\DJI_20250512142025_0147_D.MP4",
+  "duration": 8.491833,
+  "frames": [
+   "idx75_a.jpg",
+   "idx75_b.jpg",
+   "idx75_c.jpg"
+  ]
+ },
+ {
+  "idx": 82,
+  "kind": "S5-negative",
+  "expectation": "not_production_or_reference",
+  "source_id": 5,
+  "media_id": "28210",
+  "asset_id": null,
+  "basename": "6a5210cc000000001702ae2e.jpg",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "PENDING",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "content: \"社交空间，朋友可以随时来我家了~\""
+  },
+  "why": "reference_negative_control",
+  "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\6a5210cc000000001702ae2e.jpg",
+  "duration": "image",
+  "frames": [
+   "idx82_s.jpg"
+  ]
+ },
+ {
+  "idx": 83,
+  "kind": "S5-negative",
+  "expectation": "not_production_or_reference",
+  "source_id": 5,
+  "media_id": "28172",
+  "asset_id": null,
+  "basename": "6a0c5bcf0000000006035b71.jpg",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "PENDING",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "content: 一位女性站在厨房岛台旁，背景有文字和装饰植物。"
+  },
+  "why": "reference_negative_control",
+  "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\6a0c5bcf0000000006035b71.jpg",
+  "duration": "image",
+  "frames": [
+   "idx83_s.jpg"
+  ]
+ },
+ {
+  "idx": 84,
+  "kind": "S5-negative",
+  "expectation": "not_production_or_reference",
+  "source_id": 5,
+  "media_id": "28147",
+  "asset_id": null,
+  "basename": "69eb29150000000022025cfc.jpg",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "PENDING",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "content: 一位工作人员在展示带有洞石和木纹纹理的"
+  },
+  "why": "reference_negative_control",
+  "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\69eb29150000000022025cfc.jpg",
+  "duration": "image",
+  "frames": [
+   "idx84_s.jpg"
+  ]
+ },
+ {
+  "idx": 85,
+  "kind": "S5-negative",
+  "expectation": "not_production_or_reference",
+  "source_id": 5,
+  "media_id": "28148",
+  "asset_id": null,
+  "basename": "69eca81d000000002202bea1.jpg",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "PENDING",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "content: 一对男女在室内摆出胜利手势，背景有大字标题和装饰性文字。"
+  },
+  "why": "reference_negative_control",
+  "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\69eca81d000000002202bea1.jpg",
+  "duration": "image",
+  "frames": [
+   "idx85_s.jpg"
+  ]
+ },
+ {
+  "idx": 86,
+  "kind": "S5-negative",
+  "expectation": "not_production_or_reference",
+  "source_id": 5,
+  "media_id": "28099",
+  "asset_id": null,
+  "basename": "69a6fb44000000002801d72e.jpg",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "PENDING",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "content: 意式极简岛台展示，简约但不简单。"
+  },
+  "why": "reference_negative_control",
+  "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\69a6fb44000000002801d72e.jpg",
+  "duration": "image",
+  "frames": [
+   "idx86_s.jpg"
+  ]
+ },
+ {
+  "idx": 87,
+  "kind": "S5-negative",
+  "expectation": "not_production_or_reference",
+  "source_id": 5,
+  "media_id": "28237",
+  "asset_id": null,
+  "basename": "6a7edaf3000000003300c6d0.jpg",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "PENDING",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "content 一句话：小家变大空间。"
+  },
+  "why": "reference_negative_control",
+  "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\6a7edaf3000000003300c6d0.jpg",
+  "duration": "image",
+  "frames": [
+   "idx87_s.jpg"
+  ]
+ },
+ {
+  "idx": 88,
+  "kind": "B007-published",
+  "expectation": "reference",
+  "source_id": null,
+  "media_id": null,
+  "asset_id": "b007:63c5675a000000001c034435",
+  "basename": "63c5675a000000001c034435__d8ebe54b21fc.mp4",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "APPROVED",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "PRESENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "content: 画面展示了一个现代化厨房的场景，中央有卡通贴纸。"
+  },
+  "why": "reference_negative_control",
+  "path": "Z:\\TreeCut_Media\\B007\\published_media\\63c5675a000000001c034435__d8ebe54b21fc.mp4",
+  "duration": 9.869887,
+  "frames": [
+   "idx88_a.jpg",
+   "idx88_b.jpg",
+   "idx88_c.jpg"
+  ]
+ },
+ {
+  "idx": 89,
+  "kind": "B007-published",
+  "expectation": "reference",
+  "source_id": null,
+  "media_id": null,
+  "asset_id": "b007:6a2bb62d00000000070200a5",
+  "basename": "6a2bb62d00000000070200a5__5f1472eca596.mp4",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "APPROVED",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "PRESENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "画面主体是一位女士在室内环境中竖起大拇指，背景有大理石装饰和雕塑。"
+  },
+  "why": "reference_negative_control",
+  "path": "Z:\\TreeCut_Media\\B007\\published_media\\6a2bb62d00000000070200a5__5f1472eca596.mp4",
+  "duration": 54.777392,
+  "frames": [
+   "idx89_a.jpg",
+   "idx89_b.jpg",
+   "idx89_c.jpg"
+  ]
+ },
+ {
+  "idx": 90,
+  "kind": "B007-published",
+  "expectation": "reference",
+  "source_id": null,
+  "media_id": null,
+  "asset_id": "b007:66f672d6000000001902efbb",
+  "basename": "66f672d6000000001902efbb__f6aba018d083.mp4",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "APPROVED",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "PRESENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "画面主体与动作：一位穿着条纹毛衣的女性在室内比出胜利手势，背景有火焰特效和“老铁”字幕。"
+  },
+  "why": "reference_negative_control",
+  "path": "Z:\\TreeCut_Media\\B007\\published_media\\66f672d6000000001902efbb__f6aba018d083.mp4",
+  "duration": 49.0,
+  "frames": [
+   "idx90_a.jpg",
+   "idx90_b.jpg",
+   "idx90_c.jpg"
+  ]
+ },
+ {
+  "idx": 91,
+  "kind": "B007-published",
+  "expectation": "reference",
+  "source_id": null,
+  "media_id": null,
+  "asset_id": "b007:640dc1050000000014025280",
+  "basename": "640dc1050000000014025280__ce98f36043c3.mp4",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "APPROVED",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "PRESENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "画面主体是一位男子站在一张现代风格的餐桌旁，背景为工厂环境。"
+  },
+  "why": "reference_negative_control",
+  "path": "Z:\\TreeCut_Media\\B007\\published_media\\640dc1050000000014025280__ce98f36043c3.mp4",
+  "duration": 33.55424,
+  "frames": [
+   "idx91_a.jpg",
+   "idx91_b.jpg",
+   "idx91_c.jpg"
+  ]
+ },
+ {
+  "idx": 92,
+  "kind": "B007-published",
+  "expectation": "reference",
+  "source_id": null,
+  "media_id": null,
+  "asset_id": "b007:643363910000000013036c3a",
+  "basename": "643363910000000013036c3a__54f4cb0d96fa.mp4",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "APPROVED",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "PRESENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "画面主体为一名工人在工厂内操作一台大型设备，设备表面有明显的裂纹设计。"
+  },
+  "why": "reference_negative_control",
+  "path": "Z:\\TreeCut_Media\\B007\\published_media\\643363910000000013036c3a__54f4cb0d96fa.mp4",
+  "duration": 13.049615,
+  "frames": [
+   "idx92_a.jpg",
+   "idx92_b.jpg",
+   "idx92_c.jpg"
+  ]
+ },
+ {
+  "idx": 93,
+  "kind": "B007-published",
+  "expectation": "reference",
+  "source_id": null,
+  "media_id": null,
+  "asset_id": "b007:6a85b8490000000021022731",
+  "basename": "6a85b8490000000021022731__8254c7195f61.mp4",
+  "source_role_candidate": "PUBLISHED_REFERENCE",
+  "machine": {
+   "burned": null,
+   "wm": null,
+   "unrel": null,
+   "oldt": null,
+   "env": null,
+   "review": "APPROVED",
+   "evidence": ""
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "PRESENT",
+   "overlay": "PRESENT",
+   "asset_type": "finished",
+   "content": "画面主体是一位戴眼镜的女性，她正在用筷子夹食物。"
+  },
+  "why": "reference_negative_control",
+  "path": "Z:\\TreeCut_Media\\B007\\published_media\\6a85b8490000000021022731__8254c7195f61.mp4",
+  "duration": 100.008549,
+  "frames": [
+   "idx93_a.jpg",
+   "idx93_b.jpg",
+   "idx93_c.jpg"
+  ]
+ },
+ {
+  "idx": 94,
+  "kind": "S4-noOCR-boundary",
+  "expectation": "uncertain_review",
+  "source_id": 4,
+  "media_id": "21272",
+  "asset_id": "e0472dd201244507ae7ccc7cfebfd144",
+  "basename": "DJI_20251121105234_0995_D.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"NO_OCR_COVERAGE\", \"frames\": 0}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体为一位站在大理石台面前的女性，背景为一个大型展示厅。"
+  },
+  "why": "no_ocr_boundary",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【221】【2025.11.21】上海陆小姐\\产品介绍\\DJI_20251121105234_0995_D.MP4",
+  "duration": 27.5442,
+  "frames": [
+   "idx94_a.jpg",
+   "idx94_b.jpg",
+   "idx94_c.jpg"
+  ]
+ },
+ {
+  "idx": 95,
+  "kind": "S4-noOCR-boundary",
+  "expectation": "uncertain_review",
+  "source_id": 4,
+  "media_id": "16836",
+  "asset_id": "84135da9d5c44149b8a586c51eb2c7f2",
+  "basename": "DJI_20250829154609_0277_D_GS0.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"NO_OCR_COVERAGE\", \"frames\": 0}]"
+  },
+  "qwen_l2": {
+   "burned": "PRESENT",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "semi",
+   "content": "画面主体是一位女性站在一个带有大理石纹理的台面旁边，背景是一个工业风格的车间。"
+  },
+  "why": "no_ocr_boundary",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【144】【2025.8.29】上海唐小姐\\产品介绍\\DJI_20250829154609_0277_D_GS0.MP4",
+  "duration": 7.791133,
+  "frames": [
+   "idx95_a.jpg",
+   "idx95_b.jpg",
+   "idx95_c.jpg"
+  ]
+ },
+ {
+  "idx": 96,
+  "kind": "S4-noOCR-boundary",
+  "expectation": "uncertain_review",
+  "source_id": 4,
+  "media_id": "21763",
+  "asset_id": "e18e7fa7d0014bc493f2ff5ed64cbf39",
+  "basename": "DJI_20251110145734_0404_D_GS0.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"NO_OCR_COVERAGE\", \"frames\": 0}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位站在工厂或车间内的女性，她穿着白色T恤和蓝色短裤，背景中有工业设备和工具。"
+  },
+  "why": "no_ocr_boundary",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【231】【2025.11.10】汕尾郭先生\\产品介绍\\DJI_20251110145734_0404_D_GS0.MP4",
+  "duration": 15.248567,
+  "frames": [
+   "idx96_a.jpg",
+   "idx96_b.jpg",
+   "idx96_c.jpg"
+  ]
+ },
+ {
+  "idx": 97,
+  "kind": "S4-noOCR-boundary",
+  "expectation": "uncertain_review",
+  "source_id": 4,
+  "media_id": "15207",
+  "asset_id": "69f2d01e5edb4ef7b61a17565bba0e9c",
+  "basename": "DJI_20250504162745_0437_D.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"NO_OCR_COVERAGE\", \"frames\": 0}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体为一位穿着粉色外套的人，正跪在地上，背景为一个工业仓库环境。"
+  },
+  "why": "no_ocr_boundary",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【08】【20250504】黑龙江于洋洋【宝格丽】\\口播\\坤宝\\DJI_20250504162745_0437_D.MP4",
+  "duration": 6.058667,
+  "frames": [
+   "idx97_a.jpg",
+   "idx97_b.jpg",
+   "idx97_c.jpg"
+  ]
+ },
+ {
+  "idx": 98,
+  "kind": "S4-noOCR-boundary",
+  "expectation": "uncertain_review",
+  "source_id": 4,
+  "media_id": "27195",
+  "asset_id": "a97583dfe89e4ed0b8f0d478de6c45cc",
+  "basename": "DJI_20251219162227_0509_D.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"NO_OCR_COVERAGE\", \"frames\": 0}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位女性站在一个白色柜子旁边，背景是一个工业风格的车间。"
+  },
+  "why": "no_ocr_boundary",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\小王\\12.19\\云南王小林\\小户型\\DJI_20251219162227_0509_D.MP4",
+  "duration": 15.749067,
+  "frames": [
+   "idx98_a.jpg",
+   "idx98_b.jpg",
+   "idx98_c.jpg"
+  ]
+ },
+ {
+  "idx": 99,
+  "kind": "S4-noOCR-boundary",
+  "expectation": "uncertain_review",
+  "source_id": 4,
+  "media_id": "21146",
+  "asset_id": "40ff4ee3eb074741b7efc07fea238f35",
+  "basename": "DJI_20251122140407_0773_D.MP4",
+  "source_role_candidate": "PRODUCTION_CLEAN_RAW",
+  "machine": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT",
+   "env": "ABSENT",
+   "review": "REVIEW_REQUIRED",
+   "evidence": "[{\"reason_code\": \"NO_OCR_COVERAGE\", \"frames\": 0}]"
+  },
+  "qwen_l2": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体为一张木质桌面的特写，展示了其纹理和边缘细节。"
+  },
+  "why": "no_ocr_boundary",
+  "path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【217】【2025.11.22】上海丁小姐\\空镜\\DJI_20251122140407_0773_D.MP4",
+  "duration": 6.456467,
+  "frames": [
+   "idx99_a.jpg",
+   "idx99_b.jpg",
+   "idx99_c.jpg"
+  ]
+ }
+]

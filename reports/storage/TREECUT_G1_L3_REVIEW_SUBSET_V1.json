@@ -1,6 +1,6 @@
 {
  "level": "L3_PENDING_HUMAN",
- "note": "qwen=L2候选(非真值); human_* 待架构师L3锁定; 机器证据保留不覆盖",
+ "note": "qwen=L2候选(非真值); L3 已由架构师人工锁定(append-only); 机器/qwen 字段保留为校准证据; idx63 UNABLE 保持 REVIEW_REQUIRED/NOT_ELIGIBLE",
  "items": [
   {
    "sample_idx": 18,
@@ -21,10 +21,10 @@
     "content": "画面主体是一位女性在工厂环境中展示一张圆形桌子。"
    },
    "why_in_subset": "s2_mixed_validation_clean_control",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 19,
@@ -45,10 +45,10 @@
     "content": "画面主体是一位穿着印有“VANDISNG”字样的黑色T恤的女性，她站在一个室内环境中，背景是工业风格的仓库或工厂。"
    },
    "why_in_subset": "s2_mixed_validation_clean_control",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 20,
@@ -69,10 +69,10 @@
     "content": "画面主体是一位女性在工厂环境中展示家具样品。"
    },
    "why_in_subset": "s2_mixed_validation_clean_control",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 21,
@@ -93,10 +93,10 @@
     "content": "画面主体为一位女性在展示大理石台面，她用手触摸台面边缘。"
    },
    "why_in_subset": "s2_mixed_validation_clean_control",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 35,
@@ -117,10 +117,10 @@
     "content": "画面主体为工厂内部展示的家具样品。"
    },
    "why_in_subset": "qwen_false_clean_candidate",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3(架构师/ChatGPT视觉): 「坤宝岛台」= 工厂真实墙面招牌, 真实空间透视 → ENVIRONMENT_TEXT, 非BURNED/BRAND OVERLAY; 不算污染",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 54,
@@ -146,10 +146,10 @@
     "content": "画面主体为一个展示柜，柜内放置了四盒黑色包装的物品，背景中有人在工作。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 55,
@@ -175,10 +175,10 @@
     "content": "画面主体与动作：一位女性在展示大理石台面的电源插座。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 56,
@@ -204,10 +204,10 @@
     "content": "画面主体为一张抽屉，里面放有文件和小盒子。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 57,
@@ -233,10 +233,10 @@
     "content": "画面主体是一位女性在工厂环境中，似乎在介绍或演示某种设备。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 58,
@@ -262,10 +262,10 @@
     "content": "画面主体是一位女性站在室内环境中，手部动作自然，背景为工业风格的仓库。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 59,
@@ -291,10 +291,10 @@
     "content": "画面主体是一位女性正在打开柜门，背景为工厂环境。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 DIRTY: 黄色底部字幕+上方强调文字(后期烧录)",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 60,
@@ -320,10 +320,10 @@
     "content": "画面主体为一名女性站在一个白色岛头前，展示岛头长度为70公分。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 DIRTY: 三个抽帧均见黄色「岛头长度70公分」烧录字幕",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 61,
@@ -349,10 +349,10 @@
     "content": "画面主体与动作：一位穿着粉色连体衣的人在工厂环境中摆出双手举起的姿势。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 62,
@@ -378,10 +378,10 @@
     "content": "画面主体是一位女性在工厂环境中挥手，背景有其他人在工作。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 63,
@@ -407,10 +407,10 @@
     "content": "画面主体是一位女性在工厂环境中检查一张白色桌子。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "unable_to_judge",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3: UNABLE_TO_JUDGE — START/MIDDLE/END 帧未见 NEWPRONOUNCE@; 待原始OCR证据帧核验; 保持 REVIEW_REQUIRED/不具生产资格",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 64,
@@ -436,10 +436,10 @@
     "content": "画面主体在工厂展示大理石台面，双手比出胜利手势。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 65,
@@ -465,10 +465,10 @@
     "content": "画面主体是一位穿着粉色连体衣的人站在工厂车间内。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 66,
@@ -494,10 +494,10 @@
     "content": "画面主体是一位女性在工厂环境中展示产品，双手张开，似乎在介绍或演示。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 67,
@@ -523,10 +523,10 @@
     "content": "画面主体与动作：一位穿着黑色T恤的女性在工厂环境中做出比V手势。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 68,
@@ -552,10 +552,10 @@
     "content": "画面主体为一位女性在工厂环境中展示柜子，似乎在进行某种说明或演示。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 69,
@@ -581,10 +581,10 @@
     "content": "画面主体为展示工厂内家具样品及其标签。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 70,
@@ -610,10 +610,10 @@
     "content": "画面主体是一位坐在工业风格车间内的女性，双手抓着头发，背景是各种工业设备和材料。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 71,
@@ -639,10 +639,10 @@
     "content": "画面主体为一个白色台面，背景为工厂内部，有人手扶台面。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 72,
@@ -668,10 +668,10 @@
     "content": "画面主体为一位女性站在一个工业风格的仓库内，背景有各种工业设备和材料。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 73,
@@ -697,10 +697,10 @@
     "content": "画面主体与动作：一位女性在工厂环境中手持文件阅读。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 74,
@@ -726,10 +726,10 @@
     "content": "画面主体为一位女性站在大理石纹理的展示柜前。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 75,
@@ -755,10 +755,10 @@
     "content": "画面主体是一位站在工厂车间内的女性，双手交叉放在身前。"
    },
    "why_in_subset": "machine_flagged",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 82,
@@ -779,10 +779,10 @@
     "content": "content: \"社交空间，朋友可以随时来我家了~\""
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 DIRTY(S5 reference): 包装封面/标题视觉",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 83,
@@ -803,10 +803,10 @@
     "content": "content: 一位女性站在厨房岛台旁，背景有文字和装饰植物。"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 84,
@@ -827,10 +827,10 @@
     "content": "content: 一位工作人员在展示带有洞石和木纹纹理的"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 85,
@@ -851,10 +851,10 @@
     "content": "content: 一对男女在室内摆出胜利手势，背景有大字标题和装饰性文字。"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 86,
@@ -875,10 +875,10 @@
     "content": "content: 意式极简岛台展示，简约但不简单。"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 87,
@@ -899,10 +899,10 @@
     "content": "content 一句话：小家变大空间。"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 88,
@@ -923,10 +923,10 @@
     "content": "content: 画面展示了一个现代化厨房的场景，中央有卡通贴纸。"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 DIRTY(B007 published): 旧字幕/特效/账号水印包装",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 89,
@@ -947,10 +947,10 @@
     "content": "画面主体是一位女士在室内环境中竖起大拇指，背景有大理石装饰和雕塑。"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 90,
@@ -971,10 +971,10 @@
     "content": "画面主体与动作：一位穿着条纹毛衣的女性在室内比出胜利手势，背景有火焰特效和“老铁”字幕。"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 91,
@@ -995,10 +995,10 @@
     "content": "画面主体是一位男子站在一张现代风格的餐桌旁，背景为工厂环境。"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 92,
@@ -1019,10 +1019,10 @@
     "content": "画面主体为一名工人在工厂内操作一台大型设备，设备表面有明显的裂纹设计。"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 93,
@@ -1043,10 +1043,10 @@
     "content": "画面主体是一位戴眼镜的女性，她正在用筷子夹食物。"
    },
    "why_in_subset": "reference_negative_control",
-   "human_decision": null,
+   "human_decision": "dirty",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 94,
@@ -1067,10 +1067,10 @@
     "content": "画面主体为一位站在大理石台面前的女性，背景为一个大型展示厅。"
    },
    "why_in_subset": "no_ocr_boundary",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 95,
@@ -1091,10 +1091,10 @@
     "content": "画面主体是一位女性站在一个带有大理石纹理的台面旁边，背景是一个工业风格的车间。"
    },
    "why_in_subset": "no_ocr_boundary",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 96,
@@ -1115,10 +1115,10 @@
     "content": "画面主体是一位站在工厂或车间内的女性，她穿着白色T恤和蓝色短裤，背景中有工业设备和工具。"
    },
    "why_in_subset": "no_ocr_boundary",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 97,
@@ -1139,10 +1139,10 @@
     "content": "画面主体为一位穿着粉色外套的人，正跪在地上，背景为一个工业仓库环境。"
    },
    "why_in_subset": "no_ocr_boundary",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 98,
@@ -1163,10 +1163,10 @@
     "content": "画面主体是一位女性站在一个白色柜子旁边，背景是一个工业风格的车间。"
    },
    "why_in_subset": "no_ocr_boundary",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   },
   {
    "sample_idx": 99,
@@ -1187,10 +1187,67 @@
     "content": "画面主体为一张木质桌面的特写，展示了其纹理和边缘细节。"
    },
    "why_in_subset": "no_ocr_boundary",
-   "human_decision": null,
+   "human_decision": "clean_ok",
    "human_role_override": null,
-   "human_note": null,
-   "reviewed_at": null
+   "human_note": "L3 人工视觉裁决",
+   "reviewed_at": "2026-09-02 19:13:55"
   }
- ]
+ ],
+ "ingest": {
+  "source": "ARCHITECT/CHATGPT HUMAN VISUAL ADJUDICATION",
+  "clean_ok": [
+   18,
+   19,
+   20,
+   21,
+   35,
+   54,
+   55,
+   56,
+   57,
+   58,
+   61,
+   62,
+   64,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74,
+   75,
+   94,
+   95,
+   96,
+   97,
+   98,
+   99
+  ],
+  "dirty": [
+   59,
+   60,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91,
+   92,
+   93
+  ],
+  "unable": [
+   63
+  ],
+  "ingested_at": "2026-09-02 19:13:55",
+  "append_only": true,
+  "machine_and_qwen_fields_preserved": true
+ }
 }

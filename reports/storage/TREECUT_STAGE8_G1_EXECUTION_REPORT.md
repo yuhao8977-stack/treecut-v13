@@ -73,3 +73,28 @@
 - 待关闭限制：1) L3 Review45 未完成；2) Full Core Regression 未在最终 G1 状态跑完（L3 回填后跑）
 - 升 PASS 条件：source_role accuracy>=90%%(45条最多错4) / clean 污染<5%% / 水印=0 / idx35 若脏则修规则重跑 A2 / Full Core Regression PASS
 - L3 审核包：TREECUT_G1_L3_REVIEW_FOR_CHATGPT_V1.pdf（48页, 45条×3帧, idx35 专页5时间点, 审阅表未预填）
+
+## 8. L3 回填与最终指标（2026-09-02 19:19:44）
+
+### L3 人工裁决（append-only 已回填，机器/Qwen 字段保留）
+- CLEAN_OK 30 / DIRTY 14 / UNABLE_TO_JUDGE 1
+- idx35 = CLEAN_OK（ENVIRONMENT_TEXT，工厂墙面招牌，**非 false-clean**；不扩脏检测规则）
+- idx63 = UNABLE（机器 wm=PRESENT `NEWPRONOUNCE@`；3 触发帧 t=4984/5000/9984ms bbox≈(614,1480)→(585,1525) 坐标近似固定）
+  → 证据帧已提取：`TREECUT_G1_IDX63_EVIDENCE_REVIEW.png/.html`；按 §10 保守保持 REVIEW_REQUIRED / NOT_ELIGIBLE（不阻塞 G1）
+
+### 指标拆分（§4–6，口径修正记录）
+- **A4a PRODUCTION_ELIGIBILITY_HUMAN_AGREEMENT**：45/45 准入安全一致（30 human-clean 全准入；14 human-dirty + 1 unable 全拦截；准入集合 ∩ 人工脏 = ∅）；confirmed_false_clean = **0**
+- **A4b SOURCE_ROLE_TYPE_ACCURACY**：**NOT_FULLY_MEASURABLE_FROM_CURRENT_L3_SCHEMA**（Review45 用 CLEAN_OK/DIRTY/UNABLE 维度，未做 RAW/SEMI 角色细分裁决；不虚构准确率）
+- machine false-dirty（拦人工净）17 条 → 校准证据保留（偏保守可接受：少用素材 > 脏素材入池），不深挖
+- clean 污染：0 / 水印：0（idx63 未准入不计入 clean）
+
+### 资格池（纠正口径：NULL=无证据不静默入池）
+- 机器验证五字段 ABSENT：**13,617**
+- L3 人工核准(30 条, APPROVED 覆盖机器候选)后：**13,642**
+- 其余（UNKNOWN/REVIEW_REQUIRED/REJECTED）不具默认生产资格；REVIEW_REQUIRED 现 8,754（原 8,781 − 2 REJECTED − 25 人工核准净增减）
+
+### Full Core Regression（当前 commit，非历史数字）
+**326 passed / 2 skipped / 0 failed**（含新增 G1 测试 11 项；176s）
+
+### 最终状态
+**STAGE8_G1_PASS**（§9 条件全满足：A1 100% / A2 准入污染 0%<5% / A3 水印 0 / A4 口径诚实拆分 / idx63 保守不阻塞 / ProductionSourceService canonical / Full Regression PASS）

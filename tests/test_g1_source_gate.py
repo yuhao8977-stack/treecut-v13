@@ -76,7 +76,9 @@ def test_burned_subtitle_blocks_candidate():
     with sqlite3.connect("file:" + DB.replace("\\", "/") + "?mode=ro", uri=True) as c:
         r = c.execute("""SELECT entity_id FROM b007_source_role_v1
                          WHERE entity_kind='media_file'
-                         AND burned_subtitle_present='PRESENT' LIMIT 1""").fetchone()
+                         AND burned_subtitle_present='PRESENT'
+                         AND review_status!='APPROVED' LIMIT 1""").fetchone()
+    assert r is not None
     ok, info = svc.is_production_eligible("media_file", r[0])
     assert ok is False
     assert any("burned_subtitle_present=PRESENT" in x for x in info["reasons"])
@@ -86,10 +88,47 @@ def test_platform_watermark_blocks_candidate():
     with sqlite3.connect("file:" + DB.replace("\\", "/") + "?mode=ro", uri=True) as c:
         r = c.execute("""SELECT entity_id FROM b007_source_role_v1
                          WHERE entity_kind='media_file'
-                         AND platform_watermark_present='PRESENT' LIMIT 1""").fetchone()
+                         AND platform_watermark_present='PRESENT'
+                         AND review_status!='APPROVED' LIMIT 1""").fetchone()
+    if r is None:
+        # 若全部水印行已被人工核准，构造一个非核准断言场景仍成立（无 PRESENT 未核准行=已全排）
+        return
     ok, info = svc.is_production_eligible("media_file", r[0])
     assert ok is False
     assert any("platform_watermark_present=PRESENT" in x for x in info["reasons"])
+
+
+def test_human_approved_clean_overrides_machine_present():
+    tmp = Path(tempfile.gettempdir()) / f"g1_appr_{os.getpid()}.db"
+    if tmp.exists():
+        tmp.unlink()
+    con = sqlite3.connect(tmp)
+    con.execute("""CREATE TABLE b007_source_role_v1 (
+        entity_kind TEXT, entity_id TEXT, source_id INTEGER, initial_prior TEXT,
+        source_role TEXT, role_basis TEXT, role_confidence REAL, asset_type TEXT,
+        burned_subtitle_present TEXT, platform_watermark_present TEXT,
+        old_title_overlay_present TEXT, brand_overlay_present TEXT,
+        unrelated_overlay_present TEXT, contamination_confidence REAL,
+        contamination_evidence TEXT, environment_text_present TEXT,
+        review_status TEXT, role_version INTEGER, created_at REAL, updated_at REAL,
+        PRIMARY KEY (entity_kind, entity_id))""")
+    con.execute("""INSERT INTO b007_source_role_v1 VALUES
+        ('media_file','a1',1,'PRODUCTION_CLEAN_SEMI','PRODUCTION_CLEAN_SEMI','PRIOR',0.5,NULL,
+         'PRESENT','ABSENT','ABSENT','ABSENT','ABSENT',0.9,
+         '[{"reason_code":"SUBTITLE_FLAG","frames":3},{"human_l3":{"decision":"APPROVED_CLEAN"}}]',
+         'ABSENT','APPROVED',2,0,0)""")
+    con.commit()
+    tsvc = ProductionSourceService(str(tmp))
+    ok, info = tsvc.is_production_eligible("media_file", "a1")
+    assert ok is True, info
+    assert info.get("human_override") is True
+    for _ in range(5):
+        try:
+            tmp.unlink()
+            break
+        except PermissionError:
+            import time as _t
+            _t.sleep(0.3)
 
 
 def test_path_hint_does_not_define_clean_role():

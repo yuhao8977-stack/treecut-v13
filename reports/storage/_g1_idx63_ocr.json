@@ -1,0 +1,57 @@
+{
+ "idx63": {
+  "sample_idx": 63,
+  "kind": "S2-flagged",
+  "expectation": "dirty_or_review",
+  "media_id": "3331",
+  "asset_id": "425b5470786a4a56a9ff54c397315ea0",
+  "source_id": 2,
+  "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【02】尺寸展示\\152】【维多利亚加纯白哑光】浙江台州梅小姐【岛台餐桌有两米+伸缩60公分】\\152】【维多利亚加纯白哑光】浙江台州梅小姐【岛台餐桌有两米+伸缩60公分】-1.mp4",
+  "initial_prior": "PRODUCTION_CLEAN_SEMI",
+  "machine_flag": {
+   "burned": "ABSENT",
+   "wm": "PRESENT",
+   "unrel": "ABSENT",
+   "oldt": "ABSENT"
+  },
+  "machine_role": "PRODUCTION_CLEAN_SEMI",
+  "qwen_l2_candidate": {
+   "burned": "UNCERTAIN",
+   "wm": "ABSENT",
+   "overlay": "ABSENT",
+   "asset_type": "raw",
+   "content": "画面主体是一位女性在工厂环境中检查一张白色桌子。"
+  },
+  "why_in_subset": "machine_flagged",
+  "human_decision": "unable_to_judge",
+  "human_role_override": null,
+  "human_note": "L3: UNABLE_TO_JUDGE — START/MIDDLE/END 帧未见 NEWPRONOUNCE@; 待原始OCR证据帧核验; 保持 REVIEW_REQUIRED/不具生产资格",
+  "reviewed_at": "2026-09-02 19:13:55"
+ },
+ "ocr_rows": [
+  {
+   "id": 38906,
+   "frame_id": "425b5470786a4a56a9ff54c397315ea0_4984",
+   "t_ms": 4984,
+   "text": "NEWPRONOUNCE@",
+   "bbox": "614,1480,779,1510",
+   "confidence": 0.9546
+  },
+  {
+   "id": 38911,
+   "frame_id": "425b5470786a4a56a9ff54c397315ea0_5000",
+   "t_ms": 5000,
+   "text": "NEWPRONOUNCE@",
+   "bbox": "614,1479,779,1510",
+   "confidence": 0.9332
+  },
+  {
+   "id": 38923,
+   "frame_id": "425b5470786a4a56a9ff54c397315ea0_9984",
+   "t_ms": 9984,
+   "text": "NEWPRONOUNCE@",
+   "bbox": "585,1525,756,1556",
+   "confidence": 0.9563
+  }
+ ]
+}

@@ -11,18 +11,17 @@
     "coverage_pct": 100.0
   },
   "A2_clean_pool_burned_subtitle": {
-    "clean_sample_n": 54,
-    "machine_admitted_present": 0,
-    "independent_l2_false_clean_candidates": [
-      35
-    ],
-    "rate_pct_candidates": 1.85,
-    "note": "独立复核(qwen换帧严格提示)后仅 idx35 存疑; 需 L3 定夺(≥1 确认脏 → 检测需扩围 → G1 修复)"
+    "clean_sample_n": 30,
+    "confirmed_false_clean": 0,
+    "idx35": "CLEAN_OK(ENVIRONMENT_TEXT) — 非 false-clean",
+    "contamination_in_admitted_pct": 0.0,
+    "verdict": "PASS(<5%, 目标0)"
   },
   "A3_clean_pool_xhs_watermark": {
-    "clean_sample_platform_watermark_machine": 0,
-    "clean_sample_platform_watermark_qwen_candidates": [],
-    "note": "干净样本无平台水印候选(L2); 机器标记水印样本已入 L3"
+    "clean_sample_n": 30,
+    "confirmed_watermark": 0,
+    "idx63": "UNABLE — 未准入, 不占 clean",
+    "verdict": "PASS(=0)"
   },
   "A4_source_role_accuracy": {
     "locked_l3_count": 0,
@@ -42,5 +41,29 @@
     "subset_n": 45,
     "human_locked": 0
   },
-  "verdict": "PENDING_ARCHITECT_L3"
+  "verdict": "PENDING_FULL_REGRESSION",
+  "A4a_production_eligibility": {
+    "metric": "PRODUCTION_ELIGIBILITY_HUMAN_AGREEMENT",
+    "evaluated_n": 45,
+    "human_clean": 30,
+    "human_dirty": 14,
+    "human_unable": 1,
+    "human_clean_admitted_by_system": 30,
+    "human_dirty_admitted_by_system": 0,
+    "unable_admitted_by_system": 0,
+    "safety_agreement_pct": 100.0,
+    "note": "准入安全: 人工 DIRTY 与 UNABLE 均未被系统准入; 准入集合∩人工脏=∅"
+  },
+  "A4b_source_role_accuracy": {
+    "metric": "SOURCE_ROLE_TYPE_ACCURACY",
+    "status": "NOT_FULLY_MEASURABLE_FROM_CURRENT_L3_SCHEMA",
+    "reason": "L3 Review45 采用 CLEAN_OK/DIRTY/UNABLE(污染/资格维度), 未对 RAW/SEMI/PUBLISHED_REFERENCE 角色细分做人工裁决; 不虚构准确率",
+    "raw_semi_adjudication_n": 0
+  },
+  "false_clean_dirty_summary": {
+    "confirmed_false_clean": 0,
+    "machine_false_dirty_blocked_clean": 17,
+    "unable_count": 1,
+    "denominator": 45
+  }
 }
