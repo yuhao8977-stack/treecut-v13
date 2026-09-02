@@ -1,6 +1,6 @@
 {
  "generated_at": "2026-09-02 19:52:13",
- "note": "subclip 由时序帧证据推导; 非整段默认; semantic/boundary 分离",
+ "note": "subclip 由稀疏时序帧推导; 方向复核后多数动作时刻呈 STATIC → motion_support=WEAK 不得冒充成熟动作识别; L2 候选, HUMAN_VALIDATION_PENDING",
  "windows": [
   {
    "action": "EXTEND",
@@ -22,7 +22,9 @@
    ],
    "selection_reason": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
    "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
-   "group": "EXTEND_POS"
+   "group": "EXTEND_POS",
+   "motion_support": "WEAK",
+   "direction_note": "复核时刻呈静止 → 单帧动作证据脆弱; 需更高帧率/人工确认"
   },
   {
    "action": "RETRACT",
@@ -44,7 +46,9 @@
    ],
    "selection_reason": "RETRACT 动作段 5.34-5.34s; subclip 5.09-5.64s",
    "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
-   "group": "EXTEND_POS"
+   "group": "EXTEND_POS",
+   "motion_support": "WEAK",
+   "direction_note": "复核时刻呈静止 → 单帧动作证据脆弱; 需更高帧率/人工确认"
   },
   {
    "action": "EXTEND",
@@ -66,7 +70,9 @@
    ],
    "selection_reason": "EXTEND 动作段 5.56-5.56s; subclip 5.31-5.86s",
    "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4",
-   "group": "EXTEND_POS"
+   "group": "EXTEND_POS",
+   "motion_support": "WEAK",
+   "direction_note": "复核时刻呈静止 → 单帧动作证据脆弱; 需更高帧率/人工确认"
   },
   {
    "action": "RETRACT",
@@ -88,7 +94,9 @@
    ],
    "selection_reason": "RETRACT 动作段 5.56-5.56s; subclip 5.31-5.86s",
    "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4",
-   "group": "EXTEND_POS"
+   "group": "EXTEND_POS",
+   "motion_support": "WEAK",
+   "direction_note": "复核时刻呈静止 → 单帧动作证据脆弱; 需更高帧率/人工确认"
   },
   {
    "action": "EXTEND",
@@ -114,7 +122,9 @@
    ],
    "selection_reason": "EXTEND 动作段 4.96-6.86s; subclip 4.71-7.16s",
    "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4",
-   "group": "EXTEND_POS"
+   "group": "EXTEND_POS",
+   "motion_support": "WEAK",
+   "direction_note": "复核时刻呈静止 → 单帧动作证据脆弱; 需更高帧率/人工确认"
   },
   {
    "action": "RETRACT",
@@ -140,7 +150,9 @@
    ],
    "selection_reason": "RETRACT 动作段 4.96-6.86s; subclip 4.71-7.16s",
    "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4",
-   "group": "EXTEND_POS"
+   "group": "EXTEND_POS",
+   "motion_support": "WEAK",
+   "direction_note": "复核时刻呈静止 → 单帧动作证据脆弱; 需更高帧率/人工确认"
   },
   {
    "action": "EXTEND",
@@ -162,7 +174,9 @@
    ],
    "selection_reason": "EXTEND 动作段 2.61-2.61s; subclip 2.36-2.91s",
    "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1",
-   "group": "EXTEND_HARDNEG"
+   "group": "EXTEND_HARDNEG",
+   "motion_support": "WEAK",
+   "direction_note": "复核时刻呈静止 → 单帧动作证据脆弱; 需更高帧率/人工确认"
   },
   {
    "action": "RETRACT",
@@ -184,7 +198,9 @@
    ],
    "selection_reason": "RETRACT 动作段 2.61-2.61s; subclip 2.36-2.91s",
    "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1",
-   "group": "EXTEND_HARDNEG"
+   "group": "EXTEND_HARDNEG",
+   "motion_support": "WEAK",
+   "direction_note": "复核时刻呈静止 → 单帧动作证据脆弱; 需更高帧率/人工确认"
   },
   {
    "action": "EXTEND",
@@ -210,7 +226,9 @@
    ],
    "selection_reason": "EXTEND 动作段 2.19-3.03s; subclip 1.94-3.33s",
    "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1",
-   "group": "EXTEND_HARDNEG"
+   "group": "EXTEND_HARDNEG",
+   "motion_support": "MODERATE",
+   "direction_note": "复核方向=EXTEND"
   },
   {
    "action": "RETRACT",
@@ -236,7 +254,9 @@
    ],
    "selection_reason": "RETRACT 动作段 2.19-3.03s; subclip 1.94-3.33s",
    "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1",
-   "group": "EXTEND_HARDNEG"
+   "group": "EXTEND_HARDNEG",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "EXTEND",
@@ -262,7 +282,9 @@
    ],
    "selection_reason": "EXTEND 动作段 2.19-3.03s; subclip 1.94-3.33s",
    "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2",
-   "group": "EXTEND_HARDNEG"
+   "group": "EXTEND_HARDNEG",
+   "motion_support": "MODERATE",
+   "direction_note": "复核方向=EXTEND"
   },
   {
    "action": "RETRACT",
@@ -288,7 +310,9 @@
    ],
    "selection_reason": "RETRACT 动作段 2.19-3.03s; subclip 1.94-3.33s",
    "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2",
-   "group": "EXTEND_HARDNEG"
+   "group": "EXTEND_HARDNEG",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "DRAWER_OPEN",
@@ -318,7 +342,9 @@
    ],
    "selection_reason": "DRAWER_OPEN 动作段 3.38-5.95s; subclip 3.13-6.25s",
    "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】-1.mp4",
-   "group": "DRAWER_POS"
+   "group": "DRAWER_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "DRAWER_CLOSE",
@@ -348,7 +374,9 @@
    ],
    "selection_reason": "DRAWER_CLOSE 动作段 3.38-5.95s; subclip 3.13-6.25s",
    "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】-1.mp4",
-   "group": "DRAWER_POS"
+   "group": "DRAWER_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "DRAWER_OPEN",
@@ -386,7 +414,9 @@
    ],
    "selection_reason": "DRAWER_OPEN 动作段 1.07-7.87s; subclip 0.82-8.17s",
    "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导",
-   "group": "DRAWER_POS"
+   "group": "DRAWER_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "DRAWER_CLOSE",
@@ -424,7 +454,9 @@
    ],
    "selection_reason": "DRAWER_CLOSE 动作段 1.07-7.87s; subclip 0.82-8.17s",
    "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导",
-   "group": "DRAWER_POS"
+   "group": "DRAWER_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "CABINET_OPEN",
@@ -446,7 +478,9 @@
    ],
    "selection_reason": "CABINET_OPEN 动作段 0.61-0.61s; subclip 0.36-0.91s",
    "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
-   "group": "CABINET_POS"
+   "group": "CABINET_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "CABINET_OPEN",
@@ -468,7 +502,9 @@
    ],
    "selection_reason": "CABINET_OPEN 动作段 4.5-4.5s; subclip 4.25-4.8s",
    "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
-   "group": "CABINET_POS"
+   "group": "CABINET_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "CABINET_CLOSE",
@@ -490,7 +526,9 @@
    ],
    "selection_reason": "CABINET_CLOSE 动作段 0.61-0.61s; subclip 0.36-0.91s",
    "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
-   "group": "CABINET_POS"
+   "group": "CABINET_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "CABINET_CLOSE",
@@ -512,7 +550,9 @@
    ],
    "selection_reason": "CABINET_CLOSE 动作段 4.5-4.5s; subclip 4.25-4.8s",
    "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
-   "group": "CABINET_POS"
+   "group": "CABINET_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "CABINET_OPEN",
@@ -534,7 +574,9 @@
    ],
    "selection_reason": "CABINET_OPEN 动作段 1.5-1.5s; subclip 1.25-1.8s",
    "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
-   "group": "CABINET_POS"
+   "group": "CABINET_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "CABINET_OPEN",
@@ -556,7 +598,9 @@
    ],
    "selection_reason": "CABINET_OPEN 动作段 10.99-10.99s; subclip 10.74-11.29s",
    "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
-   "group": "CABINET_POS"
+   "group": "CABINET_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "CABINET_CLOSE",
@@ -578,7 +622,9 @@
    ],
    "selection_reason": "CABINET_CLOSE 动作段 1.5-1.5s; subclip 1.25-1.8s",
    "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
-   "group": "CABINET_POS"
+   "group": "CABINET_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "CABINET_CLOSE",
@@ -600,7 +646,9 @@
    ],
    "selection_reason": "CABINET_CLOSE 动作段 10.99-10.99s; subclip 10.74-11.29s",
    "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
-   "group": "CABINET_POS"
+   "group": "CABINET_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "STORAGE_PUT_IN",
@@ -638,7 +686,9 @@
    ],
    "selection_reason": "STORAGE_PUT_IN 动作段 0.93-6.84s; subclip 0.68-7.14s",
    "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4",
-   "group": "STORAGE_POS"
+   "group": "STORAGE_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "STORAGE_TAKE_OUT",
@@ -676,7 +726,9 @@
    ],
    "selection_reason": "STORAGE_TAKE_OUT 动作段 0.93-6.84s; subclip 0.68-7.14s",
    "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4",
-   "group": "STORAGE_POS"
+   "group": "STORAGE_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "STORAGE_PUT_IN",
@@ -714,7 +766,9 @@
    ],
    "selection_reason": "STORAGE_PUT_IN 动作段 0.51-3.76s; subclip 0.26-4.06s",
    "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4",
-   "group": "STORAGE_POS"
+   "group": "STORAGE_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   },
   {
    "action": "STORAGE_TAKE_OUT",
@@ -752,7 +806,10 @@
    ],
    "selection_reason": "STORAGE_TAKE_OUT 动作段 0.51-3.76s; subclip 0.26-4.06s",
    "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4",
-   "group": "STORAGE_POS"
+   "group": "STORAGE_POS",
+   "motion_support": "WEAK",
+   "direction_note": "无方向确认或方向不符 → 不宣称动作已确认"
   }
- ]
+ ],
+ "updated_at": "2026-09-02 20:00:47"
 }

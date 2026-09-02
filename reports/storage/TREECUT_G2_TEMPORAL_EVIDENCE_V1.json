@@ -1,6 +1,6 @@
 {
  "level": "L2_VISUAL_CANDIDATE",
- "note": "qwen2.5vl=L2 时序候选; 非L3; 仅用于动作候选与有界校准 | pass2: extend 素材 0.42/0.58 有界补充帧",
+ "note": "qwen2.5vl=L2 时序候选; 非L3; 仅用于动作候选与有界校准 | pass2: extend 素材 0.42/0.58 有界补充帧 | direction probe: EXTEND vs RETRACT 独立复核",
  "items": [
   {
    "media_id": 2482,
@@ -796,6 +796,60 @@
    "qwen_l2_raw": "ACTION_IN_PROGRESS\n桌面/轨道插座/其他\n手正在操作桌面，可能是在拉出加宽或收回。",
    "level": "L2_VISUAL_CANDIDATE",
    "pass2": true
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 98,
+   "t_s": 5.34,
+   "qwen_l2_raw": "direction=STATIC",
+   "level": "L2_VISUAL_CANDIDATE",
+   "direction_probe": true
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 98,
+   "t_s": 5.56,
+   "qwen_l2_raw": "direction=STATIC",
+   "level": "L2_VISUAL_CANDIDATE",
+   "direction_probe": true
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 98,
+   "t_s": 4.96,
+   "qwen_l2_raw": "direction=STATIC",
+   "level": "L2_VISUAL_CANDIDATE",
+   "direction_probe": true
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 98,
+   "t_s": 2.61,
+   "qwen_l2_raw": "direction=STATIC",
+   "level": "L2_VISUAL_CANDIDATE",
+   "direction_probe": true
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 98,
+   "t_s": 2.19,
+   "qwen_l2_raw": "direction=EXTEND",
+   "level": "L2_VISUAL_CANDIDATE",
+   "direction_probe": true
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 98,
+   "t_s": 2.19,
+   "qwen_l2_raw": "direction=EXTEND",
+   "level": "L2_VISUAL_CANDIDATE",
+   "direction_probe": true
   }
  ]
 }

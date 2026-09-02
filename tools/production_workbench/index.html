@@ -83,6 +83,28 @@ function renderCands(b){
       <button class="btn" onclick="replace(${JSON.stringify(b.id)},${JSON.stringify(c.media_id)},${sc.start_s},${sc.end_s})">替换本镜</button>`;
     el.appendChild(d);
   });
+  // 手动裁剪(选中候选)
+  const sel=b.selected;
+  if(sel&&sel.subclip){
+    const tb=document.createElement('div');tb.style.cssText='padding:6px 12px;font-size:12px;border-top:1px solid var(--line)';
+    tb.innerHTML=`<b>手动裁剪(有界)</b> start <input id="trims" type="number" step="0.01" value="${sel.subclip.start_s||0}" style="width:64px"/>
+      end <input id="trime" type="number" step="0.01" value="${sel.subclip.end_s||0}" style="width:64px"/>
+      <button class="btn ghost" onclick="trim('${b.id}')">应用并重QA</button>
+      <div id="qalist"></div>`;
+    el.appendChild(tb);
+  }
+  // beat 级 QA 列表
+  const qd=document.createElement('div');qd.id='qalist';qd.style.cssText='padding:6px 12px;font-size:12px';
+  qd.innerHTML=(b.qa_local||[]).map(q=>`<div class="qa-item">${tag(q.status)} ${q.key}: ${q.detail}</div>`).join('')||'<div class="qa-item">无本机QA记录(替换后生成)</div>';
+  el.appendChild(qd);
+}
+async function trim(beatId){
+  const s=parseFloat(document.getElementById('trims').value),e=parseFloat(document.getElementById('trime').value);
+  const r=await fetch('/api/trim',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({beat_id:beatId,start_s:s,end_s:e})});
+  const j=await r.json();
+  alert(j.ok?(j.qa.filter(x=>x.status==='FAIL').length? '已保存并重QA，存在FAIL项':'已保存并重QA全过'):'失败:'+(j.error||''));
+  if(j.ok) load();
 }
 function play(b){
   const sel=b.selected||(b.candidates||[])[0];
