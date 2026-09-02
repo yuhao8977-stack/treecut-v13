@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8"/>
+<title>TreeCut Production Workbench</title>
+<style>
+:root{--ok:#0a7a0a;--warn:#b26a00;--fail:#c00;--bg:#f4f6f8;--line:#d8dee4}
+*{box-sizing:border-box}body{margin:0;font-family:'Microsoft YaHei',sans-serif;background:var(--bg);color:#1c2733}
+header{padding:10px 16px;background:#10243a;color:#fff;display:flex;gap:16px;align-items:baseline}
+header h1{font-size:17px;margin:0} header span{font-size:12px;opacity:.75}
+#app{display:grid;grid-template-columns:280px 1fr 360px;height:calc(100vh - 46px);gap:8px;padding:8px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:auto}
+.panel h2{font-size:13px;margin:0;padding:8px 12px;border-bottom:1px solid var(--line);background:#eef2f6}
+.beat{padding:8px 12px;border-bottom:1px solid #eef;cursor:pointer}
+.beat.active{background:#e7f3ff;border-left:4px solid #1a73e8}
+.beat .t{font-size:13px}.beat .m{font-size:11px;color:#666;margin-top:3px}
+.cand{border:1px solid var(--line);margin:8px;border-radius:6px;padding:8px}
+.cand.selected{border-color:#1a73e8;background:#f2f8ff}
+.cand .meta{font-size:12px}.cand .why{font-size:11px;color:#444;margin-top:4px}
+.tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:8px;margin-right:4px}
+.ok{background:#d7f2dc;color:var(--ok)}.warn{background:#fdeeca;color:var(--warn)}
+.fail{background:#fbdcdc;color:var(--fail)}
+video{width:100%;max-height:56vh;background:#000}
+.qa-item{font-size:12px;padding:2px 10px;display:flex;gap:8px}
+.btn{margin:6px;padding:6px 12px;border:none;border-radius:6px;background:#1a73e8;color:#fff;cursor:pointer;font-size:13px}
+.btn.ghost{background:#fff;color:#1a73e8;border:1px solid #1a73e8}
+.ev{font-size:11px;color:#555;padding:2px 12px}
+.sel{font-size:12px;padding:6px 12px;display:none}
+</style></head><body>
+<header><h1>TreeCut Production Workbench</h1><span id="projmeta">loading…</span></header>
+<div id="app">
+  <div class="panel"><h2>脚本 / Beats / Claims</h2><div id="beats"></div></div>
+  <div class="panel"><h2 id="playtitle">预览（subclip 窗口）</h2>
+    <div id="player"></div>
+    <div id="claimreq" style="padding:6px 12px;font-size:12px"></div>
+    <div id="timeline" style="padding:6px 12px;font-size:12px;color:#555"></div>
+  </div>
+  <div class="panel"><h2>候选 / 证据 / QA</h2><div id="cands"></div></div>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+let PROJ=null;
+async function load(){
+  const r=await fetch('/api/project');
+  if(r.status===404){$('#projmeta').textContent='暂无项目 JSON (TREECUT_WORKBENCH_PROJECT_V1.json)';return;}
+  PROJ=await r.json();
+  $('#projmeta').textContent=`${PROJ.project_id||'?'} | ${PROJ.story_mode||''} | ${PROJ.script?PROJ.script.slice(0,60)+'…':''}`;
+  renderBeats();
+}
+function renderBeats(){
+  const el=$('#beats');el.innerHTML='';
+  (PROJ.beats||[]).forEach((b,i)=>{
+    const d=document.createElement('div');
+    d.className='beat'+(i===0?' active':'');
+    d.innerHTML=`<div class="t">${b.id||''} ${(b.text||'').slice(0,60)}</div>
+      <div class="m">claim: ${(b.claim&&b.claim.text||b.text||'').slice(0,50)} | ${b.qa_note||''}</div>`;
+    d.onclick=()=>selectBeat(i,d);
+    el.appendChild(d);
+  });
+  selectBeat(0,document.querySelector('.beat'));
+}
+let currentBeat=0;
+function selectBeat(i,node){
+  currentBeat=i;
+  document.querySelectorAll('.beat').forEach(x=>x.classList.remove('active'));
+  node.classList.add('active');
+  const b=PROJ.beats[i];
+  $('#claimreq').innerHTML=`<b>Claim要求:</b> ${(b.claim?JSON.stringify(b.claim):b.text||'')} <br/>${b.claim&&b.claim.req||''}`;
+  $('#timeline').textContent=`Timeline: ${b.timeline||''}`;
+  renderCands(b); play(b);
+}
+function tag(st){return `<span class="tag ${st==='PASS'?'ok':st==='WARNING'?'warn':'fail'}">${st||'?'}</span>`;}
+function renderCands(b){
+  const el=$('#cands');el.innerHTML='';
+  (b.candidates||[]).forEach((c,ci)=>{
+    const d=document.createElement('div');
+    d.className='cand'+(b.selected&&b.selected.media_id===c.media_id?' selected':'');
+    const sc=c.subclip||{};
+    d.innerHTML=`<div class="meta">#${ci+1} media ${c.media_id} ${c.object_||''} ${(c.actions||[]).join('/')}
+      ${tag(c.qa&&c.qa.status||'PENDING')}</div>
+      <div class="why">subclip ${sc.start_s||'?'}–${sc.end_s||'?'}s | semantic=${c.semantic_correct} boundary=${c.boundary_usable}</div>
+      <div class="why">${c.why||''}</div>
+      <div class="sel" id="sel-${c.media_id}">${c.rejected?(c.rejected.join('; ')):''}</div>
+      <button class="btn ghost" onclick="playCand(${JSON.stringify(c).replace(/"/g,'&quot;')},${ci})">▶ 播放</button>
+      <button class="btn" onclick="replace(${JSON.stringify(b.id)},${JSON.stringify(c.media_id)},${sc.start_s},${sc.end_s})">替换本镜</button>`;
+    el.appendChild(d);
+  });
+}
+function play(b){
+  const sel=b.selected||(b.candidates||[])[0];
+  playCand(sel,0);
+}
+function playCand(c,ci){
+  const sc=(c&&c.subclip)||{};
+  let src='';
+  if(c&&c.path){
+    const p=encodeURIComponent(c.path);
+    src=`/file?p=${p}`+(sc.start_s!=null?`#t=${sc.start_s},${sc.end_s||''}`:'');
+  }
+  $('#player').innerHTML = src
+    ? `<video controls autoplay src="${src}"></video><div class="ev">${c.path||''} 播放区间 ${sc.start_s||0}–${sc.end_s||'end'}s</div>`
+    : '<div style="padding:20px;color:#888">无候选/无视频路径（构建器未回填）</div>';
+  $('#playtitle').textContent='预览: '+(PROJ.beats[currentBeat]?PROJ.beats[currentBeat].id:'');
+}
+async function replace(beatId,mediaId,start,end){
+  const r=await fetch('/api/replace',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({beat_id:beatId,selection:{media_id:mediaId,subclip:{start_s:start,end_s:end}}})});
+  const j=await r.json();
+  alert(j.ok?'已保存（重QA在构建器重建后回写）':'保存失败:'+(j.error||''));
+  if(j.ok) load();
+}
+load();
+</script></body></html>

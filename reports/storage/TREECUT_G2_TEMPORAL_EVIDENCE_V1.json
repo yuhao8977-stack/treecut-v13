@@ -1,0 +1,366 @@
+{
+ "level": "L2_VISUAL_CANDIDATE",
+ "note": "qwen2.5vl=L2 时序候选; 非L3; 仅用于动作候选与有界校准",
+ "items": [
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 0,
+   "frac": 0.12,
+   "t_s": 1.53,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=画面中有一张大理石桌面，但未见伸缩动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 1,
+   "frac": 0.3,
+   "t_s": 3.82,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中有一张大理石桌面，旁边有一个人正在操作，但没有明显的伸缩动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 2,
+   "frac": 0.5,
+   "t_s": 6.36,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中显示的桌面/岛台静止未动。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 3,
+   "frac": 0.7,
+   "t_s": 8.91,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中显示一个大型的大理石桌面，但没有显示桌面正在伸缩的动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 4,
+   "frac": 0.88,
+   "t_s": 11.2,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中有一张白色大理石纹理的桌面，但没有显示桌面正在伸缩的动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 0,
+   "frac": 0.12,
+   "t_s": 1.59,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中有一张大理石纹理的桌面，但没有显示桌面正在伸缩的动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 1,
+   "frac": 0.3,
+   "t_s": 3.97,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中有一张大理石纹理的桌面，但没有显示桌面正在伸缩的动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 2,
+   "frac": 0.5,
+   "t_s": 6.62,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中显示一个白色大理石纹理的桌面/岛台，但没有显示任何伸缩动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 3,
+   "frac": 0.7,
+   "t_s": 9.27,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中显示的桌面/岛台静止未动。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 4,
+   "frac": 0.88,
+   "t_s": 11.66,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中可见一个可伸缩桌面/岛台，但未见其正在移动。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 0,
+   "frac": 0.12,
+   "t_s": 1.42,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=桌面正在移动加宽。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 1,
+   "frac": 0.3,
+   "t_s": 3.55,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=桌面正在移动加宽。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 2,
+   "frac": 0.5,
+   "t_s": 5.91,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中显示的是一张固定桌面，没有伸缩动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 3,
+   "frac": 0.7,
+   "t_s": 8.27,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中显示一个工人站在一个固定位置的桌面旁边，没有看到桌面正在伸缩的动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 4,
+   "frac": 0.88,
+   "t_s": 10.4,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/岛台;\n\ndesc=画面中显示的是一张静止的桌面，没有伸缩动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 0,
+   "frac": 0.12,
+   "t_s": 0.75,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=画面中显示的是一张固定在木制台面上的白色设备，没有可见的伸缩动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 1,
+   "frac": 0.3,
+   "t_s": 1.87,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=画面中显示的是一张伸缩桌面，桌面处于展开状态，但没有看到有人正在操作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 2,
+   "frac": 0.5,
+   "t_s": 3.11,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=画面中展示了一张正在加宽的伸缩桌面。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 3,
+   "frac": 0.7,
+   "t_s": 4.36,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=画面中有一张伸缩桌面，但未见其正在伸缩的动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 4,
+   "frac": 0.88,
+   "t_s": 5.48,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=画面中有一张伸缩桌面，但未见其正在伸缩的动作。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 0,
+   "frac": 0.12,
+   "t_s": 0.63,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=手正在拉动桌面轨道插座。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 1,
+   "frac": 0.3,
+   "t_s": 1.57,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=手正在拉动伸缩桌面/岛台。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 2,
+   "frac": 0.5,
+   "t_s": 2.61,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=手正在拉动桌面轨道插座。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 3,
+   "frac": 0.7,
+   "t_s": 3.66,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=手正在拉动桌面下的轨道插座。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 4,
+   "frac": 0.88,
+   "t_s": 4.6,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=伸缩桌面/岛台静止未动。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 0,
+   "frac": 0.12,
+   "t_s": 0.63,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=手正在拉动伸缩桌面/岛台。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 1,
+   "frac": 0.3,
+   "t_s": 1.57,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=手正在拉动伸缩桌面/岛台。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 2,
+   "frac": 0.5,
+   "t_s": 2.61,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=手正在拉动桌面轨道插座。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 3,
+   "frac": 0.7,
+   "t_s": 3.66,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=手正在拉动桌面下的轨道插座。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "frame_idx": 4,
+   "frac": 0.88,
+   "t_s": 4.6,
+   "qwen_l2_raw": "state=OBJECT_PRESENT;\n\nobject=桌面/轨道插座/其他;\n\ndesc=伸缩桌面/岛台静止未动。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "frame_idx": 0,
+   "frac": 0.12,
+   "t_s": 0.81,
+   "qwen_l2_raw": "state=NOT_PRESENT\nobject=上层薄抽/下层抽屉/其他\ndesc=画面中没有显示抽屉被拉开或被推回。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "frame_idx": 1,
+   "frac": 0.3,
+   "t_s": 2.03,
+   "qwen_l2_raw": "state=NOT_PRESENT\nobject=上层薄抽/下层抽屉/其他\ndesc=画面中没有显示抽屉被拉开或被推回。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "frame_idx": 2,
+   "frac": 0.5,
+   "t_s": 3.38,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS(正在开/关)\nobject=下层抽屉\ndesc=画面中的人正在打开下层抽屉。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "frame_idx": 3,
+   "frac": 0.7,
+   "t_s": 4.73,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS(正在开/关)\nobject=下层抽屉\ndesc=画面中的人正在打开下层抽屉。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "frame_idx": 4,
+   "frac": 0.88,
+   "t_s": 5.95,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS(正在开/关)\nobject=下层抽屉\ndesc=画面中的人正在打开下层抽屉。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "frame_idx": 0,
+   "frac": 0.12,
+   "t_s": 1.07,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS(正在开/关)\nobject=下层抽屉\ndesc=画面中的人正在推动下层抽屉。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "frame_idx": 1,
+   "frac": 0.3,
+   "t_s": 2.68,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS(正在开/关)\nobject=下层抽屉\ndesc=画面中的人正在推动下层抽屉。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "frame_idx": 2,
+   "frac": 0.5,
+   "t_s": 4.47,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS(正在开/关)\nobject=上层薄抽/下层抽屉\ndesc=上层薄抽正在被拉开",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "frame_idx": 3,
+   "frac": 0.7,
+   "t_s": 6.26,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS(正在开/关)\nobject=下层抽屉\ndesc=画面中的人正在打开下层抽屉。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "frame_idx": 4,
+   "frac": 0.88,
+   "t_s": 7.87,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS(正在开/关)\nobject=下层抽屉\ndesc=画面中的人正在打开下层抽屉。",
+   "level": "L2_VISUAL_CANDIDATE"
+  }
+ ]
+}

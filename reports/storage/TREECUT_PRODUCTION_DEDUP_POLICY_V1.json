@@ -1,0 +1,23 @@
+{
+  "version": "V1",
+  "levels": [
+    "EXACT_SEGMENT_DUPLICATE",
+    "SOURCE_TIME_OVERLAP",
+    "SAME_ASSET_NEAR_DUPLICATE",
+    "VISUAL_NEAR_DUPLICATE",
+    "NARRATIVE_NEAR_DUPLICATE"
+  ],
+  "visual": {
+    "method": "DCT-pHash",
+    "strong_<=6": "HIGH 候选",
+    "7-12": "复核"
+  },
+  "narrative_factors": [
+    "同演示者",
+    "同案例提示",
+    "同功能文件夹",
+    "同shot_role"
+  ],
+  "timeline_usage": "production 项目追踪 segment_id/subclip/asset_id/visual_cluster/shot_role 已用",
+  "note": "阈值记录校准, 不全局拍脑袋; V2 重复结尾须拦截(至少WARNING, 强重复HIGH=P0)"
+}
