@@ -1,0 +1,12 @@
+{
+  "TOPIC/SCRIPT": "PARTIAL (copywriter.py + brain; 无独立 parser)",
+  "SCRIPT_BEATS": "EXISTS_NEEDS_INTEGRATION (cognitive/production.py)",
+  "SEMANTIC_REQUIREMENTS": "PARTIAL (planning.py slots+narration_hint)",
+  "SEGMENT_RETRIEVAL": "LEGACY_REUSABLE (matching.py; B003 资产可用, B007 未接)",
+  "SHOT_RANKING": "PARTIAL (roughcut; 新链未验)",
+  "TIMELINE": "LEGACY_REUSABLE (planning.py edit plan; 实例 plan_json 存在)",
+  "SUBTITLE/TTS/BGM": "PARTIAL (实例: srt=0, wav≈2s, bgm 生成) → 破损环节",
+  "JIANYING_DRAFT/RENDER": "PARTIAL (jianying.py+mp4.py; preview.mp4 已出但为旧链)",
+  "FINISHED_VIDEO": "NOT_YET (存在旧链 demo MP4, 非新 Truth 链产物)",
+  "runs_end_to_end_today": false
+}

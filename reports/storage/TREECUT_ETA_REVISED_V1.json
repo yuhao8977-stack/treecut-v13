@@ -1,0 +1,47 @@
+{
+  "basis": {
+    "git_commits_last_14d": 206,
+    "git_commits_per_day": 14.7,
+    "v07_v08_actual": "2.5h (20 media pipeline)",
+    "media_worker": "proven (20/20 exact)",
+    "production_modules": "24 modules scanned; ~11 legacy-reusable, ~7 partial",
+    "tests": "299 passed, 2 skipped"
+  },
+  "first_end_to_end_finished_video": {
+    "optimistic": "1 effective dev day",
+    "realistic": "2-3 effective dev days",
+    "blocker": [
+      "修复 TTS/字幕环节 (srt=0, wav 破损)",
+      "把 B007 segment/ASR/OCR 接到 planning/matching/roughcut",
+      "新链渲染 QA 至少 1 条"
+    ]
+  },
+  "pilot_5": {
+    "optimistic": "3 days",
+    "realistic": "3-7 days",
+    "blocker": [
+      "first video 验收",
+      "人工打分标准落地",
+      "5 类内容各 1 条"
+    ]
+  },
+  "stable_daily_production": {
+    "optimistic": "1 week",
+    "realistic": "1-2 weeks",
+    "blocker": [
+      "规则稳定",
+      "QA 闸自动化",
+      "素材去重/cooldown 生效"
+    ]
+  },
+  "mature_v1": {
+    "optimistic": "3 weeks",
+    "realistic": "3-6 weeks",
+    "blocker": [
+      "认知校准(L3)",
+      "Recent 样本补链",
+      "反馈闭环"
+    ]
+  },
+  "note": "FIRST VIDEO 与 MATURE V1 分开：第一条重在打通链（含修复 TTS/字幕），成熟版才谈稳定性"
+}

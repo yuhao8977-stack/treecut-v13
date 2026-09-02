@@ -1,0 +1,335 @@
+{
+ "phase": "CORRECTIVE_STATUS_AUDIT",
+ "generated_at": "2026-09-02",
+ "reference_date": "2026-09-02",
+ "sample20_exact_recency": [
+  {
+   "sample_id": "SA-6544d761",
+   "note_id": "6544d761000000001f038f12",
+   "title": "请大数据把我推给🔥小户型进门就是厨房",
+   "publish_time": "2023-11-03 20:19",
+   "year_month": "2023-11",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "age_days": 1033
+  },
+  {
+   "sample_id": "SA-64f158f4",
+   "note_id": "64f158f4000000001d014203",
+   "title": "小户型进门就是厨房❗岛台这样做好看又好用",
+   "publish_time": "2023-09-01 17:00",
+   "year_month": "2023-09",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "age_days": 1096
+  },
+  {
+   "sample_id": "SA-64e42823",
+   "note_id": "64e42823000000000800c82d",
+   "title": "我发现🆘2023年岛台灯光万能🔥6个逻辑",
+   "publish_time": "2023-08-22 11:14",
+   "year_month": "2023-08",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "age_days": 1106
+  },
+  {
+   "sample_id": "SA-66f672d6",
+   "note_id": "66f672d6000000001902efbb",
+   "title": "造孽啊🤯岛台内嵌烤箱翻倒到地上!?️",
+   "publish_time": "2024-09-29 21:00",
+   "year_month": "2024-09",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "age_days": 702
+  },
+  {
+   "sample_id": "SB-63c5675a",
+   "note_id": "63c5675a000000001c034435",
+   "title": "餐厅布局案例:错位岛台让餐厅提高档次❗",
+   "publish_time": "2023-01-16 23:03",
+   "year_month": "2023-01",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "age_days": 1324
+  },
+  {
+   "sample_id": "SB-682edce4",
+   "note_id": "682edce4000000001101e878",
+   "title": "岛台水电如何预留布局?才合理不翻车?",
+   "publish_time": "2025-06-01 17:00",
+   "year_month": "2025-06",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "age_days": 457
+  },
+  {
+   "sample_id": "SB-66d7c509",
+   "note_id": "66d7c509000000000c018964",
+   "title": "岛台水电布局不想返工❌一定要看👀",
+   "publish_time": "2024-09-05 17:00",
+   "year_month": "2024-09",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "age_days": 726
+  },
+  {
+   "sample_id": "SC-64fbe901",
+   "note_id": "64fbe901000000001d01424c",
+   "title": "8m2小厨房✅,被问爆的岛台安装&设计来啦!",
+   "publish_time": "2023-09-09 11:39",
+   "year_month": "2023-09",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "age_days": 1088
+  },
+  {
+   "sample_id": "SC-65bc60fe",
+   "note_id": "65bc60fe0000000008022950",
+   "title": "奶呼呼的岛台太哇塞了🔥颜值扛把子!!",
+   "publish_time": "2024-02-14 17:00",
+   "year_month": "2024-02",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "age_days": 930
+  },
+  {
+   "sample_id": "SC-69f9a0ac",
+   "note_id": "69f9a0ac000000003701d937",
+   "title": "通透又显大的开放式厨房标配岛台🤔",
+   "publish_time": "2026-05-06 12:01",
+   "year_month": "2026-05",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "age_days": 118
+  },
+  {
+   "sample_id": "SC-63c8d157",
+   "note_id": "63c8d157000000001f02357d",
+   "title": "岛台不做收纳储物真的很可惜❗再配个水槽",
+   "publish_time": "2023-01-19 13:12",
+   "year_month": "2023-01",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "age_days": 1321
+  },
+  {
+   "sample_id": "SD-66de90b3",
+   "note_id": "66de90b3000000000c01a935",
+   "title": "岛台餐椅咋配😭",
+   "publish_time": "2024-09-09 19:01",
+   "year_month": "2024-09",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "age_days": 722
+  },
+  {
+   "sample_id": "SD-670630e9",
+   "note_id": "670630e9000000001a023e3f",
+   "title": "有了这款餐椅🪑终于实现梦想的岛台氛围",
+   "publish_time": "2024-10-11 17:00",
+   "year_month": "2024-10",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "age_days": 690
+  },
+  {
+   "sample_id": "SD-69367987",
+   "note_id": "69367987000000001b027d8f",
+   "title": "还愁电器没地方放?这款岛台真的很实用",
+   "publish_time": "2025-12-09 18:01",
+   "year_month": "2025-12",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "age_days": 266
+  },
+  {
+   "sample_id": "SD-64db4e87",
+   "note_id": "64db4e87000000001701a578",
+   "title": "救命🆘岛台工厂大牌平替被我找到了❗💡",
+   "publish_time": "2023-08-15 18:08",
+   "year_month": "2023-08",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "age_days": 1113
+  },
+  {
+   "sample_id": "SE-64336391",
+   "note_id": "643363910000000013036c3a",
+   "title": "高能预警🔥智能未来3.0降临餐桌岛台",
+   "publish_time": "2023-04-10 10:58",
+   "year_month": "2023-04",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "age_days": 1240
+  },
+  {
+   "sample_id": "SE-66ebc041",
+   "note_id": "66ebc041000000000c01b331",
+   "title": "对天发誓 这个沙发后岛台真的....",
+   "publish_time": "2024-09-20 21:00",
+   "year_month": "2024-09",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "age_days": 711
+  },
+  {
+   "sample_id": "SE-6718abc7",
+   "note_id": "6718abc70000000021009845",
+   "title": "我怎么没早点看到岛台收纳🔥",
+   "publish_time": "2024-10-24 19:01",
+   "year_month": "2024-10",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "age_days": 677
+  },
+  {
+   "sample_id": "SF-63a6a53f",
+   "note_id": "63a6a53f000000001f00d5e2",
+   "title": "传统餐桌换成岛台🎃简直不要太美!",
+   "publish_time": "2022-12-24 15:07",
+   "year_month": "2022-12",
+   "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+   "age_days": 1347
+  },
+  {
+   "sample_id": "SF-640dc105",
+   "note_id": "640dc1050000000014025280",
+   "title": "不做岛台不知道的“坑”,太真实啦❗",
+   "publish_time": "2023-03-12 20:09",
+   "year_month": "2023-03",
+   "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+   "age_days": 1269
+  }
+ ],
+ "sample20_year_distribution": {
+  "2023": 9,
+  "2024": 7,
+  "2025": 2,
+  "2026": 1,
+  "2022": 1
+ },
+ "sample20_recency_buckets": {
+  "30d": 0,
+  "60d": 0,
+  "90d": 0,
+  "180d": 1,
+  "gt180d": 19
+ },
+ "sample20_2026_count": 1,
+ "sample20_within_180d_count": 1,
+ "recent_universe": {
+  "2026_03_08": {
+   "total": 341,
+   "video": 340,
+   "by_paid_status": {
+    "NOTE_PAID_METRIC_PRESENT": 251,
+    "NO_PAID_ASSOCIATION_OBSERVED": 36,
+    "PAID_ASSOCIATED_NO_METRIC_RECORD": 53
+   },
+   "creator_high": 8,
+   "recent_nopaid_control": 28,
+   "paid_efficient": 251,
+   "paid_high_input_weak": 25,
+   "cross_source": 53,
+   "p75_creator_view": 139.0
+  },
+  "2026_07_08": {
+   "total": 116,
+   "video": 116,
+   "by_paid_status": {
+    "NOTE_PAID_METRIC_PRESENT": 62,
+    "NO_PAID_ASSOCIATION_OBSERVED": 20,
+    "PAID_ASSOCIATED_NO_METRIC_RECORD": 34
+   },
+   "creator_high": 4,
+   "recent_nopaid_control": 16,
+   "paid_efficient": 62,
+   "paid_high_input_weak": 0,
+   "cross_source": 34,
+   "p75_creator_view": 158.0
+  }
+ },
+ "recent12_feasibility": {
+  "proposal": "6x 2026-07~08 + 6x 2026-03~06",
+  "eligible_2026_07_08_total_video": 116,
+  "eligible_2026_03_06_total_video": 224,
+  "by_category_07_08": {
+   "total": 116,
+   "video": 116,
+   "by_paid_status": {
+    "NOTE_PAID_METRIC_PRESENT": 62,
+    "NO_PAID_ASSOCIATION_OBSERVED": 20,
+    "PAID_ASSOCIATED_NO_METRIC_RECORD": 34
+   },
+   "creator_high": 5,
+   "recent_nopaid_control": 15,
+   "paid_efficient": 62,
+   "paid_high_input_weak": 0,
+   "cross_source": 34
+  },
+  "by_category_03_06": {
+   "total": 225,
+   "video": 224,
+   "by_paid_status": {
+    "NOTE_PAID_METRIC_PRESENT": 189,
+    "NO_PAID_ASSOCIATION_OBSERVED": 16,
+    "PAID_ASSOCIATED_NO_METRIC_RECORD": 19
+   },
+   "creator_high": 3,
+   "recent_nopaid_control": 13,
+   "paid_efficient": 189,
+   "paid_high_input_weak": 25,
+   "cross_source": 19
+  },
+  "note": "eligibility counts only; no selection/media recovery performed"
+ },
+ "templates": [
+  {
+   "template_id": "T001",
+   "template_name": "客户案例模板",
+   "content_type": "客户案例",
+   "structure": "[{\"t\": \"0-3s\", \"role\": \"结果展示\", \"slot\": \"完工实景+客户反馈\", \"required\": true}, {\"t\": \"3-13s\", \"role\": \"客户背景\", \"slot\": \"城市+户型+需求\", \"required\": true}, {\"t\": \"13-33s\", \"role\": \"功能卖点\", \"slot\": \"产品细节+功能演示\", \"required\": true}, {\"t\": \"33-40s\", \"role\": \"CTA\", \"slot\": \"咨询引导\", \"required\": true}]",
+   "slot_rules": "{\"结果展示\": \"需要高镜头价值画面（完工全景+人物）\", \"功能卖点\": \"需要功能演示素材（伸缩/收纳/插座）\"}",
+   "cta": "同款岛台定制，评论区扣1",
+   "version": "1.0",
+   "active": 1,
+   "authoring": "HAND_AUTHORED"
+  },
+  {
+   "template_id": "T002",
+   "template_name": "工厂实力模板",
+   "content_type": "工厂实力",
+   "structure": "[{\"t\": \"0-3s\", \"role\": \"工厂开场\", \"slot\": \"车间全景+设备\", \"required\": true}, {\"t\": \"3-15s\", \"role\": \"生产过程\", \"slot\": \"开料/封边/打孔\", \"required\": true}, {\"t\": \"15-25s\", \"role\": \"产品展示\", \"slot\": \"成品+工艺细节\", \"required\": true}, {\"t\": \"25-30s\", \"role\": \"品质证明\", \"slot\": \"质检/细节特写\", \"required\": false}, {\"t\": \"30-35s\", \"role\": \"直播引导\", \"slot\": \"CTA\", \"required\": true}]",
+   "slot_rules": "{\"生产过程\": \"需要工厂场景素材\", \"产品展示\": \"需要产品细节素材\"}",
+   "cta": "想了解工艺的姐妹扣2",
+   "version": "1.0",
+   "active": 1,
+   "authoring": "HAND_AUTHORED"
+  },
+  {
+   "template_id": "T003",
+   "template_name": "产品介绍模板",
+   "content_type": "产品介绍",
+   "structure": "[{\"t\": \"0-3s\", \"role\": \"产品亮相\", \"slot\": \"产品全景\", \"required\": true}, {\"t\": \"3-18s\", \"role\": \"卖点拆解\", \"slot\": \"尺寸/材质/功能逐项\", \"required\": true}, {\"t\": \"18-28s\", \"role\": \"细节特写\", \"slot\": \"五金/台面纹理\", \"required\": true}, {\"t\": \"28-33s\", \"role\": \"CTA\", \"slot\": \"咨询引导\", \"required\": true}]",
+   "slot_rules": "{\"卖点拆解\": \"需要产品功能介绍素材（伸缩/收纳/插座）\", \"细节特写\": \"需要材质细节素材（岩板/奢石纹理）\"}",
+   "cta": "喜欢的扣3，发你详细清单",
+   "version": "1.0",
+   "active": 1,
+   "authoring": "HAND_AUTHORED"
+  },
+  {
+   "template_id": "T004",
+   "template_name": "避坑知识模板",
+   "content_type": "避坑知识",
+   "structure": "[{\"t\": \"0-3s\", \"role\": \"痛点开场\", \"slot\": \"错误做法/问题画面\", \"required\": true}, {\"t\": \"3-20s\", \"role\": \"避坑讲解\", \"slot\": \"注意事项+正确做法\", \"required\": true}, {\"t\": \"20-28s\", \"role\": \"方案建议\", \"slot\": \"推荐方案+理由\", \"required\": true}, {\"t\": \"28-33s\", \"role\": \"CTA\", \"slot\": \"评论互动\", \"required\": true}]",
+   "slot_rules": "{\"避坑讲解\": \"需要对比画面（错误vs正确）\"}",
+   "cta": "还有哪些坑？评论区告诉我",
+   "version": "1.0",
+   "active": 1,
+   "authoring": "HAND_AUTHORED"
+  }
+ ],
+ "production_plans": [
+  {
+   "project_id": "客户案例001",
+   "template_id": "T001",
+   "content_type": "客户案例",
+   "plan_json": "{\"project_id\": \"客户案例001\", \"template_id\": \"T001\", \"template_name\": \"客户案例模板\", \"content_type\": \"客户案例\", \"slots\": [{\"role\": \"结果展示\", \"time_range\": \"0-3s\", \"asset_id\": \"4b1aed2dc7464d15\", \"media_id\": 6841, \"path\": \"\\\\\\\\X1\\\\素材盘01\\\\已处理素材\\\\JianyingPro Presets\\\\Combination\\\\Resources\\\\a85e221ebbf8629fc119291163a7a6bc.MP4\", \"score\": 89.2, \"duration\": 3.0, \"narration_hint\": \"需要高镜头价值画面（完工全景+人物）\"}, {\"role\": \"客户背景\", \"time_range\": \"3-13s\", \"asset_id\": \"59ee4ac5a11c4284\", \"media_id\": 7518, \"path\": \"\\\\\\\\X1\\\\素材盘01\\\\未处理素材\\\\【工厂】\\\\【工厂】产品类01\\\\11.29 产品视频拍摄（已整理）\\\\【07】【20251129】杭州肖小姐 洞石中古风岛台\\\\产品介绍\\\\DJI_20251129141757_02",
+   "status": "draft_ready",
+   "output_dir": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\output\\brain_production\\客户案例001",
+   "created_time": 1787550377.3468313
+  },
+  {
+   "project_id": "产品介绍001",
+   "template_id": "T003",
+   "content_type": "产品介绍",
+   "plan_json": "{\"project_id\": \"产品介绍001\", \"template_id\": \"T003\", \"template_name\": \"产品介绍模板\", \"content_type\": \"产品介绍\", \"slots\": [{\"role\": \"产品亮相\", \"time_range\": \"0-3s\", \"asset_id\": \"c9a7be42303846be\", \"media_id\": 1005, \"path\": \"\\\\\\\\X1\\\\素材盘01\\\\已处理素材\\\\卖点展示类素材\\\\【03】开放抽屉\\\\【16】【星宿黑的颜色+哑光潘多拉】唐山韩小姐【岛头的收纳细节展示】【坤宝】02\\\\【16】【星宿黑的颜色+哑光潘多拉】唐山韩小姐【岛头的收纳细节展示】【坤宝】02-1.mp4\", \"score\": 41.4, \"duration\": 3.0, \"narration_hint\": \"\"}, {\"role\": \"卖点拆解\", \"time_range\": \"3-18s\", \"asset_id\": \"2385c24691344452\", \"media_id\": 2726, \"path\": \"\\\\\\\\X1\\\\素材盘01\\\\已处理素材\\\\卖点展示类素材\\\\【26】材质细节展示\\\\ 【73】【米黄洞石+艾米利亚棕】苏金女士【空镜岛头木纹材质细节展示】\\\\ 【73】【米黄洞石+艾米利亚棕】苏金女士【空镜岛头",
+   "status": "rendered",
+   "output_dir": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\output\\brain_production\\产品介绍001",
+   "created_time": 1787551004.4058275
+  }
+ ]
+}

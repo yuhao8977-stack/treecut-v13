@@ -1,0 +1,90 @@
+{
+  "goal": "先用16段判定 L3 校准收益；收益不足则不再审剩余24段",
+  "selection_rule": "8 OPENING + 8 HIGH_INFORMATION，按 storage/flexible/dining/detail/power/human/product 证据分排序",
+  "opening": [
+    {
+      "segment_id": "b007:66de90b3000000000c01a935:0",
+      "sample_id": "SD-66de90b3",
+      "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+    },
+    {
+      "segment_id": "b007:64db4e87000000001701a578:0",
+      "sample_id": "SD-64db4e87",
+      "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+    },
+    {
+      "segment_id": "b007:66f672d6000000001902efbb:0",
+      "sample_id": "SA-66f672d6",
+      "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED"
+    },
+    {
+      "segment_id": "b007:66d7c509000000000c018964:0",
+      "sample_id": "SB-66d7c509",
+      "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED"
+    },
+    {
+      "segment_id": "b007:670630e9000000001a023e3f:0",
+      "sample_id": "SD-670630e9",
+      "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+    },
+    {
+      "segment_id": "b007:6718abc70000000021009845:0",
+      "sample_id": "SE-6718abc7",
+      "stratum": "E_CROSS_SOURCE_CONTRAST"
+    },
+    {
+      "segment_id": "b007:640dc1050000000014025280:0",
+      "sample_id": "SF-640dc105",
+      "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+    },
+    {
+      "segment_id": "b007:63c5675a000000001c034435:0",
+      "sample_id": "SB-63c5675a",
+      "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED"
+    }
+  ],
+  "high_info": [
+    {
+      "segment_id": "b007:69367987000000001b027d8f:10",
+      "sample_id": "SD-69367987",
+      "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+    },
+    {
+      "segment_id": "b007:63c8d157000000001f02357d:2",
+      "sample_id": "SC-63c8d157",
+      "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE"
+    },
+    {
+      "segment_id": "b007:65bc60fe0000000008022950:5",
+      "sample_id": "SC-65bc60fe",
+      "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE"
+    },
+    {
+      "segment_id": "b007:66ebc041000000000c01b331:5",
+      "sample_id": "SE-66ebc041",
+      "stratum": "E_CROSS_SOURCE_CONTRAST"
+    },
+    {
+      "segment_id": "b007:63c5675a000000001c034435:3",
+      "sample_id": "SB-63c5675a",
+      "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED"
+    },
+    {
+      "segment_id": "b007:69f9a0ac000000003701d937:5",
+      "sample_id": "SC-69f9a0ac",
+      "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE"
+    },
+    {
+      "segment_id": "b007:66d7c509000000000c018964:19",
+      "sample_id": "SB-66d7c509",
+      "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED"
+    },
+    {
+      "segment_id": "b007:66de90b3000000000c01a935:4",
+      "sample_id": "SD-66de90b3",
+      "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+    }
+  ],
+  "estimated_user_time_min": 30,
+  "stop_rule": "若16段 L3 校准对认知准确率提升不明显 → 不继续剩余24段，先修 schema/模型"
+}

@@ -1,0 +1,42 @@
+{
+  "project": "产品介绍001",
+  "template": "T003",
+  "status_in_db": "rendered",
+  "output_dir": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\output\\brain_production\\产品介绍001",
+  "files": {
+    "preview.mp4": {
+      "exists": true,
+      "codec": "h264",
+      "resolution": "540x960",
+      "duration_s": 32.43,
+      "voice": "UNKNOWN(未探测音轨)",
+      "subtitle_burned": "UNKNOWN"
+    },
+    "narration_script.txt": {
+      "exists": true,
+      "bytes": 289
+    },
+    "narration.wav": {
+      "exists": true,
+      "bytes": 176478,
+      "note": "约2-3s，与32.4s成片不匹配 → TTS 疑似失败/仅片段"
+    },
+    "narration.srt": {
+      "exists": true,
+      "bytes": 0,
+      "note": "空字幕 → 字幕未生成"
+    },
+    "bgm.mp3": {
+      "exists": true
+    },
+    "jianying_draft": {
+      "exists": true,
+      "note": "剪映草稿目录存在，未在剪映验证"
+    },
+    "production_plan.json": {
+      "exists": true
+    }
+  },
+  "qa": "NO_EVIDENCE (本次审计未见该产物的 QA 记录)",
+  "conclusion": "存在真实 preview.mp4（540x960/32.4s），但配音/字幕环节破损(srt=0, wav≈2s)；属旧链半成品，非可发布成片"
+}

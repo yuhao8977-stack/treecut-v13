@@ -1,0 +1,125 @@
+{
+  "phase": "CORRECTIVE_STATUS_AUDIT",
+  "module_inventory": [
+    {
+      "module": "script parser (选题/脚本)",
+      "status": "PARTIAL",
+      "evidence": "treecut.workflow.planning? 未见独立 parser；brain/planning 有 plan 结构"
+    },
+    {
+      "module": "script beats (脚本节拍)",
+      "status": "EXISTS_NEEDS_INTEGRATION",
+      "evidence": "cognitive/production.py, application/production.py 引用 script_beats 概念"
+    },
+    {
+      "module": "semantic requirement builder",
+      "status": "PARTIAL",
+      "evidence": "workflow/planning.py build_edit_plan + narration_hint 槽位"
+    },
+    {
+      "module": "segment retrieval",
+      "status": "LEGACY_REUSABLE",
+      "evidence": "workflow/matching.py MatchResult; search/hybrid.py"
+    },
+    {
+      "module": "vector retrieval",
+      "status": "PARTIAL",
+      "evidence": "search/hybrid.py + embedding_worker; 旧 B003 索引可用性未实测"
+    },
+    {
+      "module": "shot candidate ranking",
+      "status": "PARTIAL",
+      "evidence": "roughcut/engine.py + roughcut/sort_advisor.py（旧链路）"
+    },
+    {
+      "module": "shot usage / cooldown",
+      "status": "EXISTS_NEEDS_INTEGRATION",
+      "evidence": "services/shot_usage.py; shot_usage 表 0 行（新链未用）"
+    },
+    {
+      "module": "duplicate control",
+      "status": "PARTIAL",
+      "evidence": "stage3_near_dup / library/hash_utils（旧验证过）; 新链未接"
+    },
+    {
+      "module": "continuity",
+      "status": "UNKNOWN",
+      "evidence": "未见专门模块"
+    },
+    {
+      "module": "template registry",
+      "status": "LEGACY_REUSABLE",
+      "evidence": "templates/engine.py + content_templates T001-T004（HAND_AUTHORED）"
+    },
+    {
+      "module": "edit plan",
+      "status": "LEGACY_REUSABLE",
+      "evidence": "workflow/planning.py build_edit_plan"
+    },
+    {
+      "module": "production plan",
+      "status": "LEGACY_REUSABLE",
+      "evidence": "production_plans 表 2 行; cognitive/production.py"
+    },
+    {
+      "module": "copywriter (文案)",
+      "status": "LEGACY_REUSABLE",
+      "evidence": "copywriter.py build_narration; narration_script.txt 289B 已生成"
+    },
+    {
+      "module": "TTS",
+      "status": "PARTIAL",
+      "evidence": "models/tts_local.py; narration.wav 仅 176KB(~2-3s) 疑似失败/片段"
+    },
+    {
+      "module": "subtitle",
+      "status": "PARTIAL",
+      "evidence": "output/narration.py build_srt; 实例 narration.srt=0 字节 → 未成"
+    },
+    {
+      "module": "BGM",
+      "status": "EXISTS_NEEDS_INTEGRATION",
+      "evidence": "实例 bgm.mp3 已生成；未验证混流"
+    },
+    {
+      "module": "transition / effects",
+      "status": "UNKNOWN",
+      "evidence": "jianying draft 槽位内；未验证"
+    },
+    {
+      "module": "jianying.py (剪映草稿)",
+      "status": "LEGACY_REUSABLE",
+      "evidence": "output/jianying.py; 实例 jianying_draft/ 存在但未在剪映验证"
+    },
+    {
+      "module": "pyJianYingDraft",
+      "status": "LEGACY_REUSABLE",
+      "evidence": "jianying.py 引用; 需确认 pip 包可用性（未在本次验证）"
+    },
+    {
+      "module": "VideoEditorBridge",
+      "status": "PARTIAL",
+      "evidence": "application/production.py 引用; 未在本次验证"
+    },
+    {
+      "module": "direct renderer (MP4)",
+      "status": "PARTIAL",
+      "evidence": "output/mp4.py; preview.mp4 540x960 32.4s 已生成（旧链）"
+    },
+    {
+      "module": "production QA",
+      "status": "PARTIAL",
+      "evidence": "quality/inspection.py + quality_validation/store.py（旧链）; 本次无 QA 记录"
+    },
+    {
+      "module": "preview UI",
+      "status": "LEGACY_REUSABLE",
+      "evidence": "ui/player.py, timeline_dialog.py 等（桌面 UI）"
+    },
+    {
+      "module": "feedback learning",
+      "status": "PARTIAL",
+      "evidence": "feedback_learning/ + learning/feedback.py; 无新链应用记录"
+    }
+  ]
+}
