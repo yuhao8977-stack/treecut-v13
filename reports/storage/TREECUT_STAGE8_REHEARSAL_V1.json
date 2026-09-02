@@ -1,0 +1,155 @@
+{
+ "title": "STAGE8 技术预演(非 Pilot V3; 不渲染成片)",
+ "chain": [
+  "ProductionSourceService(G1)",
+  "Atomic Claims parse",
+  "ClaimVisualMatcher",
+  "ActionSubclipService(108帧L2证据)",
+  "Production Dedup",
+  "ProductionQAService"
+ ],
+ "inputs": {
+  "script_beats": 16,
+  "evidence_frames": 108,
+  "windows": 40,
+  "beats_with_selected": 5
+ },
+ "beat_summary": [
+  {
+   "beat": "B1",
+   "text": "岛台想好用",
+   "candidates": 0,
+   "selected": 1,
+   "status": "OK"
+  },
+  {
+   "beat": "B2",
+   "text": "这三个细节最值得看",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  },
+  {
+   "beat": "B3",
+   "text": "第一",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  },
+  {
+   "beat": "B4",
+   "text": "上层薄抽",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  },
+  {
+   "beat": "B5",
+   "text": "收纳小物不弯腰",
+   "candidates": 3,
+   "selected": 3,
+   "status": "OK"
+  },
+  {
+   "beat": "B6",
+   "text": "打开就能拿到",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  },
+  {
+   "beat": "B7",
+   "text": "第二",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  },
+  {
+   "beat": "B8",
+   "text": "轨道插座",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  },
+  {
+   "beat": "B9",
+   "text": "吃火锅煮茶都方便",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  },
+  {
+   "beat": "B10",
+   "text": "插拔也顺手",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  },
+  {
+   "beat": "B11",
+   "text": "第三",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  },
+  {
+   "beat": "B12",
+   "text": "伸缩桌面",
+   "candidates": 3,
+   "selected": 2482,
+   "status": "OK"
+  },
+  {
+   "beat": "B13",
+   "text": "来客时一拉就变宽",
+   "candidates": 3,
+   "selected": 2482,
+   "status": "OK"
+  },
+  {
+   "beat": "B14",
+   "text": "平时收起来不占位",
+   "candidates": 3,
+   "selected": 2482,
+   "status": "OK"
+  },
+  {
+   "beat": "B15",
+   "text": "厨房好不好用",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  },
+  {
+   "beat": "B16",
+   "text": "全在这些小细节里",
+   "candidates": 0,
+   "selected": null,
+   "status": "NO_CANDIDATE"
+  }
+ ],
+ "qa_verdict": {
+  "READY_FOR_HUMAN_REVIEW": false,
+  "P0_BLOCKERS": [
+   "MAJOR_DUPLICATE",
+   "UNSUPPORTED_CORE_CLAIM",
+   "WRONG_ACTION",
+   "WRONG_FUNCTION_VISUAL"
+  ],
+  "fail_count": 25,
+  "warning_count": 2,
+  "not_ready_reason": "MAJOR_DUPLICATE; UNSUPPORTED_CORE_CLAIM; WRONG_ACTION; WRONG_FUNCTION_VISUAL"
+ },
+ "flags": {
+  "VOICE": "READY_FOR_INPUT",
+  "BGM": "BGM_LIBRARY_NOT_READY",
+  "caption_fontsize": 66
+ },
+ "no_silent_fallback": {
+  "voice": "VOICE_INPUT_REQUIRED(SAPI 仅 FALLBACK, 不宣称生产音)",
+  "bgm": "BGM_LIBRARY_NOT_READY(不 rip/不下载/不静音冒充)"
+ },
+ "not_pilot_v3": true,
+ "rendered_video": null,
+ "generated_at": "2026-09-02 20:08:02"
+}

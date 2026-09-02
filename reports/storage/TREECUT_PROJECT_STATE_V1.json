@@ -35,7 +35,7 @@
     "L11_TEMPLATE_RELEVANCE",
     "L12_HUMAN_FEEDBACK"
   ],
-  "updated_at": "2026-09-02 19:57:40",
+  "updated_at": "2026-09-02 20:12:21",
   "g1": {
     "architect_verdict": "STAGE8_G1_PASS_WITH_LIMITATIONS (L3 已回填, 待 Full Regression 后判最终)",
     "l3": {
@@ -95,8 +95,8 @@
       "skipped": 2,
       "failed": 0
     },
-    "windows": 28,
-    "evidence_frames": 87,
+    "windows": 40,
+    "evidence_frames": 108,
     "g2_query20_with_cands": 16,
     "g3_matcher_hits": 14,
     "ui_smoke": 200,
@@ -105,6 +105,18 @@
       "审 G2/G3 review HTML",
       "提供真人参考音(30-60s)",
       "提供授权 BGM 目录"
-    ]
+    ],
+    "full_regression_final": {
+      "passed": 354,
+      "skipped": 2,
+      "failed": 0,
+      "elapsed_s": 217
+    },
+    "db_integrity_final": {
+      "quick_check": "ok",
+      "fk_issues": 0
+    },
+    "rehearsal": "TREECUT_STAGE8_REHEARSAL_V1.json (VOICE_INPUT_REQUIRED/BGM_LIBRARY_NOT_READY, 非V3)",
+    "rounds_done": 4
   }
 }
