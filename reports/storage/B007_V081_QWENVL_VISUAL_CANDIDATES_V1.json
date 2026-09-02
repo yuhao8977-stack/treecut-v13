@@ -1,0 +1,3330 @@
+{
+ "phase": "V0.8.1",
+ "generated_at": "2026-09-02 11:03:08",
+ "model": "qwen2.5vl:7b",
+ "status_policy": "L2 CANDIDATE only; no auto L3",
+ "count": 40,
+ "ok": 40,
+ "segments": [
+  {
+   "segment_id": "b007:6544d761000000001f038f12:0",
+   "sample_id": "SA-6544d761",
+   "note_id": "6544d761000000001f038f12",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 33,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "text_evidence\": \"UNKNOWN\",\n  \"ASR_EVIDENCE\": \"有像我这种户型的吗?\",\n  \"OCR_EVIDENCE\": \"有跟我一样的户型的么？ ? Kasia岛台工厂 小红书 Kasia岛台\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6544d761000000001f038f12\\6544d761000000001f038f12_000.jpg",
+    "asr_text": "唉,有像我这种户型的吗?",
+    "ocr_text": "有跟我一样的户型的么？ ? Kasia岛台工厂 小红书 Kasia岛台",
+    "clip_frames": [
+     [
+      "OTHER",
+      26.084
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6544d761000000001f038f12:8",
+   "sample_id": "SA-6544d761",
+   "note_id": "6544d761000000001f038f12",
+   "seg_no": 8,
+   "start_ms": 12300,
+   "end_ms": 14800,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示厨房布局",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "厨房布局",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "厨房布局图",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "35 1454 厨房 688- 20 1.88m² 5.46 60 402- 1329 O 557 242 633 342 2304 60 753 阳台 2.32m2 975 今天就来浅聊下我的厨房布局思路 -279 1441\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6544d761000000001f038f12\\6544d761000000001f038f12_008.jpg",
+    "asr_text": "明天就来潜聊一下我的厨房布置思路 一,砸吗?反脏火菇是什么宗件?",
+    "ocr_text": "小红书 Kasia岛台工厂 Kasia岛台 935 1454 厨房 688- 20 1.88m² 5.46 60 402- 1329 O 557 242 633 342 2304 60 753 阳台 2.32m2 975 今天就来浅聊下我的厨房布局思路 -279 1441",
+    "clip_frames": [
+     [
+      "OTHER",
+      26.088
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:64f158f4000000001d014203:0",
+   "sample_id": "SA-64f158f4",
+   "note_id": "64f158f4000000001d014203",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 100,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "lue\": \"YES\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  },\n  \"storage_evidence\": {\n    \"value\": \"UNKNOWN\",\n    \"source\": \"UNKNOWN",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\64f158f4000000001d014203\\64f158f4000000001d014203_000.jpg",
+    "asr_text": "小户型进门注视厨房",
+    "ocr_text": "显大又实用 进门就是厨房 11个岛台设计案例 ? Kasia岛台工 小红书 Kasia岛台",
+    "clip_frames": [
+     [
+      "CUSTOMER_HOME",
+      27.848
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:64f158f4000000001d014203:1",
+   "sample_id": "SA-64f158f4",
+   "note_id": "64f158f4000000001d014203",
+   "seg_no": 1,
+   "start_ms": 100,
+   "end_ms": 23941,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "BEFORE_AFTER_COMPARISON",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "KITCHEN_REMODELING",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\",\n    \"source\": \"UNKNOWN\"\n  },\n  \"dining_context_evidence\": {\n    \"value\": \"UNKNOWN\",\n    \"source\": \"UNKNOWN\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\64f158f4000000001d014203\\64f158f4000000001d014203_001.jpg",
+    "asr_text": "小户型进门注视厨房 一定要来看看这11个抖台设计案例",
+    "ocr_text": "小红书 Kasia岛台工厂 Kasio岛台 #拆除厨房",
+    "clip_frames": [
+     [
+      "CUSTOMER_HOME",
+      27.695
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:64e42823000000000800c82d:0",
+   "sample_id": "SA-64e42823",
+   "note_id": "64e42823000000000800c82d",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 633,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "ence\": \"no\",\n  \"dining_context_evidence\": \"no\",\n  \"ASR_EVIDENCE\": \"no\",\n  \"OCR_EVIDENCE\": \"yes\",\n  \"unknown\": \"no\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\64e42823000000000800c82d\\64e42823000000000800c82d_000.jpg",
+    "asr_text": "连灯都不会选",
+    "ocr_text": "? Kasia岛台工厂 小红书 Kasia岛台",
+    "clip_frames": [
+     [
+      "OTHER",
+      27.365
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:64e42823000000000800c82d:69",
+   "sample_id": "SA-64e42823",
+   "note_id": "64e42823000000000800c82d",
+   "seg_no": 69,
+   "start_ms": 138400,
+   "end_ms": 146200,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "ntext_evidence\": \"yes\",\n  \"human_presence\": \"UNKNOWN\",\n  \"product_visibility\": \"yes\",\n  \"feature_demonstration\": \"高级感的光效",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\64e42823000000000800c82d\\64e42823000000000800c82d_069.jpg",
+    "asr_text": "如果你对美感 有更高要求的话 你就要看显色指数了 太阳光的RA值 接近100 色彩还原度就越高 所以你的灯源",
+    "ocr_text": "小红书 Kasia岛台工厂 ? Kasia岛台 高级感的光效 要点 【护眼灯】参数一览表 标识 解析 全光谱 越接近太阳 则光谱的连续 灯光越舒适目 显色指数 高显色 越能还原物太阳光的显指 CRI值(Ra)>97 RGO豁免 RGO豁免伤害RG1低危险 的 蓝光 IEC 伤害级别 RG2中等危险RG3高危险 FPF≤0.5% 频闪深度小于3.2% 无可视频闪伤害 基本忽略频闪的伤害 频闪 UGR>19，眩光刺眼 UGR<19，可以接受√ 眩光 防磁光 UGR≤19 调光 付暗 3000K-5000K调色 无做 调光调色 红业冰 太阳光的RA值 直接近100",
+    "clip_frames": [
+     [
+      "CUSTOMER_HOME",
+      25.981
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:66f672d6000000001902efbb:0",
+   "sample_id": "SA-66f672d6",
+   "note_id": "66f672d6000000001902efbb",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 1607,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "ng_context_evidence\": \"UNKNOWN\",\n  \"ASR_EVIDENCE\": \"闭坑啦 闭坑啦 老铁 倒台内嵌烤箱\",\n  \"OCR_EVIDENCE\": \"壁坑啦 BARBERRY高端岛台工厂 小红书\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\66f672d6000000001902efbb\\66f672d6000000001902efbb_000.jpg",
+    "asr_text": "闭坑啦 闭坑啦 老铁 倒台内嵌烤箱",
+    "ocr_text": "壁坑啦 BARBERRY高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      26.565
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:66f672d6000000001902efbb:16",
+   "sample_id": "SA-66f672d6",
+   "note_id": "66f672d6000000001902efbb",
+   "seg_no": 16,
+   "start_ms": 28143,
+   "end_ms": 30321,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "alue\": \"UNKNOWN\",\n    \"source\": \"UNKNOWN\"\n  },\n  \"human_presence\": {\n    \"value\": \"NO\",\n    \"source\": \"VISUAL_EVIDENCE\"\n",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\66f672d6000000001902efbb\\66f672d6000000001902efbb_016.jpg",
+    "asr_text": "很多工厂它内进尺寸的时候 不考虑这个小细节 它烤箱倒了之后要么就安不进去",
+    "ocr_text": "口 小红书 BARBERRY高端岛台工厂 不考虚这个小细节",
+    "clip_frames": [
+     [
+      "OTHER",
+      29.167
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:63c5675a000000001c034435:0",
+   "sample_id": "SB-63c5675a",
+   "note_id": "63c5675a000000001c034435",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 2800,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "MULTIMODAL_SUPPORT",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "L_SUPPORT\",\n  \"ASR_EVIDENCE\": \"老台做的样式 餐厅再提升一个档次 两款高颜值错位的\",\n  \"OCR_EVIDENCE\": \"餐厅再提升一个档次 Kasia岛台加工厂-宝哥 小红书 Kasia岛台\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\63c5675a000000001c034435\\63c5675a000000001c034435_000.jpg",
+    "asr_text": "老台做的样式 餐厅再提升一个档次 两款高颜值错位的",
+    "ocr_text": "餐斤再提升一个档次 Kasia岛台加工厂-宝哥 小红书 Kasia岛台",
+    "clip_frames": [
+     [
+      "OTHER",
+      29.246
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:63c5675a000000001c034435:3",
+   "sample_id": "SB-63c5675a",
+   "note_id": "63c5675a000000001c034435",
+   "seg_no": 3,
+   "start_ms": 6600,
+   "end_ms": 9869,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "大理石",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "function": {
+     "value": "刷碗",
+     "source": "ASR_EVIDENCE"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "no",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "嵌水槽",
+     "source": "OCR_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "no",
+     "source": "VISUAL_EVIDENCE"
+    }
+   },
+   "qwen_raw_tail": "    \"source\": \"UNKNOWN\"\n  },\n  \"dining_context_evidence\": {\n    \"value\": \"no\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\63c5675a000000001c034435\\63c5675a000000001c034435_003.jpg",
+    "asr_text": "但是做工都值得信赖 老台嵌水槽 方便刷网 更实用",
+    "ocr_text": "小红书 Kasia岛台加工厂-宝哥 Kasia岛台 岛台嵌水槽方便刷碗",
+    "clip_frames": [
+     [
+      "CUSTOMER_HOME",
+      28.243
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:682edce4000000001101e878:0",
+   "sample_id": "SB-682edce4",
+   "note_id": "682edce4000000001101e878",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 38,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "ence\": \"no\",\n  \"dining_context_evidence\": \"no\",\n  \"ASR_EVIDENCE\": \"no\",\n  \"OCR_EVIDENCE\": \"yes\",\n  \"unknown\": \"no\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\682edce4000000001101e878\\682edce4000000001101e878_000.jpg",
+    "asr_text": "导台的水电布局居然翻车了",
+    "ocr_text": "A",
+    "clip_frames": [
+     [
+      "OTHER",
+      29.266
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:682edce4000000001101e878:16",
+   "sample_id": "SB-682edce4",
+   "note_id": "682edce4000000001101e878",
+   "seg_no": 16,
+   "start_ms": 30462,
+   "end_ms": 36346,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "WN\",\n  \"ASR_EVIDENCE\": \"我们也从来不认为 你安全用电是一件小事 也从来都不认为 把孔位帮你打好 是一件很有口味的事 老铁 大家导台呗\",\n  \"OCR_EVIDENCE\": \"@坤宝岛台 也从来都不认为\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\682edce4000000001101e878\\682edce4000000001101e878_016.jpg",
+    "asr_text": "我们从来不认为 你安全用电是一件小事 也从来都不认为 把孔位帮你打好 是一件很有口味的事 老铁 大家导台呗",
+    "ocr_text": "@坤宝岛台 也从来都不认为",
+    "clip_frames": [
+     [
+      "OTHER",
+      28.909
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:66d7c509000000000c018964:0",
+   "sample_id": "SB-66d7c509",
+   "note_id": "66d7c509000000000c018964",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 1680,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "产品展示",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "展示岛台材质和设计",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "  \"dining_context_evidence\": \"UNKNOWN\",\n  \"ASR_EVIDENCE\": \"避充啊 避充啊 老铁\",\n  \"OCR_EVIDENCE\": \"避坑啦 BARBERRY高端岛台工厂 小红书\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\66d7c509000000000c018964\\66d7c509000000000c018964_000.jpg",
+    "asr_text": "避充啊 避充啊 老铁",
+    "ocr_text": "避坑啦 BARBERRY高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      27.514
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:66d7c509000000000c018964:19",
+   "sample_id": "SB-66d7c509",
+   "note_id": "66d7c509000000000c018964",
+   "seg_no": 19,
+   "start_ms": 33200,
+   "end_ms": 38840,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "SHOWROOM",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "展示岛台的细节",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\"六个电线的走线孔位置 这就是为啥 你的邻居说导台的时候 需要上蹿下跳 找人帮他开口接电线 而我们昆宝导台却只需要\",\n  \"ocr_evidence\": \"小红书 BARBERRY高端岛台工厂 坤宝岛台 你的邻居收岛台的时候\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\66d7c509000000000c018964\\66d7c509000000000c018964_019.jpg",
+    "asr_text": "六个电线的走线孔位置 这就是为啥 你的邻居说导台的时候 需要上蹿下跳 找人帮他开口接电线 而我们昆宝导台却只需要",
+    "ocr_text": "小红书 BARBERRY高端岛台工厂 坤宝岛台 你的邻居收岛台的时候",
+    "clip_frames": [
+     [
+      "OTHER",
+      27.681
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:64fbe901000000001d01424c:0",
+   "sample_id": "SC-64fbe901",
+   "note_id": "64fbe901000000001d01424c",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 33,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "DISPLAY",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "PARTIAL",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "PARTIAL",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "PARTIAL",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "e\": \"UNKNOWN\",\n  \"product_visibility\": \"PARTIAL\",\n  \"feature_demonstration\": \"PARTIAL\",\n  \"detail_shot\": \"PARTIAL\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\64fbe901000000001d01424c\\64fbe901000000001d01424c_000.jpg",
+    "asr_text": "这是湖南夜小姐和我们宝哥岛台定制的清法式风岛台",
+    "ocr_text": "Kasia岛台 ? Kasia岛台工厂 小红书 Kasia岛台",
+    "clip_frames": [
+     [
+      "OTHER",
+      29.146
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:64fbe901000000001d01424c:3",
+   "sample_id": "SC-64fbe901",
+   "note_id": "64fbe901000000001d01424c",
+   "seg_no": 3,
+   "start_ms": 4233,
+   "end_ms": 18200,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "大理石",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "function": {
+     "value": "聚会、火锅、开派对",
+     "source": "MULTIMODAL_SUPPORT"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示餐桌功能",
+     "source": "MULTIMODAL_SUPPORT"
+    },
+    "human_presence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "餐桌",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "餐桌设计",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "餐桌和椅子",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "双门收纳柜",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "power_evidence": {
+     "value": "公牛轨道插座",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "flexible_capacity_evidence": {
+     "value": "多人同时就餐",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "dining_context_evidence": {
+     "value": "餐桌",
+     "source": "VISUAL_EVIDENCE"
+    }
+   },
+   "qwen_raw_tail": "VISUAL_EVIDENCE\"\n  },\n  \"shot_function_candidate\": {\n    \"value\": \"展示餐桌功能\",\n    \"source\": \"MULTIMODAL_SUPPORT\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\64fbe901000000001d01424c\\64fbe901000000001d01424c_003.jpg",
+    "asr_text": "这边做了预留一台嵌入式 临摹针烤箱位置 岛台餐桌可以同时多人同时就餐 方便聚会火锅开派对 岛台上带有公牛轨道插座 餐厅用电非常方便 岛台一边做了双门收纳柜 如果你也是小户型",
+    "ocr_text": "小红书 Kasia岛台工厂 ? Kasia岛台 方便聚会、火锅、开 派对",
+    "clip_frames": [
+     [
+      "OTHER",
+      30.635
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:65bc60fe0000000008022950:0",
+   "sample_id": "SC-65bc60fe",
+   "note_id": "65bc60fe0000000008022950",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 3292,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "interaction_impact_frequency\": {\n    \"value\": \"一次\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  },\n  \"human_object_interaction_imp",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\65bc60fe0000000008022950\\65bc60fe0000000008022950_000.jpg",
+    "asr_text": "",
+    "ocr_text": "岛台 缓冲导轨 ? Kasia岛台工厂 小红书 Kasia岛台",
+    "clip_frames": [
+     [
+      "OTHER",
+      27.697
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:65bc60fe0000000008022950:5",
+   "sample_id": "SC-65bc60fe",
+   "note_id": "65bc60fe0000000008022950",
+   "seg_no": 5,
+   "start_ms": 15833,
+   "end_ms": 22625,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示厨房布局",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "展示厨房岛台的宽度和视觉空间的通透性",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\",\n  \"dining_context_evidence\": \"UNKNOWN\",\n  \"ASR_EVIDENCE\": \"open kitchen\",\n  \"OCR_EVIDENCE\": \"然后把整体的 视觉空间变得更加通透\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\65bc60fe0000000008022950\\65bc60fe0000000008022950_005.jpg",
+    "asr_text": "这边是一个烤箱的一个位置 开放式的厨房 然后把整体的视觉空间变得更加通透 整体感觉增加了至少8个平方 非常的哇塞 这个导台总宽800",
+    "ocr_text": "岛台 小红书 Kasia岛台工厂 ? Kasia岛台 然后把整体的 视觉空间变得更加通透",
+    "clip_frames": [
+     [
+      "OTHER",
+      29.583
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:69f9a0ac000000003701d937:0",
+   "sample_id": "SC-69f9a0ac",
+   "note_id": "69f9a0ac000000003701d937",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 100,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "OPEN_PLANET_KITCHEN_DEMONSTRATION",
+     "source": "OCR_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    }
+   },
+   "qwen_raw_tail": "\"UNKNOWN\",\n    \"source\": \"UNKNOWN\"\n  },\n  \"detail_shot\": {\n    \"value\": \"YES\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\69f9a0ac000000003701d937\\69f9a0ac000000003701d937_000.jpg",
+    "asr_text": "如果空间够大,可以像我家一样",
+    "ocr_text": "完美变身开开放式西厨",
+    "clip_frames": [
+     [
+      "OTHER",
+      32.716
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:69f9a0ac000000003701d937:5",
+   "sample_id": "SC-69f9a0ac",
+   "note_id": "69f9a0ac000000003701d937",
+   "seg_no": 5,
+   "start_ms": 10600,
+   "end_ms": 12733,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示餐桌与灶台的连接",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "灶台连接着1米9长的岩板定制餐桌",
+     "source": "OCR_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "餐桌",
+     "source": "OCR_EVIDENCE"
+    }
+   },
+   "qwen_raw_tail": "\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  },\n  \"detail_shot\": {\n    \"value\": \"yes\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\69f9a0ac000000003701d937\\69f9a0ac000000003701d937_005.jpg",
+    "asr_text": "让整个空间的功能更为多样性 导台连接了1米9长的研版定制餐桌 餐厅吊灯搭配了一致型的底检吊灯",
+    "ocr_text": "灶台连接着1米9长的岩板定制 餐桌",
+    "clip_frames": [
+     [
+      "OTHER",
+      29.702
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:63c8d157000000001f02357d:0",
+   "sample_id": "SC-63c8d157",
+   "note_id": "63c8d157000000001f02357d",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 100,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "NO",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\n  \"text_in_image\": {\n    \"value\": \"集齐收纳、水槽 隐藏式烤炉多种选择 一个岛台的功能 Kasia岛台加工厂-宝哥 小红书\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\63c8d157000000001f02357d\\63c8d157000000001f02357d_000.jpg",
+    "asr_text": "",
+    "ocr_text": "集齐收纳 水槽 隐藏式烤炉多种选择 一个岛台的功能 Kasia岛台加工厂-宝哥 小红书 （asia岛台",
+    "clip_frames": [
+     [
+      "CUSTOMER_HOME",
+      29.06
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:63c8d157000000001f02357d:2",
+   "sample_id": "SC-63c8d157",
+   "note_id": "63c8d157000000001f02357d",
+   "seg_no": 2,
+   "start_ms": 2467,
+   "end_ms": 3067,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示抽屉收纳",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "no",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "宝哥\",\n    \"source\": \"OCR_EVIDENCE\"\n  },\n  \"text_in_image_4\": {\n    \"value\": \"小红书\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\63c8d157000000001f02357d\\63c8d157000000001f02357d_002.jpg",
+    "asr_text": "",
+    "ocr_text": "妙潔 P 全新防回着 COOKING PAPER COOKING PAPER 2 EUXIA YUX# eds be peut P 双边收纳 ? Kasia岛台加工厂-宝哥 小红书 Kasia岛台",
+    "clip_frames": [
+     [
+      "OTHER",
+      22.834
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:66de90b3000000000c01a935:0",
+   "sample_id": "SD-66de90b3",
+   "note_id": "66de90b3000000000c01a935",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 3037,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "MULTIMODAL_SUPPORT"
+    },
+    "feature_demonstration": {
+     "value": "展示家具材质和设计",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "yes",
+     "source": "MULTIMODAL_SUPPORT"
+    }
+   },
+   "qwen_raw_tail": "EVIDENCE\"\n  },\n  \"OCR_EVIDENCE\": {\n    \"value\": \"微水泥奶白 岛台 share my day 微水泥奶白的岛台\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\66de90b3000000000c01a935\\66de90b3000000000c01a935_000.jpg",
+    "asr_text": "威雪宁奶白的宝台 它应该要配置这样子的餐椅 才会显得有高级感和温馨感的",
+    "ocr_text": "微水泥奶白 岛台 share my day 微水泥奶白的岛台",
+    "clip_frames": [
+     [
+      "OTHER",
+      30.005
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:66de90b3000000000c01a935:4",
+   "sample_id": "SD-66de90b3",
+   "note_id": "66de90b3000000000c01a935",
+   "seg_no": 4,
+   "start_ms": 16407,
+   "end_ms": 34148,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "产品展示",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "椅子的造型和颜色",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": " 其实你可以像他们家一样 你看 这边的话选择了两把椅子 这两把椅子的话 它的造型都不一样 颜色也不一样 你可以再去那边看一下 那边的话 则是安排了一个长条的一个凳子 长条的一个凳子的话 它会有一种一种工人里面的感觉 不会占地方\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\66de90b3000000000c01a935\\66de90b3000000000c01a935_004.jpg",
+    "asr_text": "像这样子的椅子的话 你们不需要说四把 一定要找一个硬模一样的 其实你可以像他们家一样 你看 这边的话选择了两把椅子 这两把椅子的话 它的造型都不一样 颜色也不一样 你可以再去那边看一下 那边的话 则是安排了一个长条的一个凳子 长条的一个凳子的话 它会有一种一种工人里面的感觉 不会占地方",
+    "ocr_text": "它的造型都不一样",
+    "clip_frames": [
+     [
+      "OTHER",
+      31.203
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:670630e9000000001a023e3f:0",
+   "sample_id": "SD-670630e9",
+   "note_id": "670630e9000000001a023e3f",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 643,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "yes",
+     "source": "MULTIMODAL_SUPPORT"
+    }
+   },
+   "qwen_raw_tail": "e\": \"no\",\n    \"source\": \"UNKNOWN\"\n  },\n  \"OCR_EVIDENCE\": {\n    \"value\": \"yes\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\670630e9000000001a023e3f\\670630e9000000001a023e3f_000.jpg",
+    "asr_text": "别人家的导台椅子长这样子",
+    "ocr_text": "别人家的岛台椅子长这样子",
+    "clip_frames": [
+     [
+      "OTHER",
+      30.555
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:670630e9000000001a023e3f:11",
+   "sample_id": "SD-670630e9",
+   "note_id": "670630e9000000001a023e3f",
+   "seg_no": 11,
+   "start_ms": 15179,
+   "end_ms": 17036,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "餐桌椅",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "function": {
+     "value": "用餐",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "餐桌椅",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "餐桌椅的摆放",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "餐桌椅的摆放",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "餐桌椅",
+     "source": "VISUAL_EVIDENCE"
+    }
+   },
+   "qwen_raw_tail": "VIDENCE\"\n  },\n  \"ocr_evidence\": {\n    \"value\": \"坤 不能毁在餐椅上面 12-36874561 免提供 付服务V\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\670630e9000000001a023e3f\\670630e9000000001a023e3f_011.jpg",
+    "asr_text": "新家的颜值不能毁在餐椅上面 今天这个美拉德风格的配色",
+    "ocr_text": "坤 不能毁在餐椅上面 12-36874561 免提供 付服务V",
+    "clip_frames": [
+     [
+      "OTHER",
+      30.067
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:69367987000000001b027d8f:0",
+   "sample_id": "SD-69367987",
+   "note_id": "69367987000000001b027d8f",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 12733,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "展示高低差20公分的伸缩导台",
+     "source": "MULTIMODAL_SUPPORT"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\",\n    \"source\": \"UNKNOWN\"\n  },\n  \"dining_context_evidence\": {\n    \"value\": \"UNKNOWN\",\n    \"source\": \"UNKNOWN\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\69367987000000001b027d8f\\69367987000000001b027d8f_000.jpg",
+    "asr_text": "小户型一定要做一个高低促成的伸缩导台 导台餐桌落差20公分 可以增加中流轨道的位置 而且我们可以增加放弹把风 开始小指指及牙筋都可以包进来哦",
+    "ocr_text": "落差20公分",
+    "clip_frames": [
+     [
+      "OTHER",
+      26.852
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:69367987000000001b027d8f:10",
+   "sample_id": "SD-69367987",
+   "note_id": "69367987000000001b027d8f",
+   "seg_no": 10,
+   "start_ms": 41400,
+   "end_ms": 53133,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  },\n  \"detail_shot\": {\n    \"value\": \"yes\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\69367987000000001b027d8f\\69367987000000001b027d8f_010.jpg",
+    "asr_text": "那如果说你家里面有各种水加电 都可以放进来哦 所以尺寸没有压抖哦 最下方还做了一个很大的抽屉 我们的小户居可以放进来 做五个导台 他说比我们的厨房都会非常干净整洁哦 小户型的导台配色 一定要非常注意颜色配比",
+    "ocr_text": "大抽庭 还做了一个很大的抽屉",
+    "clip_frames": [
+     [
+      "OTHER",
+      26.703
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:64db4e87000000001701a578:0",
+   "sample_id": "SD-64db4e87",
+   "note_id": "64db4e87000000001701a578",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 4033,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "SHOWROOM",
+     "source": "MULTIMODAL_SUPPORT"
+    },
+    "human_presence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    }
+   },
+   "qwen_raw_tail": "\"\n  },\n  \"OCR_EVIDENCE\": {\n    \"value\": \"30fps REC 不帅不好看吗 Kasia岛台工厂 小红书 Kasia岛台\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\64db4e87000000001701a578\\64db4e87000000001701a578_000.jpg",
+    "asr_text": "这水泥灰配色不帅不好看吗 买回去把你家一拍 这一个月节300多套开放式",
+    "ocr_text": "30fps REC 不帅不好看吗 Kasia岛台工厂 小红书 Kasia岛台",
+    "clip_frames": [
+     [
+      "OTHER",
+      29.541
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:64db4e87000000001701a578:7",
+   "sample_id": "SD-64db4e87",
+   "note_id": "64db4e87000000001701a578",
+   "seg_no": 7,
+   "start_ms": 13500,
+   "end_ms": 14400,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "SHOWROOM",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "岩板",
+     "source": "OCR_EVIDENCE"
+    },
+    "function": {
+     "value": "厨房岛台",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "展示岛台的多种用途",
+     "source": "MULTIMODAL_SUPPORT"
+    },
+    "detail_shot": {
+     "value": "展示岛台在不同环境中的应用",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "e\": \"MULTIMODAL_SUPPORT\"\n  },\n  \"detail_shot\": {\n    \"value\": \"展示岛台在不同环境中的应用\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\64db4e87000000001701a578\\64db4e87000000001701a578_007.jpg",
+    "asr_text": "全国各地的卖场经销商",
+    "ocr_text": "5:44 小红书 Kasia岛台） ? Kasia岛台 综合 餐桌一体 奶油风 佛山 开放式厨房 赞助 种草餐桌岛台！五大优点分 嘿！这里有你要找的原木风 享1.岩板产品以经典石... 奶油风岛台，看过来#.. 亚米岩板-岛台 17 02-27 A铁柱岛台定制... 38 不敢相信！ 小公寓也能做岛台 5.7km 5.7km 40平Loft公寓装这个岛台， 岛台不实用？一起来看看这 超赞的好嘛！小户型也... 个案例吧·顺德客户黎先.. 佛山岩板中岛台定. 德利丰岩板家居工. 03-08 7 02 太胃王叹纳 伸缩岛台 邻居很羡慕 一镇香 全国各地的卖场经销商 3L9 5电话 周末家庭朋友聚会 5.7km",
+    "clip_frames": [
+     [
+      "OTHER",
+      26.012
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:643363910000000013036c3a:0",
+   "sample_id": "SE-64336391",
+   "note_id": "643363910000000013036c3a",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 4333,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "智能岛台的功能展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "产品细节展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": " \"yes\",\n    \"source\": \"ASR_EVIDENCE\"\n  },\n  \"OCR_EVIDENCE\": {\n    \"value\": \"yes\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\643363910000000013036c3a\\643363910000000013036c3a_000.jpg",
+    "asr_text": "这是传说中的超智能时代 3.0的未来降临 自动感应分为灯光 小朋友也能拉动的",
+    "ocr_text": "超智能时代3.0的未来降临 ? Kasia岛台工厂 小红书 Kasia岛台",
+    "clip_frames": [
+     [
+      "OTHER",
+      28.336
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:643363910000000013036c3a:1",
+   "sample_id": "SE-64336391",
+   "note_id": "643363910000000013036c3a",
+   "seg_no": 1,
+   "start_ms": 4333,
+   "end_ms": 8633,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "alue\": \"UNKNOWN\",\n    \"source\": \"UNKNOWN\"\n  },\n  \"installation_site_evidence\": {\n    \"value\": \"UNKNOWN\",\n    \"source\": \"",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\643363910000000013036c3a\\643363910000000013036c3a_001.jpg",
+    "asr_text": "小朋友也能拉动的 伸缩导台餐桌设计 采用铝合金打造",
+    "ocr_text": "小红书 Kasia岛台工厂 Kasia岛台 小朋友也能拉动的 伸缩岛台餐桌设计 岛台功能-NO.2 可伸缩设计",
+    "clip_frames": [
+     [
+      "FACTORY",
+      26.238
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:66ebc041000000000c01b331:0",
+   "sample_id": "SE-66ebc041",
+   "note_id": "66ebc041000000000c01b331",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 2379,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\"value\": \"UNKNOWN\",\n    \"source\": \"UNKNOWN\"\n  },\n  \"product_visibility\": {\n    \"value\": \"YES\",\n    \"source\": \"OCR\"\n  },\n",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\66ebc041000000000c01b331\\66ebc041000000000c01b331_000.jpg",
+    "asr_text": "今天还来闺蜜家蹭饭了 是谁家的导台这么让人心动啊",
+    "ocr_text": "全国眞实入户案例 欢迎到粉丝家里看岛台品质跟效果 今天来闺蜜家蹭饭啦 BARBERRY高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "CUSTOMER_HOME",
+      33.323
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:66ebc041000000000c01b331:5",
+   "sample_id": "SE-66ebc041",
+   "note_id": "66ebc041000000000c01b331",
+   "seg_no": 5,
+   "start_ms": 15069,
+   "end_ms": 20552,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "detail_shot",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "yes",
+     "source": "MULTIMODAL_SUPPORT"
+    }
+   },
+   "qwen_raw_tail": "2.6米\",\n    \"source\": \"ASR_EVIDENCE\"\n  },\n  \"OCR_EVIDENCE\": {\n    \"value\": \"2.6米\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\66ebc041000000000c01b331\\66ebc041000000000c01b331_005.jpg",
+    "asr_text": "这个吧台的总长是2米6 总宽是800 高度的话呢 做的是750 就长在上面就餐",
+    "ocr_text": "全国真实入豆案 小红书 BARBERRY高端岛台 欢迎到粉丝家里看岛台品质跟效果 盒长：2.6米 高度的话呢做的是750",
+    "clip_frames": [
+     [
+      "OTHER",
+      28.107
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6718abc70000000021009845:0",
+   "sample_id": "SE-6718abc7",
+   "note_id": "6718abc70000000021009845",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 1231,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "展示岛台",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "source\": \"OCR_EVIDENCE\"\n  },\n  \"shot_function_candidate\": {\n    \"value\": \"展示\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6718abc70000000021009845\\6718abc70000000021009845_000.jpg",
+    "asr_text": "像这种不做收纳的导台",
+    "ocr_text": "Rlanal COOL~ 避坑啦避坑啦 BARBERRY高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      26.547
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6718abc70000000021009845:8",
+   "sample_id": "SE-6718abc7",
+   "note_id": "6718abc70000000021009845",
+   "seg_no": 8,
+   "start_ms": 11462,
+   "end_ms": 25423,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "YES",
+     "source": "MULTIMODAL_SUPPORT"
+    },
+    "detail_shot": {
+     "value": "NO",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "NO",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "NO",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "NO",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "NO",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": " \"YES\",\n    \"source\": \"ASR_EVIDENCE\"\n  },\n  \"ocr_evidence\": {\n    \"value\": \"YES\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6718abc70000000021009845\\6718abc70000000021009845_008.jpg",
+    "asr_text": "行业上很多做导台的厂家 他一般会建议你少做抽屉 少做收纳 或者只做单面的储物 像这样子的安排 它可以节省成本 但是你用起来很不方便 尤其像很多的抽屉 它们装的是一个侧装轨道 它影响你的收纳空间不说",
+    "ocr_text": "小红书 Rinnai COOL 像这样子的安排",
+    "clip_frames": [
+     [
+      "OTHER",
+      27.117
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:63a6a53f000000001f00d5e2:0",
+   "sample_id": "SF-63a6a53f",
+   "note_id": "63a6a53f000000001f00d5e2",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 5533,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "MULTIMODAL_SUPPORT",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": " \"UNKNOWN\",\n    \"source\": \"UNKNOWN\"\n  },\n  \"human_presence\": {\n    \"value\": \"UNKNOWN\",\n    \"source\": \"UNKNOWN\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\63a6a53f000000001f00d5e2\\63a6a53f000000001f00d5e2_000.jpg",
+    "asr_text": "入户的大门一进来正对的就是餐厅空间 餐厅采用独立的倒台作为餐桌 黑白的食材和墙面的材质形成对比",
+    "ocr_text": "入户的大门一进来正对的就是餐厅空间 Kasia岛台加工厂-宝哥 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      31.673
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:63a6a53f000000001f00d5e2:6",
+   "sample_id": "SF-63a6a53f",
+   "note_id": "63a6a53f000000001f00d5e2",
+   "seg_no": 6,
+   "start_ms": 16667,
+   "end_ms": 19633,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "MARBLE",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "function": {
+     "value": "COOKING_AREA",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "DISPLAY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "NO",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "NO",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "NO",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "YES",
+     "source": "MULTIMODAL_SUPPORT"
+    }
+   },
+   "qwen_raw_tail": "\"source\": \"UNKNOWN\"\n  },\n  \"dining_context_evidence\": {\n    \"value\": \"YES\",\n    \"source\": \"MULTIMODAL_SUPPORT\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\63a6a53f000000001f00d5e2\\63a6a53f000000001f00d5e2_006.jpg",
+    "asr_text": "极致的声色餐椅也加深了空间的印象 餐台的边上就是西蜀的柜子 餐台的一侧也设置了洗菜盆",
+    "ocr_text": "小红书 Kasia岛台加工厂-宝哥 餐台的边上就是西橱的柜体",
+    "clip_frames": [
+     [
+      "CUSTOMER_HOME",
+      28.615
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:640dc1050000000014025280:0",
+   "sample_id": "SF-640dc105",
+   "note_id": "640dc1050000000014025280",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 3400,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "展示岛台",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "shot_function_candidate": {
+     "value": "展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "展示岛台的功能",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "工厂\",\n    \"source\": \"OCR_EVIDENCE\"\n  },\n  \"text_in_image_3\": {\n    \"value\": \"小红书\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\640dc1050000000014025280\\640dc1050000000014025280_000.jpg",
+    "asr_text": "不要再买老式餐桌了 在家对自己好一点就做倒台吧",
+    "ocr_text": "在家对自己好一点就做岛台吧 G Kasia岛台工厂 小红书 Kasia岛台",
+    "clip_frames": [
+     [
+      "OTHER",
+      28.054
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:640dc1050000000014025280:4",
+   "sample_id": "SF-640dc105",
+   "note_id": "640dc1050000000014025280",
+   "seg_no": 4,
+   "start_ms": 15967,
+   "end_ms": 22733,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "    \"source\": \"VISUAL_EVIDENCE\"\n  },\n  \"human_object_interaction_strength_type\": {\n    \"value\": \"展示抽拉式餐桌功能\",\n    \"source",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\640dc1050000000014025280\\640dc1050000000014025280_004.jpg",
+    "asr_text": "有个性又有原质 嵌入抽拉式餐桌 方便日常就餐 来客时拉出多人用餐不用急 我每天都在用心做倒台",
+    "ocr_text": "小红书 Kasia岛台工厂 ? Kasia岛台 来客时拉出",
+    "clip_frames": [
+     [
+      "OTHER",
+      31.049
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,441 @@
+{
+  "phase": "V0.8.1",
+  "generated_at": "2026-09-02 11:03:52",
+  "classification_counts": {
+    "STRUCTURAL_TRIVIAL": 3,
+    "BUSINESS_INTERESTING": 7,
+    "INSUFFICIENT_VISUAL_EVIDENCE": 2
+  },
+  "patterns": [
+    {
+      "pattern": "multi_segment CO-OCCURS subtitle",
+      "support_count": 19,
+      "strata": [
+        "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+        "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+        "E_CROSS_SOURCE_CONTRAST",
+        "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+      ],
+      "confidence": 1.0,
+      "supporting_samples": [
+        "SA-6544d761",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509",
+        "SC-64fbe901",
+        "SC-65bc60fe",
+        "SC-69f9a0ac",
+        "SC-63c8d157",
+        "SD-66de90b3",
+        "SD-670630e9",
+        "SD-69367987",
+        "SD-64db4e87",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "contradicting_samples": [],
+      "quality_class": "STRUCTURAL_TRIVIAL",
+      "note": "真实但非业务核心；不进生产规则"
+    },
+    {
+      "pattern": "multi_segment CO-OCCURS speech",
+      "support_count": 18,
+      "strata": [
+        "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+        "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+        "E_CROSS_SOURCE_CONTRAST",
+        "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+      ],
+      "confidence": 0.9,
+      "supporting_samples": [
+        "SA-6544d761",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509",
+        "SC-64fbe901",
+        "SC-65bc60fe",
+        "SC-69f9a0ac",
+        "SD-66de90b3",
+        "SD-670630e9",
+        "SD-69367987",
+        "SD-64db4e87",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "contradicting_samples": [
+        "SC-63c8d157",
+        "SA-64f158f4"
+      ],
+      "quality_class": "STRUCTURAL_TRIVIAL",
+      "note": "真实但非业务核心；不进生产规则"
+    },
+    {
+      "pattern": "speech CO-OCCURS subtitle",
+      "support_count": 18,
+      "strata": [
+        "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+        "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+        "E_CROSS_SOURCE_CONTRAST",
+        "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+      ],
+      "confidence": 0.9,
+      "supporting_samples": [
+        "SA-6544d761",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509",
+        "SC-64fbe901",
+        "SC-65bc60fe",
+        "SC-69f9a0ac",
+        "SD-66de90b3",
+        "SD-670630e9",
+        "SD-69367987",
+        "SD-64db4e87",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "contradicting_samples": [
+        "SA-64f158f4",
+        "SC-63c8d157"
+      ],
+      "quality_class": "STRUCTURAL_TRIVIAL",
+      "note": "真实但非业务核心；不进生产规则"
+    },
+    {
+      "pattern": "multi_segment CO-OCCURS paid_associated",
+      "support_count": 13,
+      "strata": [
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+        "E_CROSS_SOURCE_CONTRAST",
+        "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+      ],
+      "confidence": 0.684,
+      "supporting_samples": [
+        "SC-64fbe901",
+        "SC-65bc60fe",
+        "SC-69f9a0ac",
+        "SC-63c8d157",
+        "SD-66de90b3",
+        "SD-670630e9",
+        "SD-69367987",
+        "SD-64db4e87",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "contradicting_samples": [
+        "SA-6544d761",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509"
+      ],
+      "quality_class": "BUSINESS_INTERESTING",
+      "note": "业务相关共现；需 40 段 L3 校验"
+    },
+    {
+      "pattern": "paid_associated CO-OCCURS subtitle",
+      "support_count": 13,
+      "strata": [
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+        "E_CROSS_SOURCE_CONTRAST",
+        "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+      ],
+      "confidence": 0.684,
+      "supporting_samples": [
+        "SC-64fbe901",
+        "SC-65bc60fe",
+        "SC-69f9a0ac",
+        "SC-63c8d157",
+        "SD-66de90b3",
+        "SD-670630e9",
+        "SD-69367987",
+        "SD-64db4e87",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "contradicting_samples": [
+        "SA-6544d761",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509"
+      ],
+      "quality_class": "BUSINESS_INTERESTING",
+      "note": "业务相关共现；需 40 段 L3 校验"
+    },
+    {
+      "pattern": "paid_associated CO-OCCURS speech",
+      "support_count": 12,
+      "strata": [
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+        "E_CROSS_SOURCE_CONTRAST",
+        "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+      ],
+      "confidence": 0.6,
+      "supporting_samples": [
+        "SC-64fbe901",
+        "SC-65bc60fe",
+        "SC-69f9a0ac",
+        "SD-66de90b3",
+        "SD-670630e9",
+        "SD-69367987",
+        "SD-64db4e87",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "contradicting_samples": [
+        "SC-63c8d157",
+        "SA-6544d761",
+        "SA-64f158f4",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509"
+      ],
+      "quality_class": "BUSINESS_INTERESTING",
+      "note": "业务相关共现；需 40 段 L3 校验"
+    },
+    {
+      "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+      "support_count": 9,
+      "strata": [
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+        "E_CROSS_SOURCE_CONTRAST"
+      ],
+      "confidence": 0.474,
+      "supporting_samples": [
+        "SC-69f9a0ac",
+        "SC-63c8d157",
+        "SD-66de90b3",
+        "SD-670630e9",
+        "SD-69367987",
+        "SD-64db4e87",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7"
+      ],
+      "contradicting_samples": [
+        "SA-6544d761",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509",
+        "SC-64fbe901",
+        "SC-65bc60fe",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "quality_class": "BUSINESS_INTERESTING",
+      "note": "业务相关共现；需 40 段 L3 校验"
+    },
+    {
+      "pattern": "paid_associated CO-OCCURS paid_weak_outcome",
+      "support_count": 9,
+      "strata": [
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+        "E_CROSS_SOURCE_CONTRAST"
+      ],
+      "confidence": 0.692,
+      "supporting_samples": [
+        "SC-69f9a0ac",
+        "SC-63c8d157",
+        "SD-66de90b3",
+        "SD-670630e9",
+        "SD-69367987",
+        "SD-64db4e87",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7"
+      ],
+      "contradicting_samples": [
+        "SC-64fbe901",
+        "SC-65bc60fe",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "quality_class": "BUSINESS_INTERESTING",
+      "note": "业务相关共现；需 40 段 L3 校验"
+    },
+    {
+      "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+      "support_count": 9,
+      "strata": [
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+        "E_CROSS_SOURCE_CONTRAST"
+      ],
+      "confidence": 0.474,
+      "supporting_samples": [
+        "SC-69f9a0ac",
+        "SC-63c8d157",
+        "SD-66de90b3",
+        "SD-670630e9",
+        "SD-69367987",
+        "SD-64db4e87",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7"
+      ],
+      "contradicting_samples": [
+        "SA-6544d761",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509",
+        "SC-64fbe901",
+        "SC-65bc60fe",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "quality_class": "BUSINESS_INTERESTING",
+      "note": "业务相关共现；需 40 段 L3 校验"
+    },
+    {
+      "pattern": "multi_segment CO-OCCURS paid_high_input",
+      "support_count": 8,
+      "strata": [
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+        "E_CROSS_SOURCE_CONTRAST"
+      ],
+      "confidence": 0.421,
+      "supporting_samples": [
+        "SC-65bc60fe",
+        "SD-66de90b3",
+        "SD-670630e9",
+        "SD-69367987",
+        "SD-64db4e87",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7"
+      ],
+      "contradicting_samples": [
+        "SA-6544d761",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509",
+        "SC-64fbe901",
+        "SC-69f9a0ac",
+        "SC-63c8d157",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "quality_class": "BUSINESS_INTERESTING",
+      "note": "业务相关共现；需 40 段 L3 校验"
+    },
+    {
+      "pattern": "high_creator_view CO-OCCURS multi_segment",
+      "support_count": 8,
+      "strata": [
+        "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+      ],
+      "confidence": 0.4,
+      "supporting_samples": [
+        "SA-6544d761",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SC-64fbe901",
+        "SC-63c8d157",
+        "SD-66de90b3",
+        "SD-69367987",
+        "SD-64db4e87"
+      ],
+      "contradicting_samples": [
+        "SA-64f158f4",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509",
+        "SC-65bc60fe",
+        "SC-69f9a0ac",
+        "SD-670630e9",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "quality_class": "INSUFFICIENT_VISUAL_EVIDENCE",
+      "note": "基于 performance 元数据或弱视觉；证据不足"
+    },
+    {
+      "pattern": "high_creator_view CO-OCCURS speech",
+      "support_count": 8,
+      "strata": [
+        "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+        "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+        "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+      ],
+      "confidence": 0.4,
+      "supporting_samples": [
+        "SA-6544d761",
+        "SA-64f158f4",
+        "SA-64e42823",
+        "SA-66f672d6",
+        "SC-64fbe901",
+        "SD-66de90b3",
+        "SD-69367987",
+        "SD-64db4e87"
+      ],
+      "contradicting_samples": [
+        "SC-63c8d157",
+        "SB-63c5675a",
+        "SB-682edce4",
+        "SB-66d7c509",
+        "SC-65bc60fe",
+        "SC-69f9a0ac",
+        "SD-670630e9",
+        "SE-64336391",
+        "SE-66ebc041",
+        "SE-6718abc7",
+        "SF-63a6a53f",
+        "SF-640dc105"
+      ],
+      "quality_class": "INSUFFICIENT_VISUAL_EVIDENCE",
+      "note": "基于 performance 元数据或弱视觉；证据不足"
+    }
+  ]
+}

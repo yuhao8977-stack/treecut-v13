@@ -1,0 +1,701 @@
+{
+ "phase": "V0.8.1",
+ "note": "L3 审核清单（append-only，人工填写后另存为 *_L3_* 版本）",
+ "fields": [
+  "scene",
+  "product",
+  "material",
+  "function",
+  "action",
+  "shot_function",
+  "business_feature",
+  "verdict"
+ ],
+ "verdicts": [
+  "SUPPORTED",
+  "CANDIDATE",
+  "UNKNOWN"
+ ],
+ "entries": [
+  {
+   "segment_id": "b007:6544d761000000001f038f12:0",
+   "sample_id": "SA-6544d761",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 33,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:6544d761000000001f038f12:8",
+   "sample_id": "SA-6544d761",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 12300,
+   "end_ms": 14800,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:64f158f4000000001d014203:0",
+   "sample_id": "SA-64f158f4",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 100,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:64f158f4000000001d014203:1",
+   "sample_id": "SA-64f158f4",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 100,
+   "end_ms": 23941,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:64e42823000000000800c82d:0",
+   "sample_id": "SA-64e42823",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 633,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:64e42823000000000800c82d:69",
+   "sample_id": "SA-64e42823",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 138400,
+   "end_ms": 146200,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:66f672d6000000001902efbb:0",
+   "sample_id": "SA-66f672d6",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 1607,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:66f672d6000000001902efbb:16",
+   "sample_id": "SA-66f672d6",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 28143,
+   "end_ms": 30321,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:63c5675a000000001c034435:0",
+   "sample_id": "SB-63c5675a",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 2800,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:63c5675a000000001c034435:3",
+   "sample_id": "SB-63c5675a",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 6600,
+   "end_ms": 9869,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:682edce4000000001101e878:0",
+   "sample_id": "SB-682edce4",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 38,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:682edce4000000001101e878:16",
+   "sample_id": "SB-682edce4",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 30462,
+   "end_ms": 36346,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:66d7c509000000000c018964:0",
+   "sample_id": "SB-66d7c509",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 1680,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:66d7c509000000000c018964:19",
+   "sample_id": "SB-66d7c509",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 33200,
+   "end_ms": 38840,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:64fbe901000000001d01424c:0",
+   "sample_id": "SC-64fbe901",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 33,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:64fbe901000000001d01424c:3",
+   "sample_id": "SC-64fbe901",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 4233,
+   "end_ms": 18200,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:65bc60fe0000000008022950:0",
+   "sample_id": "SC-65bc60fe",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 3292,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:65bc60fe0000000008022950:5",
+   "sample_id": "SC-65bc60fe",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 15833,
+   "end_ms": 22625,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:69f9a0ac000000003701d937:0",
+   "sample_id": "SC-69f9a0ac",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 100,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:69f9a0ac000000003701d937:5",
+   "sample_id": "SC-69f9a0ac",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 10600,
+   "end_ms": 12733,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:63c8d157000000001f02357d:0",
+   "sample_id": "SC-63c8d157",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 100,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:63c8d157000000001f02357d:2",
+   "sample_id": "SC-63c8d157",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 2467,
+   "end_ms": 3067,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:66de90b3000000000c01a935:0",
+   "sample_id": "SD-66de90b3",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 3037,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:66de90b3000000000c01a935:4",
+   "sample_id": "SD-66de90b3",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 16407,
+   "end_ms": 34148,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:670630e9000000001a023e3f:0",
+   "sample_id": "SD-670630e9",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 643,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:670630e9000000001a023e3f:11",
+   "sample_id": "SD-670630e9",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 15179,
+   "end_ms": 17036,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:69367987000000001b027d8f:0",
+   "sample_id": "SD-69367987",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 12733,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:69367987000000001b027d8f:10",
+   "sample_id": "SD-69367987",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 41400,
+   "end_ms": 53133,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:64db4e87000000001701a578:0",
+   "sample_id": "SD-64db4e87",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 4033,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:64db4e87000000001701a578:7",
+   "sample_id": "SD-64db4e87",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 13500,
+   "end_ms": 14400,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:643363910000000013036c3a:0",
+   "sample_id": "SE-64336391",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 4333,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:643363910000000013036c3a:1",
+   "sample_id": "SE-64336391",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 4333,
+   "end_ms": 8633,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:66ebc041000000000c01b331:0",
+   "sample_id": "SE-66ebc041",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 2379,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:66ebc041000000000c01b331:5",
+   "sample_id": "SE-66ebc041",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 15069,
+   "end_ms": 20552,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:6718abc70000000021009845:0",
+   "sample_id": "SE-6718abc7",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 1231,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:6718abc70000000021009845:8",
+   "sample_id": "SE-6718abc7",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 11462,
+   "end_ms": 25423,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:63a6a53f000000001f00d5e2:0",
+   "sample_id": "SF-63a6a53f",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 5533,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:63a6a53f000000001f00d5e2:6",
+   "sample_id": "SF-63a6a53f",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 16667,
+   "end_ms": 19633,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:640dc1050000000014025280:0",
+   "sample_id": "SF-640dc105",
+   "selection_role": "OPENING_SEGMENT",
+   "start_ms": 0,
+   "end_ms": 3400,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  },
+  {
+   "segment_id": "b007:640dc1050000000014025280:4",
+   "sample_id": "SF-640dc105",
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "start_ms": 15967,
+   "end_ms": 22733,
+   "l3": {
+    "scene": "",
+    "product": "",
+    "material": "",
+    "function": "",
+    "action": "",
+    "shot_function": "",
+    "business_feature": "",
+    "verdict": ""
+   }
+  }
+ ]
+}

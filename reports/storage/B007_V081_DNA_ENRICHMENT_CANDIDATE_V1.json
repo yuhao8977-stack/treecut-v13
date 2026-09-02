@@ -1,0 +1,447 @@
+{
+ "phase": "V0.8.1",
+ "generated_at": "2026-09-02 11:03:52",
+ "note": "does not overwrite B007_V08_DNA_EVIDENCE_V1; L2 candidate only",
+ "records": [
+  {
+   "note_id": "6544d761000000001f038f12",
+   "sample_id": "SA-6544d761",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:6544d761000000001f038f12:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "UNKNOWN"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:6544d761000000001f038f12:8",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "64f158f4000000001d014203",
+   "sample_id": "SA-64f158f4",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:64f158f4000000001d014203:0",
+    "scene": "UNKNOWN",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "UNKNOWN"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:64f158f4000000001d014203:1",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "64e42823000000000800c82d",
+   "sample_id": "SA-64e42823",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:64e42823000000000800c82d:0",
+    "scene": "FACTORY",
+    "product_visibility": "no",
+    "human_presence": "yes",
+    "feature_demonstration": "no"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:64e42823000000000800c82d:69",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "66f672d6000000001902efbb",
+   "sample_id": "SA-66f672d6",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:66f672d6000000001902efbb:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "yes"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:66f672d6000000001902efbb:16",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "63c5675a000000001c034435",
+   "sample_id": "SB-63c5675a",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:63c5675a000000001c034435:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "yes"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:63c5675a000000001c034435:3",
+    "function": "刷碗",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "no"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "682edce4000000001101e878",
+   "sample_id": "SB-682edce4",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:682edce4000000001101e878:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "no",
+    "human_presence": "yes",
+    "feature_demonstration": "no"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:682edce4000000001101e878:16",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "66d7c509000000000c018964",
+   "sample_id": "SB-66d7c509",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:66d7c509000000000c018964:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "展示岛台材质和设计"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:66d7c509000000000c018964:19",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "64fbe901000000001d01424c",
+   "sample_id": "SC-64fbe901",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "opening_candidate": {
+    "segment_id": "b007:64fbe901000000001d01424c:0",
+    "scene": "FACTORY",
+    "product_visibility": "PARTIAL",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "PARTIAL"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:64fbe901000000001d01424c:3",
+    "function": "聚会、火锅、开派对",
+    "action": "UNKNOWN",
+    "storage_evidence": "双门收纳柜",
+    "power_evidence": "公牛轨道插座",
+    "flexible_capacity_evidence": "多人同时就餐",
+    "dining_context_evidence": "餐桌"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "65bc60fe0000000008022950",
+   "sample_id": "SC-65bc60fe",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "opening_candidate": {
+    "segment_id": "b007:65bc60fe0000000008022950:0",
+    "scene": "UNKNOWN",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "UNKNOWN"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:65bc60fe0000000008022950:5",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "69f9a0ac000000003701d937",
+   "sample_id": "SC-69f9a0ac",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "opening_candidate": {
+    "segment_id": "b007:69f9a0ac000000003701d937:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "YES",
+    "human_presence": "YES",
+    "feature_demonstration": "OPEN_PLANET_KITCHEN_DEMONSTRATION"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:69f9a0ac000000003701d937:5",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "餐桌"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "63c8d157000000001f02357d",
+   "sample_id": "SC-63c8d157",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "opening_candidate": {
+    "segment_id": "b007:63c8d157000000001f02357d:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "YES",
+    "human_presence": "NO",
+    "feature_demonstration": "YES"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:63c8d157000000001f02357d:2",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "yes",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "yes",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "66de90b3000000000c01a935",
+   "sample_id": "SD-66de90b3",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "opening_candidate": {
+    "segment_id": "b007:66de90b3000000000c01a935:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "展示家具材质和设计"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:66de90b3000000000c01a935:4",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "670630e9000000001a023e3f",
+   "sample_id": "SD-670630e9",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "opening_candidate": {
+    "segment_id": "b007:670630e9000000001a023e3f:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "yes"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:670630e9000000001a023e3f:11",
+    "function": "用餐",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "餐桌椅"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "69367987000000001b027d8f",
+   "sample_id": "SD-69367987",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "opening_candidate": {
+    "segment_id": "b007:69367987000000001b027d8f:0",
+    "scene": "FACTORY",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "展示高低差20公分的伸缩导台"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:69367987000000001b027d8f:10",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "yes",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "yes",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "64db4e87000000001701a578",
+   "sample_id": "SD-64db4e87",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "opening_candidate": {
+    "segment_id": "b007:64db4e87000000001701a578:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "no",
+    "feature_demonstration": "yes"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:64db4e87000000001701a578:7",
+    "function": "厨房岛台",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "643363910000000013036c3a",
+   "sample_id": "SE-64336391",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "opening_candidate": {
+    "segment_id": "b007:643363910000000013036c3a:0",
+    "scene": "FACTORY",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "智能岛台的功能展示"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:643363910000000013036c3a:1",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "66ebc041000000000c01b331",
+   "sample_id": "SE-66ebc041",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "opening_candidate": {
+    "segment_id": "b007:66ebc041000000000c01b331:0",
+    "scene": "UNKNOWN",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "UNKNOWN"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:66ebc041000000000c01b331:5",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "yes"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "6718abc70000000021009845",
+   "sample_id": "SE-6718abc7",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "opening_candidate": {
+    "segment_id": "b007:6718abc70000000021009845:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "展示岛台"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:6718abc70000000021009845:8",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "NO",
+    "power_evidence": "NO",
+    "flexible_capacity_evidence": "NO",
+    "dining_context_evidence": "NO"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "63a6a53f000000001f00d5e2",
+   "sample_id": "SF-63a6a53f",
+   "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+   "opening_candidate": {
+    "segment_id": "b007:63a6a53f000000001f00d5e2:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "UNKNOWN"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:63a6a53f000000001f00d5e2:6",
+    "function": "COOKING_AREA",
+    "action": "UNKNOWN",
+    "storage_evidence": "NO",
+    "power_evidence": "NO",
+    "flexible_capacity_evidence": "NO",
+    "dining_context_evidence": "YES"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "640dc1050000000014025280",
+   "sample_id": "SF-640dc105",
+   "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+   "opening_candidate": {
+    "segment_id": "b007:640dc1050000000014025280:0",
+    "scene": "FACTORY",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "展示岛台的功能"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:640dc1050000000014025280:4",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  }
+ ]
+}

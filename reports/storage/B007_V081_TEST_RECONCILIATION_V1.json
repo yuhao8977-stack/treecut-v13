@@ -1,0 +1,20 @@
+{
+  "phase": "V0.8.1",
+  "generated_at": "2026-09-02 11:03:52",
+  "full_suite_run": {
+    "result": "299 passed, 2 skipped",
+    "command": "pytest tests -q (no ignore)"
+  },
+  "earlier_reported": {
+    "result": "248 passed, 2 skipped",
+    "reason": "ran with --ignore=tests/test_xhs_work_browser_v01.py"
+  },
+  "delta_explanation": {
+    "excluded_file": "tests/test_xhs_work_browser_v01.py",
+    "excluded_test_count": 51,
+    "arithmetic": "248 + 51 = 299 (2 skipped included in both)",
+    "reason_excluded": "browser E2E suite (Edge profile / live browser), not applicable to unattended pipeline scope",
+    "missing_or_regression": false
+  },
+  "conclusion": "NO REGRESSION; 299+2 full-suite baseline restored"
+}

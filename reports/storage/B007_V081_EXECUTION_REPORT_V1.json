@@ -1,0 +1,1139 @@
+{
+ "phase": "V0.8.1",
+ "final_status": "B007_V081_REVIEW_READY_WITH_LIMITATIONS",
+ "generated_at": "2026-09-02 11:03:52",
+ "answers": {
+  "1_why_248_vs_299": {
+   "excluded_file": "tests/test_xhs_work_browser_v01.py",
+   "excluded_test_count": 51,
+   "arithmetic": "248 + 51 = 299 (2 skipped included in both)",
+   "reason_excluded": "browser E2E suite (Edge profile / live browser), not applicable to unattended pipeline scope",
+   "missing_or_regression": false
+  },
+  "2_full_regression": "PASS (299 passed, 2 skipped)",
+  "3_asr_20_20_or_19_20": "ASR_EXECUTED=20/20; HAS_SPEECH=19/20",
+  "4_has_speech_vs_success": "ASR_EXECUTED=有转写结果; TRANSCRIPT_PRESENT=文本存在; HAS_SPEECH=文本≥10字; has_speech=False ≠ ASR_FAILED",
+  "5_clip_known_ratio": 0.182,
+  "6_qwen_known_coverage": {
+   "ok_segments": 40,
+   "of": 40,
+   "known_field_ratio": "computed per-field (see candidates JSON)"
+  },
+  "7_visual_agreement": "CLIP vs Qwen scene agreement computed in candidates (fields.scene)",
+  "8_conflict_rate": "see candidates JSON (source=UNKNOWN vs value conflicts)",
+  "9_calibration_covers_all_20": true,
+  "10_a_f_covered": [
+   "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "E_CROSS_SOURCE_CONTRAST",
+   "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+  ],
+  "11_opening_20": 20,
+  "12_high_info_20": 20,
+  "13_fields_mainly_unknown": "see Qwen candidates (UNKNOWN-heavy fields reported)",
+  "14_evidence_improved_fields": "see DNA_ENRICHMENT_CANDIDATE (Qwen second source)",
+  "15_structural_trivial_count": 3,
+  "16_business_interesting_count": 7,
+  "17_insufficient_evidence_count": 2,
+  "18_auto_l3_written": "NO",
+  "19_performance_in_cognition": "NO (creator/paid 数据未喂给 Qwen；stratum 仅作分析元数据)",
+  "20_ready_for_human_l3": true
+ },
+ "evidence_candidates": {
+  "opening_product_visible": [
+   "SA-66f672d6",
+   "SB-63c5675a",
+   "SB-66d7c509",
+   "SD-66de90b3",
+   "SD-670630e9",
+   "SD-64db4e87",
+   "SE-64336391",
+   "SE-6718abc7",
+   "SF-640dc105"
+  ],
+  "opening_function_demo": [
+   "SA-66f672d6",
+   "SB-63c5675a",
+   "SD-670630e9",
+   "SD-64db4e87"
+  ],
+  "opening_human": [
+   "SA-64e42823",
+   "SA-66f672d6",
+   "SB-682edce4",
+   "SB-66d7c509",
+   "SD-66de90b3",
+   "SD-670630e9",
+   "SE-64336391",
+   "SE-6718abc7",
+   "SF-640dc105"
+  ],
+  "storage_evidence": [
+   "SC-63c8d157",
+   "SD-69367987"
+  ],
+  "power_evidence": [],
+  "flexible_capacity_evidence": [
+   "SC-63c8d157",
+   "SD-69367987"
+  ],
+  "dining_context_evidence": [
+   "SE-66ebc041"
+  ],
+  "detail_shot": []
+ },
+ "test_reconciliation": {
+  "phase": "V0.8.1",
+  "generated_at": "2026-09-02 11:03:52",
+  "full_suite_run": {
+   "result": "299 passed, 2 skipped",
+   "command": "pytest tests -q (no ignore)"
+  },
+  "earlier_reported": {
+   "result": "248 passed, 2 skipped",
+   "reason": "ran with --ignore=tests/test_xhs_work_browser_v01.py"
+  },
+  "delta_explanation": {
+   "excluded_file": "tests/test_xhs_work_browser_v01.py",
+   "excluded_test_count": 51,
+   "arithmetic": "248 + 51 = 299 (2 skipped included in both)",
+   "reason_excluded": "browser E2E suite (Edge profile / live browser), not applicable to unattended pipeline scope",
+   "missing_or_regression": false
+  },
+  "conclusion": "NO REGRESSION; 299+2 full-suite baseline restored"
+ },
+ "asr_semantics": {
+  "asr_semantics": {
+   "63a6a53f000000001f00d5e2": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 11,
+    "chars": 154
+   },
+   "63c5675a000000001c034435": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 8,
+    "chars": 51
+   },
+   "63c8d157000000001f02357d": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": false,
+    "utterances": 1,
+    "chars": 7
+   },
+   "640dc1050000000014025280": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 17,
+    "chars": 151
+   },
+   "643363910000000013036c3a": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 8,
+    "chars": 67
+   },
+   "64db4e87000000001701a578": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 49,
+    "chars": 386
+   },
+   "64e42823000000000800c82d": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 117,
+    "chars": 774
+   },
+   "64f158f4000000001d014203": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 2,
+    "chars": 25
+   },
+   "64fbe901000000001d01424c": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 10,
+    "chars": 112
+   },
+   "6544d761000000001f038f12": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 48,
+    "chars": 599
+   },
+   "65bc60fe0000000008022950": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 19,
+    "chars": 174
+   },
+   "66d7c509000000000c018964": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 26,
+    "chars": 263
+   },
+   "66de90b3000000000c01a935": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 34,
+    "chars": 307
+   },
+   "66ebc041000000000c01b331": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 17,
+    "chars": 149
+   },
+   "66f672d6000000001902efbb": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 21,
+    "chars": 197
+   },
+   "670630e9000000001a023e3f": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 18,
+    "chars": 168
+   },
+   "6718abc70000000021009845": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 53,
+    "chars": 414
+   },
+   "682edce4000000001101e878": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 27,
+    "chars": 235
+   },
+   "69367987000000001b027d8f": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 40,
+    "chars": 428
+   },
+   "69f9a0ac000000003701d937": {
+    "ASR_EXECUTED": true,
+    "TRANSCRIPT_PRESENT": true,
+    "HAS_SPEECH": true,
+    "utterances": 10,
+    "chars": 145
+   }
+  },
+  "policy": "has_speech=False 表示口播不足阈值，不等于 ASR_FAILED",
+  "asr_executed_count": 20,
+  "has_speech_count": 19
+ },
+ "pattern_audit": {
+  "counts": {
+   "STRUCTURAL_TRIVIAL": 3,
+   "BUSINESS_INTERESTING": 7,
+   "INSUFFICIENT_VISUAL_EVIDENCE": 2
+  },
+  "patterns": [
+   {
+    "pattern": "multi_segment CO-OCCURS subtitle",
+    "support_count": 19,
+    "strata": [
+     "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+     "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+     "E_CROSS_SOURCE_CONTRAST",
+     "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+    ],
+    "confidence": 1.0,
+    "supporting_samples": [
+     "SA-6544d761",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509",
+     "SC-64fbe901",
+     "SC-65bc60fe",
+     "SC-69f9a0ac",
+     "SC-63c8d157",
+     "SD-66de90b3",
+     "SD-670630e9",
+     "SD-69367987",
+     "SD-64db4e87",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "contradicting_samples": [],
+    "quality_class": "STRUCTURAL_TRIVIAL",
+    "note": "真实但非业务核心；不进生产规则"
+   },
+   {
+    "pattern": "multi_segment CO-OCCURS speech",
+    "support_count": 18,
+    "strata": [
+     "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+     "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+     "E_CROSS_SOURCE_CONTRAST",
+     "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+    ],
+    "confidence": 0.9,
+    "supporting_samples": [
+     "SA-6544d761",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509",
+     "SC-64fbe901",
+     "SC-65bc60fe",
+     "SC-69f9a0ac",
+     "SD-66de90b3",
+     "SD-670630e9",
+     "SD-69367987",
+     "SD-64db4e87",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "contradicting_samples": [
+     "SC-63c8d157",
+     "SA-64f158f4"
+    ],
+    "quality_class": "STRUCTURAL_TRIVIAL",
+    "note": "真实但非业务核心；不进生产规则"
+   },
+   {
+    "pattern": "speech CO-OCCURS subtitle",
+    "support_count": 18,
+    "strata": [
+     "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+     "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+     "E_CROSS_SOURCE_CONTRAST",
+     "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+    ],
+    "confidence": 0.9,
+    "supporting_samples": [
+     "SA-6544d761",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509",
+     "SC-64fbe901",
+     "SC-65bc60fe",
+     "SC-69f9a0ac",
+     "SD-66de90b3",
+     "SD-670630e9",
+     "SD-69367987",
+     "SD-64db4e87",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "contradicting_samples": [
+     "SA-64f158f4",
+     "SC-63c8d157"
+    ],
+    "quality_class": "STRUCTURAL_TRIVIAL",
+    "note": "真实但非业务核心；不进生产规则"
+   },
+   {
+    "pattern": "multi_segment CO-OCCURS paid_associated",
+    "support_count": 13,
+    "strata": [
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+     "E_CROSS_SOURCE_CONTRAST",
+     "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+    ],
+    "confidence": 0.684,
+    "supporting_samples": [
+     "SC-64fbe901",
+     "SC-65bc60fe",
+     "SC-69f9a0ac",
+     "SC-63c8d157",
+     "SD-66de90b3",
+     "SD-670630e9",
+     "SD-69367987",
+     "SD-64db4e87",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "contradicting_samples": [
+     "SA-6544d761",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509"
+    ],
+    "quality_class": "BUSINESS_INTERESTING",
+    "note": "业务相关共现；需 40 段 L3 校验"
+   },
+   {
+    "pattern": "paid_associated CO-OCCURS subtitle",
+    "support_count": 13,
+    "strata": [
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+     "E_CROSS_SOURCE_CONTRAST",
+     "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+    ],
+    "confidence": 0.684,
+    "supporting_samples": [
+     "SC-64fbe901",
+     "SC-65bc60fe",
+     "SC-69f9a0ac",
+     "SC-63c8d157",
+     "SD-66de90b3",
+     "SD-670630e9",
+     "SD-69367987",
+     "SD-64db4e87",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "contradicting_samples": [
+     "SA-6544d761",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509"
+    ],
+    "quality_class": "BUSINESS_INTERESTING",
+    "note": "业务相关共现；需 40 段 L3 校验"
+   },
+   {
+    "pattern": "paid_associated CO-OCCURS speech",
+    "support_count": 12,
+    "strata": [
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+     "E_CROSS_SOURCE_CONTRAST",
+     "F_PAID_ASSOCIATED_NO_NOTE_METRIC"
+    ],
+    "confidence": 0.6,
+    "supporting_samples": [
+     "SC-64fbe901",
+     "SC-65bc60fe",
+     "SC-69f9a0ac",
+     "SD-66de90b3",
+     "SD-670630e9",
+     "SD-69367987",
+     "SD-64db4e87",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "contradicting_samples": [
+     "SC-63c8d157",
+     "SA-6544d761",
+     "SA-64f158f4",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509"
+    ],
+    "quality_class": "BUSINESS_INTERESTING",
+    "note": "业务相关共现；需 40 段 L3 校验"
+   },
+   {
+    "pattern": "multi_segment CO-OCCURS paid_weak_outcome",
+    "support_count": 9,
+    "strata": [
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+     "E_CROSS_SOURCE_CONTRAST"
+    ],
+    "confidence": 0.474,
+    "supporting_samples": [
+     "SC-69f9a0ac",
+     "SC-63c8d157",
+     "SD-66de90b3",
+     "SD-670630e9",
+     "SD-69367987",
+     "SD-64db4e87",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7"
+    ],
+    "contradicting_samples": [
+     "SA-6544d761",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509",
+     "SC-64fbe901",
+     "SC-65bc60fe",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "quality_class": "BUSINESS_INTERESTING",
+    "note": "业务相关共现；需 40 段 L3 校验"
+   },
+   {
+    "pattern": "paid_associated CO-OCCURS paid_weak_outcome",
+    "support_count": 9,
+    "strata": [
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+     "E_CROSS_SOURCE_CONTRAST"
+    ],
+    "confidence": 0.692,
+    "supporting_samples": [
+     "SC-69f9a0ac",
+     "SC-63c8d157",
+     "SD-66de90b3",
+     "SD-670630e9",
+     "SD-69367987",
+     "SD-64db4e87",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7"
+    ],
+    "contradicting_samples": [
+     "SC-64fbe901",
+     "SC-65bc60fe",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "quality_class": "BUSINESS_INTERESTING",
+    "note": "业务相关共现；需 40 段 L3 校验"
+   },
+   {
+    "pattern": "paid_weak_outcome CO-OCCURS subtitle",
+    "support_count": 9,
+    "strata": [
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+     "E_CROSS_SOURCE_CONTRAST"
+    ],
+    "confidence": 0.474,
+    "supporting_samples": [
+     "SC-69f9a0ac",
+     "SC-63c8d157",
+     "SD-66de90b3",
+     "SD-670630e9",
+     "SD-69367987",
+     "SD-64db4e87",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7"
+    ],
+    "contradicting_samples": [
+     "SA-6544d761",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509",
+     "SC-64fbe901",
+     "SC-65bc60fe",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "quality_class": "BUSINESS_INTERESTING",
+    "note": "业务相关共现；需 40 段 L3 校验"
+   },
+   {
+    "pattern": "multi_segment CO-OCCURS paid_high_input",
+    "support_count": 8,
+    "strata": [
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+     "E_CROSS_SOURCE_CONTRAST"
+    ],
+    "confidence": 0.421,
+    "supporting_samples": [
+     "SC-65bc60fe",
+     "SD-66de90b3",
+     "SD-670630e9",
+     "SD-69367987",
+     "SD-64db4e87",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7"
+    ],
+    "contradicting_samples": [
+     "SA-6544d761",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509",
+     "SC-64fbe901",
+     "SC-69f9a0ac",
+     "SC-63c8d157",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "quality_class": "BUSINESS_INTERESTING",
+    "note": "业务相关共现；需 40 段 L3 校验"
+   },
+   {
+    "pattern": "high_creator_view CO-OCCURS multi_segment",
+    "support_count": 8,
+    "strata": [
+     "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+    ],
+    "confidence": 0.4,
+    "supporting_samples": [
+     "SA-6544d761",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SC-64fbe901",
+     "SC-63c8d157",
+     "SD-66de90b3",
+     "SD-69367987",
+     "SD-64db4e87"
+    ],
+    "contradicting_samples": [
+     "SA-64f158f4",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509",
+     "SC-65bc60fe",
+     "SC-69f9a0ac",
+     "SD-670630e9",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "quality_class": "INSUFFICIENT_VISUAL_EVIDENCE",
+    "note": "基于 performance 元数据或弱视觉；证据不足"
+   },
+   {
+    "pattern": "high_creator_view CO-OCCURS speech",
+    "support_count": 8,
+    "strata": [
+     "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+     "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+     "D_PAID_HIGH_INPUT_WEAK_OUTCOME"
+    ],
+    "confidence": 0.4,
+    "supporting_samples": [
+     "SA-6544d761",
+     "SA-64f158f4",
+     "SA-64e42823",
+     "SA-66f672d6",
+     "SC-64fbe901",
+     "SD-66de90b3",
+     "SD-69367987",
+     "SD-64db4e87"
+    ],
+    "contradicting_samples": [
+     "SC-63c8d157",
+     "SB-63c5675a",
+     "SB-682edce4",
+     "SB-66d7c509",
+     "SC-65bc60fe",
+     "SC-69f9a0ac",
+     "SD-670630e9",
+     "SE-64336391",
+     "SE-66ebc041",
+     "SE-6718abc7",
+     "SF-63a6a53f",
+     "SF-640dc105"
+    ],
+    "quality_class": "INSUFFICIENT_VISUAL_EVIDENCE",
+    "note": "基于 performance 元数据或弱视觉；证据不足"
+   }
+  ]
+ },
+ "dna_enrichment": [
+  {
+   "note_id": "6544d761000000001f038f12",
+   "sample_id": "SA-6544d761",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:6544d761000000001f038f12:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "UNKNOWN"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:6544d761000000001f038f12:8",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "64f158f4000000001d014203",
+   "sample_id": "SA-64f158f4",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:64f158f4000000001d014203:0",
+    "scene": "UNKNOWN",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "UNKNOWN"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:64f158f4000000001d014203:1",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "64e42823000000000800c82d",
+   "sample_id": "SA-64e42823",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:64e42823000000000800c82d:0",
+    "scene": "FACTORY",
+    "product_visibility": "no",
+    "human_presence": "yes",
+    "feature_demonstration": "no"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:64e42823000000000800c82d:69",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "66f672d6000000001902efbb",
+   "sample_id": "SA-66f672d6",
+   "stratum": "A_CREATOR_HIGH_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:66f672d6000000001902efbb:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "yes"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:66f672d6000000001902efbb:16",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "63c5675a000000001c034435",
+   "sample_id": "SB-63c5675a",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:63c5675a000000001c034435:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "yes"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:63c5675a000000001c034435:3",
+    "function": "刷碗",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "no"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "682edce4000000001101e878",
+   "sample_id": "SB-682edce4",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:682edce4000000001101e878:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "no",
+    "human_presence": "yes",
+    "feature_demonstration": "no"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:682edce4000000001101e878:16",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "66d7c509000000000c018964",
+   "sample_id": "SB-66d7c509",
+   "stratum": "B_CREATOR_MID_LOW_NO_PAID_ASSOC_OBSERVED",
+   "opening_candidate": {
+    "segment_id": "b007:66d7c509000000000c018964:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "展示岛台材质和设计"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:66d7c509000000000c018964:19",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "64fbe901000000001d01424c",
+   "sample_id": "SC-64fbe901",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "opening_candidate": {
+    "segment_id": "b007:64fbe901000000001d01424c:0",
+    "scene": "FACTORY",
+    "product_visibility": "PARTIAL",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "PARTIAL"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:64fbe901000000001d01424c:3",
+    "function": "聚会、火锅、开派对",
+    "action": "UNKNOWN",
+    "storage_evidence": "双门收纳柜",
+    "power_evidence": "公牛轨道插座",
+    "flexible_capacity_evidence": "多人同时就餐",
+    "dining_context_evidence": "餐桌"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "65bc60fe0000000008022950",
+   "sample_id": "SC-65bc60fe",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "opening_candidate": {
+    "segment_id": "b007:65bc60fe0000000008022950:0",
+    "scene": "UNKNOWN",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "UNKNOWN"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:65bc60fe0000000008022950:5",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "69f9a0ac000000003701d937",
+   "sample_id": "SC-69f9a0ac",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "opening_candidate": {
+    "segment_id": "b007:69f9a0ac000000003701d937:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "YES",
+    "human_presence": "YES",
+    "feature_demonstration": "OPEN_PLANET_KITCHEN_DEMONSTRATION"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:69f9a0ac000000003701d937:5",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "餐桌"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "63c8d157000000001f02357d",
+   "sample_id": "SC-63c8d157",
+   "stratum": "C_PAID_HIGH_EFFICIENCY_CANDIDATE",
+   "opening_candidate": {
+    "segment_id": "b007:63c8d157000000001f02357d:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "YES",
+    "human_presence": "NO",
+    "feature_demonstration": "YES"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:63c8d157000000001f02357d:2",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "yes",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "yes",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "66de90b3000000000c01a935",
+   "sample_id": "SD-66de90b3",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "opening_candidate": {
+    "segment_id": "b007:66de90b3000000000c01a935:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "展示家具材质和设计"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:66de90b3000000000c01a935:4",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "670630e9000000001a023e3f",
+   "sample_id": "SD-670630e9",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "opening_candidate": {
+    "segment_id": "b007:670630e9000000001a023e3f:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "yes"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:670630e9000000001a023e3f:11",
+    "function": "用餐",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "餐桌椅"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "69367987000000001b027d8f",
+   "sample_id": "SD-69367987",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "opening_candidate": {
+    "segment_id": "b007:69367987000000001b027d8f:0",
+    "scene": "FACTORY",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "展示高低差20公分的伸缩导台"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:69367987000000001b027d8f:10",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "yes",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "yes",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "64db4e87000000001701a578",
+   "sample_id": "SD-64db4e87",
+   "stratum": "D_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "opening_candidate": {
+    "segment_id": "b007:64db4e87000000001701a578:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "no",
+    "feature_demonstration": "yes"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:64db4e87000000001701a578:7",
+    "function": "厨房岛台",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "643363910000000013036c3a",
+   "sample_id": "SE-64336391",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "opening_candidate": {
+    "segment_id": "b007:643363910000000013036c3a:0",
+    "scene": "FACTORY",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "智能岛台的功能展示"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:643363910000000013036c3a:1",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "66ebc041000000000c01b331",
+   "sample_id": "SE-66ebc041",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "opening_candidate": {
+    "segment_id": "b007:66ebc041000000000c01b331:0",
+    "scene": "UNKNOWN",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "UNKNOWN"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:66ebc041000000000c01b331:5",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "yes"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "6718abc70000000021009845",
+   "sample_id": "SE-6718abc7",
+   "stratum": "E_CROSS_SOURCE_CONTRAST",
+   "opening_candidate": {
+    "segment_id": "b007:6718abc70000000021009845:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "展示岛台"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:6718abc70000000021009845:8",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "NO",
+    "power_evidence": "NO",
+    "flexible_capacity_evidence": "NO",
+    "dining_context_evidence": "NO"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "63a6a53f000000001f00d5e2",
+   "sample_id": "SF-63a6a53f",
+   "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+   "opening_candidate": {
+    "segment_id": "b007:63a6a53f000000001f00d5e2:0",
+    "scene": "CUSTOMER_HOME",
+    "product_visibility": "UNKNOWN",
+    "human_presence": "UNKNOWN",
+    "feature_demonstration": "UNKNOWN"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:63a6a53f000000001f00d5e2:6",
+    "function": "COOKING_AREA",
+    "action": "UNKNOWN",
+    "storage_evidence": "NO",
+    "power_evidence": "NO",
+    "flexible_capacity_evidence": "NO",
+    "dining_context_evidence": "YES"
+   },
+   "status": "CANDIDATE"
+  },
+  {
+   "note_id": "640dc1050000000014025280",
+   "sample_id": "SF-640dc105",
+   "stratum": "F_PAID_ASSOCIATED_NO_NOTE_METRIC",
+   "opening_candidate": {
+    "segment_id": "b007:640dc1050000000014025280:0",
+    "scene": "FACTORY",
+    "product_visibility": "yes",
+    "human_presence": "yes",
+    "feature_demonstration": "展示岛台的功能"
+   },
+   "high_info_candidate": {
+    "segment_id": "b007:640dc1050000000014025280:4",
+    "function": "UNKNOWN",
+    "action": "UNKNOWN",
+    "storage_evidence": "UNKNOWN",
+    "power_evidence": "UNKNOWN",
+    "flexible_capacity_evidence": "UNKNOWN",
+    "dining_context_evidence": "UNKNOWN"
+   },
+   "status": "CANDIDATE"
+  }
+ ],
+ "review_package": {
+  "html": "C:\\Users\\admin\\github\\treecut-v13\\reports\\storage\\B007_V081_HUMAN_REVIEW_PACKAGE_V1.html",
+  "checklist_template": "C:\\Users\\admin\\github\\treecut-v13\\reports\\storage\\B007_V081_HUMAN_REVIEW_CHECKLIST_TEMPLATE.json"
+ }
+}
