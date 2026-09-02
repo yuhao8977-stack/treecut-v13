@@ -1,0 +1,28 @@
+{
+  "version": "G2_V1",
+  "evidence_levels": [
+    "OBJECT_PRESENT",
+    "FUNCTION_VISIBLE",
+    "ACTION_START",
+    "ACTION_IN_PROGRESS",
+    "ACTION_END",
+    "ACTION_DEMONSTRATION_COMPLETE"
+  ],
+  "actions": [
+    "EXTEND",
+    "RETRACT",
+    "DRAWER_OPEN",
+    "DRAWER_CLOSE",
+    "CABINET_OPEN",
+    "SOCKET_INSERT",
+    "SOCKET_MOVE",
+    "POWER_USE",
+    "APPLIANCE_SHOW",
+    "APPLIANCE_INSERT",
+    "STORAGE_PUT_IN",
+    "STORAGE_TAKE_OUT",
+    "PRODUCT_ROTATE",
+    "PRODUCT_MOVE"
+  ],
+  "note": "PATH/ASR 文本仅 PATH_HINT/TEXT_HINT, 不建立动作证据; 时序视觉帧为准(§13/14/15)"
+}
