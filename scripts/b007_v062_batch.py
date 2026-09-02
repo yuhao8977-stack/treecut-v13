@@ -703,23 +703,35 @@ def verify_pilot(cp: dict) -> None:
 
 # ---------------------------------------------------------------- main
 def main() -> int:
+    global CHECKPOINT, LIVE_STATUS
     ap = argparse.ArgumentParser()
     ap.add_argument("--human-window", type=float, default=600.0)
     ap.add_argument("--limit", type=int, default=0, help="最多处理 N 条(0=全部)；用于单条验证")
+    ap.add_argument("--manifest-file", default=str(MANIFEST), help="样本清单 JSON（含 samples 列表）")
+    ap.add_argument("--checkpoint", default=str(CHECKPOINT), help="checkpoint 文件路径")
+    ap.add_argument("--live", default=str(LIVE_STATUS), help="live status 文件路径")
     args = ap.parse_args()
 
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(line_buffering=True)
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    CHECKPOINT = Path(args.checkpoint)
+    LIVE_STATUS = Path(args.live)
+    manifest = json.loads(Path(args.manifest_file).read_text(encoding="utf-8"))
     samples = manifest["samples"]
-    assert len(samples) == 20 and all(s["note_id"] for s in samples)
+    assert len(samples) >= 1 and all(s["note_id"] for s in samples)
 
     cp = load_checkpoint()
-    if not cp.get("started_at"):
+    if not cp.get("started_at") or args.checkpoint != str(CHECKPOINT):
+        # 使用独立 checkpoint（如 Recent12）时避免混入 Sample20 状态
+        if args.checkpoint != str(CHECKPOINT):
+            cp = {"rule": "V0.6.2-BATCH-MEDIA-RECOVERY",
+                  "started_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+                  "notes": {}}
         cp["started_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
         cp["c_free_before_gb"] = round(shutil.disk_usage("C:\\").free / 2**30, 1)
     notes = cp.setdefault("notes", {})
-    verify_pilot(cp)
+    if args.manifest_file == str(MANIFEST):
+        verify_pilot(cp)
 
     Z_MEDIA.mkdir(parents=True, exist_ok=True)
     if not Z_MEDIA.exists():
