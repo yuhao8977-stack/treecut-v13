@@ -66,3 +66,10 @@
 1. L3 审阅清单 45 条（TREECUT_G1_L3_REVIEW.html / JSON）——至少优先 idx35、水印候选、S2 混合项
 2. idx35 若确认脏：授权扩围检测（品牌/标题条 + 底带持久文本，需 keyframe 尺寸归一化）后再跑 A2
 3. 确认最终状态：STAGE8_G1_PASS / _PASS_WITH_LIMITATIONS / _NEEDS_REPAIR
+
+## 7. 架构师裁决（2026-09-02）
+
+- 正式状态：**STAGE8_G1_PASS_WITH_LIMITATIONS**
+- 待关闭限制：1) L3 Review45 未完成；2) Full Core Regression 未在最终 G1 状态跑完（L3 回填后跑）
+- 升 PASS 条件：source_role accuracy>=90%%(45条最多错4) / clean 污染<5%% / 水印=0 / idx35 若脏则修规则重跑 A2 / Full Core Regression PASS
+- L3 审核包：TREECUT_G1_L3_REVIEW_FOR_CHATGPT_V1.pdf（48页, 45条×3帧, idx35 专页5时间点, 审阅表未预填）

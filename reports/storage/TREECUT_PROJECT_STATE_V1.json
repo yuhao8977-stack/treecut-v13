@@ -3,7 +3,7 @@
   "stage": "STAGE8_PRODUCTION_QUALITY_HARDENING",
   "stage8_gates": {
     "G1_PRODUCTION_SOURCE": {
-      "status": "PASS_WITH_LIMITATIONS_PENDING_ARCHITECT_L3",
+      "status": "PASS_WITH_LIMITATIONS",
       "plan": "docs/TREECUT_STAGE8_G1_PLAN.md"
     },
     "G2_ACTION_SUBCLIP": {
@@ -35,12 +35,20 @@
     "L11_TEMPLATE_RELEVANCE",
     "L12_HUMAN_FEEDBACK"
   ],
-  "updated_at": "2026-09-02 18:44:44",
+  "updated_at": "2026-09-02 18:48:27",
   "g1": {
-    "suggested_status": "STAGE8_G1_PASS_WITH_LIMITATIONS",
-    "pending": [
-      "L3 人工裁决(45条子集; 重点 idx35 false-clean候选)",
-      "A4 source_role accuracy 待 L3 锁定"
+    "architect_verdict": "STAGE8_G1_PASS_WITH_LIMITATIONS",
+    "verdict_at": "ARCHITECT 裁决",
+    "limitations_to_close": [
+      "L3 Review45 未完成(审阅包生成中)",
+      "Full Core Regression 未在最终G1状态跑完(待L3回填后跑)"
+    ],
+    "close_to_full_pass": [
+      "source_role accuracy>=90% (45条最多错4)",
+      "clean contamination<5%",
+      "watermark=0",
+      "idx35若脏→修规则后重跑A2通过",
+      "Full Core Regression PASS"
     ],
     "strict_eligible_pool": 13617
   }
