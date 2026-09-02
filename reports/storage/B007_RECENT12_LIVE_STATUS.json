@@ -1,19 +1,12 @@
 {
-  "overall": "WAITING_FOR_HUMAN_CLICK",
+  "overall": "12 / 20",
   "current": {
-    "sample_id": "RC-6A659145",
-    "note_id": "6a659145000000001101f9be",
-    "title": "\u5c9b\u53f0\u597d\u7528\u5f88\u7b80\u5355\ud83d\udca113\u4e2a\u5c3a\u5bf8\u505a\u5bf9\u4e0d\u7ffb\u8f66",
-    "stratum": "RC_CREATOR_HIGH",
-    "phase": "WAITING_FOR_HUMAN_CLICK \u2014 \u8bf7\u70b9\u51fb\u7ea2\u8272\u9ad8\u4eae\u5361\u7247",
-    "status": "WAITING_FOR_HUMAN_CLICK"
+    "sample_id": "RC-6A2BB62D",
+    "note_id": "6a2bb62d00000000070200a5",
+    "title": "\u5c9b\u53f0\u6c34\u7535\u7ffb\u8f66?\u96c6\u6210\u7528\u7535\u624d\u7701\u5fc3\u26a1",
+    "stratum": "RC_PAID_HIGH_INPUT_WEAK_OUTCOME",
+    "phase": "\u5df2\u4fdd\u5b58",
+    "status": "RECOVERED_EXACT"
   },
-  "needs_human": {
-    "note_id": "6a659145000000001101f9be",
-    "title": "\u5c9b\u53f0\u597d\u7528\u5f88\u7b80\u5355\ud83d\udca113\u4e2a\u5c3a\u5bf8\u505a\u5bf9\u4e0d\u7ffb\u8f66",
-    "publish_time": "2026-07-26 19:00",
-    "duration": 87.0,
-    "positioned": true,
-    "hint": "\u70b9\u51fb\u7ea2\u8272\u9ad8\u4eae\u7684\u76ee\u6807\u5361\u7247\uff08\u4e0d\u8981\u4e0b\u8f7d/\u590d\u5236URL\uff09"
-  }
+  "needs_human": null
 }
