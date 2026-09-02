@@ -1,0 +1,12 @@
+{
+  "measured": {
+    "open_project_api_ms": 122,
+    "index_ms": 8,
+    "note": "候选首屏/缓存态与 beat 切换未做帧级前端计时(纯JS本地, 无网络推理); 不伪造PASS"
+  },
+  "targets": {
+    "project_open_prefer_s": 5,
+    "beat_switch_ms": 500,
+    "candidate_first_ms": 2000
+  }
+}

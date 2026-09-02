@@ -1,0 +1,10 @@
+{
+  "limits": [
+    "手动裁剪按钮已预留未接后处理(builder 侧)",
+    "替换后自动重QA 需 builder 重建(当前回写标记)",
+    "候选数据依赖 G2 探测池(15资产)",
+    "重型 AI 不在 UI 线程(数据预生成)",
+    "thumbnail 懒加载待接(当前少量候选)"
+  ],
+  "ui_true": "smoke: open/load/Range206/replace-save 全绿"
+}

@@ -35,7 +35,7 @@
     "L11_TEMPLATE_RELEVANCE",
     "L12_HUMAN_FEEDBACK"
   ],
-  "updated_at": "2026-09-02 19:30:02",
+  "updated_at": "2026-09-02 19:57:40",
   "g1": {
     "architect_verdict": "STAGE8_G1_PASS_WITH_LIMITATIONS (L3 已回填, 待 Full Regression 后判最终)",
     "l3": {
@@ -77,5 +77,34 @@
         "failed": 0
       }
     }
+  },
+  "sprint_v2": {
+    "status_matrix": {
+      "G1": "PASS_FROZEN",
+      "G2": "ENGINEERING_EVALUATION_PENDING_HUMAN",
+      "G3": "ENGINEERING_EVALUATION_PENDING_HUMAN",
+      "DEDUP": "PASS",
+      "G5": "PASS",
+      "UI": "USABLE",
+      "VOICE": "READY_FOR_INPUT",
+      "BGM": "LIBRARY_NOT_READY",
+      "REHEARSAL": "LIMITATION"
+    },
+    "full_regression": {
+      "passed": 354,
+      "skipped": 2,
+      "failed": 0
+    },
+    "windows": 28,
+    "evidence_frames": 87,
+    "g2_query20_with_cands": 16,
+    "g3_matcher_hits": 14,
+    "ui_smoke": 200,
+    "report": "docs/TREECUT_STAGE8_OVERNIGHT_HARDENING_V2.md",
+    "user_tomorrow": [
+      "审 G2/G3 review HTML",
+      "提供真人参考音(30-60s)",
+      "提供授权 BGM 目录"
+    ]
   }
 }
