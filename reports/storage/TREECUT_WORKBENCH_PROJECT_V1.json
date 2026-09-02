@@ -15,52 +15,8 @@
     "required_object": null
    },
    "candidates": [],
-   "selected": {
-    "media_id": 1,
-    "subclip": {
-     "start_s": 1.82,
-     "end_s": 4.37
-    }
-   },
-   "qa_note": "OK",
-   "qa_local": [
-    {
-     "gate": "SEMANTIC",
-     "key": "ACTION_DEMONSTRATED",
-     "status": "PASS",
-     "detail": "claim None ∈ 候选动作"
-    },
-    {
-     "gate": "PRODUCTION",
-     "key": "NEAR_DUPLICATE_FREE",
-     "status": "PASS",
-     "detail": ""
-    },
-    {
-     "gate": "TECHNICAL",
-     "key": "CAPTION_SIZE",
-     "status": "PASS",
-     "detail": "字幕默认 66(62-68) 由渲染侧保证"
-    },
-    {
-     "gate": "TECHNICAL",
-     "key": "VOICE_PROVIDER_VALID",
-     "status": "WARNING",
-     "detail": "SAPI=FALLBACK; 真人音 VOICE_INPUT_REQUIRED"
-    },
-    {
-     "gate": "PRODUCTION",
-     "key": "BGM_PRESENT_IF_REQUIRED",
-     "status": "WARNING",
-     "detail": "BGM_LIBRARY_NOT_READY(无授权音乐)"
-    },
-    {
-     "gate": "LOCAL_RULE",
-     "key": "NOTE",
-     "status": "WARNING",
-     "detail": "本 QA 为 UI 本地规则; AV/响度/烧录等完整 QA 由 ProductionQAService 重建时执行"
-    }
-   ]
+   "selected": null,
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B2",
@@ -331,13 +287,13 @@
      "eligible": true,
      "folder_hint": "【21】伸缩功能",
      "subclip": {
-      "start_s": 5.09,
-      "end_s": 7.59
+      "start_s": 3.75,
+      "end_s": 7.8
      },
      "semantic_correct": true,
      "boundary_usable": true,
      "motion_support": "UNKNOWN",
-     "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+     "why": "EXTEND 动作段 4.0-7.5s; subclip 3.75-7.8s",
      "evidence": {
       "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
       "L2_AI": "qwen 帧证据: EXTEND WEAK",
@@ -358,13 +314,13 @@
      "eligible": true,
      "folder_hint": "【21】伸缩功能",
      "subclip": {
-      "start_s": 5.31,
-      "end_s": 7.81
+      "start_s": 3.75,
+      "end_s": 7.8
      },
      "semantic_correct": true,
      "boundary_usable": true,
      "motion_support": "UNKNOWN",
-     "why": "EXTEND 动作段 5.56-5.56s; subclip 5.31-5.86s",
+     "why": "EXTEND 动作段 4.0-7.5s; subclip 3.75-7.8s",
      "evidence": {
       "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
       "L2_AI": "qwen 帧证据: EXTEND WEAK",
@@ -385,13 +341,13 @@
      "eligible": true,
      "folder_hint": "【21】伸缩功能",
      "subclip": {
-      "start_s": 4.71,
-      "end_s": 7.21
+      "start_s": 3.75,
+      "end_s": 7.8
      },
      "semantic_correct": true,
      "boundary_usable": true,
      "motion_support": "UNKNOWN",
-     "why": "EXTEND 动作段 4.96-4.96s; subclip 4.71-5.26s",
+     "why": "EXTEND 动作段 4.0-7.5s; subclip 3.75-7.8s",
      "evidence": {
       "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
       "L2_AI": "qwen 帧证据: EXTEND WEAK",
@@ -413,13 +369,13 @@
     "eligible": true,
     "folder_hint": "【21】伸缩功能",
     "subclip": {
-     "start_s": 5.09,
-     "end_s": 7.59
+     "start_s": 3.75,
+     "end_s": 7.8
     },
     "semantic_correct": true,
     "boundary_usable": true,
     "motion_support": "UNKNOWN",
-    "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+    "why": "EXTEND 动作段 4.0-7.5s; subclip 3.75-7.8s",
     "evidence": {
      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
      "L2_AI": "qwen 帧证据: EXTEND WEAK",
@@ -453,13 +409,13 @@
      "eligible": true,
      "folder_hint": "【21】伸缩功能",
      "subclip": {
-      "start_s": 5.09,
-      "end_s": 7.59
+      "start_s": 3.75,
+      "end_s": 7.8
      },
      "semantic_correct": true,
      "boundary_usable": true,
      "motion_support": "UNKNOWN",
-     "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+     "why": "EXTEND 动作段 4.0-7.5s; subclip 3.75-7.8s",
      "evidence": {
       "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
       "L2_AI": "qwen 帧证据: EXTEND WEAK",
@@ -480,13 +436,13 @@
      "eligible": true,
      "folder_hint": "【21】伸缩功能",
      "subclip": {
-      "start_s": 5.31,
-      "end_s": 7.81
+      "start_s": 3.75,
+      "end_s": 7.8
      },
      "semantic_correct": true,
      "boundary_usable": true,
      "motion_support": "UNKNOWN",
-     "why": "EXTEND 动作段 5.56-5.56s; subclip 5.31-5.86s",
+     "why": "EXTEND 动作段 4.0-7.5s; subclip 3.75-7.8s",
      "evidence": {
       "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
       "L2_AI": "qwen 帧证据: EXTEND WEAK",
@@ -507,13 +463,13 @@
      "eligible": true,
      "folder_hint": "【21】伸缩功能",
      "subclip": {
-      "start_s": 4.71,
-      "end_s": 7.21
+      "start_s": 3.75,
+      "end_s": 7.8
      },
      "semantic_correct": true,
      "boundary_usable": true,
      "motion_support": "UNKNOWN",
-     "why": "EXTEND 动作段 4.96-4.96s; subclip 4.71-5.26s",
+     "why": "EXTEND 动作段 4.0-7.5s; subclip 3.75-7.8s",
      "evidence": {
       "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
       "L2_AI": "qwen 帧证据: EXTEND WEAK",
@@ -535,13 +491,13 @@
     "eligible": true,
     "folder_hint": "【21】伸缩功能",
     "subclip": {
-     "start_s": 5.09,
-     "end_s": 7.59
+     "start_s": 3.75,
+     "end_s": 7.8
     },
     "semantic_correct": true,
     "boundary_usable": true,
     "motion_support": "UNKNOWN",
-    "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+    "why": "EXTEND 动作段 4.0-7.5s; subclip 3.75-7.8s",
     "evidence": {
      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
      "L2_AI": "qwen 帧证据: EXTEND WEAK",
@@ -575,13 +531,13 @@
      "eligible": true,
      "folder_hint": "【21】伸缩功能",
      "subclip": {
-      "start_s": 5.09,
-      "end_s": 7.59
+      "start_s": 3.75,
+      "end_s": 7.8
      },
      "semantic_correct": true,
      "boundary_usable": true,
      "motion_support": "UNKNOWN",
-     "why": "RETRACT 动作段 5.34-5.34s; subclip 5.09-5.64s",
+     "why": "RETRACT 动作段 4.0-7.5s; subclip 3.75-7.8s",
      "evidence": {
       "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
       "L2_AI": "qwen 帧证据: RETRACT WEAK",
@@ -602,13 +558,13 @@
      "eligible": true,
      "folder_hint": "【21】伸缩功能",
      "subclip": {
-      "start_s": 5.31,
-      "end_s": 7.81
+      "start_s": 3.75,
+      "end_s": 7.8
      },
      "semantic_correct": true,
      "boundary_usable": true,
      "motion_support": "UNKNOWN",
-     "why": "RETRACT 动作段 5.56-5.56s; subclip 5.31-5.86s",
+     "why": "RETRACT 动作段 4.0-7.5s; subclip 3.75-7.8s",
      "evidence": {
       "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
       "L2_AI": "qwen 帧证据: RETRACT WEAK",
@@ -629,13 +585,13 @@
      "eligible": true,
      "folder_hint": "【21】伸缩功能",
      "subclip": {
-      "start_s": 4.71,
-      "end_s": 7.21
+      "start_s": 3.75,
+      "end_s": 7.8
      },
      "semantic_correct": true,
      "boundary_usable": true,
      "motion_support": "UNKNOWN",
-     "why": "RETRACT 动作段 4.96-4.96s; subclip 4.71-5.26s",
+     "why": "RETRACT 动作段 4.0-7.5s; subclip 3.75-7.8s",
      "evidence": {
       "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
       "L2_AI": "qwen 帧证据: RETRACT WEAK",
@@ -657,13 +613,13 @@
     "eligible": true,
     "folder_hint": "【21】伸缩功能",
     "subclip": {
-     "start_s": 5.09,
-     "end_s": 7.59
+     "start_s": 3.75,
+     "end_s": 7.8
     },
     "semantic_correct": true,
     "boundary_usable": true,
     "motion_support": "UNKNOWN",
-    "why": "RETRACT 动作段 5.34-5.34s; subclip 5.09-5.64s",
+    "why": "RETRACT 动作段 4.0-7.5s; subclip 3.75-7.8s",
     "evidence": {
      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
      "L2_AI": "qwen 帧证据: RETRACT WEAK",

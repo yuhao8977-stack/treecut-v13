@@ -1,6 +1,6 @@
 # TreeCut STAGE8 通宵生产加固 Sprint V2 — 主报告
 
-生成：2026-09-02 20:08:08 ｜ 执行窗口按 15h30m 上限约束 ｜ 模式：UNATTENDED/CHECKPOINTED
+生成：2026-09-02 20:17:03 ｜ 执行窗口按 15h30m 上限约束 ｜ 模式：UNATTENDED/CHECKPOINTED
 
 ## 状态矩阵（§107）
 

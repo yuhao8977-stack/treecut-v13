@@ -1,206 +1,1559 @@
 {
- "target_n": "80-120(渐进扩充中, 本批 L2 标注)",
- "note": "L2(qwen) 帧级状态; L3 人工后续锁定; 含正/负/硬负(空镜收纳/煮茶器=可见未用; 插座伪伸缩)",
- "items": [
+ "target_note": "80-120 为集合规模指导; 本集=资产级20 + 帧级条目(证据驱动, L2, 不虚构)",
+ "asset_level": [
   {
    "media_id": 1,
    "group": "DRAWER_POS",
-   "kind": "mixed",
+   "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】-1.mp4",
    "n_frames": 5,
-   "frames_with_action": 3,
-   "frames_object_only": 0,
-   "frames_not_present": 2,
-   "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】-1.mp4"
+   "n_action": 3,
+   "n_object": 0,
+   "n_not": 2,
+   "kind": "mixed"
   },
   {
    "media_id": 3,
    "group": "STORAGE_POS",
-   "kind": "positive",
+   "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4",
    "n_frames": 5,
-   "frames_with_action": 5,
-   "frames_object_only": 0,
-   "frames_not_present": 0,
-   "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4"
+   "n_action": 5,
+   "n_object": 0,
+   "n_not": 0,
+   "kind": "positive"
   },
   {
    "media_id": 4,
    "group": "STORAGE_POS",
-   "kind": "positive",
+   "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4",
    "n_frames": 5,
-   "frames_with_action": 5,
-   "frames_object_only": 0,
-   "frames_not_present": 0,
-   "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4"
+   "n_action": 5,
+   "n_object": 0,
+   "n_not": 0,
+   "kind": "positive"
   },
   {
    "media_id": 37,
    "group": "DRAWER_POS",
-   "kind": "positive",
+   "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01-1.mp4",
    "n_frames": 5,
-   "frames_with_action": 5,
-   "frames_object_only": 0,
-   "frames_not_present": 0,
-   "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导"
+   "n_action": 5,
+   "n_object": 0,
+   "n_not": 0,
+   "kind": "positive"
   },
   {
    "media_id": 261,
    "group": "CABINET_POS",
-   "kind": "mixed",
+   "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
    "n_frames": 5,
-   "frames_with_action": 2,
-   "frames_object_only": 0,
-   "frames_not_present": 3,
-   "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4"
+   "n_action": 2,
+   "n_object": 0,
+   "n_not": 3,
+   "kind": "mixed"
   },
   {
    "media_id": 418,
    "group": "STORAGE_EMPTY",
-   "kind": "negative",
+   "rel": "",
    "n_frames": 3,
-   "frames_with_action": 0,
-   "frames_object_only": 1,
-   "frames_not_present": 2,
-   "rel": "【02】下层抽屉\\   【19】【黑白极简】咸宁宋先生【空镜 岛头收纳整体展示横】\\   【19】【黑白极简】咸宁宋先生【空镜 岛头收纳整体展示横】-1.mp4"
+   "n_action": 0,
+   "n_object": 1,
+   "n_not": 2,
+   "kind": "negative"
   },
   {
    "media_id": 419,
    "group": "STORAGE_EMPTY",
-   "kind": "mixed",
+   "rel": "",
    "n_frames": 3,
-   "frames_with_action": 1,
-   "frames_object_only": 0,
-   "frames_not_present": 2,
-   "rel": "【02】下层抽屉\\   【19】【黑白极简】咸宁宋先生【空镜 岛头收纳整体展示横】\\   【19】【黑白极简】咸宁宋先生【空镜 岛头收纳整体展示横】-2.mp4"
+   "n_action": 1,
+   "n_object": 0,
+   "n_not": 2,
+   "kind": "mixed"
   },
   {
    "media_id": 703,
    "group": "CABINET_POS",
-   "kind": "mixed",
+   "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
    "n_frames": 5,
-   "frames_with_action": 2,
-   "frames_object_only": 0,
-   "frames_not_present": 3,
-   "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4"
+   "n_action": 2,
+   "n_object": 0,
+   "n_not": 3,
+   "kind": "mixed"
   },
   {
    "media_id": 866,
    "group": "CABINET_EMPTY",
-   "kind": "positive",
+   "rel": "",
    "n_frames": 3,
-   "frames_with_action": 3,
-   "frames_object_only": 0,
-   "frames_not_present": 0,
-   "rel": "【02】下层抽屉\\【64】【威水尼奶白色的岛头搭配巴西木纹岩】新加坡淑华【空镜岛台对开门收纳层整体展示】\\【64】【威水尼奶白色的岛头搭配巴西木纹岩】新加坡淑华【空镜岛台对开门收纳层整体展示】-2.m"
+   "n_action": 3,
+   "n_object": 0,
+   "n_not": 0,
+   "kind": "positive"
   },
   {
    "media_id": 867,
    "group": "CABINET_EMPTY",
-   "kind": "positive",
+   "rel": "",
    "n_frames": 3,
-   "frames_with_action": 3,
-   "frames_object_only": 0,
-   "frames_not_present": 0,
-   "rel": "【02】下层抽屉\\【64】【威水尼奶白色的岛头搭配巴西木纹岩】新加坡淑华【空镜岛台对开门收纳层整体展示】\\【64】【威水尼奶白色的岛头搭配巴西木纹岩】新加坡淑华【空镜岛台对开门收纳层整体展示】-3.m"
+   "n_action": 3,
+   "n_object": 0,
+   "n_not": 0,
+   "kind": "positive"
   },
   {
    "media_id": 1590,
    "group": "SOCKET_POS",
-   "kind": "negative",
+   "rel": "【05】公牛轨道插座\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】-1.mp4",
    "n_frames": 5,
-   "frames_with_action": 0,
-   "frames_object_only": 1,
-   "frames_not_present": 4,
-   "rel": "【05】公牛轨道插座\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】-1.mp4"
+   "n_action": 0,
+   "n_object": 1,
+   "n_not": 4,
+   "kind": "negative"
   },
   {
    "media_id": 1591,
    "group": "SOCKET_POS",
-   "kind": "negative",
+   "rel": "【05】公牛轨道插座\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】-2.mp4",
    "n_frames": 5,
-   "frames_with_action": 0,
-   "frames_object_only": 0,
-   "frames_not_present": 5,
-   "rel": "【05】公牛轨道插座\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】-2.mp4"
+   "n_action": 0,
+   "n_object": 0,
+   "n_not": 5,
+   "kind": "negative"
   },
   {
    "media_id": 1592,
    "group": "SOCKET_POS",
-   "kind": "negative",
+   "rel": "【05】公牛轨道插座\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台配置了一组公牛轨道插座】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台配置了一组公牛轨道插座】-1.mp4",
    "n_frames": 5,
-   "frames_with_action": 0,
-   "frames_object_only": 0,
-   "frames_not_present": 5,
-   "rel": "【05】公牛轨道插座\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台配置了一组公牛轨道插座】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台配置了一组公牛轨道插座】-1.mp4"
+   "n_action": 0,
+   "n_object": 0,
+   "n_not": 5,
+   "kind": "negative"
   },
   {
    "media_id": 1984,
    "group": "EXTEND_HARDNEG",
-   "kind": "mixed",
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1(1).mp4",
    "n_frames": 8,
-   "frames_with_action": 1,
-   "frames_object_only": 5,
-   "frames_not_present": 2,
-   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1"
+   "n_action": 1,
+   "n_object": 5,
+   "n_not": 2,
+   "kind": "mixed"
   },
   {
    "media_id": 1985,
    "group": "EXTEND_HARDNEG",
-   "kind": "mixed",
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1.mp4",
    "n_frames": 8,
-   "frames_with_action": 2,
-   "frames_object_only": 5,
-   "frames_not_present": 1,
-   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1"
+   "n_action": 2,
+   "n_object": 5,
+   "n_not": 1,
+   "kind": "mixed"
   },
   {
    "media_id": 1986,
    "group": "EXTEND_HARDNEG",
-   "kind": "mixed",
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2(1).mp4",
    "n_frames": 8,
-   "frames_with_action": 2,
-   "frames_object_only": 5,
-   "frames_not_present": 1,
-   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2"
+   "n_action": 2,
+   "n_object": 5,
+   "n_not": 1,
+   "kind": "mixed"
   },
   {
    "media_id": 2172,
    "group": "POWER_USE",
-   "kind": "negative",
+   "rel": "",
    "n_frames": 3,
-   "frames_with_action": 0,
-   "frames_object_only": 0,
-   "frames_not_present": 3,
-   "rel": "【11】煮茶器\\  【35】【奶白色+北美黑胡桃】深圳陈先生【空镜岛头配置一组煮茶器展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【空镜岛头配置一组煮茶器展示】-1.mp4"
+   "n_action": 0,
+   "n_object": 0,
+   "n_not": 3,
+   "kind": "negative"
   },
   {
    "media_id": 2482,
    "group": "EXTEND_POS",
-   "kind": "mixed",
-   "n_frames": 8,
-   "frames_with_action": 1,
-   "frames_object_only": 5,
-   "frames_not_present": 2,
-   "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4"
+   "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+   "n_frames": 16,
+   "n_action": 9,
+   "n_object": 5,
+   "n_not": 2,
+   "kind": "mixed"
   },
   {
    "media_id": 2483,
    "group": "EXTEND_POS",
-   "kind": "mixed",
-   "n_frames": 8,
-   "frames_with_action": 1,
-   "frames_object_only": 5,
-   "frames_not_present": 2,
-   "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4"
+   "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4",
+   "n_frames": 16,
+   "n_action": 9,
+   "n_object": 5,
+   "n_not": 2,
+   "kind": "mixed"
   },
   {
    "media_id": 2484,
    "group": "EXTEND_POS",
-   "kind": "mixed",
-   "n_frames": 8,
-   "frames_with_action": 2,
-   "frames_object_only": 5,
-   "frames_not_present": 1,
-   "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4"
+   "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4",
+   "n_frames": 16,
+   "n_action": 10,
+   "n_object": 5,
+   "n_not": 1,
+   "kind": "mixed"
   }
- ]
+ ],
+ "frame_level": [
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 1.53,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 3.82,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 6.36,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 8.91,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 11.2,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 1.59,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 3.97,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 6.62,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 9.27,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 11.66,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 1.42,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 3.55,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 5.91,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 8.27,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 10.4,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 0.75,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 1.87,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.11,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 4.36,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 5.48,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 0.63,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 1.57,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.61,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.66,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 4.6,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 0.63,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 1.57,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.61,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.66,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 4.6,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "t_s": 0.81,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "t_s": 2.03,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "t_s": 3.38,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "t_s": 4.73,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "t_s": 5.95,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "t_s": 1.07,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "t_s": 2.68,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "t_s": 4.47,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "t_s": 6.26,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "t_s": 7.87,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "t_s": 0.95,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "t_s": 2.37,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "t_s": 3.95,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "t_s": 5.53,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "t_s": 6.95,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1591,
+   "group": "SOCKET_POS",
+   "t_s": 0.89,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1591,
+   "group": "SOCKET_POS",
+   "t_s": 2.22,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1591,
+   "group": "SOCKET_POS",
+   "t_s": 3.69,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1591,
+   "group": "SOCKET_POS",
+   "t_s": 5.17,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1591,
+   "group": "SOCKET_POS",
+   "t_s": 6.5,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1592,
+   "group": "SOCKET_POS",
+   "t_s": 0.84,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1592,
+   "group": "SOCKET_POS",
+   "t_s": 2.11,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1592,
+   "group": "SOCKET_POS",
+   "t_s": 3.52,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1592,
+   "group": "SOCKET_POS",
+   "t_s": 4.92,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1592,
+   "group": "SOCKET_POS",
+   "t_s": 6.19,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 261,
+   "group": "CABINET_POS",
+   "t_s": 0.61,
+   "state_l2": "ACTION_START",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 261,
+   "group": "CABINET_POS",
+   "t_s": 1.53,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 261,
+   "group": "CABINET_POS",
+   "t_s": 2.55,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 261,
+   "group": "CABINET_POS",
+   "t_s": 3.58,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 261,
+   "group": "CABINET_POS",
+   "t_s": 4.5,
+   "state_l2": "ACTION_START",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 703,
+   "group": "CABINET_POS",
+   "t_s": 1.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 703,
+   "group": "CABINET_POS",
+   "t_s": 3.75,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 703,
+   "group": "CABINET_POS",
+   "t_s": 6.25,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 703,
+   "group": "CABINET_POS",
+   "t_s": 8.74,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 703,
+   "group": "CABINET_POS",
+   "t_s": 10.99,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 3,
+   "group": "STORAGE_POS",
+   "t_s": 0.93,
+   "state_l2": "ACTION_START",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 3,
+   "group": "STORAGE_POS",
+   "t_s": 2.33,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 3,
+   "group": "STORAGE_POS",
+   "t_s": 3.89,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 3,
+   "group": "STORAGE_POS",
+   "t_s": 5.44,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 3,
+   "group": "STORAGE_POS",
+   "t_s": 6.84,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 4,
+   "group": "STORAGE_POS",
+   "t_s": 0.51,
+   "state_l2": "ACTION_START",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 4,
+   "group": "STORAGE_POS",
+   "t_s": 1.28,
+   "state_l2": "ACTION_START",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 4,
+   "group": "STORAGE_POS",
+   "t_s": 2.14,
+   "state_l2": "ACTION_START",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 4,
+   "group": "STORAGE_POS",
+   "t_s": 2.99,
+   "state_l2": "ACTION_START",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 4,
+   "group": "STORAGE_POS",
+   "t_s": 3.76,
+   "state_l2": "ACTION_START",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 5.34,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 7.38,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 5.56,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 7.68,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 4.96,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 6.86,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.61,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.61,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.19,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.03,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.19,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.03,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 5.34,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 5.56,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 4.96,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.61,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.19,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.19,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2172,
+   "group": "POWER_USE",
+   "t_s": 0.72,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2172,
+   "group": "POWER_USE",
+   "t_s": 3.0,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2172,
+   "group": "POWER_USE",
+   "t_s": 5.27,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 418,
+   "group": "STORAGE_EMPTY",
+   "t_s": 1.06,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 418,
+   "group": "STORAGE_EMPTY",
+   "t_s": 4.4,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 418,
+   "group": "STORAGE_EMPTY",
+   "t_s": 7.74,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 419,
+   "group": "STORAGE_EMPTY",
+   "t_s": 1.81,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 419,
+   "group": "STORAGE_EMPTY",
+   "t_s": 7.53,
+   "state_l2": "ACTION_END",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 419,
+   "group": "STORAGE_EMPTY",
+   "t_s": 13.26,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 866,
+   "group": "CABINET_EMPTY",
+   "t_s": 0.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 866,
+   "group": "CABINET_EMPTY",
+   "t_s": 2.1,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 866,
+   "group": "CABINET_EMPTY",
+   "t_s": 3.7,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 867,
+   "group": "CABINET_EMPTY",
+   "t_s": 0.48,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 867,
+   "group": "CABINET_EMPTY",
+   "t_s": 1.99,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 867,
+   "group": "CABINET_EMPTY",
+   "t_s": 3.49,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 4.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 4.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 5.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 5.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 6.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 6.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 7.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "t_s": 7.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 4.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 4.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 5.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 5.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 6.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 6.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 7.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "t_s": 7.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 4.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 4.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 5.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 5.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 6.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 6.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 7.0,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "t_s": 7.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "dense",
+   "level": "L2_VISUAL_CANDIDATE"
+  }
+ ],
+ "n_assets": 20,
+ "n_frames": 132,
+ "n_action_frames": 62,
+ "n_object_frames": 32,
+ "n_not_frames": 38,
+ "hard_negatives": [
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 0.75,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 1.87,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.11,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 4.36,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 5.48,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 0.63,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 1.57,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.61,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.66,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 4.6,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 0.63,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 1.57,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.61,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.66,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 4.6,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.61,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.61,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.19,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.03,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.19,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 3.03,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass2",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.61,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.19,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "t_s": 2.19,
+   "state_l2": "NOT_PRESENT",
+   "pass": "base",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 418,
+   "group": "STORAGE_EMPTY",
+   "t_s": 1.06,
+   "state_l2": "OBJECT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 418,
+   "group": "STORAGE_EMPTY",
+   "t_s": 4.4,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 418,
+   "group": "STORAGE_EMPTY",
+   "t_s": 7.74,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 419,
+   "group": "STORAGE_EMPTY",
+   "t_s": 1.81,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 419,
+   "group": "STORAGE_EMPTY",
+   "t_s": 7.53,
+   "state_l2": "ACTION_END",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 419,
+   "group": "STORAGE_EMPTY",
+   "t_s": 13.26,
+   "state_l2": "NOT_PRESENT",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 866,
+   "group": "CABINET_EMPTY",
+   "t_s": 0.5,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 866,
+   "group": "CABINET_EMPTY",
+   "t_s": 2.1,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 866,
+   "group": "CABINET_EMPTY",
+   "t_s": 3.7,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 867,
+   "group": "CABINET_EMPTY",
+   "t_s": 0.48,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 867,
+   "group": "CABINET_EMPTY",
+   "t_s": 1.99,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 867,
+   "group": "CABINET_EMPTY",
+   "t_s": 3.49,
+   "state_l2": "ACTION_IN_PROGRESS",
+   "pass": "pass3",
+   "level": "L2_VISUAL_CANDIDATE"
+  }
+ ],
+ "generated_at": "2026-09-02 20:16:52"
 }

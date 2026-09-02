@@ -1,6 +1,6 @@
 {
  "level": "L2_VISUAL_CANDIDATE",
- "note": "qwen2.5vl=L2 时序候选; 非L3; 仅用于动作候选与有界校准 | pass2: extend 素材 0.42/0.58 有界补充帧 | direction probe: EXTEND vs RETRACT 独立复核 | pass3: 煮茶器/收纳/对开门空镜(含硬负) 3帧",
+ "note": "qwen2.5vl=L2 时序候选; 非L3; 仅用于动作候选与有界校准 | pass2: extend 素材 0.42/0.58 有界补充帧 | direction probe: EXTEND vs RETRACT 独立复核 | pass3: 煮茶器/收纳/对开门空镜(含硬负) 3帧 | pass4: EXTEND 素材 4.0-7.5s 密集采样(0.5s)",
  "items": [
   {
    "media_id": 2482,
@@ -1060,6 +1060,222 @@
     "CABINET_OPEN",
     "CABINET_CLOSE"
    ]
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 4.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面/岛台 | 一名工人正在操作可伸缩桌面/岛台，可能是在拉出加宽或被收回。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 4.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面 | 桌面正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 5.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面 | 桌面正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 5.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS\n桌面/岛台\n可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 6.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面/岛台 | 桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 6.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面/岛台 | 桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 7.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS|桌面/岛台|这一帧中, 可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 7.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面/岛台 | 桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 4.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面/岛台 | 桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 4.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS\n桌面/岛台\n可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 5.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS\n桌面/岛台\n可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 5.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS\n桌面/岛台\n可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 6.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS|桌面/岛台|这一帧中, 可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 6.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS\n桌面/岛台\n可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 7.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS\n桌面/岛台",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 7.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面/岛台 | 桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 4.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面/岛台 | 桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 4.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS|桌面/岛台|这一帧中, 可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 5.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS|桌面/岛台|这一帧中, 可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 5.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面/岛台 | 桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 6.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS|桌面/岛台|这一帧中, 可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 6.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS | 桌面/岛台 | 桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 7.0,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS|桌面/岛台|这一帧中, 可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "frame_idx": 96,
+   "t_s": 7.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS|桌面/岛台|这一帧中, 可伸缩桌面/岛台正在被拉出加宽。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass4_dense": true
   }
  ]
 }

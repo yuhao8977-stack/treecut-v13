@@ -10,17 +10,17 @@
  ],
  "inputs": {
   "script_beats": 16,
-  "evidence_frames": 108,
-  "windows": 40,
-  "beats_with_selected": 5
+  "evidence_frames": 132,
+  "windows": 38,
+  "beats_with_selected": 4
  },
  "beat_summary": [
   {
    "beat": "B1",
    "text": "岛台想好用",
    "candidates": 0,
-   "selected": 1,
-   "status": "OK"
+   "selected": null,
+   "status": "NO_CANDIDATE"
   },
   {
    "beat": "B2",
@@ -136,7 +136,7 @@
    "WRONG_ACTION",
    "WRONG_FUNCTION_VISUAL"
   ],
-  "fail_count": 25,
+  "fail_count": 27,
   "warning_count": 2,
   "not_ready_reason": "MAJOR_DUPLICATE; UNSUPPORTED_CORE_CLAIM; WRONG_ACTION; WRONG_FUNCTION_VISUAL"
  },
@@ -151,5 +151,5 @@
  },
  "not_pilot_v3": true,
  "rendered_video": null,
- "generated_at": "2026-09-02 20:08:02"
+ "generated_at": "2026-09-02 20:17:03"
 }
