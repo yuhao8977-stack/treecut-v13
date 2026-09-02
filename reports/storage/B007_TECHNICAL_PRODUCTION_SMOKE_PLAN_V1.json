@@ -1,0 +1,44 @@
+{
+  "project": "B007_TECHNICAL_PRODUCTION_SMOKE_V1",
+  "script": "这台两米四的伸缩岛台，拉开以后能坐八个人。岩板台面耐刮耐高温，平时切菜吃饭办公都在这里。台下的大抽屉用了静音滑轨，锅碗瓢盆全都能收进去。侧面还预留了升降插座，吃火锅很方便。",
+  "beats": [
+    "INTRO",
+    "PRODUCT",
+    "FEATURE",
+    "DETAIL",
+    "CTA"
+  ],
+  "segments": [
+    {
+      "note_id": "69f9a0ac000000003701d937",
+      "seg_no": 1,
+      "sha256": "6df9062aa0fc95ab1f1386113695eada88dd6b682a7fd936208bd9efb8f0710e",
+      "path": "Z:\\TreeCut_Media\\B007\\published_media\\69f9a0ac000000003701d937__6df9062aa0fc.mp4"
+    },
+    {
+      "note_id": "69367987000000001b027d8f",
+      "seg_no": 0,
+      "sha256": "4bf56cc279f542a542021cb116b104c1eef0f97af7c53286892e9408a695d9e6",
+      "path": "Z:\\TreeCut_Media\\B007\\published_media\\69367987000000001b027d8f__4bf56cc279f5.mp4"
+    },
+    {
+      "note_id": "6a85b8490000000021022731",
+      "seg_no": 0,
+      "sha256": "8254c7195f61fe688c185d2954dbd49275516aa76f0a04a9d2d6345a416ccb00",
+      "path": "Z:\\TreeCut_Media\\B007\\published_media\\6a85b8490000000021022731__8254c7195f61.mp4"
+    },
+    {
+      "note_id": "6a92b9e8000000002501a357",
+      "seg_no": 5,
+      "sha256": "9847737cda9daf07fea0a1f0b7231e1e52bc11a8cdd032cc40c5493f2b3ed0c4",
+      "path": "Z:\\TreeCut_Media\\B007\\published_media\\6a92b9e8000000002501a357__9847737cda9d.mp4"
+    },
+    {
+      "note_id": "63a6a53f000000001f00d5e2",
+      "seg_no": 0,
+      "sha256": "f9a339aaa426dbeb913b4ca22ea68a2a0e43a42d52d364e9228960b169a9b31e",
+      "path": "Z:\\TreeCut_Media\\B007\\published_media\\63a6a53f000000001f00d5e2__f9a339aaa426.mp4"
+    }
+  ],
+  "narration_text_chars": 86
+}

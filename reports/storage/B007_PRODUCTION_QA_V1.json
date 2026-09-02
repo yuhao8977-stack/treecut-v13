@@ -1,0 +1,31 @@
+{
+  "status": "READY",
+  "qa": {
+    "SOURCE_IDENTITY": true,
+    "TIMELINE_VALID": true,
+    "VIDEO_DECODABLE": true,
+    "AUDIO_PRESENT": true,
+    "SUBTITLE_PRESENT": true,
+    "DURATION_VALID": true,
+    "SOURCE_PROVENANCE": true,
+    "RENDER_PASS": true,
+    "video": {
+      "codec": "h264",
+      "width": 540,
+      "height": 960,
+      "duration_s": 23.17,
+      "audio_streams": 1,
+      "size": 3458379
+    }
+  },
+  "schema": [
+    "SOURCE_IDENTITY",
+    "TIMELINE_VALID",
+    "VIDEO_DECODABLE",
+    "AUDIO_PRESENT",
+    "SUBTITLE_PRESENT",
+    "DURATION_VALID",
+    "SOURCE_PROVENANCE",
+    "RENDER_PASS"
+  ]
+}

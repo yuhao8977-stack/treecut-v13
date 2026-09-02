@@ -1,0 +1,11 @@
+{
+  "direct_ffmpeg_concat": {
+    "usable": true,
+    "note": "working smoke renderer (WinGet ffmpeg)"
+  },
+  "render_video_plan": {
+    "usable": true,
+    "duration": 23.166667,
+    "size": 2213464
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "usable": false,
+  "error": "'NoneType' object has no attribute 'is_file'",
+  "note": "GUI 交互非本阶段要求（JIANYING_REQUIRES_HUMAN 不阻塞 direct renderer）"
+}
