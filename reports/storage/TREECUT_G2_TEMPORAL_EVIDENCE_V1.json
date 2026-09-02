@@ -361,6 +361,87 @@
    "t_s": 7.87,
    "qwen_l2_raw": "ACTION_IN_PROGRESS(正在开/关)\nobject=下层抽屉\ndesc=画面中的人正在打开下层抽屉。",
    "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "frame_idx": 0,
+   "frac": 0.12,
+   "t_s": 0.95,
+   "qwen_l2_raw": "object=轨道插座\ndesc=轨道插座滑动\n\nobject=插头\ndesc=插头插入插座/插座供电使用",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "frame_idx": 1,
+   "frac": 0.3,
+   "t_s": 2.37,
+   "qwen_l2_raw": "object=轨道插座/插头/电器\ndesc=轨道插座滑动",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "frame_idx": 2,
+   "frac": 0.5,
+   "t_s": 3.95,
+   "qwen_l2_raw": "state=OBJECT_PRESENT(插座可见未插)\nobject=插座\ndesc=画面中有一个插座，但没有插头插入。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "frame_idx": 3,
+   "frac": 0.7,
+   "t_s": 5.53,
+   "qwen_l2_raw": "state=NOT_PRESENT\nobject=轨道插座/插头/电器\ndesc=画面中没有显示插座、插头或电器的使用情况。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "frame_idx": 4,
+   "frac": 0.88,
+   "t_s": 6.95,
+   "qwen_l2_raw": "state=NOT_PRESENT\nobject=插座\ndesc=画面中没有显示插座或插头插入插座的场景。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1591,
+   "group": "SOCKET_POS",
+   "frame_idx": 0,
+   "frac": 0.12,
+   "t_s": 0.89,
+   "qwen_l2_raw": "object=轨道插座/插头/电器; desc=轨道插座滑动",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1591,
+   "group": "SOCKET_POS",
+   "frame_idx": 1,
+   "frac": 0.3,
+   "t_s": 2.22,
+   "qwen_l2_raw": "object=轨道插座/插头/电器\ndesc=轨道插座滑动",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1591,
+   "group": "SOCKET_POS",
+   "frame_idx": 2,
+   "frac": 0.5,
+   "t_s": 3.69,
+   "qwen_l2_raw": "object=轨道插座/插头/电器\ndesc=画面中的人正在操作一个轨道插座，似乎在滑动或调整轨道插座的位置。",
+   "level": "L2_VISUAL_CANDIDATE"
+  },
+  {
+   "media_id": 1591,
+   "group": "SOCKET_POS",
+   "frame_idx": 3,
+   "frac": 0.7,
+   "t_s": 5.17,
+   "qwen_l2_raw": "state=NOT_PRESENT\nobject=插座\ndesc=画面中没有显示插座或插头插入插座的场景。",
+   "level": "L2_VISUAL_CANDIDATE"
   }
  ]
 }

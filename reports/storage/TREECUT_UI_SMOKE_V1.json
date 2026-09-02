@@ -1,0 +1,19 @@
+{
+  "open_workbench": {
+    "status": 200,
+    "bytes": 5901
+  },
+  "load_project": {
+    "status": 200,
+    "beats": 16
+  },
+  "video_range": {
+    "status": 206,
+    "got_bytes": 2048,
+    "content_range": "bytes 0-2047/35690475"
+  },
+  "replace_save": {
+    "ok": true,
+    "saved_at": "2026-09-02 19:43:56"
+  }
+}

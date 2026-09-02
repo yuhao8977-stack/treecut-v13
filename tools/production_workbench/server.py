@@ -17,7 +17,7 @@ import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]          # repo root
+ROOT = Path(__file__).resolve().parents[2]          # repo root
 PROJ_DIR = ROOT / "reports" / "storage"
 PROJECT_FILE = PROJ_DIR / "TREECUT_WORKBENCH_PROJECT_V1.json"
 INDEX = Path(__file__).parent / "index.html"
