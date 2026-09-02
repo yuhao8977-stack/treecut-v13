@@ -207,8 +207,13 @@ class ProductionEngine:
     # ------------------------------------------------------------------
 
     def produce(self, template_id: str, project_name: str | None = None,
-                render: bool = True) -> ProductionResult:
-        """按模板生成成片（render=True 时渲染 MP4 + 剪映草稿）。"""
+                render: bool = True, narration_text: str | None = None,
+                mock_narration: bool = False) -> ProductionResult:
+        """按模板生成成片（render=True 时渲染 MP4 + 剪映草稿）。
+
+        V0.8.4：narration_text 提供时走真实 TTS/SRT（ProductionNarrationAdapter）；
+        mock_narration=True 时才允许静音占位（显式测试用）；否则不冒充 NARRATION_READY。
+        """
         started = time.perf_counter()
         templates = self.store.list_templates()
         tpl = next((t for t in templates if t["template_id"] == template_id), None)
@@ -247,9 +252,15 @@ class ProductionEngine:
                 rendered = self._render(edit_plan, out_dir)
                 result.jianying_draft = rendered.get("draft", "")
                 result.mp4_path = rendered.get("mp4", "")
-                result.status = "rendered" if result.mp4_path else "draft_ready"
-                if result.mp4_path:
-                    result.message = f"成片已生成: {Path(result.mp4_path).name}"
+                if rendered.get("narration_failed"):
+                    # V0.8.4：配音/字幕失败不得标成功
+                    result.status = "partial"
+                    result.message = (f"成片为 PARTIAL（无真实配音/字幕）: "
+                                      f"narration_status={rendered.get('narration_status')}")
+                else:
+                    result.status = "rendered" if result.mp4_path else "draft_ready"
+                    if result.mp4_path:
+                        result.message = f"成片已生成: {Path(result.mp4_path).name}"
             else:
                 result.status = "draft_ready"
                 result.message = "计划已生成（未渲染）"
@@ -335,27 +346,56 @@ class ProductionEngine:
             narration = out_dir / "narration.wav"
             bgm = out_dir / "bgm.mp3"
             srt = out_dir / "narration.srt"
+            narration_status = "NOT_REQUESTED"
+            if narration_text and not narration.exists():
+                # V0.8.4：真实 TTS/SRT（不落静音占位）
+                from treecut.output.production_narration import ProductionNarrationAdapter
+                art = ProductionNarrationAdapter().generate(narration_text, out_dir,
+                                                            mock=mock_narration)
+                narration_status = art.status
+                if art.status == "NARRATION_READY":
+                    narration, srt = art.wav, art.srt
+                elif not mock_narration:
+                    narration_status = art.status or "TTS_GENERATION_FAILED"
+                try:
+                    (out_dir / "narration_metadata.json").write_text(
+                        json.dumps(art.to_dict(), ensure_ascii=False, indent=2),
+                        encoding="utf-8")
+                except Exception:
+                    pass
             if not narration.exists():
-                # 生成 2 秒静音占位（草稿接口要求文件存在）
-                import subprocess as _sp
-                _sp.run([str(ffmpeg), "-y", "-f", "lavfi", "-i",
-                         "anullsrc=r=44100:cl=mono", "-t", "2",
-                         str(narration)], capture_output=True, timeout=60)
+                if mock_narration or not narration_text:
+                    # 占位仅保留给显式 MOCK / 计划结构测试（V0.8.4：生产模式禁止静音冒充成功）
+                    narration_status = narration_status if narration_status != "NOT_REQUESTED" else (
+                        "MOCK" if mock_narration else "NOT_REQUESTED")
+                    import subprocess as _sp
+                    _sp.run([str(ffmpeg), "-y", "-f", "lavfi", "-i",
+                             "anullsrc=r=44100:cl=mono", "-t", "2",
+                             str(narration)], capture_output=True, timeout=60)
+                else:
+                    narration_status = "TTS_GENERATION_FAILED"
             if not bgm.exists():
-                # 静音 BGM 占位
+                # 静音 BGM 占位（BGM 非本阶段目标；保持结构兼容）
                 import subprocess as _sp
                 _sp.run([str(ffmpeg), "-y", "-f", "lavfi", "-i",
                          "anullsrc=r=44100:cl=mono", "-t", "2",
                          str(bgm)], capture_output=True, timeout=60)
             if not srt.exists():
-                # 空字幕占位（避免 None 触发 is_file 检查）
-                srt.write_text("", encoding="utf-8")
+                if narration_status in ("NARRATION_READY", "SUBTITLE_TEXT_COVERAGE_LOW"):
+                    pass  # adapter 已写入真实 SRT
+                else:
+                    srt.write_text("", encoding="utf-8")
             build_jianying_draft(
                 edit_plan, draft_dir,
                 narration_wav=narration, bgm=bgm, subtitle_srt=srt,
                 ffmpeg=ffmpeg,
             )
             result["draft"] = str(draft_dir)
+            result["narration_status"] = narration_status
+            result["narration_failed"] = narration_status in (
+                "TTS_GENERATION_FAILED", "SUBTITLE_GENERATION_FAILED", "TTS_DURATION_ANOMALY")
+            if result["narration_failed"]:
+                result["draft"] = ""
         except Exception as e:
             print(f"  [剪映草稿跳过] {type(e).__name__}: {e}")
         return result

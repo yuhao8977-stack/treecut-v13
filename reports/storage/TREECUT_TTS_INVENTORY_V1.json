@@ -1,0 +1,33 @@
+{
+  "phase": "V0.8.4",
+  "generated_at": "2026-09-02 15:25:59",
+  "tts_engine_reused": "tts_local(sherpa-onnx) 不可用（无外网+无模型）→ 使用 Windows SAPI（System.Speech）离线中文语音 Microsoft Huihui Desktop zh-CN",
+  "providers": {
+    "preferred": {
+      "name": "sherpa-onnx VITS (tts_local)",
+      "available": false,
+      "reason": "sherpa_onnx 未安装且 PyPI 不可达；磁盘无 *.onnx+tokens.txt 模型"
+    },
+    "active": {
+      "name": "Windows SAPI System.Speech",
+      "available": true,
+      "voice": "Microsoft Huihui Desktop",
+      "culture": "zh-CN",
+      "offline": true,
+      "format": "16-bit PCM WAV (SAPI 默认)"
+    }
+  },
+  "entry_points": {
+    "tts": "treecut.models.tts_sapi.synthesize(text, output_wav)",
+    "adapter": "treecut.output.production_narration.ProductionNarrationAdapter.generate(text, out_dir, mock=False)",
+    "srt": "treecut.output.narration.build_srt(text, audio_duration, audio_path)",
+    "copywriter": "treecut.copywriter.build_narration(selling_points, target_duration)"
+  },
+  "input_output_schema": {
+    "input": "str 中文旁白文本",
+    "output": "WAV(16bit PCM) + non-empty SRT"
+  },
+  "speed_sample": "sherpa 原生速度；SAPI 默认语速；实测 ~3.7-4.0 字/秒",
+  "produce_integration": "cognitive/production.py produce(template_id, project_name, render, narration_text=None, mock_narration=False)：narration_text 提供时走真实 TTS/SRT；mock_narration=True 才允许占位；失败标 partial/不冒充",
+  "placeholder_policy": "生产模式静音占位已移除；仅显式 MOCK 保留"
+}

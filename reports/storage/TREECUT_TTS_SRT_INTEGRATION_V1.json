@@ -1,0 +1,16 @@
+{
+  "phase": "V0.8.4",
+  "real_tts_integrated_into_produce": true,
+  "placeholder_removed_from_production_mode": true,
+  "mock_only_explicit": true,
+  "artifact_metadata": [
+    "tts_source",
+    "voice",
+    "text_hash",
+    "audio_sha256",
+    "generated_at",
+    "audio_duration",
+    "chars_per_second"
+  ],
+  "status": "TREECUT_TTS_SRT_INTEGRATION_PASS"
+}
