@@ -1,0 +1,126 @@
+{
+ "phase": "V0.8.2",
+ "generated_at": "2026-09-02 14:46:30",
+ "items": [
+  {
+   "note_id": "6a92b9e8000000002501a357",
+   "sample_id": "RC-6A92B9E8",
+   "window": "LATEST",
+   "stratum": "No Paid Control",
+   "recovery_status": "RECOVERED_EXACT",
+   "sha256": "9847737cda9daf07fea0a1f0b7231e1e52bc11a8cdd032cc40c5493f2b3ed0c4",
+   "duration": 38.057574,
+   "resolution": "720x1280",
+   "codec": "h264",
+   "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a92b9e8000000002501a357__9847737cda9d.mp4"
+  },
+  {
+   "note_id": "6a9189b6000000002003348e",
+   "sample_id": "RC-6A9189B6",
+   "window": "LATEST",
+   "stratum": "No Paid Control",
+   "recovery_status": "RECOVERED_EXACT",
+   "sha256": "ccb149837dd5058e9322b0f87aff014d943eec1c72b9a66a64bd06002ce86775",
+   "duration": 30.487868,
+   "resolution": "720x1280",
+   "codec": "h264",
+   "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a9189b6000000002003348e__ccb149837dd5.mp4"
+  },
+  {
+   "note_id": "6a8edcca000000002a03b79e",
+   "sample_id": "RC-6A8EDCCA",
+   "window": "LATEST",
+   "stratum": "Paid Efficient",
+   "recovery_status": "RECOVERED_EXACT",
+   "sha256": "9c8e3daff13a6a2e3f9ab26fc0caf31a1567b21cae0f345c3fa52b89836601f6",
+   "duration": 49.203175,
+   "resolution": "720x1280",
+   "codec": "h264",
+   "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a8edcca000000002a03b79e__9c8e3daff13a.mp4"
+  },
+  {
+   "note_id": "6a85b8490000000021022731",
+   "sample_id": "RC-6A85B849",
+   "window": "LATEST",
+   "stratum": "Creator High",
+   "recovery_status": "RECOVERED_EXACT",
+   "sha256": "8254c7195f61fe688c185d2954dbd49275516aa76f0a04a9d2d6345a416ccb00",
+   "duration": 100.008549,
+   "resolution": "720x1280",
+   "codec": "h264",
+   "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a85b8490000000021022731__8254c7195f61.mp4"
+  },
+  {
+   "note_id": "6a7b28ab000000002800316a",
+   "sample_id": "RC-6A7B28AB",
+   "window": "LATEST",
+   "stratum": "Paid Efficient",
+   "recovery_status": "RECOVERED_EXACT",
+   "sha256": "960565de4c3e97934b0459d684b9f5c3907a225ae709e7da62b9f3d9ef4014bf",
+   "duration": 83.081156,
+   "resolution": "720x1280",
+   "codec": "h264",
+   "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a7b28ab000000002800316a__960565de4c3e.mp4"
+  },
+  {
+   "note_id": "6a411feb000000001c026d77",
+   "sample_id": "RC-6A411FEB",
+   "window": "EARLIER",
+   "stratum": "Paid Efficient",
+   "recovery_status": "RECOVERED_EXACT",
+   "sha256": "81dd324a1bd38cf9d6ab8f1bec825630d686d9c15bc6d8e337277d129d116907",
+   "duration": 39.172132,
+   "resolution": "720x1280",
+   "codec": "h264",
+   "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a411feb000000001c026d77__81dd324a1bd3.mp4"
+  },
+  {
+   "note_id": "6a411f31000000001503cdc6",
+   "sample_id": "RC-6A411F31",
+   "window": "EARLIER",
+   "stratum": "Paid High-input Weak",
+   "recovery_status": "RECOVERED_EXACT",
+   "sha256": "11f44e02a44db85beb4b83d194d30fc65347c01b0f07851a8edf15939ea5fcda",
+   "duration": 63.669229,
+   "resolution": "720x1280",
+   "codec": "h264",
+   "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a411f31000000001503cdc6__11f44e02a44d.mp4"
+  },
+  {
+   "note_id": "6a37dcbf0000000007010e07",
+   "sample_id": "RC-6A37DCBF",
+   "window": "EARLIER",
+   "stratum": "Cross-source",
+   "recovery_status": "RECOVERED_EXACT",
+   "sha256": "9105c5383698dda07577c512abf191b4cff59d27f931f3147a4801efd5bd3dec",
+   "duration": 76.27771,
+   "resolution": "720x1280",
+   "codec": "h264",
+   "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a37dcbf0000000007010e07__9105c5383698.mp4"
+  },
+  {
+   "note_id": "6a369c78000000000702e481",
+   "sample_id": "RC-6A369C78",
+   "window": "EARLIER",
+   "stratum": "Cross-source",
+   "recovery_status": "RECOVERED_EXACT",
+   "sha256": "52f6b61bfa8486fe74f5556c5aae87a841f5cd42ae9beb0c1774429d17463bbf",
+   "duration": 75.604331,
+   "resolution": "720x1280",
+   "codec": "h264",
+   "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a369c78000000000702e481__52f6b61bfa84.mp4"
+  },
+  {
+   "note_id": "6a2bb62d00000000070200a5",
+   "sample_id": "RC-6A2BB62D",
+   "window": "EARLIER",
+   "stratum": "Paid High-input Weak",
+   "recovery_status": "RECOVERED_EXACT",
+   "sha256": "5f1472eca59630b757c283698fa2c34edaab4b1eaa2b3e52c0fd9b7e39ba53c6",
+   "duration": 54.777392,
+   "resolution": "720x1280",
+   "codec": "h264",
+   "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a2bb62d00000000070200a5__5f1472eca596.mp4"
+  }
+ ]
+}

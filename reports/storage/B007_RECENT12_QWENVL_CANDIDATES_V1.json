@@ -1,0 +1,1670 @@
+{
+ "phase": "V0.8.1",
+ "generated_at": "2026-09-02 14:43:27",
+ "model": "qwen2.5vl:7b",
+ "status_policy": "L2 CANDIDATE only; no auto L3",
+ "count": 20,
+ "ok": 20,
+ "segments": [
+  {
+   "segment_id": "b007:6a85b8490000000021022731:0",
+   "sample_id": "RC-6A85B849",
+   "note_id": "6a85b8490000000021022731",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 2667,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "展示岛台的放置方式",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    }
+   },
+   "qwen_raw_tail": "ASR_EVIDENCE\"\n  },\n  \"OCR_EVIDENCE\": {\n    \"value\": \"我做了6年的岛台 KUBON坤宝高端岛台工厂 小红书\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a85b8490000000021022731\\6a85b8490000000021022731_000.jpg",
+    "asr_text": "我做了6年的导台 今天要跟你分享厉害的 导台靠墙放置",
+    "ocr_text": "我做了6年的岛台 KUBON坤宝高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      30.609
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a85b8490000000021022731:11",
+   "sample_id": "RC-6A85B849",
+   "note_id": "6a85b8490000000021022731",
+   "seg_no": 11,
+   "start_ms": 39267,
+   "end_ms": 45867,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "INSTALLATION",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "action": {
+     "value": "MOVING",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "shot_function_candidate": {
+     "value": "PRODUCT_INSTALLATION",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "PRODUCT_VISIBILITY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\"audio\": {\n    \"value\": \"消防门的尺寸 如果入户路径有消防门 请注意消防门尺寸 导台最短边尺寸 不能超过这个门框尺寸哦 导台的收纳空间\",\n    \"source\": \"ASR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a85b8490000000021022731\\6a85b8490000000021022731_011.jpg",
+    "asr_text": "消防门的尺寸 如果入户路径有消防门 请注意消防门尺寸 导台最短边尺寸 不能超过这个门框尺寸哦 导台的收纳空间",
+    "ocr_text": "小红书 KUBON坤宝高端岛台工厂 划重点 申宝鸣台 请注意消防门尺寸 无快 把装 无 咨 拉 忧美家整 咨询热线 间多陪伴家人！",
+    "clip_frames": [
+     [
+      "OTHER",
+      27.575
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a92b9e8000000002501a357:0",
+   "sample_id": "RC-6A92B9E8",
+   "note_id": "6a92b9e8000000002501a357",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 1180,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\n  \"shot_function_candidate\": {\n    \"value\": \"DISPLAY\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  },\n  \"human_presence\": {\n    \"",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a92b9e8000000002501a357\\6a92b9e8000000002501a357_000.jpg",
+    "asr_text": "说真的,精装房是鸡肋厨房",
+    "ocr_text": "说真的精装房这鸡肋厨房 KUBON坤宝高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      27.874
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a92b9e8000000002501a357:5",
+   "sample_id": "RC-6A92B9E8",
+   "note_id": "6a92b9e8000000002501a357",
+   "seg_no": 5,
+   "start_ms": 7180,
+   "end_ms": 9780,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "detail_shot",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": " \"yes\",\n    \"source\": \"ASR_EVIDENCE\"\n  },\n  \"OCR_EVIDENCE\": {\n    \"value\": \"yes\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a92b9e8000000002501a357\\6a92b9e8000000002501a357_005.jpg",
+    "asr_text": "要把整个柜子给掏出来 还不一定找得到 换了它之后,你看筷子,石筋,零食",
+    "ocr_text": "小红书 KUBON坤宝高端岛台工厂 Mm HiPEL MirRU 要把整个柜子给掏出来 趣·享生活",
+    "clip_frames": [
+     [
+      "OTHER",
+      30.324
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a9189b6000000002003348e:0",
+   "sample_id": "RC-6A9189B6",
+   "note_id": "6a9189b6000000002003348e",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 1733,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "INSTALLATION_SITE",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "SR_EVIDENCE\"\n  },\n  \"OCR_EVIDENCE\": {\n    \"value\": \"真的后悔当初图便宜 KUBON坤宝高端岛台工厂 小红书\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a9189b6000000002003348e\\6a9189b6000000002003348e_000.jpg",
+    "asr_text": "真的后悔,当初图片已买的劣质倒台",
+    "ocr_text": "真的后悔当初图便宜 KUBON坤宝高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      28.496
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a9189b6000000002003348e:15",
+   "sample_id": "RC-6A9189B6",
+   "note_id": "6a9189b6000000002003348e",
+   "seg_no": 15,
+   "start_ms": 25367,
+   "end_ms": 27700,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    }
+   },
+   "qwen_raw_tail": " \"ASR_EVIDENCE\"\n  },\n  \"OCR_EVIDENCE\": {\n    \"value\": \"小红书 KUBON坤宝高端岛台工厂 奉劝各位家长\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a9189b6000000002003348e\\6a9189b6000000002003348e_015.jpg",
+    "asr_text": "奉劝各位家长,家里有娃的 质量好的才是真省钱真安心啊",
+    "ocr_text": "小红书 KUBON坤宝高端岛台工厂 奉劝各位家长",
+    "clip_frames": [
+     [
+      "CUSTOMER_HOME",
+      30.371
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a8edcca000000002a03b79e:0",
+   "sample_id": "RC-6A8EDCCA",
+   "note_id": "6a8edcca000000002a03b79e",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 2067,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "展示岛台",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "shot_function_candidate": {
+     "value": "展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "展示岛台",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    }
+   },
+   "qwen_raw_tail": "VIDENCE\"\n  },\n  \"OCR_EVIDENCE\": {\n    \"value\": \"这已经是我买的第二个岛台了 KUBON坤宝高端岛台工厂 小红书\",\n    \"source\": \"OCR_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a8edcca000000002a03b79e\\6a8edcca000000002a03b79e_000.jpg",
+    "asr_text": "没懂啊,这已经是我买的第二个导台了,还是同一家",
+    "ocr_text": "这已经是我买的第二个岛台了 KUBON坤宝高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      27.473
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a8edcca000000002a03b79e:1",
+   "sample_id": "RC-6A8EDCCA",
+   "note_id": "6a8edcca000000002a03b79e",
+   "seg_no": 1,
+   "start_ms": 2067,
+   "end_ms": 3467,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "石英石",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "厨房岛台",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示厨房岛台",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "no",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": " \"yes\",\n  \"shot_function_candidate\": \"展示厨房岛台\",\n  \"ASR_EVIDENCE\": \"两年\",\n  \"OCR_EVIDENCE\": \"还是同一家 KUBON坤宝高端岛台工厂 小红书\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a8edcca000000002a03b79e\\6a8edcca000000002a03b79e_001.jpg",
+    "asr_text": "没懂啊,这已经是我买的第二个导台了,还是同一家 两年前旧家的那个已经够顶了",
+    "ocr_text": "还是同一家 KUBON坤宝高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "CUSTOMER_HOME",
+      30.092
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a7b28ab000000002800316a:0",
+   "sample_id": "RC-6A7B28AB",
+   "note_id": "6a7b28ab000000002800316a",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 5833,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "黑白配",
+     "source": "OCR_EVIDENCE"
+    },
+    "function": {
+     "value": "伸缩",
+     "source": "OCR_EVIDENCE"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "yes",
+     "source": "OCR_EVIDENCE"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "rce\": \"VISUAL_EVIDENCE\"\n  },\n  \"shot_function_candidate\": {\n    \"value\": \"展示\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a7b28ab000000002800316a\\6a7b28ab000000002800316a_000.jpg",
+    "asr_text": "这是上海刘小姐委托我帮她定制的一个黑白配伸缩导台 导台总长2米6",
+    "ocr_text": "一个黑自配伸缩岛台 KUBON坤宝高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "FACTORY",
+      29.535
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a7b28ab000000002800316a:32",
+   "sample_id": "RC-6A7B28AB",
+   "note_id": "6a7b28ab000000002800316a",
+   "seg_no": 32,
+   "start_ms": 77100,
+   "end_ms": 81533,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "SHOWROOM_VISIT",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "PRODUCT_PRESENT",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "FACTORY_VISIT",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "PRODUCT_PRESENT",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "dence\": \"UNKNOWN\",\n  \"ASR_EVIDENCE\": \"MORE_STYLES\",\n  \"OCR_EVIDENCE\": \"KUBON_KUNBAO_HIGH_END_ISLAND_TABLE_FACTORY\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a7b28ab000000002800316a\\6a7b28ab000000002800316a_032.jpg",
+    "asr_text": "更多款式 每天下午5点到凌晨1点 来我厂里直播间 老铁点这里哦",
+    "ocr_text": "小红书 KUBON坤宝高端岛台工厂 坤宝岛台工厂 支持来厂里看实物 B坤宝岛台 以验的制边业，是工厂生产什么，市场就实么根本所不见消费者的响哦 地面，传不是守胆，是带登历史去求案开名上 BARBER 重塑制造业的荣光为已 每天下午5点到凌晨1点",
+    "clip_frames": [
+     [
+      "FACTORY",
+      28.829
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a411feb000000001c026d77:0",
+   "sample_id": "RC-6A411FEB",
+   "note_id": "6a411feb000000001c026d77",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 3867,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "SHOWROOM",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "产品展示",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": ",\n  \"power_evidence\": \"UNKNOWN\",\n  \"flexible_capacity_evidence\": \"UNKNOWN\",\n  \"dining_context_evidence\": \"UNKNOWN\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a411feb000000001c026d77\\6a411feb000000001c026d77_000.jpg",
+    "asr_text": "这啥你的导台会翻车啊 因为你做的都是摆台导台 导台的高度",
+    "ocr_text": "KUBON坤宝高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      28.238
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a411feb000000001c026d77:7",
+   "sample_id": "RC-6A411FEB",
+   "note_id": "6a411feb000000001c026d77",
+   "seg_no": 7,
+   "start_ms": 20400,
+   "end_ms": 26233,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "CUSTOMER_HOME",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "伸缩功能",
+     "source": "OCR_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "yes",
+     "source": "OCR_EVIDENCE"
+    },
+    "dining_context_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    }
+   },
+   "qwen_raw_tail": "缩功能\",\n    \"source\": \"OCR_EVIDENCE\"\n  },\n  \"detail_shot\": {\n    \"value\": \"yes\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a411feb000000001c026d77\\6a411feb000000001c026d77_007.jpg",
+    "asr_text": "导台的伸缩一定要分排60公分以上 导台有多长 我们的伸缩尽可能做到导台长度减20公分 这样子利用率才会比较高哦",
+    "ocr_text": "小红书 KUBON坤宝高端岛台工厂 我们的伸缩尽可能做到",
+    "clip_frames": [
+     [
+      "OTHER",
+      28.001
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a411f31000000001503cdc6:0",
+   "sample_id": "RC-6A411F31",
+   "note_id": "6a411f31000000001503cdc6",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 6300,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "岩板",
+     "source": "OCR_EVIDENCE"
+    },
+    "function": {
+     "value": "操作台",
+     "source": "OCR_EVIDENCE"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "展示",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "rce\": \"VISUAL_EVIDENCE\"\n  },\n  \"shot_function_candidate\": {\n    \"value\": \"展示\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a411f31000000001503cdc6\\6a411f31000000001503cdc6_000.jpg",
+    "asr_text": "这一款是安徽的刘女士委托我们给她定制的 盐板操作台 这一款导台的尺寸 长度做到我们的1米2",
+    "ocr_text": "岩板操作台 给她定制的岩板操作台 KUBON坤宝高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      23.794
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a411f31000000001503cdc6:14",
+   "sample_id": "RC-6A411F31",
+   "note_id": "6a411f31000000001503cdc6",
+   "seg_no": 14,
+   "start_ms": 48167,
+   "end_ms": 56567,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "MARBLE",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "function": {
+     "value": "DISPLAY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\",\n    \"source\": \"UNKNOWN\"\n  },\n  \"dining_context_evidence\": {\n    \"value\": \"UNKNOWN\",\n    \"source\": \"UNKNOWN\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a411f31000000001503cdc6\\6a411f31000000001503cdc6_014.jpg",
+    "asr_text": "这一款操作台的配色 真的很漂亮 全部采用的是我们家里的雪山白 无论是你家什么样的餐桌 拼接在一起都很显质感哦",
+    "ocr_text": "小红书 KUBON坤宝高端岛台工厂 RES7P26 ? 雪山白 我们家里的雪山白",
+    "clip_frames": [
+     [
+      "OTHER",
+      25.826
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a2bb62d00000000070200a5:0",
+   "sample_id": "RC-6A2BB62D",
+   "note_id": "6a2bb62d00000000070200a5",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 4700,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": ": {\n    \"value\": \"UNKNOWN\",\n    \"source\": \"UNKNOWN\"\n  },\n  \"flexible_capacity_evidence\": {\n    \"value\": \"UNKNOWN\",\n    \"",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a2bb62d00000000070200a5\\6a2bb62d00000000070200a5_000.jpg",
+    "asr_text": "空啦 被空啦 老铁 导台的水电布局居然翻车啦",
+    "ocr_text": "坤宝岛台 岛台的水电布局 KUBON坤宝高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      27.109
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a2bb62d00000000070200a5:10",
+   "sample_id": "RC-6A2BB62D",
+   "note_id": "6a2bb62d00000000070200a5",
+   "seg_no": 10,
+   "start_ms": 15433,
+   "end_ms": 18467,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\"yes\",\n  \"detail_shot\": \"yes\",\n  \"human_presence\": \"UNKNOWN\",\n  \"feature_demonstration\": \"yes\",\n  \"detail_shot\": \"yes\",\n",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a2bb62d00000000070200a5\\6a2bb62d00000000070200a5_010.jpg",
+    "asr_text": "导台行业上一般不会帮你考虑 你水电布局的问题 就像你导台内部的走线取电孔",
+    "ocr_text": "小红书 KUBON坤宝高端岛台工厂 不达标 不达标 不达标 你水电布局的问题",
+    "clip_frames": [
+     [
+      "OTHER",
+      26.454
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a37dcbf0000000007010e07:0",
+   "sample_id": "RC-6A37DCBF",
+   "note_id": "6a37dcbf0000000007010e07",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 13133,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "MARBLE",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "function": {
+     "value": "CUSTOMIZED_DESK",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "PRODUCT_DEMONSTRATION",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "human_presence": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "YES",
+     "source": "MULTIMODAL_SUPPORT"
+    },
+    "dining_context_evidence": {
+     "value": "YES",
+     "source": "MULTIMODAL_SUPPORT"
+    }
+   },
+   "qwen_raw_tail": "NCE\"\n  },\n  \"shot_function_candidate\": {\n    \"value\": \"PRODUCT_DEMONSTRATION\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a37dcbf0000000007010e07\\6a37dcbf0000000007010e07_000.jpg",
+    "asr_text": "这一款是天津的殷先生委托我们给他定制的一式简约风导台 这一款导台的总长做到我们的2米7 桌面长度直接做到1米8 可以同时容纳八九个人 同时在这边打火锅吃烧烤都是没有问题的哦",
+    "ocr_text": "小红书 KUBON坤宝高端岛台工厂 做到我们的两米7",
+    "clip_frames": [
+     [
+      "FACTORY",
+      27.841
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a37dcbf0000000007010e07:10",
+   "sample_id": "RC-6A37DCBF",
+   "note_id": "6a37dcbf0000000007010e07",
+   "seg_no": 10,
+   "start_ms": 43200,
+   "end_ms": 51633,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "yes",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "storage_evidence": {
+     "value": "MULTIMODAL_SUPPORT",
+     "source": "MULTIMODAL_SUPPORT"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "MULTIMODAL_SUPPORT",
+     "source": "MULTIMODAL_SUPPORT"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  },\n  \"detail_shot\": {\n    \"value\": \"yes\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a37dcbf0000000007010e07\\6a37dcbf0000000007010e07_010.jpg",
+    "asr_text": "这边的话给他去做了两个大生抽 像我们家里的瓶瓶罐罐碗碟都可以收纳进去 而且的话我们全部搭载的是三节托底的一个轨道 整个拿取东西可以做到比拿饼饭而且超低音",
+    "ocr_text": "小红书 KUBON坤宝高端岛台工厂 瓶瓶罐罐 碗碟 碗碟都可以收纳进去",
+    "clip_frames": [
+     [
+      "OTHER",
+      26.677
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a369c78000000000702e481:0",
+   "sample_id": "RC-6A369C78",
+   "note_id": "6a369c78000000000702e481",
+   "seg_no": 0,
+   "start_ms": 0,
+   "end_ms": 5333,
+   "selection_role": "OPENING_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "WOOD",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "function": {
+     "value": "CUSTOMIZED",
+     "source": "OCR_EVIDENCE"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product_visibility": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "feature_demonstration": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "detail_shot": {
+     "value": "NO",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "YES",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "ue\": \"YES\",\n    \"source\": \"VISUAL_EVIDENCE\"\n  },\n  \"detail_shot\": {\n    \"value\": \"NO\",\n    \"source\": \"UNKNOWN\"\n  }\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a369c78000000000702e481\\6a369c78000000000702e481_000.jpg",
+    "asr_text": "这一款是浙江的姜女士委托我们给她定制的 现代简约风导台 这一款导台的总长我们做到2米8",
+    "ocr_text": "UWRITEN KL 给她定制的 KUBON坤宝高端岛台工厂 小红书",
+    "clip_frames": [
+     [
+      "OTHER",
+      24.381
+     ]
+    ]
+   }
+  },
+  {
+   "segment_id": "b007:6a369c78000000000702e481:15",
+   "sample_id": "RC-6A369C78",
+   "note_id": "6a369c78000000000702e481",
+   "seg_no": 15,
+   "start_ms": 53133,
+   "end_ms": 68500,
+   "selection_role": "HIGH_INFORMATION_SEGMENT",
+   "status": "CANDIDATE",
+   "model": "qwen2.5vl:7b",
+   "source_name": "VISUAL_COGNITION_CANDIDATE_V2",
+   "fields": {
+    "scene": {
+     "value": "FACTORY",
+     "source": "VISUAL_EVIDENCE"
+    },
+    "product": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "material": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "function": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "action": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "shot_function_candidate": {
+     "value": "detail_shot",
+     "source": "UNKNOWN"
+    },
+    "human_presence": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "product_visibility": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "feature_demonstration": {
+     "value": "yes",
+     "source": "UNKNOWN"
+    },
+    "detail_shot": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "storage_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "power_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "flexible_capacity_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    },
+    "dining_context_evidence": {
+     "value": "UNKNOWN",
+     "source": "UNKNOWN"
+    }
+   },
+   "qwen_raw_tail": "ity_evidence\": \"UNKNOWN\",\n  \"dining_context_evidence\": \"UNKNOWN\",\n  \"ASR_EVIDENCE\": \"yes\",\n  \"OCR_EVIDENCE\": \"yes\"\n}\n```",
+   "ok": true,
+   "context": {
+    "keyframe": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\v07_stage\\keyframes\\6a369c78000000000702e481\\6a369c78000000000702e481_015.jpg",
+    "asr_text": "这一款的配色真的很经典 导头的话用的是我们家里的维多利亚白 桌面的话 直接采用的是南美用雾的深棕色 像这种配色无论是现代简约风 还是宋氏美学风格都可以直接操作业 喜欢的宝子直接来我们直播间看看吧",
+    "ocr_text": "小红书 KUBON坤宝高端岛台工厂 I'MLI MYMEMO .Nog1 TO WRITE KL 南美柚木深棕色",
+    "clip_frames": [
+     [
+      "OTHER",
+      28.933
+     ]
+    ]
+   }
+  }
+ ]
+}

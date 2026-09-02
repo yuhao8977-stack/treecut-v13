@@ -100,8 +100,13 @@ def parse_response(text: str) -> dict:
 
 
 def main() -> int:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--cal", default=str(CAL))
+    ap.add_argument("--out", default="B007_V081_QWENVL_VISUAL_CANDIDATES_V1.json")
+    args = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
-    cal = json.loads(CAL.read_text(encoding="utf-8"))
+    cal = json.loads(Path(args.cal).read_text(encoding="utf-8"))
     segs = cal["segments"]
     import sqlite3
     c = sqlite3.connect("file:" + str(DB).replace("\\", "/") + "?mode=ro", uri=True)
@@ -152,13 +157,13 @@ def main() -> int:
         print(f"[{i + 1}/40] {s['segment_id']} ok={rec['ok']}")
         # 每 5 条保存一次（防崩溃丢进度）
         if (i + 1) % 5 == 0:
-            (OUT / "B007_V081_QWENVL_VISUAL_CANDIDATES_V1.json").write_text(
+            (OUT / args.out).write_text(
                 json.dumps({"phase": "V0.8.1", "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
                             "model": "qwen2.5vl:7b", "status_policy": "L2 CANDIDATE only; no auto L3",
                             "segments": results}, ensure_ascii=False, indent=1), encoding="utf-8")
 
     ok_n = sum(1 for r in results if r.get("ok"))
-    (OUT / "B007_V081_QWENVL_VISUAL_CANDIDATES_V1.json").write_text(
+    (OUT / args.out).write_text(
         json.dumps({"phase": "V0.8.1", "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
                     "model": "qwen2.5vl:7b", "status_policy": "L2 CANDIDATE only; no auto L3",
                     "count": len(results), "ok": ok_n,

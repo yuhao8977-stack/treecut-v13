@@ -1,0 +1,12 @@
+{
+  "phase": "V0.8.3",
+  "root_cause_identified": true,
+  "conclusion": "narration.wav=2s 与 narration.srt=0 系 cognitive/production.produce() 的**设计占位**（anullsrc -t 2 静音 + 空 srt，代码注释'认知链路无 TTS/选曲时跳过'）；narration_script.txt 仅为结构提示（'结合素材内容口播'）。**真 TTS 链（copywriter.build_narration + models/tts_local.synthesize）存在于 desktop._generate_narration，但从未接入 produce()** → 集成缺口，非 TTS 引擎损坏。",
+  "evidence": [
+    "src/treecut/cognitive/production.py L338-352 (anullsrc 2s + 空 srt)",
+    "src/treecut/cognitive/production.py L379-384 (hints-only script)",
+    "desktop.py L411-414 (_generate_narration 未接 produce)",
+    "产物 narration.wav duration=2.000000 / srt bytes=0"
+  ],
+  "repair_scope": "把 copywriter+tts_local 接入 produce()，输入真实口播文案（模板卖点+素材 hint），输出对齐时长 SRT"
+}

@@ -1,0 +1,25 @@
+{
+  "recovered_exact": [
+    "RC-6A85B849",
+    "RC-6A92B9E8",
+    "RC-6A9189B6",
+    "RC-6A8EDCCA",
+    "RC-6A7B28AB",
+    "RC-6A411FEB",
+    "RC-6A411F31",
+    "RC-6A2BB62D",
+    "RC-6A37DCBF",
+    "RC-6A369C78"
+  ],
+  "unavailable": [
+    "RC-6A659145",
+    "RC-6A37DA9D"
+  ],
+  "asset": 10,
+  "segments": 235,
+  "asr_notes": 10,
+  "ocr_notes": 10,
+  "visual_notes": 10,
+  "cognition_notes": 10,
+  "qwen_segments": 20
+}

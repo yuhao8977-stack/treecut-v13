@@ -18,8 +18,13 @@ def q(c, sql, args=()):
 
 
 def main() -> int:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--manifest", default=str(MANIFEST))
+    ap.add_argument("--out", default="B007_V081_CALIBRATION40_V1.json")
+    args = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
     samples = {s["note_id"]: s for s in manifest["samples"]}
     c = sqlite3.connect("file:" + str(DB).replace("\\", "/") + "?mode=ro", uri=True)
 
@@ -98,7 +103,7 @@ def main() -> int:
            "total": len(items), "videos_covered": len(notes), "strata_covered": sorted(strata),
            "opening_count": openings, "high_info_count": highs,
            "segments": items}
-    (OUT / "B007_V081_CALIBRATION40_V1.json").write_text(
+    (OUT / args.out).write_text(
         json.dumps(cal, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps({"total": len(items), "videos": len(notes), "strata": sorted(strata),
                       "openings": openings, "highs": highs}, ensure_ascii=False, indent=1))

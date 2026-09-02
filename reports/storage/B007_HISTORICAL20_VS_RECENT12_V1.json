@@ -1,0 +1,367 @@
+{
+ "comparison": {
+  "opening_product_visibility": {
+   "historical_yes_ratio": 0.45,
+   "recent_yes_ratio": 0.6
+  },
+  "opening_human": {
+   "historical_yes_ratio": 0.45,
+   "recent_yes_ratio": 0.6
+  },
+  "opening_function_demo": {
+   "historical_yes_ratio": 0.2,
+   "recent_yes_ratio": 0.4
+  },
+  "storage": {
+   "historical_yes_ratio": 0.1,
+   "recent_yes_ratio": 0.1
+  },
+  "power": {
+   "historical_yes_ratio": 0.0,
+   "recent_yes_ratio": 0.0
+  },
+  "flexible": {
+   "historical_yes_ratio": 0.1,
+   "recent_yes_ratio": 0.2
+  },
+  "dining": {
+   "historical_yes_ratio": 0.05,
+   "recent_yes_ratio": 0.2
+  },
+  "has_subtitle": {
+   "historical_yes_ratio": 0.95,
+   "recent_yes_ratio": 1.0
+  },
+  "has_speech": {
+   "historical_yes_ratio": 0.95,
+   "recent_yes_ratio": 1.0
+  },
+  "scene_dominant": {
+   "historical": "OTHER",
+   "recent": "OTHER",
+   "type": "dominant"
+  },
+  "duration_avg_s": {
+   "historical": 48.2,
+   "recent": 61.0
+  },
+  "segments_avg": {
+   "historical": 18.7,
+   "recent": 23.5
+  }
+ },
+ "patterns": [
+  {
+   "dim": "opening_product_visibility",
+   "class": "STABLE_PATTERN_CANDIDATE",
+   "historical_yes_ratio": 0.45,
+   "recent_yes_ratio": 0.6,
+   "diff": 0.15
+  },
+  {
+   "dim": "opening_human",
+   "class": "STABLE_PATTERN_CANDIDATE",
+   "historical_yes_ratio": 0.45,
+   "recent_yes_ratio": 0.6,
+   "diff": 0.15
+  },
+  {
+   "dim": "opening_function_demo",
+   "class": "STABLE_PATTERN_CANDIDATE",
+   "historical_yes_ratio": 0.2,
+   "recent_yes_ratio": 0.4,
+   "diff": 0.2
+  },
+  {
+   "dim": "storage",
+   "class": "UNCERTAIN_PATTERN",
+   "historical_yes_ratio": 0.1,
+   "recent_yes_ratio": 0.1,
+   "diff": 0.0
+  },
+  {
+   "dim": "power",
+   "class": "UNCERTAIN_PATTERN",
+   "historical_yes_ratio": 0.0,
+   "recent_yes_ratio": 0.0,
+   "diff": 0.0
+  },
+  {
+   "dim": "flexible",
+   "class": "UNCERTAIN_PATTERN",
+   "historical_yes_ratio": 0.1,
+   "recent_yes_ratio": 0.2,
+   "diff": 0.1
+  },
+  {
+   "dim": "dining",
+   "class": "UNCERTAIN_PATTERN",
+   "historical_yes_ratio": 0.05,
+   "recent_yes_ratio": 0.2,
+   "diff": 0.15
+  },
+  {
+   "dim": "has_subtitle",
+   "class": "STABLE_PATTERN_CANDIDATE",
+   "historical_yes_ratio": 0.95,
+   "recent_yes_ratio": 1.0,
+   "diff": 0.05
+  },
+  {
+   "dim": "has_speech",
+   "class": "STABLE_PATTERN_CANDIDATE",
+   "historical_yes_ratio": 0.95,
+   "recent_yes_ratio": 1.0,
+   "diff": 0.05
+  },
+  {
+   "dim": "scene_dominant",
+   "class": "STABLE_PATTERN_CANDIDATE",
+   "historical": "OTHER",
+   "recent": "OTHER",
+   "note": "historical dominant OTHER vs recent dominant OTHER"
+  }
+ ],
+ "recent_dna": {
+  "6a85b8490000000021022731": {
+   "sample_id": "RC-6A85B849",
+   "stratum": "RC_CREATOR_HIGH",
+   "media_duration": 100.008549,
+   "n_segments": 35,
+   "avg_segment_s": 50.6,
+   "has_speech": "yes",
+   "asr_chars": 576,
+   "has_subtitle": "yes",
+   "ocr_items": 180,
+   "scene_dominant": "OTHER",
+   "opening_product_visibility": "yes",
+   "opening_human": "yes",
+   "opening_function_demo": "展示岛台的放置方式",
+   "opening_scene": "FACTORY",
+   "storage": "UNKNOWN",
+   "power": "UNKNOWN",
+   "flexible": "UNKNOWN",
+   "dining": "UNKNOWN",
+   "detail_shot": "yes",
+   "shot_function": "PRODUCT_INSTALLATION",
+   "function": "INSTALLATION",
+   "n_claims": 350
+  },
+  "6a92b9e8000000002501a357": {
+   "sample_id": "RC-6A92B9E8",
+   "stratum": "RC_NO_PAID_CONTROL",
+   "media_duration": 38.057574,
+   "n_segments": 21,
+   "avg_segment_s": 18.0,
+   "has_speech": "yes",
+   "asr_chars": 211,
+   "has_subtitle": "yes",
+   "ocr_items": 69,
+   "scene_dominant": "OTHER",
+   "opening_product_visibility": "UNKNOWN",
+   "opening_human": "UNKNOWN",
+   "opening_function_demo": "UNKNOWN",
+   "opening_scene": "UNKNOWN",
+   "storage": "UNKNOWN",
+   "power": "UNKNOWN",
+   "flexible": "UNKNOWN",
+   "dining": "UNKNOWN",
+   "detail_shot": "yes",
+   "shot_function": "detail_shot",
+   "function": "UNKNOWN",
+   "n_claims": 210
+  },
+  "6a9189b6000000002003348e": {
+   "sample_id": "RC-6A9189B6",
+   "stratum": "RC_NO_PAID_CONTROL",
+   "media_duration": 30.487868,
+   "n_segments": 18,
+   "avg_segment_s": 14.1,
+   "has_speech": "yes",
+   "asr_chars": 156,
+   "has_subtitle": "yes",
+   "ocr_items": 55,
+   "scene_dominant": "OTHER",
+   "opening_product_visibility": "yes",
+   "opening_human": "yes",
+   "opening_function_demo": "yes",
+   "opening_scene": "INSTALLATION_SITE",
+   "storage": "UNKNOWN",
+   "power": "UNKNOWN",
+   "flexible": "UNKNOWN",
+   "dining": "yes",
+   "detail_shot": "no",
+   "shot_function": "UNKNOWN",
+   "function": "UNKNOWN",
+   "n_claims": 180
+  },
+  "6a8edcca000000002a03b79e": {
+   "sample_id": "RC-6A8EDCCA",
+   "stratum": "RC_PAID_EFFICIENT",
+   "media_duration": 49.203175,
+   "n_segments": 27,
+   "avg_segment_s": 23.8,
+   "has_speech": "yes",
+   "asr_chars": 264,
+   "has_subtitle": "yes",
+   "ocr_items": 84,
+   "scene_dominant": "OTHER",
+   "opening_product_visibility": "yes",
+   "opening_human": "yes",
+   "opening_function_demo": "展示岛台",
+   "opening_scene": "CUSTOMER_HOME",
+   "storage": "yes",
+   "power": "UNKNOWN",
+   "flexible": "yes",
+   "dining": "no",
+   "detail_shot": "yes",
+   "shot_function": "展示厨房岛台",
+   "function": "厨房岛台",
+   "n_claims": 270
+  },
+  "6a7b28ab000000002800316a": {
+   "sample_id": "RC-6A7B28AB",
+   "stratum": "RC_PAID_EFFICIENT",
+   "media_duration": 83.081156,
+   "n_segments": 34,
+   "avg_segment_s": 38.0,
+   "has_speech": "yes",
+   "asr_chars": 500,
+   "has_subtitle": "yes",
+   "ocr_items": 151,
+   "scene_dominant": "OTHER",
+   "opening_product_visibility": "yes",
+   "opening_human": "yes",
+   "opening_function_demo": "yes",
+   "opening_scene": "FACTORY",
+   "storage": "UNKNOWN",
+   "power": "UNKNOWN",
+   "flexible": "UNKNOWN",
+   "dining": "UNKNOWN",
+   "detail_shot": "PRODUCT_PRESENT",
+   "shot_function": "SHOWROOM_VISIT",
+   "function": "UNKNOWN",
+   "n_claims": 340
+  },
+  "6a411feb000000001c026d77": {
+   "sample_id": "RC-6A411FEB",
+   "stratum": "RC_PAID_EFFICIENT",
+   "media_duration": 39.172132,
+   "n_segments": 11,
+   "avg_segment_s": 16.4,
+   "has_speech": "yes",
+   "asr_chars": 225,
+   "has_subtitle": "yes",
+   "ocr_items": 41,
+   "scene_dominant": "OTHER",
+   "opening_product_visibility": "yes",
+   "opening_human": "yes",
+   "opening_function_demo": "yes",
+   "opening_scene": "SHOWROOM",
+   "storage": "UNKNOWN",
+   "power": "UNKNOWN",
+   "flexible": "yes",
+   "dining": "yes",
+   "detail_shot": "yes",
+   "shot_function": "UNKNOWN",
+   "function": "UNKNOWN",
+   "n_claims": 110
+  },
+  "6a411f31000000001503cdc6": {
+   "sample_id": "RC-6A411F31",
+   "stratum": "RC_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "media_duration": 63.669229,
+   "n_segments": 19,
+   "avg_segment_s": 32.9,
+   "has_speech": "yes",
+   "asr_chars": 354,
+   "has_subtitle": "yes",
+   "ocr_items": 88,
+   "scene_dominant": "OTHER",
+   "opening_product_visibility": "yes",
+   "opening_human": "yes",
+   "opening_function_demo": "yes",
+   "opening_scene": "FACTORY",
+   "storage": "UNKNOWN",
+   "power": "UNKNOWN",
+   "flexible": "UNKNOWN",
+   "dining": "UNKNOWN",
+   "detail_shot": "YES",
+   "shot_function": "UNKNOWN",
+   "function": "DISPLAY",
+   "n_claims": 190
+  },
+  "6a2bb62d00000000070200a5": {
+   "sample_id": "RC-6A2BB62D",
+   "stratum": "RC_PAID_HIGH_INPUT_WEAK_OUTCOME",
+   "media_duration": 54.777392,
+   "n_segments": 30,
+   "avg_segment_s": 27.7,
+   "has_speech": "yes",
+   "asr_chars": 264,
+   "has_subtitle": "yes",
+   "ocr_items": 127,
+   "scene_dominant": "OTHER",
+   "opening_product_visibility": "UNKNOWN",
+   "opening_human": "UNKNOWN",
+   "opening_function_demo": "UNKNOWN",
+   "opening_scene": "UNKNOWN",
+   "storage": "UNKNOWN",
+   "power": "UNKNOWN",
+   "flexible": "UNKNOWN",
+   "dining": "UNKNOWN",
+   "detail_shot": "UNKNOWN",
+   "shot_function": "UNKNOWN",
+   "function": "UNKNOWN",
+   "n_claims": 300
+  },
+  "6a37dcbf0000000007010e07": {
+   "sample_id": "RC-6A37DCBF",
+   "stratum": "RC_CROSS_SOURCE_CONTRAST",
+   "media_duration": 76.27771,
+   "n_segments": 20,
+   "avg_segment_s": 42.9,
+   "has_speech": "yes",
+   "asr_chars": 478,
+   "has_subtitle": "yes",
+   "ocr_items": 93,
+   "scene_dominant": "OTHER",
+   "opening_product_visibility": "YES",
+   "opening_human": "YES",
+   "opening_function_demo": "YES",
+   "opening_scene": "FACTORY",
+   "storage": "MULTIMODAL_SUPPORT",
+   "power": "UNKNOWN",
+   "flexible": "MULTIMODAL_SUPPORT",
+   "dining": "UNKNOWN",
+   "detail_shot": "yes",
+   "shot_function": "UNKNOWN",
+   "function": "UNKNOWN",
+   "n_claims": 200
+  },
+  "6a369c78000000000702e481": {
+   "sample_id": "RC-6A369C78",
+   "stratum": "RC_CROSS_SOURCE_CONTRAST",
+   "media_duration": 75.604331,
+   "n_segments": 20,
+   "avg_segment_s": 36.4,
+   "has_speech": "yes",
+   "asr_chars": 416,
+   "has_subtitle": "yes",
+   "ocr_items": 102,
+   "scene_dominant": "OTHER",
+   "opening_product_visibility": "YES",
+   "opening_human": "YES",
+   "opening_function_demo": "YES",
+   "opening_scene": "FACTORY",
+   "storage": "UNKNOWN",
+   "power": "UNKNOWN",
+   "flexible": "UNKNOWN",
+   "dining": "UNKNOWN",
+   "detail_shot": "UNKNOWN",
+   "shot_function": "detail_shot",
+   "function": "UNKNOWN",
+   "n_claims": 200
+  }
+ }
+}

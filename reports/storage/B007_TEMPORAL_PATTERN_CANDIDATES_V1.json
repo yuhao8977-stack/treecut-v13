@@ -1,0 +1,75 @@
+{
+  "patterns": [
+    {
+      "dim": "opening_product_visibility",
+      "class": "STABLE_PATTERN_CANDIDATE",
+      "historical_yes_ratio": 0.45,
+      "recent_yes_ratio": 0.6,
+      "diff": 0.15
+    },
+    {
+      "dim": "opening_human",
+      "class": "STABLE_PATTERN_CANDIDATE",
+      "historical_yes_ratio": 0.45,
+      "recent_yes_ratio": 0.6,
+      "diff": 0.15
+    },
+    {
+      "dim": "opening_function_demo",
+      "class": "STABLE_PATTERN_CANDIDATE",
+      "historical_yes_ratio": 0.2,
+      "recent_yes_ratio": 0.4,
+      "diff": 0.2
+    },
+    {
+      "dim": "storage",
+      "class": "UNCERTAIN_PATTERN",
+      "historical_yes_ratio": 0.1,
+      "recent_yes_ratio": 0.1,
+      "diff": 0.0
+    },
+    {
+      "dim": "power",
+      "class": "UNCERTAIN_PATTERN",
+      "historical_yes_ratio": 0.0,
+      "recent_yes_ratio": 0.0,
+      "diff": 0.0
+    },
+    {
+      "dim": "flexible",
+      "class": "UNCERTAIN_PATTERN",
+      "historical_yes_ratio": 0.1,
+      "recent_yes_ratio": 0.2,
+      "diff": 0.1
+    },
+    {
+      "dim": "dining",
+      "class": "UNCERTAIN_PATTERN",
+      "historical_yes_ratio": 0.05,
+      "recent_yes_ratio": 0.2,
+      "diff": 0.15
+    },
+    {
+      "dim": "has_subtitle",
+      "class": "STABLE_PATTERN_CANDIDATE",
+      "historical_yes_ratio": 0.95,
+      "recent_yes_ratio": 1.0,
+      "diff": 0.05
+    },
+    {
+      "dim": "has_speech",
+      "class": "STABLE_PATTERN_CANDIDATE",
+      "historical_yes_ratio": 0.95,
+      "recent_yes_ratio": 1.0,
+      "diff": 0.05
+    },
+    {
+      "dim": "scene_dominant",
+      "class": "STABLE_PATTERN_CANDIDATE",
+      "historical": "OTHER",
+      "recent": "OTHER",
+      "note": "historical dominant OTHER vs recent dominant OTHER"
+    }
+  ],
+  "note": "observed/associated only; no causality"
+}
