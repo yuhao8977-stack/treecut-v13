@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"/>
+<title>B007 Pilot V2 人工审阅</title><style>
+body{font-family:'Microsoft YaHei',sans-serif;max-width:980px;margin:24px auto;padding:0 16px}
+table{border-collapse:collapse;width:100%;margin:10px 0}td,th{border:1px solid #ccc;padding:6px 10px;font-size:14px;text-align:left}
+th{background:#f0f0f0} .ok{color:#0a7a0a} .bad{color:#c00;font-weight:bold}
+h1{font-size:22px} h2{font-size:17px;margin-top:28px;border-bottom:2px solid #333;padding-bottom:4px}
+.badge{display:inline-block;padding:4px 14px;border-radius:14px;color:#fff;font-weight:bold}
+.badge.ready{background:#0a7a0a}.badge.lim{background:#b26a00}.badge.repair{background:#c00}
+</style></head><body>
+<h1>TreeCut B007 第一条真实 Pilot — V2 人工审阅</h1>
+<p>生成时间：2026-09-02 17:32:18 ｜ 成片：<code>B007_FIRST_REAL_PILOT_V2.mp4</code>（见 Pilot 工作目录）</p>
+<p>最终状态：<span class="badge lim">B007_PILOT_V2_READY_WITH_LIMITATIONS</span></p>
+<h2>1. 技术 QA（全部闸门）</h2><table><tr><th>闸门</th><th>结果</th></tr><tr><td>CLEAN_SOURCE</td><td>✅</td></tr><tr><td>OLD_SUBTITLE_ABSENT</td><td>✅</td></tr><tr><td>PLATFORM_WATERMARK_ABSENT</td><td>✅</td></tr><tr><td>AV_SYNC</td><td>✅</td></tr><tr><td>video_stream_s</td><td>22.767</td></tr><tr><td>audio_stream_s</td><td>22.691</td></tr><tr><td>video_tail_covers_audio</td><td>✅</td></tr><tr><td>VIDEO_DECODABLE</td><td>✅</td></tr><tr><td>AUDIO_PRESENT</td><td>✅</td></tr><tr><td>resolution</td><td>1080x1920</td></tr><tr><td>NEW_CAPTION_RENDERED</td><td>✅</td></tr><tr><td>caption_evidence</td><td>{'ok': True, 'method': 'qwen2.5vl-ocr', 'qwen_text': '岛台想好用，', 'cue_text': '岛台想好用，', 'cue_time_s': 0.6, 'char_hit_ratio': 1.0, 'note': ''}</td></tr><tr><td>BGM_PRESENT</td><td>❌</td></tr><tr><td>VOICE_SPEED_VALID</td><td>✅</td></tr><tr><td>SHOT_PACING_VALID</td><td>✅</td></tr><tr><td>CLAIM_SUPPORTED</td><td>✅</td></tr><tr><td>ACTION_VISUAL_MATCH</td><td>✅</td></tr><tr><td>STORY_ENTITY_CONSISTENT</td><td>✅</td></tr><tr><td>BEAT_VISUAL_SYNC</td><td>✅</td></tr></table>
+<h2>2. 新字幕画面抽帧（硬烧证据）</h2><div><img src='cue1_t0.6s.png' style='height:220px;margin:4px'/><img src='cue2_t2.2s.png' style='height:220px;margin:4px'/><img src='cue3_t4.2s.png' style='height:220px;margin:4px'/></div>
+<h2>3. 镜头时间线（音频优先，总长=22.69s）</h2>
+<table><tr><th>Beat-镜头</th><th>类型</th><th>时间轴</th><th>窗口</th><th>来源</th></tr><tr><td>B1-1</td><td>HOOK</td><td>0.0s</td><td>2.27s</td><td>X1 asset 16d0be690dc4</td></tr><tr><td>B2-1</td><td>FEATURE_STORAGE</td><td>2.3s</td><td>3.18s</td><td>X1 asset 8b8ab1f79b1b</td></tr><tr><td>B2-2</td><td>FEATURE_STORAGE</td><td>5.4s</td><td>3.18s</td><td>X1 asset fd25d74420f0</td></tr><tr><td>B3-1</td><td>FEATURE_POWER</td><td>8.6s</td><td>2.72s</td><td>X1 asset 7171fa050898</td></tr><tr><td>B3-2</td><td>FEATURE_POWER</td><td>11.3s</td><td>2.72s</td><td>X1 asset b954a8cfb0b3</td></tr><tr><td>B4-1</td><td>FEATURE_FLEXIBLE</td><td>14.1s</td><td>2.95s</td><td>X1 asset 217857b22832</td></tr><tr><td>B4-2</td><td>FEATURE_FLEXIBLE</td><td>17.0s</td><td>2.95s</td><td>X1 asset b1ceed6b6770</td></tr><tr><td>B5-1</td><td>CTA</td><td>20.0s</td><td>2.72s</td><td>X1 asset cb97ac5949f6</td></tr></table>
+<h2>4. 与 V1 的逐项对比（V1 已判 PRODUCTION_REJECT）</h2>
+<table><tr><th>old_subtitle</th><td>V1: 有(B007 published 硬字幕) → V2: 无(干净 X1 原片)</td></tr><tr><th>watermark</th><td>V1: 小红书水印 → V2: 无</td></tr><tr><th>shot_count</th><td>V1: 5 → V2: 8</td></tr><tr><th>avg_shot_s</th><td>V2: 2.8</td></tr><tr><th>script_visual_match</th><td>V1: 标签级 → V2: 动作片段(folder 语义)+原子主张</td></tr><tr><th>action_evidence</th><td>V1: OBJECT_PRESENT → V2: 动作片段(薄抽/插座/伸缩文件夹)</td></tr><tr><th>case_consistency</th><td>V1: 5 案例硬拼 → V2: INFORMATION_MONTAGE 通用语言</td></tr><tr><th>voice</th><td>V1: SAPI 原速 → V2: SAPI 1.3x(loudnorm)</td></tr><tr><th>speed</th><td>V1: 3.58字/s → V2: ~4.6字/s</td></tr><tr><th>bgm</th><td>V1/V2: NONE(限制)</td></tr><tr><th>av_sync</th><td>V1: 差4.68s → V2: True (≤0.10s)</td></tr><tr><th>new_subtitle</th><td>V1: 未烧 → V2: True(硬烧)</td></tr><tr><th>claim_support</th><td>V1: 粗 → V2: atomic claims</td></tr></table>
+<h2>5. 已记录的局限（诚实申报）</h2>
+<ul><li>BGM：无合法内部音乐源 → <b>BGM_PRESENT=False</b>（不静音冒充）</li>
+<li>配音：Windows SAPI（Microsoft Huihui）= <b>FALLBACK_TTS</b>，VOICE_QUALITY_LIMITATION</li>
+<li>响度：loudnorm I=-15 目标 −14~−16 LUFS；True Peak −1.5 dBTP</li>
+<li>画面证据：功能镜头来自卖点文件夹语义（薄抽/插座/伸缩），动作证据待人工确认</li></ul>
+<h2>6. 独立视觉抽样证据（qwen2.5vl，非自证）</h2>
+<table><tr><th>Beat</th><th>时刻</th><th>画面描述（原样）</th></tr><tr><td>B1_HOOK</td><td>1.0s</td><td>画面中主体是一位女性，她站在一个岛台前，似乎在介绍或展示岛台的功能。她穿着浅色无袖上衣和白色长裤，脚上穿着白色拖鞋。她的右手放在一个抽屉上，左手比划着，可能在解释抽屉的使用方法或特点。
+
+背景环境是一个工业风格的展示厅或工厂，可以看到一些机械设备和展示柜。背景墙上有一个红色的横幅，上面有一些中文文字，但由于角度和距离的原因，具体内容不太清晰。展示厅内有几盏吊灯，照明充足。
+
+画面底部有中文文字“岛台想好用”，可能是视频的字幕或旁白内容。
+
+画面中没有小红书/抖音等平台的水印、@账号或旧视频字幕残留。</td></tr><tr><td>B2_STORAGE</td><td>6.8s</td><td>画面中有人拉开抽屉的动作。抽屉在下层，位于画面的前景中。
+
+画面中没有小红书/抖音等平台的水印、@账号或旧视频字幕残留。</td></tr><tr><td>B3_POWER</td><td>12.5s</td><td>画面中出现了一个插座，位于画面下方的木制桌面上。插座旁边有一个黑色的盒子，看起来像是一个电源适配器或类似的设备。画面中的人正在插拔这个设备，似乎在演示插座的使用和插拔过程。
+
+关于水印、@账号或旧视频字幕残留，画面中没有明显的水印、@账号或旧视频字幕残留。画面下方的字幕“插拔也顺手。”可能是视频中的字幕，但不是水印或旧视频字幕。</td></tr><tr><td>B4_FLEXIBLE</td><td>17.5s</td><td>画面中有人拉出/伸缩桌面的动作。可以看到一个人的手正在操作一个可以伸缩的桌面插座，这表明桌面是可以伸缩的。
+
+画面里没有小红书/抖音等平台的水印、@账号或旧视频字幕残留。画面下方的字幕“平时收起来不占位”是视频内容的一部分，不是水印或旧视频字幕。</td></tr></table>
+<p>注：B2/B4 动作细节（上层 vs 下层、伸缩幅度）以人工播放为准；所有抽样帧均未见平台水印/@账号/旧字幕残留。</p>
+<p><b>STOP — 请人工播放 V1 与 V2 对比，逐条反馈后再进入下一步。</b></p>
+</body></html>

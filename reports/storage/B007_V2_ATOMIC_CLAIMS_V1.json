@@ -1,0 +1,61 @@
+{
+  "story_mode": "INFORMATION_MONTAGE",
+  "script": "岛台想好用，这三个细节最值得看。第一，上层薄抽，收纳小物不弯腰，打开就能拿到。第二，轨道插座，吃火锅煮茶都方便，插拔也顺手。第三，伸缩桌面，来客时一拉就变宽，平时收起来不占位。厨房好不好用，全在这些小细节里。",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "claim_type": "PRODUCT_IDENTITY",
+      "text": "岛台",
+      "evidence_req": "OBJECT_PRESENT"
+    },
+    {
+      "claim_id": "C02",
+      "claim_type": "FUNCTION",
+      "text": "上层薄抽收纳",
+      "evidence_req": "ACTION_DEMONSTRATION_COMPLETE"
+    },
+    {
+      "claim_id": "C03",
+      "claim_type": "USE_CASE",
+      "text": "收纳小物不弯腰",
+      "evidence_req": "ACTION_DEMONSTRATION_COMPLETE"
+    },
+    {
+      "claim_id": "C04",
+      "claim_type": "FUNCTION",
+      "text": "轨道插座可用",
+      "evidence_req": "FUNCTION_VISIBLE"
+    },
+    {
+      "claim_id": "C05",
+      "claim_type": "USE_CASE",
+      "text": "吃火锅煮茶插拔方便",
+      "evidence_req": "FUNCTION_VISIBLE"
+    },
+    {
+      "claim_id": "C06",
+      "claim_type": "FUNCTION",
+      "text": "桌面可伸缩",
+      "evidence_req": "ACTION_DEMONSTRATION_COMPLETE"
+    },
+    {
+      "claim_id": "C07",
+      "claim_type": "USE_CASE",
+      "text": "来客一拉变宽",
+      "evidence_req": "ACTION_DEMONSTRATION_COMPLETE"
+    },
+    {
+      "claim_id": "C08",
+      "claim_type": "USE_CASE",
+      "text": "平时收起来不占位",
+      "evidence_req": "ACTION_DEMONSTRATION_COMPLETE"
+    },
+    {
+      "claim_id": "C09",
+      "claim_type": "CTA",
+      "text": "厨房好用靠细节",
+      "evidence_req": "OBJECT_PRESENT"
+    }
+  ],
+  "note": "通用混剪语言：不指向单一产品/客户；每句主张由干净动作画面支撑（无 岩板→耐刮 式推断）"
+}

@@ -1,0 +1,109 @@
+{
+  "subclips": [
+    {
+      "beat": "B1",
+      "type": "HOOK",
+      "shot": 1,
+      "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】-1.mp4",
+      "asset_id": "16d0be690dc44d3a9e5c1cba0c03c654",
+      "media_id": 1,
+      "source_start": 2.244,
+      "window": 2.269,
+      "timeline_start": 0.0,
+      "clip_reused": false,
+      "provenance": "X1 asset 16d0be690dc4"
+    },
+    {
+      "beat": "B2",
+      "type": "FEATURE_STORAGE",
+      "shot": 1,
+      "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-1.mp4",
+      "asset_id": "8b8ab1f79b1b4bcb96ede13d12eafb20",
+      "media_id": 2,
+      "source_start": 2.266,
+      "window": 3.177,
+      "timeline_start": 2.269,
+      "clip_reused": false,
+      "provenance": "X1 asset 8b8ab1f79b1b"
+    },
+    {
+      "beat": "B2",
+      "type": "FEATURE_STORAGE",
+      "shot": 2,
+      "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4",
+      "asset_id": "fd25d74420f0449f9f4f9f03c7980676",
+      "media_id": 4,
+      "source_start": 0.548,
+      "window": 3.177,
+      "timeline_start": 5.446,
+      "clip_reused": false,
+      "provenance": "X1 asset fd25d74420f0"
+    },
+    {
+      "beat": "B3",
+      "type": "FEATURE_POWER",
+      "shot": 1,
+      "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台公牛轨道插座展示】【铁牛】\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台公牛轨道插座展示】【铁牛】-1.mp4",
+      "asset_id": "7171fa05089842f4bc5a7bc88defcf93",
+      "media_id": 826,
+      "source_start": 0.903,
+      "window": 2.723,
+      "timeline_start": 8.623,
+      "clip_reused": false,
+      "provenance": "X1 asset 7171fa050898"
+    },
+    {
+      "beat": "B3",
+      "type": "FEATURE_POWER",
+      "shot": 2,
+      "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】-2.mp4",
+      "asset_id": "b954a8cfb0b34d30a63f7a4307cd96b3",
+      "media_id": 1591,
+      "source_start": 2.331,
+      "window": 2.723,
+      "timeline_start": 11.346,
+      "clip_reused": false,
+      "provenance": "X1 asset b954a8cfb0b3"
+    },
+    {
+      "beat": "B4",
+      "type": "FEATURE_FLEXIBLE",
+      "shot": 1,
+      "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1(1).mp4",
+      "asset_id": "217857b228324c5eb1a653b81c6fa83d",
+      "media_id": 1984,
+      "source_start": 1.637,
+      "window": 2.95,
+      "timeline_start": 14.069,
+      "clip_reused": false,
+      "provenance": "X1 asset 217857b22832"
+    },
+    {
+      "beat": "B4",
+      "type": "FEATURE_FLEXIBLE",
+      "shot": 2,
+      "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2(1).mp4",
+      "asset_id": "b1ceed6b6770438f8a6e01e380989bc2",
+      "media_id": 1986,
+      "source_start": 1.137,
+      "window": 2.95,
+      "timeline_start": 17.019,
+      "clip_reused": false,
+      "provenance": "X1 asset b1ceed6b6770"
+    },
+    {
+      "beat": "B5",
+      "type": "CTA",
+      "shot": 1,
+      "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4",
+      "asset_id": "cb97ac5949f6492994a6383318edd5df",
+      "media_id": 3,
+      "source_start": 2.528,
+      "window": 2.723,
+      "timeline_start": 19.968,
+      "clip_reused": false,
+      "provenance": "X1 asset cb97ac5949f6"
+    }
+  ],
+  "audio_total_s": 22.691
+}

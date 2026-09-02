@@ -1,0 +1,53 @@
+{
+  "beats": [
+    {
+      "beat_id": "B1",
+      "type": "HOOK",
+      "text": "岛台想好用，这三个细节最值得看",
+      "claims": [
+        "C01"
+      ],
+      "story": "MONTAGE_INTRO"
+    },
+    {
+      "beat_id": "B2",
+      "type": "FEATURE_STORAGE",
+      "text": "上层薄抽收纳，打开就能拿到",
+      "claims": [
+        "C02",
+        "C03"
+      ],
+      "story": "MONTAGE_FEATURE_1"
+    },
+    {
+      "beat_id": "B3",
+      "type": "FEATURE_POWER",
+      "text": "轨道插座，插拔顺手",
+      "claims": [
+        "C04",
+        "C05"
+      ],
+      "story": "MONTAGE_FEATURE_2"
+    },
+    {
+      "beat_id": "B4",
+      "type": "FEATURE_FLEXIBLE",
+      "text": "伸缩桌面，一拉变宽",
+      "claims": [
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "story": "MONTAGE_FEATURE_3"
+    },
+    {
+      "beat_id": "B5",
+      "type": "CTA",
+      "text": "厨房好不好用，全在小细节",
+      "claims": [
+        "C09"
+      ],
+      "story": "MONTAGE_CTA"
+    }
+  ]
+}
