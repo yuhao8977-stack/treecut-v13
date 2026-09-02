@@ -1,0 +1,15 @@
+{
+ "windows": 28,
+ "query20_with_cands": 16,
+ "workbench_beats": 16,
+ "rehearsal_qa": {
+  "READY_FOR_HUMAN_REVIEW": false,
+  "P0_BLOCKERS": [
+   "UNSUPPORTED_CORE_CLAIM",
+   "WRONG_ACTION"
+  ],
+  "fail_count": 14,
+  "warning_count": 2,
+  "not_ready_reason": "UNSUPPORTED_CORE_CLAIM; WRONG_ACTION"
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "timeline_shots": 8,
+ "dedup_hits": [
+  {
+   "pair": [
+    0,
+    3
+   ],
+   "level": "NARRATIVE_NEAR_DUPLICATE",
+   "reason": "narrative overlap score 5: []",
+   "strength": "WARNING"
+  },
+  {
+   "pair": [
+    0,
+    4
+   ],
+   "level": "NARRATIVE_NEAR_DUPLICATE",
+   "reason": "narrative overlap score 5: []",
+   "strength": "WARNING"
+  },
+  {
+   "pair": [
+    0,
+    5
+   ],
+   "level": "NARRATIVE_NEAR_DUPLICATE",
+   "reason": "narrative overlap score 5: []",
+   "strength": "WARNING"
+  },
+  {
+   "pair": [
+    0,
+    6
+   ],
+   "level": "NARRATIVE_NEAR_DUPLICATE",
+   "reason": "narrative overlap score 5: []",
+   "strength": "WARNING"
+  },
+  {
+   "pair": [
+    1,
+    2
+   ],
+   "level": "NARRATIVE_NEAR_DUPLICATE",
+   "reason": "narrative overlap score 6: []",
+   "strength": "WARNING"
+  },
+  {
+   "pair": [
+    3,
+    4
+   ],
+   "level": "NARRATIVE_NEAR_DUPLICATE",
+   "reason": "narrative overlap score 6: []",
+   "strength": "WARNING"
+  }
+ ],
+ "note": "V2 结尾(CTA 薄抽人物镜)与开头 FEATURE_STORAGE 同角色/同功能文件夹 → 叙事近重被拦(至少WARNING)"
+}

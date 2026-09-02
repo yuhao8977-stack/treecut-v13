@@ -1,0 +1,156 @@
+{
+ "target_n": "80-120",
+ "note": "L2(qwen) 帧级状态; L3 人工后续锁定; 含正/负/硬负(插座伪伸缩)",
+ "items": [
+  {
+   "media_id": 2482,
+   "group": "EXTEND_POS",
+   "kind": "mixed",
+   "n_frames": 7,
+   "frames_with_action": 1,
+   "frames_object_only": 5,
+   "frames_not_present": 1,
+   "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4"
+  },
+  {
+   "media_id": 2483,
+   "group": "EXTEND_POS",
+   "kind": "mixed",
+   "n_frames": 7,
+   "frames_with_action": 1,
+   "frames_object_only": 5,
+   "frames_not_present": 1,
+   "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4"
+  },
+  {
+   "media_id": 2484,
+   "group": "EXTEND_POS",
+   "kind": "positive",
+   "n_frames": 7,
+   "frames_with_action": 2,
+   "frames_object_only": 5,
+   "frames_not_present": 0,
+   "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4"
+  },
+  {
+   "media_id": 1984,
+   "group": "EXTEND_HARDNEG",
+   "kind": "mixed",
+   "n_frames": 7,
+   "frames_with_action": 1,
+   "frames_object_only": 5,
+   "frames_not_present": 1,
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1"
+  },
+  {
+   "media_id": 1985,
+   "group": "EXTEND_HARDNEG",
+   "kind": "positive",
+   "n_frames": 7,
+   "frames_with_action": 2,
+   "frames_object_only": 5,
+   "frames_not_present": 0,
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1"
+  },
+  {
+   "media_id": 1986,
+   "group": "EXTEND_HARDNEG",
+   "kind": "positive",
+   "n_frames": 7,
+   "frames_with_action": 2,
+   "frames_object_only": 5,
+   "frames_not_present": 0,
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2"
+  },
+  {
+   "media_id": 1,
+   "group": "DRAWER_POS",
+   "kind": "mixed",
+   "n_frames": 5,
+   "frames_with_action": 3,
+   "frames_object_only": 0,
+   "frames_not_present": 2,
+   "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】-1.mp4"
+  },
+  {
+   "media_id": 37,
+   "group": "DRAWER_POS",
+   "kind": "positive",
+   "n_frames": 5,
+   "frames_with_action": 5,
+   "frames_object_only": 0,
+   "frames_not_present": 0,
+   "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导"
+  },
+  {
+   "media_id": 1590,
+   "group": "SOCKET_POS",
+   "kind": "negative",
+   "n_frames": 5,
+   "frames_with_action": 0,
+   "frames_object_only": 1,
+   "frames_not_present": 4,
+   "rel": "【05】公牛轨道插座\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】-1.mp4"
+  },
+  {
+   "media_id": 1591,
+   "group": "SOCKET_POS",
+   "kind": "negative",
+   "n_frames": 5,
+   "frames_with_action": 0,
+   "frames_object_only": 0,
+   "frames_not_present": 5,
+   "rel": "【05】公牛轨道插座\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台配置了一组公牛轨道插座】-2.mp4"
+  },
+  {
+   "media_id": 1592,
+   "group": "SOCKET_POS",
+   "kind": "negative",
+   "n_frames": 5,
+   "frames_with_action": 0,
+   "frames_object_only": 0,
+   "frames_not_present": 5,
+   "rel": "【05】公牛轨道插座\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台配置了一组公牛轨道插座】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台配置了一组公牛轨道插座】-1.mp4"
+  },
+  {
+   "media_id": 261,
+   "group": "CABINET_POS",
+   "kind": "mixed",
+   "n_frames": 5,
+   "frames_with_action": 2,
+   "frames_object_only": 0,
+   "frames_not_present": 3,
+   "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4"
+  },
+  {
+   "media_id": 703,
+   "group": "CABINET_POS",
+   "kind": "mixed",
+   "n_frames": 5,
+   "frames_with_action": 2,
+   "frames_object_only": 0,
+   "frames_not_present": 3,
+   "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4"
+  },
+  {
+   "media_id": 3,
+   "group": "STORAGE_POS",
+   "kind": "positive",
+   "n_frames": 5,
+   "frames_with_action": 5,
+   "frames_object_only": 0,
+   "frames_not_present": 0,
+   "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4"
+  },
+  {
+   "media_id": 4,
+   "group": "STORAGE_POS",
+   "kind": "positive",
+   "n_frames": 5,
+   "frames_with_action": 5,
+   "frames_object_only": 0,
+   "frames_not_present": 0,
+   "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4"
+  }
+ ]
+}

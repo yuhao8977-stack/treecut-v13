@@ -1,0 +1,9 @@
+{
+  "lessons": [
+    "V1: container 时长当 AV 同步 → 改用 stream 级 ≤0.10s 硬闸(已修复)",
+    "V1: QA 报告 READY 但旧字幕/水印/错配 → P0 门禁 + 人工最终裁决",
+    "G1: Qwen 误报22条换帧复核21回ABSENT → L2 永远不冒充 L3",
+    "工程纪律: machine-only 结果不得称 human accuracy; technical preview 不得称 Pilot V3"
+  ],
+  "prevention": "P0 集 + verdict 门禁 + 分层 QA + HUMAN 层 append-only"
+}

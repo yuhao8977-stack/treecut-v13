@@ -22,14 +22,31 @@ POST_ROLL = 0.30
 
 
 def parse_qwen_state(text: str) -> str:
-    """从 qwen L2 输出解析状态行 state=...。解析失败 → NOT_PRESENT(保守)。"""
+    """从 qwen L2 输出解析状态。先认字面 state= 令牌；再按中文动作语义保守映射。"""
     if not text:
         return "NOT_PRESENT"
     m = re.search(r"state\s*=\s*([A-Z_]+)", text)
     if not m:
         m = re.search(r"(NOT_PRESENT|OBJECT_PRESENT|ACTION_START|ACTION_IN_PROGRESS|ACTION_END)", text)
     st = m.group(1) if m else ""
-    return st if st in STATES else "NOT_PRESENT"
+    if st in STATES:
+        return st
+    # 中文语义(保守)
+    t = text
+    if any(k in t for k in ("正在打开", "正在拉开", "正在拉出", "正在伸缩", "正在加宽", "正在收回",
+                            "正在移动", "拉出中", "收回中", "进行中", "正在变宽", "在打开", "在拉开")):
+        return "ACTION_IN_PROGRESS"
+    if any(k in t for k in ("开始拉", "刚开始", "正要", "准备拉开", "开始打开", "手刚")):
+        return "ACTION_START"
+    if any(k in t for k in ("已拉到位", "收回完毕", "拉到位", "完成", "结束", "已收回", "完全展开",
+                            "完全打开", "收起来了")):
+        return "ACTION_END"
+    if any(k in t for k in ("静止", "未动", "没有显示动作", "未见其", "没有看到动作", "未发生",
+                            "没有进行", "未出现", "没有动作")):
+        return "OBJECT_PRESENT"
+    if any(k in t for k in ("没有", "未看到", "未见", "无此", "不存在", "没有显示")):
+        return "NOT_PRESENT"
+    return "NOT_PRESENT"
 
 
 def parse_qwen_object(text: str) -> str:

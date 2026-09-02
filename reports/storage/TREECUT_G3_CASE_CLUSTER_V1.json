@@ -1,0 +1,70 @@
+{
+ "note": "轻量占位: 案例聚类待 media lineage+视觉相似接入; 未知保持 UNKNOWN",
+ "items": [
+  {
+   "media_id": 2482,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 2483,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 2484,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 1984,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 1,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 37,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 1590,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 1591,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 1592,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 261,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 703,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 3,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  },
+  {
+   "media_id": 4,
+   "case_hint": null,
+   "cluster_state": "UNKNOWN"
+  }
+ ]
+}

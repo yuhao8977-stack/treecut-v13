@@ -1,0 +1,12 @@
+{
+  "script": "岛台想好用，这三个细节最值得看。第一，上层薄抽，收纳小物不弯腰，打开就能拿到。第二，轨道插座，吃火锅煮茶都方便，插拔也顺手。第三，伸缩桌面，来客时一拉就变宽，平时收起来不占位。厨房好不好用，全在这些小细节里。",
+  "story_mode": "INFORMATION_MONTAGE",
+  "rule": "SINGLE_CASE: 这一款/客户/定制→≥70%同案; MONTAGE: 通用语言才允许跨案例混剪",
+  "case_cluster_basis": [
+    "verified source relationship",
+    "media lineage",
+    "visual similarity",
+    "publication relation",
+    "metadata hints(path=candidate only)"
+  ]
+}

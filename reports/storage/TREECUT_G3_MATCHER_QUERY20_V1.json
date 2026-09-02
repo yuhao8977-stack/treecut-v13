@@ -1,0 +1,217 @@
+{
+ "queries": [
+  {
+   "query": "拉开以后变宽",
+   "expected_action": "EXTEND",
+   "matched_top": [
+    2482,
+    2483,
+    2484
+   ],
+   "matched_n": 3,
+   "socket_rejected": true,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "来客时一拉就变宽",
+   "expected_action": "EXTEND",
+   "matched_top": [
+    2482,
+    2483,
+    2484
+   ],
+   "matched_n": 3,
+   "socket_rejected": true,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "平时收起来不占位",
+   "expected_action": "RETRACT",
+   "matched_top": [
+    2482,
+    2483,
+    2484
+   ],
+   "matched_n": 3,
+   "socket_rejected": true,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "上层薄抽打开就能拿到",
+   "expected_action": "DRAWER_OPEN",
+   "matched_top": [
+    1,
+    37
+   ],
+   "matched_n": 2,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "收纳小物不弯腰",
+   "expected_action": "DRAWER_OPEN",
+   "matched_top": [
+    1,
+    37
+   ],
+   "matched_n": 2,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "插拔顺手",
+   "expected_action": "SOCKET_INSERT",
+   "matched_top": [
+    1590,
+    1591,
+    1592
+   ],
+   "matched_n": 3,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "吃火锅煮茶方便",
+   "expected_action": "POWER_USE",
+   "matched_top": [],
+   "matched_n": 0,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "轨道插座可以用",
+   "expected_action": "SOCKET_INSERT",
+   "matched_top": [
+    1590,
+    1591,
+    1592
+   ],
+   "matched_n": 3,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "把东西放进去",
+   "expected_action": "STORAGE_PUT_IN",
+   "matched_top": [],
+   "matched_n": 0,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "柜门打开",
+   "expected_action": "CABINET_OPEN",
+   "matched_top": [],
+   "matched_n": 0,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "桌面可以变宽",
+   "expected_action": "EXTEND",
+   "matched_top": [
+    2482,
+    2483,
+    2484
+   ],
+   "matched_n": 3,
+   "socket_rejected": true,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "收起来不占地方",
+   "expected_action": "RETRACT",
+   "matched_top": [
+    2482,
+    2483,
+    2484
+   ],
+   "matched_n": 3,
+   "socket_rejected": true,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "薄抽拉出来",
+   "expected_action": "DRAWER_OPEN",
+   "matched_top": [
+    1,
+    37
+   ],
+   "matched_n": 2,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "插头插上就能用",
+   "expected_action": "SOCKET_INSERT",
+   "matched_top": [
+    1590,
+    1591,
+    1592
+   ],
+   "matched_n": 3,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "拉出来更宽",
+   "expected_action": "EXTEND",
+   "matched_top": [
+    2482,
+    2483,
+    2484
+   ],
+   "matched_n": 3,
+   "socket_rejected": true,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "用的时候再拉开",
+   "expected_action": "EXTEND",
+   "matched_top": [
+    2482,
+    2483,
+    2484
+   ],
+   "matched_n": 3,
+   "socket_rejected": true,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "抽屉推回去",
+   "expected_action": "DRAWER_CLOSE",
+   "matched_top": [],
+   "matched_n": 0,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "柜门关上",
+   "expected_action": "CABINET_CLOSE",
+   "matched_top": [],
+   "matched_n": 0,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "收纳空间很大",
+   "expected_action": "STORAGE_PUT_IN",
+   "matched_top": [],
+   "matched_n": 0,
+   "socket_rejected": false,
+   "hard_gate_demo": true
+  },
+  {
+   "query": "这个岛台是伸缩的",
+   "expected_action": "EXTEND",
+   "matched_top": [
+    2482,
+    2483,
+    2484
+   ],
+   "matched_n": 3,
+   "socket_rejected": true,
+   "hard_gate_demo": true
+  }
+ ]
+}

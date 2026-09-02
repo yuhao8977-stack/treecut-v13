@@ -1,0 +1,32 @@
+{
+  "per_beat": [
+    "required_object",
+    "required_function",
+    "required_action",
+    "preferred_scene",
+    "required_context",
+    "forbidden_dominant_object",
+    "shot_role",
+    "story_entity_requirement"
+  ],
+  "claim_types": [
+    "PRODUCT_IDENTITY",
+    "MATERIAL",
+    "MATERIAL_PROPERTY",
+    "OBJECT",
+    "FUNCTION",
+    "ACTION",
+    "HARDWARE_PROPERTY",
+    "DIMENSION",
+    "SPACE",
+    "USE_CASE",
+    "CASE_IDENTITY",
+    "CTA"
+  ],
+  "forbidden_inference": [
+    "岩板→耐高温",
+    "抽屉→静音滑轨",
+    "文件夹'伸缩'→动作",
+    "ASR插座→视觉插座"
+  ]
+}

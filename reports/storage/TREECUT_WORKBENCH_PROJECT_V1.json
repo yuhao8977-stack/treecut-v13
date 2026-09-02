@@ -3,7 +3,6 @@
  "account_id": "B007",
  "story_mode": "INFORMATION_MONTAGE",
  "script": "岛台想好用，这三个细节最值得看。第一，上层薄抽，收纳小物不弯腰，打开就能拿到。第二，轨道插座，吃火锅煮茶都方便，插拔也顺手。第三，伸缩桌面，来客时一拉就变宽，平时收起来不占位。厨房好不好用，全在这些小细节里。",
- "config_note": "G2 探测完成后由 builder 回填候选/subclip/QA",
  "beats": [
   {
    "id": "B1",
@@ -16,14 +15,8 @@
     "required_object": null
    },
    "candidates": [],
-   "selected": {
-    "media_id": 1,
-    "subclip": {
-     "start_s": 1.82,
-     "end_s": 4.37
-    }
-   },
-   "qa_note": "REPLACED_AWAIT_REBUILD_QA"
+   "selected": null,
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B2",
@@ -37,7 +30,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B3",
@@ -51,7 +44,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B4",
@@ -65,7 +58,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B5",
@@ -77,9 +70,63 @@
     "required_action": "STORAGE_PUT_IN",
     "required_object": null
    },
-   "candidates": [],
-   "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "candidates": [
+    {
+     "media_id": 3,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4",
+     "object_": null,
+     "actions": [
+      "STORAGE_PUT_IN"
+     ],
+     "subclip": {
+      "start_s": 0.93,
+      "end_s": 6.84
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "STORAGE_PUT_IN 动作段 0.93-6.84s; subclip 0.68-7.14s",
+     "qa": {
+      "status": "PENDING"
+     }
+    },
+    {
+     "media_id": 4,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4",
+     "object_": null,
+     "actions": [
+      "STORAGE_PUT_IN"
+     ],
+     "subclip": {
+      "start_s": 0.26,
+      "end_s": 4.06
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "STORAGE_PUT_IN 动作段 0.51-3.76s; subclip 0.26-4.06s",
+     "qa": {
+      "status": "PENDING"
+     }
+    }
+   ],
+   "selected": {
+    "media_id": 3,
+    "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4",
+    "object_": null,
+    "actions": [
+     "STORAGE_PUT_IN"
+    ],
+    "subclip": {
+     "start_s": 0.93,
+     "end_s": 6.84
+    },
+    "semantic_correct": true,
+    "boundary_usable": true,
+    "why": "STORAGE_PUT_IN 动作段 0.93-6.84s; subclip 0.68-7.14s",
+    "qa": {
+     "status": "PENDING"
+    }
+   },
+   "qa_note": "READY"
   },
   {
    "id": "B6",
@@ -93,7 +140,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B7",
@@ -107,7 +154,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B8",
@@ -121,7 +168,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B9",
@@ -135,7 +182,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B10",
@@ -149,7 +196,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B11",
@@ -163,7 +210,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B12",
@@ -175,9 +222,81 @@
     "required_action": "EXTEND",
     "required_object": "TABLETOP"
    },
-   "candidates": [],
-   "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "candidates": [
+    {
+     "media_id": 2482,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+     "object_": null,
+     "actions": [
+      "EXTEND"
+     ],
+     "subclip": {
+      "start_s": 5.09,
+      "end_s": 7.59
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+     "qa": {
+      "status": "PENDING"
+     }
+    },
+    {
+     "media_id": 2483,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4",
+     "object_": null,
+     "actions": [
+      "EXTEND"
+     ],
+     "subclip": {
+      "start_s": 5.31,
+      "end_s": 7.81
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "EXTEND 动作段 5.56-5.56s; subclip 5.31-5.86s",
+     "qa": {
+      "status": "PENDING"
+     }
+    },
+    {
+     "media_id": 2484,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4",
+     "object_": null,
+     "actions": [
+      "EXTEND"
+     ],
+     "subclip": {
+      "start_s": 4.71,
+      "end_s": 7.21
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "EXTEND 动作段 4.96-6.86s; subclip 4.71-7.16s",
+     "qa": {
+      "status": "PENDING"
+     }
+    }
+   ],
+   "selected": {
+    "media_id": 2482,
+    "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+    "object_": null,
+    "actions": [
+     "EXTEND"
+    ],
+    "subclip": {
+     "start_s": 5.09,
+     "end_s": 7.59
+    },
+    "semantic_correct": true,
+    "boundary_usable": true,
+    "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+    "qa": {
+     "status": "PENDING"
+    }
+   },
+   "qa_note": "READY"
   },
   {
    "id": "B13",
@@ -189,9 +308,81 @@
     "required_action": "EXTEND",
     "required_object": null
    },
-   "candidates": [],
-   "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "candidates": [
+    {
+     "media_id": 2482,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+     "object_": null,
+     "actions": [
+      "EXTEND"
+     ],
+     "subclip": {
+      "start_s": 5.09,
+      "end_s": 7.59
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+     "qa": {
+      "status": "PENDING"
+     }
+    },
+    {
+     "media_id": 2483,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4",
+     "object_": null,
+     "actions": [
+      "EXTEND"
+     ],
+     "subclip": {
+      "start_s": 5.31,
+      "end_s": 7.81
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "EXTEND 动作段 5.56-5.56s; subclip 5.31-5.86s",
+     "qa": {
+      "status": "PENDING"
+     }
+    },
+    {
+     "media_id": 2484,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4",
+     "object_": null,
+     "actions": [
+      "EXTEND"
+     ],
+     "subclip": {
+      "start_s": 4.71,
+      "end_s": 7.21
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "EXTEND 动作段 4.96-6.86s; subclip 4.71-7.16s",
+     "qa": {
+      "status": "PENDING"
+     }
+    }
+   ],
+   "selected": {
+    "media_id": 2482,
+    "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+    "object_": null,
+    "actions": [
+     "EXTEND"
+    ],
+    "subclip": {
+     "start_s": 5.09,
+     "end_s": 7.59
+    },
+    "semantic_correct": true,
+    "boundary_usable": true,
+    "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+    "qa": {
+     "status": "PENDING"
+    }
+   },
+   "qa_note": "READY"
   },
   {
    "id": "B14",
@@ -203,9 +394,81 @@
     "required_action": "RETRACT",
     "required_object": null
    },
-   "candidates": [],
-   "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "candidates": [
+    {
+     "media_id": 2482,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+     "object_": null,
+     "actions": [
+      "RETRACT"
+     ],
+     "subclip": {
+      "start_s": 5.09,
+      "end_s": 7.59
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "RETRACT 动作段 5.34-5.34s; subclip 5.09-5.64s",
+     "qa": {
+      "status": "PENDING"
+     }
+    },
+    {
+     "media_id": 2483,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4",
+     "object_": null,
+     "actions": [
+      "RETRACT"
+     ],
+     "subclip": {
+      "start_s": 5.31,
+      "end_s": 7.81
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "RETRACT 动作段 5.56-5.56s; subclip 5.31-5.86s",
+     "qa": {
+      "status": "PENDING"
+     }
+    },
+    {
+     "media_id": 2484,
+     "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4",
+     "object_": null,
+     "actions": [
+      "RETRACT"
+     ],
+     "subclip": {
+      "start_s": 4.71,
+      "end_s": 7.21
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "why": "RETRACT 动作段 4.96-6.86s; subclip 4.71-7.16s",
+     "qa": {
+      "status": "PENDING"
+     }
+    }
+   ],
+   "selected": {
+    "media_id": 2482,
+    "path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+    "object_": null,
+    "actions": [
+     "RETRACT"
+    ],
+    "subclip": {
+     "start_s": 5.09,
+     "end_s": 7.59
+    },
+    "semantic_correct": true,
+    "boundary_usable": true,
+    "why": "RETRACT 动作段 5.34-5.34s; subclip 5.09-5.64s",
+    "qa": {
+     "status": "PENDING"
+    }
+   },
+   "qa_note": "READY"
   },
   {
    "id": "B15",
@@ -219,7 +482,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   },
   {
    "id": "B16",
@@ -233,7 +496,7 @@
    },
    "candidates": [],
    "selected": null,
-   "qa_note": "PENDING_G2_PROBE"
+   "qa_note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
   }
  ]
 }

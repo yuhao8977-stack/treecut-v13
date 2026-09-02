@@ -1,0 +1,700 @@
+{
+ "queries": [
+  {
+   "qid": "EXTEND_1",
+   "action": "EXTEND",
+   "top3": [
+    {
+     "media_id": 2482,
+     "subclip": [
+      5.09,
+      7.59
+     ],
+     "action_window": [
+      5.34,
+      5.34
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2483,
+     "subclip": [
+      5.31,
+      7.81
+     ],
+     "action_window": [
+      5.56,
+      5.56
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2484,
+     "subclip": [
+      4.71,
+      7.21
+     ],
+     "action_window": [
+      4.96,
+      6.86
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+    }
+   ],
+   "top3_n": 3,
+   "hard_negative_socket_rejected": 0,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "EXTEND_2",
+   "action": "EXTEND",
+   "top3": [
+    {
+     "media_id": 2482,
+     "subclip": [
+      5.09,
+      7.59
+     ],
+     "action_window": [
+      5.34,
+      5.34
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2483,
+     "subclip": [
+      5.31,
+      7.81
+     ],
+     "action_window": [
+      5.56,
+      5.56
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2484,
+     "subclip": [
+      4.71,
+      7.21
+     ],
+     "action_window": [
+      4.96,
+      6.86
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+    }
+   ],
+   "top3_n": 3,
+   "hard_negative_socket_rejected": 0,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "EXTEND_3",
+   "action": "EXTEND",
+   "top3": [
+    {
+     "media_id": 2482,
+     "subclip": [
+      5.09,
+      7.59
+     ],
+     "action_window": [
+      5.34,
+      5.34
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2483,
+     "subclip": [
+      5.31,
+      7.81
+     ],
+     "action_window": [
+      5.56,
+      5.56
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2484,
+     "subclip": [
+      4.71,
+      7.21
+     ],
+     "action_window": [
+      4.96,
+      6.86
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+    }
+   ],
+   "top3_n": 3,
+   "hard_negative_socket_rejected": 0,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "EXTEND_4",
+   "action": "EXTEND",
+   "top3": [
+    {
+     "media_id": 2482,
+     "subclip": [
+      5.09,
+      7.59
+     ],
+     "action_window": [
+      5.34,
+      5.34
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2483,
+     "subclip": [
+      5.31,
+      7.81
+     ],
+     "action_window": [
+      5.56,
+      5.56
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2484,
+     "subclip": [
+      4.71,
+      7.21
+     ],
+     "action_window": [
+      4.96,
+      6.86
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+    }
+   ],
+   "top3_n": 3,
+   "hard_negative_socket_rejected": 0,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "RETRACT_1",
+   "action": "RETRACT",
+   "top3": [
+    {
+     "media_id": 2482,
+     "subclip": [
+      5.09,
+      7.59
+     ],
+     "action_window": [
+      5.34,
+      5.34
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2483,
+     "subclip": [
+      5.31,
+      7.81
+     ],
+     "action_window": [
+      5.56,
+      5.56
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2484,
+     "subclip": [
+      4.71,
+      7.21
+     ],
+     "action_window": [
+      4.96,
+      6.86
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+    }
+   ],
+   "top3_n": 3,
+   "hard_negative_socket_rejected": 0,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "RETRACT_2",
+   "action": "RETRACT",
+   "top3": [
+    {
+     "media_id": 2482,
+     "subclip": [
+      5.09,
+      7.59
+     ],
+     "action_window": [
+      5.34,
+      5.34
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2483,
+     "subclip": [
+      5.31,
+      7.81
+     ],
+     "action_window": [
+      5.56,
+      5.56
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2484,
+     "subclip": [
+      4.71,
+      7.21
+     ],
+     "action_window": [
+      4.96,
+      6.86
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+    }
+   ],
+   "top3_n": 3,
+   "hard_negative_socket_rejected": 0,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "RETRACT_3",
+   "action": "RETRACT",
+   "top3": [
+    {
+     "media_id": 2482,
+     "subclip": [
+      5.09,
+      7.59
+     ],
+     "action_window": [
+      5.34,
+      5.34
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2483,
+     "subclip": [
+      5.31,
+      7.81
+     ],
+     "action_window": [
+      5.56,
+      5.56
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2484,
+     "subclip": [
+      4.71,
+      7.21
+     ],
+     "action_window": [
+      4.96,
+      6.86
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+    }
+   ],
+   "top3_n": 3,
+   "hard_negative_socket_rejected": 0,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "RETRACT_4",
+   "action": "RETRACT",
+   "top3": [
+    {
+     "media_id": 2482,
+     "subclip": [
+      5.09,
+      7.59
+     ],
+     "action_window": [
+      5.34,
+      5.34
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2483,
+     "subclip": [
+      5.31,
+      7.81
+     ],
+     "action_window": [
+      5.56,
+      5.56
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
+    {
+     "media_id": 2484,
+     "subclip": [
+      4.71,
+      7.21
+     ],
+     "action_window": [
+      4.96,
+      6.86
+     ],
+     "boundary_usable": true,
+     "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+    }
+   ],
+   "top3_n": 3,
+   "hard_negative_socket_rejected": 0,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "DRAWER_OPEN_1",
+   "action": "DRAWER_OPEN",
+   "top3": [
+    {
+     "media_id": 1,
+     "subclip": [
+      3.13,
+      6.25
+     ],
+     "action_window": [
+      3.38,
+      5.95
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台"
+    },
+    {
+     "media_id": 37,
+     "subclip": [
+      1.07,
+      7.87
+     ],
+     "action_window": [
+      1.07,
+      7.87
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\"
+    }
+   ],
+   "top3_n": 2,
+   "hard_negative_socket_rejected": null,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "DRAWER_OPEN_2",
+   "action": "DRAWER_OPEN",
+   "top3": [
+    {
+     "media_id": 1,
+     "subclip": [
+      3.13,
+      6.25
+     ],
+     "action_window": [
+      3.38,
+      5.95
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台"
+    },
+    {
+     "media_id": 37,
+     "subclip": [
+      1.07,
+      7.87
+     ],
+     "action_window": [
+      1.07,
+      7.87
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\"
+    }
+   ],
+   "top3_n": 2,
+   "hard_negative_socket_rejected": null,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "DRAWER_OPEN_3",
+   "action": "DRAWER_OPEN",
+   "top3": [
+    {
+     "media_id": 1,
+     "subclip": [
+      3.13,
+      6.25
+     ],
+     "action_window": [
+      3.38,
+      5.95
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台"
+    },
+    {
+     "media_id": 37,
+     "subclip": [
+      1.07,
+      7.87
+     ],
+     "action_window": [
+      1.07,
+      7.87
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\"
+    }
+   ],
+   "top3_n": 2,
+   "hard_negative_socket_rejected": null,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "DRAWER_OPEN_4",
+   "action": "DRAWER_OPEN",
+   "top3": [
+    {
+     "media_id": 1,
+     "subclip": [
+      3.13,
+      6.25
+     ],
+     "action_window": [
+      3.38,
+      5.95
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台"
+    },
+    {
+     "media_id": 37,
+     "subclip": [
+      1.07,
+      7.87
+     ],
+     "action_window": [
+      1.07,
+      7.87
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\"
+    }
+   ],
+   "top3_n": 2,
+   "hard_negative_socket_rejected": null,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "SOCKET_INSERT_1",
+   "action": "SOCKET_INSERT",
+   "top3": [],
+   "top3_n": 0,
+   "hard_negative_socket_rejected": null,
+   "note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
+  },
+  {
+   "qid": "SOCKET_INSERT_2",
+   "action": "SOCKET_INSERT",
+   "top3": [],
+   "top3_n": 0,
+   "hard_negative_socket_rejected": null,
+   "note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
+  },
+  {
+   "qid": "SOCKET_INSERT_3",
+   "action": "SOCKET_INSERT",
+   "top3": [],
+   "top3_n": 0,
+   "hard_negative_socket_rejected": null,
+   "note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
+  },
+  {
+   "qid": "SOCKET_INSERT_4",
+   "action": "SOCKET_INSERT",
+   "top3": [],
+   "top3_n": 0,
+   "hard_negative_socket_rejected": null,
+   "note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
+  },
+  {
+   "qid": "STORAGE_PUT_IN_1",
+   "action": "STORAGE_PUT_IN",
+   "top3": [
+    {
+     "media_id": 4,
+     "subclip": [
+      0.26,
+      4.06
+     ],
+     "action_window": [
+      0.51,
+      3.76
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃"
+    },
+    {
+     "media_id": 3,
+     "subclip": [
+      0.93,
+      6.84
+     ],
+     "action_window": [
+      0.93,
+      6.84
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北"
+    }
+   ],
+   "top3_n": 2,
+   "hard_negative_socket_rejected": null,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "STORAGE_PUT_IN_2",
+   "action": "STORAGE_PUT_IN",
+   "top3": [
+    {
+     "media_id": 4,
+     "subclip": [
+      0.26,
+      4.06
+     ],
+     "action_window": [
+      0.51,
+      3.76
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃"
+    },
+    {
+     "media_id": 3,
+     "subclip": [
+      0.93,
+      6.84
+     ],
+     "action_window": [
+      0.93,
+      6.84
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北"
+    }
+   ],
+   "top3_n": 2,
+   "hard_negative_socket_rejected": null,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "STORAGE_PUT_IN_3",
+   "action": "STORAGE_PUT_IN",
+   "top3": [
+    {
+     "media_id": 4,
+     "subclip": [
+      0.26,
+      4.06
+     ],
+     "action_window": [
+      0.51,
+      3.76
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃"
+    },
+    {
+     "media_id": 3,
+     "subclip": [
+      0.93,
+      6.84
+     ],
+     "action_window": [
+      0.93,
+      6.84
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北"
+    }
+   ],
+   "top3_n": 2,
+   "hard_negative_socket_rejected": null,
+   "note": "HUMAN_VALIDATION_PENDING"
+  },
+  {
+   "qid": "STORAGE_PUT_IN_4",
+   "action": "STORAGE_PUT_IN",
+   "top3": [
+    {
+     "media_id": 4,
+     "subclip": [
+      0.26,
+      4.06
+     ],
+     "action_window": [
+      0.51,
+      3.76
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃"
+    },
+    {
+     "media_id": 3,
+     "subclip": [
+      0.93,
+      6.84
+     ],
+     "action_window": [
+      0.93,
+      6.84
+     ],
+     "boundary_usable": true,
+     "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北"
+    }
+   ],
+   "top3_n": 2,
+   "hard_negative_socket_rejected": null,
+   "note": "HUMAN_VALIDATION_PENDING"
+  }
+ ]
+}

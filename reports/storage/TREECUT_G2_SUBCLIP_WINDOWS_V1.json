@@ -1,0 +1,758 @@
+{
+ "generated_at": "2026-09-02 19:52:13",
+ "note": "subclip 由时序帧证据推导; 非整段默认; semantic/boundary 分离",
+ "windows": [
+  {
+   "action": "EXTEND",
+   "media_id": 2482,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+   "duration_s": 12.72,
+   "action_start_s": 5.34,
+   "action_peak_s": 5.34,
+   "action_end_s": 5.34,
+   "subclip_start_s": 5.09,
+   "subclip_end_s": 7.59,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 5.34,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+   "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+   "group": "EXTEND_POS"
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 2482,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+   "duration_s": 12.72,
+   "action_start_s": 5.34,
+   "action_peak_s": 5.34,
+   "action_end_s": 5.34,
+   "subclip_start_s": 5.09,
+   "subclip_end_s": 7.59,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 5.34,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "RETRACT 动作段 5.34-5.34s; subclip 5.09-5.64s",
+   "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-1.mp4",
+   "group": "EXTEND_POS"
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 2483,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4",
+   "duration_s": 13.25,
+   "action_start_s": 5.56,
+   "action_peak_s": 5.56,
+   "action_end_s": 5.56,
+   "subclip_start_s": 5.31,
+   "subclip_end_s": 7.81,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 5.56,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "EXTEND 动作段 5.56-5.56s; subclip 5.31-5.86s",
+   "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4",
+   "group": "EXTEND_POS"
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 2483,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4",
+   "duration_s": 13.25,
+   "action_start_s": 5.56,
+   "action_peak_s": 5.56,
+   "action_end_s": 5.56,
+   "subclip_start_s": 5.31,
+   "subclip_end_s": 7.81,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 5.56,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "RETRACT 动作段 5.56-5.56s; subclip 5.31-5.86s",
+   "rel": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】-2.mp4",
+   "group": "EXTEND_POS"
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 2484,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4",
+   "duration_s": 11.82,
+   "action_start_s": 4.96,
+   "action_peak_s": 6.86,
+   "action_end_s": 6.86,
+   "subclip_start_s": 4.71,
+   "subclip_end_s": 7.21,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 4.96,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 6.86,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "EXTEND 动作段 4.96-6.86s; subclip 4.71-7.16s",
+   "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4",
+   "group": "EXTEND_POS"
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 2484,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4",
+   "duration_s": 11.82,
+   "action_start_s": 4.96,
+   "action_peak_s": 6.86,
+   "action_end_s": 6.86,
+   "subclip_start_s": 4.71,
+   "subclip_end_s": 7.21,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 4.96,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 6.86,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "RETRACT 动作段 4.96-6.86s; subclip 4.71-7.16s",
+   "rel": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】-1.mp4",
+   "group": "EXTEND_POS"
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 1984,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1(1).mp4",
+   "duration_s": 6.22,
+   "action_start_s": 2.61,
+   "action_peak_s": 2.61,
+   "action_end_s": 2.61,
+   "subclip_start_s": 2.36,
+   "subclip_end_s": 4.86,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 2.61,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "EXTEND 动作段 2.61-2.61s; subclip 2.36-2.91s",
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1",
+   "group": "EXTEND_HARDNEG"
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 1984,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1(1).mp4",
+   "duration_s": 6.22,
+   "action_start_s": 2.61,
+   "action_peak_s": 2.61,
+   "action_end_s": 2.61,
+   "subclip_start_s": 2.36,
+   "subclip_end_s": 4.86,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 2.61,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "RETRACT 动作段 2.61-2.61s; subclip 2.36-2.91s",
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1",
+   "group": "EXTEND_HARDNEG"
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 1985,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1.mp4",
+   "duration_s": 5.22,
+   "action_start_s": 2.19,
+   "action_peak_s": 3.03,
+   "action_end_s": 3.03,
+   "subclip_start_s": 1.94,
+   "subclip_end_s": 4.44,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 2.19,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 3.03,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "EXTEND 动作段 2.19-3.03s; subclip 1.94-3.33s",
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1",
+   "group": "EXTEND_HARDNEG"
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 1985,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1.mp4",
+   "duration_s": 5.22,
+   "action_start_s": 2.19,
+   "action_peak_s": 3.03,
+   "action_end_s": 3.03,
+   "subclip_start_s": 1.94,
+   "subclip_end_s": 4.44,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 2.19,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 3.03,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "RETRACT 动作段 2.19-3.03s; subclip 1.94-3.33s",
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1",
+   "group": "EXTEND_HARDNEG"
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 1986,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2(1).mp4",
+   "duration_s": 5.22,
+   "action_start_s": 2.19,
+   "action_peak_s": 3.03,
+   "action_end_s": 3.03,
+   "subclip_start_s": 1.94,
+   "subclip_end_s": 4.44,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 2.19,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 3.03,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "EXTEND 动作段 2.19-3.03s; subclip 1.94-3.33s",
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2",
+   "group": "EXTEND_HARDNEG"
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 1986,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2(1).mp4",
+   "duration_s": 5.22,
+   "action_start_s": 2.19,
+   "action_peak_s": 3.03,
+   "action_end_s": 3.03,
+   "subclip_start_s": 1.94,
+   "subclip_end_s": 4.44,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 2.19,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 3.03,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "RETRACT 动作段 2.19-3.03s; subclip 1.94-3.33s",
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2",
+   "group": "EXTEND_HARDNEG"
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 1,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】-1.mp4",
+   "duration_s": 6.76,
+   "action_start_s": 3.38,
+   "action_peak_s": 4.73,
+   "action_end_s": 5.95,
+   "subclip_start_s": 3.13,
+   "subclip_end_s": 6.25,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 3.38,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 4.73,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 5.95,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "DRAWER_OPEN 动作段 3.38-5.95s; subclip 3.13-6.25s",
+   "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】-1.mp4",
+   "group": "DRAWER_POS"
+  },
+  {
+   "action": "DRAWER_CLOSE",
+   "media_id": 1,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】-1.mp4",
+   "duration_s": 6.76,
+   "action_start_s": 3.38,
+   "action_peak_s": 4.73,
+   "action_end_s": 5.95,
+   "subclip_start_s": 3.13,
+   "subclip_end_s": 6.25,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 3.38,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 4.73,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 5.95,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "DRAWER_CLOSE 动作段 3.38-5.95s; subclip 3.13-6.25s",
+   "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】-1.mp4",
+   "group": "DRAWER_POS"
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 37,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01-1.mp4",
+   "duration_s": 8.94,
+   "action_start_s": 1.07,
+   "action_peak_s": 4.47,
+   "action_end_s": 7.87,
+   "subclip_start_s": 1.07,
+   "subclip_end_s": 7.87,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 1.07,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 2.68,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 4.47,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 6.26,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 7.87,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "DRAWER_OPEN 动作段 1.07-7.87s; subclip 0.82-8.17s",
+   "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导",
+   "group": "DRAWER_POS"
+  },
+  {
+   "action": "DRAWER_CLOSE",
+   "media_id": 37,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01-1.mp4",
+   "duration_s": 8.94,
+   "action_start_s": 1.07,
+   "action_peak_s": 4.47,
+   "action_end_s": 7.87,
+   "subclip_start_s": 1.07,
+   "subclip_end_s": 7.87,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 1.07,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 2.68,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 4.47,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 6.26,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 7.87,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "DRAWER_CLOSE 动作段 1.07-7.87s; subclip 0.82-8.17s",
+   "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导",
+   "group": "DRAWER_POS"
+  },
+  {
+   "action": "CABINET_OPEN",
+   "media_id": 261,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
+   "duration_s": 5.11,
+   "action_start_s": 0.61,
+   "action_peak_s": 0.61,
+   "action_end_s": 0.61,
+   "subclip_start_s": 0.36,
+   "subclip_end_s": 2.86,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 0.61,
+     "state": "ACTION_START"
+    }
+   ],
+   "selection_reason": "CABINET_OPEN 动作段 0.61-0.61s; subclip 0.36-0.91s",
+   "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
+   "group": "CABINET_POS"
+  },
+  {
+   "action": "CABINET_OPEN",
+   "media_id": 261,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
+   "duration_s": 5.11,
+   "action_start_s": 4.5,
+   "action_peak_s": 4.5,
+   "action_end_s": 4.5,
+   "subclip_start_s": 4.25,
+   "subclip_end_s": 4.8,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 4.5,
+     "state": "ACTION_START"
+    }
+   ],
+   "selection_reason": "CABINET_OPEN 动作段 4.5-4.5s; subclip 4.25-4.8s",
+   "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
+   "group": "CABINET_POS"
+  },
+  {
+   "action": "CABINET_CLOSE",
+   "media_id": 261,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
+   "duration_s": 5.11,
+   "action_start_s": 0.61,
+   "action_peak_s": 0.61,
+   "action_end_s": 0.61,
+   "subclip_start_s": 0.36,
+   "subclip_end_s": 2.86,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 0.61,
+     "state": "ACTION_START"
+    }
+   ],
+   "selection_reason": "CABINET_CLOSE 动作段 0.61-0.61s; subclip 0.36-0.91s",
+   "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
+   "group": "CABINET_POS"
+  },
+  {
+   "action": "CABINET_CLOSE",
+   "media_id": 261,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
+   "duration_s": 5.11,
+   "action_start_s": 4.5,
+   "action_peak_s": 4.5,
+   "action_end_s": 4.5,
+   "subclip_start_s": 4.25,
+   "subclip_end_s": 4.8,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 4.5,
+     "state": "ACTION_START"
+    }
+   ],
+   "selection_reason": "CABINET_CLOSE 动作段 4.5-4.5s; subclip 4.25-4.8s",
+   "rel": "【01】上层薄抽\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台两个大柜门做上下两层的收纳】-1.mp4",
+   "group": "CABINET_POS"
+  },
+  {
+   "action": "CABINET_OPEN",
+   "media_id": 703,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
+   "duration_s": 12.49,
+   "action_start_s": 1.5,
+   "action_peak_s": 1.5,
+   "action_end_s": 1.5,
+   "subclip_start_s": 1.25,
+   "subclip_end_s": 3.75,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 1.5,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "CABINET_OPEN 动作段 1.5-1.5s; subclip 1.25-1.8s",
+   "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
+   "group": "CABINET_POS"
+  },
+  {
+   "action": "CABINET_OPEN",
+   "media_id": 703,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
+   "duration_s": 12.49,
+   "action_start_s": 10.99,
+   "action_peak_s": 10.99,
+   "action_end_s": 10.99,
+   "subclip_start_s": 10.74,
+   "subclip_end_s": 11.29,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 10.99,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "CABINET_OPEN 动作段 10.99-10.99s; subclip 10.74-11.29s",
+   "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
+   "group": "CABINET_POS"
+  },
+  {
+   "action": "CABINET_CLOSE",
+   "media_id": 703,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
+   "duration_s": 12.49,
+   "action_start_s": 1.5,
+   "action_peak_s": 1.5,
+   "action_end_s": 1.5,
+   "subclip_start_s": 1.25,
+   "subclip_end_s": 3.75,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 1.5,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "CABINET_CLOSE 动作段 1.5-1.5s; subclip 1.25-1.8s",
+   "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
+   "group": "CABINET_POS"
+  },
+  {
+   "action": "CABINET_CLOSE",
+   "media_id": 703,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
+   "duration_s": 12.49,
+   "action_start_s": 10.99,
+   "action_peak_s": 10.99,
+   "action_end_s": 10.99,
+   "subclip_start_s": 10.74,
+   "subclip_end_s": 11.29,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 10.99,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "CABINET_CLOSE 动作段 10.99-10.99s; subclip 10.74-11.29s",
+   "rel": "【02】下层抽屉\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台下层对开门收纳层展示】】【坤宝】01-1.mp4",
+   "group": "CABINET_POS"
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 3,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4",
+   "duration_s": 7.78,
+   "action_start_s": 0.93,
+   "action_peak_s": 3.89,
+   "action_end_s": 6.84,
+   "subclip_start_s": 0.93,
+   "subclip_end_s": 6.84,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 0.93,
+     "state": "ACTION_START"
+    },
+    {
+     "t_s": 2.33,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 3.89,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 5.44,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 6.84,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "STORAGE_PUT_IN 动作段 0.93-6.84s; subclip 0.68-7.14s",
+   "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4",
+   "group": "STORAGE_POS"
+  },
+  {
+   "action": "STORAGE_TAKE_OUT",
+   "media_id": 3,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4",
+   "duration_s": 7.78,
+   "action_start_s": 0.93,
+   "action_peak_s": 3.89,
+   "action_end_s": 6.84,
+   "subclip_start_s": 0.93,
+   "subclip_end_s": 6.84,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 0.93,
+     "state": "ACTION_START"
+    },
+    {
+     "t_s": 2.33,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 3.89,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 5.44,
+     "state": "ACTION_IN_PROGRESS"
+    },
+    {
+     "t_s": 6.84,
+     "state": "ACTION_IN_PROGRESS"
+    }
+   ],
+   "selection_reason": "STORAGE_TAKE_OUT 动作段 0.93-6.84s; subclip 0.68-7.14s",
+   "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】-2.mp4",
+   "group": "STORAGE_POS"
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 4,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4",
+   "duration_s": 4.27,
+   "action_start_s": 0.51,
+   "action_peak_s": 2.14,
+   "action_end_s": 3.76,
+   "subclip_start_s": 0.26,
+   "subclip_end_s": 4.06,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 0.51,
+     "state": "ACTION_START"
+    },
+    {
+     "t_s": 1.28,
+     "state": "ACTION_START"
+    },
+    {
+     "t_s": 2.14,
+     "state": "ACTION_START"
+    },
+    {
+     "t_s": 2.99,
+     "state": "ACTION_START"
+    },
+    {
+     "t_s": 3.76,
+     "state": "ACTION_START"
+    }
+   ],
+   "selection_reason": "STORAGE_PUT_IN 动作段 0.51-3.76s; subclip 0.26-4.06s",
+   "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4",
+   "group": "STORAGE_POS"
+  },
+  {
+   "action": "STORAGE_TAKE_OUT",
+   "media_id": 4,
+   "asset_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4",
+   "duration_s": 4.27,
+   "action_start_s": 0.51,
+   "action_peak_s": 2.14,
+   "action_end_s": 3.76,
+   "subclip_start_s": 0.26,
+   "subclip_end_s": 4.06,
+   "semantic_correct": true,
+   "boundary_usable": true,
+   "evidence_refs": [
+    {
+     "t_s": 0.51,
+     "state": "ACTION_START"
+    },
+    {
+     "t_s": 1.28,
+     "state": "ACTION_START"
+    },
+    {
+     "t_s": 2.14,
+     "state": "ACTION_START"
+    },
+    {
+     "t_s": 2.99,
+     "state": "ACTION_START"
+    },
+    {
+     "t_s": 3.76,
+     "state": "ACTION_START"
+    }
+   ],
+   "selection_reason": "STORAGE_TAKE_OUT 动作段 0.51-3.76s; subclip 0.26-4.06s",
+   "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】-1.mp4",
+   "group": "STORAGE_POS"
+  }
+ ]
+}

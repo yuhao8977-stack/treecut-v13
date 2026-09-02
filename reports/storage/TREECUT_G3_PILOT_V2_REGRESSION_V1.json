@@ -1,0 +1,41 @@
+{
+ "regressions": [
+  {
+   "narration": "拉开以后变宽",
+   "visual": "track-socket close-up",
+   "candidate_actions": [
+    "SOCKET_INSERT"
+   ],
+   "matcher_result": "REJECT",
+   "reasons": [
+    "DOMINANT_VISUAL_MISMATCH: claim EXTEND vs dominant SOCKET"
+   ],
+   "expected": "ACTION_MATCH=FAIL"
+  },
+  {
+   "narration": "收起来不占位",
+   "visual": "track-socket close-up",
+   "candidate_actions": [
+    "SOCKET_INSERT"
+   ],
+   "matcher_result": "REJECT",
+   "reasons": [
+    "DOMINANT_VISUAL_MISMATCH: claim RETRACT vs dominant SOCKET"
+   ],
+   "expected": "ACTION_MATCH=FAIL"
+  },
+  {
+   "narration": "上层薄抽",
+   "visual": "track-socket close-up",
+   "candidate_actions": [
+    "SOCKET_INSERT"
+   ],
+   "matcher_result": "REJECT",
+   "reasons": [
+    "REQUIRED_ACTION_MISSING:DRAWER_OPEN(cand=['SOCKET_INSERT'])"
+   ],
+   "expected": "ACTION_MATCH=FAIL"
+  }
+ ],
+ "note": "Permanent: 伸缩/收起口播配轨道插座特写必须 FAIL"
+}
