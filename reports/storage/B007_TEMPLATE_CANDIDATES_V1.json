@@ -1,0 +1,123 @@
+{
+ "phase": "V0.9-CP-B",
+ "generated_at": "2026-09-02 16:23:23",
+ "candidates": [
+  {
+   "template_id": "T_A_FEATURE_DEMONSTRATION",
+   "purpose": "产品功能演示型：展示收纳/轨道插座/伸缩等功能，客户家或工厂场景",
+   "target_duration_s": "30-45",
+   "beat_sequence": [
+    "INTRO产品亮相",
+    "产品全貌",
+    "功能演示1(收纳/插座)",
+    "功能演示2(伸缩)",
+    "CTA"
+   ],
+   "required_visual_semantics": [
+    "CUSTOMER_HOME 或 FACTORY",
+    "product_visible=yes",
+    "至少一项 feature evidence yes(storage/power/flexible)"
+   ],
+   "supporting_segments": [
+    "b007:670630e9000000001a023e3f:0",
+    "b007:64f158f4000000001d014203:1",
+    "b007:66f672d6000000001902efbb:16",
+    "b007:6a7b28ab000000002800316a:0",
+    "b007:6a8edcca000000002a03b79e:0",
+    "b007:6a411f31000000001503cdc6:0",
+    "b007:6a8edcca000000002a03b79e:1",
+    "b007:6a411feb000000001c026d77:7"
+   ],
+   "recent_support": [
+    "b007:6a7b28ab000000002800316a:0",
+    "b007:6a8edcca000000002a03b79e:0",
+    "b007:6a411f31000000001503cdc6:0",
+    "b007:6a8edcca000000002a03b79e:1",
+    "b007:6a411feb000000001c026d77:7"
+   ],
+   "historical_support": [
+    "b007:670630e9000000001a023e3f:0",
+    "b007:64f158f4000000001d014203:1",
+    "b007:66f672d6000000001902efbb:16"
+   ],
+   "counterexamples": [
+    "b007:66f672d6000000001902efbb:0",
+    "b007:6544d761000000001f038f12:8",
+    "b007:6a85b8490000000021022731:0",
+    "b007:6a92b9e8000000002501a357:5"
+   ],
+   "confidence": 0.5,
+   "limitations": [
+    "sample 级共现证据；feature 证据多为近景可确认；伸缩/收纳具体动作需成片听感验收"
+   ]
+  },
+  {
+   "template_id": "T_B_PRODUCT_EXPLANATION",
+   "purpose": "产品讲解型：尺寸/细节/避坑，口播主导+实景/图纸支撑",
+   "target_duration_s": "30-45",
+   "beat_sequence": [
+    "HOOK问题/口播开场",
+    "实景产品",
+    "尺寸/细节讲解(图纸/实拍)",
+    "CTA"
+   ],
+   "required_visual_semantics": [
+    "CUSTOMER_HOME 或 DESIGN_DIAGRAM",
+    "可有人物讲解"
+   ],
+   "supporting_segments": [
+    "b007:6a411feb000000001c026d77:7",
+    "b007:6a85b8490000000021022731:0",
+    "b007:6a85b8490000000021022731:11",
+    "b007:6a8edcca000000002a03b79e:0",
+    "b007:6a8edcca000000002a03b79e:1",
+    "b007:6a92b9e8000000002501a357:5"
+   ],
+   "recent_support": [
+    "b007:6a411feb000000001c026d77:7",
+    "b007:6a85b8490000000021022731:0",
+    "b007:6a85b8490000000021022731:11",
+    "b007:6a8edcca000000002a03b79e:0",
+    "b007:6a8edcca000000002a03b79e:1",
+    "b007:6a92b9e8000000002501a357:5"
+   ],
+   "historical_support": [],
+   "counterexamples": [
+    "b007:6a85b8490000000021022731:0"
+   ],
+   "confidence": 0.375,
+   "limitations": [
+    "口播内容需脚本约束事实；设计图/实景素材可支撑性需逐 beat 校验"
+   ]
+  },
+  {
+   "template_id": "T_C_CASE_SCENE",
+   "purpose": "案例型：改造前后对比 / 入户安装 / 客户家场景叙事",
+   "target_duration_s": "30-45",
+   "beat_sequence": [
+    "BEFORE问题",
+    "改造/安装过程",
+    "AFTER成果",
+    "CTA"
+   ],
+   "required_visual_semantics": [
+    "对比图 或 INSTALLATION_SITE 或 CUSTOMER_HOME 实景"
+   ],
+   "supporting_segments": [
+    "b007:64f158f4000000001d014203:1",
+    "b007:6a85b8490000000021022731:11"
+   ],
+   "recent_support": [
+    "b007:6a85b8490000000021022731:11"
+   ],
+   "historical_support": [
+    "b007:64f158f4000000001d014203:1"
+   ],
+   "counterexamples": [],
+   "confidence": 0.125,
+   "limitations": [
+    "案例叙事需要 before/after 成对素材，检索约束更强"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "READY",
+  "qa": {
+    "SOURCE_PROVENANCE": true,
+    "NO_B003": true,
+    "TIMELINE_VALID": true,
+    "VIDEO_DECODABLE": true,
+    "AUDIO_PRESENT": true,
+    "DURATION_VALID": true,
+    "RENDER_PASS": true,
+    "video": {
+      "codec": "h264",
+      "w": 1080,
+      "h": 1920,
+      "duration_s": 27.35,
+      "size": 11033180
+    },
+    "SUBTITLE_PRESENT": true
+  },
+  "narration": {
+    "wav": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\first_real_pilot\\narration\\narration.wav",
+    "srt": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\first_real_pilot\\narration\\narration.srt",
+    "audio_duration": 27.35,
+    "text_chars": 98,
+    "chars_per_second": 3.58,
+    "subtitle_count": 10,
+    "text_coverage": 1.0,
+    "backend": "windows-sapi",
+    "voice": "Microsoft Huihui Desktop",
+    "text_hash": "d21cfd379a230f58",
+    "audio_sha256": "60e83a8ef1353b8a",
+    "generated_at": "2026-09-02 16:25:06",
+    "status": "NARRATION_READY",
+    "error": ""
+  }
+}

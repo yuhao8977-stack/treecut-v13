@@ -1,0 +1,76 @@
+{
+  "phase": "V0.9-CP-C",
+  "beats": [
+    {
+      "beat_id": "B1",
+      "beat_type": "INTRO",
+      "text": "黑白配伸缩岛台亮相",
+      "semantic_requirements": {
+        "scene": [
+          "FACTORY",
+          "CUSTOMER_HOME"
+        ],
+        "product_visible": "yes"
+      },
+      "required_evidence": []
+    },
+    {
+      "beat_id": "B2",
+      "beat_type": "PRODUCT",
+      "text": "岛台岩板台面全貌",
+      "semantic_requirements": {
+        "scene": [
+          "CUSTOMER_HOME",
+          "FACTORY"
+        ],
+        "product_visible": "yes"
+      },
+      "required_evidence": [
+        "flexible"
+      ]
+    },
+    {
+      "beat_id": "B3",
+      "beat_type": "FEATURE_STORAGE",
+      "text": "台下大抽屉+轨道插座",
+      "semantic_requirements": {
+        "scene": [
+          "CUSTOMER_HOME",
+          "FACTORY"
+        ],
+        "product_visible": "yes"
+      },
+      "required_evidence": [
+        "storage",
+        "power"
+      ]
+    },
+    {
+      "beat_id": "B4",
+      "beat_type": "FEATURE_FLEXIBLE",
+      "text": "桌面拉开伸缩功能演示",
+      "semantic_requirements": {
+        "scene": [
+          "CUSTOMER_HOME",
+          "FACTORY"
+        ],
+        "product_visible": "yes"
+      },
+      "required_evidence": [
+        "flexible"
+      ]
+    },
+    {
+      "beat_id": "B5",
+      "beat_type": "CTA",
+      "text": "总结收尾",
+      "semantic_requirements": {
+        "scene": [
+          "CUSTOMER_HOME",
+          "FACTORY"
+        ]
+      },
+      "required_evidence": []
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+ "phase": "V0.9-CP-B",
+ "n": 16,
+ "qwen_scene_accuracy_on_reviewed": 0.688,
+ "clip_scene_accuracy_on_reviewed": 0.25,
+ "field_agreement": {
+  "power_evidence": 0.0,
+  "storage_evidence": 1.0,
+  "flexible_capacity_evidence": 1.0
+ },
+ "rows": [
+  {
+   "segment_id": "b007:66f672d6000000001902efbb:0",
+   "sample": "SA-66f672d6",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "CUSTOMER_HOME",
+   "clip_scene": "OTHER",
+   "qwen_agree": true,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:670630e9000000001a023e3f:0",
+   "sample": "SD-670630e9",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "CUSTOMER_HOME",
+   "clip_scene": "OTHER",
+   "qwen_agree": true,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:63c5675a000000001c034435:0",
+   "sample": "SB-63c5675a",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "CUSTOMER_HOME",
+   "clip_scene": "OTHER",
+   "qwen_agree": true,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:66d7c509000000000c018964:0",
+   "sample": "SB-66d7c509",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "CUSTOMER_HOME",
+   "clip_scene": "OTHER",
+   "qwen_agree": true,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:6544d761000000001f038f12:8",
+   "sample": "SA-6544d761",
+   "l3_scene": "DESIGN_DIAGRAM",
+   "qwen_scene": "CUSTOMER_HOME",
+   "clip_scene": "OTHER",
+   "qwen_agree": false,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:64f158f4000000001d014203:1",
+   "sample": "SA-64f158f4",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "CUSTOMER_HOME",
+   "clip_scene": "CUSTOMER_HOME",
+   "qwen_agree": true,
+   "clip_agree": true
+  },
+  {
+   "segment_id": "b007:64e42823000000000800c82d:69",
+   "sample": "SA-64e42823",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "UNKNOWN",
+   "clip_scene": "CUSTOMER_HOME",
+   "qwen_agree": false,
+   "clip_agree": true
+  },
+  {
+   "segment_id": "b007:66f672d6000000001902efbb:16",
+   "sample": "SA-66f672d6",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "UNKNOWN",
+   "clip_scene": "OTHER",
+   "qwen_agree": false,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:6a7b28ab000000002800316a:0",
+   "sample": "RC-6A7B28AB",
+   "l3_scene": "FACTORY",
+   "qwen_scene": "FACTORY",
+   "clip_scene": "FACTORY",
+   "qwen_agree": true,
+   "clip_agree": true
+  },
+  {
+   "segment_id": "b007:6a8edcca000000002a03b79e:0",
+   "sample": "RC-6A8EDCCA",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "CUSTOMER_HOME",
+   "clip_scene": "OTHER",
+   "qwen_agree": true,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:6a411f31000000001503cdc6:0",
+   "sample": "RC-6A411F31",
+   "l3_scene": "FACTORY",
+   "qwen_scene": "FACTORY",
+   "clip_scene": "OTHER",
+   "qwen_agree": true,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:6a85b8490000000021022731:0",
+   "sample": "RC-6A85B849",
+   "l3_scene": "SHOWROOM",
+   "qwen_scene": "FACTORY",
+   "clip_scene": "OTHER",
+   "qwen_agree": false,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:6a8edcca000000002a03b79e:1",
+   "sample": "RC-6A8EDCCA",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "CUSTOMER_HOME",
+   "clip_scene": "CUSTOMER_HOME",
+   "qwen_agree": true,
+   "clip_agree": true
+  },
+  {
+   "segment_id": "b007:6a411feb000000001c026d77:7",
+   "sample": "RC-6A411FEB",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "CUSTOMER_HOME",
+   "clip_scene": "OTHER",
+   "qwen_agree": true,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:6a85b8490000000021022731:11",
+   "sample": "RC-6A85B849",
+   "l3_scene": "INSTALLATION_SITE",
+   "qwen_scene": "FACTORY",
+   "clip_scene": "OTHER",
+   "qwen_agree": false,
+   "clip_agree": false
+  },
+  {
+   "segment_id": "b007:6a92b9e8000000002501a357:5",
+   "sample": "RC-6A92B9E8",
+   "l3_scene": "CUSTOMER_HOME",
+   "qwen_scene": "CUSTOMER_HOME",
+   "clip_scene": "OTHER",
+   "qwen_agree": true,
+   "clip_agree": false
+  }
+ ],
+ "note": "16 段小样本校准证据；不用于训练高精度模型"
+}

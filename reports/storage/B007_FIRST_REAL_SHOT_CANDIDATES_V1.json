@@ -1,0 +1,205 @@
+{
+  "phase": "V0.9-CP-D",
+  "candidates": [
+    {
+      "beat": "B1",
+      "candidates": [
+        {
+          "segment_id": "b007:6a7b28ab000000002800316a:0",
+          "score": 7,
+          "recent": true,
+          "scene": "FACTORY",
+          "dur_s": 5.8
+        },
+        {
+          "segment_id": "b007:6a411feb000000001c026d77:7",
+          "score": 7,
+          "recent": true,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 5.8
+        },
+        {
+          "segment_id": "b007:6a411f31000000001503cdc6:0",
+          "score": 7,
+          "recent": true,
+          "scene": "FACTORY",
+          "dur_s": 6.3
+        },
+        {
+          "segment_id": "b007:64e42823000000000800c82d:69",
+          "score": 6,
+          "recent": false,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 7.8
+        },
+        {
+          "segment_id": "b007:63c5675a000000001c034435:0",
+          "score": 6,
+          "recent": false,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 2.8
+        }
+      ]
+    },
+    {
+      "beat": "B2",
+      "candidates": [
+        {
+          "segment_id": "b007:6a7b28ab000000002800316a:0",
+          "score": 10,
+          "recent": true,
+          "scene": "FACTORY",
+          "dur_s": 5.8
+        },
+        {
+          "segment_id": "b007:6a411feb000000001c026d77:7",
+          "score": 10,
+          "recent": true,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 5.8
+        },
+        {
+          "segment_id": "b007:6a8edcca000000002a03b79e:0",
+          "score": 9,
+          "recent": true,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 2.1
+        },
+        {
+          "segment_id": "b007:66f672d6000000001902efbb:16",
+          "score": 8,
+          "recent": false,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 2.2
+        },
+        {
+          "segment_id": "b007:6a411f31000000001503cdc6:0",
+          "score": 6,
+          "recent": true,
+          "scene": "FACTORY",
+          "dur_s": 6.3
+        }
+      ]
+    },
+    {
+      "beat": "B3",
+      "candidates": [
+        {
+          "segment_id": "b007:6a7b28ab000000002800316a:0",
+          "score": 13,
+          "recent": true,
+          "scene": "FACTORY",
+          "dur_s": 5.8
+        },
+        {
+          "segment_id": "b007:6a411f31000000001503cdc6:0",
+          "score": 13,
+          "recent": true,
+          "scene": "FACTORY",
+          "dur_s": 6.3
+        },
+        {
+          "segment_id": "b007:66f672d6000000001902efbb:16",
+          "score": 11,
+          "recent": false,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 2.2
+        },
+        {
+          "segment_id": "b007:6a411feb000000001c026d77:7",
+          "score": 9,
+          "recent": true,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 5.8
+        },
+        {
+          "segment_id": "b007:6a8edcca000000002a03b79e:0",
+          "score": 8,
+          "recent": true,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 2.1
+        }
+      ]
+    },
+    {
+      "beat": "B4",
+      "candidates": [
+        {
+          "segment_id": "b007:6a7b28ab000000002800316a:0",
+          "score": 10,
+          "recent": true,
+          "scene": "FACTORY",
+          "dur_s": 5.8
+        },
+        {
+          "segment_id": "b007:6a411feb000000001c026d77:7",
+          "score": 10,
+          "recent": true,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 5.8
+        },
+        {
+          "segment_id": "b007:6a8edcca000000002a03b79e:0",
+          "score": 9,
+          "recent": true,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 2.1
+        },
+        {
+          "segment_id": "b007:66f672d6000000001902efbb:16",
+          "score": 8,
+          "recent": false,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 2.2
+        },
+        {
+          "segment_id": "b007:6a411f31000000001503cdc6:0",
+          "score": 6,
+          "recent": true,
+          "scene": "FACTORY",
+          "dur_s": 6.3
+        }
+      ]
+    },
+    {
+      "beat": "B5",
+      "candidates": [
+        {
+          "segment_id": "b007:6a92b9e8000000002501a357:5",
+          "score": 5,
+          "recent": true,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 2.6
+        },
+        {
+          "segment_id": "b007:6a7b28ab000000002800316a:0",
+          "score": 5,
+          "recent": true,
+          "scene": "FACTORY",
+          "dur_s": 5.8
+        },
+        {
+          "segment_id": "b007:6a411feb000000001c026d77:7",
+          "score": 5,
+          "recent": true,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 5.8
+        },
+        {
+          "segment_id": "b007:6a411f31000000001503cdc6:0",
+          "score": 5,
+          "recent": true,
+          "scene": "FACTORY",
+          "dur_s": 6.3
+        },
+        {
+          "segment_id": "b007:64e42823000000000800c82d:69",
+          "score": 4,
+          "recent": false,
+          "scene": "CUSTOMER_HOME",
+          "dur_s": 7.8
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+ "phase": "V0.9-CP-B",
+ "template_id": "T_A_FEATURE_DEMONSTRATION",
+ "purpose": "产品功能演示型：展示收纳/轨道插座/伸缩等功能，客户家或工厂场景",
+ "target_duration_s": "30-45",
+ "beat_sequence": [
+  "INTRO产品亮相",
+  "产品全貌",
+  "功能演示1(收纳/插座)",
+  "功能演示2(伸缩)",
+  "CTA"
+ ],
+ "required_visual_semantics": [
+  "CUSTOMER_HOME 或 FACTORY",
+  "product_visible=yes",
+  "至少一项 feature evidence yes(storage/power/flexible)"
+ ],
+ "supporting_segments": [
+  "b007:670630e9000000001a023e3f:0",
+  "b007:64f158f4000000001d014203:1",
+  "b007:66f672d6000000001902efbb:16",
+  "b007:6a7b28ab000000002800316a:0",
+  "b007:6a8edcca000000002a03b79e:0",
+  "b007:6a411f31000000001503cdc6:0",
+  "b007:6a8edcca000000002a03b79e:1",
+  "b007:6a411feb000000001c026d77:7"
+ ],
+ "recent_support": [
+  "b007:6a7b28ab000000002800316a:0",
+  "b007:6a8edcca000000002a03b79e:0",
+  "b007:6a411f31000000001503cdc6:0",
+  "b007:6a8edcca000000002a03b79e:1",
+  "b007:6a411feb000000001c026d77:7"
+ ],
+ "historical_support": [
+  "b007:670630e9000000001a023e3f:0",
+  "b007:64f158f4000000001d014203:1",
+  "b007:66f672d6000000001902efbb:16"
+ ],
+ "counterexamples": [
+  "b007:66f672d6000000001902efbb:0",
+  "b007:6544d761000000001f038f12:8",
+  "b007:6a85b8490000000021022731:0",
+  "b007:6a92b9e8000000002501a357:5"
+ ],
+ "confidence": 0.5,
+ "limitations": [
+  "sample 级共现证据；feature 证据多为近景可确认；伸缩/收纳具体动作需成片听感验收"
+ ],
+ "selection_reason": {
+  "selected": "T_A_FEATURE_DEMONSTRATION",
+  "reason": "近期(Recent10)支持段数最多且功能证据(收纳/插座/伸缩)在近期 Exact 媒体中可落镜：recent_support=5 hist=3 total=8；生产可行性高（客户家/工厂场景+产品可见+功能演示均可由现有段覆盖）",
+  "not_by_magic_score": true
+ }
+}

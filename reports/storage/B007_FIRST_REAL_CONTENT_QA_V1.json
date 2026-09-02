@@ -1,0 +1,12 @@
+{
+  "phase": "V0.9-CP-G",
+  "content_qa": {
+    "unsupported_claims": [],
+    "missing_beat": [],
+    "excessive_repeat": [],
+    "near_dup": [],
+    "continuity": []
+  },
+  "content_ok": true,
+  "note": "仅检测明确问题（脚本↔画面证据/缺 beat/重复）；不评爆款/审美/投放"
+}
