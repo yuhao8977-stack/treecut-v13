@@ -5,5 +5,13 @@
   "target_lufs": "-15",
   "true_peak_dbtp": "-1.5",
   "bgm": "NONE(无合法内部音乐源→限制)",
-  "note": "atempo=1.3 保 pitch; loudnorm I=-15"
+  "note": "atempo=1.3 保 pitch; loudnorm I=-15",
+  "measured_lufs_i": -15.0,
+  "measured_true_peak_dbtp": -3.4,
+  "measured_aac_bit_rate": 161022,
+  "note_2pass": "两遍 loudnorm(带 measured) 校正至 I=-15",
+  "aac_channels": 2,
+  "aac_sample_rate": "48000",
+  "note_3pass": "第三遍 loudnorm(实测参数) → 立体声 AAC 192k",
+  "note_final": "linear gain 校正后终压"
 }

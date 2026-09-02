@@ -6,7 +6,7 @@
     "PLATFORM_WATERMARK_ABSENT": true,
     "AV_SYNC": true,
     "video_stream_s": 22.767,
-    "audio_stream_s": 22.691,
+    "audio_stream_s": 22.698,
     "video_tail_covers_audio": true,
     "VIDEO_DECODABLE": true,
     "AUDIO_PRESENT": true,
@@ -32,7 +32,10 @@
     "CLAIM_SUPPORTED": true,
     "ACTION_VISUAL_MATCH": true,
     "STORY_ENTITY_CONSISTENT": true,
-    "BEAT_VISUAL_SYNC": true
+    "BEAT_VISUAL_SYNC": true,
+    "END_FRAME_VALID": true,
+    "end_frame_mean_brightness": 128.8,
+    "stream_delta_s": 0.0687
   },
   "subclips": 8
 }
