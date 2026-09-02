@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-09-02 19:30:03",
+  "g1_frozen": true,
+  "db_integrity": "ok",
+  "fk_issues": 0,
+  "role_rows": 28282,
+  "role_unknown": 0,
+  "service_smoke_media18": {
+    "eligible": false,
+    "reasons": [
+      "burned_subtitle_present=UNCERTAIN_STRICT_BLOCK"
+    ]
+  },
+  "git_dirty": "M reports/storage/TREECUT_PROJECT_STATE_V1.json\n?? scripts/sprintv2_p0.py\n?? scripts/sprintv2_p0_baseline.py"
+}

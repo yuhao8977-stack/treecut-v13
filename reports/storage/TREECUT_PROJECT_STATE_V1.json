@@ -3,7 +3,7 @@
   "stage": "STAGE8_PRODUCTION_QUALITY_HARDENING",
   "stage8_gates": {
     "G1_PRODUCTION_SOURCE": {
-      "status": "PASS",
+      "status": "PASS_FROZEN",
       "plan": "docs/TREECUT_STAGE8_G1_PLAN.md"
     },
     "G2_ACTION_SUBCLIP": {
@@ -24,7 +24,7 @@
   },
   "pilot_status": {
     "B007_FIRST_REAL_PILOT_V1": "HUMAN_REJECTED",
-    "B007_FIRST_REAL_PILOT_V2": "READY_WITH_LIMITATIONS_AWAIT_HUMAN_COMPARE"
+    "B007_FIRST_REAL_PILOT_V2": "HUMAN_NEEDS_REPAIR"
   },
   "stage8_pass": "NOT_PASSED_NEEDS_4OF5_BASICALLY_PUBLISHABLE",
   "stage9_template_expansion": "FORBIDDEN_UNTIL_STAGE8_PASS",
@@ -35,7 +35,7 @@
     "L11_TEMPLATE_RELEVANCE",
     "L12_HUMAN_FEEDBACK"
   ],
-  "updated_at": "2026-09-02 19:19:44",
+  "updated_at": "2026-09-02 19:30:02",
   "g1": {
     "architect_verdict": "STAGE8_G1_PASS_WITH_LIMITATIONS (L3 已回填, 待 Full Regression 后判最终)",
     "l3": {
@@ -60,6 +60,22 @@
     },
     "final_status_suggested": "STAGE8_G1_PASS (待 Full Regression 结果确认)",
     "final_status": "STAGE8_G1_PASS",
-    "closing_notes": "idx63 证据帧已交付架构师人工复核(§3); A4b 如实 NOT_FULLY_MEASURABLE; 下一步 G2 待架构师放行"
+    "closing_notes": "idx63 证据帧已交付架构师人工复核(§3); A4b 如实 NOT_FULLY_MEASURABLE; 下一步 G2 待架构师放行",
+    "final_frozen": {
+      "status": "STAGE8_G1_PASS",
+      "A4a": "PRODUCTION_ELIGIBILITY_SAFETY_AGREEMENT (45/45, 非通用准确率)",
+      "A4b": "SOURCE_ROLE_TYPE_ACCURACY = NOT_FULLY_MEASURABLE_FROM_CURRENT_L3_SCHEMA",
+      "idx63": "REVIEW_REQUIRED / NOT_ELIGIBLE — 非阻塞(不进入生产池即可)",
+      "L3_override_scope": "APPROVED 仅覆盖人工具体审核对象(30条); 不传播到 source/folder/category",
+      "strict_pool": {
+        "machine_verified": 13617,
+        "post_l3": 13642
+      },
+      "full_regression_at_freeze": {
+        "passed": 326,
+        "skipped": 2,
+        "failed": 0
+      }
+    }
   }
 }
