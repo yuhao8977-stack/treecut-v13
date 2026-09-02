@@ -1,0 +1,39 @@
+﻿{
+    "master_roadmap":  "docs/TREECUT_ROADMAP_MASTER_V1.md",
+    "stage":  "STAGE8_PRODUCTION_QUALITY_HARDENING",
+    "stage8_gates":  {
+                         "G1_PRODUCTION_SOURCE":  {
+                                                      "status":  "PLAN_READY_AWAIT_APPROVAL",
+                                                      "plan":  "docs/TREECUT_STAGE8_G1_PLAN.md"
+                                                  },
+                         "G2_ACTION_SUBCLIP":  {
+                                                   "status":  "NOT_STARTED"
+                                               },
+                         "G3_CLAIM_VISUAL_STORY":  {
+                                                       "status":  "NOT_STARTED"
+                                                   },
+                         "G4_AUDIO_CAPTION_BGM_AV":  {
+                                                         "status":  "NOT_STARTED"
+                                                     },
+                         "G5_PRODUCTION_QA":  {
+                                                  "status":  "NOT_STARTED"
+                                              },
+                         "G6_PILOT_VALIDATION":  {
+                                                     "status":  "NOT_STARTED"
+                                                 }
+                     },
+    "pilot_status":  {
+                         "B007_FIRST_REAL_PILOT_V1":  "HUMAN_REJECTED",
+                         "B007_FIRST_REAL_PILOT_V2":  "READY_WITH_LIMITATIONS_AWAIT_HUMAN_COMPARE"
+                     },
+    "stage8_pass":  "NOT_PASSED_NEEDS_4OF5_BASICALLY_PUBLISHABLE",
+    "stage9_template_expansion":  "FORBIDDEN_UNTIL_STAGE8_PASS",
+    "capability_debt":  [
+                            "L3_ASSET_TYPE",
+                            "L6_MOTION_ACTION",
+                            "L8_FUNCTION_DEMO",
+                            "L11_TEMPLATE_RELEVANCE",
+                            "L12_HUMAN_FEEDBACK"
+                        ],
+    "updated_at":  "2026-09-02 17:49:35"
+}
