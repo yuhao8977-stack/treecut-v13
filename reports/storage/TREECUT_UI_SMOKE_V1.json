@@ -1,7 +1,7 @@
 {
   "open_workbench": {
     "status": 200,
-    "bytes": 5901
+    "bytes": 7988
   },
   "load_project": {
     "status": 200,
@@ -14,6 +14,44 @@
   },
   "replace_save": {
     "ok": true,
-    "saved_at": "2026-09-02 19:43:56"
+    "qa": [
+      {
+        "gate": "SEMANTIC",
+        "key": "ACTION_DEMONSTRATED",
+        "status": "PASS",
+        "detail": "claim None ∈ 候选动作"
+      },
+      {
+        "gate": "PRODUCTION",
+        "key": "NEAR_DUPLICATE_FREE",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "gate": "TECHNICAL",
+        "key": "CAPTION_SIZE",
+        "status": "PASS",
+        "detail": "字幕默认 66(62-68) 由渲染侧保证"
+      },
+      {
+        "gate": "TECHNICAL",
+        "key": "VOICE_PROVIDER_VALID",
+        "status": "WARNING",
+        "detail": "SAPI=FALLBACK; 真人音 VOICE_INPUT_REQUIRED"
+      },
+      {
+        "gate": "PRODUCTION",
+        "key": "BGM_PRESENT_IF_REQUIRED",
+        "status": "WARNING",
+        "detail": "BGM_LIBRARY_NOT_READY(无授权音乐)"
+      },
+      {
+        "gate": "LOCAL_RULE",
+        "key": "NOTE",
+        "status": "WARNING",
+        "detail": "本 QA 为 UI 本地规则; AV/响度/烧录等完整 QA 由 ProductionQAService 重建时执行"
+      }
+    ],
+    "saved_at": "2026-09-02 20:06:59"
   }
 }

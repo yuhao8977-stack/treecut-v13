@@ -1,6 +1,6 @@
 {
  "level": "L2_VISUAL_CANDIDATE",
- "note": "qwen2.5vl=L2 时序候选; 非L3; 仅用于动作候选与有界校准 | pass2: extend 素材 0.42/0.58 有界补充帧 | direction probe: EXTEND vs RETRACT 独立复核",
+ "note": "qwen2.5vl=L2 时序候选; 非L3; 仅用于动作候选与有界校准 | pass2: extend 素材 0.42/0.58 有界补充帧 | direction probe: EXTEND vs RETRACT 独立复核 | pass3: 煮茶器/收纳/对开门空镜(含硬负) 3帧",
  "items": [
   {
    "media_id": 2482,
@@ -850,6 +850,216 @@
    "qwen_l2_raw": "direction=EXTEND",
    "level": "L2_VISUAL_CANDIDATE",
    "direction_probe": true
+  },
+  {
+   "media_id": 2172,
+   "group": "POWER_USE",
+   "frame_idx": 97,
+   "frac": 0.12,
+   "t_s": 0.72,
+   "qwen_l2_raw": "state=NOT_PRESENT|OBJECT_PRESENT(object=煮茶器/插座/其他); desc=未发现煮茶器或插座正在通电使用或插头插入。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "POWER_USE",
+    "SOCKET_INSERT"
+   ]
+  },
+  {
+   "media_id": 2172,
+   "group": "POWER_USE",
+   "frame_idx": 97,
+   "frac": 0.5,
+   "t_s": 3.0,
+   "qwen_l2_raw": "state=NOT_PRESENT|OBJECT_PRESENT(object=煮茶器/插座/其他); desc=煮茶器未通电使用，未见冒热气或亮灯。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "POWER_USE",
+    "SOCKET_INSERT"
+   ]
+  },
+  {
+   "media_id": 2172,
+   "group": "POWER_USE",
+   "frame_idx": 97,
+   "frac": 0.88,
+   "t_s": 5.27,
+   "qwen_l2_raw": "state=NOT_PRESENT|OBJECT_PRESENT(object=煮茶器/插座/其他); desc=煮茶器未通电使用，未见插头插入。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "POWER_USE",
+    "SOCKET_INSERT"
+   ]
+  },
+  {
+   "media_id": 418,
+   "group": "STORAGE_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.12,
+   "t_s": 1.06,
+   "qwen_l2_raw": "state=OBJECT_PRESENT|ACTION_START|object=抽屉/柜; desc=抽屉部分打开，可能有人即将放入或取出物品。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "STORAGE_PUT_IN",
+    "CABINET_OPEN"
+   ]
+  },
+  {
+   "media_id": 418,
+   "group": "STORAGE_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.5,
+   "t_s": 4.4,
+   "qwen_l2_raw": "state=NOT_PRESENT|OBJECT_PRESENT(收纳可见,无人放物)|object=抽屉/柜; desc=抽屉处于打开状态，无人在进行放物或取物的动作。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "STORAGE_PUT_IN",
+    "CABINET_OPEN"
+   ]
+  },
+  {
+   "media_id": 418,
+   "group": "STORAGE_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.88,
+   "t_s": 7.74,
+   "qwen_l2_raw": "state=NOT_PRESENT|OBJECT_PRESENT(收纳可见,无人放物)|ACTION_START|ACTION_IN_PROGRESS|ACTION_END; object=抽屉/柜; desc=抽屉处于打开状态，无人在操作。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "STORAGE_PUT_IN",
+    "CABINET_OPEN"
+   ]
+  },
+  {
+   "media_id": 419,
+   "group": "STORAGE_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.12,
+   "t_s": 1.81,
+   "qwen_l2_raw": "state=NOT_PRESENT|OBJECT_PRESENT(收纳可见,无人放物)|object=抽屉/柜; desc=抽屉部分打开，无人在操作。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "STORAGE_PUT_IN",
+    "CABINET_OPEN"
+   ]
+  },
+  {
+   "media_id": 419,
+   "group": "STORAGE_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.5,
+   "t_s": 7.53,
+   "qwen_l2_raw": "ACTION_END | 抽屉/柜 | 抽屉已关闭，无人操作。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "STORAGE_PUT_IN",
+    "CABINET_OPEN"
+   ]
+  },
+  {
+   "media_id": 419,
+   "group": "STORAGE_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.88,
+   "t_s": 13.26,
+   "qwen_l2_raw": "state=NOT_PRESENT|OBJECT_PRESENT(收纳可见,无人放物)|ACTION_START|ACTION_IN_PROGRESS|ACTION_END; object=抽屉/柜/物品; desc=抽屉部分打开，无人在操作。",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "STORAGE_PUT_IN",
+    "CABINET_OPEN"
+   ]
+  },
+  {
+   "media_id": 866,
+   "group": "CABINET_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.12,
+   "t_s": 0.5,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "CABINET_OPEN",
+    "CABINET_CLOSE"
+   ]
+  },
+  {
+   "media_id": 866,
+   "group": "CABINET_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.5,
+   "t_s": 2.1,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "CABINET_OPEN",
+    "CABINET_CLOSE"
+   ]
+  },
+  {
+   "media_id": 866,
+   "group": "CABINET_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.88,
+   "t_s": 3.7,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "CABINET_OPEN",
+    "CABINET_CLOSE"
+   ]
+  },
+  {
+   "media_id": 867,
+   "group": "CABINET_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.12,
+   "t_s": 0.48,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "CABINET_OPEN",
+    "CABINET_CLOSE"
+   ]
+  },
+  {
+   "media_id": 867,
+   "group": "CABINET_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.5,
+   "t_s": 1.99,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "CABINET_OPEN",
+    "CABINET_CLOSE"
+   ]
+  },
+  {
+   "media_id": 867,
+   "group": "CABINET_EMPTY",
+   "frame_idx": 97,
+   "frac": 0.88,
+   "t_s": 3.49,
+   "qwen_l2_raw": "ACTION_IN_PROGRESS",
+   "level": "L2_VISUAL_CANDIDATE",
+   "pass3": true,
+   "probe_actions": [
+    "CABINET_OPEN",
+    "CABINET_CLOSE"
+   ]
   }
  ]
 }

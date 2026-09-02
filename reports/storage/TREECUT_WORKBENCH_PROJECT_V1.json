@@ -17,12 +17,9 @@
    "candidates": [],
    "selected": {
     "media_id": 1,
-    "actions": [
-     "DRAWER_OPEN"
-    ],
     "subclip": {
-     "start_s": 1.5,
-     "end_s": 4.0
+     "start_s": 1.82,
+     "end_s": 4.37
     }
    },
    "qa_note": "OK",
@@ -125,13 +122,22 @@
      "actions": [
       "STORAGE_PUT_IN"
      ],
+     "eligible": true,
+     "folder_hint": "【01】上层薄抽",
      "subclip": {
       "start_s": 0.93,
       "end_s": 6.84
      },
      "semantic_correct": true,
      "boundary_usable": true,
+     "motion_support": "UNKNOWN",
      "why": "STORAGE_PUT_IN 动作段 0.93-6.84s; subclip 0.68-7.14s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: STORAGE_PUT_IN WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -143,13 +149,49 @@
      "actions": [
       "STORAGE_PUT_IN"
      ],
+     "eligible": true,
+     "folder_hint": "【01】上层薄抽",
      "subclip": {
       "start_s": 0.26,
       "end_s": 4.06
      },
      "semantic_correct": true,
      "boundary_usable": true,
+     "motion_support": "UNKNOWN",
      "why": "STORAGE_PUT_IN 动作段 0.51-3.76s; subclip 0.26-4.06s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: STORAGE_PUT_IN WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃"
+     },
+     "qa": {
+      "status": "PENDING"
+     }
+    },
+    {
+     "media_id": 419,
+     "path": null,
+     "object_": null,
+     "actions": [
+      "STORAGE_PUT_IN"
+     ],
+     "eligible": true,
+     "folder_hint": "【02】下层抽屉",
+     "subclip": {
+      "start_s": 7.28,
+      "end_s": 9.78
+     },
+     "semantic_correct": true,
+     "boundary_usable": true,
+     "motion_support": "UNKNOWN",
+     "why": "STORAGE_PUT_IN 动作段 7.53-7.53s; subclip 7.28-7.83s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: STORAGE_PUT_IN WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【02】下层抽屉\\   【19】【黑白极简】咸宁宋先生【空镜 岛头收纳整体展示横】\\   【19】【黑白极简】咸宁宋先生"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -162,13 +204,22 @@
     "actions": [
      "STORAGE_PUT_IN"
     ],
+    "eligible": true,
+    "folder_hint": "【01】上层薄抽",
     "subclip": {
      "start_s": 0.93,
      "end_s": 6.84
     },
     "semantic_correct": true,
     "boundary_usable": true,
+    "motion_support": "UNKNOWN",
     "why": "STORAGE_PUT_IN 动作段 0.93-6.84s; subclip 0.68-7.14s",
+    "evidence": {
+     "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+     "L2_AI": "qwen 帧证据: STORAGE_PUT_IN WEAK",
+     "L3_HUMAN": null,
+     "PATH_HINT": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北"
+    },
     "qa": {
      "status": "PENDING"
     }
@@ -277,13 +328,22 @@
      "actions": [
       "EXTEND"
      ],
+     "eligible": true,
+     "folder_hint": "【21】伸缩功能",
      "subclip": {
       "start_s": 5.09,
       "end_s": 7.59
      },
      "semantic_correct": true,
      "boundary_usable": true,
+     "motion_support": "UNKNOWN",
      "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: EXTEND WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -295,13 +355,22 @@
      "actions": [
       "EXTEND"
      ],
+     "eligible": true,
+     "folder_hint": "【21】伸缩功能",
      "subclip": {
       "start_s": 5.31,
       "end_s": 7.81
      },
      "semantic_correct": true,
      "boundary_usable": true,
+     "motion_support": "UNKNOWN",
      "why": "EXTEND 动作段 5.56-5.56s; subclip 5.31-5.86s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: EXTEND WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -313,13 +382,22 @@
      "actions": [
       "EXTEND"
      ],
+     "eligible": true,
+     "folder_hint": "【21】伸缩功能",
      "subclip": {
       "start_s": 4.71,
       "end_s": 7.21
      },
      "semantic_correct": true,
      "boundary_usable": true,
-     "why": "EXTEND 动作段 4.96-6.86s; subclip 4.71-7.16s",
+     "motion_support": "UNKNOWN",
+     "why": "EXTEND 动作段 4.96-4.96s; subclip 4.71-5.26s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: EXTEND WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -332,13 +410,22 @@
     "actions": [
      "EXTEND"
     ],
+    "eligible": true,
+    "folder_hint": "【21】伸缩功能",
     "subclip": {
      "start_s": 5.09,
      "end_s": 7.59
     },
     "semantic_correct": true,
     "boundary_usable": true,
+    "motion_support": "UNKNOWN",
     "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+    "evidence": {
+     "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+     "L2_AI": "qwen 帧证据: EXTEND WEAK",
+     "L3_HUMAN": null,
+     "PATH_HINT": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
     "qa": {
      "status": "PENDING"
     }
@@ -363,13 +450,22 @@
      "actions": [
       "EXTEND"
      ],
+     "eligible": true,
+     "folder_hint": "【21】伸缩功能",
      "subclip": {
       "start_s": 5.09,
       "end_s": 7.59
      },
      "semantic_correct": true,
      "boundary_usable": true,
+     "motion_support": "UNKNOWN",
      "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: EXTEND WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -381,13 +477,22 @@
      "actions": [
       "EXTEND"
      ],
+     "eligible": true,
+     "folder_hint": "【21】伸缩功能",
      "subclip": {
       "start_s": 5.31,
       "end_s": 7.81
      },
      "semantic_correct": true,
      "boundary_usable": true,
+     "motion_support": "UNKNOWN",
      "why": "EXTEND 动作段 5.56-5.56s; subclip 5.31-5.86s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: EXTEND WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -399,13 +504,22 @@
      "actions": [
       "EXTEND"
      ],
+     "eligible": true,
+     "folder_hint": "【21】伸缩功能",
      "subclip": {
       "start_s": 4.71,
       "end_s": 7.21
      },
      "semantic_correct": true,
      "boundary_usable": true,
-     "why": "EXTEND 动作段 4.96-6.86s; subclip 4.71-7.16s",
+     "motion_support": "UNKNOWN",
+     "why": "EXTEND 动作段 4.96-4.96s; subclip 4.71-5.26s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: EXTEND WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -418,13 +532,22 @@
     "actions": [
      "EXTEND"
     ],
+    "eligible": true,
+    "folder_hint": "【21】伸缩功能",
     "subclip": {
      "start_s": 5.09,
      "end_s": 7.59
     },
     "semantic_correct": true,
     "boundary_usable": true,
+    "motion_support": "UNKNOWN",
     "why": "EXTEND 动作段 5.34-5.34s; subclip 5.09-5.64s",
+    "evidence": {
+     "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+     "L2_AI": "qwen 帧证据: EXTEND WEAK",
+     "L3_HUMAN": null,
+     "PATH_HINT": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
     "qa": {
      "status": "PENDING"
     }
@@ -449,13 +572,22 @@
      "actions": [
       "RETRACT"
      ],
+     "eligible": true,
+     "folder_hint": "【21】伸缩功能",
      "subclip": {
       "start_s": 5.09,
       "end_s": 7.59
      },
      "semantic_correct": true,
      "boundary_usable": true,
+     "motion_support": "UNKNOWN",
      "why": "RETRACT 动作段 5.34-5.34s; subclip 5.09-5.64s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: RETRACT WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -467,13 +599,22 @@
      "actions": [
       "RETRACT"
      ],
+     "eligible": true,
+     "folder_hint": "【21】伸缩功能",
      "subclip": {
       "start_s": 5.31,
       "end_s": 7.81
      },
      "semantic_correct": true,
      "boundary_usable": true,
+     "motion_support": "UNKNOWN",
      "why": "RETRACT 动作段 5.56-5.56s; subclip 5.31-5.86s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: RETRACT WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -485,13 +626,22 @@
      "actions": [
       "RETRACT"
      ],
+     "eligible": true,
+     "folder_hint": "【21】伸缩功能",
      "subclip": {
       "start_s": 4.71,
       "end_s": 7.21
      },
      "semantic_correct": true,
      "boundary_usable": true,
-     "why": "RETRACT 动作段 4.96-6.86s; subclip 4.71-7.16s",
+     "motion_support": "UNKNOWN",
+     "why": "RETRACT 动作段 4.96-4.96s; subclip 4.71-5.26s",
+     "evidence": {
+      "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+      "L2_AI": "qwen 帧证据: RETRACT WEAK",
+      "L3_HUMAN": null,
+      "PATH_HINT": "【21】伸缩功能\\ 【15】上海【岛台餐桌一米八+伸缩40公分】【坤宝】\\ 【15】上海【岛台餐桌一米八+伸缩40公分】"
+     },
      "qa": {
       "status": "PENDING"
      }
@@ -504,13 +654,22 @@
     "actions": [
      "RETRACT"
     ],
+    "eligible": true,
+    "folder_hint": "【21】伸缩功能",
     "subclip": {
      "start_s": 5.09,
      "end_s": 7.59
     },
     "semantic_correct": true,
     "boundary_usable": true,
+    "motion_support": "UNKNOWN",
     "why": "RETRACT 动作段 5.34-5.34s; subclip 5.09-5.64s",
+    "evidence": {
+     "L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+     "L2_AI": "qwen 帧证据: RETRACT WEAK",
+     "L3_HUMAN": null,
+     "PATH_HINT": "【21】伸缩功能\\   【21】【宝格丽黑+香奈儿白】北京陶先生【岛台总长相加3米伸缩60公分】\\   【21】【宝格丽"
+    },
     "qa": {
      "status": "PENDING"
     }

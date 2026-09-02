@@ -25,6 +25,19 @@ assets = {}
 for m in man:
     assets[m["media_id"]] = {"full_path": m["full_path"], "duration_s": m["duration_s"],
                              "group": m["group"], "rel": m["rel"], "probe_actions": m["probe_actions"]}
+# pass2/pass3 补充资产(在 evidence 里但不在 man)折叠入 assets
+extra_rel = json.loads((OUT / "_g2_extra_inventory.json").read_text(encoding="utf-8")) if (OUT / "_g2_extra_inventory.json").exists() else {}
+relmap = {}
+for kws in extra_rel.values():
+    for it in kws:
+        relmap[it["media_id"]] = it["rel"]
+for e in EV:
+    mid = e.get("media_id")
+    if mid not in assets and mid is not None:
+        assets[mid] = {"full_path": None, "duration_s": None,
+                       "group": e.get("group", "?"),
+                       "rel": relmap.get(mid, ""),
+                       "probe_actions": e.get("probe_actions") or []}
 by_mid = {}
 for e in EV:
     if e.get("error"):
@@ -85,23 +98,27 @@ hardneg = [{"media_id": m["media_id"], "group": m["group"], "rel": m["rel"][:100
     {"note": "Permanent regression: 轨道插座特写 ≠ 伸缩动作; 文件夹名不作证据", "items": hardneg},
     ensure_ascii=False, indent=1), encoding="utf-8")
 
-# 校准集(80-120 段目标: 从探测帧构建正/负/硬负条目)
+# 校准集: 从证据全量(含 pass2/pass3)按资产构建
 cal = []
-for m in man:
-    frames = [e for e in by_mid.get(m["media_id"], [])]
+for mid in sorted(by_mid.keys()):
+    frames = [e for e in by_mid[mid]]
     pos = [f for f in frames if parse_qwen_state(f.get("qwen_l2_raw") or "") in
            ("ACTION_START", "ACTION_IN_PROGRESS", "ACTION_END")]
     obj = [f for f in frames if parse_qwen_state(f.get("qwen_l2_raw") or "") == "OBJECT_PRESENT"]
     neg = [f for f in frames if parse_qwen_state(f.get("qwen_l2_raw") or "") == "NOT_PRESENT"]
+    a = assets.get(mid, {})
     kind = "positive" if pos and not neg else ("negative" if neg and not pos else "mixed")
-    cal.append({"media_id": m["media_id"], "group": m["group"], "kind": kind,
+    cal.append({"media_id": mid, "group": a.get("group"), "kind": kind,
                 "n_frames": len(frames), "frames_with_action": len(pos),
                 "frames_object_only": len(obj), "frames_not_present": len(neg),
-                "rel": m["rel"][:100]})
+                "rel": (a.get("rel") or "")[:100]})
 (OUT / "TREECUT_G2_ACTION_CALIBRATION_V1.json").write_text(json.dumps(
-    {"target_n": "80-120", "note": "L2(qwen) 帧级状态; L3 人工后续锁定; 含正/负/硬负(插座伪伸缩)",
+    {"target_n": "80-120(渐进扩充中, 本批 L2 标注)",
+     "note": "L2(qwen) 帧级状态; L3 人工后续锁定; 含正/负/硬负(空镜收纳/煮茶器=可见未用; 插座伪伸缩)",
      "items": cal}, ensure_ascii=False, indent=1), encoding="utf-8")
-print("calibration items:", len(cal), "| pos:", sum(1 for x in cal if x["kind"] == "positive"))
+print("calibration items:", len(cal), "| pos:", sum(1 for x in cal if x["kind"] == "positive"),
+      "| neg:", sum(1 for x in cal if x["kind"] == "negative"),
+      "| mixed:", sum(1 for x in cal if x["kind"] == "mixed"))
 
 # Workbench 项目(真实候选回填旗舰脚本)
 SCRIPT = ("岛台想好用，这三个细节最值得看。第一，上层薄抽，收纳小物不弯腰，打开就能拿到。"
@@ -116,10 +133,21 @@ for c in claims:
                  key=lambda w: (not w.get("boundary_usable"),))[:3]
     cands = []
     for t in top:
-        cands.append({"media_id": t["media_id"], "path": t.get("asset_path"), "object_": None,
-                      "actions": [act], "subclip": {"start_s": t["subclip_start_s"], "end_s": t["subclip_end_s"]},
+        mid = t["media_id"]
+        a = assets.get(mid, {})
+        cands.append({"media_id": mid, "path": t.get("asset_path"),
+                      "object_": None, "actions": [act],
+                      "eligible": True,
+                      "folder_hint": (a.get("rel") or "").split("\\")[0] if a.get("rel") else None,
+                      "subclip": {"start_s": t["subclip_start_s"], "end_s": t["subclip_end_s"]},
                       "semantic_correct": t["semantic_correct"], "boundary_usable": t["boundary_usable"],
-                      "why": t.get("selection_reason", "")[:120], "qa": {"status": "PENDING"}})
+                      "motion_support": t.get("motion_support", "UNKNOWN"),
+                      "why": t.get("selection_reason", "")[:120],
+                      "evidence": {"L1_SOURCE": "PRODUCTION_CLEAN(eligible)",
+                                   "L2_AI": f"qwen 帧证据: {act} {'MODERATE' if t.get('motion_support')=='MODERATE' else 'WEAK'}",
+                                   "L3_HUMAN": None,
+                                   "PATH_HINT": (a.get("rel") or "")[:60]},
+                      "qa": {"status": "PENDING"}})
     beats.append({"id": c.beat_id, "text": c.text,
                   "claim": {"id": c.claim_id, "type": c.claim_type, "text": c.text,
                             "required_action": c.required_action, "required_object": c.required_object},

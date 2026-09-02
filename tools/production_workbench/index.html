@@ -70,17 +70,24 @@ function selectBeat(i,node){
 function tag(st){return `<span class="tag ${st==='PASS'?'ok':st==='WARNING'?'warn':'fail'}">${st||'?'}</span>`;}
 function renderCands(b){
   const el=$('#cands');el.innerHTML='';
+  const fb=document.createElement('div');fb.style.cssText='padding:6px 12px;border-bottom:1px solid var(--line)';
+  fb.innerHTML=`<label style="font-size:12px"><input type="checkbox" id="eligonly" checked onchange="renderCands(PROJ.beats[${currentBeat}])"/> 仅 Production Eligible</label>`;
+  el.appendChild(fb);
+  const onlyElig=fb.querySelector('#eligonly').checked;
   (b.candidates||[]).forEach((c,ci)=>{
+    if(onlyElig && c.eligible===false) return;
     const d=document.createElement('div');
     d.className='cand'+(b.selected&&b.selected.media_id===c.media_id?' selected':'');
     const sc=c.subclip||{};
     d.innerHTML=`<div class="meta">#${ci+1} media ${c.media_id} ${c.object_||''} ${(c.actions||[]).join('/')}
-      ${tag(c.qa&&c.qa.status||'PENDING')}</div>
+      ${tag(c.qa&&c.qa.status||'PENDING')} ${c.eligible===false?'<span class="tag fail">非生产资格</span>':''}
+      <span class="tag warn">motion=${c.motion_support||'?'}</span></div>
       <div class="why">subclip ${sc.start_s||'?'}–${sc.end_s||'?'}s | semantic=${c.semantic_correct} boundary=${c.boundary_usable}</div>
+      <div class="ev"><b>证据分层</b><br/>L1源: ${(ev.L1_SOURCE||'?')}<br/>L2(AI候选): ${(ev.L2_AI||'?')}<br/>
+        L3人工: ${(ev.L3_HUMAN||'无')}<br/>PATH_HINT(非证据): ${(ev.PATH_HINT||'')}</div>
       <div class="why">${c.why||''}</div>
-      <div class="sel" id="sel-${c.media_id}">${c.rejected?(c.rejected.join('; ')):''}</div>
       <button class="btn ghost" onclick="playCand(${JSON.stringify(c).replace(/"/g,'&quot;')},${ci})">▶ 播放</button>
-      <button class="btn" onclick="replace(${JSON.stringify(b.id)},${JSON.stringify(c.media_id)},${sc.start_s},${sc.end_s})">替换本镜</button>`;
+      <button class="btn" onclick="replace('${b.id}',${c.media_id},${sc.start_s},${sc.end_s})">替换本镜</button>`;
     el.appendChild(d);
   });
   // 手动裁剪(选中候选)
