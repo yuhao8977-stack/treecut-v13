@@ -796,7 +796,7 @@ def main() -> int:
             # ---- 阶段1: 定位（已发布列表滚动 sweep → 目标卡红色高亮；不做点击）
             try:
                 r = runtime._in_browser(lambda: process_position(runtime, sample, diag, goto_fresh, sweep),
-                                        timeout=600)
+                                        timeout=1800)      # 深位笔记 sweep 可达 ~260轮*2.8s≈730s；600s 会截断
             except Exception as e:
                 r = {"global": None, "ok": False, "error": str(e)[:200]}
             goto_fresh = False                      # 之后续滚，不从顶部重来
