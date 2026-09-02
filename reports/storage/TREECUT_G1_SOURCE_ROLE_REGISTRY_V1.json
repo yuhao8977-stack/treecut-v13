@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-09-02 18:00:17",
+  "coverage_by_source": {
+    "1": 3025,
+    "2": 3569,
+    "3": 332,
+    "4": 21170,
+    "5": 156
+  },
+  "role_counts": {
+    "NOT_PRODUCTION_SOURCE": 332,
+    "PRODUCTION_CLEAN_RAW": 21170,
+    "PRODUCTION_CLEAN_SEMI": 6594,
+    "PUBLISHED_REFERENCE": 186
+  },
+  "detector_stats": {
+    "S1": {
+      "total": 3025,
+      "burned": {
+        "ABSENT": 2427,
+        "UNCERTAIN": 582,
+        "PRESENT": 16
+      },
+      "wm": {
+        "ABSENT": 3024,
+        "PRESENT": 1
+      },
+      "unrel": {
+        "ABSENT": 3025
+      },
+      "env": {
+        "PRESENT": 80,
+        "ABSENT": 2945
+      }
+    },
+    "S2": {
+      "total": 3359,
+      "burned": {
+        "ABSENT": 3138,
+        "UNCERTAIN": 194,
+        "PRESENT": 27
+      },
+      "wm": {
+        "ABSENT": 3358,
+        "PRESENT": 1
+      },
+      "unrel": {
+        "ABSENT": 3359
+      },
+      "env": {
+        "ABSENT": 3238,
+        "PRESENT": 121
+      }
+    },
+    "S3": {
+      "total": 96,
+      "burned": {
+        "ABSENT": 68,
+        "UNCERTAIN": 20,
+        "PRESENT": 8
+      },
+      "wm": {
+        "ABSENT": 96
+      },
+      "unrel": {
+        "ABSENT": 95,
+        "PRESENT": 1
+      },
+      "env": {
+        "ABSENT": 89,
+        "PRESENT": 7
+      }
+    },
+    "S4": {
+      "total": 15985,
+      "burned": {
+        "ABSENT": 8085,
+        "UNCERTAIN": 7823,
+        "PRESENT": 77
+      },
+      "wm": {
+        "ABSENT": 15985
+      },
+      "unrel": {
+        "ABSENT": 15974,
+        "PRESENT": 11
+      },
+      "env": {
+        "ABSENT": 15705,
+        "PRESENT": 280
+      }
+    }
+  },
+  "note": "media_files 28252 + b007_assets 30 全量角色已落库(覆盖100%含UNKNOWN合法态); 污染检测仅复用现有 ocr_text 未重扫全库"
+}

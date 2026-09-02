@@ -1,0 +1,1216 @@
+{
+  "seed": 20260717,
+  "item_count": 100,
+  "items": [
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "2302",
+      "source_id": 1,
+      "asset_id": "8ffc6e020efb41c092c69fe230142149",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【18】海棠角\\ 【15】上海【精准封边工艺】【铁牛】\\ 【15】上海【精准封边工艺】【铁牛】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "2066",
+      "source_id": 1,
+      "asset_id": "2c592809550f482ab3fae401b7c47c72",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【06】内嵌烤箱\\【150】【威水尼奶油色+亮光潘多拉】深圳李小姐【空镜岛台内嵌烤箱展示】\\【150】【威水尼奶油色+亮光潘多拉】深圳李小姐【空镜岛台内嵌烤箱展示】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "1669",
+      "source_id": 1,
+      "asset_id": "4fe3ae97ea964a6ca3d4d8b5ef93c6cd",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【07】【中古风】长春市邵小姐【空镜岛台公牛轨道插座细节特写展示】01\\【07】【中古风】长春市邵小姐【空镜岛台公牛轨道插座细节特写展示】01-5.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "2863",
+      "source_id": 1,
+      "asset_id": "115c8885e25c497e8c7e3d1fb45732a7",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【26】材质细节展示\\【77】【304不锈钢】户外特殊岛台【空镜岛台细节展示】\\【77】【304不锈钢】户外特殊岛台【空镜岛台细节展示】-2.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "1801",
+      "source_id": 1,
+      "asset_id": "5246093613e749d7841a3bc4aa8819c4",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【26】【维多利亚鱼肚白北美黑胡桃】安徽李小姐【岛台配置一组公牛轨道插座】\\【26】【维多利亚鱼肚白北美黑胡桃】安徽李小姐【岛台配置一组公牛轨道插座】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "1838",
+      "source_id": 1,
+      "asset_id": "09aba9a898ed483da4b61d5ec3533bf5",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【34】【奶油水泥+杏黄柚木】南京魏小姐【空镜岛台公牛轨道插座展示】\\【34】【奶油水泥+杏黄柚木】南京魏小姐【空镜岛台公牛轨道插座展示】-4.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "1408",
+      "source_id": 1,
+      "asset_id": "3044d7b2fd5f4b228b4b1e26ad35c8e9",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【04】对开间收纳\\【44】【一诺哑光白哑光白】盐城夏小姐【【岛台对开门田字格收纳层】【01】\\【44】【一诺哑光白哑光白】盐城夏小姐【【岛台对开门田字格收纳层】【01】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "454",
+      "source_id": 1,
+      "asset_id": "5e53fc7b5a5f4885a527fc9f888d3c53",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\ 【71】【鱼肚白+艾米利亚浅棕】杭州楼先生【空镜岛台下层抽屉展示】\\ 【71】【鱼肚白+艾米利亚浅棕】杭州楼先生【空镜岛台下层抽屉展示】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "847",
+      "source_id": 1,
+      "asset_id": "54e7f5788b01438e9785790c80bdf1a4",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【62】【现代极简风岛台】广州赖小姐 【岛台下层抽屉收纳层】\\【62】【现代极简风岛台】广州赖小姐 【岛台下层抽屉收纳层】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "99",
+      "source_id": 1,
+      "asset_id": "103bdb42e719445b9945a02288ed13d0",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【111】【纯白哑光+兰亭香樟木纹色 】山东朱先生【岛台上层薄抽收纳层】\\【111】【纯白哑光+兰亭香樟木纹色 】山东朱先生【岛台上层薄抽收纳层】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "2521",
+      "source_id": 1,
+      "asset_id": "c924db90a4644d3b86890d95a9681216",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【岛台总长两米6+伸缩60公分】【铁牛01】\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【岛台总长两米6+伸缩60公分】【铁牛01】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "2600",
+      "source_id": 1,
+      "asset_id": "faaabe0ad5624dfca8cb449515e4430f",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【23】钢结构\\【139】【咖色+纯白哑+卡德拉浅棕】泰州田先生【岛台海实木钢结构】【01】\\【139】【咖色+纯白哑+卡德拉浅棕】泰州田先生【岛台海实木钢结构】【01】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "546",
+      "source_id": 1,
+      "asset_id": "dd84e8b5f9ec49aca17a7c17ff39aaed",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【109】【简约咖啡+罗马动石】山西雷先生【岛台下层抽屉收纳展示】\\【109】【简约咖啡+罗马动石】山西雷先生【岛台下层抽屉收纳展示】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "1392",
+      "source_id": 1,
+      "asset_id": "626e6b7d070149e1af1c6a69e666a69d",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【04】对开间收纳\\【41】【宝格丽+一诺纯黑+艾米利亚棕木纹】杭州沈小姐【岛台下层大柜门做田字格的收纳设计】\\【41】【宝格丽+一诺纯黑+艾米利亚棕木纹】杭州沈小姐【岛台下层大柜门做田字格的收纳设计】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "1096",
+      "source_id": 1,
+      "asset_id": "38047f6abfcf4f8b803b0356e87b8a76",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【04】对开间收纳\\ 【71】【鱼肚白+艾米利亚浅棕】杭州楼先生【空镜岛台对开间收纳展示】1)\\ 【71】【鱼肚白+艾米利亚浅棕】杭州楼先生【空镜岛台对开间收纳展示】1)-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "2491",
+      "source_id": 1,
+      "asset_id": "92c14cac9fce484f8576117f656d4e17",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\【01】【水泥奶油白】汕尾陈小姐【岛台伸缩50公分】【坤宝-01-2】\\【01】【水泥奶油白】汕尾陈小姐【岛台伸缩50公分】【坤宝-01-2】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "711",
+      "source_id": 1,
+      "asset_id": "835c005935b44605b3ea09efb590a660",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【30】【散花潘多拉+纯黑哑光+北美黑胡桃】江苏火小姐【大抽屉三节托底导轨】【铁牛】】\\【30】【散花潘多拉+纯黑哑光+北美黑胡桃】江苏火小姐【大抽屉三节托底导轨】【铁牛】】-1.mp4"
+    },
+    {
+      "kind": "S1-clean",
+      "expectation": "clean",
+      "media_id": "809",
+      "source_id": 1,
+      "asset_id": "14b2aa5dc0194693b35322588a1c50e1",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【49】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【空镜岛台下层抽屉收纳展】【铁牛】\\【49】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【空镜岛台下层抽屉收纳展】【铁牛】-3.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "4575",
+      "source_id": 2,
+      "asset_id": "a3cf38e2fae04162b7cad25353bb02fe",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\ 【95】【威水尼奶油+深黑色】新疆李小姐【餐桌半圆的设计很符合法式的元素】\\ 【95】【威水尼奶油+深黑色】新疆李小姐【餐桌半圆的设计很符合法式的元素】-1.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "4413",
+      "source_id": 2,
+      "asset_id": "6c5de4569d4740948fa381465cf7be8a",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【03】颜色展示\\【97】【纯黑+北美黑胡桃】【岛台狗都不干+干干的就是中古风岛台】\\【97】【纯黑+北美黑胡桃】【岛台狗都不干+干干的就是中古风岛台】-2.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "5025",
+      "source_id": 2,
+      "asset_id": "2f6ef6fedd1a4c4aa474b8045b68acd0",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【木纹复古风岛台】\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【木纹复古风岛台】-3.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "5409",
+      "source_id": 2,
+      "asset_id": "d01034af3c0445d5bff8532d1497939c",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台水磨圆弧边工艺】【铁牛】03\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台水磨圆弧边工艺】【铁牛】03-2.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "3755",
+      "source_id": 2,
+      "asset_id": "a7342f7c8a3d49ddb514e0b3702e0468",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【02】尺寸展示\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台总长两米65+伸缩20公分】\\【37】【维多利亚+纯黑哑光+南美柚木】山东肖女士【岛台总长两米65+伸缩20公分】-2.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "6505",
+      "source_id": 2,
+      "asset_id": "3233ff23485843e0802a6a5d9c96b3cc",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【10】岛台餐桌一体\\【65】【纯黑哑光+含浆水 】慈溪韩小姐【空镜餐桌一体细节收纳层整体】\\【65】【纯黑哑光+含浆水 】慈溪韩小姐【空镜餐桌一体细节收纳层整体】-1.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "5120",
+      "source_id": 2,
+      "asset_id": "70ae26f2d4494f639bf91956f1cdaf5f",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【139】【咖色+纯白哑+卡德拉浅棕】泰州田先生【定制的原木复古风】\\【139】【咖色+纯白哑+卡德拉浅棕】泰州田先生【定制的原木复古风】-1.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "4178",
+      "source_id": 2,
+      "asset_id": "d283997e60bb4439baf8316819c8f089",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【03】颜色展示\\【131】【罗马洞石+卡尔德拉原木】云南刘小姐【岛台罗马洞石+卡尔德拉原木法式复古或者是中古风】\\【131】【罗马洞石+卡尔德拉原木】云南刘小姐【岛台罗马洞石+卡尔德拉原木法式复古或者是中古风】-1.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "6054",
+      "source_id": 2,
+      "asset_id": "4e23bda8e34847fda282cb67601ca553",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台整体细节展示】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台整体细节展示】【02】-3.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "6300",
+      "source_id": 2,
+      "asset_id": "0a9edbbe3dad42699f6cd331d265a146",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【91】【维多利亚+北美黑胡桃】扬州周小姐 【定制的原木中古风岛台】\\【91】【维多利亚+北美黑胡桃】扬州周小姐 【定制的原木中古风岛台】-3.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "3548",
+      "source_id": 2,
+      "asset_id": "5c09a3ca2d3f4c65938626e8ce1729ab",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【02】尺寸展示\\【139】【咖色+纯白哑+卡德拉浅棕】泰州田先生【岛台长度80公分+宽度80公分】\\【139】【咖色+纯白哑+卡德拉浅棕】泰州田先生【岛台长度80公分+宽度80公分】-1.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "5212",
+      "source_id": 2,
+      "asset_id": "c30a138274f147218264e42ba4374ddb",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【146】【维多利亚鱼肚白+北美黑胡桃】福建李小姐【空镜岛台整体展示】\\【146】【维多利亚鱼肚白+北美黑胡桃】福建李小姐【空镜岛台整体展示】-3.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "4653",
+      "source_id": 2,
+      "asset_id": "3964b05b56bf471aa595ec57a95d513e",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【03】【黑白极简岛台】惠州庄小姐【去客厅化装修岛台】\\【03】【黑白极简岛台】惠州庄小姐【去客厅化装修岛台】-5.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "5436",
+      "source_id": 2,
+      "asset_id": "05b79952db434d27a660c6f94da9d613",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【空镜岛台整体展示】\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【空镜岛台整体展示】-4.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "4077",
+      "source_id": 2,
+      "asset_id": "8bb99dc073a742d083fe810b0cb41e72",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【02】尺寸展示\\岛头长度一米2+宽度一米\\岛头长度一米2+宽度一米-1.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "6330",
+      "source_id": 2,
+      "asset_id": "308521e018bb44fc8898f236dd12558b",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【97】【纯黑+香奈白】【空镜岛台整体展示】\\【97】【纯黑+香奈白】【空镜岛台整体展示】-1.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "4142",
+      "source_id": 2,
+      "asset_id": "f8bcf0e669c745b4ae27faa8591fe59c",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【03】颜色展示\\【101】中古风【威水尼奶油色+纯黑的岛台】\\【101】中古风【威水尼奶油色+纯黑的岛台】-1.mp4"
+    },
+    {
+      "kind": "S2-clean",
+      "expectation": "clean",
+      "media_id": "5421",
+      "source_id": 2,
+      "asset_id": "c303304bdb5d4421a889337f90fb8494",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【27】【纯白色+卡拉卡塔白】江苏朱先生【空镜岛头整体展示】\\【27】【纯白色+卡拉卡塔白】江苏朱先生【空镜岛头整体展示】-2.mp4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "11793",
+      "source_id": 4,
+      "asset_id": "437e6e663a5b459e8070632ad63750ca",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【032】【20250519】江苏火炎\\空镜\\胜\\DJI_20250519120211_0741_D.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "13058",
+      "source_id": 4,
+      "asset_id": "083e02da82a64ca0ba1ec1b1674cd3b2",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【050】【20250524】辽宁齐洺卉\\口播\\坤宝\\DJI_20250524105042_0632_D.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "15299",
+      "source_id": 4,
+      "asset_id": "93765ae19dd649fc8ed88537a5ed689e",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【092】【20250708】山东赵先生\\空镜\\DJI_20250708144422_0851_D.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "17486",
+      "source_id": 4,
+      "asset_id": "96a3d742dd47489abacb7cce72ee90bb",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【157】【2025.10.29】广州林小姐\\产品空镜\\DJI_20251028160204_0764_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "16894",
+      "source_id": 4,
+      "asset_id": "e63128c9c38747449f98303ba495746d",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【145】【2025.8.29】山西杨女士\\产品介绍\\DJI_20250829160418_0327_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "18324",
+      "source_id": 4,
+      "asset_id": "263897f0ae2843a2884611aade9650fa",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【175】【2025.11.10】天津刘小姐\\产品空镜\\DJI_20251110113254_0150_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "17788",
+      "source_id": 4,
+      "asset_id": "ae9b0e66eff1492cb9d60fa0df188d7f",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【166】【2025.11.10】福建林先生\\产品介绍\\DJI_20251110100215_0951_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "16395",
+      "source_id": 4,
+      "asset_id": "b1f999fd6b884b879220ebe05ece8171",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【132】【2025.8.19】江苏金小姐\\产品介绍\\DJI_20250819151818_0255_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "15559",
+      "source_id": 4,
+      "asset_id": "ec2bae104f0c409eb21363b997e03a5b",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【09】【20250504】深圳秦先生【奶油中古风】\\口播\\坤宝\\DJI_20250504170057_0505_D.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "17454",
+      "source_id": 4,
+      "asset_id": "7983349121f1471d96e0b398ccce8081",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【157】【2025.10.29】广州林小姐\\产品介绍\\DJI_20251028155417_0749_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "16611",
+      "source_id": 4,
+      "asset_id": "9a60addb048446a5b5e3ea0c1d8d98c0",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【139】【2025.8.19】江苏吉小姐\\产品空镜\\DJI_20250819161704_0407_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "16255",
+      "source_id": 4,
+      "asset_id": "052c84d9630f495894184e97cf45e8bd",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【127】【2025.8.9】山东秦先生\\产品介绍\\DJI_20250809153116_0159_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "13763",
+      "source_id": 4,
+      "asset_id": "1b5a22041eb4452da67974e7f9e257d3",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【060】【20250528】杭州石磊\\口播\\铁牛\\17.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "12969",
+      "source_id": 4,
+      "asset_id": "2657a88195b949f4bc2d7961e17549d1",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【049】【20250524】北滘区小姐\\空镜\\DJI_20250524113643_0698_D.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "17164",
+      "source_id": 4,
+      "asset_id": "628817989a3549a690a6a7686dc4d234",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【149】【2025.9.4】新加坡刘小姐\\产品空镜\\DJI_20250903162009_0617_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "13734",
+      "source_id": 4,
+      "asset_id": "998017bc9fc94f5b9462ea384de07b58",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【05】【20250409】浙江王先生【纯白】\\口播\\坤宝\\DJI_20250409115707_0099_D.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "10661",
+      "source_id": 4,
+      "asset_id": "ac9396e765294cc893ba2f5b25e370c0",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\20251221坤宝（已整理\\6\\DJI_20251221105504_0157_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-clean",
+      "expectation": "clean",
+      "media_id": "9922",
+      "source_id": 4,
+      "asset_id": "355b6dca08f04d43acb8cffe7c9c2c26",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "clean sample",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\12.2 小狮子产品视频拍摄（已整理）\\【15】【20251202】\\产品介绍\\DJI_20251202141838_0324_D_GS0.MP4"
+    },
+    {
+      "kind": "S1-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "512",
+      "source_id": 1,
+      "asset_id": "c84d8ec5e034429bb067adbf3417536d",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【07】【中古风】长春市邵小姐【空镜岛台下层抽屉收纳细节特写展示】01\\【07】【中古风】长春市邵小姐【空镜岛台下层抽屉收纳细节特写展示】01-2.mp4"
+    },
+    {
+      "kind": "S1-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "1928",
+      "source_id": 1,
+      "asset_id": "0c9e1dfee10b4626bffef63e2920f4ab",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【52】【宝格丽白哑光+尼木黑】长沙朱小姐【公牛轨道插座】【铁牛01】 \\【52】【宝格丽白哑光+尼木黑】长沙朱小姐【公牛轨道插座】【铁牛01】 -2.mp4"
+    },
+    {
+      "kind": "S1-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "88",
+      "source_id": 1,
+      "asset_id": "30b54623a34343f1940355b54048f1bb",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【106】【散花潘多拉+纯黑哑光】佛山高先生【空镜岛台上层薄抽展示】\\【106】【散花潘多拉+纯黑哑光】佛山高先生【空镜岛台上层薄抽展示】-1.mp4"
+    },
+    {
+      "kind": "S1-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "1979",
+      "source_id": 1,
+      "asset_id": "46da45ad71984253a1d48589a3b43f41",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【60】【微水泥奶油白+兰亭香樟木纹岩板】深圳于小姐 【岛头公牛轨道插座】\\【60】【微水泥奶油白+兰亭香樟木纹岩板】深圳于小姐 【岛头公牛轨道插座】-1.mp4"
+    },
+    {
+      "kind": "S1-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "1606",
+      "source_id": 1,
+      "asset_id": "3ebf87f1ab6e4a31a47aff35b4ebbcd2",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\ 【14】【黑白简约风】江苏殷先生【岛台配置了公牛轨道插座】【铁牛】\\ 【14】【黑白简约风】江苏殷先生【岛台配置了公牛轨道插座】【铁牛】-2.mp4"
+    },
+    {
+      "kind": "S1-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "468",
+      "source_id": 1,
+      "asset_id": "e13aa3d3410b494683995247f843d487",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【02】下层抽屉\\【01】【水泥奶油白】汕尾陈小姐【3节脱离的轨道下层薄抽】\\【01】【水泥奶油白】汕尾陈小姐【3节脱离的轨道下层薄抽】-1.mp4"
+    },
+    {
+      "kind": "S2-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "3334",
+      "source_id": 2,
+      "asset_id": "9352395e35484f76b6e9bdce34e96c5e",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【02】尺寸展示\\【01】【水泥奶油白】汕尾陈小姐【导头70公分+宽度80公分】\\【01】【水泥奶油白】汕尾陈小姐【导头70公分+宽度80公分】-1.mp4"
+    },
+    {
+      "kind": "S2-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "3384",
+      "source_id": 2,
+      "asset_id": "17b14920337641369bc80124d23a8b06",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【02】尺寸展示\\【07】【中古风】长春市邵小姐【壁炉+岛台空间】01\\【07】【中古风】长春市邵小姐【壁炉+岛台空间】01-1.mp4"
+    },
+    {
+      "kind": "S2-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "5565",
+      "source_id": 2,
+      "asset_id": "b1f396b335f8475898ccaeb65ae4f003",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【35】【奶白色+北美黑胡桃】深圳陈先生【定制的一款中古风茶台】\\【35】【奶白色+北美黑胡桃】深圳陈先生【定制的一款中古风茶台】-1.mp4"
+    },
+    {
+      "kind": "S2-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "3331",
+      "source_id": 2,
+      "asset_id": "425b5470786a4a56a9ff54c397315ea0",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=ABSENT wm=PRESENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "ABSENT",
+        "wm": "PRESENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【02】尺寸展示\\152】【维多利亚加纯白哑光】浙江台州梅小姐【岛台餐桌有两米+伸缩60公分】\\152】【维多利亚加纯白哑光】浙江台州梅小姐【岛台餐桌有两米+伸缩60公分】-1.mp4"
+    },
+    {
+      "kind": "S2-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "5836",
+      "source_id": 2,
+      "asset_id": "53500857124d436bac5e6dd581451808",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【48】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【岛台餐桌一体】【铁牛】\\【48】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【岛台餐桌一体】【铁牛】-2.mp4"
+    },
+    {
+      "kind": "S2-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "4745",
+      "source_id": 2,
+      "asset_id": "daa9e279b4354794a4f5f604de46dc4a",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【07】【中古风】长春市邵小姐【岛台收纳】01\\【07】【中古风】长春市邵小姐【岛台收纳】01-2.mp4"
+    },
+    {
+      "kind": "S2-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "4335",
+      "source_id": 2,
+      "asset_id": "cbd8443bc294493780289ba43f8afee0",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【03】颜色展示\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台网纹大花白加兰亭香樟营造出低调雅致的氛围感】【铁牛】\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台网纹大花白加兰亭香樟营造出低调雅致的氛围感】【铁牛】-2.mp4"
+    },
+    {
+      "kind": "S2-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "5019",
+      "source_id": 2,
+      "asset_id": "00fcb73559f4482da41e691ebf73f422",
+      "initial_prior": "PRODUCTION_CLEAN_SEMI",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\效果展示类素材\\【04】造型展示\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【定制的木纹复古风】\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【定制的木纹复古风】-3.mp4"
+    },
+    {
+      "kind": "S4-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "7471",
+      "source_id": 4,
+      "asset_id": "5777338522324f22b807d1f1d56876d6",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "machine flagged b=ABSENT wm=ABSENT u=PRESENT t=ABSENT",
+      "flagged": {
+        "burned": "ABSENT",
+        "wm": "ABSENT",
+        "unrel": "PRESENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\11.29 产品视频拍摄（已整理）\\【05】【20251129】北京王先生 L型岛台\\小户型\\DJI_20251129140700_0191_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "14130",
+      "source_id": 4,
+      "asset_id": "41b28716f31a40b988054baff11337bd",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=UNCERTAIN",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "UNCERTAIN"
+      },
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【065】【20250602】郑州张斌\\空镜\\DJI_20250529114111_0322_D.MP4"
+    },
+    {
+      "kind": "S4-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "13318",
+      "source_id": 4,
+      "asset_id": "83c598899ed04802b873799806f25292",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【054】【20250526】长沙朱小佳\\口播\\铁牛\\16.MP4"
+    },
+    {
+      "kind": "S4-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "7451",
+      "source_id": 4,
+      "asset_id": "61a0f50e94fa4afe9c04563668556c12",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "machine flagged b=ABSENT wm=ABSENT u=PRESENT t=ABSENT",
+      "flagged": {
+        "burned": "ABSENT",
+        "wm": "ABSENT",
+        "unrel": "PRESENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\11.29 产品视频拍摄（已整理）\\【05】【20251129】北京王先生 L型岛台\\产品空镜\\DJI_20251129140859_0196_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "14715",
+      "source_id": 4,
+      "asset_id": "321ca4a93a3643648c96824d9108eede",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【079】【20250611】山东刘亚梅\\产品介绍\\铁牛\\DJI_20250611161505_0481_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "12116",
+      "source_id": 4,
+      "asset_id": "52ef157484cc43ef87b938ec40daeaa0",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【038】【20250515】东莞万生\\铁牛\\东莞万生脚本1\\口播\\DJI_20250514164324_0115_D.MP4"
+    },
+    {
+      "kind": "S4-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "20386",
+      "source_id": 4,
+      "asset_id": "1d038dbed54f46f6bb1a085cbbb32025",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【2025.11.23】坤宝产品视频（已整理）\\产品视频 (3)\\产品介绍\\DJI_20251223102934_0852_D.MP4"
+    },
+    {
+      "kind": "S4-flagged",
+      "expectation": "dirty_or_review",
+      "media_id": "12097",
+      "source_id": 4,
+      "asset_id": "63afeedb88374129b07efece00f6cc9a",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "machine flagged b=PRESENT wm=ABSENT u=ABSENT t=ABSENT",
+      "flagged": {
+        "burned": "PRESENT",
+        "wm": "ABSENT",
+        "unrel": "ABSENT",
+        "oldt": "ABSENT"
+      },
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【037】【20250519】深圳泡茶台\\口播\\铁牛\\DJI_20250512142025_0147_D.MP4"
+    },
+    {
+      "kind": "S3-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "6723",
+      "source_id": 3,
+      "asset_id": "b7b284f88e884f13ba40a081a60c3479",
+      "initial_prior": "NOT_PRODUCTION_SOURCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\JianyingPro Presets\\Combination\\Resources\\2654d9a9bbc3f490fd740f00ed47147f.MOV"
+    },
+    {
+      "kind": "S3-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "6809",
+      "source_id": 3,
+      "asset_id": "d3cc743e0f4e4ff29400a3f6ad36bde0",
+      "initial_prior": "NOT_PRODUCTION_SOURCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\JianyingPro Presets\\Combination\\Resources\\88626daee4e3e4e1670b9b1fbb644087.mov"
+    },
+    {
+      "kind": "S3-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "6654",
+      "source_id": 3,
+      "asset_id": null,
+      "initial_prior": "NOT_PRODUCTION_SOURCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\JianyingPro Presets\\Combination\\Presets\\我的预设57\\我的预设57.jpeg"
+    },
+    {
+      "kind": "S3-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "6882",
+      "source_id": 3,
+      "asset_id": null,
+      "initial_prior": "NOT_PRODUCTION_SOURCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\JianyingPro Presets\\Combination\\Resources\\d3f4f1f2401cfe03d75ff27ed6dc10d9.mp4"
+    },
+    {
+      "kind": "S3-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "6638",
+      "source_id": 3,
+      "asset_id": null,
+      "initial_prior": "NOT_PRODUCTION_SOURCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\JianyingPro Presets\\Combination\\Presets\\我的预设42\\我的预设42.jpeg"
+    },
+    {
+      "kind": "S3-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "6678",
+      "source_id": 3,
+      "asset_id": null,
+      "initial_prior": "NOT_PRODUCTION_SOURCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\已处理素材\\JianyingPro Presets\\Combination\\Presets\\我的预设79\\我的预设79.jpeg"
+    },
+    {
+      "kind": "S5-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "28210",
+      "source_id": 5,
+      "asset_id": null,
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\6a5210cc000000001702ae2e.jpg"
+    },
+    {
+      "kind": "S5-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "28172",
+      "source_id": 5,
+      "asset_id": null,
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\6a0c5bcf0000000006035b71.jpg"
+    },
+    {
+      "kind": "S5-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "28147",
+      "source_id": 5,
+      "asset_id": null,
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\69eb29150000000022025cfc.jpg"
+    },
+    {
+      "kind": "S5-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "28148",
+      "source_id": 5,
+      "asset_id": null,
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\69eca81d000000002202bea1.jpg"
+    },
+    {
+      "kind": "S5-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "28099",
+      "source_id": 5,
+      "asset_id": null,
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\69a6fb44000000002801d72e.jpg"
+    },
+    {
+      "kind": "S5-negative",
+      "expectation": "not_production_or_reference",
+      "media_id": "28237",
+      "source_id": 5,
+      "asset_id": null,
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "negative/reference source",
+      "flagged": null,
+      "full_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\platform_reference\\B003\\covers\\6a7edaf3000000003300c6d0.jpg"
+    },
+    {
+      "kind": "B007-published",
+      "expectation": "reference",
+      "media_id": null,
+      "source_id": null,
+      "asset_id": "b007:63c5675a000000001c034435",
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "published exact media",
+      "flagged": null,
+      "full_path": "Z:\\TreeCut_Media\\B007\\published_media\\63c5675a000000001c034435__d8ebe54b21fc.mp4"
+    },
+    {
+      "kind": "B007-published",
+      "expectation": "reference",
+      "media_id": null,
+      "source_id": null,
+      "asset_id": "b007:6a2bb62d00000000070200a5",
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "published exact media",
+      "flagged": null,
+      "full_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a2bb62d00000000070200a5__5f1472eca596.mp4"
+    },
+    {
+      "kind": "B007-published",
+      "expectation": "reference",
+      "media_id": null,
+      "source_id": null,
+      "asset_id": "b007:66f672d6000000001902efbb",
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "published exact media",
+      "flagged": null,
+      "full_path": "Z:\\TreeCut_Media\\B007\\published_media\\66f672d6000000001902efbb__f6aba018d083.mp4"
+    },
+    {
+      "kind": "B007-published",
+      "expectation": "reference",
+      "media_id": null,
+      "source_id": null,
+      "asset_id": "b007:640dc1050000000014025280",
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "published exact media",
+      "flagged": null,
+      "full_path": "Z:\\TreeCut_Media\\B007\\published_media\\640dc1050000000014025280__ce98f36043c3.mp4"
+    },
+    {
+      "kind": "B007-published",
+      "expectation": "reference",
+      "media_id": null,
+      "source_id": null,
+      "asset_id": "b007:643363910000000013036c3a",
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "published exact media",
+      "flagged": null,
+      "full_path": "Z:\\TreeCut_Media\\B007\\published_media\\643363910000000013036c3a__54f4cb0d96fa.mp4"
+    },
+    {
+      "kind": "B007-published",
+      "expectation": "reference",
+      "media_id": null,
+      "source_id": null,
+      "asset_id": "b007:6a85b8490000000021022731",
+      "initial_prior": "PUBLISHED_REFERENCE",
+      "note": "published exact media",
+      "flagged": null,
+      "full_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a85b8490000000021022731__8254c7195f61.mp4"
+    },
+    {
+      "kind": "S4-noOCR-boundary",
+      "expectation": "uncertain_review",
+      "media_id": "21272",
+      "source_id": 4,
+      "asset_id": "e0472dd201244507ae7ccc7cfebfd144",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "no OCR → UNKNOWN 边界",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【221】【2025.11.21】上海陆小姐\\产品介绍\\DJI_20251121105234_0995_D.MP4"
+    },
+    {
+      "kind": "S4-noOCR-boundary",
+      "expectation": "uncertain_review",
+      "media_id": "16836",
+      "source_id": 4,
+      "asset_id": "84135da9d5c44149b8a586c51eb2c7f2",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "no OCR → UNKNOWN 边界",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【144】【2025.8.29】上海唐小姐\\产品介绍\\DJI_20250829154609_0277_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-noOCR-boundary",
+      "expectation": "uncertain_review",
+      "media_id": "21763",
+      "source_id": 4,
+      "asset_id": "e18e7fa7d0014bc493f2ff5ed64cbf39",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "no OCR → UNKNOWN 边界",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【231】【2025.11.10】汕尾郭先生\\产品介绍\\DJI_20251110145734_0404_D_GS0.MP4"
+    },
+    {
+      "kind": "S4-noOCR-boundary",
+      "expectation": "uncertain_review",
+      "media_id": "15207",
+      "source_id": 4,
+      "asset_id": "69f2d01e5edb4ef7b61a17565bba0e9c",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "no OCR → UNKNOWN 边界",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【08】【20250504】黑龙江于洋洋【宝格丽】\\口播\\坤宝\\DJI_20250504162745_0437_D.MP4"
+    },
+    {
+      "kind": "S4-noOCR-boundary",
+      "expectation": "uncertain_review",
+      "media_id": "27195",
+      "source_id": 4,
+      "asset_id": "a97583dfe89e4ed0b8f0d478de6c45cc",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "no OCR → UNKNOWN 边界",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\小王\\12.19\\云南王小林\\小户型\\DJI_20251219162227_0509_D.MP4"
+    },
+    {
+      "kind": "S4-noOCR-boundary",
+      "expectation": "uncertain_review",
+      "media_id": "21146",
+      "source_id": 4,
+      "asset_id": "40ff4ee3eb074741b7efc07fea238f35",
+      "initial_prior": "PRODUCTION_CLEAN_RAW",
+      "note": "no OCR → UNKNOWN 边界",
+      "flagged": null,
+      "full_path": "\\\\X1\\素材盘01\\未处理素材\\【工厂】\\【工厂】产品类01\\【217】【2025.11.22】上海丁小姐\\空镜\\DJI_20251122140407_0773_D.MP4"
+    }
+  ]
+}

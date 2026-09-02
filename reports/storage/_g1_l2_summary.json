@@ -1,0 +1,90 @@
+{
+ "clean_sample_n": 54,
+ "qwen_burned_in_clean": [
+  2,
+  5,
+  7,
+  9,
+  15,
+  16,
+  17,
+  18,
+  19,
+  21,
+  25,
+  26,
+  28,
+  30,
+  32,
+  35,
+  42,
+  44,
+  46,
+  47,
+  50,
+  53
+ ],
+ "disagreements": [
+  {
+   "idx": 76,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 79,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 82,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 83,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 84,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 85,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 86,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 87,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 88,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 89,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 90,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 91,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 92,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 93,
+   "why": "machine_absent_qwen_present"
+  },
+  {
+   "idx": 95,
+   "why": "machine_absent_qwen_present"
+  }
+ ],
+ "echo_count": 45
+}

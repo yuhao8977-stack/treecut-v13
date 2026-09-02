@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-09-02 18:43:48",
+  "A1_role_coverage": {
+    "registry_total": 28282,
+    "roles": {
+      "NOT_PRODUCTION_SOURCE": 332,
+      "PRODUCTION_CLEAN_RAW": 21170,
+      "PRODUCTION_CLEAN_SEMI": 6594,
+      "PUBLISHED_REFERENCE": 186
+    },
+    "coverage_pct": 100.0
+  },
+  "A2_clean_pool_burned_subtitle": {
+    "clean_sample_n": 54,
+    "machine_admitted_present": 0,
+    "independent_l2_false_clean_candidates": [
+      35
+    ],
+    "rate_pct_candidates": 1.85,
+    "note": "独立复核(qwen换帧严格提示)后仅 idx35 存疑; 需 L3 定夺(≥1 确认脏 → 检测需扩围 → G1 修复)"
+  },
+  "A3_clean_pool_xhs_watermark": {
+    "clean_sample_platform_watermark_machine": 0,
+    "clean_sample_platform_watermark_qwen_candidates": [],
+    "note": "干净样本无平台水印候选(L2); 机器标记水印样本已入 L3"
+  },
+  "A4_source_role_accuracy": {
+    "locked_l3_count": 0,
+    "accuracy_pct": null,
+    "note": "待架构师 L3 锁定后计算; 样本量=locked_l3_count; 不宣称全库90%"
+  },
+  "A5_consumer": {
+    "production_source_service": "src/treecut/services/production_source.py",
+    "pick_clean_replaced": "V2临时过滤已由 ProductionSourceService.select_clean_candidates 取代(服务层); V0.9.1 历史脚本保留存档"
+  },
+  "l2": {
+    "done": 100,
+    "method": "qwen2.5vl L2候选(非真值)",
+    "echo_lowconf": 45
+  },
+  "l3": {
+    "subset_n": 45,
+    "human_locked": 0
+  },
+  "verdict": "PENDING_ARCHITECT_L3"
+}

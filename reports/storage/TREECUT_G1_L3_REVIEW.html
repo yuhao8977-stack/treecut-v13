@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"/>
+<title>G1 L3 人工裁决</title><style>
+body{font-family:'Microsoft YaHei';max-width:1400px;margin:16px}
+table{border-collapse:collapse}td,th{border:1px solid #bbb;padding:4px 6px;font-size:12px}
+th{background:#eee}h1{font-size:20px}
+</style></head><body>
+<h1>STAGE8 G1 — L3 人工裁决清单（45 条）</h1>
+<p>Qwen = L2 候选，非真值。您逐条判定后把结果填到下方 <code>g1_l3_results.json</code> 模板或直接回复表内判定。</p>
+<table><tr><th>#</th><th>类型</th><th>期望</th><th>帧</th><th>机器标记</th><th>L2候选</th><th>入选原因</th><th>L3判定</th><th>备注</th></tr>
+<tr><td>18</td><td>S2-clean</td><td>clean</td>
+<td><img src='TREECUT_G1_L3_review/g1_018.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=ABSENT wm=ABSENT type=raw</td><td>s2_mixed_validation_clean_control</td>
+<td><select id='d_18'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_18' size='14'/></td></tr><tr><td>19</td><td>S2-clean</td><td>clean</td>
+<td><img src='TREECUT_G1_L3_review/g1_019.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=ABSENT wm=ABSENT type=raw</td><td>s2_mixed_validation_clean_control</td>
+<td><select id='d_19'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_19' size='14'/></td></tr><tr><td>20</td><td>S2-clean</td><td>clean</td>
+<td><img src='TREECUT_G1_L3_review/g1_020.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=raw</td><td>s2_mixed_validation_clean_control</td>
+<td><select id='d_20'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_20' size='14'/></td></tr><tr><td>21</td><td>S2-clean</td><td>clean</td>
+<td><img src='TREECUT_G1_L3_review/g1_021.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=ABSENT wm=ABSENT type=raw</td><td>s2_mixed_validation_clean_control</td>
+<td><select id='d_21'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_21' size='14'/></td></tr><tr><td>35</td><td>S2-clean</td><td>clean</td>
+<td><img src='TREECUT_G1_L3_review/g1_035.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>qwen_false_clean_candidate</td>
+<td><select id='d_35'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_35' size='14'/></td></tr><tr><td>54</td><td>S1-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_054.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=semi</td><td>machine_flagged</td>
+<td><select id='d_54'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_54' size='14'/></td></tr><tr><td>55</td><td>S1-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_055.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=finished</td><td>machine_flagged</td>
+<td><select id='d_55'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_55' size='14'/></td></tr><tr><td>56</td><td>S1-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_056.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_56'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_56' size='14'/></td></tr><tr><td>57</td><td>S1-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_057.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_57'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_57' size='14'/></td></tr><tr><td>58</td><td>S1-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_058.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=finished</td><td>machine_flagged</td>
+<td><select id='d_58'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_58' size='14'/></td></tr><tr><td>59</td><td>S1-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_059.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=finished</td><td>machine_flagged</td>
+<td><select id='d_59'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_59' size='14'/></td></tr><tr><td>60</td><td>S2-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_060.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_60'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_60' size='14'/></td></tr><tr><td>61</td><td>S2-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_061.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_61'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_61' size='14'/></td></tr><tr><td>62</td><td>S2-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_062.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_62'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_62' size='14'/></td></tr><tr><td>63</td><td>S2-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_063.jpg' style='height:130px'/></td><td>{"burned": "ABSENT", "wm": "PRESENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_63'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_63' size='14'/></td></tr><tr><td>64</td><td>S2-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_064.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=semi</td><td>machine_flagged</td>
+<td><select id='d_64'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_64' size='14'/></td></tr><tr><td>65</td><td>S2-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_065.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_65'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_65' size='14'/></td></tr><tr><td>66</td><td>S2-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_066.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_66'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_66' size='14'/></td></tr><tr><td>67</td><td>S2-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_067.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_67'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_67' size='14'/></td></tr><tr><td>68</td><td>S4-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_068.jpg' style='height:130px'/></td><td>{"burned": "ABSENT", "wm": "ABSENT", "unrel": "PRESENT", "oldt": "ABSENT"}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_68'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_68' size='14'/></td></tr><tr><td>69</td><td>S4-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_069.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "UNCERTAIN"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_69'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_69' size='14'/></td></tr><tr><td>70</td><td>S4-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_070.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_70'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_70' size='14'/></td></tr><tr><td>71</td><td>S4-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_071.jpg' style='height:130px'/></td><td>{"burned": "ABSENT", "wm": "ABSENT", "unrel": "PRESENT", "oldt": "ABSENT"}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=semi</td><td>machine_flagged</td>
+<td><select id='d_71'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_71' size='14'/></td></tr><tr><td>72</td><td>S4-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_072.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_72'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_72' size='14'/></td></tr><tr><td>73</td><td>S4-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_073.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_73'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_73' size='14'/></td></tr><tr><td>74</td><td>S4-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_074.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=PRESENT wm=ABSENT type=finished</td><td>machine_flagged</td>
+<td><select id='d_74'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_74' size='14'/></td></tr><tr><td>75</td><td>S4-flagged</td><td>dirty_or_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_075.jpg' style='height:130px'/></td><td>{"burned": "PRESENT", "wm": "ABSENT", "unrel": "ABSENT", "oldt": "ABSENT"}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=raw</td><td>machine_flagged</td>
+<td><select id='d_75'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_75' size='14'/></td></tr><tr><td>82</td><td>S5-negative</td><td>not_production_or_reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_082r.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=ABSENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_82'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_82' size='14'/></td></tr><tr><td>83</td><td>S5-negative</td><td>not_production_or_reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_083r.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=ABSENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_83'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_83' size='14'/></td></tr><tr><td>84</td><td>S5-negative</td><td>not_production_or_reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_084r.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=ABSENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_84'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_84' size='14'/></td></tr><tr><td>85</td><td>S5-negative</td><td>not_production_or_reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_085r.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=ABSENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_85'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_85' size='14'/></td></tr><tr><td>86</td><td>S5-negative</td><td>not_production_or_reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_086r.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=ABSENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_86'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_86' size='14'/></td></tr><tr><td>87</td><td>S5-negative</td><td>not_production_or_reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_087r.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=ABSENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_87'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_87' size='14'/></td></tr><tr><td>88</td><td>B007-published</td><td>reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_088.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=PRESENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_88'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_88' size='14'/></td></tr><tr><td>89</td><td>B007-published</td><td>reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_089.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=PRESENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_89'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_89' size='14'/></td></tr><tr><td>90</td><td>B007-published</td><td>reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_090.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=PRESENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_90'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_90' size='14'/></td></tr><tr><td>91</td><td>B007-published</td><td>reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_091.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=PRESENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_91'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_91' size='14'/></td></tr><tr><td>92</td><td>B007-published</td><td>reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_092.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=PRESENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_92'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_92' size='14'/></td></tr><tr><td>93</td><td>B007-published</td><td>reference</td>
+<td><img src='TREECUT_G1_L3_review/g1_093.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=PRESENT type=finished</td><td>reference_negative_control</td>
+<td><select id='d_93'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_93' size='14'/></td></tr><tr><td>94</td><td>S4-noOCR-boundary</td><td>uncertain_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_094.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=raw</td><td>no_ocr_boundary</td>
+<td><select id='d_94'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_94' size='14'/></td></tr><tr><td>95</td><td>S4-noOCR-boundary</td><td>uncertain_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_095.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=PRESENT wm=ABSENT type=semi</td><td>no_ocr_boundary</td>
+<td><select id='d_95'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_95' size='14'/></td></tr><tr><td>96</td><td>S4-noOCR-boundary</td><td>uncertain_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_096.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=raw</td><td>no_ocr_boundary</td>
+<td><select id='d_96'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_96' size='14'/></td></tr><tr><td>97</td><td>S4-noOCR-boundary</td><td>uncertain_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_097.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=raw</td><td>no_ocr_boundary</td>
+<td><select id='d_97'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_97' size='14'/></td></tr><tr><td>98</td><td>S4-noOCR-boundary</td><td>uncertain_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_098.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=raw</td><td>no_ocr_boundary</td>
+<td><select id='d_98'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_98' size='14'/></td></tr><tr><td>99</td><td>S4-noOCR-boundary</td><td>uncertain_review</td>
+<td><img src='TREECUT_G1_L3_review/g1_099.jpg' style='height:130px'/></td><td>{}</td><td>qwen: burned=UNCERTAIN wm=ABSENT type=raw</td><td>no_ocr_boundary</td>
+<td><select id='d_99'><option value=''>待判</option><option value='clean_ok'>干净OK</option>
+<option value='dirty'>脏(确认)</option><option value='unknown'>无法判</option></select></td>
+<td><input id='n_99' size='14'/></td></tr></table>
+<p><b>重点必判</b>：idx35（唯一 false-clean 候选，"坤宝岛台"字样）→ 若确认为烧录/品牌字幕，机器检测需扩围（G1 修复项）。</p>
+</body></html>

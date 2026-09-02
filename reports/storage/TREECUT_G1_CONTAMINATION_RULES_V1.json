@@ -1,0 +1,34 @@
+{
+  "rules_version": "G1_V1",
+  "note": "机器候选规则(复用现有 ocr_text)；输出 PRESENT|ABSENT|UNCERTAIN；环境文字单独记录不判污染；不确定性→UNCERTAIN/REVIEW_REQUIRED(§13/14/29)。",
+  "detectors": {
+    "burned_subtitle": {
+      "signals": [
+        {"code": "SUBTITLE_FLAG", "desc": "ocr_text.subtitle_flag=1(旧管道字幕区标记)", "trigger": "≥1帧"},
+        {"code": "PERSISTENT_CAPTION_TEXT", "desc": "同文本≥3不同帧且位于字幕带(需分辨率归一化)", "trigger": "待 G1 后增强, 当前未启用分辨率定位"}
+      ],
+      "output": "PRESENT if SUBTITLE_FLAG hit; else ABSENT(有OCR覆盖) / UNCERTAIN(无OCR覆盖)",
+      "conservative": true
+    },
+    "platform_watermark": {
+      "signals": [
+        {"code": "PLATFORM_TEXT", "desc": "持久文本含 小红书/@/账号/ID 等特征", "trigger": "≥3帧"},
+        {"code": "DATETIME_OVERLAY", "desc": "持久日期/时间戳浮层", "trigger": "≥5帧→old_title PRESENT; 3-4帧→UNCERTAIN"}
+      ],
+      "output": "PRESENT/ABSENT/UNCERTAIN; 机器仅候选, 视觉/人工兜底"
+    },
+    "unrelated_overlay": {
+      "signals": [
+        {"code": "PERSISTENT_PROMO", "desc": "持久促销/引导文本(关注/扫码/福利/公众号等)", "trigger": "≥3帧"}
+      ],
+      "output": "PRESENT/ABSENT"
+    },
+    "environment_text": {
+      "desc": "横幅/招牌/实物印刷文字等物理环境文字(§15) — 单独 environment_text_present 记录, 不判为烧录字幕污染",
+      "trigger": "持久大段文本但非促销/时间特征"
+    }
+  },
+  "eligibility_rule": "source_role IN (PRODUCTION_CLEAN_RAW, PRODUCTION_CLEAN_SEMI) AND burned_subtitle_present!='PRESENT' AND platform_watermark_present!='PRESENT' AND unrelated_overlay_present!='PRESENT' AND review_status!='REJECTED'; strict 模式下 UNCERTAIN 不得静默入池(§9/29)",
+  "false_clean_forbidden": true,
+  "published_firewall": "PUBLISHED_REFERENCE 仅用于 DNA/历史/模板/参考, 默认禁止进生产选镜; G1 不实现字幕修复/修复角色(§10/11)"
+}
