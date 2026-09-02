@@ -1,0 +1,167 @@
+{
+  "rule": "V0.6.2-SAMPLE20-BATCH-EXACT-MEDIA-RECOVERY",
+  "started_at": "2026-09-02 11:21:23",
+  "notes": {
+    "6a92b9e8000000002501a357": {
+      "sample_id": "RC-6A92B9E8",
+      "status": "RECOVERED_EXACT",
+      "attempts": 1,
+      "nav_mode": "HUMAN",
+      "sha256": "9847737cda9daf07fea0a1f0b7231e1e52bc11a8cdd032cc40c5493f2b3ed0c4",
+      "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a92b9e8000000002501a357__9847737cda9d.mp4",
+      "tech": {
+        "file": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\staging\\B007\\6a92b9e8000000002501a357.0.part",
+        "size": 5828805,
+        "ffprobe_ok": true,
+        "duration": 38.057574,
+        "video_codec": "h264",
+        "width": 720,
+        "height": 1280,
+        "fps": 50.0,
+        "audio_codec": "aac",
+        "full_decode_ok": true,
+        "sha256": "9847737cda9daf07fea0a1f0b7231e1e52bc11a8cdd032cc40c5493f2b3ed0c4",
+        "duration_crosscheck": {
+          "creator": 38.0,
+          "ffprobe": 38.06,
+          "tolerance": 5.7,
+          "pass": true
+        },
+        "duration_match_status": "MATCH_WITHIN_TOLERANCE",
+        "ok": true,
+        "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a92b9e8000000002501a357__9847737cda9d.mp4",
+        "blob_mode": "NEW_BLOB"
+      },
+      "updated_at": "2026-09-02 11:25:55"
+    },
+    "6a9189b6000000002003348e": {
+      "sample_id": "RC-6A9189B6",
+      "status": "RECOVERED_EXACT",
+      "attempts": 1,
+      "nav_mode": "HUMAN",
+      "sha256": "ccb149837dd5058e9322b0f87aff014d943eec1c72b9a66a64bd06002ce86775",
+      "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a9189b6000000002003348e__ccb149837dd5.mp4",
+      "tech": {
+        "file": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\staging\\B007\\6a9189b6000000002003348e.0.part",
+        "size": 3542298,
+        "ffprobe_ok": true,
+        "duration": 30.487868,
+        "video_codec": "h264",
+        "width": 720,
+        "height": 1280,
+        "fps": 30.0,
+        "audio_codec": "aac",
+        "full_decode_ok": true,
+        "sha256": "ccb149837dd5058e9322b0f87aff014d943eec1c72b9a66a64bd06002ce86775",
+        "duration_crosscheck": {
+          "creator": 30.0,
+          "ffprobe": 30.49,
+          "tolerance": 5.0,
+          "pass": true
+        },
+        "duration_match_status": "MATCH_WITHIN_TOLERANCE",
+        "ok": true,
+        "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a9189b6000000002003348e__ccb149837dd5.mp4",
+        "blob_mode": "NEW_BLOB"
+      },
+      "updated_at": "2026-09-02 11:34:56"
+    },
+    "6a8edcca000000002a03b79e": {
+      "sample_id": "RC-6A8EDCCA",
+      "status": "RECOVERED_EXACT",
+      "attempts": 1,
+      "nav_mode": "HUMAN",
+      "sha256": "9c8e3daff13a6a2e3f9ab26fc0caf31a1567b21cae0f345c3fa52b89836601f6",
+      "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a8edcca000000002a03b79e__9c8e3daff13a.mp4",
+      "tech": {
+        "file": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\staging\\B007\\6a8edcca000000002a03b79e.0.part",
+        "size": 6905702,
+        "ffprobe_ok": true,
+        "duration": 49.203175,
+        "video_codec": "h264",
+        "width": 720,
+        "height": 1280,
+        "fps": 30.0,
+        "audio_codec": "aac",
+        "full_decode_ok": true,
+        "sha256": "9c8e3daff13a6a2e3f9ab26fc0caf31a1567b21cae0f345c3fa52b89836601f6",
+        "duration_crosscheck": {
+          "creator": 49.0,
+          "ffprobe": 49.2,
+          "tolerance": 7.35,
+          "pass": true
+        },
+        "duration_match_status": "MATCH_WITHIN_TOLERANCE",
+        "ok": true,
+        "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a8edcca000000002a03b79e__9c8e3daff13a.mp4",
+        "blob_mode": "NEW_BLOB"
+      },
+      "updated_at": "2026-09-02 11:40:04"
+    },
+    "6a85b8490000000021022731": {
+      "sample_id": "RC-6A85B849",
+      "status": "RECOVERED_EXACT",
+      "attempts": 1,
+      "nav_mode": "HUMAN",
+      "sha256": "8254c7195f61fe688c185d2954dbd49275516aa76f0a04a9d2d6345a416ccb00",
+      "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a85b8490000000021022731__8254c7195f61.mp4",
+      "tech": {
+        "file": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\staging\\B007\\6a85b8490000000021022731.0.part",
+        "size": 13988484,
+        "ffprobe_ok": true,
+        "duration": 100.008549,
+        "video_codec": "h264",
+        "width": 720,
+        "height": 1280,
+        "fps": 30.0,
+        "audio_codec": "aac",
+        "full_decode_ok": true,
+        "sha256": "8254c7195f61fe688c185d2954dbd49275516aa76f0a04a9d2d6345a416ccb00",
+        "duration_crosscheck": {
+          "creator": 100.0,
+          "ffprobe": 100.01,
+          "tolerance": 15.0,
+          "pass": true
+        },
+        "duration_match_status": "MATCH_WITHIN_TOLERANCE",
+        "ok": true,
+        "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a85b8490000000021022731__8254c7195f61.mp4",
+        "blob_mode": "NEW_BLOB"
+      },
+      "updated_at": "2026-09-02 11:47:56"
+    },
+    "6a7b28ab000000002800316a": {
+      "sample_id": "RC-6A7B28AB",
+      "status": "RECOVERED_EXACT",
+      "attempts": 1,
+      "nav_mode": "HUMAN",
+      "sha256": "960565de4c3e97934b0459d684b9f5c3907a225ae709e7da62b9f3d9ef4014bf",
+      "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a7b28ab000000002800316a__960565de4c3e.mp4",
+      "tech": {
+        "file": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\staging\\B007\\6a7b28ab000000002800316a.0.part",
+        "size": 12783938,
+        "ffprobe_ok": true,
+        "duration": 83.081156,
+        "video_codec": "h264",
+        "width": 720,
+        "height": 1280,
+        "fps": 30.0,
+        "audio_codec": "aac",
+        "full_decode_ok": true,
+        "sha256": "960565de4c3e97934b0459d684b9f5c3907a225ae709e7da62b9f3d9ef4014bf",
+        "duration_crosscheck": {
+          "creator": 83.0,
+          "ffprobe": 83.08,
+          "tolerance": 12.45,
+          "pass": true
+        },
+        "duration_match_status": "MATCH_WITHIN_TOLERANCE",
+        "ok": true,
+        "final_path": "Z:\\TreeCut_Media\\B007\\published_media\\6a7b28ab000000002800316a__960565de4c3e.mp4",
+        "blob_mode": "NEW_BLOB"
+      },
+      "updated_at": "2026-09-02 11:50:36"
+    }
+  },
+  "updated_at": "2026-09-02 11:50:36"
+}

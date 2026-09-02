@@ -401,7 +401,8 @@ def note_deleted_text(p) -> bool:
 
 
 def resolve_by_signals(tab, exp_time: str, exp_dur, exp_title: str) -> int:
-    """在 DOM 全量卡片中按 发布时间 + 时长徽标 + 标题 解析目标卡片索引。"""
+    """在 DOM 全量卡片中按 发布时间 + 时长徽标 + 标题 解析目标卡片索引。
+    用完整 innerText（长卡片时间可能在 300 字符之外）。"""
     try:
         return int(tab.evaluate(
             """(sig) => {
@@ -411,12 +412,13 @@ def resolve_by_signals(tab, exp_time: str, exp_dur, exp_title: str) -> int:
               for (let i=0;i<els.length;i++){
                 const r = els[i].getBoundingClientRect();
                 if (r.width<=200 || r.height<=50) continue;
-                const txt = (els[i].innerText||'').replace(/\\n+/g,'|').slice(0,300);
+                const txt = (els[i].innerText||'').replace(/\\n+/g,'|');
                 const timeOk = expTime && txt.indexOf(expTime.slice(0,16)) >= 0;
                 if (!timeOk) continue;
                 const m = txt.match(/(\\d{1,2}):(\\d{2})/);
                 const durOk = expDur ? (m ? Math.abs((+m[1])*60 + (+m[2]) - expDur) <= Math.max(3, expDur*0.2) : false) : true;
-                const titleOk = expTitle ? (norm(txt).indexOf(expTitle) >= 0 || (expTitle.length>8 && norm(txt).indexOf(expTitle.slice(0,8)) >= 0)) : true;
+                const normTxt = norm(txt);
+                const titleOk = expTitle ? (normTxt.indexOf(expTitle) >= 0 || (expTitle.length>8 && normTxt.indexOf(expTitle.slice(0,8)) >= 0)) : true;
                 if (timeOk && (durOk || titleOk)) return i;
               }
               return -1;
@@ -558,6 +560,20 @@ def process_position(runtime, sample, diag: dict, goto_fresh: bool, sweep: dict)
             break
         scroll_list(tab)
         time.sleep(2.5)
+    if found_idx < 0 and exp_title:
+        # 兜底：仅标题命中（norm 标题前 10 字符唯一匹配）
+        found_idx = tab.evaluate(
+            """(t10) => {
+              const els = Array.from(document.querySelectorAll('[class*=note-card]'));
+              const norm = s => (s||'').replace(/[^\\u4e00-\\u9fffA-Za-z0-9]/g, '');
+              for (let i=0;i<els.length;i++){
+                const r = els[i].getBoundingClientRect();
+                if (r.width<=200 || r.height<=50) continue;
+                const nt = norm((els[i].innerText||''));
+                if (nt.indexOf(t10) >= 0) return i;
+              }
+              return -1;
+            }""", exp_title[:10])
     diag["scroll_result"] = {"status": "FOUND" if found_idx >= 0 else "RESOLVE_FAILED",
                              "rounds": rounds, "loaded": len(sweep["items"]),
                              "api_time": exp_time, "api_duration": exp_dur, "index": found_idx}
