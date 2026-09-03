@@ -7,7 +7,12 @@
       "plan": "docs/TREECUT_STAGE8_G1_PLAN.md"
     },
     "G2_ACTION_SUBCLIP": {
-      "status": "NOT_STARTED"
+      "status": "ENGINEERING_READY_FOR_HUMAN_VALIDATION",
+      "calibration_segment_level": 20,
+      "target": "80-120",
+      "calibration_met": false,
+      "temporal_evidence_frames": 132,
+      "frames_not_samples": true
     },
     "G3_CLAIM_VISUAL_STORY": {
       "status": "NOT_STARTED"
@@ -16,10 +21,19 @@
       "status": "NOT_STARTED"
     },
     "G5_PRODUCTION_QA": {
-      "status": "NOT_STARTED"
+      "status": "PROVISIONAL_PASS"
     },
     "G6_PILOT_VALIDATION": {
       "status": "NOT_STARTED"
+    },
+    "G3_CLAIM_VISUAL": {
+      "status": "ENGINEERING_READY_FOR_HUMAN_VALIDATION"
+    },
+    "DEDUP": {
+      "status": "PROVISIONAL_PASS"
+    },
+    "G4_VOICE_BGM": {
+      "status": "VOICE_READY_FOR_INPUT_BGM_LIBRARY_NOT_READY"
     }
   },
   "pilot_status": {
@@ -35,7 +49,7 @@
     "L11_TEMPLATE_RELEVANCE",
     "L12_HUMAN_FEEDBACK"
   ],
-  "updated_at": "2026-09-02 20:17:03",
+  "updated_at": "2026-09-03 10:09:37",
   "g1": {
     "architect_verdict": "STAGE8_G1_PASS_WITH_LIMITATIONS (L3 已回填, 待 Full Regression 后判最终)",
     "l3": {
@@ -106,5 +120,28 @@
       "提供真人参考音(30-60s)",
       "提供授权 BGM 目录"
     ]
+  },
+  "morning_validation": {
+    "calibration_correction_applied": true,
+    "human_review_packs": [
+      "TREECUT_G2_HUMAN_REVIEW_V2.html",
+      "TREECUT_G3_HUMAN_REVIEW_V2.html",
+      "TREECUT_DEDUP_HUMAN_REVIEW_V1.html"
+    ],
+    "g2_targets": {
+      "hard_neg_reject": "100%",
+      "top3_usable": ">=85%",
+      "top1_usable": ">=70%",
+      "boundary_usable": ">=80%",
+      "denominator": "存在目标动作素材的Query",
+      "no_source": "NO_VALID_SOURCE_AVAILABLE"
+    },
+    "g3_targets": {
+      "p0_mismatch": 0,
+      "top3_suitable": ">=90%",
+      "top1_suitable": ">=80%",
+      "unsupported_core_pass": 0,
+      "story_conflict": 0
+    }
   }
 }

@@ -1,0 +1,63 @@
+{
+ "current_state": {
+  "G1": "PASS",
+  "G2": "ENGINEERING_READY_FOR_HUMAN_VALIDATION",
+  "G3": "ENGINEERING_READY_FOR_HUMAN_VALIDATION",
+  "DEDUP": "PROVISIONAL_PASS",
+  "G5": "PROVISIONAL_PASS",
+  "UI": "USABLE_V1",
+  "VOICE": "READY_FOR_INPUT",
+  "BGM": "LIBRARY_NOT_READY",
+  "REHEARSAL": "PASS_WITH_EXTERNAL_INPUT_LIMITATIONS",
+  "REGRESSION": {
+   "passed": 354,
+   "skipped": 2,
+   "failed": 0
+  }
+ },
+ "calibration_correction": {
+  "status": "SEGMENT_LEVEL_NOT_YET_80_120",
+  "segment_level": 20,
+  "frames_as_evidence": 132,
+  "frames_are_not_samples": true
+ },
+ "g2_human_review": "TREECUT_G2_HUMAN_REVIEW_V2.html (20 queries; schema Top1-3+best+complete+boundary)",
+ "g3_human_review": "TREECUT_G3_HUMAN_REVIEW_V2.html (16 beats)",
+ "dedup_human_review": "TREECUT_DEDUP_HUMAN_REVIEW_V1.html (4 对真实命中)",
+ "voice_import_action": {
+  "step1": "提供 30-60s 单人普通话无BGM参考音(推荐5-10min)",
+  "step2": "放到 voice_reference 目录(不进Git)",
+  "step3": "标记 consent_verified",
+  "step4": "机器仅测 decode/噪声/削波/时长/响度",
+  "gate": "VOICE_ACCEPT/REJECT 仅人工",
+  "sample_plan": [
+   "15s",
+   "30s",
+   "60s"
+  ]
+ },
+ "bgm_import_action": {
+  "needed": "10-20 首授权曲即可",
+  "fields": [
+   "license_ok",
+   "license_doc_ref",
+   "mood",
+   "energy",
+   "duration",
+   "bpm",
+   "vocal"
+  ],
+  "forbidden": "不从 published 视频 rip",
+  "status": "LIBRARY_NOT_READY"
+ },
+ "next_gate_order": [
+  "G2 人审",
+  "G3 人审",
+  "修发现的问题",
+  "G2/G3 PASS 或 PASS_WITH_LIMITATIONS",
+  "Voice 试听 PASS",
+  "BGM 可用",
+  "才生成 Pilot V3"
+ ],
+ "generated_at": "2026-09-03 10:09:16"
+}
