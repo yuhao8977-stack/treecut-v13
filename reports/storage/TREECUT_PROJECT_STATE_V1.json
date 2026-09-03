@@ -311,5 +311,25 @@
       "crossseg_merged_review": "TREECUT_G2_CROSSSEG_REVIEW_V1.mp4",
       "updated_at": "2026-09-03 14:48:27"
     }
+  },
+  "mmv_v1": {
+    "mode": "SHADOW",
+    "real_cases": {
+      "89": "Verdict.FAIL",
+      "52": "Verdict.UNSURE",
+      "109": "Verdict.FAIL",
+      "51": "Verdict.UNSURE",
+      "1985": "Verdict.UNSURE",
+      "1986": "Verdict.UNSURE"
+    },
+    "no_false_pass": true,
+    "enforcement": false,
+    "status": "SHADOW_REAL_MEDIA_RUN_DONE",
+    "limitations": [
+      "ROI heuristic(qwen无bbox)",
+      "camera translation-only",
+      "阈值 PROVISIONAL"
+    ],
+    "updated_at": "2026-09-03 15:40:17"
   }
 }

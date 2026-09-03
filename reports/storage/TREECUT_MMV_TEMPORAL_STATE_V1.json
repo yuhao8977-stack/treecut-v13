@@ -1,0 +1,78 @@
+{
+ "per_case": [
+  {
+   "media_id": 89,
+   "verdict": "Verdict.FAIL",
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "FAIL",
+    "opposite_absent": "PASS"
+   },
+   "observed_action": "Action.STATIC",
+   "model_action": "Action.UNKNOWN"
+  },
+  {
+   "media_id": 52,
+   "verdict": "Verdict.UNSURE",
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "observed_action": "Action.UNKNOWN",
+   "model_action": "Action.UNKNOWN"
+  },
+  {
+   "media_id": 109,
+   "verdict": "Verdict.FAIL",
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "FAIL",
+    "opposite_absent": "PASS"
+   },
+   "observed_action": "Action.STATIC",
+   "model_action": "Action.DRAWER_OPEN"
+  },
+  {
+   "media_id": 51,
+   "verdict": "Verdict.UNSURE",
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "observed_action": "Action.UNKNOWN",
+   "model_action": "Action.UNKNOWN"
+  },
+  {
+   "media_id": 1985,
+   "verdict": "Verdict.UNSURE",
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "observed_action": "Action.EXTEND",
+   "model_action": "Action.EXTEND"
+  },
+  {
+   "media_id": 1986,
+   "verdict": "Verdict.UNSURE",
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "observed_action": "Action.EXTEND",
+   "model_action": "Action.EXTEND"
+  }
+ ]
+}

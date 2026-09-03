@@ -1,0 +1,312 @@
+[
+ {
+  "media_id": 89,
+  "requested": "Action.EXTEND",
+  "window": [
+   0.0,
+   7.12
+  ],
+  "verdict": "Verdict.FAIL",
+  "observed_action": "Action.STATIC",
+  "target_object": "TABLETOP",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "FAIL",
+   "opposite_absent": "PASS"
+  },
+  "reason_codes": [
+   "NO_TABLETOP_GEOMETRY_CHANGE"
+  ],
+  "camera": {
+   "translation_px": 5.71,
+   "reliable": true
+  },
+  "roi_motion": {
+   "TABLETOP": 0.034
+  },
+  "edge_shift": {
+   "TABLETOP": 0.008
+  },
+  "person_overlap": {
+   "TABLETOP": 0.051
+  },
+  "global_motion_px": 5.709,
+  "model_action": "Action.UNKNOWN",
+  "fusion": {
+   "verdict": "FAIL",
+   "reason_codes": [
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_review_required": false
+  },
+  "expected": "EXTEND FAIL",
+  "frames": [
+   "m89_0.jpg",
+   "m89_1.jpg",
+   "m89_2.jpg",
+   "m89_3.jpg",
+   "m89_4.jpg"
+  ]
+ },
+ {
+  "media_id": 52,
+  "requested": "Action.DRAWER_OPEN",
+  "window": [
+   0.0,
+   10.0
+  ],
+  "verdict": "Verdict.UNSURE",
+  "observed_action": "Action.UNKNOWN",
+  "target_object": "DRAWER",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+  ],
+  "camera": {
+   "translation_px": 46.82,
+   "reliable": false
+  },
+  "roi_motion": {
+   "DRAWER": 0.092
+  },
+  "edge_shift": {
+   "DRAWER": 0.012
+  },
+  "person_overlap": {
+   "DRAWER": 0.15
+  },
+  "global_motion_px": 46.824,
+  "model_action": "Action.UNKNOWN",
+  "fusion": {
+   "verdict": "UNSURE",
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "human_review_required": true
+  },
+  "expected": "DRAWER_OPEN PASS/STRONG_UNSURE",
+  "frames": [
+   "m52_0.jpg",
+   "m52_1.jpg",
+   "m52_2.jpg",
+   "m52_3.jpg",
+   "m52_4.jpg"
+  ]
+ },
+ {
+  "media_id": 109,
+  "requested": "Action.DRAWER_OPEN",
+  "window": [
+   0.0,
+   5.8
+  ],
+  "verdict": "Verdict.FAIL",
+  "observed_action": "Action.STATIC",
+  "target_object": "DRAWER",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "FAIL",
+   "opposite_absent": "PASS"
+  },
+  "reason_codes": [
+   "NO_DRAWER_MOTION"
+  ],
+  "camera": {
+   "translation_px": 6.73,
+   "reliable": true
+  },
+  "roi_motion": {
+   "DRAWER": 0.048
+  },
+  "edge_shift": {
+   "DRAWER": 0.03
+  },
+  "person_overlap": {
+   "DRAWER": 0.15
+  },
+  "global_motion_px": 6.727,
+  "model_action": "Action.DRAWER_OPEN",
+  "fusion": {
+   "verdict": "FAIL",
+   "reason_codes": [
+    "NO_DRAWER_MOTION"
+   ],
+   "human_review_required": false
+  },
+  "expected": "OPEN_STATE TRUE / ACTION FAIL",
+  "frames": [
+   "m109_0.jpg",
+   "m109_1.jpg",
+   "m109_2.jpg",
+   "m109_3.jpg",
+   "m109_4.jpg"
+  ]
+ },
+ {
+  "media_id": 51,
+  "requested": "Action.EXTEND",
+  "window": [
+   0.0,
+   10.0
+  ],
+  "verdict": "Verdict.UNSURE",
+  "observed_action": "Action.UNKNOWN",
+  "target_object": "TABLETOP",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+  ],
+  "camera": {
+   "translation_px": 31.43,
+   "reliable": false
+  },
+  "roi_motion": {
+   "TABLETOP": 0.096
+  },
+  "edge_shift": {
+   "TABLETOP": 0.018
+  },
+  "person_overlap": {
+   "TABLETOP": 0.051
+  },
+  "global_motion_px": 31.426,
+  "model_action": "Action.UNKNOWN",
+  "fusion": {
+   "verdict": "UNSURE",
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "human_review_required": true
+  },
+  "expected": "STATIC; EXTEND FAIL",
+  "frames": [
+   "m51_0.jpg",
+   "m51_1.jpg",
+   "m51_2.jpg",
+   "m51_3.jpg",
+   "m51_4.jpg"
+  ]
+ },
+ {
+  "media_id": 1985,
+  "requested": "Action.EXTEND",
+  "window": [
+   1.9,
+   4.4
+  ],
+  "verdict": "Verdict.UNSURE",
+  "observed_action": "Action.EXTEND",
+  "target_object": "TABLETOP",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION",
+   "MODEL_DIRECTION_MATCH",
+   "STATE_TRANSITION_INCOMPLETE"
+  ],
+  "camera": {
+   "translation_px": 11.66,
+   "reliable": false
+  },
+  "roi_motion": {
+   "TABLETOP": 0.149
+  },
+  "edge_shift": {
+   "TABLETOP": 0.121
+  },
+  "person_overlap": {
+   "TABLETOP": 0.051
+  },
+  "global_motion_px": 11.664,
+  "model_action": "Action.EXTEND",
+  "fusion": {
+   "verdict": "UNSURE",
+   "reason_codes": [
+    "MODEL_DIRECTION_MATCH",
+    "STATE_TRANSITION_INCOMPLETE",
+    "TARGET_OBJECT_MOTION"
+   ],
+   "human_review_required": true
+  },
+  "expected": "SOCKET_ADJUST; EXTEND FAIL",
+  "frames": [
+   "m1985_0.jpg",
+   "m1985_1.jpg",
+   "m1985_2.jpg",
+   "m1985_3.jpg",
+   "m1985_4.jpg"
+  ]
+ },
+ {
+  "media_id": 1986,
+  "requested": "Action.EXTEND",
+  "window": [
+   1.9,
+   4.4
+  ],
+  "verdict": "Verdict.UNSURE",
+  "observed_action": "Action.EXTEND",
+  "target_object": "TABLETOP",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION",
+   "MODEL_DIRECTION_MATCH",
+   "STATE_TRANSITION_INCOMPLETE"
+  ],
+  "camera": {
+   "translation_px": 11.66,
+   "reliable": false
+  },
+  "roi_motion": {
+   "TABLETOP": 0.149
+  },
+  "edge_shift": {
+   "TABLETOP": 0.121
+  },
+  "person_overlap": {
+   "TABLETOP": 0.051
+  },
+  "global_motion_px": 11.664,
+  "model_action": "Action.EXTEND",
+  "fusion": {
+   "verdict": "UNSURE",
+   "reason_codes": [
+    "MODEL_DIRECTION_MATCH",
+    "STATE_TRANSITION_INCOMPLETE",
+    "TARGET_OBJECT_MOTION"
+   ],
+   "human_review_required": true
+  },
+  "expected": "SOCKET_ADJUST; EXTEND FAIL",
+  "frames": [
+   "m1986_0.jpg",
+   "m1986_1.jpg",
+   "m1986_2.jpg",
+   "m1986_3.jpg",
+   "m1986_4.jpg"
+  ]
+ }
+]

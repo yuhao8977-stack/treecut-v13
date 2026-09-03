@@ -1,0 +1,660 @@
+[
+ {
+  "media_id": 89,
+  "requested": "Action.EXTEND",
+  "window": [
+   0.0,
+   7.12
+  ],
+  "qwen_frames": [
+   {
+    "idx": 0,
+    "ts": 0.0,
+    "sha256": "37f3d16f6ab820e5",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, UPPER_THIN_DRAWER, SOCKET_MODULE, CABINET\nstates=DRAWER_OPEN_STATE\naction_state=静止\ndominant=主体是站在桌子后面的人。"
+   },
+   {
+    "idx": 1,
+    "ts": 1.78,
+    "sha256": "691c32ec9ba1e46e",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, UPPER_THIN_DRAWER, SOCKET_MODULE, CABINET\nstates=DRAWER_OPEN_STATE, TABLETOP_EXTENDED_STATE\naction_state=静止\ndominant"
+   },
+   {
+    "idx": 2,
+    "ts": 3.56,
+    "sha256": "5032ee17768ea6b3",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET\nstates=DRAWER_OPEN_STATE\naction_state=静止\ndominant=主体是正在展示的抽屉柜。"
+   },
+   {
+    "idx": 3,
+    "ts": 5.34,
+    "sha256": "195235b4087a9b4d",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=DRAWER_OPEN_STATE\naction_state=静止\ndominant=主体是正"
+   },
+   {
+    "idx": 4,
+    "ts": 7.12,
+    "sha256": "02c222a1d5a7c22d",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, UPPER_THIN_DRAWER, SOCKET_MODULE, CABINET\nstates=DRAWER_OPEN_STATE\naction_state=静止\ndominant=主体是站在桌子后面的人。"
+   }
+  ],
+  "aggregate": {
+   "global_motion_px": 5.709,
+   "camera_residual": 0.771,
+   "roi_motion": {
+    "TABLETOP": 0.034
+   },
+   "roi_edge_shift": {
+    "TABLETOP": 0.008
+   },
+   "roi_geometry_change": {},
+   "person_overlap_ratio": {
+    "TABLETOP": 0.051
+   }
+  },
+  "camera": {
+   "translation_px": 5.71,
+   "reliable": true
+  },
+  "target_roi": {
+   "name": "TABLETOP",
+   "x1": 172,
+   "y1": 1689,
+   "x2": 1555,
+   "y2": 2918,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "model_action": "Action.UNKNOWN",
+  "temporal_verdict": "Verdict.FAIL",
+  "observed_action": "Action.STATIC",
+  "target_object": "TABLETOP",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "FAIL",
+   "opposite_absent": "PASS"
+  },
+  "reason_codes": [
+   "NO_TABLETOP_GEOMETRY_CHANGE"
+  ],
+  "fusion": {
+   "verdict": "FAIL",
+   "reason_codes": [
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_review_required": false
+  },
+  "frames_dir": [
+   "m89_0.jpg",
+   "m89_1.jpg",
+   "m89_2.jpg",
+   "m89_3.jpg",
+   "m89_4.jpg"
+  ]
+ },
+ {
+  "media_id": 52,
+  "requested": "Action.DRAWER_OPEN",
+  "window": [
+   0.0,
+   10.0
+  ],
+  "qwen_frames": [
+   {
+    "idx": 0,
+    "ts": 0.0,
+    "sha256": "6fc37f47596d5392",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, SOCKET_MODULE, CABINET\nstates=无\naction_state=静止\ndominant=主体是站在桌子后面的那个人。"
+   },
+   {
+    "idx": 1,
+    "ts": 2.5,
+    "sha256": "60fdd37bf0d75255",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, SOCKET_MODULE, CABINET\nstates=无\naction_state=静止\ndominant=主体是站在桌子后面的那个人。"
+   },
+   {
+    "idx": 2,
+    "ts": 5.0,
+    "sha256": "feb9706ba3ff9ae6",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, SOCKET_MODULE, CABINET, 桌面\nstates=无\naction_state=静止\ndominant=主体是站在桌子后面的那个人。"
+   },
+   {
+    "idx": 3,
+    "ts": 7.5,
+    "sha256": "2c811528e6103f42",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, SOCKET_MODULE, CABINET\nstates=无\naction_state=静止\ndominant=主体是人。"
+   },
+   {
+    "idx": 4,
+    "ts": 10.0,
+    "sha256": "3e7c2eb763b3fd7d",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=DRAWER_OPEN_STATE\naction_state=静止\ndominant=主体是人"
+   }
+  ],
+  "aggregate": {
+   "global_motion_px": 46.824,
+   "camera_residual": 12.004,
+   "roi_motion": {
+    "DRAWER": 0.092
+   },
+   "roi_edge_shift": {
+    "DRAWER": 0.012
+   },
+   "roi_geometry_change": {},
+   "person_overlap_ratio": {
+    "DRAWER": 0.15
+   }
+  },
+  "camera": {
+   "translation_px": 46.82,
+   "reliable": false
+  },
+  "target_roi": {
+   "name": "DRAWER",
+   "x1": 172,
+   "y1": 1382,
+   "x2": 1555,
+   "y2": 2918,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "model_action": "Action.UNKNOWN",
+  "temporal_verdict": "Verdict.UNSURE",
+  "observed_action": "Action.UNKNOWN",
+  "target_object": "DRAWER",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+  ],
+  "fusion": {
+   "verdict": "UNSURE",
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "human_review_required": true
+  },
+  "frames_dir": [
+   "m52_0.jpg",
+   "m52_1.jpg",
+   "m52_2.jpg",
+   "m52_3.jpg",
+   "m52_4.jpg"
+  ]
+ },
+ {
+  "media_id": 109,
+  "requested": "Action.DRAWER_OPEN",
+  "window": [
+   0.0,
+   5.8
+  ],
+  "qwen_frames": [
+   {
+    "idx": 0,
+    "ts": 0.0,
+    "sha256": "3d67ccf3fe0e7c19",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, UPPER_THIN_DRAWER, SOCKET_MODULE, CABINET\nstates=TABLETOP_EXTENDED_STATE\naction_state=静止\ndominant=主体是坐在桌子后面的人。"
+   },
+   {
+    "idx": 1,
+    "ts": 1.45,
+    "sha256": "1fff35c66f2620f4",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, SOCKET_MODULE, CABINET\nstates=DRAWER_OPEN_STATE\naction_state=正在拉开\ndominant=主体是正在拉开抽屉的人。"
+   },
+   {
+    "idx": 2,
+    "ts": 2.9,
+    "sha256": "5d9021bee44f477a",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, CABINET\nstates=DRAWER_OPEN_STATE\naction_state=静止\ndominant=主体是站在大理石台面前的人。"
+   },
+   {
+    "idx": 3,
+    "ts": 4.35,
+    "sha256": "a74c4efb7284fa98",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET\nstates=DRAWER_OPEN_STATE\naction_state=正在拉开\ndominant=主体是正在拉开抽屉的人。"
+   },
+   {
+    "idx": 4,
+    "ts": 5.8,
+    "sha256": "477596a0193f3ae7",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, UPPER_THIN_DRAWER, SOCKET_MODULE, CABINET\nstates=DRAWER_OPEN_STATE\naction_state=正在拉开\ndominant=主体是正在拉开抽屉的人。"
+   }
+  ],
+  "aggregate": {
+   "global_motion_px": 6.727,
+   "camera_residual": 0.852,
+   "roi_motion": {
+    "DRAWER": 0.048
+   },
+   "roi_edge_shift": {
+    "DRAWER": 0.03
+   },
+   "roi_geometry_change": {},
+   "person_overlap_ratio": {
+    "DRAWER": 0.15
+   }
+  },
+  "camera": {
+   "translation_px": 6.73,
+   "reliable": true
+  },
+  "target_roi": {
+   "name": "DRAWER",
+   "x1": 172,
+   "y1": 1382,
+   "x2": 1555,
+   "y2": 2918,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "model_action": "Action.DRAWER_OPEN",
+  "temporal_verdict": "Verdict.FAIL",
+  "observed_action": "Action.STATIC",
+  "target_object": "DRAWER",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "FAIL",
+   "opposite_absent": "PASS"
+  },
+  "reason_codes": [
+   "NO_DRAWER_MOTION"
+  ],
+  "fusion": {
+   "verdict": "FAIL",
+   "reason_codes": [
+    "NO_DRAWER_MOTION"
+   ],
+   "human_review_required": false
+  },
+  "frames_dir": [
+   "m109_0.jpg",
+   "m109_1.jpg",
+   "m109_2.jpg",
+   "m109_3.jpg",
+   "m109_4.jpg"
+  ]
+ },
+ {
+  "media_id": 51,
+  "requested": "Action.EXTEND",
+  "window": [
+   0.0,
+   10.0
+  ],
+  "qwen_frames": [
+   {
+    "idx": 0,
+    "ts": 0.0,
+    "sha256": "ad1cc0352b4bbbfe",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, SOCKET_MODULE, CABINET\nstates=无\naction_state=静止\ndominant=主体是站在桌子后面的那个人。"
+   },
+   {
+    "idx": 1,
+    "ts": 2.5,
+    "sha256": "f1d9a01fcb9d3f82",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, SOCKET_MODULE, CABINET\nstates=无\naction_state=静止\ndominant=主体是站在桌子后面的那个人。"
+   },
+   {
+    "idx": 2,
+    "ts": 5.0,
+    "sha256": "56e4a4389a3afa59",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=无\naction_state=静止\ndominant=主体是站在桌子后面的人。"
+   },
+   {
+    "idx": 3,
+    "ts": 7.5,
+    "sha256": "5abb0bd1ffcb1556",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=无\naction_state=静止\ndominant=主体是人。"
+   },
+   {
+    "idx": 4,
+    "ts": 10.0,
+    "sha256": "c70b6c2489d23e3d",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON, TABLETOP, DRAWER, SOCKET_MODULE, CABINET\nstates=无\naction_state=静止\ndominant=主体是站在桌子后面的那个人。"
+   }
+  ],
+  "aggregate": {
+   "global_motion_px": 31.426,
+   "camera_residual": 4.4,
+   "roi_motion": {
+    "TABLETOP": 0.096
+   },
+   "roi_edge_shift": {
+    "TABLETOP": 0.018
+   },
+   "roi_geometry_change": {},
+   "person_overlap_ratio": {
+    "TABLETOP": 0.051
+   }
+  },
+  "camera": {
+   "translation_px": 31.43,
+   "reliable": false
+  },
+  "target_roi": {
+   "name": "TABLETOP",
+   "x1": 172,
+   "y1": 1689,
+   "x2": 1555,
+   "y2": 2918,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "model_action": "Action.UNKNOWN",
+  "temporal_verdict": "Verdict.UNSURE",
+  "observed_action": "Action.UNKNOWN",
+  "target_object": "TABLETOP",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+  ],
+  "fusion": {
+   "verdict": "UNSURE",
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "human_review_required": true
+  },
+  "frames_dir": [
+   "m51_0.jpg",
+   "m51_1.jpg",
+   "m51_2.jpg",
+   "m51_3.jpg",
+   "m51_4.jpg"
+  ]
+ },
+ {
+  "media_id": 1985,
+  "requested": "Action.EXTEND",
+  "window": [
+   1.9,
+   4.4
+  ],
+  "qwen_frames": [
+   {
+    "idx": 0,
+    "ts": 1.9,
+    "sha256": "b794e0813e54a9bd",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=DRAWER_OPEN_STATE\naction_state=正在插拔\ndominant=主体"
+   },
+   {
+    "idx": 1,
+    "ts": 2.52,
+    "sha256": "d21c0d9d8461da91",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=DRAWER_OPEN_STATE\naction_state=正在插入\ndominant=主体"
+   },
+   {
+    "idx": 2,
+    "ts": 3.15,
+    "sha256": "a7e49f6a5582f610",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=DRAWER_OPEN_STATE\naction_state=正在拉出\ndominant=正在"
+   },
+   {
+    "idx": 3,
+    "ts": 3.78,
+    "sha256": "d572d13dc7196715",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=DRAWER_OPEN_STATE\naction_state=正在插拔\ndominant=主体"
+   },
+   {
+    "idx": 4,
+    "ts": 4.4,
+    "sha256": "6d79e47979ee7b85",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET\nstates=TABLETOP_EXTENDED_STATE\naction_state=静止\ndominant=插座模块"
+   }
+  ],
+  "aggregate": {
+   "global_motion_px": 11.664,
+   "camera_residual": 48.31,
+   "roi_motion": {
+    "TABLETOP": 0.149
+   },
+   "roi_edge_shift": {
+    "TABLETOP": 0.121
+   },
+   "roi_geometry_change": {},
+   "person_overlap_ratio": {
+    "TABLETOP": 0.051
+   }
+  },
+  "camera": {
+   "translation_px": 11.66,
+   "reliable": false
+  },
+  "target_roi": {
+   "name": "TABLETOP",
+   "x1": 172,
+   "y1": 1689,
+   "x2": 1555,
+   "y2": 2918,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "model_action": "Action.EXTEND",
+  "temporal_verdict": "Verdict.UNSURE",
+  "observed_action": "Action.EXTEND",
+  "target_object": "TABLETOP",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION",
+   "MODEL_DIRECTION_MATCH",
+   "STATE_TRANSITION_INCOMPLETE"
+  ],
+  "fusion": {
+   "verdict": "UNSURE",
+   "reason_codes": [
+    "MODEL_DIRECTION_MATCH",
+    "STATE_TRANSITION_INCOMPLETE",
+    "TARGET_OBJECT_MOTION"
+   ],
+   "human_review_required": true
+  },
+  "frames_dir": [
+   "m1985_0.jpg",
+   "m1985_1.jpg",
+   "m1985_2.jpg",
+   "m1985_3.jpg",
+   "m1985_4.jpg"
+  ]
+ },
+ {
+  "media_id": 1986,
+  "requested": "Action.EXTEND",
+  "window": [
+   1.9,
+   4.4
+  ],
+  "qwen_frames": [
+   {
+    "idx": 0,
+    "ts": 1.9,
+    "sha256": "b794e0813e54a9bd",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=DRAWER_OPEN_STATE\naction_state=正在插拔\ndominant=主体"
+   },
+   {
+    "idx": 1,
+    "ts": 2.52,
+    "sha256": "d21c0d9d8461da91",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=DRAWER_OPEN_STATE\naction_state=正在插入\ndominant=主体"
+   },
+   {
+    "idx": 2,
+    "ts": 3.15,
+    "sha256": "a7e49f6a5582f610",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=DRAWER_OPEN_STATE\naction_state=正在拉出\ndominant=正在"
+   },
+   {
+    "idx": 3,
+    "ts": 3.78,
+    "sha256": "d572d13dc7196715",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET/柜门/收纳/物品/桌面\nstates=DRAWER_OPEN_STATE\naction_state=正在插拔\ndominant=主体"
+   },
+   {
+    "idx": 4,
+    "ts": 4.4,
+    "sha256": "6d79e47979ee7b85",
+    "model": "qwen2.5vl:7b",
+    "raw_tail": "objects=PERSON,TABLETOP,DRAWER,UPPER_THIN_DRAWER,SOCKET_MODULE,TRACK_SOCKET,CABINET\nstates=TABLETOP_EXTENDED_STATE\naction_state=静止\ndominant=插座模块"
+   }
+  ],
+  "aggregate": {
+   "global_motion_px": 11.664,
+   "camera_residual": 48.31,
+   "roi_motion": {
+    "TABLETOP": 0.149
+   },
+   "roi_edge_shift": {
+    "TABLETOP": 0.121
+   },
+   "roi_geometry_change": {},
+   "person_overlap_ratio": {
+    "TABLETOP": 0.051
+   }
+  },
+  "camera": {
+   "translation_px": 11.66,
+   "reliable": false
+  },
+  "target_roi": {
+   "name": "TABLETOP",
+   "x1": 172,
+   "y1": 1689,
+   "x2": 1555,
+   "y2": 2918,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "model_action": "Action.EXTEND",
+  "temporal_verdict": "Verdict.UNSURE",
+  "observed_action": "Action.EXTEND",
+  "target_object": "TABLETOP",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION",
+   "MODEL_DIRECTION_MATCH",
+   "STATE_TRANSITION_INCOMPLETE"
+  ],
+  "fusion": {
+   "verdict": "UNSURE",
+   "reason_codes": [
+    "MODEL_DIRECTION_MATCH",
+    "STATE_TRANSITION_INCOMPLETE",
+    "TARGET_OBJECT_MOTION"
+   ],
+   "human_review_required": true
+  },
+  "frames_dir": [
+   "m1986_0.jpg",
+   "m1986_1.jpg",
+   "m1986_2.jpg",
+   "m1986_3.jpg",
+   "m1986_4.jpg"
+  ]
+ }
+]

@@ -1,0 +1,136 @@
+{
+ "per_case": [
+  {
+   "media_id": 89,
+   "target_roi": {
+    "name": "TABLETOP",
+    "x1": 172,
+    "y1": 1689,
+    "x2": 1555,
+    "y2": 2918,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "person_roi": {
+    "name": "PERSON",
+    "x1": 259,
+    "y1": 61,
+    "x2": 1468,
+    "y2": 1843,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "roi_source": "HEURISTIC(qwen文本无bbox) — 见报告局限"
+  },
+  {
+   "media_id": 52,
+   "target_roi": {
+    "name": "DRAWER",
+    "x1": 172,
+    "y1": 1382,
+    "x2": 1555,
+    "y2": 2918,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "person_roi": {
+    "name": "PERSON",
+    "x1": 259,
+    "y1": 61,
+    "x2": 1468,
+    "y2": 1843,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "roi_source": "HEURISTIC(qwen文本无bbox) — 见报告局限"
+  },
+  {
+   "media_id": 109,
+   "target_roi": {
+    "name": "DRAWER",
+    "x1": 172,
+    "y1": 1382,
+    "x2": 1555,
+    "y2": 2918,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "person_roi": {
+    "name": "PERSON",
+    "x1": 259,
+    "y1": 61,
+    "x2": 1468,
+    "y2": 1843,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "roi_source": "HEURISTIC(qwen文本无bbox) — 见报告局限"
+  },
+  {
+   "media_id": 51,
+   "target_roi": {
+    "name": "TABLETOP",
+    "x1": 172,
+    "y1": 1689,
+    "x2": 1555,
+    "y2": 2918,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "person_roi": {
+    "name": "PERSON",
+    "x1": 259,
+    "y1": 61,
+    "x2": 1468,
+    "y2": 1843,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "roi_source": "HEURISTIC(qwen文本无bbox) — 见报告局限"
+  },
+  {
+   "media_id": 1985,
+   "target_roi": {
+    "name": "TABLETOP",
+    "x1": 172,
+    "y1": 1689,
+    "x2": 1555,
+    "y2": 2918,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "person_roi": {
+    "name": "PERSON",
+    "x1": 259,
+    "y1": 61,
+    "x2": 1468,
+    "y2": 1843,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "roi_source": "HEURISTIC(qwen文本无bbox) — 见报告局限"
+  },
+  {
+   "media_id": 1986,
+   "target_roi": {
+    "name": "TABLETOP",
+    "x1": 172,
+    "y1": 1689,
+    "x2": 1555,
+    "y2": 2918,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "person_roi": {
+    "name": "PERSON",
+    "x1": 259,
+    "y1": 61,
+    "x2": 1468,
+    "y2": 1843,
+    "confidence": 1.0,
+    "source": "HEURISTIC"
+   },
+   "roi_source": "HEURISTIC(qwen文本无bbox) — 见报告局限"
+  }
+ ]
+}

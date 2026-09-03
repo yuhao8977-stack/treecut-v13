@@ -1,0 +1,20 @@
+{
+ "note": "与人工预期不一致项(待人工复核): 51/1985/1986 为 UNSURE(非人工预期 FAIL) — 方向/对象未证, 无假PASS",
+ "items": [
+  {
+   "media_id": 51,
+   "expected": "STATIC; EXTEND FAIL",
+   "got": "Verdict.UNSURE"
+  },
+  {
+   "media_id": 1985,
+   "expected": "SOCKET_ADJUST; EXTEND FAIL",
+   "got": "Verdict.UNSURE"
+  },
+  {
+   "media_id": 1986,
+   "expected": "SOCKET_ADJUST; EXTEND FAIL",
+   "got": "Verdict.UNSURE"
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "per_case": [
+  {
+   "media_id": 89,
+   "roi_motion": {
+    "TABLETOP": 0.034
+   },
+   "edge_shift": {
+    "TABLETOP": 0.008
+   },
+   "person_overlap": {
+    "TABLETOP": 0.051
+   }
+  },
+  {
+   "media_id": 52,
+   "roi_motion": {
+    "DRAWER": 0.092
+   },
+   "edge_shift": {
+    "DRAWER": 0.012
+   },
+   "person_overlap": {
+    "DRAWER": 0.15
+   }
+  },
+  {
+   "media_id": 109,
+   "roi_motion": {
+    "DRAWER": 0.048
+   },
+   "edge_shift": {
+    "DRAWER": 0.03
+   },
+   "person_overlap": {
+    "DRAWER": 0.15
+   }
+  },
+  {
+   "media_id": 51,
+   "roi_motion": {
+    "TABLETOP": 0.096
+   },
+   "edge_shift": {
+    "TABLETOP": 0.018
+   },
+   "person_overlap": {
+    "TABLETOP": 0.051
+   }
+  },
+  {
+   "media_id": 1985,
+   "roi_motion": {
+    "TABLETOP": 0.149
+   },
+   "edge_shift": {
+    "TABLETOP": 0.121
+   },
+   "person_overlap": {
+    "TABLETOP": 0.051
+   }
+  },
+  {
+   "media_id": 1986,
+   "roi_motion": {
+    "TABLETOP": 0.149
+   },
+   "edge_shift": {
+    "TABLETOP": 0.121
+   },
+   "person_overlap": {
+    "TABLETOP": 0.051
+   }
+  }
+ ]
+}

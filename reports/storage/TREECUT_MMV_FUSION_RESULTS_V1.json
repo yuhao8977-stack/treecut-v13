@@ -1,0 +1,68 @@
+{
+ "per_case": [
+  {
+   "media_id": 89,
+   "fusion": {
+    "verdict": "FAIL",
+    "reason_codes": [
+     "NO_TABLETOP_GEOMETRY_CHANGE"
+    ],
+    "human_review_required": false
+   }
+  },
+  {
+   "media_id": 52,
+   "fusion": {
+    "verdict": "UNSURE",
+    "reason_codes": [
+     "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+    ],
+    "human_review_required": true
+   }
+  },
+  {
+   "media_id": 109,
+   "fusion": {
+    "verdict": "FAIL",
+    "reason_codes": [
+     "NO_DRAWER_MOTION"
+    ],
+    "human_review_required": false
+   }
+  },
+  {
+   "media_id": 51,
+   "fusion": {
+    "verdict": "UNSURE",
+    "reason_codes": [
+     "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+    ],
+    "human_review_required": true
+   }
+  },
+  {
+   "media_id": 1985,
+   "fusion": {
+    "verdict": "UNSURE",
+    "reason_codes": [
+     "MODEL_DIRECTION_MATCH",
+     "STATE_TRANSITION_INCOMPLETE",
+     "TARGET_OBJECT_MOTION"
+    ],
+    "human_review_required": true
+   }
+  },
+  {
+   "media_id": 1986,
+   "fusion": {
+    "verdict": "UNSURE",
+    "reason_codes": [
+     "MODEL_DIRECTION_MATCH",
+     "STATE_TRANSITION_INCOMPLETE",
+     "TARGET_OBJECT_MOTION"
+    ],
+    "human_review_required": true
+   }
+  }
+ ]
+}
