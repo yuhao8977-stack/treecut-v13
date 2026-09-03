@@ -7,7 +7,7 @@
       "plan": "docs/TREECUT_STAGE8_G1_PLAN.md"
     },
     "G2_ACTION_SUBCLIP": {
-      "status": "NEEDS_REPAIR_ABSORBED_R1R2_RERUN_READY",
+      "status": "NEEDS_REPAIR_R_WAVE_V2_INTEGRATED_EXPAND_EMPTY",
       "calibration_segment_level": 20,
       "target": "80-120",
       "calibration_met": false,
@@ -27,10 +27,10 @@
       "status": "NOT_STARTED"
     },
     "G3_CLAIM_VISUAL": {
-      "status": "NEEDS_REPAIR_ABSORBED_R4R5"
+      "status": "NEEDS_REPAIR_VB_GROUPING_ACTIVE"
     },
     "DEDUP": {
-      "status": "NEEDS_TUNING_R7_APPLIED"
+      "status": "NEEDS_TUNING_R7+DuplicateCritic"
     },
     "G4_VOICE_BGM": {
       "status": "VOICE_READY_FOR_INPUT_BGM_LIBRARY_NOT_READY"
@@ -49,7 +49,7 @@
     "L11_TEMPLATE_RELEVANCE",
     "L12_HUMAN_FEEDBACK"
   ],
-  "updated_at": "2026-09-03 10:52:21",
+  "updated_at": "2026-09-03 13:15:22",
   "g1": {
     "architect_verdict": "STAGE8_G1_PASS_WITH_LIMITATIONS (L3 已回填, 待 Full Regression 后判最终)",
     "l3": {
@@ -178,7 +178,17 @@
     "negative_memory_entries": 44,
     "supports_by_segment": 11,
     "blacklist_corrected": "whole-asset EXCLUDE → 窗口级负例记忆(素材可跨动作/窗口复用, 如1985仍可TRACK_SOCKET)",
-    "expanded_retrieval": "RUNNING(_g2_expand_results.json)",
-    "updated_at": "2026-09-03 11:54:08"
+    "expanded_retrieval": {
+      "searched_fresh_assets": 15,
+      "found_windows": 0
+    },
+    "updated_at": "2026-09-03 11:54:08",
+    "material_gap": {
+      "EXTEND": "MATERIAL_GAP_CANDIDATE",
+      "RETRACT": "MATERIAL_GAP_CANDIDATE",
+      "DRAWER_OPEN": "MATERIAL_GAP_CANDIDATE",
+      "SOCKET_INSERT": "MATERIAL_GAP_CANDIDATE",
+      "STORAGE_PUT_IN": "MATERIAL_GAP_CANDIDATE"
+    }
   }
 }

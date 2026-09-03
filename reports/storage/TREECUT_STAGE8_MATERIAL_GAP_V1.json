@@ -1,0 +1,73 @@
+{
+ "semantics": "CURRENT_CANDIDATE_SET_EXHAUSTED_AFTER_BOUNDED_EXPANSION(非整库结论; 已在 Eligible 池另探 15 资产)",
+ "per_action": {
+  "EXTEND": {
+   "status": "MATERIAL_GAP_CANDIDATE",
+   "expand_searched": 3,
+   "expand_found": 0,
+   "shooting_request": {
+    "required_action": "EXTEND",
+    "before_state": "桌面收起/较短",
+    "motion": "手拉动+桌面滑出/变宽",
+    "after_state": "桌面完全展开/较长",
+    "framing": "岛台侧向全景可见桌面几何变化",
+    "min_usable_s": 2.5,
+    "example": "收起→拉出→完全展开"
+   }
+  },
+  "RETRACT": {
+   "status": "MATERIAL_GAP_CANDIDATE",
+   "expand_searched": 3,
+   "expand_found": 0,
+   "shooting_request": {
+    "required_action": "RETRACT",
+    "before_state": "展开状态",
+    "motion": "桌面收回变短",
+    "after_state": "紧凑收起(并可见空间环境以证不占位)",
+    "framing": "岛台侧向全景+收回后环境",
+    "min_usable_s": 2.5
+   }
+  },
+  "DRAWER_OPEN": {
+   "status": "MATERIAL_GAP_CANDIDATE",
+   "expand_searched": 3,
+   "expand_found": 0,
+   "shooting_request": {
+    "required_action": "DRAWER_OPEN",
+    "before_state": "抽屉关闭",
+    "motion": "手拉→滑轨外移",
+    "after_state": "完全打开",
+    "framing": "正面/侧面含关闭→打开全程",
+    "min_usable_s": 2.5
+   }
+  },
+  "SOCKET_INSERT": {
+   "status": "MATERIAL_GAP_CANDIDATE",
+   "expand_searched": 3,
+   "expand_found": 0,
+   "shooting_request": {
+    "required_action": "SOCKET_INSERT",
+    "before_state": "插头在外/模块未用",
+    "motion": "插头插入/模块接电",
+    "after_state": "插入固定/通电",
+    "framing": "插座区近景",
+    "min_usable_s": 2.0,
+    "note": "静态轨道插座素材充足(对象可用); 仅缺插入动作; 可先 SEMANTIC_REWRITE"
+   }
+  },
+  "STORAGE_PUT_IN": {
+   "status": "MATERIAL_GAP_CANDIDATE",
+   "expand_searched": 3,
+   "expand_found": 0,
+   "shooting_request": {
+    "required_action": "STORAGE_PUT_IN",
+    "before_state": "物品在外",
+    "motion": "手放物品入收纳",
+    "after_state": "物品进入/抽屉内",
+    "framing": "抽屉/柜内+手部动作",
+    "min_usable_s": 2.5
+   }
+  }
+ },
+ "generated_at": "2026-09-03 13:15:22"
+}

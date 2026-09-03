@@ -1,0 +1,25 @@
+{
+ "windows": [],
+ "summary": {
+  "EXTEND": {
+   "searched": 3,
+   "found_windows": 0
+  },
+  "RETRACT": {
+   "searched": 3,
+   "found_windows": 0
+  },
+  "DRAWER_OPEN": {
+   "searched": 3,
+   "found_windows": 0
+  },
+  "SOCKET_INSERT": {
+   "searched": 3,
+   "found_windows": 0
+  },
+  "STORAGE_PUT_IN": {
+   "searched": 3,
+   "found_windows": 0
+  }
+ }
+}

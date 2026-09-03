@@ -5,140 +5,141 @@
    "action": "EXTEND",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "EXTEND_2",
    "action": "EXTEND",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "EXTEND_3",
    "action": "EXTEND",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "EXTEND_4",
    "action": "EXTEND",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "RETRACT_1",
    "action": "RETRACT",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "RETRACT_2",
    "action": "RETRACT",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "RETRACT_3",
    "action": "RETRACT",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "RETRACT_4",
    "action": "RETRACT",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "DRAWER_OPEN_1",
    "action": "DRAWER_OPEN",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "DRAWER_OPEN_2",
    "action": "DRAWER_OPEN",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "DRAWER_OPEN_3",
    "action": "DRAWER_OPEN",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "DRAWER_OPEN_4",
    "action": "DRAWER_OPEN",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "SOCKET_INSERT_1",
    "action": "SOCKET_INSERT",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "SOCKET_INSERT_2",
    "action": "SOCKET_INSERT",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "SOCKET_INSERT_3",
    "action": "SOCKET_INSERT",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "SOCKET_INSERT_4",
    "action": "SOCKET_INSERT",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "STORAGE_PUT_IN_1",
    "action": "STORAGE_PUT_IN",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "STORAGE_PUT_IN_2",
    "action": "STORAGE_PUT_IN",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "STORAGE_PUT_IN_3",
    "action": "STORAGE_PUT_IN",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   },
   {
    "qid": "STORAGE_PUT_IN_4",
    "action": "STORAGE_PUT_IN",
    "top3": [],
    "top3_n": 0,
-   "note": "NO_VALID_SOURCE(CURRENT_SET_EXHAUSTED→EXPAND_RETRIEVAL)"
+   "note": "NO_VALID(展开检索15新素材仍无候选) → MATERIAL_GAP_CANDIDATE; 见 TREECUT_STAGE8_MATERIAL_GAP_V1.json"
   }
- ]
+ ],
+ "material_gap": true
 }
