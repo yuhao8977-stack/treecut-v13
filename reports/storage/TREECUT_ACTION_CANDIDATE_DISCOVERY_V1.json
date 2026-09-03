@@ -1,0 +1,83 @@
+{
+ "actions": {
+  "EXTEND": {
+   "action": "EXTEND",
+   "funnel": {
+    "broad_eligible_union": 327,
+    "cheap_sample": 10,
+    "motion_shortlist": 4,
+    "qwen_reviewed": 4,
+    "tvrc_pass": 0,
+    "tvrc_fail": 2
+   },
+   "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在",
+   "material_gap": "CANDIDATE_NOT_CONFIRMED",
+   "generated_at": "2026-09-03 14:05:41"
+  },
+  "RETRACT": {
+   "action": "RETRACT",
+   "funnel": {
+    "broad_eligible_union": 327,
+    "cheap_sample": 10,
+    "motion_shortlist": 4,
+    "qwen_reviewed": 4,
+    "tvrc_pass": 0,
+    "tvrc_fail": 0
+   },
+   "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在",
+   "material_gap": "CANDIDATE_NOT_CONFIRMED",
+   "generated_at": "2026-09-03 14:05:41"
+  },
+  "DRAWER_OPEN": {
+   "action": "DRAWER_OPEN",
+   "funnel": {
+    "broad_eligible_union": 395,
+    "cheap_sample": 10,
+    "motion_shortlist": 4,
+    "qwen_reviewed": 4,
+    "tvrc_pass": 0,
+    "tvrc_fail": 2
+   },
+   "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在",
+   "material_gap": "CANDIDATE_NOT_CONFIRMED",
+   "generated_at": "2026-09-03 14:05:41"
+  },
+  "STORAGE_PUT_IN": {
+   "action": "STORAGE_PUT_IN",
+   "funnel": {
+    "broad_eligible_union": 396,
+    "cheap_sample": 10,
+    "motion_shortlist": 4,
+    "qwen_reviewed": 4,
+    "tvrc_pass": 0,
+    "tvrc_fail": 2
+   },
+   "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在",
+   "material_gap": "CANDIDATE_NOT_CONFIRMED",
+   "generated_at": "2026-09-03 14:05:41"
+  },
+  "SOCKET_INSERT": {
+   "action": "SOCKET_INSERT",
+   "funnel": {
+    "broad_eligible_union": 394,
+    "cheap_sample": 10,
+    "motion_shortlist": 4,
+    "qwen_reviewed": 4,
+    "tvrc_pass": 0,
+    "tvrc_fail": 0
+   },
+   "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在",
+   "material_gap": "CANDIDATE_NOT_CONFIRMED",
+   "generated_at": "2026-09-03 14:05:41"
+  }
+ },
+ "review_required_recovery": {
+  "EXTEND": 21,
+  "RETRACT": 0,
+  "DRAWER_OPEN": 59,
+  "STORAGE_PUT_IN": 60,
+  "SOCKET_INSERT": 17
+ },
+ "cross_segment_merge_candidates": 13605,
+ "generated_at": "2026-09-03 14:05:41"
+}

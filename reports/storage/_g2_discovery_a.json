@@ -1,0 +1,27 @@
+{
+ "EXTEND": {
+  "path_signal": 333,
+  "ocr_signal": 1,
+  "union_eligible": 334
+ },
+ "RETRACT": {
+  "path_signal": 0,
+  "ocr_signal": 0,
+  "union_eligible": 0
+ },
+ "DRAWER_OPEN": {
+  "path_signal": 888,
+  "ocr_signal": 3,
+  "union_eligible": 891
+ },
+ "STORAGE_PUT_IN": {
+  "path_signal": 1283,
+  "ocr_signal": 2,
+  "union_eligible": 1285
+ },
+ "SOCKET_INSERT": {
+  "path_signal": 464,
+  "ocr_signal": 45,
+  "union_eligible": 498
+ }
+}

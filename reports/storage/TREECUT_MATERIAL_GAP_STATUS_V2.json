@@ -1,0 +1,24 @@
+{
+ "status_per_action": {
+  "EXTEND": "MATERIAL_GAP_CANDIDATE",
+  "RETRACT": "MATERIAL_GAP_CANDIDATE",
+  "DRAWER_OPEN": "MATERIAL_GAP_CANDIDATE",
+  "STORAGE_PUT_IN": "MATERIAL_GAP_CANDIDATE",
+  "SOCKET_INSERT": "MATERIAL_GAP_CANDIDATE"
+ },
+ "cannot_confirm_until": [
+  "REVIEW_REQUIRED 高价值定向 contamination verify",
+  "cross-segment 合并候选时序探测",
+  "更大廉价样本(样本非穷举)"
+ ],
+ "review_required_pending_verify": {
+  "EXTEND": 21,
+  "RETRACT": 0,
+  "DRAWER_OPEN": 59,
+  "STORAGE_PUT_IN": 60,
+  "SOCKET_INSERT": 17
+ },
+ "cross_segment_pending_probe": 13605,
+ "conclusion": "Recall 验证: Eligible 池样本中动作证据稀缺(0 通过动作门), 但 REVIEW_REQUIRED(157 高价值) 与跨段(13,605)未核 → 不得标 CONFIRMED; 不要求补拍",
+ "generated_at": "2026-09-03 14:05:41"
+}

@@ -7,7 +7,7 @@
       "plan": "docs/TREECUT_STAGE8_G1_PLAN.md"
     },
     "G2_ACTION_SUBCLIP": {
-      "status": "NEEDS_REPAIR_R_WAVE_V2_INTEGRATED_EXPAND_EMPTY",
+      "status": "BLOCKED_BY_CANDIDATE_RECALL_VALIDATION",
       "calibration_segment_level": 20,
       "target": "80-120",
       "calibration_met": false,
@@ -21,16 +21,16 @@
       "status": "NOT_STARTED"
     },
     "G5_PRODUCTION_QA": {
-      "status": "PROVISIONAL_PASS_REABSORB_REQUIRED"
+      "status": "PROVISIONAL_PASS"
     },
     "G6_PILOT_VALIDATION": {
       "status": "NOT_STARTED"
     },
     "G3_CLAIM_VISUAL": {
-      "status": "NEEDS_REPAIR_VB_GROUPING_ACTIVE"
+      "status": "BLOCKED_BY_G2_VALID_ACTION_SOURCE"
     },
     "DEDUP": {
-      "status": "NEEDS_TUNING_R7+DuplicateCritic"
+      "status": "PROVISIONAL_PASS_AFTER_TUNING"
     },
     "G4_VOICE_BGM": {
       "status": "VOICE_READY_FOR_INPUT_BGM_LIBRARY_NOT_READY"
@@ -190,5 +190,59 @@
       "SOCKET_INSERT": "MATERIAL_GAP_CANDIDATE",
       "STORAGE_PUT_IN": "MATERIAL_GAP_CANDIDATE"
     }
+  },
+  "discovery_recovery": {
+    "report": "docs/TREECUT_STAGE8_CANDIDATE_DISCOVERY_REPORT_V1.md",
+    "funnel": {
+      "EXTEND": {
+        "broad_eligible_union": 327,
+        "cheap_sample": 10,
+        "motion_high_shortlist": 4,
+        "qwen_reviewed": 4,
+        "tvrc_pass": 0,
+        "tvrc_fail": 2,
+        "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在"
+      },
+      "RETRACT": {
+        "broad_eligible_union": 327,
+        "cheap_sample": 10,
+        "motion_high_shortlist": 4,
+        "qwen_reviewed": 4,
+        "tvrc_pass": 0,
+        "tvrc_fail": 0,
+        "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在"
+      },
+      "DRAWER_OPEN": {
+        "broad_eligible_union": 395,
+        "cheap_sample": 10,
+        "motion_high_shortlist": 4,
+        "qwen_reviewed": 4,
+        "tvrc_pass": 0,
+        "tvrc_fail": 2,
+        "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在"
+      },
+      "STORAGE_PUT_IN": {
+        "broad_eligible_union": 396,
+        "cheap_sample": 10,
+        "motion_high_shortlist": 4,
+        "qwen_reviewed": 4,
+        "tvrc_pass": 0,
+        "tvrc_fail": 2,
+        "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在"
+      },
+      "SOCKET_INSERT": {
+        "broad_eligible_union": 394,
+        "cheap_sample": 10,
+        "motion_high_shortlist": 4,
+        "qwen_reviewed": 4,
+        "tvrc_pass": 0,
+        "tvrc_fail": 0,
+        "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在"
+      }
+    },
+    "material_gap": "CANDIDATE_NOT_CONFIRMED",
+    "review_required_pending": 157,
+    "cross_segment_pending": 13605,
+    "updated_at": "2026-09-03 14:05:41"
   }
 }

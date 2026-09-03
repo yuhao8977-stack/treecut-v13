@@ -1,0 +1,723 @@
+{
+ "note": "定向恢复清单; 不自动提升 G1; 需增量 contamination verify(OCR/视觉) 通过且走正规 eligibility 路径",
+ "actions": {
+  "EXTEND": {
+   "high_value_candidates": 21,
+   "items": [
+    {
+     "media_id": "21674",
+     "source_id": 4,
+     "rel": "【工厂】产品类01\\【229】【2025.11.21】齐平伸缩\\小户型\\DJI_20251121154613_0676_D_GS0.MP4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "21679",
+     "source_id": 4,
+     "rel": "【工厂】产品类01\\【229】【2025.11.21】齐平伸缩\\小户型\\DJI_20251121154735_0682_D_GS0.MP4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "21680",
+     "source_id": 4,
+     "rel": "【工厂】产品类01\\【229】【2025.11.21】齐平伸缩\\小户型\\DJI_20251121154755_0683_D_GS0.MP4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "21681",
+     "source_id": 4,
+     "rel": "【工厂】产品类01\\【229】【2025.11.21】齐平伸缩\\小户型\\DJI_20251121154805_0684_D_GS0.MP4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "2255",
+     "source_id": 1,
+     "rel": "【14】T型亚克力腿\\【13】【河北石家庄】方小姐【空镜岛台亚克力的伸缩脚】【铁牛】)\\【13】【河北石家庄】方小姐【空镜岛台亚克力的伸缩脚】【铁牛】)-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "2492",
+     "source_id": 1,
+     "rel": "【21】伸缩功能\\【01】【水泥奶油白】汕尾陈小姐【总长两米4+伸缩50公分】\\【01】【水泥奶油白】汕尾陈小姐【总长两米4+伸缩50公分】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "2521",
+     "source_id": 1,
+     "rel": "【21】伸缩功能\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【岛台总长两米6+伸缩60公分】【铁牛01】\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【岛台总长两米6+伸缩60公分】【铁牛01】-1",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "2641",
+     "source_id": 1,
+     "rel": "【23】钢结构\\【48】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【2米8的长度可伸缩60公分】【小狮子】\\【48】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【2米8的长度可伸缩60公分】【小",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "2743",
+     "source_id": 1,
+     "rel": "【26】材质细节展示\\【105】【菲尼丝棕+木尼黑+巴西木】福建蔡女小姐【空镜岛台齐平伸缩的设计】\\【105】【菲尼丝棕+木尼黑+巴西木】福建蔡女小姐【空镜岛台齐平伸缩的设计】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "3341",
+     "source_id": 2,
+     "rel": "【02】尺寸展示\\【01】【水泥奶油白】汕尾陈小姐【总长两米4+伸缩50公分】\\【01】【水泥奶油白】汕尾陈小姐【总长两米4+伸缩50公分】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "3407",
+     "source_id": 2,
+     "rel": "【02】尺寸展示\\【105】【菲尼丝棕+木尼黑+巴西木】福建蔡女士【总长两米6+30公分伸缩】\\【105】【菲尼丝棕+木尼黑+巴西木】福建蔡女士【总长两米6+30公分伸缩】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "3709",
+     "source_id": 2,
+     "rel": "【02】尺寸展示\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【岛台总长两米6+伸缩60公分】【铁牛01】\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【岛台总长两米6+伸缩60公分】【铁牛01】-1",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "3877",
+     "source_id": 2,
+     "rel": "【02】尺寸展示\\【48】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【2米8的长度可伸缩60公分】【小狮子】\\【48】【威水尼奶油色+潘多拉+北美黑胡桃】辽宁齐先生【2米8的长度可伸缩60公分】【",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "4037",
+     "source_id": 2,
+     "rel": "【02】尺寸展示\\【87】广州徐旭【岛台伸缩后只有两米】\\【87】广州徐旭【岛台伸缩后只有两米】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "6569",
+     "source_id": 2,
+     "rel": "【10】岛台餐桌一体\\【92】【维多利亚+头艾米利亚】西安张先生【空镜岛台伸缩餐桌一体风】\\【92】【维多利亚+头艾米利亚】西安张先生【空镜岛台伸缩餐桌一体风】-3.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "6594",
+     "source_id": 2,
+     "rel": "【12】齐屏设计\\【108】【黑+白】上海李先生【空镜岛台齐屏伸缩的设计】01\\【108】【黑+白】上海李先生【空镜岛台齐屏伸缩的设计】01-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "7271",
+     "source_id": 4,
+     "rel": "【工厂】产品类01\\11.29 产品视频拍摄（已整理）\\【01】【20251129】深圳杨先生 L型伸缩岛台\\产品介绍\\DJI_20251129102414_0010_D_GS0.MP4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "7288",
+     "source_id": 4,
+     "rel": "【工厂】产品类01\\11.29 产品视频拍摄（已整理）\\【01】【20251129】深圳杨先生 L型伸缩岛台\\产品空镜\\DJI_20251129102844_0024_D_GS0.MP4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "7291",
+     "source_id": 4,
+     "rel": "【工厂】产品类01\\11.29 产品视频拍摄（已整理）\\【01】【20251129】深圳杨先生 L型伸缩岛台\\产品空镜\\DJI_20251129103144_0027_D_GS0.MP4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "7292",
+     "source_id": 4,
+     "rel": "【工厂】产品类01\\11.29 产品视频拍摄（已整理）\\【01】【20251129】深圳杨先生 L型伸缩岛台\\产品空镜\\DJI_20251129103200_0028_D_GS0.MP4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    }
+   ]
+  },
+  "RETRACT": {
+   "high_value_candidates": 0,
+   "items": []
+  },
+  "DRAWER_OPEN": {
+   "high_value_candidates": 59,
+   "items": [
+    {
+     "media_id": "1019",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【32】【潘多拉+釉木深棕】内蒙古杜先生【空镜开放式和下层抽屉收纳层展示】\\【32】【潘多拉+釉木深棕】内蒙古杜先生【空镜开放式和下层抽屉收纳层展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1025",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【34】【奶油水泥+杏黄柚木】南京魏小姐【空镜岛台开放式收纳层展示】\\【34】【奶油水泥+杏黄柚木】南京魏小姐【空镜岛台开放式收纳层展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1029",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【43】【黑白色】咸宁宋先生【岛台下层开放抽屉大小不一样收纳层】\\【43】【黑白色】咸宁宋先生【岛台下层开放抽屉大小不一样收纳层】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "103",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【113】【莎士比亚黑+木尼黑哑光】山西刘小姐【空镜岛台上层薄抽收纳层整体展示】\\【113】【莎士比亚黑+木尼黑哑光】山西刘小姐【空镜岛台上层薄抽收纳层整体展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1030",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【43】【黑白色】咸宁宋先生【岛台下层开放抽屉大小不一样收纳层】\\【43】【黑白色】咸宁宋先生【岛台下层开放抽屉大小不一样收纳层】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1031",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【43】【黑白色】咸宁宋先生【岛台底部预留了电线孔位设计】\\【43】【黑白色】咸宁宋先生【岛台底部预留了电线孔位设计】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1033",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【43】【黑白色】咸宁宋先生【空镜岛台开放式抽屉细节展示】\\【43】【黑白色】咸宁宋先生【空镜岛台开放式抽屉细节展示】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1035",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台下层开放式抽屉拉板收纳设计】\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台下层开放式抽屉拉板收纳设计】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1036",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台下层开放式抽屉拉板收纳设计】\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台下层开放式抽屉拉板收纳设计】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "121",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【11】【散花潘多拉+北美黑胡桃】上海焦先生【空镜岛台上层收纳层展示环绕】\\【11】【散花潘多拉+北美黑胡桃】上海焦先生【空镜岛台上层收纳层展示环绕】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "126",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【121】【宝格丽黑+骑士黑的搭配】广西谢先生【空镜岛台上层薄抽收纳层展示】\\【121】【宝格丽黑+骑士黑的搭配】广西谢先生【空镜岛台上层薄抽收纳层展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "129",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【122】【威士忌奶油色+艾米利亚浅棕 】湖南怀化彭小姐【空镜岛台上层薄抽收纳层展示】\\【122】【威士忌奶油色+艾米利亚浅棕 】湖南怀化彭小姐【空镜岛台上层薄抽收纳层展示】-1.m",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "136",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【124】【维多利亚+卡尔德拉原木】深圳张小姐【空镜岛台上层薄抽收纳层】\\【124】【维多利亚+卡尔德拉原木】深圳张小姐【空镜岛台上层薄抽收纳层】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "140",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【130】【威雪梨奶油白+胡桃木黑 】江苏苏州吉小姐【空镜岛台上层薄抽收纳层细节展示】\\【130】【威雪梨奶油白+胡桃木黑 】江苏苏州吉小姐【空镜岛台上层薄抽收纳层细节展示】-1.m",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "142",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【131】【罗马洞石+卡尔德拉原木】云南刘小姐【空镜岛台上层薄抽收纳层特写展示】\\【131】【罗马洞石+卡尔德拉原木】云南刘小姐【空镜岛台上层薄抽收纳层特写展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "148",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【空镜岛台上层薄抽收纳层】\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【空镜岛台上层薄抽收纳层】-3.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "151",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【空镜岛台上层薄抽收纳层】\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【空镜岛台上层薄抽收纳层】-6.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "152",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【空镜岛台上层薄抽收纳层】\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【空镜岛台上层薄抽收纳层】-7.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "162",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【13】【河北石家庄】方小姐【岛台收纳展示】【铁牛】\\【13】【河北石家庄】方小姐【岛台收纳展示】【铁牛】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "178",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【143】【富有肌理感的纯黑+铁锈色的简咖啡】汕头陈先生【空镜岛台上层薄抽收纳层】\\【143】【富有肌理感的纯黑+铁锈色的简咖啡】汕头陈先生【空镜岛台上层薄抽收纳层】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    }
+   ]
+  },
+  "STORAGE_PUT_IN": {
+   "high_value_candidates": 60,
+   "items": [
+    {
+     "media_id": "1019",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【32】【潘多拉+釉木深棕】内蒙古杜先生【空镜开放式和下层抽屉收纳层展示】\\【32】【潘多拉+釉木深棕】内蒙古杜先生【空镜开放式和下层抽屉收纳层展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1025",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【34】【奶油水泥+杏黄柚木】南京魏小姐【空镜岛台开放式收纳层展示】\\【34】【奶油水泥+杏黄柚木】南京魏小姐【空镜岛台开放式收纳层展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1029",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【43】【黑白色】咸宁宋先生【岛台下层开放抽屉大小不一样收纳层】\\【43】【黑白色】咸宁宋先生【岛台下层开放抽屉大小不一样收纳层】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "103",
+     "source_id": 1,
+     "rel": "【01】上层薄抽\\【113】【莎士比亚黑+木尼黑哑光】山西刘小姐【空镜岛台上层薄抽收纳层整体展示】\\【113】【莎士比亚黑+木尼黑哑光】山西刘小姐【空镜岛台上层薄抽收纳层整体展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1030",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【43】【黑白色】咸宁宋先生【岛台下层开放抽屉大小不一样收纳层】\\【43】【黑白色】咸宁宋先生【岛台下层开放抽屉大小不一样收纳层】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1035",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台下层开放式抽屉拉板收纳设计】\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台下层开放式抽屉拉板收纳设计】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1036",
+     "source_id": 1,
+     "rel": "【03】开放抽屉\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台下层开放式抽屉拉板收纳设计】\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台下层开放式抽屉拉板收纳设计】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1060",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\ 【126】【骑士黑+北美黑胡桃】浙江宁波潘先生【空镜岛台对开门田字格收纳层展示】\\ 【126】【骑士黑+北美黑胡桃】浙江宁波潘先生【空镜岛台对开门田字格收纳层展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1065",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\ 【14】【黑白简约风】江苏殷先生【空镜岛台对开门收纳层细节展示环绕】【铁牛】\\ 【14】【黑白简约风】江苏殷先生【空镜岛台对开门收纳层细节展示环绕】【铁牛】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1094",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\ 【71】【鱼肚白+艾米利亚浅棕】杭州楼先生【岛台下对开门田字格收纳层】\\ 【71】【鱼肚白+艾米利亚浅棕】杭州楼先生【岛台下对开门田字格收纳层】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1099",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\ 【73】【米黄洞石+艾米利亚棕】苏金女士【空镜岛台对开间收纳】\\ 【73】【米黄洞石+艾米利亚棕】苏金女士【空镜岛台对开间收纳】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1100",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\ 【74】【纯白色+釉木红印】深圳唐先生【岛台下层四宫格的分区收纳】\\ 【74】【纯白色+釉木红印】深圳唐先生【岛台下层四宫格的分区收纳】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1104",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\ 【75】【威水尼奶油】西安小闹【空镜岛台对开门收纳层展示】\\ 【75】【威水尼奶油】西安小闹【空镜岛台对开门收纳层展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1105",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\ 【75】【威水尼奶油】西安小闹【空镜岛台对开门收纳层展示】\\ 【75】【威水尼奶油】西安小闹【空镜岛台对开门收纳层展示】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1115",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\【01】【水泥奶油白】汕尾陈小姐【空镜岛头对开间收纳细节展示横移】【坤宝】\\【01】【水泥奶油白】汕尾陈小姐【空镜岛头对开间收纳细节展示横移】【坤宝】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1120",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\【03】【黑白极简岛台】惠州庄小姐【空镜岛台对开门收纳层前推]\\【03】【黑白极简岛台】惠州庄小姐【空镜岛台对开门收纳层前推]-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1130",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\【06】【纯白】浙江王先生】【空镜岛头下层对开门收纳层展示前推】01\\【06】【纯白】浙江王先生】【空镜岛头下层对开门收纳层展示前推】01-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1131",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\【06】【纯白】浙江王先生】【空镜岛头下层对开门收纳层展示环绕】01\\【06】【纯白】浙江王先生】【空镜岛头下层对开门收纳层展示环绕】01-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1136",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\【07】【中古风】长春市邵小姐【空镜岛台下层对开门收纳层展示前推】01\\【07】【中古风】长春市邵小姐【空镜岛台下层对开门收纳层展示前推】01-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1142",
+     "source_id": 1,
+     "rel": "【04】对开间收纳\\【07】【中古风】长春市邵小姐【空镜岛台对开门收纳层展示】01\\【07】【中古风】长春市邵小姐【空镜岛台对开门收纳层展示】01-4.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    }
+   ]
+  },
+  "SOCKET_INSERT": {
+   "high_value_candidates": 17,
+   "items": [
+    {
+     "media_id": "1600",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\ 【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛台配置了公牛轨道插座】01\\ 【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛台配置了公牛轨道插座】01-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1654",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛台配置公牛轨道插座】02\\【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛台配置公牛轨道插座】02-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1683",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【09】【宝格丽】黑龙江于洋洋【空镜岛台岛台配置一组公牛轨道插座展示】\\【09】【宝格丽】黑龙江于洋洋【空镜岛台岛台配置一组公牛轨道插座展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "ABSENT",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1689",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【102】【宝格丽黑+纯黑】天津陈小姐【空镜岛台公牛轨道插座展示】\\【102】【宝格丽黑+纯黑】天津陈小姐【空镜岛台公牛轨道插座展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1694",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【104】【宝格丽白+棕咖色】杭州戚小姐【空镜岛台公牛轨道插座整体展示】\\【104】【宝格丽白+棕咖色】杭州戚小姐【空镜岛台公牛轨道插座整体展示】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1708",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【113】【莎士比亚黑+木尼黑哑光】山西刘小姐【岛台配置了一组公牛轨道插座】\\【113】【莎士比亚黑+木尼黑哑光】山西刘小姐【岛台配置了一组公牛轨道插座】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "ABSENT",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1779",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【145】【鱼肚金+劳伦黑金】福建戴小姐【空镜岛台公牛轨道插座整体展示】\\【145】【鱼肚金+劳伦黑金】福建戴小姐【空镜岛台公牛轨道插座整体展示】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1820",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【30】【散花潘多拉+纯黑哑光+北美黑胡桃】江苏火小姐【配置了一组公牛轨道插座】【铁牛】】\\【30】【散花潘多拉+纯黑哑光+北美黑胡桃】江苏火小姐【配置了一组公牛轨道插座】【铁牛",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1877",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【41】【宝格丽+一诺纯黑+艾米利亚棕木纹】杭州沈小姐【空镜岛台牛轨道插座展示】\\【41】【宝格丽+一诺纯黑+艾米利亚棕木纹】杭州沈小姐【空镜岛台牛轨道插座展示】-3.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1919",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【50】【鱼肚白+纯黑】河南洛阳郑先生【空镜岛台细节特写公牛轨道插座展示】\\【50】【鱼肚白+纯黑】河南洛阳郑先生【空镜岛台细节特写公牛轨道插座展示】-3.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1926",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【52】【冰川白】浙江陈先生【配置了一组公牛轨道插座】\\【52】【冰川白】浙江陈先生【配置了一组公牛轨道插座】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1938",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台公牛轨道插座】【铁牛01】\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台公牛轨道插座】【铁牛01】-3(1).mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "1939",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台公牛轨道插座】【铁牛01】\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台公牛轨道插座】【铁牛01】-3.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "2041",
+     "source_id": 1,
+     "rel": "【05】公牛轨道插座\\【96】【哑光宝格丽+黑白】吉林刘小姐【空镜岛台公牛轨道插座】\\【96】【哑光宝格丽+黑白】吉林刘小姐【空镜岛台公牛轨道插座】-1.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "2206",
+     "source_id": 1,
+     "rel": "【12】灯带\\【90】【冷翡翠+维多利亚】伦敦【岛台配置了一组音标的轨道插座】\\【90】【冷翡翠+维多利亚】伦敦【岛台配置了一组音标的轨道插座】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "2951",
+     "source_id": 1,
+     "rel": "【28】音标轨道插座\\【64】【威水尼奶白色的岛头搭配巴西木纹岩】新加坡淑华【音标轨道插座】\\【64】【威水尼奶白色的岛头搭配巴西木纹岩】新加坡淑华【音标轨道插座】-3.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    },
+    {
+     "media_id": "2954",
+     "source_id": 1,
+     "rel": "【28】音标轨道插座\\【90】【冷翡翠+维多利亚】伦敦【岛台配置了一组音标的轨道插座】\\【90】【冷翡翠+维多利亚】伦敦【岛台配置了一组音标的轨道插座】-2.mp4",
+     "contamination": "PENDING_VERIFY",
+     "burned": "UNCERTAIN",
+     "wm": "ABSENT",
+     "promotable": false
+    }
+   ]
+  }
+ },
+ "generated_at": "2026-09-03 13:58:37"
+}

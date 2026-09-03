@@ -1,0 +1,527 @@
+{
+ "metrics": {
+  "EXTEND": {
+   "broad_eligible_union": 327,
+   "cheap_sample": 10,
+   "motion_high_shortlist": 4,
+   "qwen_reviewed": 4,
+   "tvrc_pass": 0,
+   "tvrc_fail": 2,
+   "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在"
+  },
+  "RETRACT": {
+   "broad_eligible_union": 327,
+   "cheap_sample": 10,
+   "motion_high_shortlist": 4,
+   "qwen_reviewed": 4,
+   "tvrc_pass": 0,
+   "tvrc_fail": 0,
+   "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在"
+  },
+  "DRAWER_OPEN": {
+   "broad_eligible_union": 395,
+   "cheap_sample": 10,
+   "motion_high_shortlist": 4,
+   "qwen_reviewed": 4,
+   "tvrc_pass": 0,
+   "tvrc_fail": 2,
+   "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在"
+  },
+  "STORAGE_PUT_IN": {
+   "broad_eligible_union": 396,
+   "cheap_sample": 10,
+   "motion_high_shortlist": 4,
+   "qwen_reviewed": 4,
+   "tvrc_pass": 0,
+   "tvrc_fail": 2,
+   "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在"
+  },
+  "SOCKET_INSERT": {
+   "broad_eligible_union": 394,
+   "cheap_sample": 10,
+   "motion_high_shortlist": 4,
+   "qwen_reviewed": 4,
+   "tvrc_pass": 0,
+   "tvrc_fail": 0,
+   "note": "样本非穷举; broad 池仍数百, 若样本有命中则证明 Recall 存在"
+  }
+ },
+ "candidates": [
+  {
+   "action": "EXTEND",
+   "media_id": 3301,
+   "sid": 2,
+   "rel": "【02】尺寸展示\\ 【15】上海【岛台餐桌伸缩40公分】【铁牛】\\ 【15】上海【岛台餐桌伸缩40公分】【铁牛】-1.mp4",
+   "dur": 8.3,
+   "motion_proxy": 1.0,
+   "direction": "UNCERTAIN",
+   "tvrc": "FAIL",
+   "windows": []
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 2507,
+   "sid": 1,
+   "rel": "【21】伸缩功能\\【141】【纯黑+北美黑胡桃】江苏徐先生【岛台伸缩60公分】\\【141】【纯黑+北美黑胡桃】江苏徐先生【岛台伸缩60公分】-1.mp4",
+   "dur": 5.3,
+   "motion_proxy": 1.0,
+   "direction": "UNCERTAIN",
+   "tvrc": "FAIL",
+   "windows": []
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 3987,
+   "sid": 2,
+   "rel": "【02】尺寸展示\\【65】【纯黑哑光+含浆水 】慈溪韩小姐【岛台总长两米6+餐桌部分一米3+伸缩50公分】\\【65】【纯黑哑光+含浆水 】慈溪韩小姐【岛台总长两米6+餐桌部分一米3",
+   "dur": 5.9,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 2514,
+   "sid": 1,
+   "rel": "【21】伸缩功能\\【156】【顶级寒江雪+全黑哑光】汕头郭先生【岛台总长两米6+伸缩60公分】【02】\\【156】【顶级寒江雪+全黑哑光】汕头郭先生【岛台总长两米6+伸缩60公分】",
+   "dur": 9.8,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 3914,
+   "sid": 2,
+   "rel": "【02】尺寸展示\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台餐桌1米2+60公分伸缩】【铁牛】\\【53】【网纹大花白+蓝田香樟】苏州刘小姐【岛台餐桌1米2+60公分伸缩】【铁",
+   "dur": 6.4,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 6570,
+   "sid": 2,
+   "rel": "【10】岛台餐桌一体\\【92】【维多利亚+头艾米利亚】西安张先生【空镜岛台伸缩餐桌一体风】\\【92】【维多利亚+头艾米利亚】西安张先生【空镜岛台伸缩餐桌一体风】-4.mp4",
+   "dur": 7.6,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 3434,
+   "sid": 2,
+   "rel": "【02】尺寸展示\\【114】【维多利亚+北美黑胡桃】四川刘先生【岛台总长两米6+伸缩60公分】\\【114】【维多利亚+北美黑胡桃】四川刘先生【岛台总长两米6+伸缩60公分】-1.m",
+   "dur": 10.6,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 21677,
+   "sid": 4,
+   "rel": "【工厂】产品类01\\【229】【2025.11.21】齐平伸缩\\小户型\\DJI_20251121154650_0679_D_GS0.MP4",
+   "dur": 12.7,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 3894,
+   "sid": 2,
+   "rel": "【02】尺寸展示\\【51】【微水泥+兰亭香樟木纹色】盐城韦小姐【总长有两米3+伸缩50公分】【坤宝】\\【51】【微水泥+兰亭香樟木纹色】盐城韦小姐【总长有两米3+伸缩50公分】【坤",
+   "dur": 5.9,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "EXTEND",
+   "media_id": 2250,
+   "sid": 1,
+   "rel": "【14】T型亚克力腿\\【09】【宝格丽】黑龙江于洋洋【4公分的厚度+茶色的t亚克力伸缩脚】\\【09】【宝格丽】黑龙江于洋洋【4公分的厚度+茶色的t亚克力伸缩脚】-1.mp4",
+   "dur": 5.7,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 2550,
+   "sid": 1,
+   "rel": "【21】伸缩功能\\【59】【微水泥奶油白+兰亭香樟木纹岩板】深圳张小姐 【岛台餐桌伸缩功能设计】\\【59】【微水泥奶油白+兰亭香樟木纹岩板】深圳张小姐 【岛台餐桌伸缩功能设计】-1",
+   "dur": 6.7,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 3358,
+   "sid": 2,
+   "rel": "【02】尺寸展示\\【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛台总长两米7+伸缩60公分】02\\【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛台总长两米7+伸缩60公分】02",
+   "dur": 7.3,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 2541,
+   "sid": 1,
+   "rel": "【21】伸缩功能\\【51】【微水泥+兰亭香樟木纹色】盐城维维【岛台总长两米2餐桌+伸缩50公分】【铁牛】\\【51】【微水泥+兰亭香樟木纹色】盐城维维【岛台总长两米2餐桌+伸缩50公",
+   "dur": 4.3,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 3819,
+   "sid": 2,
+   "rel": "【02】尺寸展示\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台总长两米4+伸缩40公分】【01】\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台总长两米4+伸缩40公分】【01】-1",
+   "dur": 3.7,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 5184,
+   "sid": 2,
+   "rel": "【04】造型展示\\【142】【普拉达绿亮光+纯黑哑光】深圳胡小姐【空镜岛台伸缩餐桌一体整体展示】\\【142】【普拉达绿亮光+纯黑哑光】深圳胡小姐【空镜岛台伸缩餐桌一体整体展示】-1",
+   "dur": 3.2,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 3600,
+   "sid": 2,
+   "rel": "【02】尺寸展示\\【146】【维多利亚鱼肚白+北美黑胡桃】福建李小姐【岛台总长两米2+伸缩40公分】\\【146】【维多利亚鱼肚白+北美黑胡桃】福建李小姐【岛台总长两米2+伸缩40公",
+   "dur": 7.4,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 3442,
+   "sid": 2,
+   "rel": "【02】尺寸展示\\【116】【至尊寒江水+木尼黑哑光】上海金小姐【岛台总长两米6+伸缩50公分】\\【116】【至尊寒江水+木尼黑哑光】上海金小姐【岛台总长两米6+伸缩50公分】-1",
+   "dur": 10.5,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 3571,
+   "sid": 2,
+   "rel": "【02】尺寸展示\\【141】【纯黑+北美黑胡桃】江苏徐先生【岛台总长两米4+伸缩60公分】\\【141】【纯黑+北美黑胡桃】江苏徐先生【岛台总长两米4+伸缩60公分】-1.mp4",
+   "dur": 12.3,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 2520,
+   "sid": 1,
+   "rel": "【21】伸缩功能\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【岛台伸缩60公分的餐桌】【铁牛02】\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【岛台伸缩60公分的餐桌】【铁牛0",
+   "dur": 9.7,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "RETRACT",
+   "media_id": 7285,
+   "sid": 4,
+   "rel": "【工厂】产品类01\\11.29 产品视频拍摄（已整理）\\【01】【20251129】深圳杨先生 L型伸缩岛台\\产品空镜\\DJI_20251129102759_0021_D_GS0.",
+   "dur": 7.8,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 27,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\ 【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【岛台上层薄抽收纳展示】【02】\\ 【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【岛台上层薄抽收纳展示】",
+   "dur": 6.8,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 424,
+   "sid": 1,
+   "rel": "【02】下层抽屉\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台下层大抽屉收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台下层大抽屉收纳展示】-3.mp4",
+   "dur": 6.1,
+   "motion_proxy": 1.0,
+   "direction": "UNCERTAIN",
+   "tvrc": "FAIL",
+   "windows": []
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 146,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【空镜岛台上层薄抽收纳层】\\【133】【潘多拉哑光+纯黑哑光+卡尔的拉浅棕】湖南郑小姐【空镜岛台上层薄抽",
+   "dur": 3.9,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 88,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【106】【散花潘多拉+纯黑哑光】佛山高先生【空镜岛台上层薄抽展示】\\【106】【散花潘多拉+纯黑哑光】佛山高先生【空镜岛台上层薄抽展示】-1.mp4",
+   "dur": 4.7,
+   "motion_proxy": 1.0,
+   "direction": "UNCERTAIN",
+   "tvrc": "FAIL",
+   "windows": []
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 114,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【116】【至尊寒江水+木尼黑哑光】上海金小姐【空镜岛台上层薄抽收纳整体展示】\\【116】【至尊寒江水+木尼黑哑光】上海金小姐【空镜岛台上层薄抽收纳整体展示】-2",
+   "dur": 3.1,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 108,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【115】【宝格丽黑+骑士黑】中山杜小姐【岛台上层薄抽收纳层】\\【115】【宝格丽黑+骑士黑】中山杜小姐【岛台上层薄抽收纳层】-1.mp4",
+   "dur": 5.2,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 282,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台上层薄抽收纳设计】\\【44】【一诺哑光白哑光白】盐城夏小姐【岛台上层薄抽收纳设计】-1.mp4",
+   "dur": 3.1,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 430,
+   "sid": 1,
+   "rel": "【02】下层抽屉\\ 【14】【黑白简约风】江苏殷先生【岛台下层收纳层展示】【铁牛】\\ 【14】【黑白简约风】江苏殷先生【岛台下层收纳层展示】【铁牛】-1.mp4",
+   "dur": 12.1,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 180,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【144】【蒂诺蓝金奢石+香奈儿白】江苏唐先生【岛台岛台上层薄抽收纳层 】\\【144】【蒂诺蓝金奢石+香奈儿白】江苏唐先生【岛台岛台上层薄抽收纳层 】-1.mp4",
+   "dur": 4.1,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "DRAWER_OPEN",
+   "media_id": 425,
+   "sid": 1,
+   "rel": "【02】下层抽屉\\  【35】【奶白色+北美黑胡桃】深圳陈先生【空镜岛台下层小抽屉收纳展示】\\  【35】【奶白色+北美黑胡桃】深圳陈先生【空镜岛台下层小抽屉收纳展示】-1.mp4",
+   "dur": 16.7,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 230,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台上层薄抽收纳展示】】【坤宝】01\\【27】【纯白色+卡拉卡塔白】江苏朱先生【岛台上层薄抽收纳展示】】【坤宝】01-1",
+   "dur": 8.3,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 322,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【59】【微水泥奶油白+兰亭香樟木纹岩板】深圳张小姐 【岛台上层薄抽+双开门柜子的收纳设计】\\【59】【微水泥奶油白+兰亭香樟木纹岩板】深圳张小姐 【岛台上层薄抽",
+   "dur": 9.8,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 102,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【113】【莎士比亚黑+木尼黑哑光】山西刘小姐【岛台上层薄抽收纳层】\\【113】【莎士比亚黑+木尼黑哑光】山西刘小姐【岛台上层薄抽收纳层】-1.mp4",
+   "dur": 6.0,
+   "motion_proxy": 1.0,
+   "direction": "UNCERTAIN",
+   "tvrc": "FAIL",
+   "windows": []
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 390,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【93】【纯白哑光+艾米利亚浅棕】河北张小姐【岛台上层薄抽收纳层】\\【93】【纯白哑光+艾米利亚浅棕】河北张小姐【岛台上层薄抽收纳层】-2.mp4",
+   "dur": 2.7,
+   "motion_proxy": 1.0,
+   "direction": "UNCERTAIN",
+   "tvrc": "FAIL",
+   "windows": []
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 325,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【59】【微水泥奶油白+兰亭香樟木纹岩板】深圳张小姐 【岛台上层薄抽收纳展示01】\\【59】【微水泥奶油白+兰亭香樟木纹岩板】深圳张小姐 【岛台上层薄抽收纳展示0",
+   "dur": 17.5,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 553,
+   "sid": 1,
+   "rel": "【02】下层抽屉\\【111】【纯白哑光+兰亭香樟木纹色 】山东朱先生【岛台下半部分的定制收纳设计】\\【111】【纯白哑光+兰亭香樟木纹色 】山东朱先生【岛台下半部分的定制收纳设计】",
+   "dur": 8.1,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 66,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【08】【黑白极简风】成都孙小姐【岛台上层薄抽收纳展示】\\【08】【黑白极简风】成都孙小姐【岛台上层薄抽收纳展示】-3.mp4",
+   "dur": 2.6,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 312,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\【54】【雅特白玉+南美柚木】北京吴小姐【岛台上层薄抽收纳展示】【小狮子】】【01】\\【54】【雅特白玉+南美柚木】北京吴小姐【岛台上层薄抽收纳展示】【小狮子】】",
+   "dur": 5.9,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 22,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\ 【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【上层的薄抽收纳宝藏】【02】\\ 【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【上层的薄抽收纳宝藏】【0",
+   "dur": 5.2,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "STORAGE_PUT_IN",
+   "media_id": 408,
+   "sid": 1,
+   "rel": "【01】上层薄抽\\岛【67】【寒江雪+纯黑】江苏戴先生【岛台上层薄抽收纳层】\\岛【67】【寒江雪+纯黑】江苏戴先生【岛台上层薄抽收纳层】-1.mp4",
+   "dur": 4.6,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "SOCKET_INSERT",
+   "media_id": 1713,
+   "sid": 1,
+   "rel": "【05】公牛轨道插座\\【116】【至尊寒江水+木尼黑哑光】上海金小姐【岛台配置了一组公牛轨道插座】\\【116】【至尊寒江水+木尼黑哑光】上海金小姐【岛台配置了一组公牛轨道插座】-2",
+   "dur": 6.4,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "SOCKET_INSERT",
+   "media_id": 1822,
+   "sid": 1,
+   "rel": "【05】公牛轨道插座\\【32】【潘多拉+釉木深棕】内蒙古杜先生【空镜公牛轨道插座展示】\\【32】【潘多拉+釉木深棕】内蒙古杜先生【空镜公牛轨道插座展示】-1.mp4",
+   "dur": 8.8,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "SOCKET_INSERT",
+   "media_id": 1666,
+   "sid": 1,
+   "rel": "【05】公牛轨道插座\\【07】【中古风】长春市邵小姐【空镜岛台公牛轨道插座细节特写展示】01\\【07】【中古风】长春市邵小姐【空镜岛台公牛轨道插座细节特写展示】01-2.mp4",
+   "dur": 3.8,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "SOCKET_INSERT",
+   "media_id": 1989,
+   "sid": 1,
+   "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨",
+   "dur": 6.1,
+   "motion_proxy": 1.0,
+   "qwen_verdict": "NO_ACTION_STATE",
+   "windows": []
+  },
+  {
+   "action": "SOCKET_INSERT",
+   "media_id": 1817,
+   "sid": 1,
+   "rel": "【05】公牛轨道插座\\【29】【罗马洞石】四川刘女士【配了一组公牛轨道插座】【坤宝02】\\【29】【罗马洞石】四川刘女士【配了一组公牛轨道插座】【坤宝02】-2.mp4",
+   "dur": 6.1,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "SOCKET_INSERT",
+   "media_id": 2001,
+   "sid": 1,
+   "rel": "【05】公牛轨道插座\\【66】【空镜 镜头】江苏刘朝庆【空镜岛台公牛轨道插座展示】\\【66】【空镜 镜头】江苏刘朝庆【空镜岛台公牛轨道插座展示】-2.mp4",
+   "dur": 2.1,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "SOCKET_INSERT",
+   "media_id": 1811,
+   "sid": 1,
+   "rel": "【05】公牛轨道插座\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【空镜岛台公牛轨道插座】\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【空镜岛台公牛轨道插座】-1.mp4",
+   "dur": 4.2,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "SOCKET_INSERT",
+   "media_id": 1645,
+   "sid": 1,
+   "rel": "【05】公牛轨道插座\\【01】【水泥奶油白】汕尾陈小姐【岛台配置公牛轨道插座】【坤宝-01-1】\\【01】【水泥奶油白】汕尾陈小姐【岛台配置公牛轨道插座】【坤宝-01-1】-2.m",
+   "dur": 2.2,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "SOCKET_INSERT",
+   "media_id": 1994,
+   "sid": 1,
+   "rel": "【05】公牛轨道插座\\【64】【威水尼奶白色的岛头搭配巴西木纹岩】新加坡淑华【音标轨道插座】\\【64】【威水尼奶白色的岛头搭配巴西木纹岩】新加坡淑华【音标轨道插座】-2.mp4",
+   "dur": 5.6,
+   "motion_proxy": 1.0,
+   "windows": []
+  },
+  {
+   "action": "SOCKET_INSERT",
+   "media_id": 1723,
+   "sid": 1,
+   "rel": "【05】公牛轨道插座\\【11】【散花潘多拉+北美黑胡桃】上海焦先生【空镜岛台展示横移】\\【11】【散花潘多拉+北美黑胡桃】上海焦先生【空镜岛台展示横移】-2.mp4",
+   "dur": 4.5,
+   "motion_proxy": 1.0,
+   "windows": []
+  }
+ ]
+}
