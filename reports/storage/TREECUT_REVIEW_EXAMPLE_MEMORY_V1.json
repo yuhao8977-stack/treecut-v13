@@ -734,5 +734,98 @@
    "actual_support": "FLEXIBLE_TABLE_FUNCTION candidate"
   }
  },
- "note": "窗口级负例记忆(review_scope=SUBCLIP_WINDOW); 不禁止整段素材用于其它动作/窗口; 1985 对 EXTEND/RETRACT 无效但可用于 TRACK_SOCKET/SOCKET_ADJUST"
+ "note": "追加 MMV Round1 人工裁决(窗口/素材语义级)",
+ "mmv_round1": [
+  {
+   "media_id": 89,
+   "requested": "EXTEND",
+   "human": "FAIL",
+   "semantics": [
+    "PERSON_MOTION",
+    "STATIC_PRODUCT_PRESENTATION",
+    "TABLETOP_VISIBLE"
+   ],
+   "reason": [
+    "NO_PROVEN_TABLETOP_GEOMETRY_CHANGE",
+    "PERSON_MOTION_NOT_PRODUCT_MOTION"
+   ],
+   "role": "GOLDEN_HARD_NEGATIVE"
+  },
+  {
+   "media_id": 52,
+   "requested": "DRAWER_OPEN",
+   "human": "GOOD",
+   "semantics": [
+    "DRAWER_OPEN"
+   ],
+   "reason": [
+    "DRAWER_OUTWARD",
+    "CLOSED→OPEN"
+   ],
+   "role": "POSITIVE_CALIBRATION",
+   "note": "machine UNSURE 保守可接受"
+  },
+  {
+   "media_id": 109,
+   "requested": "DRAWER_OPEN",
+   "human": "FAIL",
+   "semantics": [
+    "DRAWER_OPEN_STATE",
+    "STATIC"
+   ],
+   "reason": [
+    "DRAWER_ALREADY_OPEN",
+    "NO_CLOSED_TO_OPEN_TRANSITION"
+   ],
+   "role": "STATE_NOT_ACTION_GOLDEN_NEGATIVE"
+  },
+  {
+   "media_id": 51,
+   "requested": "EXTEND",
+   "human": "FAIL",
+   "semantics": [
+    "STATIC_PRODUCT_PRESENTATION"
+   ],
+   "reason": [
+    "NO_TARGET_TABLETOP_MOTION",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ]
+  },
+  {
+   "media_id": 1985,
+   "requested": "EXTEND",
+   "human": "FAIL",
+   "semantics": [
+    "TRACK_SOCKET",
+    "SOCKET_MODULE",
+    "SOCKET_ADJUST"
+   ],
+   "reason": [
+    "ROI_SEMANTIC_LEAKAGE",
+    "SOCKET_MOTION_NOT_TABLETOP_MOTION"
+   ],
+   "supports": [
+    "TRACK_SOCKET",
+    "SOCKET_ADJUST"
+   ]
+  },
+  {
+   "media_id": 1986,
+   "requested": "EXTEND",
+   "human": "FAIL",
+   "semantics": [
+    "TRACK_SOCKET",
+    "SOCKET_MODULE",
+    "SOCKET_ADJUST"
+   ],
+   "reason": [
+    "ROI_SEMANTIC_LEAKAGE",
+    "SOCKET_MOTION_NOT_TABLETOP_MOTION"
+   ],
+   "supports": [
+    "TRACK_SOCKET",
+    "SOCKET_ADJUST"
+   ]
+  }
+ ]
 }

@@ -1,0 +1,5 @@
+{
+ "status": "BLOCKED",
+ "evidence": "qwen2.5vl 对多对象JSON bbox 回显联合名/绝对坐标/伪JSON(见调试原样), 无法可信 MODEL_DETECTED ROI",
+ "fallback": "布局启发式 + 运动簇归属(小簇排除) — 不足: 残差高/人带重叠弱"
+}

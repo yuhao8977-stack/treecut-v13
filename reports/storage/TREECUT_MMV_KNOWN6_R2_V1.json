@@ -1,0 +1,70 @@
+{
+ "cases": [
+  {
+   "media_id": 89,
+   "requested": "Action.EXTEND",
+   "verdict": "Verdict.UNSURE",
+   "expected": "FAIL",
+   "met": false,
+   "core_motion": 0.317,
+   "person_motion": 0.575,
+   "small_other_motion": 0.0,
+   "roi_source": "HEURISTIC"
+  },
+  {
+   "media_id": 52,
+   "requested": "Action.DRAWER_OPEN",
+   "verdict": "Verdict.UNSURE",
+   "expected": "PASS/STRONG_UNSURE",
+   "met": true,
+   "core_motion": 1.185,
+   "person_motion": 1.224,
+   "small_other_motion": 300.699,
+   "roi_source": "HEURISTIC"
+  },
+  {
+   "media_id": 109,
+   "requested": "Action.DRAWER_OPEN",
+   "verdict": "Verdict.UNSURE",
+   "expected": "FAIL",
+   "met": false,
+   "core_motion": 0.429,
+   "person_motion": 0.755,
+   "small_other_motion": 10.638,
+   "roi_source": "HEURISTIC"
+  },
+  {
+   "media_id": 51,
+   "requested": "Action.EXTEND",
+   "verdict": "Verdict.UNSURE",
+   "expected": "FAIL",
+   "met": false,
+   "core_motion": 0.87,
+   "person_motion": 1.117,
+   "small_other_motion": 0.0,
+   "roi_source": "HEURISTIC"
+  },
+  {
+   "media_id": 1985,
+   "requested": "Action.EXTEND",
+   "verdict": "Verdict.UNSURE",
+   "expected": "FAIL",
+   "met": false,
+   "core_motion": 0.891,
+   "person_motion": 1.092,
+   "small_other_motion": 0.0,
+   "roi_source": "HEURISTIC"
+  },
+  {
+   "media_id": 1986,
+   "requested": "Action.EXTEND",
+   "verdict": "Verdict.UNSURE",
+   "expected": "FAIL",
+   "met": false,
+   "core_motion": 0.891,
+   "person_motion": 1.092,
+   "small_other_motion": 0.0,
+   "roi_source": "HEURISTIC"
+  }
+ ]
+}

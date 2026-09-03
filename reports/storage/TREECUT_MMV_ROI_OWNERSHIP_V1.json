@@ -1,0 +1,5 @@
+{
+ "ownership": "ISLAND_BODY 含 TABLETOP/DRAWER/TRACK_SOCKET; SOCKET motion 不得计入 TABLETOP",
+ "mechanism": "person 带 mask + 小移动簇(connectedComponents) 从目标核心排除",
+ "limitation": "见 KNOWN6_R2 结果"
+}

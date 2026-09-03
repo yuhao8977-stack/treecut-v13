@@ -1,0 +1,40 @@
+{
+ "per_case": [
+  {
+   "media_id": 89,
+   "core_motion": 0.317,
+   "person_motion": 0.575,
+   "small_other": 0.0
+  },
+  {
+   "media_id": 52,
+   "core_motion": 1.185,
+   "person_motion": 1.224,
+   "small_other": 300.699
+  },
+  {
+   "media_id": 109,
+   "core_motion": 0.429,
+   "person_motion": 0.755,
+   "small_other": 10.638
+  },
+  {
+   "media_id": 51,
+   "core_motion": 0.87,
+   "person_motion": 1.117,
+   "small_other": 0.0
+  },
+  {
+   "media_id": 1985,
+   "core_motion": 0.891,
+   "person_motion": 1.092,
+   "small_other": 0.0
+  },
+  {
+   "media_id": 1986,
+   "core_motion": 0.891,
+   "person_motion": 1.092,
+   "small_other": 0.0
+  }
+ ]
+}

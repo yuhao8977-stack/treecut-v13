@@ -330,6 +330,23 @@
       "camera translation-only",
       "阈值 PROVISIONAL"
     ],
-    "updated_at": "2026-09-03 15:40:17"
+    "updated_at": "2026-09-03 15:40:17",
+    "r2": {
+      "status": "MMVV_R2_KNOWN_CASE_NEEDS_REPAIR",
+      "cases": {
+        "89": "Verdict.UNSURE",
+        "52": "Verdict.UNSURE",
+        "109": "Verdict.UNSURE",
+        "51": "Verdict.UNSURE",
+        "1985": "Verdict.UNSURE",
+        "1986": "Verdict.UNSURE"
+      },
+      "blockers": [
+        "qwen ROI 不可信",
+        "启发式+簇归属不足",
+        "相机补偿残差高"
+      ],
+      "updated_at": "2026-09-03 18:04:38"
+    }
   }
 }

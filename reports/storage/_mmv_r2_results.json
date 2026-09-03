@@ -1,0 +1,290 @@
+[
+ {
+  "media_id": 89,
+  "requested": "Action.EXTEND",
+  "window": [
+   0.0,
+   7.12
+  ],
+  "verdict": "Verdict.UNSURE",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+  ],
+  "roi_motion": {
+   "TABLETOP": 0.317,
+   "PERSON": 0.575,
+   "SOCKET_OR_SMALL_OTHER": 0.0
+  },
+  "target_roi": {
+   "name": "TABLETOP",
+   "x1": 138,
+   "y1": 1536,
+   "x2": 1589,
+   "y2": 3010,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "socket_roi": null,
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "roi_source": "HEURISTIC",
+  "core_motion": 0.317,
+  "camera_translation_px": 11.51,
+  "camera_reliable": false,
+  "fusion_note": "heuristic 不得 PASS; 门序=visible→moved→direction"
+ },
+ {
+  "media_id": 52,
+  "requested": "Action.DRAWER_OPEN",
+  "window": [
+   0.0,
+   10.0
+  ],
+  "verdict": "Verdict.UNSURE",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+  ],
+  "roi_motion": {
+   "DRAWER": 1.185,
+   "PERSON": 1.224,
+   "SOCKET_OR_SMALL_OTHER": 300.699
+  },
+  "target_roi": {
+   "name": "DRAWER",
+   "x1": 138,
+   "y1": 1382,
+   "x2": 1589,
+   "y2": 3010,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "socket_roi": null,
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "roi_source": "HEURISTIC",
+  "core_motion": 1.185,
+  "camera_translation_px": 77.59,
+  "camera_reliable": false,
+  "fusion_note": "heuristic 不得 PASS; 门序=visible→moved→direction"
+ },
+ {
+  "media_id": 109,
+  "requested": "Action.DRAWER_OPEN",
+  "window": [
+   0.0,
+   5.8
+  ],
+  "verdict": "Verdict.UNSURE",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+  ],
+  "roi_motion": {
+   "DRAWER": 0.429,
+   "PERSON": 0.755,
+   "SOCKET_OR_SMALL_OTHER": 10.638
+  },
+  "target_roi": {
+   "name": "DRAWER",
+   "x1": 138,
+   "y1": 1382,
+   "x2": 1589,
+   "y2": 3010,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "socket_roi": null,
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "roi_source": "HEURISTIC",
+  "core_motion": 0.429,
+  "camera_translation_px": 10.08,
+  "camera_reliable": false,
+  "fusion_note": "heuristic 不得 PASS; 门序=visible→moved→direction"
+ },
+ {
+  "media_id": 51,
+  "requested": "Action.EXTEND",
+  "window": [
+   0.0,
+   10.0
+  ],
+  "verdict": "Verdict.UNSURE",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+  ],
+  "roi_motion": {
+   "TABLETOP": 0.87,
+   "PERSON": 1.117,
+   "SOCKET_OR_SMALL_OTHER": 0.0
+  },
+  "target_roi": {
+   "name": "TABLETOP",
+   "x1": 138,
+   "y1": 1536,
+   "x2": 1589,
+   "y2": 3010,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "socket_roi": null,
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "roi_source": "HEURISTIC",
+  "core_motion": 0.87,
+  "camera_translation_px": 64.9,
+  "camera_reliable": false,
+  "fusion_note": "heuristic 不得 PASS; 门序=visible→moved→direction"
+ },
+ {
+  "media_id": 1985,
+  "requested": "Action.EXTEND",
+  "window": [
+   1.9,
+   4.4
+  ],
+  "verdict": "Verdict.UNSURE",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+  ],
+  "roi_motion": {
+   "TABLETOP": 0.891,
+   "PERSON": 1.092,
+   "SOCKET_OR_SMALL_OTHER": 0.0
+  },
+  "target_roi": {
+   "name": "TABLETOP",
+   "x1": 138,
+   "y1": 1536,
+   "x2": 1589,
+   "y2": 3010,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "socket_roi": null,
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "roi_source": "HEURISTIC",
+  "core_motion": 0.891,
+  "camera_translation_px": 9.4,
+  "camera_reliable": false,
+  "fusion_note": "heuristic 不得 PASS; 门序=visible→moved→direction"
+ },
+ {
+  "media_id": 1986,
+  "requested": "Action.EXTEND",
+  "window": [
+   1.9,
+   4.4
+  ],
+  "verdict": "Verdict.UNSURE",
+  "mandatory": {
+   "target_object_visible": "PASS",
+   "target_object_motion": "PASS",
+   "opposite_absent": "PASS",
+   "direction": "UNSURE",
+   "state_transition": "UNSURE"
+  },
+  "reason_codes": [
+   "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+  ],
+  "roi_motion": {
+   "TABLETOP": 0.891,
+   "PERSON": 1.092,
+   "SOCKET_OR_SMALL_OTHER": 0.0
+  },
+  "target_roi": {
+   "name": "TABLETOP",
+   "x1": 138,
+   "y1": 1536,
+   "x2": 1589,
+   "y2": 3010,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "socket_roi": null,
+  "person_roi": {
+   "name": "PERSON",
+   "x1": 259,
+   "y1": 61,
+   "x2": 1468,
+   "y2": 1843,
+   "confidence": 1.0,
+   "source": "HEURISTIC"
+  },
+  "roi_source": "HEURISTIC",
+  "core_motion": 0.891,
+  "camera_translation_px": 9.4,
+  "camera_reliable": false,
+  "fusion_note": "heuristic 不得 PASS; 门序=visible→moved→direction"
+ }
+]
