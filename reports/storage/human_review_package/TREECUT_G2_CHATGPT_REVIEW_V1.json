@@ -1,0 +1,753 @@
+{
+ "queries": [
+  {
+   "query_id": "EXTEND_1",
+   "requested_action": "EXTEND",
+   "rank": 1,
+   "segment_short": "1985",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_1",
+   "requested_action": "EXTEND",
+   "rank": 2,
+   "segment_short": "1986",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_1",
+   "requested_action": "EXTEND",
+   "rank": 3,
+   "segment_short": "1984",
+   "subclip_start": 2.36,
+   "subclip_end": 4.86,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    2.61
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_2",
+   "requested_action": "EXTEND",
+   "rank": 1,
+   "segment_short": "1985",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_2",
+   "requested_action": "EXTEND",
+   "rank": 2,
+   "segment_short": "1986",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_2",
+   "requested_action": "EXTEND",
+   "rank": 3,
+   "segment_short": "1984",
+   "subclip_start": 2.36,
+   "subclip_end": 4.86,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    2.61
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_3",
+   "requested_action": "EXTEND",
+   "rank": 1,
+   "segment_short": "1985",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_3",
+   "requested_action": "EXTEND",
+   "rank": 2,
+   "segment_short": "1986",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_3",
+   "requested_action": "EXTEND",
+   "rank": 3,
+   "segment_short": "1984",
+   "subclip_start": 2.36,
+   "subclip_end": 4.86,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    2.61
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_4",
+   "requested_action": "EXTEND",
+   "rank": 1,
+   "segment_short": "1985",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_4",
+   "requested_action": "EXTEND",
+   "rank": 2,
+   "segment_short": "1986",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "EXTEND_4",
+   "requested_action": "EXTEND",
+   "rank": 3,
+   "segment_short": "1984",
+   "subclip_start": 2.36,
+   "subclip_end": 4.86,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    2.61
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_1",
+   "requested_action": "RETRACT",
+   "rank": 1,
+   "segment_short": "1985",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_1",
+   "requested_action": "RETRACT",
+   "rank": 2,
+   "segment_short": "1986",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_1",
+   "requested_action": "RETRACT",
+   "rank": 3,
+   "segment_short": "1984",
+   "subclip_start": 2.36,
+   "subclip_end": 4.86,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    2.61
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_2",
+   "requested_action": "RETRACT",
+   "rank": 1,
+   "segment_short": "1985",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_2",
+   "requested_action": "RETRACT",
+   "rank": 2,
+   "segment_short": "1986",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_2",
+   "requested_action": "RETRACT",
+   "rank": 3,
+   "segment_short": "1984",
+   "subclip_start": 2.36,
+   "subclip_end": 4.86,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    2.61
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_3",
+   "requested_action": "RETRACT",
+   "rank": 1,
+   "segment_short": "1985",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_3",
+   "requested_action": "RETRACT",
+   "rank": 2,
+   "segment_short": "1986",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_3",
+   "requested_action": "RETRACT",
+   "rank": 3,
+   "segment_short": "1984",
+   "subclip_start": 2.36,
+   "subclip_end": 4.86,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    2.61
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_4",
+   "requested_action": "RETRACT",
+   "rank": 1,
+   "segment_short": "1985",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_4",
+   "requested_action": "RETRACT",
+   "rank": 2,
+   "segment_short": "1986",
+   "subclip_start": 2.78,
+   "subclip_end": 3.33,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    3.03
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "RETRACT_4",
+   "requested_action": "RETRACT",
+   "rank": 3,
+   "segment_short": "1984",
+   "subclip_start": 2.36,
+   "subclip_end": 4.86,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "RETRACT",
+   "evidence_refs": [
+    2.61
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "DRAWER_OPEN_1",
+   "requested_action": "DRAWER_OPEN",
+   "rank": 1,
+   "segment_short": "1",
+   "subclip_start": 3.13,
+   "subclip_end": 6.25,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "DRAWER_CLOSE",
+   "evidence_refs": [
+    3.38,
+    4.73,
+    5.95
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "DRAWER_OPEN_1",
+   "requested_action": "DRAWER_OPEN",
+   "rank": 2,
+   "segment_short": "37",
+   "subclip_start": 1.07,
+   "subclip_end": 7.87,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "DRAWER_CLOSE",
+   "evidence_refs": [
+    1.07,
+    2.68,
+    4.47,
+    6.26,
+    7.87
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "DRAWER_OPEN_2",
+   "requested_action": "DRAWER_OPEN",
+   "rank": 1,
+   "segment_short": "1",
+   "subclip_start": 3.13,
+   "subclip_end": 6.25,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "DRAWER_CLOSE",
+   "evidence_refs": [
+    3.38,
+    4.73,
+    5.95
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "DRAWER_OPEN_2",
+   "requested_action": "DRAWER_OPEN",
+   "rank": 2,
+   "segment_short": "37",
+   "subclip_start": 1.07,
+   "subclip_end": 7.87,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "DRAWER_CLOSE",
+   "evidence_refs": [
+    1.07,
+    2.68,
+    4.47,
+    6.26,
+    7.87
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "DRAWER_OPEN_3",
+   "requested_action": "DRAWER_OPEN",
+   "rank": 1,
+   "segment_short": "1",
+   "subclip_start": 3.13,
+   "subclip_end": 6.25,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "DRAWER_CLOSE",
+   "evidence_refs": [
+    3.38,
+    4.73,
+    5.95
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "DRAWER_OPEN_3",
+   "requested_action": "DRAWER_OPEN",
+   "rank": 2,
+   "segment_short": "37",
+   "subclip_start": 1.07,
+   "subclip_end": 7.87,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "DRAWER_CLOSE",
+   "evidence_refs": [
+    1.07,
+    2.68,
+    4.47,
+    6.26,
+    7.87
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "DRAWER_OPEN_4",
+   "requested_action": "DRAWER_OPEN",
+   "rank": 1,
+   "segment_short": "1",
+   "subclip_start": 3.13,
+   "subclip_end": 6.25,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "DRAWER_CLOSE",
+   "evidence_refs": [
+    3.38,
+    4.73,
+    5.95
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "DRAWER_OPEN_4",
+   "requested_action": "DRAWER_OPEN",
+   "rank": 2,
+   "segment_short": "37",
+   "subclip_start": 1.07,
+   "subclip_end": 7.87,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "DRAWER_CLOSE",
+   "evidence_refs": [
+    1.07,
+    2.68,
+    4.47,
+    6.26,
+    7.87
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "SOCKET_INSERT_1",
+   "requested_action": "SOCKET_INSERT",
+   "source_available": false,
+   "no_valid_source": true,
+   "top": [],
+   "human_result": null
+  },
+  {
+   "query_id": "SOCKET_INSERT_2",
+   "requested_action": "SOCKET_INSERT",
+   "source_available": false,
+   "no_valid_source": true,
+   "top": [],
+   "human_result": null
+  },
+  {
+   "query_id": "SOCKET_INSERT_3",
+   "requested_action": "SOCKET_INSERT",
+   "source_available": false,
+   "no_valid_source": true,
+   "top": [],
+   "human_result": null
+  },
+  {
+   "query_id": "SOCKET_INSERT_4",
+   "requested_action": "SOCKET_INSERT",
+   "source_available": false,
+   "no_valid_source": true,
+   "top": [],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_1",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 1,
+   "segment_short": "419",
+   "subclip_start": 7.28,
+   "subclip_end": 9.78,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "CABINET_OPEN",
+   "evidence_refs": [
+    7.53
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_1",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 2,
+   "segment_short": "4",
+   "subclip_start": 0.26,
+   "subclip_end": 4.06,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "STORAGE_TAKE_OUT",
+   "evidence_refs": [
+    0.51,
+    1.28,
+    2.14,
+    2.99,
+    3.76
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_1",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 3,
+   "segment_short": "3",
+   "subclip_start": 0.93,
+   "subclip_end": 6.84,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "STORAGE_TAKE_OUT",
+   "evidence_refs": [
+    0.93,
+    2.33,
+    3.89,
+    5.44,
+    6.84
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_2",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 1,
+   "segment_short": "419",
+   "subclip_start": 7.28,
+   "subclip_end": 9.78,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "CABINET_OPEN",
+   "evidence_refs": [
+    7.53
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_2",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 2,
+   "segment_short": "4",
+   "subclip_start": 0.26,
+   "subclip_end": 4.06,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "STORAGE_TAKE_OUT",
+   "evidence_refs": [
+    0.51,
+    1.28,
+    2.14,
+    2.99,
+    3.76
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_2",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 3,
+   "segment_short": "3",
+   "subclip_start": 0.93,
+   "subclip_end": 6.84,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "STORAGE_TAKE_OUT",
+   "evidence_refs": [
+    0.93,
+    2.33,
+    3.89,
+    5.44,
+    6.84
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_3",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 1,
+   "segment_short": "419",
+   "subclip_start": 7.28,
+   "subclip_end": 9.78,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "CABINET_OPEN",
+   "evidence_refs": [
+    7.53
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_3",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 2,
+   "segment_short": "4",
+   "subclip_start": 0.26,
+   "subclip_end": 4.06,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "STORAGE_TAKE_OUT",
+   "evidence_refs": [
+    0.51,
+    1.28,
+    2.14,
+    2.99,
+    3.76
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_3",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 3,
+   "segment_short": "3",
+   "subclip_start": 0.93,
+   "subclip_end": 6.84,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "STORAGE_TAKE_OUT",
+   "evidence_refs": [
+    0.93,
+    2.33,
+    3.89,
+    5.44,
+    6.84
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_4",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 1,
+   "segment_short": "419",
+   "subclip_start": 7.28,
+   "subclip_end": 9.78,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "CABINET_OPEN",
+   "evidence_refs": [
+    7.53
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_4",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 2,
+   "segment_short": "4",
+   "subclip_start": 0.26,
+   "subclip_end": 4.06,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "STORAGE_TAKE_OUT",
+   "evidence_refs": [
+    0.51,
+    1.28,
+    2.14,
+    2.99,
+    3.76
+   ],
+   "human_result": null
+  },
+  {
+   "query_id": "STORAGE_PUT_IN_4",
+   "requested_action": "STORAGE_PUT_IN",
+   "rank": 3,
+   "segment_short": "3",
+   "subclip_start": 0.93,
+   "subclip_end": 6.84,
+   "action_window": null,
+   "motion_support": "WEAK",
+   "machine_action": "STORAGE_TAKE_OUT",
+   "evidence_refs": [
+    0.93,
+    2.33,
+    3.89,
+    5.44,
+    6.84
+   ],
+   "human_result": null
+  }
+ ],
+ "level": "HUMAN_REVIEW_EVIDENCE"
+}

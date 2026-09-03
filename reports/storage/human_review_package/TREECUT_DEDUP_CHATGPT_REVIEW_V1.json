@@ -1,0 +1,98 @@
+{
+ "pairs": [
+  {
+   "pair_id": "PAIR01",
+   "level": "NARRATIVE_NEAR_DUPLICATE",
+   "reason": "narrative overlap score 4: []",
+   "strength": "WARNING",
+   "shot_a": {
+    "label": "B2-FEATURE_STORAGE(media 2)",
+    "media_id": 2,
+    "subclip": [
+     2.266,
+     5.443
+    ]
+   },
+   "shot_b": {
+    "label": "B3-FEATURE_POWER(media 1591)",
+    "media_id": 1591,
+    "subclip": [
+     2.331,
+     5.054
+    ]
+   },
+   "human_result": null
+  },
+  {
+   "pair_id": "PAIR02",
+   "level": "NARRATIVE_NEAR_DUPLICATE",
+   "reason": "narrative overlap score 4: []",
+   "strength": "WARNING",
+   "shot_a": {
+    "label": "B2-FEATURE_STORAGE(media 2)",
+    "media_id": 2,
+    "subclip": [
+     2.266,
+     5.443
+    ]
+   },
+   "shot_b": {
+    "label": "B5-CTA(media 3)",
+    "media_id": 3,
+    "subclip": [
+     2.528,
+     5.2509999999999994
+    ]
+   },
+   "human_result": null
+  },
+  {
+   "pair_id": "PAIR03",
+   "level": "NARRATIVE_NEAR_DUPLICATE",
+   "reason": "narrative overlap score 4: []",
+   "strength": "WARNING",
+   "shot_a": {
+    "label": "B3-FEATURE_POWER(media 1591)",
+    "media_id": 1591,
+    "subclip": [
+     2.331,
+     5.054
+    ]
+   },
+   "shot_b": {
+    "label": "B5-CTA(media 3)",
+    "media_id": 3,
+    "subclip": [
+     2.528,
+     5.2509999999999994
+    ]
+   },
+   "human_result": null
+  },
+  {
+   "pair_id": "PAIR04",
+   "level": "NARRATIVE_NEAR_DUPLICATE",
+   "reason": "narrative overlap score 5: []",
+   "strength": "WARNING",
+   "shot_a": {
+    "label": "B4-FEATURE_FLEXIBLE(media 1984)",
+    "media_id": 1984,
+    "subclip": [
+     1.637,
+     4.587
+    ]
+   },
+   "shot_b": {
+    "label": "B4-FEATURE_FLEXIBLE(media 1986)",
+    "media_id": 1986,
+    "subclip": [
+     1.137,
+     4.087
+    ]
+   },
+   "human_result": null
+  }
+ ],
+ "level": "HUMAN_REVIEW_EVIDENCE",
+ "human_result": null
+}

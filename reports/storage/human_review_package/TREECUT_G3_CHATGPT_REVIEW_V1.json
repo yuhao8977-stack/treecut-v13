@@ -1,0 +1,270 @@
+{
+ "beats": [
+  {
+   "beat_id": "B1",
+   "script_text": "岛台想好用",
+   "required_visual": "req_act=- req_obj=-",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B2",
+   "script_text": "这三个细节最值得看",
+   "required_visual": "req_act=- req_obj=-",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B3",
+   "script_text": "第一",
+   "required_visual": "req_act=- req_obj=-",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B4",
+   "script_text": "上层薄抽",
+   "required_visual": "req_act=- req_obj=UPPER_THIN_DRAWER",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B5",
+   "script_text": "收纳小物不弯腰",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=STORAGE_PUT_IN req_obj=-",
+   "rank": 1,
+   "segment_short": "3",
+   "subclip": [
+    0.93,
+    6.84
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B5",
+   "script_text": "收纳小物不弯腰",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=STORAGE_PUT_IN req_obj=-",
+   "rank": 2,
+   "segment_short": "4",
+   "subclip": [
+    0.26,
+    4.06
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B5",
+   "script_text": "收纳小物不弯腰",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=STORAGE_PUT_IN req_obj=-",
+   "rank": 3,
+   "segment_short": "419",
+   "subclip": [
+    7.28,
+    9.78
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B6",
+   "script_text": "打开就能拿到",
+   "required_visual": "req_act=OPEN req_obj=-",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B7",
+   "script_text": "第二",
+   "required_visual": "req_act=- req_obj=-",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B8",
+   "script_text": "轨道插座",
+   "required_visual": "req_act=- req_obj=TRACK_SOCKET",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B9",
+   "script_text": "吃火锅煮茶都方便",
+   "required_visual": "req_act=- req_obj=-",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B10",
+   "script_text": "插拔也顺手",
+   "required_visual": "req_act=SOCKET_INSERT req_obj=-",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B11",
+   "script_text": "第三",
+   "required_visual": "req_act=- req_obj=-",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B12",
+   "script_text": "伸缩桌面",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=EXTEND req_obj=TABLETOP",
+   "rank": 1,
+   "segment_short": "2482",
+   "subclip": [
+    3.75,
+    7.8
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B12",
+   "script_text": "伸缩桌面",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=EXTEND req_obj=TABLETOP",
+   "rank": 2,
+   "segment_short": "2483",
+   "subclip": [
+    3.75,
+    7.8
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B12",
+   "script_text": "伸缩桌面",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=EXTEND req_obj=TABLETOP",
+   "rank": 3,
+   "segment_short": "2484",
+   "subclip": [
+    3.75,
+    7.8
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B13",
+   "script_text": "来客时一拉就变宽",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=EXTEND req_obj=-",
+   "rank": 1,
+   "segment_short": "2482",
+   "subclip": [
+    3.75,
+    7.8
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B13",
+   "script_text": "来客时一拉就变宽",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=EXTEND req_obj=-",
+   "rank": 2,
+   "segment_short": "2483",
+   "subclip": [
+    3.75,
+    7.8
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B13",
+   "script_text": "来客时一拉就变宽",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=EXTEND req_obj=-",
+   "rank": 3,
+   "segment_short": "2484",
+   "subclip": [
+    3.75,
+    7.8
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B14",
+   "script_text": "平时收起来不占位",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=RETRACT req_obj=-",
+   "rank": 1,
+   "segment_short": "2482",
+   "subclip": [
+    3.75,
+    7.8
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B14",
+   "script_text": "平时收起来不占位",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=RETRACT req_obj=-",
+   "rank": 2,
+   "segment_short": "2483",
+   "subclip": [
+    3.75,
+    7.8
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B14",
+   "script_text": "平时收起来不占位",
+   "story_mode": "INFORMATION_MONTAGE",
+   "required_visual": "req_act=RETRACT req_obj=-",
+   "rank": 3,
+   "segment_short": "2484",
+   "subclip": [
+    3.75,
+    7.8
+   ],
+   "human_result": null
+  },
+  {
+   "beat_id": "B15",
+   "script_text": "厨房好不好用",
+   "required_visual": "req_act=- req_obj=-",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  },
+  {
+   "beat_id": "B16",
+   "script_text": "全在这些小细节里",
+   "required_visual": "req_act=- req_obj=-",
+   "story_mode": "INFORMATION_MONTAGE",
+   "top": [],
+   "no_valid_source": true,
+   "human_result": null
+  }
+ ],
+ "story_mode": "INFORMATION_MONTAGE",
+ "level": "HUMAN_REVIEW_EVIDENCE"
+}
