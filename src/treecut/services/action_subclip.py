@@ -139,8 +139,75 @@ def fit_duration(w: ActionWindow, duration_target_s: float | None = None,
     return w
 
 
+OPPOSITE = {"EXTEND": "RETRACT", "RETRACT": "EXTEND",
+            "DRAWER_OPEN": "DRAWER_CLOSE", "DRAWER_CLOSE": "DRAWER_OPEN",
+            "CABINET_OPEN": "CABINET_CLOSE", "CABINET_CLOSE": "CABINET_OPEN",
+            "STORAGE_PUT_IN": "STORAGE_TAKE_OUT", "STORAGE_TAKE_OUT": "STORAGE_PUT_IN"}
+
+
+def parse_direction(text: str) -> str:
+    """direction=EXTEND/RETRACT/STATIC/UNCERTAIN 解析(默认 UNCERTAIN)。"""
+    if not text:
+        return "UNCERTAIN"
+    m = re.search(r"direction\s*=\s*([A-Z_]+)", text)
+    if m:
+        return m.group(1) if m.group(1) in ("EXTEND", "RETRACT", "STATIC", "UNCERTAIN") else "UNCERTAIN"
+    return "UNCERTAIN"
+
+
+def direction_rows(evidence: list[dict]) -> dict[int, list[dict]]:
+    """direction_probe 帧 → {media_id: [{t_s, direction}]}"""
+    out = {}
+    for e in evidence:
+        if e.get("direction_probe") or (e.get("qwen_l2_raw") or "").startswith("direction="):
+            st = parse_direction(e.get("qwen_l2_raw") or "")
+            out.setdefault(e.get("media_id"), []).append({"t_s": e.get("t_s"), "direction": st})
+    return out
+
+
+def apply_action_gate(windows: list[ActionWindow], evidence: list[dict],
+                      min_action_frames: int = 2) -> list[ActionWindow]:
+    """R2 确定性门(人工反馈: 方向识别缺失/静态冒充动作/反向入Top):
+    1) EXTEND/RETRACT: 仅保留 方向探测一致 且 动作帧>=2 的窗口; STATIC/无探测 → 丢弃;
+    2) OPEN/CLOSE 双向歧义(同素材同刻出现 open+close 窗口) → 双双丢弃(无方向不得猜);
+    3) 其余动作: 动作帧>=2(单帧采样噪声不冒充动作)。
+    动作帧数 = 窗口邻域(±1.2s)内 ACTION_* 状态帧计数(容忍同刻方向帧插入导致的分组拆裂)。"""
+    dirs = direction_rows(evidence)
+    # 每资产动作帧时间集合
+    act_times: dict[int, list[float]] = {}
+    for e in evidence:
+        st = e.get("state") or parse_qwen_state(e.get("qwen_l2_raw") or "")
+        if st in ("ACTION_START", "ACTION_IN_PROGRESS", "ACTION_END"):
+            act_times.setdefault(e.get("media_id"), []).append(e.get("t_s"))
+    res = []
+    for w in windows:
+        ts = [t for t in act_times.get(w.media_id, []) if t is not None and
+              (w.action_start_s - 1.2) <= t <= (w.action_end_s + 1.2)]
+        if len(ts) < min_action_frames:
+            continue
+        if w.action in ("EXTEND", "RETRACT"):
+            rows = dirs.get(w.media_id, [])
+            near = [d for d in rows if abs((d["t_s"] or 0) - (w.action_start_s or -1)) < 1.2]
+            hit = next((d for d in near if d["direction"] in ("EXTEND", "RETRACT")), None)
+            if hit is None:
+                continue  # STATIC/无方向 → 不得证明方向动作
+            if hit["direction"] != w.action:
+                continue
+        w.motion_support = "MODERATE" if len(ts) >= 3 else "WEAK"
+        res.append(w)
+    # 反向歧义(第二遍: 对 OPPOSITE 组同素材重叠窗口, 若 open+close 都幸存 → 丢弃两者)
+    final = []
+    for w in res:
+        opp = OPPOSITE.get(w.action)
+        if opp and any(x for x in res if x.media_id == w.media_id and x.action == opp and
+                       abs((x.action_start_s or 0) - (w.action_start_s or 0)) < 1.2):
+            continue  # 歧义丢弃
+        final.append(w)
+    return final
+
+
 class ActionSubclipService:
-    """读时序证据缓存 → build_windows → 过滤/排序 → TopK。account_id 参数化。"""
+    """读时序证据缓存 → build_windows → 动作门(方向/歧义/最小帧) → 过滤/排序 → TopK。account_id 参数化。"""
 
     def __init__(self, evidence_loader: Callable | None = None, cache_dir: str | None = None,
                  eligible_check: Callable | None = None):
@@ -169,6 +236,7 @@ class ActionSubclipService:
             wins = build_windows(frames, float(next((x.get("duration_s") or 0) for x in frames if x.get("duration_s")) or 30),
                                  action, media_id=mid,
                                  asset_path=next((x.get("full_path") for x in frames if x.get("full_path")), None))
+            wins = apply_action_gate(wins, frames)  # R2: 方向/歧义/最小动作帧
             for w in wins:
                 if duration_target_s:
                     w = fit_duration(w, duration_target_s, shot_role)

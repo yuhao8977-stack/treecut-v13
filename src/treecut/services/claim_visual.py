@@ -34,6 +34,15 @@ FORBIDDEN_SUBST = [
     ("UPPER_THIN_DRAWER", "LOWER_DRAWER"),
 ]
 
+# R1: 反向动作(确定性硬闸) — 请求 A 时, 候选仅含反向动作必须拒绝
+OPPOSITE_ACTION = {
+    "EXTEND": "RETRACT", "RETRACT": "EXTEND",
+    "DRAWER_OPEN": "DRAWER_CLOSE", "DRAWER_CLOSE": "DRAWER_OPEN",
+    "CABINET_OPEN": "CABINET_CLOSE", "CABINET_CLOSE": "CABINET_OPEN",
+    "STORAGE_PUT_IN": "STORAGE_TAKE_OUT", "STORAGE_TAKE_OUT": "STORAGE_PUT_IN",
+    "SOCKET_INSERT": "SOCKET_REMOVE", "SOCKET_REMOVE": "SOCKET_INSERT",
+}
+
 
 @dataclass
 class AtomicClaim:
@@ -130,10 +139,13 @@ class ClaimVisualMatcher:
             ok, info = self.eligible_check(cd.media_id)
             if not ok:
                 rejects.append(f"SOURCE_NOT_ELIGIBLE:{info.get('reasons')}")
-            # 硬闸2: 动作匹配(ACTION 主张)
+            # 硬闸2: 动作匹配(ACTION 主张) — R1: 反向动作确定性拒绝
             prof = self.action_profile(cd.media_id) or {}
             cand_actions = set(prof.get("actions") or cd.actions or [])
             if claim.required_action:
+                opp = OPPOSITE_ACTION.get(claim.required_action)
+                if opp in cand_actions and claim.required_action not in cand_actions:
+                    rejects.append(f"OPPOSITE_DIRECTION: claim {claim.required_action} vs candidate {opp}(确定性硬闸)")
                 if claim.required_action not in cand_actions:
                     # 禁止视觉: 主张伸缩却候选是插座特写
                     dom = prof.get("object") or cd.object_

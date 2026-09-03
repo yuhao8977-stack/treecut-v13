@@ -79,6 +79,10 @@ def test_service_topk_ordering_prefers_boundary():
         {"media_id": 11, "duration_s": 8.0, "full_path": "p2", "t_s": 4.0, "state": "ACTION_IN_PROGRESS"},
         {"media_id": 11, "duration_s": 8.0, "full_path": "p2", "t_s": 5.0, "state": "ACTION_END"},
         {"media_id": 11, "duration_s": 8.0, "full_path": "p2", "t_s": 6.5, "state": "OBJECT_PRESENT"},
+        {"media_id": 11, "duration_s": 8.0, "full_path": "p2", "t_s": 4.0,
+         "qwen_l2_raw": "direction=EXTEND", "direction_probe": True},
+        {"media_id": 10, "duration_s": 8.0, "full_path": "p1", "t_s": 1.0,
+         "qwen_l2_raw": "direction=EXTEND", "direction_probe": True},
     ]
     svc._loader = svc._default_loader
     res = svc.find_action_subclips("fixture", "EXTEND", top_k=3)

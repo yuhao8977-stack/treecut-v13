@@ -3,750 +3,142 @@
   {
    "qid": "EXTEND_1",
    "action": "EXTEND",
-   "top3": [
-    {
-     "media_id": 1985,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1986,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1984,
-     "subclip": [
-      2.36,
-      4.86
-     ],
-     "action_window": [
-      2.61,
-      2.61
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": 0,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "EXTEND_2",
    "action": "EXTEND",
-   "top3": [
-    {
-     "media_id": 1985,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1986,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1984,
-     "subclip": [
-      2.36,
-      4.86
-     ],
-     "action_window": [
-      2.61,
-      2.61
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": 0,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "EXTEND_3",
    "action": "EXTEND",
-   "top3": [
-    {
-     "media_id": 1985,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1986,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1984,
-     "subclip": [
-      2.36,
-      4.86
-     ],
-     "action_window": [
-      2.61,
-      2.61
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": 0,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "EXTEND_4",
    "action": "EXTEND",
-   "top3": [
-    {
-     "media_id": 1985,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1986,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1984,
-     "subclip": [
-      2.36,
-      4.86
-     ],
-     "action_window": [
-      2.61,
-      2.61
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": 0,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "RETRACT_1",
    "action": "RETRACT",
-   "top3": [
-    {
-     "media_id": 1985,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1986,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1984,
-     "subclip": [
-      2.36,
-      4.86
-     ],
-     "action_window": [
-      2.61,
-      2.61
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": 0,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "RETRACT_2",
    "action": "RETRACT",
-   "top3": [
-    {
-     "media_id": 1985,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1986,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1984,
-     "subclip": [
-      2.36,
-      4.86
-     ],
-     "action_window": [
-      2.61,
-      2.61
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": 0,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "RETRACT_3",
    "action": "RETRACT",
-   "top3": [
-    {
-     "media_id": 1985,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1986,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1984,
-     "subclip": [
-      2.36,
-      4.86
-     ],
-     "action_window": [
-      2.61,
-      2.61
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": 0,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "RETRACT_4",
    "action": "RETRACT",
-   "top3": [
-    {
-     "media_id": 1985,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1986,
-     "subclip": [
-      2.78,
-      3.33
-     ],
-     "action_window": [
-      3.03,
-      3.03
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    },
-    {
-     "media_id": 1984,
-     "subclip": [
-      2.36,
-      4.86
-     ],
-     "action_window": [
-      2.61,
-      2.61
-     ],
-     "boundary_usable": true,
-     "rel": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": 0,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "DRAWER_OPEN_1",
    "action": "DRAWER_OPEN",
-   "top3": [
-    {
-     "media_id": 1,
-     "subclip": [
-      3.13,
-      6.25
-     ],
-     "action_window": [
-      3.38,
-      5.95
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台"
-    },
-    {
-     "media_id": 37,
-     "subclip": [
-      1.07,
-      7.87
-     ],
-     "action_window": [
-      1.07,
-      7.87
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\"
-    }
-   ],
-   "top3_n": 2,
-   "hard_negative_socket_rejected": null,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "DRAWER_OPEN_2",
    "action": "DRAWER_OPEN",
-   "top3": [
-    {
-     "media_id": 1,
-     "subclip": [
-      3.13,
-      6.25
-     ],
-     "action_window": [
-      3.38,
-      5.95
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台"
-    },
-    {
-     "media_id": 37,
-     "subclip": [
-      1.07,
-      7.87
-     ],
-     "action_window": [
-      1.07,
-      7.87
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\"
-    }
-   ],
-   "top3_n": 2,
-   "hard_negative_socket_rejected": null,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "DRAWER_OPEN_3",
    "action": "DRAWER_OPEN",
-   "top3": [
-    {
-     "media_id": 1,
-     "subclip": [
-      3.13,
-      6.25
-     ],
-     "action_window": [
-      3.38,
-      5.95
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台"
-    },
-    {
-     "media_id": 37,
-     "subclip": [
-      1.07,
-      7.87
-     ],
-     "action_window": [
-      1.07,
-      7.87
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\"
-    }
-   ],
-   "top3_n": 2,
-   "hard_negative_socket_rejected": null,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "DRAWER_OPEN_4",
    "action": "DRAWER_OPEN",
-   "top3": [
-    {
-     "media_id": 1,
-     "subclip": [
-      3.13,
-      6.25
-     ],
-     "action_window": [
-      3.38,
-      5.95
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\    【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽收纳层】\\    【62】【现代极简风岛台"
-    },
-    {
-     "media_id": 37,
-     "subclip": [
-      1.07,
-      7.87
-     ],
-     "action_window": [
-      1.07,
-      7.87
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\1月4日【62】【现代极简风岛台】广州赖小姐 【岛台上层薄抽+下层抽屉三节托底导轨抽拉超顺滑】【01\\"
-    }
-   ],
-   "top3_n": 2,
-   "hard_negative_socket_rejected": null,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "SOCKET_INSERT_1",
    "action": "SOCKET_INSERT",
    "top3": [],
    "top3_n": 0,
-   "hard_negative_socket_rejected": null,
-   "note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "SOCKET_INSERT_2",
    "action": "SOCKET_INSERT",
    "top3": [],
    "top3_n": 0,
-   "hard_negative_socket_rejected": null,
-   "note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "SOCKET_INSERT_3",
    "action": "SOCKET_INSERT",
    "top3": [],
    "top3_n": 0,
-   "hard_negative_socket_rejected": null,
-   "note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "SOCKET_INSERT_4",
    "action": "SOCKET_INSERT",
    "top3": [],
    "top3_n": 0,
-   "hard_negative_socket_rejected": null,
-   "note": "NO_VALID_CANDIDATE_IN_PROBED_SET"
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "STORAGE_PUT_IN_1",
    "action": "STORAGE_PUT_IN",
-   "top3": [
-    {
-     "media_id": 419,
-     "subclip": [
-      7.28,
-      9.78
-     ],
-     "action_window": [
-      7.53,
-      7.53
-     ],
-     "boundary_usable": true,
-     "rel": "【02】下层抽屉\\   【19】【黑白极简】咸宁宋先生【空镜 岛头收纳整体展示横】\\   【19】【黑白极简】咸宁宋先生"
-    },
-    {
-     "media_id": 4,
-     "subclip": [
-      0.26,
-      4.06
-     ],
-     "action_window": [
-      0.51,
-      3.76
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃"
-    },
-    {
-     "media_id": 3,
-     "subclip": [
-      0.93,
-      6.84
-     ],
-     "action_window": [
-      0.93,
-      6.84
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": null,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "STORAGE_PUT_IN_2",
    "action": "STORAGE_PUT_IN",
-   "top3": [
-    {
-     "media_id": 419,
-     "subclip": [
-      7.28,
-      9.78
-     ],
-     "action_window": [
-      7.53,
-      7.53
-     ],
-     "boundary_usable": true,
-     "rel": "【02】下层抽屉\\   【19】【黑白极简】咸宁宋先生【空镜 岛头收纳整体展示横】\\   【19】【黑白极简】咸宁宋先生"
-    },
-    {
-     "media_id": 4,
-     "subclip": [
-      0.26,
-      4.06
-     ],
-     "action_window": [
-      0.51,
-      3.76
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃"
-    },
-    {
-     "media_id": 3,
-     "subclip": [
-      0.93,
-      6.84
-     ],
-     "action_window": [
-      0.93,
-      6.84
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": null,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "STORAGE_PUT_IN_3",
    "action": "STORAGE_PUT_IN",
-   "top3": [
-    {
-     "media_id": 419,
-     "subclip": [
-      7.28,
-      9.78
-     ],
-     "action_window": [
-      7.53,
-      7.53
-     ],
-     "boundary_usable": true,
-     "rel": "【02】下层抽屉\\   【19】【黑白极简】咸宁宋先生【空镜 岛头收纳整体展示横】\\   【19】【黑白极简】咸宁宋先生"
-    },
-    {
-     "media_id": 4,
-     "subclip": [
-      0.26,
-      4.06
-     ],
-     "action_window": [
-      0.51,
-      3.76
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃"
-    },
-    {
-     "media_id": 3,
-     "subclip": [
-      0.93,
-      6.84
-     ],
-     "action_window": [
-      0.93,
-      6.84
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": null,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   },
   {
    "qid": "STORAGE_PUT_IN_4",
    "action": "STORAGE_PUT_IN",
-   "top3": [
-    {
-     "media_id": 419,
-     "subclip": [
-      7.28,
-      9.78
-     ],
-     "action_window": [
-      7.53,
-      7.53
-     ],
-     "boundary_usable": true,
-     "rel": "【02】下层抽屉\\   【19】【黑白极简】咸宁宋先生【空镜 岛头收纳整体展示横】\\   【19】【黑白极简】咸宁宋先生"
-    },
-    {
-     "media_id": 4,
-     "subclip": [
-      0.26,
-      4.06
-     ],
-     "action_window": [
-      0.51,
-      3.76
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\  【35】【奶白色+北美黑胡桃】深圳陈先生【岛台上层薄抽收纳展示】\\  【35】【奶白色+北美黑胡桃"
-    },
-    {
-     "media_id": 3,
-     "subclip": [
-      0.93,
-      6.84
-     ],
-     "action_window": [
-      0.93,
-      6.84
-     ],
-     "boundary_usable": true,
-     "rel": "【01】上层薄抽\\   【20】【罗马洞石+北美黑胡桃】河南王小姐【岛台上层薄抽收纳展示】\\   【20】【罗马洞石+北"
-    }
-   ],
-   "top3_n": 3,
-   "hard_negative_socket_rejected": null,
-   "note": "HUMAN_VALIDATION_PENDING"
+   "top3": [],
+   "top3_n": 0,
+   "note": "NO_VALID_SOURCE_AVAILABLE"
   }
  ]
 }

@@ -1,0 +1,631 @@
+{
+  "version": "1.0",
+  "review_basis": [
+    "TREECUT_G2_CHATGPT_REVIEW_V1.mp4",
+    "TREECUT_G3_CHATGPT_REVIEW_V1.mp4",
+    "TREECUT_DEDUP_CHATGPT_REVIEW_V1.mp4",
+    "TREECUT_G2_CHATGPT_REVIEW_V1.json",
+    "TREECUT_G3_CHATGPT_REVIEW_V1.json",
+    "TREECUT_DEDUP_CHATGPT_REVIEW_V1.json"
+  ],
+  "idx63": {
+    "human_result": "CLEAN_OK",
+    "classification": "GARMENT_ENVIRONMENT_TEXT",
+    "note": "NEWPRONOUNCE@ 随衣服/人体移动与透视变化，是衣服印刷文字，不是固定画布水印。"
+  },
+  "g2": {
+    "final_status": "STAGE8_G2_NEEDS_REPAIR",
+    "results": {
+      "EXTEND_1": {
+        "requested_action": "EXTEND",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1985",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "1986",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "1984",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。"
+      },
+      "EXTEND_2": {
+        "requested_action": "EXTEND",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1985",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "1986",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "1984",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。"
+      },
+      "EXTEND_3": {
+        "requested_action": "EXTEND",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1985",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "1986",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "1984",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。"
+      },
+      "EXTEND_4": {
+        "requested_action": "EXTEND",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1985",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "1986",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "1984",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。"
+      },
+      "RETRACT_1": {
+        "requested_action": "RETRACT",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1985",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "1986",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "1984",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。"
+      },
+      "RETRACT_2": {
+        "requested_action": "RETRACT",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1985",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "1986",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "1984",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。"
+      },
+      "RETRACT_3": {
+        "requested_action": "RETRACT",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1985",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "1986",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "1984",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。"
+      },
+      "RETRACT_4": {
+        "requested_action": "RETRACT",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1985",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "1986",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "1984",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。"
+      },
+      "DRAWER_OPEN_1": {
+        "requested_action": "DRAWER_OPEN",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "37",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。"
+      },
+      "DRAWER_OPEN_2": {
+        "requested_action": "DRAWER_OPEN",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "37",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。"
+      },
+      "DRAWER_OPEN_3": {
+        "requested_action": "DRAWER_OPEN",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "37",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。"
+      },
+      "DRAWER_OPEN_4": {
+        "requested_action": "DRAWER_OPEN",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "1",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "37",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。"
+      },
+      "SOCKET_INSERT_1": {
+        "requested_action": "SOCKET_INSERT",
+        "status": "NO_VALID_SOURCE_AVAILABLE",
+        "top_results": [],
+        "best_candidate": null,
+        "human_note": "审核包未提供候选；不计入动作命中率，但应由脚本/素材可用性逻辑处理。"
+      },
+      "SOCKET_INSERT_2": {
+        "requested_action": "SOCKET_INSERT",
+        "status": "NO_VALID_SOURCE_AVAILABLE",
+        "top_results": [],
+        "best_candidate": null,
+        "human_note": "审核包未提供候选；不计入动作命中率，但应由脚本/素材可用性逻辑处理。"
+      },
+      "SOCKET_INSERT_3": {
+        "requested_action": "SOCKET_INSERT",
+        "status": "NO_VALID_SOURCE_AVAILABLE",
+        "top_results": [],
+        "best_candidate": null,
+        "human_note": "审核包未提供候选；不计入动作命中率，但应由脚本/素材可用性逻辑处理。"
+      },
+      "SOCKET_INSERT_4": {
+        "requested_action": "SOCKET_INSERT",
+        "status": "NO_VALID_SOURCE_AVAILABLE",
+        "top_results": [],
+        "best_candidate": null,
+        "human_note": "审核包未提供候选；不计入动作命中率，但应由脚本/素材可用性逻辑处理。"
+      },
+      "STORAGE_PUT_IN_1": {
+        "requested_action": "STORAGE_PUT_IN",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "419",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "4",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "3",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。"
+      },
+      "STORAGE_PUT_IN_2": {
+        "requested_action": "STORAGE_PUT_IN",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "419",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "4",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "3",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。"
+      },
+      "STORAGE_PUT_IN_3": {
+        "requested_action": "STORAGE_PUT_IN",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "419",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "4",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "3",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。"
+      },
+      "STORAGE_PUT_IN_4": {
+        "requested_action": "STORAGE_PUT_IN",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "419",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "4",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "3",
+            "human_result": "BAD"
+          }
+        ],
+        "best_candidate": null,
+        "action_correct": false,
+        "action_complete": false,
+        "boundary_usable": false,
+        "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。"
+      }
+    }
+  },
+  "g3": {
+    "final_status": "STAGE8_G3_NEEDS_REPAIR",
+    "results": {
+      "B1": {
+        "script_text": "岛台想好用",
+        "status": "NEEDS_VISUAL_BEAT_GROUPING",
+        "top_results": [],
+        "human_note": "泛化 Hook/CTA 文案不必逐短句单独找素材，应与相邻句合并为一个视觉 Beat，并允许 Hero Shot/镜头保持。"
+      },
+      "B2": {
+        "script_text": "这三个细节最值得看",
+        "status": "NEEDS_VISUAL_BEAT_GROUPING",
+        "top_results": [],
+        "human_note": "泛化 Hook/CTA 文案不必逐短句单独找素材，应与相邻句合并为一个视觉 Beat，并允许 Hero Shot/镜头保持。"
+      },
+      "B3": {
+        "script_text": "第一",
+        "status": "MERGE_WITH_NEXT",
+        "top_results": [],
+        "human_note": "“第一/第二/第三”属于结构词，不应强制单独换镜；应并入后续视觉 Beat。"
+      },
+      "B4": {
+        "script_text": "上层薄抽",
+        "status": "NO_VALID_CANDIDATE_CORE_BEAT",
+        "top_results": [],
+        "human_note": "核心视觉/动作 Beat 无候选；Production 不应继续，应触发素材不足或脚本改写。"
+      },
+      "B5": {
+        "script_text": "收纳小物不弯腰",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "3",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "4",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "419",
+            "human_result": "BAD"
+          }
+        ],
+        "human_note": "Top1 仅疑似在抽屉附近处理小物，方向并不清晰；Top2/3 不展示 STORAGE_PUT_IN。按严格动作要求判 BAD。"
+      },
+      "B6": {
+        "script_text": "打开就能拿到",
+        "status": "NO_VALID_CANDIDATE_CORE_BEAT",
+        "top_results": [],
+        "human_note": "核心视觉/动作 Beat 无候选；Production 不应继续，应触发素材不足或脚本改写。"
+      },
+      "B7": {
+        "script_text": "第二",
+        "status": "MERGE_WITH_NEXT",
+        "top_results": [],
+        "human_note": "“第一/第二/第三”属于结构词，不应强制单独换镜；应并入后续视觉 Beat。"
+      },
+      "B8": {
+        "script_text": "轨道插座",
+        "status": "NO_VALID_CANDIDATE_CORE_BEAT",
+        "top_results": [],
+        "human_note": "核心视觉/动作 Beat 无候选；Production 不应继续，应触发素材不足或脚本改写。"
+      },
+      "B9": {
+        "script_text": "吃火锅煮茶都方便",
+        "status": "NO_VALID_CANDIDATE_CORE_BEAT",
+        "top_results": [],
+        "human_note": "核心视觉/动作 Beat 无候选；Production 不应继续，应触发素材不足或脚本改写。"
+      },
+      "B10": {
+        "script_text": "插拔也顺手",
+        "status": "NO_VALID_CANDIDATE_CORE_BEAT",
+        "top_results": [],
+        "human_note": "核心视觉/动作 Beat 无候选；Production 不应继续，应触发素材不足或脚本改写。"
+      },
+      "B11": {
+        "script_text": "第三",
+        "status": "MERGE_WITH_NEXT",
+        "top_results": [],
+        "human_note": "“第一/第二/第三”属于结构词，不应强制单独换镜；应并入后续视觉 Beat。"
+      },
+      "B12": {
+        "script_text": "伸缩桌面",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "2482",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "2483",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "2484",
+            "human_result": "BAD"
+          }
+        ],
+        "human_note": "Top1-3 都是人物+岛台静态/讲解画面，未看到桌面从收起到展开的完整 EXTEND。"
+      },
+      "B13": {
+        "script_text": "来客时一拉就变宽",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "2482",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "2483",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "2484",
+            "human_result": "BAD"
+          }
+        ],
+        "human_note": "Top1-3 都是人物+岛台静态/讲解画面，未看到桌面从收起到展开的完整 EXTEND。"
+      },
+      "B14": {
+        "script_text": "平时收起来不占位",
+        "status": "BAD",
+        "top_results": [
+          {
+            "rank": 1,
+            "segment_short": "2482",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 2,
+            "segment_short": "2483",
+            "human_result": "BAD"
+          },
+          {
+            "rank": 3,
+            "segment_short": "2484",
+            "human_result": "BAD"
+          }
+        ],
+        "human_note": "与 B12/B13 使用同一批候选；未看到 RETRACT，且 EXTEND/RETRACT 共用同候选证明方向识别未建立。"
+      },
+      "B15": {
+        "script_text": "厨房好不好用",
+        "status": "NEEDS_VISUAL_BEAT_GROUPING",
+        "top_results": [],
+        "human_note": "泛化 Hook/CTA 文案不必逐短句单独找素材，应与相邻句合并为一个视觉 Beat，并允许 Hero Shot/镜头保持。"
+      },
+      "B16": {
+        "script_text": "全在这些小细节里",
+        "status": "NEEDS_VISUAL_BEAT_GROUPING",
+        "top_results": [],
+        "human_note": "泛化 Hook/CTA 文案不必逐短句单独找素材，应与相邻句合并为一个视觉 Beat，并允许 Hero Shot/镜头保持。"
+      }
+    }
+  },
+  "dedup": {
+    "final_status": "NEEDS_TUNING",
+    "results": {
+      "PAIR01": {
+        "human_result": "FALSE_POSITIVE",
+        "note": "收纳镜头 vs 轨道插座/电源镜头，主体动作与叙事功能明显不同，仅场景/人物相似。"
+      },
+      "PAIR02": {
+        "human_result": "TRUE_DUPLICATE",
+        "note": "同一人物、同一岛台、同一抽屉区域与近似构图/叙事功能，放在同一短视频内形成明显重复感。"
+      },
+      "PAIR03": {
+        "human_result": "FALSE_POSITIVE",
+        "note": "电源/插座特写与 CTA/抽屉人物镜头内容不同，不应作为重复 P0。"
+      },
+      "PAIR04": {
+        "human_result": "FALSE_POSITIVE",
+        "note": "伸缩桌面全景与轨道插座近景完全不同；当前 narrative overlap 高分缺乏可解释依据。"
+      }
+    }
+  }
+}

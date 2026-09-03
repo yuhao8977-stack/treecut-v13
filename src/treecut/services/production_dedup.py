@@ -89,20 +89,30 @@ def detect_duplicates(shots: list[Shot], phash_threshold_strong: int = 6,
                     continue
                 if d <= phash_threshold_verify:
                     reasons.append(f"pHash {d}(需复核)")
-            # NARRATIVE_NEAR_DUPLICATE: 同演示者/同案例提示/同功能文件夹/同角色
-            score = 0
+            # NARRATIVE_NEAR_DUPLICATE (R7 调参): 仅当 同演示者 + 同功能文件夹(同类画面), 且附可解释贡献
+            contrib = []
+            pa, pb = extract_presenter_from_case(a.case_id), extract_presenter_from_case(b.case_id)
             if a.case_id and b.case_id and a.case_id == b.case_id:
-                score += 2
-            if extract_presenter_from_case(a.case_id) and extract_presenter_from_case(b.case_id) and \
-                    extract_presenter_from_case(a.case_id) == extract_presenter_from_case(b.case_id):
-                score += 2
+                contrib.append("same_case")
+            if pa and pb and pa == pb:
+                contrib.append(f"same_presenter:{pa}")
             if a.folder_hint and b.folder_hint and a.folder_hint == b.folder_hint:
-                score += 1
+                contrib.append(f"same_function_folder:{a.folder_hint}")
             if a.shot_role and b.shot_role and a.shot_role == b.shot_role:
-                score += 1
-            if score >= 3:
+                contrib.append(f"same_shot_role:{a.shot_role}")
+            if a.asset_id and b.asset_id and a.asset_id == b.asset_id:
+                contrib.append("same_asset")
+            same_pres = pa and pb and pa == pb
+            same_folder = a.folder_hint and b.folder_hint and a.folder_hint == b.folder_hint
+            if same_pres and same_folder:
+                strong = (a.shot_role and b.shot_role and a.shot_role == b.shot_role) or \
+                         (a.asset_id and b.asset_id and a.asset_id == b.asset_id) or \
+                         (a.phash is not None and b.phash is not None and
+                          phash_distance(a.phash, b.phash) <= phash_threshold_verify)
+                strength = "HIGH" if strong else "WARNING"
                 hits.append({"pair": (i, j), "level": "NARRATIVE_NEAR_DUPLICATE",
-                             "reason": f"narrative overlap score {score}: {reasons[:2]}", "strength": "WARNING"})
+                             "reason": f"narrative: {contrib}",
+                             "strength": strength})
     return hits
 
 

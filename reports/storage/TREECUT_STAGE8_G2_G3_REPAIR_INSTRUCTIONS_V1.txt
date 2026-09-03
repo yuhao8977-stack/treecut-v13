@@ -1,0 +1,40 @@
+TreeCut
+
+STAGE8 G2/G3/DEDUP HUMAN REVIEW INGEST + REPAIR SPRINT
+
+HUMAN VERDICT:
+G1 = PASS
+G2 = NEEDS_REPAIR
+G3 = NEEDS_REPAIR
+DEDUP = NEEDS_TUNING
+PILOT_V3 = FORBIDDEN
+
+1. Ingest append-only human adjudication from TREECUT_STAGE8_HUMAN_ADJUDICATION_V1.json.
+2. Do not overwrite L1/L2/Qwen history.
+3. Fix P0 Action compatibility before any more model work:
+   - EXTEND cannot accept RETRACT
+   - RETRACT cannot accept EXTEND
+   - DRAWER_OPEN cannot accept DRAWER_CLOSE
+   - PUT_IN cannot accept TAKE_OUT
+   Opposite-direction candidate = hard reject.
+4. STATIC FUNCTION_VISIBLE is not ACTION. Static extended tabletop cannot satisfy EXTEND/RETRACT.
+5. For direction actions, require temporal before/motion/after evidence.
+6. Expand G2 calibration to 80-120 independent segment-level examples. 132 frames remain evidence only. Qwen only on 20-30 hard cases.
+7. Rebuild Query20 after repair and produce new human review package. Do not claim PASS before human validation.
+8. G3: replace phrase-level beats with VISUAL_BEAT grouping. Merge ordinal words and related claims into 4-6 visual beats.
+9. Add NO_VALID_CANDIDATE policy: if a core claim has no evidence, rewrite/drop claim or block production. Never continue silently.
+10. Connect known track-socket/object sources to G3 matcher; B8 currently no candidate despite socket footage existing elsewhere.
+11. EXTEND and RETRACT must not reuse identical candidate windows unless temporal evidence proves both actions in different windows.
+12. Add within-project candidate reuse penalty/hard gate for adjacent beats to avoid repeated shots.
+13. Dedup human labels:
+    PAIR01 FALSE_POSITIVE
+    PAIR02 TRUE_DUPLICATE
+    PAIR03 FALSE_POSITIVE
+    PAIR04 FALSE_POSITIVE
+14. Narrative-near-duplicate should default WARNING/rerank penalty, not universal P0. Exact/time-overlap/strong visual duplicate can remain P0.
+15. Fix dedup explainability: a high narrative overlap score cannot have reason=[].
+16. idx63 = CLEAN_OK / GARMENT_ENVIRONMENT_TEXT. Close G1 fully.
+17. Review-package MP4s intentionally have no BGM/voice and may repeat candidates. Do not treat these as finished-video defects.
+18. Formal Production still requires authorized BGM and accepted voice clone before Pilot V3.
+19. After repairs, run targeted tests + full regression + generate G2/G3/Dedup V2 human review package.
+20. STOP. No Pilot V3, no Stage9, no AutoPublish.
