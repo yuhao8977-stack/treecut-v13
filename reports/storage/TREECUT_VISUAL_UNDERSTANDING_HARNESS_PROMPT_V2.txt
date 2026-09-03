@@ -1,0 +1,203 @@
+TreeCut / Harness
+
+TASK:
+Integrate the concrete TreeCut Visual Understanding V2 package.
+
+FILES:
+1. TREECUT_VISUAL_UNDERSTANDING_ENGINE_V2.py
+2. TREECUT_VISUAL_SEMANTIC_KB_V1.json
+3. TREECUT_VISUAL_UNDERSTANDING_PLAYBOOK_V2.md
+4. TREECUT_CURRENT_VIDEO_EXAMPLE_LABELS_V1.json
+5. test_treecut_visual_understanding_engine_v2.py
+
+IMPORTANT SEMANTICS:
+This package is NOT an OpenAI/ChatGPT model export.
+Do not claim to reproduce model weights or hidden reasoning.
+It contains explicit, reviewable visual semantics and code.
+
+CURRENT ARCHITECTURE:
+G1 = PASS
+G2 = NEEDS_REPAIR
+G3 = NEEDS_REPAIR
+DEDUP = NEEDS_TUNING
+Pilot V3 = BLOCKED
+
+GOAL:
+Use this package to repair current production visual understanding, not to create a parallel system.
+
+==================================================
+A. MAP INTO EXISTING SERVICES
+==================================================
+
+Map:
+TemporalActionValidator
+→ ActionSubclipService
+
+IslandClaimLibrary + DomainVisualCritic
+→ ClaimVisualMatcher
+
+VisualBeatGrouper
+→ Script/Storyboard planner
+
+NoCandidateResolver
+→ Production planner
+
+DuplicateCritic
+→ ProductionDedup / ProductionQA
+
+Example labels
+→ regression fixtures / review memory
+
+Do not create a second production DB.
+
+==================================================
+B. CURRENT HUMAN/EXTERNAL REVIEW EXAMPLES
+==================================================
+
+Treat TREECUT_CURRENT_VIDEO_EXAMPLE_LABELS_V1.json as:
+EXTERNAL_REVIEW_EXAMPLES.
+
+Do NOT silently write them as L3 unless the operator explicitly promotes them.
+
+Use them immediately as regression expectations.
+
+==================================================
+C. REQUIRED G2 FIXES
+==================================================
+
+1. Opposite-direction hard gate BEFORE TopK:
+EXTEND vs RETRACT
+OPEN vs CLOSE
+PUT_IN vs TAKE_OUT
+INSERT vs REMOVE
+
+2. 1985/1986:
+track socket manipulation cannot satisfy EXTEND/RETRACT.
+
+3. 1984:
+static extended-looking tabletop cannot satisfy EXTEND/RETRACT action.
+
+4. 2482-2484:
+if no clear before→motion→after, do not pass directional action.
+
+5. Segment 1:
+open-state alone cannot pass DRAWER_OPEN.
+
+6. 419:
+open storage alone cannot pass STORAGE_PUT_IN.
+
+==================================================
+D. TEMPORAL EVIDENCE
+==================================================
+
+Use ordered frames:
+before/early/mid/late/after
+
+Return:
+object
+state_before
+motion
+state_after
+direction
+completeness
+dominant_visual
+confidence
+evidence_refs
+
+Action PASS requires temporal evidence.
+
+==================================================
+E. G3 VISUAL BEATS
+==================================================
+
+Keep Atomic Claims but change shot-planning layer from 16 phrase beats to ~5 visual beats:
+
+VB1 Hook
+VB2 Storage
+VB3 Power
+VB4 Flexible tabletop
+VB5 CTA
+
+Do not make “第一/第二/第三” independent shot-selection tasks.
+
+==================================================
+F. CLAIM CONTRACTS
+==================================================
+
+Implement concrete contracts from the KB/playbook:
+
+上层薄抽:
+upper+thin drawer visual
+
+打开就能拿到:
+DRAWER_OPEN temporal action
+
+轨道插座:
+static object is enough
+
+插拔也顺手:
+SOCKET_INSERT/REMOVE action
+
+一拉就变宽:
+EXTEND complete temporal evidence
+
+收起来不占位:
+RETRACT + compact/spatial context
+
+No valid core candidate:
+REWRITE / DROP / BLOCK
+
+Never force match.
+
+==================================================
+G. DEDUP
+==================================================
+
+PAIR02 should be captured as narrative near duplicate.
+
+PAIR01/03/04 are current false positives.
+
+Narrative overlap alone should usually be warning/rerank penalty.
+
+P0 duplicate should require:
+exact/time overlap
+or very strong visual duplicate evidence.
+
+==================================================
+H. TEST
+==================================================
+
+First run the provided tests.
+
+Then adapt them into the existing TreeCut test suite.
+
+Required regressions:
+- socket close-up != EXTEND
+- RETRACT != EXTEND
+- EXTEND != RETRACT
+- open-state != DRAWER_OPEN
+- DRAWER_CLOSE != DRAWER_OPEN
+- TAKE_OUT != PUT_IN
+- static table != directional action
+- no candidate => rewrite/drop/block
+- ordinal phrase does not create standalone visual beat
+- narrative duplicate does not become P0 on weak evidence
+
+==================================================
+I. RE-RUN REVIEW
+==================================================
+
+After repair:
+regenerate G2/G3/Dedup dynamic review package.
+
+Do NOT generate Pilot V3.
+
+Return:
+- integration map
+- exact changed files
+- tests
+- old-vs-new candidate behavior for known failures
+- G2/G3/Dedup review package
+- limitations
+
+STOP for external/human review.

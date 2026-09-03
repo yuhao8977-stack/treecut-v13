@@ -1,0 +1,383 @@
+{
+  "version": "1.0",
+  "name": "TreeCut Island Visual Semantic KB",
+  "truth_policy": {
+    "PATH_HINT": "retrieval hint only",
+    "ASR_OCR": "textual semantic evidence only; cannot prove visual action",
+    "STATIC_VISUAL": "object/state/scene evidence",
+    "TEMPORAL_VISUAL": "motion/direction/completeness evidence",
+    "L2_MODEL": "candidate interpretation",
+    "EXTERNAL_REVIEW": "review label; can be promoted to L3 only by operator policy",
+    "L3_HUMAN": "append-only human adjudication"
+  },
+  "objects": {
+    "ISLAND": [
+      "岛台",
+      "中岛",
+      "操作台"
+    ],
+    "TABLETOP": [
+      "桌面",
+      "台面",
+      "延伸桌板",
+      "伸缩桌板"
+    ],
+    "UPPER_THIN_DRAWER": [
+      "上层薄抽",
+      "薄抽"
+    ],
+    "DRAWER": [
+      "抽屉"
+    ],
+    "CABINET": [
+      "柜体",
+      "柜门"
+    ],
+    "TRACK_SOCKET": [
+      "轨道插座",
+      "电力轨道",
+      "公牛轨道插座"
+    ],
+    "SOCKET_MODULE": [
+      "插座模块",
+      "圆形插座模块"
+    ],
+    "SINK": [
+      "水槽"
+    ],
+    "APPLIANCE_ZONE": [
+      "电器区",
+      "嵌入电器区"
+    ],
+    "CHAIR": [
+      "餐椅",
+      "椅子"
+    ],
+    "PERSON": [
+      "人物",
+      "讲解人",
+      "工人"
+    ]
+  },
+  "states": [
+    "TABLETOP_EXTENDED_STATE",
+    "TABLETOP_RETRACTED_STATE",
+    "DRAWER_OPEN_STATE",
+    "DRAWER_CLOSED_STATE",
+    "CABINET_OPEN_STATE",
+    "CABINET_CLOSED_STATE",
+    "SOCKET_VISIBLE_STATE",
+    "STATIC_PRESENTATION"
+  ],
+  "actions": {
+    "EXTEND": {
+      "requires": [
+        "before_retracted_or_narrower",
+        "motion_outward_or_length_change",
+        "after_extended_or_wider"
+      ],
+      "contradicts": [
+        "RETRACT"
+      ],
+      "static_state_not_enough": true
+    },
+    "RETRACT": {
+      "requires": [
+        "before_extended_or_wider",
+        "motion_inward_or_length_change",
+        "after_retracted_or_compact"
+      ],
+      "contradicts": [
+        "EXTEND"
+      ],
+      "static_state_not_enough": true
+    },
+    "DRAWER_OPEN": {
+      "requires": [
+        "before_closed_or_less_open",
+        "drawer_moves_out",
+        "after_more_open"
+      ],
+      "contradicts": [
+        "DRAWER_CLOSE"
+      ]
+    },
+    "DRAWER_CLOSE": {
+      "requires": [
+        "before_open",
+        "drawer_moves_in",
+        "after_more_closed"
+      ],
+      "contradicts": [
+        "DRAWER_OPEN"
+      ]
+    },
+    "STORAGE_PUT_IN": {
+      "requires": [
+        "object_in_hand_or_near_storage",
+        "object_moves_into_storage",
+        "object_ends_inside"
+      ],
+      "contradicts": [
+        "STORAGE_TAKE_OUT"
+      ]
+    },
+    "STORAGE_TAKE_OUT": {
+      "requires": [
+        "object_starts_inside_storage",
+        "object_moves_out",
+        "object_ends_outside_or_in_hand"
+      ],
+      "contradicts": [
+        "STORAGE_PUT_IN"
+      ]
+    },
+    "SOCKET_INSERT": {
+      "requires": [
+        "plug_or_module_outside",
+        "insertion_motion",
+        "plug_or_module_seated"
+      ],
+      "contradicts": [
+        "SOCKET_REMOVE"
+      ]
+    },
+    "SOCKET_REMOVE": {
+      "requires": [
+        "plug_or_module_seated",
+        "removal_motion",
+        "plug_or_module_outside"
+      ],
+      "contradicts": [
+        "SOCKET_INSERT"
+      ]
+    },
+    "SOCKET_ADJUST": {
+      "requires": [
+        "hand_contacts_socket_module",
+        "module_rotates_slides_or_is_adjusted"
+      ],
+      "contradicts": []
+    }
+  },
+  "claim_profiles": {
+    "上层薄抽": {
+      "claim_type": "OBJECT",
+      "required_object": "UPPER_THIN_DRAWER",
+      "minimum_evidence": "STATIC_VISUAL",
+      "notes": "Must visually support upper position + thin geometry. A generic lower/deep drawer is insufficient."
+    },
+    "收纳小物不弯腰": {
+      "claim_type": "USE_CASE",
+      "required_object": "UPPER_THIN_DRAWER",
+      "preferred_actions": [
+        "STORAGE_PUT_IN",
+        "STORAGE_TAKE_OUT"
+      ],
+      "minimum_evidence": "STATIC_VISUAL+context",
+      "notes": "A plain open drawer supports storage existence, but not the full ergonomic claim by itself."
+    },
+    "打开就能拿到": {
+      "claim_type": "ACTION",
+      "required_action": "DRAWER_OPEN",
+      "minimum_evidence": "TEMPORAL_VISUAL",
+      "notes": "If drawer starts already open and no opening motion occurs, action is not demonstrated."
+    },
+    "轨道插座": {
+      "claim_type": "OBJECT",
+      "required_object": "TRACK_SOCKET",
+      "minimum_evidence": "STATIC_VISUAL",
+      "notes": "A clean static close-up is acceptable for the object claim."
+    },
+    "插拔也顺手": {
+      "claim_type": "ACTION",
+      "required_action": "SOCKET_INSERT",
+      "allow_alternative_action": "SOCKET_REMOVE",
+      "minimum_evidence": "TEMPORAL_VISUAL",
+      "notes": "Static socket visibility or hand touching the socket does not prove insertion/removal."
+    },
+    "伸缩桌面": {
+      "claim_type": "FUNCTION",
+      "required_object": "TABLETOP",
+      "preferred_actions": [
+        "EXTEND",
+        "RETRACT"
+      ],
+      "minimum_evidence": "STATIC_VISUAL",
+      "notes": "Static extended/retracted state may support function presence, but not direction."
+    },
+    "来客时一拉就变宽": {
+      "claim_type": "ACTION",
+      "required_action": "EXTEND",
+      "required_object": "TABLETOP",
+      "minimum_evidence": "TEMPORAL_VISUAL",
+      "notes": "Must show geometric change. Socket operation is a dominant mismatch."
+    },
+    "平时收起来不占位": {
+      "claim_type": "ACTION_SPACE",
+      "required_action": "RETRACT",
+      "required_object": "TABLETOP",
+      "minimum_evidence": "TEMPORAL_VISUAL+spatial_context",
+      "notes": "Best evidence shows extended→retracted and surrounding footprint; close-up socket/drawer is invalid."
+    }
+  },
+  "visual_beat_examples": [
+    {
+      "visual_beat_id": "VB1_HOOK",
+      "text": "岛台想好用，这三个细节最值得看",
+      "shot_role": "HOOK",
+      "preferred_visuals": [
+        "hero_island",
+        "strong_action",
+        "clean_overview"
+      ],
+      "avoid": [
+        "low_information_talking_head_only"
+      ]
+    },
+    {
+      "visual_beat_id": "VB2_STORAGE",
+      "text": "第一，上层薄抽，收纳小物不弯腰，打开就能拿到",
+      "shot_role": "FEATURE_DEMO",
+      "preferred_visuals": [
+        "upper_thin_drawer_detail",
+        "drawer_open_action",
+        "small_item_storage_action"
+      ]
+    },
+    {
+      "visual_beat_id": "VB3_POWER",
+      "text": "第二，轨道插座，吃火锅煮茶都方便，插拔也顺手",
+      "shot_role": "FEATURE_DEMO",
+      "preferred_visuals": [
+        "track_socket_overview",
+        "socket_insert_remove",
+        "appliance_use_context"
+      ]
+    },
+    {
+      "visual_beat_id": "VB4_FLEX",
+      "text": "第三，伸缩桌面，来客时一拉就变宽，平时收起来不占位",
+      "shot_role": "FEATURE_DEMO",
+      "preferred_visuals": [
+        "extend_complete",
+        "retract_complete",
+        "before_after_space"
+      ]
+    },
+    {
+      "visual_beat_id": "VB5_CTA",
+      "text": "厨房好不好用，全在这些小细节里",
+      "shot_role": "RESULT_CTA",
+      "preferred_visuals": [
+        "clean_hero_result",
+        "feature_montage",
+        "customer_home_overview"
+      ],
+      "avoid": [
+        "reuse_of_previous_near_duplicate"
+      ]
+    }
+  ],
+  "review_examples": [
+    {
+      "id": "EX_SEG_1985_1986_EXTEND",
+      "segments": [
+        "1985",
+        "1986"
+      ],
+      "requested_action": "EXTEND",
+      "observed_visual": "close-up of hand operating/adjusting circular track-socket modules",
+      "actual_support": "SOCKET_ADJUST candidate",
+      "verdict": "REJECT_FOR_EXTEND",
+      "reason_codes": [
+        "DOMINANT_OBJECT_TRACK_SOCKET",
+        "NO_TABLETOP_GEOMETRY_CHANGE",
+        "REQUESTED_ACTION_NOT_SHOWN"
+      ]
+    },
+    {
+      "id": "EX_SEG_1984_EXTEND",
+      "segments": [
+        "1984"
+      ],
+      "requested_action": "EXTEND",
+      "observed_visual": "wide frontal island/tabletop already in an extended-looking state; no clear extension motion in selected window",
+      "actual_support": "TABLETOP_EXTENDED_STATE / FUNCTION_VISIBLE",
+      "verdict": "REJECT_FOR_EXTEND_ACTION",
+      "reason_codes": [
+        "STATIC_STATE_NOT_ACTION",
+        "NO_BEFORE_MOTION_AFTER"
+      ]
+    },
+    {
+      "id": "EX_SEG_1_DRAWER_OPEN",
+      "segments": [
+        "1"
+      ],
+      "requested_action": "DRAWER_OPEN",
+      "observed_visual": "presenter beside a drawer that is already open; selected window does not clearly demonstrate closed→opening→open",
+      "actual_support": "DRAWER_OPEN_STATE",
+      "verdict": "REJECT_FOR_DRAWER_OPEN_ACTION",
+      "reason_codes": [
+        "OPEN_STATE_NOT_OPEN_ACTION"
+      ]
+    },
+    {
+      "id": "EX_SEG_37_DRAWER_OPEN",
+      "segments": [
+        "37"
+      ],
+      "requested_action": "DRAWER_OPEN",
+      "observed_visual": "presenter with several drawers; selected evidence is compatible with handling/closing rather than a clean opening demonstration",
+      "actual_support": "DRAWER_PRESENT / possible DRAWER_CLOSE",
+      "verdict": "REJECT_FOR_DRAWER_OPEN",
+      "reason_codes": [
+        "DIRECTION_UNCERTAIN_OR_OPPOSITE"
+      ]
+    },
+    {
+      "id": "EX_SEG_419_STORAGE_PUT_IN",
+      "segments": [
+        "419"
+      ],
+      "requested_action": "STORAGE_PUT_IN",
+      "observed_visual": "empty/open storage structure without a visible object moving into the storage",
+      "actual_support": "CABINET/DRAWER_OPEN_STATE",
+      "verdict": "REJECT_FOR_STORAGE_PUT_IN",
+      "reason_codes": [
+        "NO_OBJECT_TRANSFER_IN"
+      ]
+    },
+    {
+      "id": "EX_SEG_3_4_STORAGE_PUT_IN",
+      "segments": [
+        "3",
+        "4"
+      ],
+      "requested_action": "STORAGE_PUT_IN",
+      "observed_visual": "presenter interacts with open drawer/storage; evidence is closer to taking/displaying items or presentation than a clean put-in sequence",
+      "actual_support": "STORAGE_TAKE_OUT/PRESENTATION candidate",
+      "verdict": "REJECT_FOR_STORAGE_PUT_IN",
+      "reason_codes": [
+        "OPPOSITE_OR_UNPROVEN_DIRECTION"
+      ]
+    },
+    {
+      "id": "EX_SEG_2482_2484_FLEX",
+      "segments": [
+        "2482",
+        "2483",
+        "2484"
+      ],
+      "requested_action": "EXTEND/RETRACT",
+      "observed_visual": "presenter stands/gestures beside island/table; selected windows mainly show static product state, not a clear before→motion→after tabletop extension/retraction",
+      "actual_support": "FLEXIBLE_TABLE_FUNCTION candidate",
+      "verdict": "REJECT_FOR_DIRECTIONAL_ACTION",
+      "reason_codes": [
+        "STATIC_OR_TALKING_HEAD",
+        "NO_DIRECTION_PROOF"
+      ]
+    }
+  ]
+}

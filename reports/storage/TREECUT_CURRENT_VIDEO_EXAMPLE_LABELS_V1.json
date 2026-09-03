@@ -1,0 +1,191 @@
+{
+  "version": "1.0",
+  "status": "EXTERNAL_REVIEW_EXAMPLES_NOT_AUTO_L3",
+  "source": "current Stage8 G2/G3/Dedup dynamic human review",
+  "items": [
+    {
+      "id": "EX_SEG_1985_1986_EXTEND",
+      "segments": [
+        "1985",
+        "1986"
+      ],
+      "requested_action": "EXTEND",
+      "observed_visual": "close-up of hand operating/adjusting circular track-socket modules",
+      "actual_support": "SOCKET_ADJUST candidate",
+      "verdict": "REJECT_FOR_EXTEND",
+      "reason_codes": [
+        "DOMINANT_OBJECT_TRACK_SOCKET",
+        "NO_TABLETOP_GEOMETRY_CHANGE",
+        "REQUESTED_ACTION_NOT_SHOWN"
+      ]
+    },
+    {
+      "id": "EX_SEG_1984_EXTEND",
+      "segments": [
+        "1984"
+      ],
+      "requested_action": "EXTEND",
+      "observed_visual": "wide frontal island/tabletop already in an extended-looking state; no clear extension motion in selected window",
+      "actual_support": "TABLETOP_EXTENDED_STATE / FUNCTION_VISIBLE",
+      "verdict": "REJECT_FOR_EXTEND_ACTION",
+      "reason_codes": [
+        "STATIC_STATE_NOT_ACTION",
+        "NO_BEFORE_MOTION_AFTER"
+      ]
+    },
+    {
+      "id": "EX_SEG_1_DRAWER_OPEN",
+      "segments": [
+        "1"
+      ],
+      "requested_action": "DRAWER_OPEN",
+      "observed_visual": "presenter beside a drawer that is already open; selected window does not clearly demonstrate closed→opening→open",
+      "actual_support": "DRAWER_OPEN_STATE",
+      "verdict": "REJECT_FOR_DRAWER_OPEN_ACTION",
+      "reason_codes": [
+        "OPEN_STATE_NOT_OPEN_ACTION"
+      ]
+    },
+    {
+      "id": "EX_SEG_37_DRAWER_OPEN",
+      "segments": [
+        "37"
+      ],
+      "requested_action": "DRAWER_OPEN",
+      "observed_visual": "presenter with several drawers; selected evidence is compatible with handling/closing rather than a clean opening demonstration",
+      "actual_support": "DRAWER_PRESENT / possible DRAWER_CLOSE",
+      "verdict": "REJECT_FOR_DRAWER_OPEN",
+      "reason_codes": [
+        "DIRECTION_UNCERTAIN_OR_OPPOSITE"
+      ]
+    },
+    {
+      "id": "EX_SEG_419_STORAGE_PUT_IN",
+      "segments": [
+        "419"
+      ],
+      "requested_action": "STORAGE_PUT_IN",
+      "observed_visual": "empty/open storage structure without a visible object moving into the storage",
+      "actual_support": "CABINET/DRAWER_OPEN_STATE",
+      "verdict": "REJECT_FOR_STORAGE_PUT_IN",
+      "reason_codes": [
+        "NO_OBJECT_TRANSFER_IN"
+      ]
+    },
+    {
+      "id": "EX_SEG_3_4_STORAGE_PUT_IN",
+      "segments": [
+        "3",
+        "4"
+      ],
+      "requested_action": "STORAGE_PUT_IN",
+      "observed_visual": "presenter interacts with open drawer/storage; evidence is closer to taking/displaying items or presentation than a clean put-in sequence",
+      "actual_support": "STORAGE_TAKE_OUT/PRESENTATION candidate",
+      "verdict": "REJECT_FOR_STORAGE_PUT_IN",
+      "reason_codes": [
+        "OPPOSITE_OR_UNPROVEN_DIRECTION"
+      ]
+    },
+    {
+      "id": "EX_SEG_2482_2484_FLEX",
+      "segments": [
+        "2482",
+        "2483",
+        "2484"
+      ],
+      "requested_action": "EXTEND/RETRACT",
+      "observed_visual": "presenter stands/gestures beside island/table; selected windows mainly show static product state, not a clear before→motion→after tabletop extension/retraction",
+      "actual_support": "FLEXIBLE_TABLE_FUNCTION candidate",
+      "verdict": "REJECT_FOR_DIRECTIONAL_ACTION",
+      "reason_codes": [
+        "STATIC_OR_TALKING_HEAD",
+        "NO_DIRECTION_PROOF"
+      ]
+    }
+  ],
+  "g3_visual_beat_correction": [
+    {
+      "visual_beat_id": "VB1_HOOK",
+      "text": "岛台想好用，这三个细节最值得看",
+      "shot_role": "HOOK",
+      "preferred_visuals": [
+        "hero_island",
+        "strong_action",
+        "clean_overview"
+      ],
+      "avoid": [
+        "low_information_talking_head_only"
+      ]
+    },
+    {
+      "visual_beat_id": "VB2_STORAGE",
+      "text": "第一，上层薄抽，收纳小物不弯腰，打开就能拿到",
+      "shot_role": "FEATURE_DEMO",
+      "preferred_visuals": [
+        "upper_thin_drawer_detail",
+        "drawer_open_action",
+        "small_item_storage_action"
+      ]
+    },
+    {
+      "visual_beat_id": "VB3_POWER",
+      "text": "第二，轨道插座，吃火锅煮茶都方便，插拔也顺手",
+      "shot_role": "FEATURE_DEMO",
+      "preferred_visuals": [
+        "track_socket_overview",
+        "socket_insert_remove",
+        "appliance_use_context"
+      ]
+    },
+    {
+      "visual_beat_id": "VB4_FLEX",
+      "text": "第三，伸缩桌面，来客时一拉就变宽，平时收起来不占位",
+      "shot_role": "FEATURE_DEMO",
+      "preferred_visuals": [
+        "extend_complete",
+        "retract_complete",
+        "before_after_space"
+      ]
+    },
+    {
+      "visual_beat_id": "VB5_CTA",
+      "text": "厨房好不好用，全在这些小细节里",
+      "shot_role": "RESULT_CTA",
+      "preferred_visuals": [
+        "clean_hero_result",
+        "feature_montage",
+        "customer_home_overview"
+      ],
+      "avoid": [
+        "reuse_of_previous_near_duplicate"
+      ]
+    }
+  ],
+  "dedup_review": [
+    {
+      "pair_id": "PAIR01",
+      "review": "FALSE_POSITIVE",
+      "why": "storage/drawer shot vs power/socket shot; same environment/presenter does not make them duplicate"
+    },
+    {
+      "pair_id": "PAIR02",
+      "review": "TRUE_NARRATIVE_NEAR_DUPLICATE",
+      "why": "same presenter/island/drawer region/composition used again in same short video"
+    },
+    {
+      "pair_id": "PAIR03",
+      "review": "FALSE_POSITIVE",
+      "why": "power/socket visual and CTA drawer/presenter visual have different dominant content"
+    },
+    {
+      "pair_id": "PAIR04",
+      "review": "FALSE_POSITIVE",
+      "why": "wide tabletop/island view vs track-socket close-up; visually and narratively distinct"
+    }
+  ],
+  "idx63": {
+    "review": "CLEAN_OK",
+    "classification": "GARMENT_ENVIRONMENT_TEXT",
+    "visual": "NEWPRONOUNCE@ is printed on the person's T-shirt and moves/deforms with the garment; not a fixed platform watermark"
+  }
+}

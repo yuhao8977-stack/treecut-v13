@@ -160,5 +160,25 @@
     "windows_rebuilt": 4,
     "query20_with_candidates": 0,
     "applied_at": "2026-09-03 10:52:21"
+  },
+  "v2_integration": {
+    "engine_module": "src/treecut/services/visual_understanding_v2.py",
+    "engine_tests": "tests/test_treecut_visual_understanding_engine_v2.py (10/10)",
+    "mapping": {
+      "TemporalActionValidator": "src/treecut/services/action_subclip.py(apply_action_gate+R2 门; build_windows 状态转移)",
+      "IslandClaimLibrary": "src/treecut/services/claim_visual.py(原子主张/类型) + visual_beat.py(领域合同)",
+      "DomainVisualCritic": "src/treecut/services/claim_visual.py(ClaimVisualMatcher 硬闸: 资格/对象/动作/反向/禁止视觉/故事/重复)",
+      "VisualBeatGrouper": "src/treecut/services/visual_beat.py(group_visual_beats R4: 16→4-5 视觉 Beat 保留 Atomic Claims)",
+      "NoCandidateResolver": "src/treecut/services/visual_beat.py(audit_action_availability + suggest_script_fix R5: SEARCH_MORE→REWRITE→DROP/BLOCK)",
+      "DuplicateCritic": "src/treecut/services/production_dedup.py(R7: 叙事近重 WARNING+贡献; P0 仅硬重复) + production_qa.check_dedup",
+      "ExampleAdjudicationMemory": "reports/storage/TREECUT_REVIEW_EXAMPLE_MEMORY_V1.json(窗口级负例记忆, review_scope=SUBCLIP_WINDOW)"
+    },
+    "kb_loaded": true,
+    "negative_memory_window_scoped": true,
+    "negative_memory_entries": 44,
+    "supports_by_segment": 11,
+    "blacklist_corrected": "whole-asset EXCLUDE → 窗口级负例记忆(素材可跨动作/窗口复用, 如1985仍可TRACK_SOCKET)",
+    "expanded_retrieval": "RUNNING(_g2_expand_results.json)",
+    "updated_at": "2026-09-03 11:54:08"
   }
 }

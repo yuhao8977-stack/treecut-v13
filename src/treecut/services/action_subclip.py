@@ -145,13 +145,18 @@ OPPOSITE = {"EXTEND": "RETRACT", "RETRACT": "EXTEND",
             "STORAGE_PUT_IN": "STORAGE_TAKE_OUT", "STORAGE_TAKE_OUT": "STORAGE_PUT_IN"}
 
 
+_DIR_TOKENS = ("EXTEND", "RETRACT", "STATIC", "UNCERTAIN", "DRAWER_OPEN", "DRAWER_CLOSE",
+               "CABINET_OPEN", "CABINET_CLOSE", "STORAGE_PUT_IN", "STORAGE_TAKE_OUT",
+               "SOCKET_INSERT", "SOCKET_REMOVE")
+
+
 def parse_direction(text: str) -> str:
-    """direction=EXTEND/RETRACT/STATIC/UNCERTAIN 解析(默认 UNCERTAIN)。"""
+    """direction=... 解析(动作方向或 STATIC/UNCERTAIN)。"""
     if not text:
         return "UNCERTAIN"
     m = re.search(r"direction\s*=\s*([A-Z_]+)", text)
     if m:
-        return m.group(1) if m.group(1) in ("EXTEND", "RETRACT", "STATIC", "UNCERTAIN") else "UNCERTAIN"
+        return m.group(1) if m.group(1) in _DIR_TOKENS else "UNCERTAIN"
     return "UNCERTAIN"
 
 
@@ -192,6 +197,13 @@ def apply_action_gate(windows: list[ActionWindow], evidence: list[dict],
             if hit is None:
                 continue  # STATIC/无方向 → 不得证明方向动作
             if hit["direction"] != w.action:
+                continue
+        elif w.action in OPPOSITE:
+            # OPEN/CLOSE 等成对动作: 需要逐窗方向证据; 无 → 不猜方向(丢弃)
+            rows = dirs.get(w.media_id, [])
+            near = [d for d in rows if abs((d["t_s"] or 0) - (w.action_start_s or -1)) < 1.2]
+            hit = next((d for d in near if d["direction"] in OPPOSITE or d["direction"] == w.action), None)
+            if hit is None or hit["direction"] != w.action:
                 continue
         w.motion_support = "MODERATE" if len(ts) >= 3 else "WEAK"
         res.append(w)

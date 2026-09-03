@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-09-03 10:52:21",
- "note": "R2 门 + 裁决负例黑名单(人工BAD的 action/media 不进候选); 仅保留方向/动作证据",
+ "generated_at": "2026-09-03 11:51:46",
+ "note": "R2门 + 窗口级负例记忆过滤(非整段黑名单); 素材可跨动作复用",
  "windows": [
   {
    "action": "DRAWER_CLOSE",

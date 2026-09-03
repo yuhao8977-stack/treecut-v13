@@ -1,0 +1,738 @@
+{
+ "memory": [
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1985",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1986",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1984",
+   "reviewed_window_start": 2.36,
+   "reviewed_window_end": 4.86,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1985",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1986",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1984",
+   "reviewed_window_start": 2.36,
+   "reviewed_window_end": 4.86,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1985",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1986",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1984",
+   "reviewed_window_start": 2.36,
+   "reviewed_window_end": 4.86,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1985",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1986",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "EXTEND",
+   "segment_id": "1984",
+   "reviewed_window_start": 2.36,
+   "reviewed_window_end": 4.86,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态伸出桌面；均不是 EXTEND 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1985",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1986",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1984",
+   "reviewed_window_start": 2.36,
+   "reviewed_window_end": 4.86,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1985",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1986",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1984",
+   "reviewed_window_start": 2.36,
+   "reviewed_window_end": 4.86,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1985",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1986",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1984",
+   "reviewed_window_start": 2.36,
+   "reviewed_window_end": 4.86,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1985",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1986",
+   "reviewed_window_start": 2.78,
+   "reviewed_window_end": 3.33,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "RETRACT",
+   "segment_id": "1984",
+   "reviewed_window_start": 2.36,
+   "reviewed_window_end": 4.86,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "DOMINANT_VISUAL_MISMATCH",
+    "NO_TABLETOP_GEOMETRY_CHANGE"
+   ],
+   "human_note": "Top1/2 为轨道插座旋钮操作，Top3 为静态桌面；均不是 RETRACT 动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "DRAWER_OPEN",
+   "segment_id": "1",
+   "reviewed_window_start": 3.13,
+   "reviewed_window_end": 6.25,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "DRAWER_OPEN",
+   "segment_id": "37",
+   "reviewed_window_start": 1.07,
+   "reviewed_window_end": 7.87,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "DRAWER_OPEN",
+   "segment_id": "1",
+   "reviewed_window_start": 3.13,
+   "reviewed_window_end": 6.25,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "DRAWER_OPEN",
+   "segment_id": "37",
+   "reviewed_window_start": 1.07,
+   "reviewed_window_end": 7.87,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "DRAWER_OPEN",
+   "segment_id": "1",
+   "reviewed_window_start": 3.13,
+   "reviewed_window_end": 6.25,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "DRAWER_OPEN",
+   "segment_id": "37",
+   "reviewed_window_start": 1.07,
+   "reviewed_window_end": 7.87,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "DRAWER_OPEN",
+   "segment_id": "1",
+   "reviewed_window_start": 3.13,
+   "reviewed_window_end": 6.25,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "DRAWER_OPEN",
+   "segment_id": "37",
+   "reviewed_window_start": 1.07,
+   "reviewed_window_end": 7.87,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 抽屉已处于打开状态、人物讲解；Top2 更接近关闭/整理抽屉，不是 DRAWER_OPEN。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "419",
+   "reviewed_window_start": 7.28,
+   "reviewed_window_end": 9.78,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "4",
+   "reviewed_window_start": 0.26,
+   "reviewed_window_end": 4.06,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "3",
+   "reviewed_window_start": 0.93,
+   "reviewed_window_end": 6.84,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "419",
+   "reviewed_window_start": 7.28,
+   "reviewed_window_end": 9.78,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "4",
+   "reviewed_window_start": 0.26,
+   "reviewed_window_end": 4.06,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "3",
+   "reviewed_window_start": 0.93,
+   "reviewed_window_end": 6.84,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "419",
+   "reviewed_window_start": 7.28,
+   "reviewed_window_end": 9.78,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "4",
+   "reviewed_window_start": 0.26,
+   "reviewed_window_end": 4.06,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "3",
+   "reviewed_window_start": 0.93,
+   "reviewed_window_end": 6.84,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "419",
+   "reviewed_window_start": 7.28,
+   "reviewed_window_end": 9.78,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "4",
+   "reviewed_window_start": 0.26,
+   "reviewed_window_end": 4.06,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  },
+  {
+   "requested_action": "STORAGE_PUT_IN",
+   "segment_id": "3",
+   "reviewed_window_start": 0.93,
+   "reviewed_window_end": 6.84,
+   "review_scope": "SUBCLIP_WINDOW",
+   "review_result": "BAD",
+   "reason_codes": [
+    "STATE_NOT_ACTION",
+    "NO_DIRECTION_PROOF"
+   ],
+   "human_note": "Top1 为静态柜体/抽屉展示，Top2/3 更接近取出/讲解或关闭；未看到明确 PUT_IN 完整动作。",
+   "review_version": "2026-09-03-v1"
+  }
+ ],
+ "supports_by_segment": {
+  "1985": {
+   "supports": [
+    "SOCKET_ADJUST"
+   ],
+   "invalid_for": [
+    "EXTEND"
+   ],
+   "observed_visual": "close-up of hand operating/adjusting circular track-socket modules",
+   "actual_support": "SOCKET_ADJUST candidate"
+  },
+  "1986": {
+   "supports": [
+    "SOCKET_ADJUST"
+   ],
+   "invalid_for": [
+    "EXTEND"
+   ],
+   "observed_visual": "close-up of hand operating/adjusting circular track-socket modules",
+   "actual_support": "SOCKET_ADJUST candidate"
+  },
+  "1984": {
+   "supports": [
+    "TABLETOP_EXTENDED_STATE",
+    "FUNCTION_VISIBLE"
+   ],
+   "invalid_for": [
+    "EXTEND"
+   ],
+   "observed_visual": "wide frontal island/tabletop already in an extended-looking state; no clear extension motion in selected window",
+   "actual_support": "TABLETOP_EXTENDED_STATE / FUNCTION_VISIBLE"
+  },
+  "1": {
+   "supports": [
+    "DRAWER_OPEN_STATE"
+   ],
+   "invalid_for": [
+    "DRAWER_OPEN"
+   ],
+   "observed_visual": "presenter beside a drawer that is already open; selected window does not clearly demonstrate closed→opening→open",
+   "actual_support": "DRAWER_OPEN_STATE"
+  },
+  "37": {
+   "supports": [
+    "DRAWER_PRESENT",
+    "DRAWER_CLOSE"
+   ],
+   "invalid_for": [
+    "DRAWER_OPEN"
+   ],
+   "observed_visual": "presenter with several drawers; selected evidence is compatible with handling/closing rather than a clean opening demonstration",
+   "actual_support": "DRAWER_PRESENT / possible DRAWER_CLOSE"
+  },
+  "419": {
+   "supports": [
+    "CABINET",
+    "DRAWER_OPEN_STATE"
+   ],
+   "invalid_for": [
+    "STORAGE_PUT_IN"
+   ],
+   "observed_visual": "empty/open storage structure without a visible object moving into the storage",
+   "actual_support": "CABINET/DRAWER_OPEN_STATE"
+  },
+  "3": {
+   "supports": [
+    "STORAGE_TAKE_OUT",
+    "PRESENTATION"
+   ],
+   "invalid_for": [
+    "STORAGE_PUT_IN"
+   ],
+   "observed_visual": "presenter interacts with open drawer/storage; evidence is closer to taking/displaying items or presentation than a clean put-in sequence",
+   "actual_support": "STORAGE_TAKE_OUT/PRESENTATION candidate"
+  },
+  "4": {
+   "supports": [
+    "STORAGE_TAKE_OUT",
+    "PRESENTATION"
+   ],
+   "invalid_for": [
+    "STORAGE_PUT_IN"
+   ],
+   "observed_visual": "presenter interacts with open drawer/storage; evidence is closer to taking/displaying items or presentation than a clean put-in sequence",
+   "actual_support": "STORAGE_TAKE_OUT/PRESENTATION candidate"
+  },
+  "2482": {
+   "supports": [
+    "FLEXIBLE_TABLE_FUNCTION"
+   ],
+   "invalid_for": [
+    "EXTEND/RETRACT"
+   ],
+   "observed_visual": "presenter stands/gestures beside island/table; selected windows mainly show static product state, not a clear before→motion→after tabletop extension/retraction",
+   "actual_support": "FLEXIBLE_TABLE_FUNCTION candidate"
+  },
+  "2483": {
+   "supports": [
+    "FLEXIBLE_TABLE_FUNCTION"
+   ],
+   "invalid_for": [
+    "EXTEND/RETRACT"
+   ],
+   "observed_visual": "presenter stands/gestures beside island/table; selected windows mainly show static product state, not a clear before→motion→after tabletop extension/retraction",
+   "actual_support": "FLEXIBLE_TABLE_FUNCTION candidate"
+  },
+  "2484": {
+   "supports": [
+    "FLEXIBLE_TABLE_FUNCTION"
+   ],
+   "invalid_for": [
+    "EXTEND/RETRACT"
+   ],
+   "observed_visual": "presenter stands/gestures beside island/table; selected windows mainly show static product state, not a clear before→motion→after tabletop extension/retraction",
+   "actual_support": "FLEXIBLE_TABLE_FUNCTION candidate"
+  }
+ },
+ "note": "窗口级负例记忆(review_scope=SUBCLIP_WINDOW); 不禁止整段素材用于其它动作/窗口; 1985 对 EXTEND/RETRACT 无效但可用于 TRACK_SOCKET/SOCKET_ADJUST"
+}
