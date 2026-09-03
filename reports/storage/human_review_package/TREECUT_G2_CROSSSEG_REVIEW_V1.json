@@ -1,16 +1,5 @@
 {
- "status_per_action": {
-  "EXTEND": "MATERIAL_GAP_CANDIDATE",
-  "RETRACT": "MATERIAL_GAP_CANDIDATE",
-  "DRAWER_OPEN": "MATERIAL_GAP_CANDIDATE",
-  "STORAGE_PUT_IN": "MATERIAL_GAP_CANDIDATE",
-  "SOCKET_INSERT": "MATERIAL_GAP_CANDIDATE"
- },
- "confirm_blocked_by": [
-  "cross-segment 恢复出 motion 候选(方向未定)需人工/细化",
-  "Eligible/RR 顶候选无动作态"
- ],
- "new_candidates_for_review": [
+ "candidates": [
   {
    "media_id": 51,
    "merged_window_s": [
@@ -52,14 +41,6 @@
    "full_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛头上层薄抽收纳】01\\【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛头上层薄抽收纳】01-2.mp4"
   }
  ],
- "conclusion": "Recall 验证 V1.1: Eligible 全量排序+qwen 0 PASS; RR 57 提升(污染干净)但动作验证未过; 跨段合并恢复 4 条 motion 候选(UNSURE 方向)→ 需人工看片定 EXTEND/RETRACT/对象",
- "generated_at": "2026-09-03 14:48:27",
- "review_required_pending_verify": {
-  "EXTEND": 0,
-  "RETRACT": 0,
-  "DRAWER_OPEN": 0,
-  "STORAGE_PUT_IN": 0,
-  "SOCKET_INSERT": 0
- },
- "cross_segment_pending_probe": 0
+ "level": "HUMAN_REVIEW_EVIDENCE",
+ "human_result": null
 }

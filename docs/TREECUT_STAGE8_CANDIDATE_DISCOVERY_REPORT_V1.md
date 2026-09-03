@@ -1,22 +1,18 @@
-# STAGE8 Candidate Discovery Recovery V1 报告（2026-09-03 14:05:41）
+# STAGE8 Candidate Discovery Recovery V1.1 报告（2026-09-03 14:48:27）
 
 ## 结论
-- Recall 验证(分层漏斗, 非 Top3): Eligible 池每动作宽召回数百(EXTEND 327/DRAWER 395/STORAGE 396/SOCKET 394), 样本(10/动作)+qwen(4/动作) 后 **0 通过动作门**(方向 UNCERTAIN/静态 保守拒绝) → Eligible 池标签下动作证据稀缺
-- **不得标 MATERIAL_GAP_CONFIRMED**：REVIEW_REQUIRED 高价值候选(EXTEND 21/DRAWER 59/STORAGE 60/SOCKET 17=157) 未做 contamination verify；跨段合并结构候选 13,605 未做时序探测；样本非穷举
-- 不要求补拍；下一步 = 定向 verify REVIEW_REQUIRED 高价值 + 跨段候选时序探测(有界 qwen)
+- **不再随机10**：五动作 Eligible 池全量廉价排序(flexible 333 共享 EXTEND/RETRACT, drawer 888, storage 1200, socket 464) → 运动代理 top24 → 短名单12 → qwen top6 → **TVRC 0 PASS**
+- REVIEW_REQUIRED 定向验证并**正规 G1 提升 57 条**（EXTEND12/RETRACT9/DRAWER12/STORAGE12/SOCKET12，记录 recovery_v11 证据）——但其顶候选动作验证仍未通过（NO_ACTION/UNCERTAIN）
+- **跨段边界恢复有发现**：13,605→动作相关40→31 连续 → 合并窗动作态 PASS 4 条（media 51/109/89/52，flexible 族）——方向复核多为 STATIC/UNCERTAIN、media89=EXTEND(L2) → **UNSURE 待人工**
+- 结论：Recall 在三支线均深挖后，Eligible/RR 仍无确认动作；跨段合并证明"切镜切断动作"真实存在并恢复出运动候选 → **不得 CONFIRMED**，先人工看 4 条合并窗
 
-## 每动作漏斗
-| Action | Broad | Sample | Motion短名单 | Qwen | TVRC PASS | TVRC FAIL |
-| --- | --- | --- | --- | --- | --- | --- |
-| EXTEND | 327 | 10 | 4 | 4 | 0 | 2 |
-| RETRACT | 327 | 10 | 4 | 4 | 0 | 0 |
-| DRAWER_OPEN | 395 | 10 | 4 | 4 | 0 | 2 |
-| STORAGE_PUT_IN | 396 | 10 | 4 | 4 | 0 | 2 |
-| SOCKET_INSERT | 394 | 10 | 4 | 4 | 0 | 0 |
+## 漏斗指标（§23）
+| Action | 全量廉价 | 运动探测 | 短名单 | Qwen | TVRC PASS | RR提升 | 跨段合并motion |
+| EXTEND | 60 | 17 | 12 | 6 | 0 | 12 | 4 |
+| RETRACT | 60 | 17 | 12 | 6 | 0 | 9 | 4 |
+| DRAWER_OPEN | 60 | 24 | 12 | 6 | 0 | 12 | 4 |
+| STORAGE_PUT_IN | 60 | 24 | 12 | 6 | 0 | 12 | 4 |
+| SOCKET_INSERT | 60 | 24 | 12 | 6 | 0 | 12 | 4 |
 
-## 输出
-- TREECUT_ACTION_CANDIDATE_DISCOVERY_V1.json / TREECUT_{EXTEND,RETRACT,DRAWER_OPEN,STORAGE_PUT_IN,SOCKET_INSERT}_DISCOVERY_V1.json
-- TREECUT_REVIEW_REQUIRED_ACTION_RECOVERY_V1.json（未提升 G1；promotable=False 待 verify）
-- TREECUT_CROSS_SEGMENT_ACTION_RECOVERY_V1.json（13,605 结构候选；不重写 canonical）
-- TREECUT_MATERIAL_GAP_STATUS_V2.json（CANDIDATE，非 CONFIRMED）
-- 新有效候选 0 → 未生成新动态审核包（无可播新画面）；REVIEW_REQUIRED/跨段验证出候选后再重建
+## 新候选(人工)
+- TREECUT_G2_CROSSSEG_REVIEW_V1.mp4/.json：4 条合并窗(含 contexts)，方向/对象待人工

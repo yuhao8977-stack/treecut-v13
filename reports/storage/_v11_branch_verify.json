@@ -1,0 +1,72 @@
+{
+ "EXTEND": [
+  {
+   "verdict": "NO_ACTION_STATE",
+   "media_id": "21674"
+  },
+  {
+   "verdict": "FAIL",
+   "direction": "UNCERTAIN",
+   "windows": [],
+   "media_id": "21679"
+  },
+  {
+   "verdict": "FAIL",
+   "direction": "UNCERTAIN",
+   "windows": [],
+   "media_id": "21680"
+  }
+ ],
+ "SOCKET_INSERT": [
+  {
+   "verdict": "NO_ACTION_STATE",
+   "media_id": "1600"
+  },
+  {
+   "verdict": "NO_ACTION_STATE",
+   "media_id": "1654"
+  },
+  {
+   "verdict": "NO_ACTION_STATE",
+   "media_id": "1683"
+  }
+ ],
+ "_crossseg_extend": [
+  {
+   "media_id": 51,
+   "merged_window_s": [
+    0.0,
+    10.0
+   ],
+   "verdict": "PASS",
+   "action_states": 2
+  },
+  {
+   "media_id": 109,
+   "merged_window_s": [
+    0.0,
+    6.01
+   ],
+   "verdict": "PASS",
+   "action_states": 2
+  },
+  {
+   "media_id": 89,
+   "merged_window_s": [
+    0.0,
+    7.34
+   ],
+   "verdict": "PASS",
+   "action_states": 3
+  },
+  {
+   "media_id": 52,
+   "merged_window_s": [
+    0.0,
+    10.0
+   ],
+   "verdict": "PASS",
+   "action_states": 2
+  }
+ ]
+}

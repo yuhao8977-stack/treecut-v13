@@ -243,6 +243,73 @@
     "material_gap": "CANDIDATE_NOT_CONFIRMED",
     "review_required_pending": 157,
     "cross_segment_pending": 13605,
-    "updated_at": "2026-09-03 14:05:41"
+    "updated_at": "2026-09-03 14:05:41",
+    "v11": {
+      "random10_removed": true,
+      "metrics": {
+        "EXTEND": {
+          "broad_ranked": 60,
+          "motion_probed": 17,
+          "temporal_shortlist": 12,
+          "qwen": 6,
+          "tvrc_pass": 0,
+          "rr_promoted_clean": 12,
+          "rr_action_verified_pass": 0,
+          "crossseg_merged_motion": 4,
+          "final_top3": [],
+          "note": "Eligible 全量廉价排序+短名单+qwen 后 0 PASS; 跨段合并恢复出 motion 候选(方向待人工)"
+        },
+        "RETRACT": {
+          "broad_ranked": 60,
+          "motion_probed": 17,
+          "temporal_shortlist": 12,
+          "qwen": 6,
+          "tvrc_pass": 0,
+          "rr_promoted_clean": 9,
+          "rr_action_verified_pass": 0,
+          "crossseg_merged_motion": 4,
+          "final_top3": [],
+          "note": "Eligible 全量廉价排序+短名单+qwen 后 0 PASS; 跨段合并恢复出 motion 候选(方向待人工)"
+        },
+        "DRAWER_OPEN": {
+          "broad_ranked": 60,
+          "motion_probed": 24,
+          "temporal_shortlist": 12,
+          "qwen": 6,
+          "tvrc_pass": 0,
+          "rr_promoted_clean": 12,
+          "rr_action_verified_pass": 0,
+          "crossseg_merged_motion": 4,
+          "final_top3": [],
+          "note": "Eligible 全量廉价排序+短名单+qwen 后 0 PASS; 跨段合并恢复出 motion 候选(方向待人工)"
+        },
+        "STORAGE_PUT_IN": {
+          "broad_ranked": 60,
+          "motion_probed": 24,
+          "temporal_shortlist": 12,
+          "qwen": 6,
+          "tvrc_pass": 0,
+          "rr_promoted_clean": 12,
+          "rr_action_verified_pass": 0,
+          "crossseg_merged_motion": 4,
+          "final_top3": [],
+          "note": "Eligible 全量廉价排序+短名单+qwen 后 0 PASS; 跨段合并恢复出 motion 候选(方向待人工)"
+        },
+        "SOCKET_INSERT": {
+          "broad_ranked": 60,
+          "motion_probed": 24,
+          "temporal_shortlist": 12,
+          "qwen": 6,
+          "tvrc_pass": 0,
+          "rr_promoted_clean": 12,
+          "rr_action_verified_pass": 0,
+          "crossseg_merged_motion": 4,
+          "final_top3": [],
+          "note": "Eligible 全量廉价排序+短名单+qwen 后 0 PASS; 跨段合并恢复出 motion 候选(方向待人工)"
+        }
+      },
+      "crossseg_merged_review": "TREECUT_G2_CROSSSEG_REVIEW_V1.mp4",
+      "updated_at": "2026-09-03 14:48:27"
+    }
   }
 }
