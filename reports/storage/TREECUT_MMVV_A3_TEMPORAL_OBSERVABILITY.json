@@ -1,0 +1,344 @@
+{
+ "experiment": "MMVV_A3_TEMPORAL_OBSERVABILITY",
+ "generated_at": "2026-09-04 19:34:29",
+ "note": "只读盲输入；不含人工答案与动作结论；TEMPORAL_SIGNAL 仅为“冻结5帧是否包含可观测时间变化”的审计信号，非 MMVV verdict。",
+ "thresholds_note": "审计阈值仅供描述，非冻结算法阈值(ca34678 未改动)",
+ "cases": [
+  {
+   "opaque_case_id": "H001",
+   "frames": 5,
+   "pairs": [
+    {
+     "pair": "0.85->1.841",
+     "diff": 0.1728,
+     "edge_diff": 0.0329,
+     "flow_mean": 15.741,
+     "flow_median": 4.981,
+     "cam_tx_px": 28.273,
+     "cam_ty_px": -23.679,
+     "cam_mag_px": 36.879,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "1.841->2.833",
+     "diff": 0.1673,
+     "edge_diff": 0.0409,
+     "flow_mean": 21.974,
+     "flow_median": 9.564,
+     "cam_tx_px": 31.292,
+     "cam_ty_px": -37.141,
+     "cam_mag_px": 48.566,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "2.833->3.824",
+     "diff": 0.1423,
+     "edge_diff": 0.0487,
+     "flow_mean": 12.879,
+     "flow_median": 5.221,
+     "cam_tx_px": -1.646,
+     "cam_ty_px": -12.607,
+     "cam_mag_px": 12.714,
+     "foreground_residual_proxy": 0.165
+    },
+    {
+     "pair": "3.824->4.815",
+     "diff": 0.2156,
+     "edge_diff": 0.0583,
+     "flow_mean": 21.776,
+     "flow_median": 13.321,
+     "cam_tx_px": -23.749,
+     "cam_ty_px": -18.412,
+     "cam_mag_px": 30.051,
+     "foreground_residual_proxy": 0.0
+    }
+   ],
+   "static_interval_ratio": 0.0,
+   "frame_diff_mean": 0.1745,
+   "frame_diff_max": 0.2156,
+   "flow_mean_overall": 18.093,
+   "camera_motion_max_px": 48.566,
+   "TEMPORAL_SIGNAL": "STRONG_CHANGE"
+  },
+  {
+   "opaque_case_id": "H002",
+   "frames": 5,
+   "pairs": [
+    {
+     "pair": "1.372->2.973",
+     "diff": 0.1354,
+     "edge_diff": 0.1323,
+     "flow_mean": 34.705,
+     "flow_median": 35.054,
+     "cam_tx_px": 16.358,
+     "cam_ty_px": -31.421,
+     "cam_mag_px": 35.424,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "2.973->4.574",
+     "diff": 0.1406,
+     "edge_diff": 0.1395,
+     "flow_mean": 41.051,
+     "flow_median": 27.267,
+     "cam_tx_px": -74.07,
+     "cam_ty_px": 17.852,
+     "cam_mag_px": 76.19,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "4.574->6.175",
+     "diff": 0.1266,
+     "edge_diff": 0.1381,
+     "flow_mean": 31.446,
+     "flow_median": 28.714,
+     "cam_tx_px": 2.732,
+     "cam_ty_px": -5.808,
+     "cam_mag_px": 6.418,
+     "foreground_residual_proxy": 25.028
+    },
+    {
+     "pair": "6.175->7.776",
+     "diff": 0.0546,
+     "edge_diff": 0.1196,
+     "flow_mean": 5.299,
+     "flow_median": 4.986,
+     "cam_tx_px": -6.252,
+     "cam_ty_px": -1.389,
+     "cam_mag_px": 6.404,
+     "foreground_residual_proxy": 0.0
+    }
+   ],
+   "static_interval_ratio": 0.0,
+   "frame_diff_mean": 0.1143,
+   "frame_diff_max": 0.1406,
+   "flow_mean_overall": 28.125,
+   "camera_motion_max_px": 76.19,
+   "TEMPORAL_SIGNAL": "STRONG_CHANGE"
+  },
+  {
+   "opaque_case_id": "H003",
+   "frames": 5,
+   "pairs": [
+    {
+     "pair": "0.937->2.03",
+     "diff": 0.1861,
+     "edge_diff": 0.1398,
+     "flow_mean": 27.818,
+     "flow_median": 23.581,
+     "cam_tx_px": -20.944,
+     "cam_ty_px": 33.668,
+     "cam_mag_px": 39.651,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "2.03->3.123",
+     "diff": 0.1899,
+     "edge_diff": 0.1381,
+     "flow_mean": 23.527,
+     "flow_median": 20.683,
+     "cam_tx_px": -21.111,
+     "cam_ty_px": 17.011,
+     "cam_mag_px": 27.112,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "3.123->4.216",
+     "diff": 0.1237,
+     "edge_diff": 0.1344,
+     "flow_mean": 20.4,
+     "flow_median": 18.575,
+     "cam_tx_px": 0.843,
+     "cam_ty_px": 17.731,
+     "cam_mag_px": 17.751,
+     "foreground_residual_proxy": 2.649
+    },
+    {
+     "pair": "4.216->5.309",
+     "diff": 0.2051,
+     "edge_diff": 0.1382,
+     "flow_mean": 24.349,
+     "flow_median": 21.038,
+     "cam_tx_px": -1.591,
+     "cam_ty_px": 15.117,
+     "cam_mag_px": 15.201,
+     "foreground_residual_proxy": 9.148
+    }
+   ],
+   "static_interval_ratio": 0.0,
+   "frame_diff_mean": 0.1762,
+   "frame_diff_max": 0.2051,
+   "flow_mean_overall": 24.024,
+   "camera_motion_max_px": 39.651,
+   "TEMPORAL_SIGNAL": "STRONG_CHANGE"
+  },
+  {
+   "opaque_case_id": "H004",
+   "frames": 5,
+   "pairs": [
+    {
+     "pair": "0.961->2.083",
+     "diff": 0.1393,
+     "edge_diff": 0.0913,
+     "flow_mean": 27.876,
+     "flow_median": 20.734,
+     "cam_tx_px": 23.499,
+     "cam_ty_px": 38.607,
+     "cam_mag_px": 45.197,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "2.083->3.204",
+     "diff": 0.145,
+     "edge_diff": 0.091,
+     "flow_mean": 32.213,
+     "flow_median": 27.474,
+     "cam_tx_px": -57.109,
+     "cam_ty_px": 16.323,
+     "cam_mag_px": 59.396,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "3.204->4.325",
+     "diff": 0.1712,
+     "edge_diff": 0.0942,
+     "flow_mean": 31.085,
+     "flow_median": 23.042,
+     "cam_tx_px": -15.798,
+     "cam_ty_px": -4.954,
+     "cam_mag_px": 16.556,
+     "foreground_residual_proxy": 14.529
+    },
+    {
+     "pair": "4.325->5.447",
+     "diff": 0.1224,
+     "edge_diff": 0.0922,
+     "flow_mean": 18.756,
+     "flow_median": 11.073,
+     "cam_tx_px": -8.19,
+     "cam_ty_px": 6.12,
+     "cam_mag_px": 10.225,
+     "foreground_residual_proxy": 8.532
+    }
+   ],
+   "static_interval_ratio": 0.0,
+   "frame_diff_mean": 0.1445,
+   "frame_diff_max": 0.1712,
+   "flow_mean_overall": 27.483,
+   "camera_motion_max_px": 59.396,
+   "TEMPORAL_SIGNAL": "STRONG_CHANGE"
+  },
+  {
+   "opaque_case_id": "H005",
+   "frames": 5,
+   "pairs": [
+    {
+     "pair": "0.839->1.818",
+     "diff": 0.1523,
+     "edge_diff": 0.1058,
+     "flow_mean": 28.695,
+     "flow_median": 18.448,
+     "cam_tx_px": 42.696,
+     "cam_ty_px": 55.159,
+     "cam_mag_px": 69.753,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "1.818->2.798",
+     "diff": 0.1468,
+     "edge_diff": 0.1101,
+     "flow_mean": 32.313,
+     "flow_median": 23.429,
+     "cam_tx_px": 6.104,
+     "cam_ty_px": 47.077,
+     "cam_mag_px": 47.471,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "2.798->3.777",
+     "diff": 0.0926,
+     "edge_diff": 0.1112,
+     "flow_mean": 14.441,
+     "flow_median": 11.534,
+     "cam_tx_px": 8.591,
+     "cam_ty_px": 19.751,
+     "cam_mag_px": 21.538,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "3.777->4.757",
+     "diff": 0.1118,
+     "edge_diff": 0.1094,
+     "flow_mean": 20.868,
+     "flow_median": 20.462,
+     "cam_tx_px": -0.153,
+     "cam_ty_px": 26.531,
+     "cam_mag_px": 26.532,
+     "foreground_residual_proxy": 0.0
+    }
+   ],
+   "static_interval_ratio": 0.0,
+   "frame_diff_mean": 0.1259,
+   "frame_diff_max": 0.1523,
+   "flow_mean_overall": 24.079,
+   "camera_motion_max_px": 69.753,
+   "TEMPORAL_SIGNAL": "STRONG_CHANGE"
+  },
+  {
+   "opaque_case_id": "H006",
+   "frames": 5,
+   "pairs": [
+    {
+     "pair": "0.923->2.0",
+     "diff": 0.1451,
+     "edge_diff": 0.0813,
+     "flow_mean": 24.947,
+     "flow_median": 20.989,
+     "cam_tx_px": 5.997,
+     "cam_ty_px": 29.919,
+     "cam_mag_px": 30.514,
+     "foreground_residual_proxy": 0.0
+    },
+    {
+     "pair": "2.0->3.077",
+     "diff": 0.1292,
+     "edge_diff": 0.0854,
+     "flow_mean": 22.428,
+     "flow_median": 16.888,
+     "cam_tx_px": 12.303,
+     "cam_ty_px": 9.773,
+     "cam_mag_px": 15.712,
+     "foreground_residual_proxy": 6.716
+    },
+    {
+     "pair": "3.077->4.153",
+     "diff": 0.1433,
+     "edge_diff": 0.0947,
+     "flow_mean": 25.6,
+     "flow_median": 19.595,
+     "cam_tx_px": 14.656,
+     "cam_ty_px": 14.509,
+     "cam_mag_px": 20.623,
+     "foreground_residual_proxy": 4.977
+    },
+    {
+     "pair": "4.153->5.23",
+     "diff": 0.1136,
+     "edge_diff": 0.0978,
+     "flow_mean": 15.279,
+     "flow_median": 12.354,
+     "cam_tx_px": 15.129,
+     "cam_ty_px": 2.236,
+     "cam_mag_px": 15.293,
+     "foreground_residual_proxy": 0.0
+    }
+   ],
+   "static_interval_ratio": 0.0,
+   "frame_diff_mean": 0.1328,
+   "frame_diff_max": 0.1451,
+   "flow_mean_overall": 22.063,
+   "camera_motion_max_px": 30.514,
+   "TEMPORAL_SIGNAL": "STRONG_CHANGE"
+  }
+ ]
+}
