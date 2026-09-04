@@ -1,0 +1,65 @@
+{
+ "experiment": "TREECUT_OVERNIGHT_GAP_MAP_V1",
+ "generated_at": "2026-09-04 19:41:18",
+ "main_blockers_ranked": [
+  {
+   "rank": 1,
+   "gap": "MMVV 只 SHADOW（MMVV_ENFORCEMENT 硬阻断）",
+   "evidence": "MMVV_ENFORCEMENT 硬阻断；A3 泛化待验证",
+   "affects": "动作证据无法自动阻断错误选镜；最终成片正确性依赖人工"
+  },
+  {
+   "rank": 2,
+   "gap": "A3 泛化未验证（冻结算法未在 unseen 上作答）",
+   "evidence": "缺 Human ROI；blind 已建，明日起可标",
+   "affects": "EXTEND 检索/几何判断是否可泛化未知"
+  },
+  {
+   "rank": 3,
+   "gap": "检索语义缺口：RETRACT 路径召回=0；路径关键词误导桶存在",
+   "evidence": "funnel keyword recall RETRACT=0；EXTEND 358 命中/190 家族，最大桶「11.29 产品视频拍摄」28",
+   "affects": "动作召回完整性；误召回"
+  },
+  {
+   "rank": 4,
+   "gap": "生产组装链未闭环（shot_usage=0、模板 4、E2E 编排 CODE_EXISTS）",
+   "evidence": {
+    "capability": "Story/Timeline",
+    "group": "Assembly",
+    "code_refs": [
+     "scripts/hrp_builder.py",
+     "scripts/b007_v07_pipeline.py",
+     "scripts/phase251_build_manifest_v2.py"
+    ],
+    "tests": [
+     "tests/test_p6_roughcut.py",
+     "tests/test_p7_templates_ext.py"
+    ],
+    "real_data_evidence": "content_templates 4；phase251 manifest 工具；b007 v0.6/v0.7 曾产出 pilot 相关",
+    "highest_level": "TESTED_SYNTHETIC",
+    "status": "PARTIAL",
+    "blocker": "模板-素材契约未在真实剪辑闭环验证",
+    "code_refs_exist": 3,
+    "code_refs_missing": [],
+    "tests_missing": []
+   },
+   "affects": "脚本→3 候选成片未实现"
+  },
+  {
+   "rank": 5,
+   "gap": "无授权 Voice/BGM 输入",
+   "evidence": "VOICE_PRODUCTION_INPUT_REQUIRED / BGM_LIBRARY_INPUT_REQUIRED",
+   "affects": "成片音轨只能 fallback/诊断"
+  }
+ ],
+ "where_blocked_summary": {
+  "有素材": "G1 池≈13700（mp4 23253，review APPROVED 仅 88）",
+  "有 segment": "B007 30 note 全覆盖(609 seg)；X1 大池 segments 41834",
+  "语义证据": "ASR 51543 / OCR 289218 行存在(asset 键控)",
+  "动作候选": "路径关键词候选存在(EXTEND358 等)，但语义/几何动作真值未全量校准",
+  "claim 匹配": "G3 仅 TESTED_SYNTHETIC",
+  "MMVV": "SHADOW_ONLY + Core5/A2 闭合(受控集)",
+  "production shot": "shot_usage=0（尚未有真实成片选镜落库）"
+ },
+ "conclusion": "缺口不在“没素材/没代码”，而在：①动作→生产证据链(MMVV 未强制、泛化未验) ②检索语义层(RETRACT/误导桶) ③组装闭环(shot/模板/编排) ④外部输入(Voice/BGM)。"
+}

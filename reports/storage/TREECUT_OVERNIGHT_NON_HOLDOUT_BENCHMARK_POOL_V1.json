@@ -1,0 +1,2136 @@
+{
+ "experiment": "NON_HOLDOUT_BENCHMARK_POOL",
+ "generated_at": "2026-09-04 19:40:20",
+ "seed": 20260905,
+ "sample_target": 300,
+ "note": "仅召回候选元数据，非动作真值；已排除 excluded_known_ids(A1/A2/A3/Known/review-memory/rule-design)；A3 6 案例不在池内",
+ "pool_size": 13460,
+ "excluded_known_count": 240,
+ "category_distribution": {
+  "【工厂】产品类01": 8083,
+  "【04】造型展示": 1796,
+  "【02】尺寸展示": 817,
+  "【05】公牛轨道插座": 399,
+  "【02】下层抽屉": 394,
+  "【04】对开间收纳": 381,
+  "【01】上层薄抽": 330,
+  "【03】颜色展示": 328,
+  "【23】钢结构": 141,
+  "【10】岛台餐桌一体": 128,
+  "【18】海棠角": 95,
+  "【26】材质细节展示": 90,
+  "【10】内嵌水槽": 74,
+  "【03】开放抽屉": 40,
+  "【27】单面柜储物": 34,
+  "【20】连纹": 33,
+  "【05】生活化展示": 31,
+  "【13】T型岩板腿": 29,
+  "【29】圆弧设计": 27,
+  "【07】狗不干我干干": 25
+ },
+ "duration_min_max": null,
+ "duration_median": null,
+ "sample_size": 300,
+ "sample": [
+  {
+   "media_id": 4051,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 22785,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13690,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14156,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14224,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 861,
+   "category": "【02】下层抽屉",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14069,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4269,
+   "category": "【03】颜色展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3024,
+   "category": "【38】户外岛台烤炉",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 540,
+   "category": "【02】下层抽屉",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2949,
+   "category": "【28】音标轨道插座",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 16773,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 316,
+   "category": "【01】上层薄抽",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 26535,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5757,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9554,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8985,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 677,
+   "category": "【02】下层抽屉",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5643,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 17,
+   "category": "【01】上层薄抽",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7074,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3554,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13192,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2000,
+   "category": "【05】公牛轨道插座",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1559,
+   "category": "【04】对开间收纳",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7339,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9960,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 25490,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3739,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7530,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2088,
+   "category": "【09】内嵌酒柜",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2929,
+   "category": "【27】单面柜储物",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14616,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10506,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10837,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6592,
+   "category": "【11】物流追踪",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 25445,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12039,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3448,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10896,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14364,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6144,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 21110,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 592,
+   "category": "【02】下层抽屉",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9781,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 26659,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6413,
+   "category": "【06】空镜响指转场",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4251,
+   "category": "【03】颜色展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2589,
+   "category": "【23】钢结构",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 372,
+   "category": "【01】上层薄抽",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12137,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12157,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12699,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11080,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6353,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14210,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9129,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14120,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12846,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6459,
+   "category": "【09】改稿设计",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12766,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5120,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11313,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6201,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5521,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 22911,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4085,
+   "category": "【03】颜色展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1549,
+   "category": "【04】对开间收纳",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3827,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13151,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7935,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 20556,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13242,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10771,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10094,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12569,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2174,
+   "category": "【11】煮茶器",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10885,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2993,
+   "category": "【31】岩板内嵌设计",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5773,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 19275,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1717,
+   "category": "【05】公牛轨道插座",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 19253,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9673,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 230,
+   "category": "【01】上层薄抽",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 18210,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5961,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8710,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13203,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2431,
+   "category": "【19】拉篮",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9986,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4601,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2077,
+   "category": "【06】内嵌烤箱",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3670,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3002,
+   "category": "【34】UB克轨道插座",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12785,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12218,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9315,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13732,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11683,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2317,
+   "category": "【18】海棠角",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14199,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2995,
+   "category": "【32】镂空腰线设计",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11911,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4665,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8190,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14775,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11539,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10618,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2030,
+   "category": "【05】公牛轨道插座",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13318,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12560,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7322,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5647,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14453,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3022,
+   "category": "【37】岩板折边工艺",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4833,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1503,
+   "category": "【04】对开间收纳",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14083,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8419,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4426,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8844,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 960,
+   "category": "【02】下层抽屉",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11886,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13057,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10177,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14923,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11217,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1600,
+   "category": "【05】公牛轨道插座",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1357,
+   "category": "【04】对开间收纳",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1089,
+   "category": "【04】对开间收纳",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11142,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2557,
+   "category": "【21】伸缩功能",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7541,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1421,
+   "category": "【04】对开间收纳",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10959,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2999,
+   "category": "【33】吧台空间",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 241,
+   "category": "【01】上层薄抽",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3904,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 27884,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9804,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7591,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10484,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5457,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6340,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5118,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12222,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4483,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 22042,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11084,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9079,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13319,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 22117,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13142,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2045,
+   "category": "【05】公牛轨道插座",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11990,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7655,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5846,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9819,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6345,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12391,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9247,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1932,
+   "category": "【05】公牛轨道插座",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10166,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1887,
+   "category": "【05】公牛轨道插座",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6433,
+   "category": "【07】狗不干我干干",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13818,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5032,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8550,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6593,
+   "category": "【12】齐屏设计",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11969,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13269,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8295,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2294,
+   "category": "【16】水波纹亚克力腿",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2707,
+   "category": "【24】岩板台面耐造",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 25836,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6462,
+   "category": "【10】岛台餐桌一体",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2252,
+   "category": "【14】T型亚克力腿",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4670,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2198,
+   "category": "【12】灯带",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9048,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3821,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11462,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11833,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 867,
+   "category": "【02】下层抽屉",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5036,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8560,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7843,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3725,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9355,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2663,
+   "category": "【23】钢结构",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6458,
+   "category": "【08】可视面全贴岩板的岛台",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4627,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 15,
+   "category": "【01】上层薄抽",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 15571,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5635,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3007,
+   "category": "【35】内嵌冰箱",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 25422,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12927,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13209,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11721,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4342,
+   "category": "【03】颜色展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4581,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10855,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3523,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5056,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 19890,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4225,
+   "category": "【03】颜色展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12693,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10514,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2746,
+   "category": "【26】材质细节展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7127,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4221,
+   "category": "【03】颜色展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5468,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12932,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8951,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13018,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 19611,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 16048,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7671,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12745,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8837,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 19454,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 20108,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2581,
+   "category": "【23】钢结构",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1263,
+   "category": "【04】对开间收纳",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11834,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2160,
+   "category": "【10】内嵌水槽",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1201,
+   "category": "【04】对开间收纳",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3907,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12237,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7406,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 26958,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10965,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4685,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 20998,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8369,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3012,
+   "category": "【36】内嵌蒸烤一体",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9572,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7102,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2295,
+   "category": "【17】渐变亚克力腿",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 118,
+   "category": "【01】上层薄抽",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4546,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3292,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 22981,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 906,
+   "category": "【02】下层抽屉",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9462,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 19487,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5274,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4682,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9680,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10028,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 5628,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7467,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3567,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11122,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 26826,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6475,
+   "category": "【10】岛台餐桌一体",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7473,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14144,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 27710,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12762,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11823,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12914,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 20029,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 1046,
+   "category": "【03】开放抽屉",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12505,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6176,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12971,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8222,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11435,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10868,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 785,
+   "category": "【02】下层抽屉",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 17333,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4222,
+   "category": "【03】颜色展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 11041,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 27493,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 16666,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2283,
+   "category": "【15】一字型岩板腿",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14090,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12402,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14529,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 15692,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3247,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4505,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 8910,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 26423,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 2975,
+   "category": "【29】圆弧设计",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4883,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3744,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 10238,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 14332,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 4789,
+   "category": "【04】造型展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 15232,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 7436,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 3475,
+   "category": "【02】尺寸展示",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 13155,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 9339,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 6927,
+   "category": "【工厂】产品类",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "media_id": 12297,
+   "category": "【工厂】产品类01",
+   "duration_s": 0.0,
+   "w": 0,
+   "h": 0
+  }
+ ]
+}

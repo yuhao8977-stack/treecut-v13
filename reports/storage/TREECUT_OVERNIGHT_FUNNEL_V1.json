@@ -1,0 +1,52 @@
+{
+ "experiment": "MMVV/Production Source Funnel (read-only, X1 corpus + B007 published)",
+ "generated_at": "2026-09-04 19:38:43",
+ "G1_role_rows_total": 28252,
+ "mp4_total": 23253,
+ "media_by_source": [
+  [
+   1,
+   3025
+  ],
+  [
+   2,
+   3569
+  ],
+  [
+   3,
+   332
+  ],
+  [
+   4,
+   21170
+  ],
+  [
+   5,
+   156
+  ]
+ ],
+ "G1_eligible_mp4_approx": 13700,
+ "review_APPROVED": 88,
+ "keyword_recall_media_counts(X1_mp4)": {
+  "DRAWER_OPEN": 704,
+  "EXTEND": 358,
+  "RETRACT": 0,
+  "SOCKET": 485,
+  "STORAGE": 1597,
+  "STATIC_PRESENT": 7749
+ },
+ "B007_published_notes": 30,
+ "B007_segments": [
+  609,
+  30
+ ],
+ "B007_asr_rows": [
+  866,
+  30
+ ],
+ "B007_ocr_rows": [
+  2980,
+  30
+ ],
+ "note": "候选=召回计数，非动作真值；G1 eligible 为只读近似"
+}

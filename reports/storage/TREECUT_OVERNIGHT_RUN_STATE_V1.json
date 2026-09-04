@@ -3,7 +3,7 @@
  "start_time": "2026-09-04 19:32:26",
  "baseline_commit": "4fa7612",
  "current_branch": "main",
- "phase": "P1",
+ "phase": "P3",
  "task": "init",
  "status": "running",
  "checkpoints": [
@@ -18,6 +18,12 @@
    "phase": "P1",
    "commit": "727420b",
    "note": "observability audit + review html + blind ROI page/hardening done"
+  },
+  {
+   "at": "2026-09-04 19:41:19",
+   "phase": "P3",
+   "commit": "7c0891e",
+   "note": "contract probe 21 caps + funnel + pool 13460/sample300 + gap map + auto-roi report done"
   }
  ],
  "tasks": {
@@ -48,23 +54,28 @@
   },
   "P2-contract-probe": {
    "name": "G1→G5 contract probe dry-run（非 A3 校准素材）",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:41:18"
   },
   "P2-capability-matrix": {
    "name": "六层验证证据矩阵（CODE_EXISTS..PRODUCTION_READY）",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:41:18"
   },
   "P3-candidate-benchmark": {
    "name": "大规模非 holdout 召回基准（≥100 media，仅 CANDIDATE）",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:41:18"
   },
   "P3-falsepass-audit": {
    "name": "G2/G3 false-pass 审计 + 缺口记录",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:41:18"
   },
   "P3-funnel": {
    "name": "Production Source 漏斗统计（G1→Shot）",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:41:18"
   },
   "P4-dryrun": {
    "name": "生产链 dry-run（1-3 calibration 脚本/beat，空槽保留）",
@@ -93,5 +104,5 @@
  },
  "errors": [],
  "storage_health": {},
- "last_checkpoint": "2026-09-04 19:37:21"
+ "last_checkpoint": "2026-09-04 19:41:19"
 }
