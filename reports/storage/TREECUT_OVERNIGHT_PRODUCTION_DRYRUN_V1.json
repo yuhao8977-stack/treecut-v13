@@ -1,0 +1,141 @@
+{
+ "experiment": "TREECUT_OVERNIGHT_PRODUCTION_DRYRUN_V1",
+ "generated_at": "2026-09-04 19:42:03",
+ "mode": "PLAN_ONLY_DRY_RUN (不渲染、不产出 rough cut)",
+ "calibration_beat": {
+  "claim": "空镜岛台伸缩餐桌一体（EXTEND）",
+  "media_pool_ref": "NON_HOLDOUT_BENCHMARK_POOL EXTEND 命中样本（非 A3；A3 6 案例 SEALED）",
+  "a3_usage": "未使用"
+ },
+ "stages": [
+  {
+   "stage": "G1 源资格",
+   "input": "media_id",
+   "output": "eligible+role",
+   "contract": "ProductionSourceService.is_media_production_eligible",
+   "status": "OK(TESTED_REAL_DATA)",
+   "missing": [],
+   "broken": [],
+   "note": "池≈13700 已由漏斗统计"
+  },
+  {
+   "stage": "G2 action subclip",
+   "input": "media+window",
+   "output": "候选 subclip",
+   "contract": "action_subclip / hrp_g2",
+   "status": "TESTED_SYNTHETIC",
+   "missing": [
+    "真实媒体校准重跑(避 A3)"
+   ],
+   "broken": [],
+   "note": ""
+  },
+  {
+   "stage": "G3 claim→visual",
+   "input": "claim+候选",
+   "output": "匹配片段",
+   "contract": "claim_visual / hrp_g3",
+   "status": "TESTED_SYNTHETIC",
+   "missing": [
+    "真实 claim 匹配证据"
+   ],
+   "broken": [],
+   "note": ""
+  },
+  {
+   "stage": "MMVV SHADOW evidence",
+   "input": "帧+人工 ROI",
+   "output": "几何/时序证据",
+   "contract": "mmvl_master_v1 (frozen ca34678)",
+   "status": "SHADOW_ONLY",
+   "missing": [
+    "人工 ROI",
+    "blind 预测授权"
+   ],
+   "broken": [
+    "MMVV_ENFORCEMENT 硬阻断"
+   ],
+   "note": "A3 外媒体同样缺 ROI → 本 beat 无法产出 MMVV 证据"
+  },
+  {
+   "stage": "Dedup",
+   "input": "候选集",
+   "output": "去重后镜头",
+   "contract": "production_dedup / g5",
+   "status": "OK(TESTED_SYNTHETIC)",
+   "missing": [
+    "shot_usage 为空(生产未消费)"
+   ],
+   "broken": [],
+   "note": ""
+  },
+  {
+   "stage": "Timeline schema",
+   "input": "镜头序列",
+   "output": "timeline",
+   "contract": "content_templates(4) / phase251 manifest",
+   "status": "CODE_EXISTS",
+   "missing": [
+    "模板-素材契约未在真实剪辑验证"
+   ],
+   "broken": [],
+   "note": ""
+  },
+  {
+   "stage": "Narration availability",
+   "input": "timeline",
+   "output": "旁白稿",
+   "contract": "narration (test 8 pass)",
+   "status": "TESTED_SYNTHETIC",
+   "missing": [
+    "VOICE_PRODUCTION_INPUT_REQUIRED"
+   ],
+   "broken": [],
+   "note": "仅 fallback TTS 诊断"
+  },
+  {
+   "stage": "Subtitle plan",
+   "input": "ASR 文本",
+   "output": "字幕轨道",
+   "contract": "transcripts/fts + hrp_ff",
+   "status": "CODE_EXISTS",
+   "missing": [
+    "字幕样式端到端证据"
+   ],
+   "broken": [],
+   "note": ""
+  },
+  {
+   "stage": "Render preflight",
+   "input": "timeline+媒体",
+   "output": "技术预检",
+   "contract": "test_production_path_preflight_v01 (8 pass)",
+   "status": "OK(TESTED_SYNTHETIC)",
+   "missing": [],
+   "broken": [],
+   "note": ""
+  },
+  {
+   "stage": "G5 QA",
+   "input": "成片",
+   "output": "技术/内容 QA",
+   "contract": "production_qa + g5 test (10 pass)",
+   "status": "TESTED_SYNTHETIC",
+   "missing": [
+    "内容 QA 真实成片校准"
+   ],
+   "broken": [],
+   "note": ""
+  }
+ ],
+ "empty_slots_rule": "若某 beat 无有效镜头 → 保留空槽，不用错误镜头填满",
+ "diagnostic_roughcut_decision": {
+  "allowed": false,
+  "reason": "链未全通：MMVV SHADOW_ONLY(无 ROI→无证据)、shot_usage=0、Voice/BGM 无生产输入。按 §28 条件(所有 source contracts+技术路径完整)不满足 → 不生成诊断成片（避免“为工作量而开发”）。",
+  "blocked_by": [
+   "MMVV 人工 ROI",
+   "VOICE_PRODUCTION_INPUT_REQUIRED",
+   "BGM_LIBRARY_INPUT_REQUIRED"
+  ]
+ }
+}

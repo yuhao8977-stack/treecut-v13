@@ -1,0 +1,76 @@
+{
+ "experiment": "TREECUT_OVERNIGHT_CODE_QUALITY_INVENTORY_V1",
+ "generated_at": "2026-09-04 19:42:03",
+ "scripts_total": 310,
+ "scripts_by_prefix": {
+  "b007_audit_production": 1,
+  "b007_audit_recency": 1,
+  "b007_creator_sync_probe": 1,
+  "b007_dashboard_diag": 1,
+  "b007_datacenter_diag": 1,
+  "b007_g1_source_gate": 1,
+  "b007_home_diag": 1,
+  "b007_ingest_capture": 1,
+  "b007_note_data_diag": 1,
+  "b007_page_verify_probe": 1,
+  "b007_pagination_diag": 1,
+  "b007_pagination_diag2": 1,
+  "b007_perf_export": 1,
+  "b007_profile_probe": 1,
+  "b007_recent12_compare": 1,
+  "b007_recent12_deep_probe": 1,
+  "b007_recent12_presence": 1,
+  "b007_recent12_select": 1,
+  "b007_review16_v2_package": 1,
+  "b007_schema_capture": 1,
+  "b007_schema_map_build": 1,
+  "b007_spotlight_account_capture": 1,
+  "b007_spotlight_api_probe": 1,
+  "b007_spotlight_body_capture": 1,
+  "b007_spotlight_capture": 1,
+  "b007_spotlight_databank": 1,
+  "b007_spotlight_data_nav": 1,
+  "b007_spotlight_date_cal": 1,
+  "b007_spotlight_date_diag": 1,
+  "b007_spotlight_explore": 1,
+  "b007_spotlight_gate_probe": 1,
+  "b007_spotlight_nav_dump": 1,
+  "b007_spotlight_note_report": 1,
+  "b007_spotlight_note_report_capture": 1,
+  "b007_spotlight_outputs": 1,
+  "b007_spotlight_pag2": 1,
+  "b007_spotlight_pag_pw": 1,
+  "b007_spotlight_pag_test": 1,
+  "b007_spotlight_pag_ui": 1,
+  "b007_spotlight_picker_diag": 1
+ },
+ "duplicate_family_services": [
+  {
+   "family": "conflict_resolver",
+   "files": [
+    "conflict_resolver.py",
+    "conflict_resolver_v2.py"
+   ]
+  },
+  {
+   "family": "business_cognition",
+   "files": [
+    "business_cognition_service.py",
+    "business_cognition_v2.py",
+    "business_cognition_v2_1.py"
+   ]
+  },
+  {
+   "family": "semantic_action",
+   "files": [
+    "semantic_action_v1.py",
+    "semantic_action_v2.py"
+   ]
+  },
+  {
+   "family": "stage2/3/4 历史脚本",
+   "note": "大量 stage*_*.py 为旧校准/审计脚本(只读盘点, 未删)"
+  }
+ ],
+ "note": "只读盘点；不删不改；重复实现统一属后续 canonical 小步整合(§32 允许范围外需审批)"
+}

@@ -79,11 +79,13 @@
   },
   "P4-dryrun": {
    "name": "生产链 dry-run（1-3 calibration 脚本/beat，空槽保留）",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:42:03"
   },
   "P4-diagnostic-roughcut": {
    "name": "诊断 rough cut ≤3（NOT_FOR_PUBLISH，非 Pilot）",
-   "status": "pending"
+   "status": "skipped",
+   "at": "2026-09-04 19:42:03"
   },
   "P5-tests": {
    "name": "逐文件 bounded pytest 回归矩阵",
@@ -91,7 +93,8 @@
   },
   "P5-code-quality": {
    "name": "legacy path / duplicate impl inventory（只读盘点）",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:42:03"
   },
   "P6-report": {
    "name": "主报告 md+json + 桌面 TreeCut_Overnight_2026-09-05",
