@@ -1,37 +1,10 @@
 {
- "generated_at": "2026-09-04 15:47:35",
+ "generated_at": "2026-09-04 16:00:11",
  "frames_total": 30,
  "frames_ok": 30,
- "annotations": 162,
+ "annotations": 182,
  "issues": [],
- "missing_required": [
-  {
-   "media": 1985,
-   "issue": "REQUIRED_OBJECT_ABSENT",
-   "required_any_of": [
-    "TABLETOP",
-    "EXTENSION_TABLETOP"
-   ],
-   "present": [
-    "HAND",
-    "PERSON",
-    "SOCKET_MODULE",
-    "TRACK_SOCKET"
-   ]
-  },
-  {
-   "media": 1986,
-   "issue": "REQUIRED_OBJECT_ABSENT",
-   "required_any_of": [
-    "TABLETOP",
-    "EXTENSION_TABLETOP"
-   ],
-   "present": [
-    "HAND",
-    "TRACK_SOCKET"
-   ]
-  }
- ],
+ "missing_required": [],
  "cases": [
   {
    "media_id": 51,
@@ -353,8 +326,10 @@
      "frame": "m1985_0.jpg",
      "t_s": 1.9,
      "sha256": "8b775fd7e2b7f066c8eb338e952a3ec0188212ee800fca90ac923413f90dda59",
-     "boxes": 3,
+     "boxes": 5,
      "objects": [
+      "EXTENSION_TABLETOP",
+      "ISLAND_BODY",
       "PERSON",
       "TRACK_SOCKET"
      ],
@@ -364,8 +339,10 @@
      "frame": "m1985_1.jpg",
      "t_s": 2.525,
      "sha256": "15e9e614ffdcd81ab416fa8c344acb891839a7263407332dee4482840954ab4c",
-     "boxes": 3,
+     "boxes": 5,
      "objects": [
+      "EXTENSION_TABLETOP",
+      "ISLAND_BODY",
       "TRACK_SOCKET"
      ],
      "annotated": true
@@ -374,9 +351,11 @@
      "frame": "m1985_2.jpg",
      "t_s": 3.15,
      "sha256": "aaf28769a0e9dad0f449c404b2b2df3ff986328e7e583af4ec7677524b452b55",
-     "boxes": 3,
+     "boxes": 5,
      "objects": [
+      "EXTENSION_TABLETOP",
       "HAND",
+      "ISLAND_BODY",
       "SOCKET_MODULE"
      ],
      "annotated": true
@@ -385,9 +364,11 @@
      "frame": "m1985_3.jpg",
      "t_s": 3.775,
      "sha256": "5f7b29b00d1a6e20349ed2eda23b4cc8ec3067e014d8450330cb08bcbe312058",
-     "boxes": 3,
+     "boxes": 5,
      "objects": [
+      "EXTENSION_TABLETOP",
       "HAND",
+      "ISLAND_BODY",
       "SOCKET_MODULE"
      ],
      "annotated": true
@@ -396,9 +377,11 @@
      "frame": "m1985_4.jpg",
      "t_s": 4.4,
      "sha256": "34369093435b1e7439bcba800003612792d7f607db560c97d37a4d29ef4c1f07",
-     "boxes": 2,
+     "boxes": 4,
      "objects": [
+      "EXTENSION_TABLETOP",
       "HAND",
+      "ISLAND_BODY",
       "SOCKET_MODULE"
      ],
      "annotated": true
@@ -414,9 +397,11 @@
      "frame": "m1986_0.jpg",
      "t_s": 1.9,
      "sha256": "8b775fd7e2b7f066c8eb338e952a3ec0188212ee800fca90ac923413f90dda59",
-     "boxes": 3,
+     "boxes": 5,
      "objects": [
+      "EXTENSION_TABLETOP",
       "HAND",
+      "ISLAND_BODY",
       "TRACK_SOCKET"
      ],
      "annotated": true
@@ -425,9 +410,11 @@
      "frame": "m1986_1.jpg",
      "t_s": 2.525,
      "sha256": "15e9e614ffdcd81ab416fa8c344acb891839a7263407332dee4482840954ab4c",
-     "boxes": 3,
+     "boxes": 5,
      "objects": [
+      "EXTENSION_TABLETOP",
       "HAND",
+      "ISLAND_BODY",
       "TRACK_SOCKET"
      ],
      "annotated": true
@@ -436,9 +423,11 @@
      "frame": "m1986_2.jpg",
      "t_s": 3.15,
      "sha256": "aaf28769a0e9dad0f449c404b2b2df3ff986328e7e583af4ec7677524b452b55",
-     "boxes": 3,
+     "boxes": 5,
      "objects": [
+      "EXTENSION_TABLETOP",
       "HAND",
+      "ISLAND_BODY",
       "TRACK_SOCKET"
      ],
      "annotated": true
@@ -447,9 +436,11 @@
      "frame": "m1986_3.jpg",
      "t_s": 3.775,
      "sha256": "5f7b29b00d1a6e20349ed2eda23b4cc8ec3067e014d8450330cb08bcbe312058",
-     "boxes": 3,
+     "boxes": 5,
      "objects": [
+      "EXTENSION_TABLETOP",
       "HAND",
+      "ISLAND_BODY",
       "TRACK_SOCKET"
      ],
      "annotated": true
@@ -458,9 +449,11 @@
      "frame": "m1986_4.jpg",
      "t_s": 4.4,
      "sha256": "34369093435b1e7439bcba800003612792d7f607db560c97d37a4d29ef4c1f07",
-     "boxes": 2,
+     "boxes": 4,
      "objects": [
+      "EXTENSION_TABLETOP",
       "HAND",
+      "ISLAND_BODY",
       "TRACK_SOCKET"
      ],
      "annotated": true
@@ -469,6 +462,6 @@
    "fully_annotated": true
   }
  ],
- "a1_ready": false,
+ "a1_ready": true,
  "a2_not_run": true
 }

@@ -37,5 +37,8 @@
 ## 6. 测试（tests/test_mmvv_a1.py，8/8 通过）
 human_roi 与 L2 分离 / frame_hash 绑定 / per-frame 非静态 / 坐标边界 / 必需对象契约 / reload 确定性 / camera 字段分离 / A1 无 qwen。4 个 R2_KNOWN_UNMET xfail 保留未转绿。
 
-## 7. A1 READY 判定（§18，需人工标注后复核）
-全部 6 案例每帧 ≥1 框、目标对象出现、frame hash 完整、无 qwen/heuristic 污染、reload 确定性 → 状态改 MMVV_A1_GT_ROI_READY（由架构师核验 REVIEW.html 后批准 A2；不得自动进入 A2）。
+## 7. A1 READY 判定（§18；2026-09-04 复查更新）
+1985/1986 补框（伸缩桌板 5/5 + 岛台主体 5/5）后重跑 post_annotation_validate：**issues=0 / missing=0 / A1_READY=True**。
+- 30/30 帧 hash 与磁盘一致；坐标全部合法；182 框 annotation_source 全部 L3_HUMAN_ROI（无 Qwen/heuristic）；6/6 案例全帧标注；Review HTML 正常（中文标签）。
+- 状态：**MMVV_A1_GT_ROI_READY**（不等于 MMVV/G2/G3/Stage8 PASS）。
+- 架构师审核开放项：52 的「抽屉」框仅出现在 t=10.0（2 个），F0–F3 为伸缩桌板/插座模块/人手/岛台主体——请在 Review HTML 复核 52 中"移动抽屉"区域是否被正确框住（若打开动作发生在窗口后段，A2 可能需窗口内加辅助帧）。由架构师最终确认后再批准 A2（不得自动进入 A2）。
