@@ -1,0 +1,450 @@
+{
+ "db": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\database\\materials.db",
+ "tables_total": 88,
+ "rows_total_all_tables": 2158918,
+ "journal_mode": "wal",
+ "user_version": 3,
+ "elapsed_s": 65.2,
+ "tables": [
+  {
+   "table": "account_dna",
+   "rows": 1,
+   "columns": 8
+  },
+  {
+   "table": "accuracy_review",
+   "rows": 100,
+   "columns": 27
+  },
+  {
+   "table": "accuracy_test",
+   "rows": 100,
+   "columns": 6
+  },
+  {
+   "table": "analysis_jobs",
+   "rows": 23312,
+   "columns": 11
+  },
+  {
+   "table": "analysis_tasks",
+   "rows": 31106,
+   "columns": 13
+  },
+  {
+   "table": "annotation_coverage",
+   "rows": 18,
+   "columns": 9
+  },
+  {
+   "table": "annotation_dictionary",
+   "rows": 2,
+   "columns": 6
+  },
+  {
+   "table": "asset_locations",
+   "rows": 23312,
+   "columns": 8
+  },
+  {
+   "table": "asset_processing_state",
+   "rows": 224650,
+   "columns": 17
+  },
+  {
+   "table": "asset_quality",
+   "rows": 0,
+   "columns": 10
+  },
+  {
+   "table": "asset_status",
+   "rows": 0,
+   "columns": 4
+  },
+  {
+   "table": "asset_types",
+   "rows": 22465,
+   "columns": 7
+  },
+  {
+   "table": "assets",
+   "rows": 22466,
+   "columns": 19
+  },
+  {
+   "table": "b007_asr_v1",
+   "rows": 866,
+   "columns": 9
+  },
+  {
+   "table": "b007_business_cognition_v1",
+   "rows": 609,
+   "columns": 6
+  },
+  {
+   "table": "b007_keyframe_v1",
+   "rows": 608,
+   "columns": 6
+  },
+  {
+   "table": "b007_l3_review16_v1",
+   "rows": 16,
+   "columns": 8
+  },
+  {
+   "table": "b007_media_asset_v1",
+   "rows": 30,
+   "columns": 15
+  },
+  {
+   "table": "b007_note_dual_source_fact_v1",
+   "rows": 2851,
+   "columns": 30
+  },
+  {
+   "table": "b007_note_month_paid_fact_v1",
+   "rows": 5193,
+   "columns": 15
+  },
+  {
+   "table": "b007_note_paid_association_fact_v1",
+   "rows": 4625,
+   "columns": 5
+  },
+  {
+   "table": "b007_ocr_v1",
+   "rows": 2980,
+   "columns": 10
+  },
+  {
+   "table": "b007_published_media_recovery_v1",
+   "rows": 30,
+   "columns": 23
+  },
+  {
+   "table": "b007_segment_v1",
+   "rows": 609,
+   "columns": 7
+  },
+  {
+   "table": "b007_source_role_v1",
+   "rows": 28282,
+   "columns": 20
+  },
+  {
+   "table": "b007_visual_evidence_v1",
+   "rows": 608,
+   "columns": 7
+  },
+  {
+   "table": "broken_assets",
+   "rows": 13,
+   "columns": 6
+  },
+  {
+   "table": "canonical_human_truth",
+   "rows": 360,
+   "columns": 34
+  },
+  {
+   "table": "canonical_human_truth_history",
+   "rows": 393,
+   "columns": 14
+  },
+  {
+   "table": "content_classification",
+   "rows": 140,
+   "columns": 9
+  },
+  {
+   "table": "content_join_status_v1",
+   "rows": 2840,
+   "columns": 8
+  },
+  {
+   "table": "content_templates",
+   "rows": 4,
+   "columns": 8
+  },
+  {
+   "table": "content_value",
+   "rows": 22465,
+   "columns": 10
+  },
+  {
+   "table": "duplicate_groups",
+   "rows": 0,
+   "columns": 6
+  },
+  {
+   "table": "fresh_holdout_human_review_v1",
+   "rows": 60,
+   "columns": 23
+  },
+  {
+   "table": "fts_ocr",
+   "rows": 238770,
+   "columns": 3
+  },
+  {
+   "table": "fts_ocr_config",
+   "rows": 1,
+   "columns": 2
+  },
+  {
+   "table": "fts_ocr_content",
+   "rows": 238770,
+   "columns": 4
+  },
+  {
+   "table": "fts_ocr_data",
+   "rows": 1522,
+   "columns": 2
+  },
+  {
+   "table": "fts_ocr_docsize",
+   "rows": 238770,
+   "columns": 2
+  },
+  {
+   "table": "fts_ocr_idx",
+   "rows": 1144,
+   "columns": 3
+  },
+  {
+   "table": "fts_transcript",
+   "rows": 51516,
+   "columns": 3
+  },
+  {
+   "table": "fts_transcript_config",
+   "rows": 1,
+   "columns": 2
+  },
+  {
+   "table": "fts_transcript_content",
+   "rows": 51516,
+   "columns": 4
+  },
+  {
+   "table": "fts_transcript_data",
+   "rows": 845,
+   "columns": 2
+  },
+  {
+   "table": "fts_transcript_docsize",
+   "rows": 51516,
+   "columns": 2
+  },
+  {
+   "table": "fts_transcript_idx",
+   "rows": 1539,
+   "columns": 3
+  },
+  {
+   "table": "human_annotation_v2",
+   "rows": 60,
+   "columns": 15
+  },
+  {
+   "table": "human_annotation_v3",
+   "rows": 34,
+   "columns": 22
+  },
+  {
+   "table": "human_annotations",
+   "rows": 300,
+   "columns": 16
+  },
+  {
+   "table": "human_feedback",
+   "rows": 0,
+   "columns": 9
+  },
+  {
+   "table": "keyframes",
+   "rows": 125199,
+   "columns": 9
+  },
+  {
+   "table": "knowledge_entries",
+   "rows": 39,
+   "columns": 11
+  },
+  {
+   "table": "labels",
+   "rows": 26396,
+   "columns": 11
+  },
+  {
+   "table": "learning_rules",
+   "rows": 237,
+   "columns": 10
+  },
+  {
+   "table": "media_files",
+   "rows": 28252,
+   "columns": 13
+  },
+  {
+   "table": "media_tags",
+   "rows": 0,
+   "columns": 2
+  },
+  {
+   "table": "ocr_text",
+   "rows": 289218,
+   "columns": 12
+  },
+  {
+   "table": "performance_snapshot_v1",
+   "rows": 2995,
+   "columns": 19
+  },
+  {
+   "table": "processing_history",
+   "rows": 275797,
+   "columns": 9
+  },
+  {
+   "table": "production_plans",
+   "rows": 2,
+   "columns": 7
+  },
+  {
+   "table": "published_content_v1",
+   "rows": 3465,
+   "columns": 18
+  },
+  {
+   "table": "quality_report",
+   "rows": 1,
+   "columns": 4
+  },
+  {
+   "table": "review_queue",
+   "rows": 0,
+   "columns": 8
+  },
+  {
+   "table": "scene_semantics",
+   "rows": 4986,
+   "columns": 9
+  },
+  {
+   "table": "schema_migrations",
+   "rows": 9,
+   "columns": 8
+  },
+  {
+   "table": "schema_version",
+   "rows": 3,
+   "columns": 2
+  },
+  {
+   "table": "segment_boundary_reviews",
+   "rows": 300,
+   "columns": 13
+  },
+  {
+   "table": "segments",
+   "rows": 41834,
+   "columns": 10
+  },
+  {
+   "table": "semantic_annotations",
+   "rows": 300,
+   "columns": 25
+  },
+  {
+   "table": "shot_usage",
+   "rows": 0,
+   "columns": 12
+  },
+  {
+   "table": "sources",
+   "rows": 5,
+   "columns": 10
+  },
+  {
+   "table": "spotlight_account_v1",
+   "rows": 1,
+   "columns": 9
+  },
+  {
+   "table": "spotlight_campaign_v1",
+   "rows": 48,
+   "columns": 20
+  },
+  {
+   "table": "spotlight_note_link_v1",
+   "rows": 4625,
+   "columns": 7
+  },
+  {
+   "table": "spotlight_note_paid_snapshot_v1",
+   "rows": 5694,
+   "columns": 34
+  },
+  {
+   "table": "spotlight_paid_snapshot_v1",
+   "rows": 265,
+   "columns": 36
+  },
+  {
+   "table": "spotlight_unit_v1",
+   "rows": 48,
+   "columns": 19
+  },
+  {
+   "table": "sqlite_sequence",
+   "rows": 30,
+   "columns": 2
+  },
+  {
+   "table": "stage2_business_cognition_adjudication_v2",
+   "rows": 0,
+   "columns": 17
+  },
+  {
+   "table": "stage2_business_cognition_adjudication_v2b",
+   "rows": 12,
+   "columns": 15
+  },
+  {
+   "table": "stage2_business_cognition_calibration_v3",
+   "rows": 30,
+   "columns": 12
+  },
+  {
+   "table": "stage2_business_cognition_review_v1",
+   "rows": 24,
+   "columns": 17
+  },
+  {
+   "table": "targeted_human_review_v1",
+   "rows": 141,
+   "columns": 23
+  },
+  {
+   "table": "transcripts",
+   "rows": 51543,
+   "columns": 12
+  },
+  {
+   "table": "validation_snapshots",
+   "rows": 1,
+   "columns": 8
+  },
+  {
+   "table": "visual_cluster_members",
+   "rows": 0,
+   "columns": 4
+  },
+  {
+   "table": "visual_clusters",
+   "rows": 0,
+   "columns": 4
+  }
+ ]
+}

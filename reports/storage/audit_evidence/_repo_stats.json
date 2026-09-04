@@ -1,0 +1,412 @@
+{
+ "repo": "C:\\Users\\admin\\github\\treecut-v13",
+ "tracked_files": 1196,
+ "tracked_bytes_total": 72616902,
+ "top_dirs": {
+  "reports": {
+   "files": 350,
+   "bytes": 40554503
+  },
+  "assets": {
+   "files": 5,
+   "bytes": 22733678
+  },
+  "release": {
+   "files": 4,
+   "bytes": 3153663
+  },
+  "scripts": {
+   "files": 304,
+   "bytes": 2051291
+  },
+  "src": {
+   "files": 214,
+   "bytes": 1715578
+  },
+  "docs": {
+   "files": 186,
+   "bytes": 1017696
+  },
+  "knowledge": {
+   "files": 37,
+   "bytes": 823378
+  },
+  "tests": {
+   "files": 43,
+   "bytes": 293689
+  },
+  "tools": {
+   "files": 22,
+   "bytes": 206644
+  },
+  "(root)": {
+   "files": 20,
+   "bytes": 43170
+  },
+  "migrations": {
+   "files": 8,
+   "bytes": 17028
+  },
+  "installer": {
+   "files": 1,
+   "bytes": 2970
+  },
+  "configs": {
+   "files": 1,
+   "bytes": 2125
+  },
+  ".github": {
+   "files": 1,
+   "bytes": 1489
+  }
+ },
+ "extension_histogram": {
+  ".py": 554,
+  ".json": 262,
+  ".md": 222,
+  ".jpg": 75,
+  ".html": 13,
+  ".cmd": 12,
+  ".js": 12,
+  ".sql": 8,
+  ".csv": 7,
+  ".png": 5,
+  ".ps1": 5,
+  ".txt": 4,
+  ".yaml": 4,
+  ".yml": 2,
+  ".xlsx": 2,
+  "(none)": 1,
+  ".otf": 1,
+  ".ico": 1,
+  ".iss": 1,
+  ".docx": 1,
+  ".toml": 1,
+  ".pdf": 1,
+  ".bat": 1,
+  ".vbs": 1
+ },
+ "largest_80": [
+  {
+   "bytes": 16761545,
+   "path": "reports/storage/TREECUT_G1_L3_REVIEW_FOR_CHATGPT_V1.pdf"
+  },
+  {
+   "bytes": 16437364,
+   "path": "assets/fonts/NotoSansCJKsc-Regular.complete.otf"
+  },
+  {
+   "bytes": 6213562,
+   "path": "assets/knowledge/素材标签库.json"
+  },
+  {
+   "bytes": 3120676,
+   "path": "release/release_manifest.json"
+  },
+  {
+   "bytes": 2200688,
+   "path": "reports/storage/TREECUT_G1_IDX63_EVIDENCE_REVIEW.png"
+  },
+  {
+   "bytes": 1741017,
+   "path": "reports/storage/B007_v2_review/cue3_t4.2s.png"
+  },
+  {
+   "bytes": 1524261,
+   "path": "reports/storage/B007_v2_review/cue2_t2.2s.png"
+  },
+  {
+   "bytes": 1465223,
+   "path": "reports/storage/B007_v2_review/cue1_t0.6s.png"
+  },
+  {
+   "bytes": 1434005,
+   "path": "reports/storage/B007_SPOTLIGHT_NOTE_LINKS_V1.json"
+  },
+  {
+   "bytes": 1432436,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_086r.jpg"
+  },
+  {
+   "bytes": 1273322,
+   "path": "reports/storage/B007_SPOTLIGHT_PAID_SNAPSHOTS_V1.json"
+  },
+  {
+   "bytes": 844822,
+   "path": "reports/storage/B007_V081_HUMAN_REVIEW_PACKAGE_V1.html"
+  },
+  {
+   "bytes": 791841,
+   "path": "reports/storage/DOWNLOADS_READONLY_AUDIT_V1.json"
+  },
+  {
+   "bytes": 788987,
+   "path": "reports/storage/B007_DUAL_SOURCE_NOTE_FACT_V1.csv"
+  },
+  {
+   "bytes": 675189,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_082r.jpg"
+  },
+  {
+   "bytes": 647100,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_087r.jpg"
+  },
+  {
+   "bytes": 524690,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_084r.jpg"
+  },
+  {
+   "bytes": 518097,
+   "path": "reports/storage/_g2_inventory.json"
+  },
+  {
+   "bytes": 464160,
+   "path": "reports/storage/B007_V062_LIST_ENUM_V1.json"
+  },
+  {
+   "bytes": 422030,
+   "path": "reports/storage/B007_L3_REVIEW16_V2.html"
+  },
+  {
+   "bytes": 364192,
+   "path": "reports/storage/B007_NOTE_MONTH_PAID_FACT_V1.csv"
+  },
+  {
+   "bytes": 279594,
+   "path": "reports/storage/TREECUT_G1_EXCEPTIONS_V1.json"
+  },
+  {
+   "bytes": 212782,
+   "path": "reports/storage/B007_NOTE_PAID_ASSOCIATION_FACT_V1.csv"
+  },
+  {
+   "bytes": 178400,
+   "path": "reports/storage/B007_SPOTLIGHT_CREATIVES_V1.json"
+  },
+  {
+   "bytes": 170967,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_085r.jpg"
+  },
+  {
+   "bytes": 130618,
+   "path": "reports/storage/_v11_ranked.json"
+  },
+  {
+   "bytes": 95330,
+   "path": "knowledge/source/TreeCut_V11_Phase4.xlsx"
+  },
+  {
+   "bytes": 93203,
+   "path": "reports/storage/B007_V081_QWENVL_VISUAL_CANDIDATES_V1.json"
+  },
+  {
+   "bytes": 92221,
+   "path": "reports/storage/B007_V081_MULTIMODAL_EVIDENCE_V1.json"
+  },
+  {
+   "bytes": 91010,
+   "path": "knowledge/source/TreeCut_行业认知知识库_V1.0.xlsx"
+  },
+  {
+   "bytes": 84155,
+   "path": "knowledge/semantic_mappings/knowledge.json"
+  },
+  {
+   "bytes": 80661,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_083r.jpg"
+  },
+  {
+   "bytes": 78646,
+   "path": "src/treecut/services/phase3_review_ui.py"
+  },
+  {
+   "bytes": 74480,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_094.jpg"
+  },
+  {
+   "bytes": 72766,
+   "path": "reports/storage/ui_preview/workbench_main.png"
+  },
+  {
+   "bytes": 71008,
+   "path": "knowledge/source/TreeCut_行业认知知识库_V1.0.docx"
+  },
+  {
+   "bytes": 68750,
+   "path": "reports/storage/B007_V061_ASSISTED_PILOT1.json"
+  },
+  {
+   "bytes": 67711,
+   "path": "reports/storage/mmv_frames/m51_2.jpg"
+  },
+  {
+   "bytes": 67053,
+   "path": "reports/storage/mmv_frames/m52_3.jpg"
+  },
+  {
+   "bytes": 66890,
+   "path": "reports/storage/mmv_frames/m51_4.jpg"
+  },
+  {
+   "bytes": 66360,
+   "path": "reports/storage/mmv_frames/m52_4.jpg"
+  },
+  {
+   "bytes": 66338,
+   "path": "reports/storage/mmv_frames/m51_1.jpg"
+  },
+  {
+   "bytes": 66251,
+   "path": "reports/storage/mmv_frames/m51_3.jpg"
+  },
+  {
+   "bytes": 66038,
+   "path": "reports/storage/mmv_frames/m51_0.jpg"
+  },
+  {
+   "bytes": 65271,
+   "path": "reports/storage/B007_V2_SHOT_CANDIDATES_V1.json"
+  },
+  {
+   "bytes": 64999,
+   "path": "reports/storage/mmv_frames/m52_1.jpg"
+  },
+  {
+   "bytes": 64534,
+   "path": "reports/storage/mmv_frames/m52_2.jpg"
+  },
+  {
+   "bytes": 64306,
+   "path": "reports/storage/mmv_frames/m52_0.jpg"
+  },
+  {
+   "bytes": 63910,
+   "path": "reports/storage/mmv_frames/m109_3.jpg"
+  },
+  {
+   "bytes": 63907,
+   "path": "reports/storage/mmv_frames/m109_4.jpg"
+  },
+  {
+   "bytes": 63368,
+   "path": "reports/storage/mmv_frames/m109_2.jpg"
+  },
+  {
+   "bytes": 63274,
+   "path": "reports/storage/mmv_frames/m109_1.jpg"
+  },
+  {
+   "bytes": 63269,
+   "path": "reports/storage/B007_V061_MEDIA_OBSERVATION_DIAGNOSTIC.json"
+  },
+  {
+   "bytes": 63208,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_070.jpg"
+  },
+  {
+   "bytes": 63001,
+   "path": "reports/storage/mmv_frames/m109_0.jpg"
+  },
+  {
+   "bytes": 62586,
+   "path": "reports/storage/TREECUT_G1_L2_VISUAL_REVIEW_V1.json"
+  },
+  {
+   "bytes": 62138,
+   "path": "reports/storage/mmv_frames/m89_0.jpg"
+  },
+  {
+   "bytes": 61487,
+   "path": "reports/storage/mmv_frames/m89_1.jpg"
+  },
+  {
+   "bytes": 60973,
+   "path": "reports/storage/TREECUT_G2_HUMAN_REVIEW_V2.html"
+  },
+  {
+   "bytes": 58397,
+   "path": "reports/storage/mmv_frames/m89_2.jpg"
+  },
+  {
+   "bytes": 58004,
+   "path": "reports/storage/mmv_frames/m89_3.jpg"
+  },
+  {
+   "bytes": 57953,
+   "path": "reports/storage/mmv_frames/m89_4.jpg"
+  },
+  {
+   "bytes": 56492,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_019.jpg"
+  },
+  {
+   "bytes": 56449,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_020.jpg"
+  },
+  {
+   "bytes": 56162,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_097.jpg"
+  },
+  {
+   "bytes": 56137,
+   "path": "reports/storage/TREECUT_G1_SAMPLE100_V1.json"
+  },
+  {
+   "bytes": 56137,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_060.jpg"
+  },
+  {
+   "bytes": 54716,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_099.jpg"
+  },
+  {
+   "bytes": 54444,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_057.jpg"
+  },
+  {
+   "bytes": 53628,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_063.jpg"
+  },
+  {
+   "bytes": 51939,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_095.jpg"
+  },
+  {
+   "bytes": 51217,
+   "path": "reports/storage/B007_V08_DNA_EVIDENCE_V1.json"
+  },
+  {
+   "bytes": 50755,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_058.jpg"
+  },
+  {
+   "bytes": 50662,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_066.jpg"
+  },
+  {
+   "bytes": 50345,
+   "path": "reports/storage/_g1_reviewpkg_meta.json"
+  },
+  {
+   "bytes": 49591,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_074.jpg"
+  },
+  {
+   "bytes": 49018,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_069.jpg"
+  },
+  {
+   "bytes": 48975,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_090.jpg"
+  },
+  {
+   "bytes": 48323,
+   "path": "reports/storage/TREECUT_G1_L3_review/g1_065.jpg"
+  },
+  {
+   "bytes": 48256,
+   "path": "reports/storage/mmv_frames/m1986_0.jpg"
+  }
+ ],
+ "missing_on_disk": []
+}

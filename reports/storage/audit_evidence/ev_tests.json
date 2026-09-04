@@ -1,0 +1,307 @@
+{
+ "agent": "EV5-fill(main-agent)",
+ "per_file": [
+  {
+   "file": "test_accuracy_value_regression.py",
+   "rc": 0,
+   "secs": 2.6,
+   "summary": "4 passed in 1.85s",
+   "timed_out": false
+  },
+  {
+   "file": "test_claim_multiprocess.py",
+   "rc": 5,
+   "secs": 0.9,
+   "summary": "",
+   "timed_out": false
+  },
+  {
+   "file": "test_cognitive_regression.py",
+   "rc": 0,
+   "secs": 3.1,
+   "summary": "6 passed in 2.30s",
+   "timed_out": false
+  },
+  {
+   "file": "test_g1_source_gate.py",
+   "rc": 0,
+   "secs": 4.2,
+   "summary": "11 passed in 3.35s",
+   "timed_out": false
+  },
+  {
+   "file": "test_g2_action_subclip.py",
+   "rc": 0,
+   "secs": 0.9,
+   "summary": "9 passed in 0.06s",
+   "timed_out": false
+  },
+  {
+   "file": "test_g3_claim_visual.py",
+   "rc": 0,
+   "secs": 0.9,
+   "summary": "9 passed in 0.06s",
+   "timed_out": false
+  },
+  {
+   "file": "test_g5_dedup_qa.py",
+   "rc": 0,
+   "secs": 0.9,
+   "summary": "10 passed in 0.07s",
+   "timed_out": false
+  },
+  {
+   "file": "test_holdout_v2_blind_ui.py",
+   "rc": 0,
+   "secs": 1.7,
+   "summary": "2 passed in 0.90s",
+   "timed_out": false
+  },
+  {
+   "file": "test_mmvl_r2.py",
+   "rc": 0,
+   "secs": 0.9,
+   "summary": "6 passed, 4 xfailed in 0.06s",
+   "timed_out": false
+  },
+  {
+   "file": "test_mmvl_real_media.py",
+   "rc": 0,
+   "secs": 2.1,
+   "summary": "13 passed in 1.27s",
+   "timed_out": false
+  },
+  {
+   "file": "test_p11_lifecycle.py",
+   "rc": 0,
+   "secs": 4.4,
+   "summary": "8 passed in 3.54s",
+   "timed_out": false
+  },
+  {
+   "file": "test_p1_assets.py",
+   "rc": 0,
+   "secs": 2.9,
+   "summary": "4 passed in 2.04s",
+   "timed_out": false
+  },
+  {
+   "file": "test_p1_migrate.py",
+   "rc": 0,
+   "secs": 1.1,
+   "summary": "2 passed in 0.26s",
+   "timed_out": false
+  },
+  {
+   "file": "test_p2_scene_asr_ocr.py",
+   "rc": 0,
+   "secs": 5.7,
+   "summary": "5 passed in 4.89s",
+   "timed_out": false
+  },
+  {
+   "file": "test_p3_classification.py",
+   "rc": 0,
+   "secs": 2.0,
+   "summary": "5 passed in 1.16s",
+   "timed_out": false
+  },
+  {
+   "file": "test_p4_search.py",
+   "rc": 0,
+   "secs": 63.8,
+   "summary": "4 passed in 61.94s (0:01:01)",
+   "timed_out": false
+  },
+  {
+   "file": "test_p5_templates.py",
+   "rc": 0,
+   "secs": 1.5,
+   "summary": "4 passed in 0.84s",
+   "timed_out": false
+  },
+  {
+   "file": "test_p6_roughcut.py",
+   "rc": 0,
+   "secs": 1.8,
+   "summary": "2 passed in 1.16s",
+   "timed_out": false
+  },
+  {
+   "file": "test_p7_templates_ext.py",
+   "rc": 0,
+   "secs": 1.0,
+   "summary": "3 passed in 0.37s",
+   "timed_out": false
+  },
+  {
+   "file": "test_phase1_identity.py",
+   "rc": 0,
+   "secs": 15.2,
+   "summary": "11 passed in 14.54s",
+   "timed_out": false
+  },
+  {
+   "file": "test_phase251_truth.py",
+   "rc": 0,
+   "secs": 0.8,
+   "summary": "13 passed in 0.17s",
+   "timed_out": false
+  },
+  {
+   "file": "test_phase25_governance.py",
+   "rc": 0,
+   "secs": 4.9,
+   "summary": "7 passed in 4.28s",
+   "timed_out": false
+  },
+  {
+   "file": "test_phase2_cognition.py",
+   "rc": 0,
+   "secs": 23.9,
+   "summary": "11 passed in 23.25s",
+   "timed_out": false
+  },
+  {
+   "file": "test_phase3_review_ui.py",
+   "rc": 0,
+   "secs": 0.8,
+   "summary": "7 passed in 0.09s",
+   "timed_out": false
+  },
+  {
+   "file": "test_phase3_stage1.py",
+   "rc": 0,
+   "secs": 1.0,
+   "summary": "13 passed in 0.33s",
+   "timed_out": false
+  },
+  {
+   "file": "test_phase4_knowledge.py",
+   "rc": 0,
+   "secs": 10.1,
+   "summary": "25 passed in 8.62s",
+   "timed_out": false
+  },
+  {
+   "file": "test_production_narration_v01.py",
+   "rc": 0,
+   "secs": 1.4,
+   "summary": "8 passed in 0.69s",
+   "timed_out": false
+  },
+  {
+   "file": "test_production_path_preflight_v01.py",
+   "rc": 0,
+   "secs": 2.1,
+   "summary": "8 passed in 1.47s",
+   "timed_out": false
+  },
+  {
+   "file": "test_review_productization.py",
+   "rc": 0,
+   "secs": 5.5,
+   "summary": "8 passed in 4.85s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage2_blind_ui.py",
+   "rc": 0,
+   "secs": 1.7,
+   "summary": "11 passed in 1.00s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage2_cognition.py",
+   "rc": 0,
+   "secs": 1.8,
+   "summary": "37 passed in 1.09s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage2_persistence.py",
+   "rc": 0,
+   "secs": 0.8,
+   "summary": "3 passed in 0.14s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage2_vision.py",
+   "rc": 0,
+   "secs": 15.0,
+   "summary": "13 passed in 13.43s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage3_consolidation.py",
+   "rc": 0,
+   "secs": 0.8,
+   "summary": "17 passed in 0.13s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage3_mini_v2.py",
+   "rc": 0,
+   "secs": 10.0,
+   "summary": "10 passed in 8.43s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage3_model_dev.py",
+   "rc": 0,
+   "secs": 5.7,
+   "summary": "11 passed in 4.39s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage8_discovery.py",
+   "rc": 0,
+   "secs": 0.7,
+   "summary": "5 passed in 0.05s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage8_discovery_v11.py",
+   "rc": 0,
+   "secs": 0.7,
+   "summary": "6 passed in 0.05s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage8_repair.py",
+   "rc": 0,
+   "secs": 0.7,
+   "summary": "10 passed in 0.06s",
+   "timed_out": false
+  },
+  {
+   "file": "test_stage8_v2_integration.py",
+   "rc": 0,
+   "secs": 0.7,
+   "summary": "6 passed in 0.06s",
+   "timed_out": false
+  },
+  {
+   "file": "test_task_store.py",
+   "rc": 0,
+   "secs": 1.8,
+   "summary": "4 passed in 1.09s",
+   "timed_out": false
+  },
+  {
+   "file": "test_treecut_visual_understanding_engine_v2.py",
+   "rc": 0,
+   "secs": 0.7,
+   "summary": "10 passed in 0.06s",
+   "timed_out": false
+  },
+  {
+   "file": "test_xhs_work_browser_v01.py",
+   "rc": 0,
+   "secs": 28.2,
+   "summary": "  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info. |     warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg)) | -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html | 51 passed, 1 warning in 27.51s",
+   "timed_out": false
+  }
+ ],
+ "files": 43
+}

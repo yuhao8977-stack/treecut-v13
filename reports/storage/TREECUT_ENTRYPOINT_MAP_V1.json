@@ -1,0 +1,43 @@
+{
+  "generated": "2026-09-04",
+  "audit": "TREECUT_SYSTEM_MASTER_AUDIT_V1",
+  "entrypoints": {
+    "desktop": {
+      "LayerA_legacy": {"file": "src/treecut/desktop.py", "status": "LEGACY_REUSABLE", "note": "可导入(tkinter)；近期无真实使用证据"},
+      "main_guard": {"file": "src/treecut/__main__.py", "status": "UNKNOWN", "note": "未核"}
+    },
+    "web_workbench": {
+      "server": {"file": "tools/production_workbench/server.py", "run": "python tools/production_workbench/server.py (曾 127.0.0.1:8899)", "status": "PARTIAL", "note": "审阅 JSON 项目；无 render/项目/账号入口"},
+      "frontend": {"file": "tools/production_workbench/index.html"}
+    },
+    "cli_scripts": {
+      "current_sprint_runners": [
+        {"file": "scripts/sprintv2_mmv_run.py", "role": "MMVV Known6 shadow 运行"},
+        {"file": "scripts/sprintv2_mmv_r2.py", "role": "MMVV R2 (heuristic ROI+簇归属)"},
+        {"file": "scripts/sprintv2_mmv_r2out.py", "role": "R2 结果回写 PROJECT_STATE"},
+        {"file": "scripts/sprintv2_v11_probe.py", "role": "Discovery V1.1: ranked→motion→qwen→TVRC"},
+        {"file": "scripts/sprintv2_v11_rr_xs.py", "role": "RR 正规提升 + 跨段合并"},
+        {"file": "scripts/sprintv2_v2int.py", "role": "V2 引擎集成(beats)"},
+        {"file": "scripts/sprintv2_g2_build.py", "role": "G2 窗口构建+QA checks"},
+        {"file": "scripts/sprintv2_g3_dedup_run.py", "role": "G3+dedup 合成运行(eligible 桩)"},
+        {"file": "scripts/b007_g1_source_gate.py", "role": "G1 源资格裁决"},
+        {"file": "scripts/b007_v091_v2.py", "role": "Pilot V2 真实成片(monolithic)"}
+      ],
+      "legacy_groups": {"b007_v0*": "历史 pilot/sync 脚本", "stage*/phase*": "Phase2-3 验证脚本", "hrp_*": "human review pack 工具"},
+      "note": "296 个脚本无统一 registry/CLI；谁是当前入口靠 docs/commit 记忆"
+    },
+    "background_services": {
+      "ollama": {"url": "http://localhost:11434", "model": "qwen2.5vl:7b", "note": "单 worker；脚本直连"},
+      "remote_agent": {"file": "src/treecut/remote/agent_main.py", "note": "子机 hub agent (192.168.1.135:8766)；token 已清需轮换"}
+    },
+    "browser": {"xhs_browser": {"file": "src/treecut/browser/*", "note": "XHS 只读采集/恢复；AutoPublish 禁止"}},
+    "review_ui": [
+      {"file": "src/treecut/services/phase3_review_ui.py", "note": "L3 裁决表单(真用过)"},
+      {"file": "src/treecut/services/second_review_ui.py"},
+      {"file": "src/treecut/services/segment_cognition_ui.py"}
+    ],
+    "model_worker": {"note": "无独立 worker 进程；qwen/ASR/OCR 为脚本内调用；孤儿进程抢 ollama 风险已记录"},
+    "tests": {"dir": "tests/", "files": 43, "run": "runtime python -m pytest tests -q (建议逐文件/加超时)", "evidence": "reports/storage/audit_evidence/ev_tests.json"},
+    "db": {"file": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\database\\materials.db", "mode": "readonly-uri", "note": "WAL; 88 tables; 不 commit 进 git"}
+  }
+}

@@ -1,0 +1,112 @@
+{
+ "b007_source_role_roles": [
+  [
+   "ERR",
+   "no such column: role"
+  ]
+ ],
+ "b007_source_role_review_status": [
+  [
+   "PENDING",
+   19466
+  ],
+  [
+   "REVIEW_REQUIRED",
+   8696
+  ],
+  [
+   "APPROVED",
+   118
+  ],
+  [
+   "REJECTED",
+   2
+  ]
+ ],
+ "b007_source_role_role_x_review": [
+  [
+   "ERR",
+   "no such column: role"
+  ]
+ ],
+ "contamination_columns": {
+  "burned_subtitle_present": {
+   "null_or_empty": 5817,
+   "false": 0,
+   "true": 0,
+   "other": 22465
+  },
+  "platform_watermark_present": {
+   "null_or_empty": 5817,
+   "false": 0,
+   "true": 0,
+   "other": 22465
+  },
+  "unrelated_overlay_present": {
+   "null_or_empty": 5817,
+   "false": 0,
+   "true": 0,
+   "other": 22465
+  },
+  "old_title_overlay_present": {
+   "null_or_empty": 5817,
+   "false": 0,
+   "true": 0,
+   "other": 22465
+  },
+  "brand_overlay_present": {
+   "null_or_empty": 5817,
+   "false": 0,
+   "true": 0,
+   "other": 22465
+  }
+ },
+ "media_files_total": 28252,
+ "assets_total": 22466,
+ "segments_total": 41834,
+ "b007_media_asset": 30,
+ "canonical_human_truth": [
+  [
+   "ERR",
+   "no such column: source_type"
+  ]
+ ],
+ "schema_migrations": [
+  [
+   "0001",
+   "baseline_v13_schema"
+  ],
+  [
+   "0002",
+   "0002_shot_usage_visual_clusters"
+  ],
+  [
+   "0003",
+   "0003_segment_cognition"
+  ],
+  [
+   "0004",
+   "0004_segment_validation_closure"
+  ],
+  [
+   "0005",
+   "0005_annotation_governance"
+  ],
+  [
+   "0006",
+   "0006_annotation_schema_v2_truth"
+  ],
+  [
+   "0007",
+   "0007_phase3_cognition_foundation"
+  ],
+  [
+   "0008",
+   "0008_phase3_human_review"
+  ],
+  [
+   "0009",
+   "0009_fresh_holdout_human_review"
+  ]
+ ]
+}

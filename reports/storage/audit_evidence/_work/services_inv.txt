@@ -1,0 +1,38 @@
+__init__.py|TreeCut Service Layer — 统一 Service bootstrap（Phase 0.5）。|ServiceContext,Services,bootstrap_services|0|
+action_subclip.py|STAGE8 G2 — ActionSubclipService：时序证据 → 动作窗口 → 最佳 Subclip。|parse_qwen_state,parse_qwen_object,ActionWindow,build_windows,fit_duration,parse_direction,direction_rows,apply_action_gate,ActionSubclipService|0|
+annotation_governance.py|TreeCut Phase 2.5 — Annotation Governance Services。|AnnotationService,ReviewQueueService,CoverageService|0|
+b003_import_adapter.py|-*- coding: utf-8 -*-|B003ManualImportAdapterV1|0|
+b007_creator_adapter.py|-*- coding: utf-8 -*-|B007CreatorImportAdapterV1|0|
+business_cognition_service.py|-*- coding: utf-8 -*-|BusinessCognitionServiceV1|0|
+business_cognition_v2.py|-*- coding: utf-8 -*-|_val_match,BusinessClaimV2,BusinessCognitionServiceV2|0|
+business_cognition_v2_1.py|-*- coding: utf-8 -*-|_field_vals,BusinessCognitionServiceV2_1|0|
+canonical_truth.py|-*- coding: utf-8 -*-|CanonicalTruthService|0|
+claim_visual.py|STAGE8 G3 — ClaimVisualMatcher：原子主张解析 + 硬闸匹配 + 排序。|AtomicClaim,parse_script_to_claims,classify_story_mode,Candidate,ClaimVisualMatcher|0|
+conflict_resolver.py|-*- coding: utf-8 -*-|ConflictResolverV1|0|
+conflict_resolver_v2.py|-*- coding: utf-8 -*-|ConflictResolverV2|0|
+evidence_resolver.py|-*- coding: utf-8 -*-|EvidenceResolverV1|0|
+evidence_strength_v2.py|-*- coding: utf-8 -*-|EvidenceStrengthV2|0|
+identity.py|TreeCut AssetRepository / SegmentRepository — Canonical Identity 数据访问边界（Phase 1）。|AssetRepository,SegmentRepository|0|
+knowledge_service.py|-*- coding: utf-8 -*-|KnowledgeService|0|
+mmvl_master_v1.py|============================================================|TruthLayer,Action,Verdict,Support,ROI,FrameSemantics,CameraMotion,MotionMetrics,TemporalEvidence,ValidationResult,ReviewExample,sample_video_window,frame_hash,SemanticVisualProvider,QwenFrameAdapter,CameraMotionEstimator,roi_iou,crop,ROITracker,ROIMotionAttributor,ObjectMotionDecision,TabletopMotionAnalyzer,DrawerMotionAnalyzer,SocketMotionAnalyzer,ObjectTransferAnalyzer,TargetObjectMotionRouter,TemporalStateValidator,ClaimContract,IslandClaimLibrary,DomainClaimCritic,EvidenceFusionEngine,VisualBeatGrouper,NoCandidateResolver,DuplicateEvidence,DuplicateCritic,ReviewExampleMemory,build_known_review_memory,MMVVMode,ShadowDecision,ShadowGate,MultiModuleVisualValidator,_synthetic_scene,run_self_tests,demo|1|cv2
+people_analyzer_v2.py|-*- coding: utf-8 -*-|PeopleResult,PeoplePresenceAnalyzerV2|0|
+phase3_review_ui.py|-*- coding: utf-8 -*-|PlaybackController,validate_v21,_V21Form,_ReviewBase,AdjudicationV1App,TargetedReviewV1App,_affinity_to_en,_BusinessCognitionReviewForm,validate_business_cognition,_AdjudicationV2bForm,validate_adjudication_v2b,main,_CalibrationV3Form,validate_calibration_v3|1|
+production_dedup.py|STAGE8 — Production Dedup：时间线重复镜头拦截。|Shot,extract_case_hint,extract_presenter,dct_phash_rgb_path,phash_distance,detect_duplicates,extract_presenter_from_case,narrative_score|0|cv2
+production_qa.py|STAGE8 G5 — ProductionQAService：分层 QA + P0 门禁 + 规则注册表。|QAResult,check_av_sync,check_video_tail,check_caption_rendered,check_caption_size,check_voice_provider,check_bgm,check_loudness,check_source_eligibility,check_no_old_subtitle,check_no_watermark,check_claim_supported,check_action_demonstrated,check_beat_visual_alignment,check_story_consistent,check_dedup,verdict,ProductionQAService|0|
+production_source.py|STAGE8 G1 — ProductionSourceService（Canonical 生产源资格服务，替代 pick_clean 临时过滤）。|_default_db,ProductionSourceService|0|
+review_center.py|-*- coding: utf-8 -*-|task_stats,ReviewTaskWindow,ReviewCenterWindow|0|
+schema_v2.py|-*- coding: utf-8 -*-|cn,en,freeze_schema,freeze_schema_v2_1|0|
+second_review_ui.py|TreeCut Phase 2.5 — SECOND_REVIEW_V1 二次复核 UI。|validate_submission,SecondReviewApp|1|
+segment_cognition.py|TreeCut Segment 认知层（Phase 2）— SegmentCognitionService。|SegmentEvidence,SegmentEvidenceBuilder,SegmentTechnicalQuality,SegmentCognitionService|0|
+segment_cognition_ui.py|TreeCut Phase 2 — Segment 认知人工审核 UI。|SegmentCognitionReviewApp|1|
+segment_validation_report.py|Phase 2 Validation Snapshot — Segment 认知验证报告生成器（完整版）。|SegmentValidationReport|0|
+semantic_action_v1.py|-*- coding: utf-8 -*-|_frame_diff_motion,_asr_hits,SemanticActionAnalyzerV1|0|cv2
+semantic_action_v2.py|-*- coding: utf-8 -*-|ObjectStateEvidence,SemanticActionAnalyzerV2|0|cv2,torch
+shot_usage.py|TreeCut ShotUsageService — 镜头使用 Ledger（Phase 1 基础）。|ShotUsageService|0|
+static_vision_v2.py|-*- coding: utf-8 -*-|StaticVisionAnalyzerV2|0|torch
+temporal_action_v2.py|-*- coding: utf-8 -*-|TemporalActionAnalyzerV2|0|cv2
+utterance_context.py|-*- coding: utf-8 -*-|UtteranceContextV1|0|
+vision_runtime.py|-*- coding: utf-8 -*-|RuntimeInfo,VisionRuntimeProvider|0|torch
+visual_beat.py|STAGE8 — Visual Beat 归组 + 脚本可用性审计(R4/R5 人工反馈).|_start_new_feature,group_visual_beats,_actions,_main,audit_action_availability,suggest_script_fix|0|
+visual_cognition.py|-*- coding: utf-8 -*-|_imread,FrameSampler,TechnicalQualityV2,StaticVisualCognition,TemporalActionAnalyzer,SegmentMultimodalEvidence,EvidenceGate,ConfidenceGate,VisualCognitionPipeline|0|cv2
+visual_understanding_v2.py|Infer a few useful state transitions from structured frame states.|TruthSource,Verdict,Support,Action,Evidence,FrameObservation,TemporalObservation,TemporalDecision,ShotCandidate,VisualRequirement,CriticIssue,CriticDecision,TemporalActionValidator,IslandClaimLibrary,DomainVisualCritic,VisualBeatGrouper,NoCandidateResolver,DuplicateEvidence,DuplicateCritic,ExampleAdjudicationMemory,build_known_stage8_examples|1|

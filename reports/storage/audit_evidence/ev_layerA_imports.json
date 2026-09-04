@@ -1,0 +1,33 @@
+{
+ "imports": {
+  "treecut.output.jianying": "OK",
+  "treecut.output.mp4": "OK",
+  "treecut.output.narration": "OK",
+  "treecut.output.production_narration": "OK",
+  "treecut.cognitive.production": "OK",
+  "treecut.application.production": "OK",
+  "treecut.roughcut.engine": "OK",
+  "treecut.quality.inspection": "OK",
+  "treecut.desktop": "OK",
+  "treecut.models.tts_sapi": "OK",
+  "treecut.services.mmvl_master_v1": "OK",
+  "treecut.services.production_source": "OK",
+  "treecut.services.production_qa": "OK",
+  "treecut.services.visual_understanding_v2": "OK",
+  "treecut.services.claim_visual": "OK",
+  "treecut.services.visual_beat": "OK",
+  "treecut.services.action_subclip": "OK",
+  "treecut.config.production": "OK"
+ },
+ "third_party": {
+  "pyJianYingDraft": "OK",
+  "sherpa_onnx": "OK",
+  "cv2": "OK",
+  "tkinter": "OK",
+  "torch": "OK",
+  "onnxruntime": "OK",
+  "faster_whisper": "OK",
+  "PIL": "OK"
+ },
+ "python": "3.12.13"
+}

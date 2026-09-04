@@ -1,0 +1,74 @@
+{
+  "audit": "TREECUT_SYSTEM_MASTER_AUDIT_V1",
+  "generated": "2026-09-04",
+  "mode": "RECOVERY_SALVAGE (EV1-EV8 并行采集因会话中断未落盘；由主代理用自有探测证据+上轮已验记录汇总)",
+  "baseline": {"branch": "main", "commit": "11887df", "remote": "https://github.com/yuaho8977-stack/treecut-v13.git", "repo_clean_at_start": true},
+  "first_page_verdicts": {
+    "can_produce_technical_mp4": true,
+    "can_produce_publishable_video": false,
+    "can_daily_produce": false,
+    "can_non_developer_use": false,
+    "visual_matching_reliable": false,
+    "mmvv_enforcement_ready": false,
+    "ui_production_ready": false,
+    "voice_production_ready": false,
+    "bgm_production_ready": false,
+    "autopublish_ready": false
+  },
+  "stage8_gates": {
+    "G1": "PASS_FROZEN (production_source.py; strict machine 13617 / post-L3 13642; 但历史 V2 pilot 取材未走此门)",
+    "G2": "NEEDS_REPAIR / BLOCKED_BY_CANDIDATE_RECALL_VALIDATION (tvrc_pass=0)",
+    "G3": "NEEDS_REPAIR / BLOCKED_BY_G2_VALID_ACTION_SOURCE",
+    "DEDUP": "PROVISIONAL_PASS_AFTER_TUNING",
+    "G5": "PROVISIONAL_PASS (技术 QA 可信；语义 QA 在 V2 pilot 硬编码 True)",
+    "G6": "NOT_STARTED (Pilot V1 REJECT / V2 READY_WITH_LIMITATIONS→NEEDS_REPAIR)"
+  },
+  "mmvv": {
+    "mode": "SHADOW (默认; mmvl_master_v1.py L1096)",
+    "status": "SHADOW_REAL_MEDIA + R2_KNOWN_CASE_NEEDS_REPAIR",
+    "known6_r2": {"89": "UNSURE", "52": "UNSURE", "109": "UNSURE", "51": "UNSURE", "1985": "UNSURE", "1986": "UNSURE"},
+    "no_false_pass": true,
+    "blocker": "语义 ROI 获取未解决 (qwen bbox 不可信); 启发式+簇归属不足; Enforcement 未批准",
+    "production_ready": false
+  },
+  "end_to_end_pipeline": {
+    "orchestrator": "NOT_FOUND (能力散在 296 scripts + LayerA/B 双 production)",
+    "real_video_chain": "scripts/b007_v091_v2.py (monolithic, SAPI 1.3x→loudnorm→SRT→ASS→ffmpeg→QA; 未走 G1/MMVV)",
+    "semantic_qa_hardcoded_true": ["CLAIM_SUPPORTED", "ACTION_VISUAL_MATCH", "STORY_ENTITY_CONSISTENT", "BEAT_VISUAL_SYNC"]
+  },
+  "database": {
+    "tables": 88, "rows": 2158918, "journal": "wal", "user_version": 3,
+    "migrations": "0001-0009 only; b007_/spotlight_/stage2_ tables outside migration history",
+    "source_role": {"PRODUCTION_CLEAN_RAW": 21170, "PRODUCTION_CLEAN_SEMI": 6594, "NOT_PRODUCTION_SOURCE": 332, "PUBLISHED_REFERENCE": 186},
+    "review_status": {"PENDING": 19466, "REVIEW_REQUIRED": 8696, "APPROVED": 118, "REJECTED": 2},
+    "contamination": {"ABSENT": 13718, "UNCERTAIN": 8619, "NULL": 5817, "PRESENT": 128},
+    "asset_type_column": "ALL NULL (28,282 rows)",
+    "truth_layers": {"L1": "media_files/assets/segments/keyframes/ocr/transcripts", "L2": "b007_*_v1 evidence + JSON", "L3": "canonical_human_truth(versioned)+b007_l3_review16+multiple legacy human tables"}
+  },
+  "tests": {
+    "run_mode": "bounded per-file (ev_tests.json)",
+    "passed": 412, "xfailed": 4, "failed": 0, "skipped": 0,
+    "zero_collected": ["test_claim_multiprocess.py (rc=5)"],
+    "xfail_source": "test_mmvl_r2.py (R2_KNOWN_UNMET x4)",
+    "caution": "410+ passed != production pass; 语义正确性无自动断言"
+  },
+  "imports_smoke": {"python": "3.12.13", "modules_ok": 18, "third_party_ok": ["pyJianYingDraft", "sherpa_onnx", "torch", "onnxruntime", "faster_whisper", "cv2", "tkinter", "PIL"]},
+  "security": {
+    "p0": "配置子机连接.cmd 曾含真实 hub token → 工作树已清除; 历史仍存在 → 必须 hub 端轮换",
+    "tracked_dangerous_ext": 0, "secret_candidates_benign": 8, "text_files_scanned": 1109
+  },
+  "p0_priorities": [
+    "hub token 轮换 (TD07)",
+    "语义 QA 去硬编码/未验证显式 NOT_VERIFIED (TD04)",
+    "动作素材缺口收敛: REVIEW_REQUIRED 157 人工核 + 定向补拍 (TD02)",
+    "MMVV ROI 方案 A/B/C 决策 (TD03)"
+  ],
+  "top_blockers": ["动作候选召回=0", "MMVV 语义 ROI", "Voice 参考音(输入)", "BGM 授权库(输入)", "无端到端编排"],
+  "deliverables": {
+    "master_audit_md": "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+    "architect_guide": "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
+    "code_manifest": "reports/storage/TREECUT_CODE_MANIFEST_V1.json",
+    "entrypoint_map": "reports/storage/TREECUT_ENTRYPOINT_MAP_V1.json",
+    "evidence_dir": "reports/storage/audit_evidence/"
+  }
+}
