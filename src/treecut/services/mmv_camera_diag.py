@@ -78,6 +78,19 @@ def fwd_back_filter(g0, g1, pts):
     return p1, ok
 
 
+def warp_current_to_previous(curr_bgr, model, matrix):
+    """A2.2 R1 — 唯一 canonical 逆补偿：把当前帧对齐回前一帧（不允许各路径自己写方向）。
+    model: translation/partial_affine/full_affine(2x3) → invertAffineTransform；
+           homography(3x3) → inv(H)。"""
+    M = np.asarray(matrix, dtype=np.float32)
+    h, w = curr_bgr.shape[:2]
+    if model == "homography":
+        Mi = np.linalg.inv(np.vstack([M, [0, 0, 1]]))[:3]
+        return cv2.warpPerspective(curr_bgr, Mi, (w, h))
+    Mi = cv2.invertAffineTransform(M) if M.shape == (2, 3) else M
+    return cv2.warpAffine(curr_bgr, Mi, (w, h))
+
+
 def _decomp_affine(M):
     A = M[:2, :2]
     tx, ty = M[0, 2], M[1, 2]
@@ -87,14 +100,16 @@ def _decomp_affine(M):
             "translation": [round(tx, 2), round(ty, 2)]}
 
 
-def estimate_camera_background(a_bgr, b_bgr, boxes_px):
+def estimate_camera_background(a_bgr, b_bgr, boxes_px, mode: str = "background"):
     """背景掩码 + FB 过滤 + 模型阶梯（translation→partial affine→full affine→homography），
-    模型以留出背景 track 评估，选最简可靠。返回诊断 dict + pair_state。"""
+    模型以背景 track 评估，选最简可靠。返回诊断 dict + pair_state。
+    mode: "background"(默认)=用 boxes_px 排除前景；"full_frame"=不排除（双模式差分诊断用）。
+    场景差异一律用 warp_current_to_previous 逆补偿（前→后变换的逆作用到当前帧对齐回前帧）。"""
     ga = cv2.cvtColor(a_bgr, cv2.COLOR_BGR2GRAY)
     gb = cv2.cvtColor(b_bgr, cv2.COLOR_BGR2GRAY)
     h, w = ga.shape
-    out = {"shape": [h, w], "reason_codes": []}
-    mask = background_mask((h, w), boxes_px)
+    out = {"shape": [h, w], "mode": mode, "reason_codes": []}
+    mask = background_mask((h, w), boxes_px) if mode == "background" else np.ones((h, w), dtype=bool)
     pts = sample_grid_points(ga, mask)
     if pts is None:
         out["pair_state"] = "INSUFFICIENT_FEATURES"
@@ -159,9 +174,10 @@ def estimate_camera_background(a_bgr, b_bgr, boxes_px):
             ok_model = hold_res <= _HOLDOUT_RESID_MAX
         md.update({"inlier_ratio": round(inl_ratio, 3),
                    "median_residual_px": round(float(np.median(res_all)), 3),
-                   "heldout_background_residual_px": round(hold_res, 3),
+                   "background_validation_residual_px": round(hold_res, 3),
                    "decomp": _decomp_affine(Mcur) if Mcur.shape == (2, 3) else {},
-                   "ok": ok_model})
+                   "ok": ok_model,
+                   "validation_note": "全背景 track 拟合后残差（非独立 70/30 holdout；诚实标注）"})
         if ok_model and chosen is None:
             md = dict(md)
             md["M"] = np.asarray(Mcur, dtype=np.float32)
@@ -169,8 +185,9 @@ def estimate_camera_background(a_bgr, b_bgr, boxes_px):
             out["chosen_model"] = md["name"]
             out["chosen_M"] = md["M"].tolist()
     if chosen is None:
-        # 全模型失败 → 诊断：场景跳变 vs 污染
-        wb = cv2.warpAffine(b_bgr, np.float32([[1, 0, med[0]], [0, 1, med[1]]]), (w, h))
+        # 全模型失败 → 诊断：场景跳变 vs 污染（逆补偿评估 scene diff）
+        wb = warp_current_to_previous(b_bgr, "translation",
+                                      np.float32([[1, 0, med[0]], [0, 1, med[1]]]))
         scene_diff = float(np.abs(cv2.cvtColor(wb, cv2.COLOR_BGR2GRAY).astype(np.float32) -
                                   ga.astype(np.float32)).mean() / 40.0)
         out["scene_difference_score"] = round(scene_diff, 3)
@@ -183,14 +200,14 @@ def estimate_camera_background(a_bgr, b_bgr, boxes_px):
             out["reason_codes"] = ["NO_RELIABLE_CAMERA_MODEL"]
         out["models_tried"] = [m["name"] for m in models]
         return out
-    # 补偿并评估最终 scene diff（选定模型）
+    # 补偿并评估最终 scene diff（选定模型，逆补偿）
     out["inlier_count"] = int((chosen["inl"].sum()) if "inl" in chosen else len(p0))
     out["inlier_ratio"] = chosen["inlier_ratio"]
     out["residual"] = chosen["median_residual_px"]
-    out["heldout_background_residual_px"] = chosen["heldout_background_residual_px"]
+    out["background_validation_residual_px"] = chosen["background_validation_residual_px"]
+    out["validation_note"] = chosen.get("validation_note", "")
     out.update(chosen["decomp"])
-    Mfinal = chosen["M"] if chosen["M"].shape == (2, 3) else chosen["M"]
-    wb = cv2.warpAffine(b_bgr, np.float32(Mfinal), (w, h))
+    wb = warp_current_to_previous(b_bgr, chosen["name"], chosen["M"])
     scene_diff = float(np.abs(cv2.cvtColor(wb, cv2.COLOR_BGR2GRAY).astype(np.float32) -
                               ga.astype(np.float32)).mean() / 40.0)
     out["scene_difference_score"] = round(scene_diff, 3)

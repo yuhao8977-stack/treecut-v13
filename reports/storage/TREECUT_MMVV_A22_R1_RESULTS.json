@@ -1,0 +1,62 @@
+{
+ "experiment": "MMVV_A2.2_R1",
+ "approved": "2026-09-04 architect",
+ "duplicate": {
+  "visual_case_id": "CAMERA_CASE_FAMILY_SOCKET_01",
+  "members": [
+   1985,
+   1986
+  ],
+  "unique_visual_case_count": 1,
+  "source_media_reference_count": 2,
+  "frame_hash_equivalent": true,
+  "statistics_note": "不得写成 2/2；只可 1/1 或 0/1"
+ },
+ "camera": {
+  "pair_states_bg": [
+   "SAME_SCENE",
+   "SAME_SCENE",
+   "SAME_SCENE",
+   "SAME_SCENE"
+  ],
+  "camera_state": "RELIABLE",
+  "source": "双模式差分诊断(真实全帧 vs 背景掩码) + inverse 补偿；无 media/pair/GT 硬编码"
+ },
+ "target_motion": {
+  "before_compensation": 0.7166,
+  "after_compensation": 0.7217,
+  "note": "after = 背景逆补偿后 TABLETOP ROI 实测(非手填0)"
+ },
+ "geometry": "STATIC_WITH_ANNOTATION_JITTER",
+ "unique_case_verdict": {
+  "machine": "Verdict.FAIL",
+  "human_gt": "FAIL"
+ },
+ "core5": {
+  "stored_old": {
+   "52_DRAWER_OPEN": "Verdict.PASS",
+   "109_ACTION_POSITIVE": "Verdict.PASS",
+   "109_OPEN_STATE_NEGATIVE": "Verdict.FAIL",
+   "89_EXTEND": "Verdict.FAIL",
+   "51_EXTEND": "Verdict.FAIL"
+  },
+  "actual_rerun": {
+   "52_DRAWER_OPEN": "Verdict.PASS",
+   "109_ACTION_POSITIVE": "Verdict.PASS",
+   "109_OPEN_STATE_NEGATIVE": "Verdict.FAIL",
+   "89_EXTEND": "Verdict.FAIL",
+   "51_EXTEND": "Verdict.FAIL"
+  },
+  "ok": true,
+  "false_pass": 0
+ },
+ "root_causes": {
+  "1.9": "FOREGROUND_CONTAMINATED",
+  "2.525": "FOREGROUND_CONTAMINATED",
+  "3.15": "FOREGROUND_CONTAMINATED",
+  "3.775": "NONE_CAMERA_OK"
+ },
+ "status": "A2_2_R1_CAMERA_CLOSURE_PASS",
+ "note": "A2_2_R1_CAMERA_CLOSURE_PASS ≠ CAMERA_SYSTEM_PASS ≠ MMVV PRODUCTION READY",
+ "generated_at": "2026-09-04 18:15:43"
+}

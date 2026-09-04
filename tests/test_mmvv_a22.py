@@ -9,7 +9,8 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from treecut.services.mmv_camera_diag import (  # noqa: E402
-    estimate_camera_background, background_mask, duplicate_case_declaration, EXCLUDE_NAMES)
+    estimate_camera_background, background_mask, warp_current_to_previous,
+    duplicate_case_declaration, EXCLUDE_NAMES)
 from treecut.services.mmvl_master_v1 import (  # noqa: E402
     Action, FrameSemantics, MotionMetrics, TemporalEvidence, ROI,
     TemporalStateValidator, TargetObjectMotionRouter, build_geometry_direction_evidence)
@@ -38,17 +39,47 @@ def _scene(seed, bg_motion=(0, 0), blob=None):
 
 
 def test_foreground_tracks_excluded():
-    a, b = _scene(1, bg_motion=(2, -1), blob=(60, 60, 60, 60))
-    # 背景估计(排除 blob 区域)
-    d_bg = estimate_camera_background(a, b, [[55, 55, 125, 125]])
-    # 全帧估计(不排除) 不应比背景估计更好(前景污染存在)
-    assert d_bg["pair_state"] in ("SAME_SCENE", "CAMERA_MODEL_UNRELIABLE")
-    if d_bg["pair_state"] == "SAME_SCENE":
-        assert d_bg["chosen_model"] == "translation"
-        assert d_bg["residual"] < 4.0
-    # 掩码正确性
+    # A2.2 R1：真实独立前景 —— 背景整体平移 (+2,-1)，前景 blob 在背景之外额外移动 (+10,+6)（不整帧二次 warp）
+    rng = np.random.default_rng(1)
+    bg = np.full((200, 260), 90, dtype=np.uint8)
+    for _ in range(150):
+        x = int(rng.integers(0, 250)); y = int(rng.integers(0, 190))
+        cv2.rectangle(bg, (x, y), (x + 6, y + 6), int(rng.integers(60, 160)), -1)
+    bgc = cv2.cvtColor(bg, cv2.COLOR_GRAY2BGR)
+    a = bgc.copy()
+    cv2.rectangle(a, (60, 60), (120, 120), 210, -1)          # 前景 blob 在前帧
+    b = cv2.warpAffine(bgc, np.float32([[1, 0, 2], [0, 1, -1]]), (260, 200))  # 背景 (+2,-1)
+    cv2.rectangle(b, (60 + 12, 60 + 5), (120 + 12, 120 + 5), 210, -1)  # blob 额外 (+10,+6) 相对背景
+    d_full = estimate_camera_background(a, b, [], mode="full_frame")
+    d_bg = estimate_camera_background(a, b, [[55, 55, 125, 125]], mode="background")
+    # 背景掩码应可靠；全帧应受前景污染（更差或不可靠）
+    def _res(d):
+        v = d.get("residual")
+        return v if v is not None else 9.0
+    assert d_bg["pair_state"] == "SAME_SCENE" and _res(d_bg) < 4.0
+    assert d_full["pair_state"] != "SAME_SCENE" or _res(d_full) >= _res(d_bg)
     m = background_mask(a.shape, [[50, 50, 100, 100]])
     assert not m[75, 75] and m[10, 10]
+
+
+def test_warp_current_to_previous_direction():
+    # A2.2 R1：纯平移背景下，逆补偿(对齐回前帧)的 scene diff 必须小于前向 warp
+    rng = np.random.default_rng(6)
+    img = np.full((200, 260), 90, dtype=np.uint8)
+    for _ in range(150):
+        x = int(rng.integers(0, 250)); y = int(rng.integers(0, 190))
+        cv2.rectangle(img, (x, y), (x + 6, y + 6), int(rng.integers(60, 160)), -1)
+    a = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+    b = cv2.warpAffine(a, np.float32([[1, 0, 3], [0, 1, -2]]), (260, 200))
+    d = estimate_camera_background(a, b, [], mode="background")
+    assert d["pair_state"] == "SAME_SCENE"
+    M = np.float32([[1, 0, 3], [0, 1, -2]])  # 真值前向
+    wb_inv = warp_current_to_previous(b, "translation", M)
+    wb_fwd = cv2.warpAffine(b, M, (260, 200))
+    ga = cv2.cvtColor(a, cv2.COLOR_BGR2GRAY).astype(np.float32)
+    diff_inv = float(np.abs(cv2.cvtColor(wb_inv, cv2.COLOR_BGR2GRAY).astype(np.float32) - ga).mean())
+    diff_fwd = float(np.abs(cv2.cvtColor(wb_fwd, cv2.COLOR_BGR2GRAY).astype(np.float32) - ga).mean())
+    assert diff_inv < diff_fwd, (diff_inv, diff_fwd)
 
 
 def test_forward_backward_bad_tracks_rejected():

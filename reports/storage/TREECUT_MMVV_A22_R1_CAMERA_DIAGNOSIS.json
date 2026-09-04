@@ -1,0 +1,237 @@
+{
+ "case": "CAMERA_CASE_FAMILY_SOCKET_01",
+ "members": [
+  1985,
+  1986
+ ],
+ "pairs": [
+  {
+   "from_t": 1.9,
+   "to_t": 2.525,
+   "full_frame": {
+    "mode": "full_frame",
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "chosen_model": null,
+    "residual": null,
+    "scene_difference_score": 0.589,
+    "feature_count_before": 344,
+    "forward_backward_valid_count": 184,
+    "inlier_ratio": null,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "background_masked": {
+    "mode": "background",
+    "pair_state": "SAME_SCENE",
+    "chosen_model": "translation",
+    "chosen_M": [
+     [
+      1.0,
+      0.0,
+      7.02691650390625
+     ],
+     [
+      0.0,
+      1.0,
+      4.614341735839844
+     ]
+    ],
+    "translation_median": [
+     7.03,
+     4.61
+    ],
+    "residual": 1.137,
+    "scene_difference_score": 0.606,
+    "feature_count_before": 106,
+    "forward_backward_valid_count": 74,
+    "inlier_ratio": 1.0,
+    "background_validation_residual_px": 1.137,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "scene_diff_old_invalidated": {
+    "value": 0.741,
+    "note": "INVALIDATED_BY_WARP_DIRECTION_BUG(旧 A2.2 前向 warp)"
+   },
+   "machine_root_cause": "FOREGROUND_CONTAMINATED",
+   "reason_codes": [
+    "FULL_FRAME_UNRELIABLE",
+    "BACKGROUND_MASKED_RELIABLE",
+    "SAME_SCENE"
+   ]
+  },
+  {
+   "from_t": 2.525,
+   "to_t": 3.15,
+   "full_frame": {
+    "mode": "full_frame",
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "chosen_model": null,
+    "residual": null,
+    "scene_difference_score": 0.432,
+    "feature_count_before": 330,
+    "forward_backward_valid_count": 203,
+    "inlier_ratio": null,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "background_masked": {
+    "mode": "background",
+    "pair_state": "SAME_SCENE",
+    "chosen_model": "translation",
+    "chosen_M": [
+     [
+      1.0,
+      0.0,
+      5.01025390625
+     ],
+     [
+      0.0,
+      1.0,
+      3.6862106323242188
+     ]
+    ],
+    "translation_median": [
+     5.01,
+     3.69
+    ],
+    "residual": 0.919,
+    "scene_difference_score": 0.439,
+    "feature_count_before": 100,
+    "forward_backward_valid_count": 66,
+    "inlier_ratio": 1.0,
+    "background_validation_residual_px": 0.919,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "scene_diff_old_invalidated": {
+    "value": 0.574,
+    "note": "INVALIDATED_BY_WARP_DIRECTION_BUG(旧 A2.2 前向 warp)"
+   },
+   "machine_root_cause": "FOREGROUND_CONTAMINATED",
+   "reason_codes": [
+    "FULL_FRAME_UNRELIABLE",
+    "BACKGROUND_MASKED_RELIABLE",
+    "SAME_SCENE"
+   ]
+  },
+  {
+   "from_t": 3.15,
+   "to_t": 3.775,
+   "full_frame": {
+    "mode": "full_frame",
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "chosen_model": null,
+    "residual": null,
+    "scene_difference_score": 0.798,
+    "feature_count_before": 190,
+    "forward_backward_valid_count": 87,
+    "inlier_ratio": null,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "background_masked": {
+    "mode": "background",
+    "pair_state": "SAME_SCENE",
+    "chosen_model": "translation",
+    "chosen_M": [
+     [
+      1.0,
+      0.0,
+      -2.013671875
+     ],
+     [
+      0.0,
+      1.0,
+      1.037078857421875
+     ]
+    ],
+    "translation_median": [
+     -2.01,
+     1.04
+    ],
+    "residual": 1.341,
+    "scene_difference_score": 0.795,
+    "feature_count_before": 76,
+    "forward_backward_valid_count": 37,
+    "inlier_ratio": 1.0,
+    "background_validation_residual_px": 1.341,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "scene_diff_old_invalidated": {
+    "value": 0.814,
+    "note": "INVALIDATED_BY_WARP_DIRECTION_BUG(旧 A2.2 前向 warp)"
+   },
+   "machine_root_cause": "FOREGROUND_CONTAMINATED",
+   "reason_codes": [
+    "FULL_FRAME_UNRELIABLE",
+    "BACKGROUND_MASKED_RELIABLE",
+    "SAME_SCENE"
+   ]
+  },
+  {
+   "from_t": 3.775,
+   "to_t": 4.4,
+   "full_frame": {
+    "mode": "full_frame",
+    "pair_state": "SAME_SCENE",
+    "chosen_model": "translation",
+    "residual": 2.548,
+    "scene_difference_score": 0.831,
+    "feature_count_before": 280,
+    "forward_backward_valid_count": 142,
+    "inlier_ratio": 1.0,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "background_masked": {
+    "mode": "background",
+    "pair_state": "SAME_SCENE",
+    "chosen_model": "translation",
+    "chosen_M": [
+     [
+      1.0,
+      0.0,
+      -3.799102783203125
+     ],
+     [
+      0.0,
+      1.0,
+      1.002716064453125
+     ]
+    ],
+    "translation_median": [
+     -3.8,
+     1.0
+    ],
+    "residual": 2.02,
+    "scene_difference_score": 0.836,
+    "feature_count_before": 124,
+    "forward_backward_valid_count": 81,
+    "inlier_ratio": 1.0,
+    "background_validation_residual_px": 2.02,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "scene_diff_old_invalidated": {
+    "value": 0.902,
+    "note": "INVALIDATED_BY_WARP_DIRECTION_BUG(旧 A2.2 前向 warp)"
+   },
+   "machine_root_cause": "NONE_CAMERA_OK",
+   "reason_codes": [
+    "FULL_FRAME_RELIABLE",
+    "BACKGROUND_MASKED_RELIABLE"
+   ]
+  }
+ ],
+ "scene_diff_old_note": "旧 scene_diff 0.741/0.574/0.814/0.902 → INVALIDATED_BY_WARP_DIRECTION_BUG"
+}
