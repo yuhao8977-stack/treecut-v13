@@ -708,6 +708,7 @@ TreeCut 的**数据/Truth 底座（L1/L3、B007 双源事实、G1 表）是真�
 ## 15.2 本审计产出物
 - docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md（本文件，中文主）
 - docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md（外部架构师读码入口）
+- **docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md（架构师第二轮独立裁决登记 2026-09-04：AUDIT_REPORT_PASS_WITH_MAJOR_CORRECTIONS —— 主问题=两生产世界断层；G5 拆分 TECHNICAL/SEMANTIC/OVERALL；VALIDATED ACTION PASS=0（非 recall=0）；MMVV 选 A（GT ROI 校准）；token 立即轮换；优先级重排。覆盖/修正本文若干结论，以裁决登记为准）**
 - reports/storage/TREECUT_SYSTEM_MASTER_AUDIT_V1.json（机器可读状态）
 - reports/storage/TREECUT_CODE_MANIFEST_V1.json（tracked 源码清单：路径/大小/hash/类别）
 - reports/storage/TREECUT_ENTRYPOINT_MAP_V1.json（CLI/服务/脚本/UI/测试入口映射）

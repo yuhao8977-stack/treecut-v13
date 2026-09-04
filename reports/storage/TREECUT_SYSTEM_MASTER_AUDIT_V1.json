@@ -64,6 +64,24 @@
     "MMVV ROI 方案 A/B/C 决策 (TD03)"
   ],
   "top_blockers": ["动作候选召回=0", "MMVV 语义 ROI", "Voice 参考音(输入)", "BGM 授权库(输入)", "无端到端编排"],
+  "round1_architect_adjudication": {
+    "record": "docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md",
+    "verdict": "AUDIT_REPORT_PASS_WITH_MAJOR_CORRECTIONS",
+    "date": "2026-09-04",
+    "status": "HARNESS_MASTER_AUDIT=PASS_WITH_CORRECTIONS; EVIDENCE_PACKAGE=GOOD; ARCHITECTURE_DIAGNOSIS=MOSTLY_CORRECT; ROADMAP=NEEDS_REORDERING; SOURCE_CODE_INDEPENDENT_AUDIT=PENDING_DIRECT_REPO_ACCESS",
+    "key_corrections": [
+      "C1 主问题=两个生产世界未合并(架构断层)，非单模块",
+      "C2 G5 拆分: TECHNICAL=PASS / SEMANTIC=BROKEN_NOT_VERIFIED / OVERALL=BLOCKED_BY_SEMANTIC_QA",
+      "C3 术语: VALIDATED ACTION PASS=0 (非 recall=0)；broad recall NON-ZERO；media52 DRAWER_OPEN 人工正例存在",
+      "C4 按动作分桶验证后再定 MATERIAL_GAP，禁止直接补拍157",
+      "C5 MMVV 选 A(GT ROI 校准)→证后半段→再定 B(需 domain detector)",
+      "C6 DB 债提前；G1=生产资格门≠素材认知真值；asset_type 全 NULL 已记录",
+      "C7 先 Production Contract 后 Orchestrator(PipelineService 后移)",
+      "C9 token 立即轮换(公开泄露假设)",
+      "C10 修 claim_multiprocess rc=5 + 补真 Integration(E2E) 测试"
+    ],
+    "github_visibility": {"owner": "yuhao8977-stack", "public_repos": 5, "total_private_repos": 0, "note": "5/5 已全部公开；未轮换 token 已在公开历史中 → 轮换 P0"}
+  },
   "deliverables": {
     "master_audit_md": "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
     "architect_guide": "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
