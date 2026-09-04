@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8"/>
-<title>TreeCut A3 Holdout 人工对象框标注</title>
+<title>TreeCut A3 Holdout · 人工对象框标注（Blind）</title>
 <style>
  body{font-family:'Microsoft YaHei',sans-serif;margin:0;background:#f5f6f8;color:#222}
  header{padding:10px 18px;background:#1f2937;color:#fff;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
  header h1{font-size:16px;margin:0}
  .wrap{display:flex;height:calc(100vh - 52px)}
- .left{width:340px;border-right:1px solid #ddd;background:#fff;overflow:auto;padding:10px}
+ .left{width:300px;border-right:1px solid #ddd;background:#fff;overflow:auto;padding:10px}
  .right{flex:1;overflow:auto;padding:12px;text-align:center}
  .case{border:1px solid #ddd;border-radius:8px;margin-bottom:10px;padding:8px;cursor:pointer}
  .case.active{border-color:#1a73e8;background:#eef4ff}
@@ -15,49 +15,59 @@
  .frameTab.active{background:#1a73e8;color:#fff}
  .frameTab.done{background:#cde7cd}
  canvas{border:1px solid #888;max-width:100%;background:#111;cursor:crosshair}
- .boxlist{text-align:left;font-size:12px;max-height:220px;overflow:auto}
+ .boxlist{text-align:left;font-size:12px;max-height:180px;overflow:auto}
  .tools{display:flex;gap:8px;margin:8px 0;flex-wrap:wrap;align-items:center}
  button{padding:4px 10px;border-radius:6px;border:1px solid #999;cursor:pointer;background:#fff}
  button.primary{background:#1a73e8;color:#fff;border-color:#1a73e8}
  button.warn{background:#b26a00;color:#fff;border-color:#b26a00}
+ button:disabled{opacity:.45;cursor:not-allowed}
  .modeStatus{font-weight:bold}
  .curLabel{color:#1a73e8;font-weight:bold}
  .note{background:#e8f0fe;border:1px solid #a8c7fa;padding:8px;border-radius:6px;font-size:12px;text-align:left;margin:8px 0;white-space:pre-wrap}
+ .draftnote{background:#fff3d6;border:1px solid #e8b64c;padding:6px 10px;border-radius:6px;font-size:12px;margin:6px 0;display:none}
  .msg{position:fixed;bottom:18px;right:18px;background:#333;color:#fff;padding:8px 14px;border-radius:6px;display:none;z-index:9}
  .hint{font-size:12px;color:#777;margin:4px 0}
+ kbd{background:#eee;border:1px solid #bbb;border-radius:4px;padding:0 5px;font-size:11px}
 </style></head>
 <body>
-<header><h1>TreeCut A3 · Holdout 人工对象框标注（无 AI 预填）</h1>
-  <span style="font-size:12px">6 案例 · 每案例 5 帧 · 只保存人工框</span>
+<header><h1>TreeCut A3 · Holdout 人工对象框标注（Blind，无 AI 预填）</h1>
+  <span style="font-size:12px">6 案例（H001–H006）· 每案例 5 帧 · 只保存人工框</span>
   <span id="stat" style="font-size:12px"></span></header>
 <div class="wrap">
  <div class="left" id="cases"></div>
  <div class="right">
    <div class="note" id="banner"></div>
+   <div class="draftnote" id="draftNote">⚠ 已复制上一帧框作为<b>草稿</b> —— 请人工逐框确认并调整位置后再保存（<b>不会自动提交</b>）。</div>
    <div id="frameTabs"></div>
    <div class="tools">
      <label>当前要框：<select id="labelSel"></select></label>
      <button id="btnMode" class="primary">开始框选</button>
      <button id="btnDel">删除选中</button>
      <button id="btnClear">清空当前图片</button>
-     <button id="btnSave" class="primary">保存当前图片</button>
+     <button id="btnCopyPrev" title="把上一帧的框复制为本帧草稿（需人工确认调整）">复制上一帧框(草稿)</button>
+     <button id="btnSave" class="primary">保存当前图片 (S)</button>
      <span class="modeStatus" id="modeStatus">框选模式：已关闭</span>
    </div>
-   <div class="hint" id="curHint">提示：开启「框选模式」后，在画面上【按住鼠标并拖动】画出矩形；松手完成一个框。可连续画多个框（换标签后直接再画）。点已有框可选中并拖动；太小的框会被丢弃。</div>
+   <div class="tools">
+     <button id="btnPrevCase">上一案例</button>
+     <button id="btnPrevFrame">上一帧 (A)</button>
+     <button id="btnNextFrame">下一帧 (D)</button>
+     <button id="btnNextCase">下一案例</button>
+     <span class="hint">快捷键：<kbd>A</kbd>上一帧 <kbd>D</kbd>下一帧 <kbd>S</kbd>保存 <kbd>Delete</kbd>删除选中（在输入框外时生效）</span>
+   </div>
+   <div class="hint" id="curHint"></div>
    <canvas id="cv"></canvas>
    <div class="boxlist" id="boxlist"></div>
  </div>
 </div>
 <div class="msg" id="msg"></div>
 <script>
-// ============ A3 对象集合（架构师限定：前 3 为关键目标；可选 5 类；无动作/方向/结论） ============
 const LABELS=["TABLETOP","EXTENSION_TABLETOP","ISLAND_BODY","DRAWER","TRACK_SOCKET","SOCKET_MODULE","PERSON","HAND"];
 const LABEL_CN={"TABLETOP":"桌板/台面","EXTENSION_TABLETOP":"伸缩桌板","ISLAND_BODY":"岛台主体","DRAWER":"抽屉","TRACK_SOCKET":"轨道插座","SOCKET_MODULE":"插座模块","PERSON":"人","HAND":"手"};
 function labCN(v){return LABEL_CN[v]||v;}
 function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function optsHTML(sel){return LABELS.map(l=>`<option value="${l}" ${l===sel?'selected':''}>${labCN(l)}</option>`).join('');}
-// ============================================================
-let MAN=null, ROI=null, cur={case_id:null,frame:null};
+let MAN=null, ROI=null, cur={oid:null,frame:null};
 let boxes=[], selBox=-1;
 let drawMode=false, drawingNew=false, drawStart=null, drag=false, dragStart=null;
 const MIN_BOX=8;
@@ -65,24 +75,23 @@ const $=s=>document.querySelector(s);
 const img=new Image();
 const cv=$('#cv'), ctx=cv.getContext('2d');
 async function jget(u){const r=await fetch(u);return r.json();}
-function msg(t){const m=$('#msg');m.textContent=t;m.style.display='block';setTimeout(()=>m.style.display='none',2500);}
+function msg(t){const m=$('#msg');m.textContent=t;m.style.display='block';clearTimeout(msg._t);msg._t=setTimeout(()=>m.style.display='none',2600);}
 function setMode(on){
-  drawMode=on;
-  const b=$('#btnMode');
+  drawMode=on; const b=$('#btnMode');
   if(on){b.textContent='结束框选';b.className='warn';$('#modeStatus').textContent='框选模式：已开启（可连续画多个框）';}
   else{b.textContent='开始框选';b.className='primary';$('#modeStatus').textContent='框选模式：已关闭';}
   if(!on){drawingNew=false;drawStart=null;}
   redraw();
 }
-function updateCurLabel(){const v=$('#labelSel').value;document.getElementById('curHint').innerHTML=`提示：当前要框：<span class="curLabel">${labCN(v)}</span> —— 开启框选模式后，在画面上【按住鼠标并拖动】画出矩形；松手完成。可连续画多个框。`;
-}
+function updateCurLabel(){const v=$('#labelSel').value;$('#curHint').innerHTML=`提示：当前要框：<span class="curLabel">${labCN(v)}</span> —— 开启框选后【按住鼠标拖动】画框；可连续画多个框；<kbd>Delete</kbd> 删除选中。`;}
+function caseIndex(){return MAN.cases.findIndex(c=>c.opaque_case_id===cur.oid);}
+function frameIndex(){const c=MAN.cases.find(x=>x.opaque_case_id===cur.oid);return c?c.frames.findIndex(f=>f.t_s===cur.frame.t_s):-1;}
 async function init(){
-  $('#banner').textContent='说明：A3 Holdout 人工 ROI —— 请为每帧中可见的目标对象画框（桌板/伸缩桌板/岛台主体 为关键目标；人/手/抽屉/轨道插座/插座模块 按需）。只画对象框，不填写任何动作、方向或结论。';
+  $('#banner').textContent='说明：A3 Blind Holdout 人工 ROI —— 案例以不透明编号 H001–H006 显示（不做任何动作/结论输入）。请为每帧中可见目标画框：桌板/伸缩桌板/岛台主体（关键），人/手/抽屉/轨道插座/插座模块（可选）。';
   $('#labelSel').innerHTML=optsHTML('TABLETOP');
-  $('#labelSel').onchange=updateCurLabel;
-  updateCurLabel();
-  MAN=await jget('/api/a3/holdout');
-  ROI=await jget('/api/a3/rois');
+  $('#labelSel').onchange=updateCurLabel; updateCurLabel();
+  MAN=await jget('/api/a3/blind');
+  ROI=await jget('/api/a3/blind-rois');
   drawCases();
   if(MAN.cases.length)pick(MAN.cases[0], MAN.cases[0].frames[0]);
   refreshStat();
@@ -91,28 +100,29 @@ function drawCases(){
   const el=$('#cases');el.innerHTML='';
   MAN.cases.forEach(c=>{
     const d=document.createElement('div');d.className='case';
-    d.innerHTML=`<div class="mid">${esc(c.case_id)} · 素材 ${c.media_id}</div>
-      <div class="st">${esc(c.desc||'')}<br/>窗口 [${c.frozen_window_s[0]} , ${c.frozen_window_s[1]}] 秒 · 共 ${c.frames.length} 帧</div>`;
+    d.innerHTML=`<div class="mid">${esc(c.opaque_case_id)}</div>
+      <div class="st">窗口 [${c.frozen_window_s[0]}, ${c.frozen_window_s[1]}] 秒 · ${c.frames.length} 帧</div>`;
     d.onclick=()=>{document.querySelectorAll('.case').forEach(x=>x.classList.remove('active'));d.classList.add('active');pick(c,c.frames[0]);};
     el.appendChild(d);
   });
 }
 function refreshStat(){
-  const done=MAN.cases.filter(c=>c.frames.every(f=>ROI.annotations.some(a=>a.media_id===c.media_id&&a.frame_timestamp===f.t_s)));
+  const done=MAN.cases.filter(c=>c.frames.every(f=>ROI.annotations.some(a=>a.opaque_case_id===c.opaque_case_id&&a.frame_timestamp===f.t_s)));
   $('#stat').textContent=`已完成案例 ${done.length}/${MAN.cases.length}`;
 }
-function pick(c,f){
-  cur={case_id:c.case_id,mid:c.media_id,frame:f};
-  loadFrame();
-}
+function pick(c,f){cur={oid:c.opaque_case_id,frame:f};loadFrame();}
+function setDraftNote(on){$('#draftNote').style.display=on?'block':'none';}
 async function loadFrame(){
-  const c=MAN.cases.find(x=>x.media_id===cur.mid);
+  const c=MAN.cases.find(x=>x.opaque_case_id===cur.oid);
   if(!c){return;}
+  document.querySelectorAll('.case').forEach(x=>x.classList.remove('active'));
+  const caseEl=[...document.querySelectorAll('.case')].find(x=>x.textContent.startsWith(cur.oid));
+  if(caseEl)caseEl.classList.add('active');
   $('#frameTabs').innerHTML='';
   c.frames.forEach((f,i)=>{
     const b=document.createElement('span');b.className='frameTab';
-    const n=ROI.annotations.filter(a=>a.media_id===cur.mid&&a.frame_timestamp===f.t_s).length;
-    b.textContent=`第${i+1}张 @ ${f.t_s}s${n?`（${n}框）`:''}`;
+    const n=ROI.annotations.filter(a=>a.opaque_case_id===cur.oid&&a.frame_timestamp===f.t_s).length;
+    b.textContent=`F${i} @ ${f.t_s}s${n?`（${n}框）`:''}`;
     if(n)b.classList.add('done');
     if(cur.frame&&f.t_s===cur.frame.t_s)b.classList.add('active');
     b.onclick=()=>{cur.frame=f;loadFrame();};
@@ -121,95 +131,119 @@ async function loadFrame(){
   const f=(c.frames.find(x=>x.t_s===cur.frame.t_s))||c.frames[0];cur.frame=f;
   if(f.error){msg('该帧提取失败: '+f.frame);return;}
   img.onload=()=>{cv.width=img.naturalWidth;cv.height=img.naturalHeight;redraw();};
-  img.onerror=()=>{console.error('FRAME_LOAD_FAILED',f.frame);msg('图片加载失败：'+f.frame);};
-  img.src='/a3/hframes/'+encodeURIComponent(f.frame)+'?v='+encodeURIComponent(String(f.sha256||'').slice(0,12));
-  boxes=ROI.annotations.filter(a=>a.media_id===cur.mid&&a.frame_timestamp===f.t_s).map(a=>({...a,px:a.bbox_pixel.slice()}));
-  selBox=-1;drawBoxList();
+  img.onerror=()=>{msg('图片加载失败：'+f.frame);};
+  img.src='/a3/bframes/'+encodeURIComponent(f.frame)+'?v='+encodeURIComponent(String(f.sha256||'').slice(0,12));
+  boxes=ROI.annotations.filter(a=>a.opaque_case_id===cur.oid&&a.frame_timestamp===f.t_s)
+        .map(a=>({...a,px:a.bbox_pixel.slice(),draft:false}));
+  selBox=-1;setDraftNote(false);drawBoxList();
 }
 function redraw(){
   ctx.clearRect(0,0,cv.width,cv.height);
   if(img.naturalWidth)ctx.drawImage(img,0,0);
   boxes.forEach((b,i)=>{
-    const [x1,y1,x2,y2]=b.px;
-    const w=x2-x1,h=y2-y1;
+    const [x1,y1,x2,y2]=b.px; const w=x2-x1,h=y2-y1;
     if(w<1&&h<1)return;
-    ctx.strokeStyle=i===selBox?'#ff3b30':'#1a73e8';ctx.lineWidth=i===selBox?3:2;
+    ctx.setLineDash(b.draft?[6,4]:[]);
+    ctx.strokeStyle=b.draft?'#e8a400':(i===selBox?'#ff3b30':'#1a73e8');
+    ctx.lineWidth=i===selBox?3:2;
     ctx.strokeRect(x1,y1,w,h);
-    ctx.fillStyle='rgba(26,115,232,.15)';ctx.fillRect(x1,y1,w,h);
-    ctx.font='16px "Microsoft YaHei",sans-serif';ctx.fillStyle=ctx.strokeStyle;
-    ctx.fillText(labCN(b.object_name),x1+3,Math.max(18,y1-6));
+    ctx.fillStyle=b.draft?'rgba(232,164,0,.12)':'rgba(26,115,232,.15)';
+    ctx.fillRect(x1,y1,w,h);
+    ctx.setLineDash([]);
+    ctx.font='15px "Microsoft YaHei",sans-serif';ctx.fillStyle=ctx.strokeStyle;
+    ctx.fillText((b.draft?'草稿·':'')+labCN(b.object_name),x1+3,Math.max(17,y1-5));
   });
 }
 function evPos(ev){const r=cv.getBoundingClientRect();return{x:(ev.clientX-r.left)*cv.width/r.width,y:(ev.clientY-r.top)*cv.height/r.height};}
 function hitBox(p){return boxes.map((b,i)=>({i,b})).reverse().find(({b})=>p.x>=b.px[0]&&p.x<=b.px[2]&&p.y>=b.px[1]&&p.y<=b.px[3]);}
 cv.addEventListener('mousedown',ev=>{
-  const p=evPos(ev);
-  const hit=hitBox(p);
-  if(hit){
-    selBox=hit.i;drag=true;dragStart={x:p.x-hit.b.px[0],y:p.y-hit.b.px[1]};
-    drawingNew=false;drawStart=null;
-    redraw();drawBoxList();return;
-  }
-  if(drawMode){
-    drawingNew=true;drawStart=p;
-    boxes.push({px:[p.x,p.y,p.x,p.y],object_name:$('#labelSel').value});
-    selBox=boxes.length-1;
-    redraw();
-  }
+  const p=evPos(ev); const hit=hitBox(p);
+  if(hit){selBox=hit.i;drag=true;dragStart={x:p.x-hit.b.px[0],y:p.y-hit.b.px[1]};
+    drawingNew=false;drawStart=null;redraw();drawBoxList();return;}
+  if(drawMode){drawingNew=true;drawStart=p;
+    boxes.push({px:[p.x,p.y,p.x,p.y],object_name:$('#labelSel').value,draft:false});
+    selBox=boxes.length-1;redraw();}
 });
 cv.addEventListener('mousemove',ev=>{
   const p=evPos(ev);
-  if(drawingNew&&selBox>=0){
-    const b=boxes[selBox];
-    b.px[2]=Math.max(0,Math.min(cv.width,p.x));
-    b.px[3]=Math.max(0,Math.min(cv.height,p.y));
-    redraw();return;
-  }
-  if(drag&&selBox>=0){
-    const b=boxes[selBox];const w=b.px[2]-b.px[0],h=b.px[3]-b.px[1];
+  if(drawingNew&&selBox>=0){const b=boxes[selBox];
+    b.px[2]=Math.max(0,Math.min(cv.width,p.x));b.px[3]=Math.max(0,Math.min(cv.height,p.y));redraw();return;}
+  if(drag&&selBox>=0){const b=boxes[selBox];const w=b.px[2]-b.px[0],h=b.px[3]-b.px[1];
     let x=p.x-dragStart.x,y=p.y-dragStart.y;
     x=Math.max(0,Math.min(cv.width-w,x));y=Math.max(0,Math.min(cv.height-h,y));
-    b.px=[x,y,x+w,y+h];redraw();
-  }
+    b.px=[x,y,x+w,y+h];redraw();}
 });
 cv.addEventListener('mouseup',()=>{
-  if(drawingNew&&selBox>=0){
-    const b=boxes[selBox];
+  if(drawingNew&&selBox>=0){const b=boxes[selBox];
     const x1=Math.min(b.px[0],b.px[2]),y1=Math.min(b.px[1],b.px[3]);
     const x2=Math.max(b.px[0],b.px[2]),y2=Math.max(b.px[1],b.px[3]);
-    if(x2-x1<MIN_BOX||y2-y1<MIN_BOX){
-      boxes.splice(selBox,1);selBox=-1;
-      msg('框太小，请按住鼠标拖出矩形');
-    } else {
-      b.px=[x1,y1,x2,y2];
-      msg(`已画 1 个框（${labCN(b.object_name)}），可直接换标签继续画下一个`);
-      drawBoxList();
-    }
-    drawingNew=false;drawStart=null;
-    redraw();
-  }
+    if(x2-x1<MIN_BOX||y2-y1<MIN_BOX){boxes.splice(selBox,1);selBox=-1;msg('框太小，请拖出矩形');}
+    else{b.px=[x1,y1,x2,y2];msg(`已画 1 个框（${labCN(b.object_name)}）`);drawBoxList();}
+    drawingNew=false;drawStart=null;redraw();}
   drag=false;
 });
+function goCase(delta){
+  const c=MAN.cases.find(x=>x.opaque_case_id===cur.oid);
+  let idx=caseIndex()+delta;
+  if(idx<0)idx=MAN.cases.length-1; if(idx>=MAN.cases.length)idx=0;
+  const nc=MAN.cases[idx];
+  // 若该案例已完成则提示但不跳过（尊重人工选择）
+  pick(nc,nc.frames[0]);
+}
+function goFrame(delta){
+  const c=MAN.cases.find(x=>x.opaque_case_id===cur.oid);
+  if(!c)return; let i=frameIndex()+delta;
+  if(i<0)i=0; if(i>=c.frames.length)i=c.frames.length-1;
+  cur.frame=c.frames[i];loadFrame();
+}
+function copyPrevFrameDraft(){
+  const c=MAN.cases.find(x=>x.opaque_case_id===cur.oid);
+  const fi=frameIndex(); if(!c||fi<=0){msg('已是本案例第一帧，无“上一帧”可复制');return;}
+  const prev=c.frames[fi-1];
+  const prevBoxes=ROI.annotations.filter(a=>a.opaque_case_id===cur.oid&&a.frame_timestamp===prev.t_s);
+  if(!prevBoxes.length){msg('上一帧没有框，无可复制内容');return;}
+  boxes=prevBoxes.map(a=>({...a,px:a.bbox_pixel.slice(),draft:true}));
+  selBox=-1;setDraftNote(true);drawBoxList();
+  msg('已复制上一帧 '+prevBoxes.length+' 个框为草稿 —— 请人工确认并调整位置');
+}
 $('#btnMode').onclick=()=>setMode(!drawMode);
 $('#btnDel').onclick=()=>{if(selBox>=0){boxes.splice(selBox,1);selBox=-1;redraw();drawBoxList();}};
 $('#btnClear').onclick=()=>{boxes=[];selBox=-1;redraw();drawBoxList();};
+$('#btnCopyPrev').onclick=copyPrevFrameDraft;
+$('#btnPrevCase').onclick=()=>goCase(-1);
+$('#btnNextCase').onclick=()=>goCase(1);
+$('#btnPrevFrame').onclick=()=>goFrame(-1);
+$('#btnNextFrame').onclick=()=>goFrame(1);
 $('#btnSave').onclick=async()=>{
   const f=cur.frame;
-  const payload={case_id:cur.case_id,media_id:cur.mid,frame_timestamp:f.t_s,rois:boxes.map(b=>({object_name:b.object_name,bbox_pixel:b.px}))};
-  const r=await fetch('/api/a3/rois/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  const payload={opaque_case_id:cur.oid,frame_timestamp:f.t_s,
+                 rois:boxes.map(b=>({object_name:b.object_name,bbox_pixel:b.px}))};
+  const r=await fetch('/api/a3/blind-rois/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
   const j=await r.json();
-  if(j.ok){ROI=await jget('/api/a3/rois');msg(`已保存 ${j.saved} 个框`);refreshStat();drawBoxList();}
+  if(j.ok){ROI=await jget('/api/a3/blind-rois');
+    boxes=boxes.map(b=>({...b,draft:false}));setDraftNote(false);
+    msg(`已保存 ${j.saved} 个框（草稿确认后正式落盘）`);refreshStat();drawBoxList();}
   else msg('保存失败：'+j.error);
 };
+document.addEventListener('keydown',ev=>{
+  const tag=(ev.target&&ev.target.tagName||'').toLowerCase();
+  if(tag==='input'||tag==='textarea'||tag==='select')return;
+  if(ev.key==='a'||ev.key==='A'){goFrame(-1);}
+  else if(ev.key==='d'||ev.key==='D'){goFrame(1);}
+  else if(ev.key==='s'||ev.key==='S'){$('#btnSave').click();}
+  else if(ev.key==='Delete'||ev.key==='Backspace'){if(selBox>=0){boxes.splice(selBox,1);selBox=-1;redraw();drawBoxList();}}
+});
 function drawBoxList(){
-  const el=$('#boxlist');el.innerHTML=`<b>本张图片的框（共 ${boxes.length} 个）：</b>`;
-  if(!boxes.length){el.innerHTML+=' 还没有框（开启框选模式后按住鼠标拖出矩形）';redraw();return;}
+  const el=$('#boxlist');
+  const nd=boxes.filter(b=>b.draft).length;
+  el.innerHTML=`<b>本张图片的框（共 ${boxes.length} 个${nd?`，其中草稿 ${nd} 个待确认`:''}）：</b>`;
+  if(!boxes.length){el.innerHTML+=' 还没有框（开启框选后拖出矩形；或点“复制上一帧框(草稿)”）；保存用 S';redraw();return;}
   boxes.forEach((b,i)=>{
-    const d=document.createElement('span');d.style.cssText='display:inline-block;margin:2px 8px 2px 0;border:1px solid #ccc;padding:2px 6px;border-radius:6px;';
+    const d=document.createElement('span');d.style.cssText='display:inline-block;margin:2px 8px 2px 0;border:1px solid '+(b.draft?'#e8a400':'#ccc')+';padding:2px 6px;border-radius:6px;background:'+(b.draft?'#fff8e1':'#fff')+';';
     const sel=document.createElement('select');sel.innerHTML=optsHTML(b.object_name);
     sel.onchange=()=>{b.object_name=sel.value;redraw();};
-    const del=document.createElement('button');del.textContent='删除';del.onclick=()=>{boxes.splice(i,1);drawBoxList();};
-    const lab=document.createElement('span');lab.textContent=`#${i+1} ${labCN(b.object_name)} [${Math.round(b.px[0])},${Math.round(b.px[1])},${Math.round(b.px[2])},${Math.round(b.px[3])}]`;
+    const del=document.createElement('button');del.textContent='删';del.onclick=()=>{boxes.splice(i,1);drawBoxList();};
+    const lab=document.createElement('span');lab.textContent=(b.draft?'草稿·':'')+`#${i+1} ${labCN(b.object_name)} [${Math.round(b.px[0])},${Math.round(b.px[1])},${Math.round(b.px[2])},${Math.round(b.px[3])}]`;
     d.appendChild(sel);d.appendChild(del);d.appendChild(lab);
     el.appendChild(d);
   });

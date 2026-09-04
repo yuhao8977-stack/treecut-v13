@@ -3,7 +3,7 @@
  "start_time": "2026-09-04 19:32:26",
  "baseline_commit": "4fa7612",
  "current_branch": "main",
- "phase": "P0",
+ "phase": "P1",
  "task": "init",
  "status": "running",
  "checkpoints": [
@@ -12,6 +12,12 @@
    "phase": "P0",
    "commit": "4fa7612",
    "note": "blind manifest+key+tests 9/9, runner fail-closed, scorer scaffold"
+  },
+  {
+   "at": "2026-09-04 19:37:21",
+   "phase": "P1",
+   "commit": "727420b",
+   "note": "observability audit + review html + blind ROI page/hardening done"
   }
  ],
  "tasks": {
@@ -27,15 +33,18 @@
   },
   "P1-observability": {
    "name": "A3 temporal observability audit (blind, no verdict)",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:37:20"
   },
   "P1-obs-review-html": {
    "name": "人工 Observability Review HTML（不显示 GT/POS/NEG）",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:37:21"
   },
   "P1-roi-hardening": {
    "name": "A3 ROI 页夜间硬化（快捷键/复制草稿/防零框）",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:37:20"
   },
   "P2-contract-probe": {
    "name": "G1→G5 contract probe dry-run（非 A3 校准素材）",
@@ -84,5 +93,5 @@
  },
  "errors": [],
  "storage_health": {},
- "last_checkpoint": "2026-09-04 19:32:26"
+ "last_checkpoint": "2026-09-04 19:37:21"
 }

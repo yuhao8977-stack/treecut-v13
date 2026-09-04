@@ -26,6 +26,9 @@ A3_SCREEN_FILE = OUT / "TREECUT_MMVV_A3_SCREENING.json"
 A3_ROI_HTML = Path(__file__).parent / "a3_roi.html"
 A3_HOLDOUT_FILE = OUT / "TREECUT_MMVV_A3_HOLDOUT_MANIFEST.json"
 A3_ROI_FILE = OUT / "TREECUT_MMVV_A3_HUMAN_GT_ROI.json"
+A3_BLIND_FILE = OUT / "TREECUT_MMVV_A3_MACHINE_INPUT_BLIND_V1.json"
+A3_ROI_BLIND_FILE = OUT / "TREECUT_MMVV_A3_HUMAN_GT_ROI_BLIND.json"
+A3_BLIND_FRAMES_DIR = Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime\production_smoke\B007\mmv_a3_blind_frames")
 
 
 def _a3_thumbs_dir() -> Path:
@@ -50,6 +53,21 @@ def save_a3_rois(doc):
     tmp = A3_ROI_FILE.with_suffix(".tmp")
     tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
     tmp.replace(A3_ROI_FILE)
+
+
+def load_a3_blind_rois():
+    if A3_ROI_BLIND_FILE.exists():
+        return json.loads(A3_ROI_BLIND_FILE.read_text(encoding="utf-8"))
+    return {"annotation_version": "A3_BLIND", "annotation_source": "L3_HUMAN_ROI",
+            "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "reviewer": None, "annotations": []}
+
+
+def save_a3_blind_rois(doc):
+    doc["generated_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
+    tmp = A3_ROI_BLIND_FILE.with_suffix(".tmp")
+    tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(A3_ROI_BLIND_FILE)
 
 
 def _frames_dir() -> Path:
@@ -178,6 +196,23 @@ class Handler(BaseHTTPRequestHandler):
             return
         if path == "/api/a3/rois":
             self._json(load_a3_rois())
+            return
+        if path == "/api/a3/blind":
+            if A3_BLIND_FILE.exists():
+                self._send(200, A3_BLIND_FILE.read_bytes(), "application/json; charset=utf-8")
+            else:
+                self._json({"error": "blind 未生成"})
+            return
+        if path == "/api/a3/blind-rois":
+            self._json(load_a3_blind_rois())
+            return
+        if path.startswith("/a3/bframes/"):
+            name = path.rsplit("/", 1)[-1]
+            fp = A3_BLIND_FRAMES_DIR / name
+            if fp.exists():
+                self._send(200, fp.read_bytes(), "image/jpeg")
+                return
+            self._send(404, b"blind frame missing", "text/plain")
             return
         if path.startswith("/a3/hframes/"):
             name = path.rsplit("/", 1)[-1]
@@ -349,6 +384,45 @@ class Handler(BaseHTTPRequestHandler):
                     "created_at": time.strftime("%Y-%m-%d %H:%M:%S"),
                     "annotation_version": "A3"})
             save_a3_rois(doc)
+            self._json({"ok": True, "saved": len(rois_in), "frame": frame["frame"]})
+            return
+        if self.path == "/api/a3/blind-rois/save":
+            try:
+                data = json.loads(body.decode("utf-8"))
+            except Exception:
+                self._json({"ok": False, "error": "bad json"}, 400)
+                return
+            oid = data.get("opaque_case_id")
+            t_s = data.get("frame_timestamp")
+            rois_in = data.get("rois") or []
+            man = json.loads(A3_BLIND_FILE.read_text(encoding="utf-8"))
+            case = next((c for c in man["cases"] if c["opaque_case_id"] == oid), None)
+            frame = next((f for f in (case or {}).get("frames", []) if f["t_s"] == t_s), None)
+            if case is None or frame is None:
+                self._json({"ok": False, "error": "unknown blind case/frame"}, 404)
+                return
+            doc = load_a3_blind_rois()
+            doc["annotations"] = [a for a in doc["annotations"]
+                                  if not (a["opaque_case_id"] == oid and a["frame_timestamp"] == t_s)]
+            w, h = frame["width"], frame["height"]
+            for r in rois_in:
+                bb = [float(v) for v in r.get("bbox_pixel", [])]
+                if not bbox_ok(bb, w, h):
+                    self._json({"ok": False, "error": f"bbox 越界/非法: {bb} (frame {w}x{h})"}, 400)
+                    return
+                doc["annotations"].append({
+                    "opaque_case_id": oid,
+                    "window_id": f"W{case['frozen_window_s'][0]}-{case['frozen_window_s'][1]}",
+                    "frame_timestamp": t_s, "frame": frame["frame"],
+                    "frame_hash": frame["sha256"],
+                    "object_name": r.get("object_name"),
+                    "bbox_pixel": [int(v) for v in bb],
+                    "bbox_normalized": [round(bb[0] / w, 4), round(bb[1] / h, 4),
+                                        round(bb[2] / w, 4), round(bb[3] / h, 4)],
+                    "annotation_source": "L3_HUMAN_ROI", "reviewer": doc.get("reviewer"),
+                    "created_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "annotation_version": "A3_BLIND"})
+            save_a3_blind_rois(doc)
             self._json({"ok": True, "saved": len(rois_in), "frame": frame["frame"]})
             return
         if self.path == "/api/aux52/select":

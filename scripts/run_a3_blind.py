@@ -87,15 +87,29 @@ def main():
         roi = ensure_allowed(a.roi)
         if not roi.exists():
             raise SystemExit("A3_ROI_FILE_MISSING")
-        json.loads(roi.read_text(encoding="utf-8"))   # 结构校验
     elif ROI_BLIND_JSON.exists():
         roi = ensure_allowed(ROI_BLIND_JSON)
-        json.loads(roi.read_text(encoding="utf-8"))
+
+    if roi is not None:
+        doc = json.loads(roi.read_text(encoding="utf-8"))
+        anns = doc.get("annotations") or []
+        if not anns:
+            # 存在文件但 0 框 = 人工未完成 → 同样 FAIL CLOSED
+            roi = None
+        else:
+            # 帧哈希绑定：ROI 标注必须落在 blind 清单帧上
+            sha_by_frame = {f["frame"]: f["sha256"]
+                            for c in blind["cases"] for f in c["frames"]}
+            for an in anns:
+                if an.get("frame") not in sha_by_frame:
+                    raise SystemExit(f"A3_ROI_UNKNOWN_FRAME: {an.get('frame')}")
+                if an.get("frame_hash") != sha_by_frame[an["frame"]]:
+                    raise SystemExit(f"A3_ROI_HASH_MISMATCH: {an.get('frame')}")
 
     if roi is None:
-        # FAIL CLOSED：没有人工 ROI 就绝不预测（也不允许任何自动 ROI 兜底）
+        # FAIL CLOSED：没有人工 ROI（或 0 框）就绝不预测（也不允许任何自动 ROI 兜底）
         print("A3_ROI_REQUIRED")
-        print("note: 人工 ROI 未完成 → 预测 FAIL CLOSED；禁止 Qwen/heuristic/auto ROI 兜底。")
+        print("note: 人工 ROI 未完成(缺失或 0 框) → 预测 FAIL CLOSED；禁止 Qwen/heuristic/auto ROI 兜底。")
         return 3
 
     # ---- 未来预测主体（今晚不执行；算法冻结 ca34678）----
