@@ -1,0 +1,37 @@
+{
+ "experiment": "MMVV_A3_CASE_KEY_PRIVATE",
+ "note": "仅 scoring 进程可读；机器预测 runner 禁读。与 HUMAN_GT 合并后才可评分。",
+ "generated_at": "2026-09-04 19:31:50",
+ "mapping": [
+  {
+   "opaque_case_id": "H001",
+   "original_case_id": "A3_NEG_03",
+   "media_id": 2544
+  },
+  {
+   "opaque_case_id": "H002",
+   "original_case_id": "A3_POS_01",
+   "media_id": 2521
+  },
+  {
+   "opaque_case_id": "H003",
+   "original_case_id": "A3_NEG_02",
+   "media_id": 2280
+  },
+  {
+   "opaque_case_id": "H004",
+   "original_case_id": "A3_POS_03",
+   "media_id": 2551
+  },
+  {
+   "opaque_case_id": "H005",
+   "original_case_id": "A3_NEG_01",
+   "media_id": 2209
+  },
+  {
+   "opaque_case_id": "H006",
+   "original_case_id": "A3_POS_02",
+   "media_id": 2549
+  }
+ ]
+}
