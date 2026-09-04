@@ -165,6 +165,33 @@ class TemporalEvidence:
 
 
 @dataclass
+class CameraReliabilityEvidence:
+    """A2.1b — 相机可靠性证据（由 compensate_pair 逐对真实输出形成，禁止按 media_id 硬编码）。"""
+    source_pairs: int
+    reliable_all: bool
+    max_feature_residual: float
+    min_inlier_ratio: Optional[float]
+    max_translation_px: float
+    camera_state: str          # RELIABLE / UNRELIABLE / INSUFFICIENT
+
+
+def camera_reliability_evidence(pairs: List[dict]) -> CameraReliabilityEvidence:
+    """pairs: [{reliable, inlier_ratio, feature_residual, translation_px}, ...]
+    标准（provisional，与样本无关）：全部 reliable 且 max_residual<=3.0 且 min_inlier>=0.3 → RELIABLE。"""
+    if not pairs:
+        return CameraReliabilityEvidence(0, False, 0.0, None, 0.0, "INSUFFICIENT")
+    rel_all = all(bool(p.get("reliable")) for p in pairs)
+    mx = max((p.get("feature_residual") or 0.0) for p in pairs)
+    ins = [p.get("inlier_ratio") for p in pairs if p.get("inlier_ratio") is not None]
+    mn_in = min(ins) if ins else None
+    tx = max((p.get("translation_px") or 0.0) for p in pairs)
+    ok = rel_all and mx <= _CAM_RESIDUAL_MAX and (mn_in is None or mn_in >= _CAM_INLIER_MIN)
+    return CameraReliabilityEvidence(len(pairs), rel_all, round(mx, 3),
+                                     round(mn_in, 3) if mn_in is not None else None,
+                                     round(tx, 3), "RELIABLE" if ok else "UNRELIABLE")
+
+
+@dataclass
 class GeometryDirectionEvidence:
     """A2.1 — 机器几何方向证据（由 L3_HUMAN_ROI 坐标 + ISLAND_BODY 相对几何推导；
     与 model_action/Qwen 完全分开；不得把 Human GT 动作当输入）。"""
@@ -439,11 +466,17 @@ def bind_target_timeline(boxes_by_t: Dict[float, List[dict]],
     return out
 
 
-# ---- A2.1: 机器几何方向证据（公差为文档化 provisional 参数，非为通过而调）----
+# ---- A2.1/A2.1b: 机器几何方向证据（公差为文档化 provisional 参数，非为通过而调）----
 _GEOM_EPS = 0.01          # 数值噪声容差（比值）
-_GEOM_STATIC_TOL = 0.06   # 连续帧特征变化 ≤ 此值视为静止（比值）
-_GEOM_GROWTH_MIN = 0.10   # 首末增长 ≥ 此值视为单调增大（比值）
+_GEOM_STATIC_TOL = 0.06   # 相邻帧局部变化 ≤ 此值=静止（仅作局部 pair 参考，不是唯一判据）
+_GEOM_GROWTH_MIN = 0.10   # 首末净增长 ≥ 此值视为单调增大（比值）
 _GEOM_GROWTH_FACTOR = 1.15
+# A2.1b 鲁棒判据（provisional）
+_GEOM_JITTER_MAD_RATIO = 0.12   # MAD/中位数 ≤ 此值=有界振荡
+_GEOM_NET_CHANGE_MAX = 0.10     # 首末净变化(相对中位) ≤ 此值=无持续 progression
+_GEOM_MONO_SCORE_MIN = 0.75     # 同向步数占比 ≥ 此值=方向一致
+_CAM_RESIDUAL_MAX = 3.0
+_CAM_INLIER_MIN = 0.3
 
 
 def _family_of(obj: str) -> str:
@@ -516,30 +549,58 @@ def build_geometry_direction_evidence(
         else:
             rel_seq = [max(f["w_ratio"], f["area_ratio"]) for f in rel_feats]
     abs_seq = [f["area"] for f in feats]
+    widths = [f["w"] for f in feats]
+    cxs = [f["cx"] for f in feats]
     codes = []
-    if rel_seq is not None:
-        rk = _geom_classify_frac(rel_seq)
+    # ---- A2.1b 鲁棒判定（中位归一化；区分 JITTER 与 ACTION）----
+    import statistics
+    med = statistics.median(abs_seq)
+    if med <= 0 or len(abs_seq) < 2:
+        kind = "unknown"
+        robust = {}
     else:
-        rk = "insufficient"
-    ak = _geom_classify_frac(abs_seq)
-    mode, seq = "abs", abs_seq
-    if rel_seq is not None and rk != "unknown":
-        mode, seq = "rel", rel_seq
-    elif rk == "unknown" and rel_seq is not None and ak != "unknown":
-        mode, seq = "abs", abs_seq
-        codes.append("ISLAND_REFERENCE_UNSTABLE_FALLBACK_ABSOLUTE")
-    elif rk == "unknown":
-        mode, seq = "abs", abs_seq
-    kind = _geom_classify_frac(seq) if mode != "rel" else rk
+        mad = statistics.median([abs(v - med) for v in abs_seq])
+        mad_ratio = mad / med
+        net = (abs_seq[-1] - abs_seq[0]) / med
+        deltas = [abs_seq[i] - abs_seq[i - 1] for i in range(1, len(abs_seq))]
+        signs = [1 if d > _GEOM_EPS else (-1 if d < -_GEOM_EPS else 0) for d in deltas]
+        rev = sum(1 for i in range(1, len(signs)) if signs[i] and signs[i] != signs[i - 1])
+        nz = [s for s in signs if s]
+        mono = (max(sum(1 for s in nz if s > 0), sum(1 for s in nz if s < 0)) / len(nz)) if nz else 1.0
+        pair_fracs = [abs(d) / med for d in deltas]
+        pair_max = max(pair_fracs) if pair_fracs else 0.0
+        grow_factor = (abs_seq[-1] / abs_seq[0]) if abs_seq[0] > 0 else 0.0
+        center_drift = (max(cxs) - min(cxs)) / max(statistics.median(widths), 1.0) if widths else 0.0
+        robust = {"median_area": round(med, 1), "mad_ratio": round(mad_ratio, 4),
+                  "first_last_change_ratio": round(net, 4), "reversal_count": rev,
+                  "monotonicity_score": round(mono, 3), "pair_max_frac": round(pair_max, 4),
+                  "grow_factor": round(grow_factor, 3), "center_drift_norm": round(center_drift, 4),
+                  "net_geometry_change": round(abs(net), 4),
+                  "direction_consistency": "HIGH" if mono >= _GEOM_MONO_SCORE_MIN else "LOW"}
+        up_ok = (mono >= _GEOM_MONO_SCORE_MIN and net >= _GEOM_GROWTH_MIN) or \
+                (mono >= _GEOM_MONO_SCORE_MIN and abs_seq[0] > 0 and grow_factor >= _GEOM_GROWTH_FACTOR and net > 0)
+        down_ok = (mono >= _GEOM_MONO_SCORE_MIN and net <= -_GEOM_GROWTH_MIN) or \
+                  (mono >= _GEOM_MONO_SCORE_MIN and abs_seq[-1] > 0 and abs_seq[0] / abs_seq[-1] >= _GEOM_GROWTH_FACTOR and net < 0)
+        if up_ok:
+            kind = "up"
+        elif down_ok:
+            kind = "down"
+        elif abs(net) <= _GEOM_NET_CHANGE_MAX and mad_ratio <= _GEOM_JITTER_MAD_RATIO:
+            kind = "stable" if pair_max <= _GEOM_STATIC_TOL else "jitter"
+        else:
+            kind = "unknown"
     if fam == "drawer":
         up_tok, down_tok, static_reason = "DRAWER_OPEN", "DRAWER_CLOSE", "NO_GEOMETRY_PROGRESSION"
     elif fam == "tabletop":
         up_tok, down_tok, static_reason = "EXTEND", "RETRACT", "NO_TARGET_GEOMETRY_CHANGE"
     else:
         up_tok = down_tok = static_reason = "UNKNOWN"
-    if kind == "static":
-        action, state = "STATIC", "STABLE"
-        codes += [static_reason, "GEOMETRY_STATIC"]
+    if kind == "stable":
+        action, state = "STATIC", "STATIC_STABLE"
+        codes += [static_reason, "GEOMETRY_STABLE"]
+    elif kind == "jitter":
+        action, state = "STATIC", "STATIC_WITH_ANNOTATION_JITTER"
+        codes += [static_reason, "GEOMETRY_ANNOTATION_JITTER", "BOUNDED_OSCILLATION_NO_PROGRESSION"]
     elif kind == "up":
         action, state = up_tok, "PROGRESSION_UP"
         codes.append("GEOMETRY_MONOTONIC_UP")
@@ -548,7 +609,7 @@ def build_geometry_direction_evidence(
         codes.append("GEOMETRY_MONOTONIC_DOWN")
     else:
         action, state = "UNKNOWN", "UNKNOWN"
-        codes.append("GEOMETRY_NON_MONOTONIC")
+        codes.append("GEOMETRY_UNDECIDABLE")
     if camera_unreliable:
         codes.append("CAMERA_UNRELIABLE")
     rel_moves = []
@@ -558,19 +619,19 @@ def build_geometry_direction_evidence(
                             abs(rel_feats[i]["w_ratio"] - rel_feats[i - 1]["w_ratio"]),
                             abs(rel_feats[i]["h_ratio"] - rel_feats[i - 1]["h_ratio"])))
     relative_motion = bool(rel_moves) and max(rel_moves) > _GEOM_EPS
-    confidence = "HIGH" if (nvis >= 3 and mode == "rel" and action != "UNKNOWN" and not camera_unreliable) \
+    confidence = "HIGH" if (nvis >= 3 and action != "UNKNOWN" and not camera_unreliable) \
         else ("UNSTABLE_CAMERA" if camera_unreliable else
               ("MEDIUM" if action != "UNKNOWN" else "LOW"))
     vis_prog = "VISIBLE_ALL" if nvis == len(timeline) else f"VISIBLE_{nvis}/{len(timeline)}"
     return GeometryDirectionEvidence(
         obj, instance_id, frames_used, vis_prog,
-        geometry_change_present=(kind not in ("static", "unknown")),
+        geometry_change_present=(kind in ("up", "down")),
         relative_motion_present=relative_motion,
         direction_action=action, state_progress=state, confidence_class=confidence,
         reason_codes=codes,
-        raw_features={"rel_seq": rel_seq, "abs_seq": abs_seq, "mode": mode,
-                      "rel_per_frame": rel_feats, "abs_per_frame": feats,
-                      "rel_codes": ([static_reason] if rel_seq is not None and rk == "static" else [])},
+        raw_features={"abs_seq": abs_seq, "rel_seq": rel_seq, "mode": "abs",
+                      "abs_per_frame": feats, "rel_per_frame": rel_feats,
+                      "robust": robust, "area_jitter_class": kind},
         camera_unreliable=camera_unreliable)
 
 
