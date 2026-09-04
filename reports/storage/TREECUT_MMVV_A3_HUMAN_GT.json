@@ -1,0 +1,57 @@
+{
+ "experiment": "MMVV_A3_HOLDOUT_HUMAN_GT",
+ "note": "人工(L3)答案。机器评分前禁止读取本文件与 TREECUT_MMVV_A3_SCREENING.json；机器侧唯一输入=TREECUT_MMVV_A3_HOLDOUT_MANIFEST.json。",
+ "reviewer": "ARCHITECT",
+ "algorithm_freeze_commit": "ca34678",
+ "generated_at": "2026-09-04 18:42:39",
+ "answers": [
+  {
+   "case_id": "A3_POS_01",
+   "media_id": 2521,
+   "human_gt": "YES_EXTEND: 窗口内真实发生伸缩(桌板/台面拉出)",
+   "expected_machine": "PASS(几何进展证据) 期望",
+   "screened_at": "2026-09-04 18:29:19",
+   "human_note": ""
+  },
+  {
+   "case_id": "A3_POS_02",
+   "media_id": 2549,
+   "human_gt": "YES_EXTEND: 窗口内真实发生伸缩(桌板/台面拉出)",
+   "expected_machine": "PASS(几何进展证据) 期望",
+   "screened_at": "2026-09-04 18:29:28",
+   "human_note": ""
+  },
+  {
+   "case_id": "A3_POS_03",
+   "media_id": 2551,
+   "human_gt": "YES_EXTEND: 窗口内真实发生伸缩(桌板/台面拉出)",
+   "expected_machine": "PASS(几何进展证据) 期望",
+   "screened_at": "2026-09-04 18:29:56",
+   "human_note": ""
+  },
+  {
+   "case_id": "A3_NEG_01",
+   "media_id": 2209,
+   "human_gt": "NO_EXTEND: 窗口内未发生伸缩",
+   "expected_machine": "NOT_PASS(几何无进展→FAIL/UNSURE; 输出 PASS 即 False PASS)",
+   "screened_at": "2026-09-04 18:28:58",
+   "human_note": ""
+  },
+  {
+   "case_id": "A3_NEG_02",
+   "media_id": 2280,
+   "human_gt": "NO_EXTEND: 窗口内未发生伸缩",
+   "expected_machine": "NOT_PASS(几何无进展→FAIL/UNSURE; 输出 PASS 即 False PASS)",
+   "screened_at": "2026-09-04 18:29:13",
+   "human_note": ""
+  },
+  {
+   "case_id": "A3_NEG_03",
+   "media_id": 2544,
+   "human_gt": "NO_EXTEND: 窗口内未发生伸缩",
+   "expected_machine": "NOT_PASS(几何无进展→FAIL/UNSURE; 输出 PASS 即 False PASS)",
+   "screened_at": "2026-09-04 18:29:24",
+   "human_note": ""
+  }
+ ]
+}

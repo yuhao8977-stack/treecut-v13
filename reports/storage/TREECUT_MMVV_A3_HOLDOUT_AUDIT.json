@@ -1,0 +1,137 @@
+{
+ "experiment": "MMVV_A3_HOLDOUT_AUDIT",
+ "stage": "A3_HOLDOUT_6_FROZEN",
+ "generated_at": "2026-09-04 18:42:39",
+ "algorithm_freeze_commit": "ca34678",
+ "screening_summary": {
+  "total_verdicts": 17,
+  "YES_EXTEND": 4,
+  "NO_EXTEND": 13,
+  "UNCLEAR": 0,
+  "generated_at": "2026-09-04 18:29:56"
+ },
+ "family_and_dedup_checks": {
+  "gongniu_family_1985_1989": {
+   "conclusion": "SAME_VISUAL_FAMILY_AS_KNOWN(与旧 Known 1985/1986 同案例家族) → 1987/1988/1989 全部排除",
+   "folder": "【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】",
+   "members": "1985(-1.mp4) 1986(-2(1).mp4) 1987(-2.mp4) 1988(-3.mp4) 1989(-4.mp4)",
+   "frame_level_evidence": {
+    "1985_eq_1986": "t=1.9/2.525/3.15/3.775/4.4s 解码帧 sha256 完全一致 → 逐帧重复(与 A2.2 Known CAMERA_CASE_FAMILY_SOCKET_01 结论一致, unique=1)",
+    "1987_eq_1988": "同上 5 时间点解码帧 sha256 完全一致 → 候选池内亦有逐帧重复对(-2 与 -3 为同源副本)",
+    "1985_86_vs_1987_89": "同文件夹同客户(海口吴小姐)同系列拍摄; 1986 文件名为 '-2(1)' 与 1987 '-2' 为同源变体 → 与 Known 同一视觉家族, 不可作独立 holdout"
+   },
+   "excluded_from_holdout": [
+    "1987",
+    "1988",
+    "1989"
+   ]
+  },
+  "zhang_shenzhen_2549_2550": {
+   "conclusion": "2549 与 2550 同客户(深圳张小姐【59】)同材质系列 → 仅取其一(2549), 2550 不入选",
+   "kept": 2549,
+   "dropped": 2550,
+   "frame_level": "2549/2550/2551 相互粗粒度相似度 max<0.90(48x48 灰度均值差) → 内容互不重复(不同拍摄)"
+  },
+  "cross_clip_dup": "入选池 7 段(2521,2549,2550,2551,2209,2280,2544) 任意两素材跨时间粗粒度相似度 max<0.90 → 无近重复",
+  "intra_clip_dup": "6 入选案例各自 5 个均匀采样帧 sha256 互不重复(无静止重复帧)"
+ },
+ "contamination_check": {
+  "verdict": "PASS",
+  "media_level": "6 入选 media_id {2521,2549,2551,2209,2280,2544} 均不在 A3_CANDIDATES.excluded_known_ids(含 51,52,89,109,1984,1985,1986 及 A1/A2/G2/G3/review-memory/Known6/rule-design 全集); 与旧样本零重叠",
+  "frame_sha_level": "holdout 30 帧 sha256 vs A1 manifest 旧 27 帧 sha256 → 零碰撞",
+  "family_level": "无入选案例与旧 Known 视觉家族重叠; 海口吴(公牛)家族已整体排除"
+ },
+ "final_holdout": {
+  "sampling_policy": "A3_SAMPLING_UNIFORM_TIME_V1(frozen; 均匀窗口[0.15,0.85]·duration, 5帧/案例, 与人工筛选同时间戳)",
+  "visual_family_distinctness": {
+   "pos_distinct": 3,
+   "neg_distinct": 3,
+   "note": "两组均 3/3 独立客户端/视觉家族(≥2/3 达标); POS 独立家族: 南京魏/深圳张/深圳于; NEG 独立家族: 乌鲁木齐燕(T型岩板腿)/广州李(一字型岩板腿)/深圳徐(MINI伸缩岛台)"
+  },
+  "cases": [
+   {
+    "case_id": "A3_POS_01",
+    "media_id": 2521,
+    "visual_family_id": "VF_EXTEND_60CM_WEI_NANJING",
+    "group": "POS",
+    "frozen_window_s": [
+     1.372,
+     7.776
+    ],
+    "frames": 5,
+    "source_sha256": "dc2d8a65d2bb84cdc02e4e03785f4fa7b54f31f236eef01b533b8dbf796c1359"
+   },
+   {
+    "case_id": "A3_POS_02",
+    "media_id": 2549,
+    "visual_family_id": "VF_EXTEND_TABLE_ZHANG_SHENZHEN",
+    "group": "POS",
+    "frozen_window_s": [
+     0.923,
+     5.23
+    ],
+    "frames": 5,
+    "source_sha256": "6b9cd40f5223900b6f2f4b2f72531493ba5d38a867b290683c5630c5f9213233"
+   },
+   {
+    "case_id": "A3_POS_03",
+    "media_id": 2551,
+    "visual_family_id": "VF_EXTEND_TABLE_YU_SHENZHEN",
+    "group": "POS",
+    "frozen_window_s": [
+     0.961,
+     5.447
+    ],
+    "frames": 5,
+    "source_sha256": "5aaeb69d761b76c5179cd05d282872298a402831294f4f3391128c044befb76b"
+   },
+   {
+    "case_id": "A3_NEG_01",
+    "media_id": 2209,
+    "visual_family_id": "VF_T_LEG_ROCK_YAN_WULUMUQI",
+    "group": "NEG",
+    "frozen_window_s": [
+     0.839,
+     4.757
+    ],
+    "frames": 5,
+    "source_sha256": "0e5ca32868dbc21163409e501b519c998833765e4c6d163de3508d79f71d32c3"
+   },
+   {
+    "case_id": "A3_NEG_02",
+    "media_id": 2280,
+    "visual_family_id": "VF_STRAIGHT_LEG_ROCK_LI_GUANGZHOU",
+    "group": "NEG",
+    "frozen_window_s": [
+     0.937,
+     5.309
+    ],
+    "frames": 5,
+    "source_sha256": "f843accc0b8ff205c562049e942d68c8825ccc6e057e1249b4786d7115722630"
+   },
+   {
+    "case_id": "A3_NEG_03",
+    "media_id": 2544,
+    "visual_family_id": "VF_MINI_EXTEND_XU_SHENZHEN",
+    "group": "NEG",
+    "frozen_window_s": [
+     0.85,
+     4.815
+    ],
+    "frames": 5,
+    "source_sha256": "ecb946dce1b91f17280a5f908e02459c8fad23619b10ae04086f256c26f19ef1"
+   }
+  ]
+ },
+ "gt_separation": {
+  "machine_input": "TREECUT_MMVV_A3_HOLDOUT_MANIFEST.json (machine-only; 无 human_gt/expected_verdict/筛选标签)",
+  "human_answers": "TREECUT_MMVV_A3_HUMAN_GT.json (评分时按 case_id 合并)",
+  "screening_raw": "TREECUT_MMVV_A3_SCREENING.json (人工评审日志, 机器管道禁用)",
+  "roi_annotation": "TREECUT_MMVV_A3_HUMAN_GT_ROI.json (L3 对象框, 机器特征输入; 框内无答案)"
+ },
+ "roi_annotation_page": {
+  "url": "http://127.0.0.1:8933/a3/roi",
+  "note": "人工画对象框(桌板/伸缩桌板/岛台主体 关键; 人/手/抽屉/轨道插座/插座模块 可选); 无 AI 预填; 无动作/方向/结论输入"
+ },
+ "status": "A3_HOLDOUT_6_FROZEN"
+}

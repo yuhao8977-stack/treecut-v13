@@ -23,10 +23,33 @@ A21_BIND_FILE = OUT / "TREECUT_MMVV_A21_TARGET_BINDING.json"
 A3_HTML = Path(__file__).parent / "a3_screen.html"
 A3_CANDS_FILE = OUT / "TREECUT_MMVV_A3_CANDIDATES.json"
 A3_SCREEN_FILE = OUT / "TREECUT_MMVV_A3_SCREENING.json"
+A3_ROI_HTML = Path(__file__).parent / "a3_roi.html"
+A3_HOLDOUT_FILE = OUT / "TREECUT_MMVV_A3_HOLDOUT_MANIFEST.json"
+A3_ROI_FILE = OUT / "TREECUT_MMVV_A3_HUMAN_GT_ROI.json"
 
 
 def _a3_thumbs_dir() -> Path:
     return Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime\production_smoke\B007\mmv_a3_frames") / "thumbs"
+
+
+def _a3_holdout_frames_dir() -> Path:
+    man = json.loads(A3_HOLDOUT_FILE.read_text(encoding="utf-8"))
+    return Path(man.get("frames_dir"))
+
+
+def load_a3_rois():
+    if A3_ROI_FILE.exists():
+        return json.loads(A3_ROI_FILE.read_text(encoding="utf-8"))
+    return {"annotation_version": "A3", "annotation_source": "L3_HUMAN_ROI",
+            "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "reviewer": None, "annotations": []}
+
+
+def save_a3_rois(doc):
+    doc["generated_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
+    tmp = A3_ROI_FILE.with_suffix(".tmp")
+    tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(A3_ROI_FILE)
 
 
 def _frames_dir() -> Path:
@@ -140,6 +163,29 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(200, fp.read_bytes(), "image/jpeg")
                 return
             self._send(404, b"thumb missing", "text/plain")
+            return
+        if path == "/a3/roi":
+            if A3_ROI_HTML.exists():
+                self._send(200, A3_ROI_HTML.read_bytes(), "text/html; charset=utf-8")
+            else:
+                self._send(404, b"a3_roi.html missing", "text/plain")
+            return
+        if path == "/api/a3/holdout":
+            if A3_HOLDOUT_FILE.exists():
+                self._send(200, A3_HOLDOUT_FILE.read_bytes(), "application/json; charset=utf-8")
+            else:
+                self._json({"error": "holdout 未冻结"})
+            return
+        if path == "/api/a3/rois":
+            self._json(load_a3_rois())
+            return
+        if path.startswith("/a3/hframes/"):
+            name = path.rsplit("/", 1)[-1]
+            fp = _a3_holdout_frames_dir() / name
+            if fp.exists():
+                self._send(200, fp.read_bytes(), "image/jpeg")
+                return
+            self._send(404, b"holdout frame missing", "text/plain")
             return
         if path == "/aux52":
             if AUX_HTML.exists():
@@ -265,6 +311,45 @@ class Handler(BaseHTTPRequestHandler):
             tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
             tmp.replace(A3_SCREEN_FILE)
             self._json({"ok": True, "media_id": mid, "label": label})
+            return
+        if self.path == "/api/a3/rois/save":
+            try:
+                data = json.loads(body.decode("utf-8"))
+            except Exception:
+                self._json({"ok": False, "error": "bad json"}, 400)
+                return
+            mid = data.get("media_id")
+            t_s = data.get("frame_timestamp")
+            rois_in = data.get("rois") or []
+            man = json.loads(A3_HOLDOUT_FILE.read_text(encoding="utf-8"))
+            case = next((c for c in man["cases"] if c["media_id"] == mid), None)
+            frame = next((f for f in (case or {}).get("frames", []) if f["t_s"] == t_s), None)
+            if case is None or frame is None:
+                self._json({"ok": False, "error": "unknown holdout media/frame"}, 404)
+                return
+            doc = load_a3_rois()
+            doc["annotations"] = [a for a in doc["annotations"]
+                                  if not (a["media_id"] == mid and a["frame_timestamp"] == t_s)]
+            w, h = frame["width"], frame["height"]
+            for r in rois_in:
+                bb = [float(v) for v in r.get("bbox_pixel", [])]
+                if not bbox_ok(bb, w, h):
+                    self._json({"ok": False, "error": f"bbox 越界/非法: {bb} (frame {w}x{h})"}, 400)
+                    return
+                doc["annotations"].append({
+                    "case_id": case["case_id"], "media_id": mid,
+                    "window_id": f"W{case['frozen_window_s'][0]}-{case['frozen_window_s'][1]}",
+                    "frame_timestamp": t_s, "frame": frame["frame"],
+                    "frame_hash": frame["sha256"],
+                    "object_name": r.get("object_name"),
+                    "bbox_pixel": [int(v) for v in bb],
+                    "bbox_normalized": [round(bb[0] / w, 4), round(bb[1] / h, 4),
+                                        round(bb[2] / w, 4), round(bb[3] / h, 4)],
+                    "annotation_source": "L3_HUMAN_ROI", "reviewer": doc.get("reviewer"),
+                    "created_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "annotation_version": "A3"})
+            save_a3_rois(doc)
+            self._json({"ok": True, "saved": len(rois_in), "frame": frame["frame"]})
             return
         if self.path == "/api/aux52/select":
             try:

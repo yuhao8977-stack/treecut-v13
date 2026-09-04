@@ -1,0 +1,473 @@
+{
+ "experiment": "MMVV_A3_HOLDOUT",
+ "generated_at": "2026-09-04 18:40:40",
+ "algorithm_freeze_commit": "ca34678",
+ "sampling_policy": {
+  "policy_id": "A3_SAMPLING_UNIFORM_TIME_V1",
+  "mode": "uniform_time_window",
+  "relative_window": [
+   0.15,
+   0.85
+  ],
+  "frames_per_case": 5,
+  "relative_fractions": [
+   0.15,
+   0.35,
+   0.5,
+   0.65,
+   0.85
+  ],
+  "extraction": "ffmpeg 帧精确解码（-i 在前，-ss 在后），全分辨率 JPEG q=2",
+  "note": "所有 holdout 案例同一策略；与人工筛选所看时间戳一致；机器输入仅限 manifest，禁止另选帧/挑帧。"
+ },
+ "machine_input_boundary": "本文件是 A3 机器侧唯一输入清单。禁止读取含人工答案的文件：TREECUT_MMVV_A3_HUMAN_GT.json / TREECUT_MMVV_A3_SCREENING.json；本清单不含 human_gt/expected_verdict/筛选标签。",
+ "frames_dir": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames",
+ "cases": [
+  {
+   "case_id": "A3_POS_01",
+   "media_id": 2521,
+   "asset_id": "c924db90a4644d3b86890d95a9681216",
+   "visual_family_id": "VF_EXTEND_60CM_WEI_NANJING",
+   "desc": "南京魏小姐 岛台总长2.6m 伸缩60cm（微水泥奶油色+杏黄柚木 铁牛01）",
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【岛台总长两米6+伸缩60公分】【铁牛01】\\【28】【微水泥奶油色+杏黄柚木】南京魏小姐【岛台总长两米6+伸缩60公分】【铁牛01】-1.mp4",
+   "source_sha256": "dc2d8a65d2bb84cdc02e4e03785f4fa7b54f31f236eef01b533b8dbf796c1359",
+   "source_duration_s": 9.148,
+   "frozen_window_s": [
+    1.372,
+    7.776
+   ],
+   "g1_eligible": true,
+   "g1_evidence": {
+    "eligible": true,
+    "reasons": [
+     "L3_HUMAN_APPROVED"
+    ],
+    "source_role": "PRODUCTION_CLEAN_SEMI",
+    "review_status": "APPROVED",
+    "human_override": true
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m2521_0.jpg",
+     "t_s": 1.372,
+     "sha256": "80e2d22951a724d237605fa01d06cac8904d6cc9a7208b9d5134b41762d88e09",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 563009,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2521_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m2521_1.jpg",
+     "t_s": 2.973,
+     "sha256": "8c0d7e4726924824110ec0a8f55822636765defce2fabe31d2dbfdb766964af2",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 614885,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2521_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m2521_2.jpg",
+     "t_s": 4.574,
+     "sha256": "1e4a5c404d652202b184fc55622b0a28a5ff092f43538d136f694dc501015b5f",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 633613,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2521_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m2521_3.jpg",
+     "t_s": 6.175,
+     "sha256": "c8c47d1b5a3b0d1a141f1f9bda9cc94f36e480086c57cde90bfcdb3283765fe3",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 627943,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2521_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m2521_4.jpg",
+     "t_s": 7.776,
+     "sha256": "e9e8d55f40e1228babb1f976b6650592906fa92cb1f78c5ca9ed142e21a6b85b",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 602454,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2521_4.jpg"
+    }
+   ]
+  },
+  {
+   "case_id": "A3_POS_02",
+   "media_id": 2549,
+   "asset_id": "71885540821a4324a53c3f38efbb2060",
+   "visual_family_id": "VF_EXTEND_TABLE_ZHANG_SHENZHEN",
+   "desc": "深圳张小姐 伸缩餐桌的岛台（微水泥奶油白+兰亭香樟木纹岩板）",
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\【59】【微水泥奶油白+兰亭香樟木纹岩板】深圳张小姐 【伸缩餐桌的岛台】\\【59】【微水泥奶油白+兰亭香樟木纹岩板】深圳张小姐 【伸缩餐桌的岛台】-1.mp4",
+   "source_sha256": "6b9cd40f5223900b6f2f4b2f72531493ba5d38a867b290683c5630c5f9213233",
+   "source_duration_s": 6.153,
+   "frozen_window_s": [
+    0.923,
+    5.23
+   ],
+   "g1_eligible": true,
+   "g1_evidence": {
+    "eligible": true,
+    "reasons": [],
+    "source_role": "PRODUCTION_CLEAN_SEMI",
+    "review_status": "PENDING",
+    "human_override": false
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m2549_0.jpg",
+     "t_s": 0.923,
+     "sha256": "45fca04b7c56b8a6a61e5515b8674bc7f33adb2f7a3d9bef463f044eccd027dd",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 616032,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2549_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m2549_1.jpg",
+     "t_s": 2.0,
+     "sha256": "46817c4460f237bf22501d616e52113c9a66fe6f7b415041cb870fe2d047bbe0",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 594129,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2549_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m2549_2.jpg",
+     "t_s": 3.077,
+     "sha256": "cc88f676a9e14d7d0b1c00d8e10d030cdf56357edea12c1f9dfe943dd9f645d7",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 654561,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2549_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m2549_3.jpg",
+     "t_s": 4.153,
+     "sha256": "e597d15e2be49d25467d71e8e815e6284949e27e59350b4593d61166fdf25476",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 678266,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2549_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m2549_4.jpg",
+     "t_s": 5.23,
+     "sha256": "74e678421785ef97071de32c11f37b528140b7cd94d2b5be680c7ab14e22f72b",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 714021,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2549_4.jpg"
+    }
+   ]
+  },
+  {
+   "case_id": "A3_POS_03",
+   "media_id": 2551,
+   "asset_id": "185b5a0abca04232802ef3f5b49af8f9",
+   "visual_family_id": "VF_EXTEND_TABLE_YU_SHENZHEN",
+   "desc": "深圳于小姐 伸缩餐桌岛台（微水泥奶油白+兰亭香樟木纹岩板）",
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\【60】【微水泥奶油白+兰亭香樟木纹岩板】深圳于小姐 【伸缩餐桌岛台】\\【60】【微水泥奶油白+兰亭香樟木纹岩板】深圳于小姐 【伸缩餐桌岛台】-1.mp4",
+   "source_sha256": "5aaeb69d761b76c5179cd05d282872298a402831294f4f3391128c044befb76b",
+   "source_duration_s": 6.408,
+   "frozen_window_s": [
+    0.961,
+    5.447
+   ],
+   "g1_eligible": true,
+   "g1_evidence": {
+    "eligible": true,
+    "reasons": [],
+    "source_role": "PRODUCTION_CLEAN_SEMI",
+    "review_status": "PENDING",
+    "human_override": false
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m2551_0.jpg",
+     "t_s": 0.961,
+     "sha256": "8ee16b7e9f44cfde99d88cdd17e650198eda5d41a0bcb7b1b1a0a63ba4bc6d97",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 634412,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2551_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m2551_1.jpg",
+     "t_s": 2.083,
+     "sha256": "4c2891421ec05abfa4c9ebe23adbb495b8a9e4f9c552da70b2eed75f23b5eb1b",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 615275,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2551_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m2551_2.jpg",
+     "t_s": 3.204,
+     "sha256": "758783f9ec20f479ca61ee36afe8a659587824d27a8b130985c8212c86aa95f8",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 640951,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2551_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m2551_3.jpg",
+     "t_s": 4.325,
+     "sha256": "5fe1cd7823244bbf8ae4f0ec37894c9b4493c5cec98f1b07af723b69585bbd8d",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 642557,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2551_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m2551_4.jpg",
+     "t_s": 5.447,
+     "sha256": "d961208109afb3fe80c754c779cfb41b9ee30f3d3c79385e4e0ef51126bece79",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 647443,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2551_4.jpg"
+    }
+   ]
+  },
+  {
+   "case_id": "A3_NEG_01",
+   "media_id": 2209,
+   "asset_id": "96a360ade5094381a48c87dbcd95cddf",
+   "visual_family_id": "VF_T_LEG_ROCK_YAN_WULUMUQI",
+   "desc": "乌鲁木齐燕先生 岛台餐桌角T字型可伸缩（宝格丽紫+纯黑+北美黑胡桃 T型岩板腿）",
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【13】T型岩板腿\\【05】宝格丽紫+纯黑+北美黑胡桃】乌鲁木齐燕先生【岛台餐桌角t字型可伸缩】\\【05】宝格丽紫+纯黑+北美黑胡桃】乌鲁木齐燕先生【岛台餐桌角t字型可伸缩】-1.mp4",
+   "source_sha256": "0e5ca32868dbc21163409e501b519c998833765e4c6d163de3508d79f71d32c3",
+   "source_duration_s": 5.596,
+   "frozen_window_s": [
+    0.839,
+    4.757
+   ],
+   "g1_eligible": true,
+   "g1_evidence": {
+    "eligible": true,
+    "reasons": [],
+    "source_role": "PRODUCTION_CLEAN_SEMI",
+    "review_status": "PENDING",
+    "human_override": false
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m2209_0.jpg",
+     "t_s": 0.839,
+     "sha256": "64124c2fa0ce35e16213e633bf9ee0834b1cd5780d8b67a7e1dbf002d414b667",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 498016,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2209_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m2209_1.jpg",
+     "t_s": 1.818,
+     "sha256": "aa3aac8bf91756d46d5a7a27c40e58bbd12eab74a37b9730b29e13997fdf7861",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 488539,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2209_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m2209_2.jpg",
+     "t_s": 2.798,
+     "sha256": "dfbd7c6fc640f38636e4b3b6dd33d7377bae8ba7b8c15826d0981d8d510ca3ae",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 514480,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2209_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m2209_3.jpg",
+     "t_s": 3.777,
+     "sha256": "4ed478d0d08bd46c57c1dd89100d5184d964fdd5f0cd2baa19006a081d070606",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 508359,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2209_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m2209_4.jpg",
+     "t_s": 4.757,
+     "sha256": "54c48a94805ab49f2f458159013dba8ffe3fdc307d3435cd0745b7d3e8f2ffe5",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 495546,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2209_4.jpg"
+    }
+   ]
+  },
+  {
+   "case_id": "A3_NEG_02",
+   "media_id": 2280,
+   "asset_id": "f39356e52dfa486b8bdf5a6d789eb02c",
+   "visual_family_id": "VF_STRAIGHT_LEG_ROCK_LI_GUANGZHOU",
+   "desc": "广州李先生 岛台伸缩脚6.5cm厚岩板（咖色+深黑+黑白 一字型岩板腿）",
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【15】一字型岩板腿\\【85】【咖色+深黑色+黑白】广州李先生【岛台伸缩脚6.5公分厚度的岩板】\\【85】【咖色+深黑色+黑白】广州李先生【岛台伸缩脚6.5公分厚度的岩板】-1.mp4",
+   "source_sha256": "f843accc0b8ff205c562049e942d68c8825ccc6e057e1249b4786d7115722630",
+   "source_duration_s": 6.246,
+   "frozen_window_s": [
+    0.937,
+    5.309
+   ],
+   "g1_eligible": true,
+   "g1_evidence": {
+    "eligible": true,
+    "reasons": [],
+    "source_role": "PRODUCTION_CLEAN_SEMI",
+    "review_status": "PENDING",
+    "human_override": false
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m2280_0.jpg",
+     "t_s": 0.937,
+     "sha256": "b10ec4d1744bd41db84cbc7c7dab9b224bd85516a64bad23e2729cbbb4cd9687",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 561524,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2280_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m2280_1.jpg",
+     "t_s": 2.03,
+     "sha256": "74c1884716eda7458ed7c6192fd05566aed14144b758ef13ff71109d53c7807b",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 571197,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2280_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m2280_2.jpg",
+     "t_s": 3.123,
+     "sha256": "7b0916df8272cd7aa6773f23a98047d4c07f636c32cf7d1f3c08feb485206961",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 550034,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2280_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m2280_3.jpg",
+     "t_s": 4.216,
+     "sha256": "5e593426e4d72150eb8a6f83fcc73a2723c8930d1f3005d2f5f5b178a5c4fd57",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 551234,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2280_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m2280_4.jpg",
+     "t_s": 5.309,
+     "sha256": "3d1992d01678d8ba161bca8c2fb26201ca741c469021231e118eb3199a8b928a",
+     "width": 1728,
+     "height": 3072,
+     "bytes": 530655,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2280_4.jpg"
+    }
+   ]
+  },
+  {
+   "case_id": "A3_NEG_03",
+   "media_id": 2544,
+   "asset_id": "06b7a15b50954cf3b934f4fdd10b8a48",
+   "visual_family_id": "VF_MINI_EXTEND_XU_SHENZHEN",
+   "desc": "深圳徐先生 MINI伸缩岛台 小户型（雪山石纹）",
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【21】伸缩功能\\【57】【雪山石纹】深圳徐先生 【小户型的救星MINI伸缩岛台】【铁牛】\\【57】【雪山石纹】深圳徐先生 【小户型的救星MINI伸缩岛台】【铁牛】-1.mp4",
+   "source_sha256": "ecb946dce1b91f17280a5f908e02459c8fad23619b10ae04086f256c26f19ef1",
+   "source_duration_s": 5.665,
+   "frozen_window_s": [
+    0.85,
+    4.815
+   ],
+   "g1_eligible": true,
+   "g1_evidence": {
+    "eligible": true,
+    "reasons": [],
+    "source_role": "PRODUCTION_CLEAN_SEMI",
+    "review_status": "PENDING",
+    "human_override": false
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m2544_0.jpg",
+     "t_s": 0.85,
+     "sha256": "adf0ac3138bb1d59eebd8fdced483ff37a4a20280abf148073eea45285848e89",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 385084,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2544_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m2544_1.jpg",
+     "t_s": 1.841,
+     "sha256": "e546078ee95774b9d83d4898abc6323fae971325596d0e5b40073b68f5e0d1b2",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 420100,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2544_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m2544_2.jpg",
+     "t_s": 2.833,
+     "sha256": "65214c6f558cecf1645f6d6279f0b6f42cd9c6b09941f51f9703e37e15c2b949",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 436649,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2544_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m2544_3.jpg",
+     "t_s": 3.824,
+     "sha256": "cea29f3a740b3d744c80e2cfbb06e0ab95071a38b90c1fd4c5f6479f4be9609b",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 459599,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2544_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m2544_4.jpg",
+     "t_s": 4.815,
+     "sha256": "913710605b86143ce749823c01f2bc020f532df73496b0168409b62635e7436e",
+     "width": 2160,
+     "height": 3840,
+     "bytes": 474721,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a3_holdout_frames\\m2544_4.jpg"
+    }
+   ]
+  }
+ ]
+}
