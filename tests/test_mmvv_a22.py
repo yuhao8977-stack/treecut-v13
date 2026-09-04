@@ -163,6 +163,26 @@ def test_core5_results_frozen():
     assert a22["core5_frozen"]["ok"] is True
 
 
+def test_homography_roundtrip_3x3():
+    # A3 前置：homography 3x3 直接 inv(H)，不再 vstack；正逆往返应还原
+    rng = np.random.default_rng(7)
+    img = np.full((200, 260), 90, dtype=np.uint8)
+    for _ in range(150):
+        x = int(rng.integers(0, 250)); y = int(rng.integers(0, 190))
+        cv2.rectangle(img, (x, y), (x + 6, y + 6), int(rng.integers(60, 160)), -1)
+    a = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+    H = np.float32([[1, 0.002, 3], [0, 1, -2], [1e-5, 0, 1]])  # 轻微透视+平移
+    b = cv2.warpPerspective(a, H, (260, 200))
+    # 逆补偿：b 对齐回 a，差异应显著小于正向应用
+    wb = warp_current_to_previous(b, "homography", H)
+    wf = cv2.warpPerspective(b, H, (260, 200))
+    ga = cv2.cvtColor(a, cv2.COLOR_BGR2GRAY).astype(np.float32)
+    dinv = float(np.abs(cv2.cvtColor(wb, cv2.COLOR_BGR2GRAY).astype(np.float32) - ga).mean())
+    dfwd = float(np.abs(cv2.cvtColor(wf, cv2.COLOR_BGR2GRAY).astype(np.float32) - ga).mean())
+    assert dinv < dfwd, (dinv, dfwd)
+    assert np.asarray(H).shape == (3, 3)
+
+
 def test_no_gt_in_camera_selection():
     for fn in (estimate_camera_background,):
         for p in inspect.signature(fn).parameters:

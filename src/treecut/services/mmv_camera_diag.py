@@ -81,13 +81,13 @@ def fwd_back_filter(g0, g1, pts):
 def warp_current_to_previous(curr_bgr, model, matrix):
     """A2.2 R1 — 唯一 canonical 逆补偿：把当前帧对齐回前一帧（不允许各路径自己写方向）。
     model: translation/partial_affine/full_affine(2x3) → invertAffineTransform；
-           homography(3x3) → inv(H)。"""
+           homography(3x3) → inv(H)（M 已是 3x3 时不得再 vstack）。"""
     M = np.asarray(matrix, dtype=np.float32)
     h, w = curr_bgr.shape[:2]
-    if model == "homography":
-        Mi = np.linalg.inv(np.vstack([M, [0, 0, 1]]))[:3]
+    if M.shape == (3, 3):  # homography：直接 inv(M)，不得再 vstack
+        Mi = np.linalg.inv(M)
         return cv2.warpPerspective(curr_bgr, Mi, (w, h))
-    Mi = cv2.invertAffineTransform(M) if M.shape == (2, 3) else M
+    Mi = cv2.invertAffineTransform(M)  # 2x3 (translation/affine)
     return cv2.warpAffine(curr_bgr, Mi, (w, h))
 
 
