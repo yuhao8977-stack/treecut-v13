@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-04 16:00:11",
- "frames_total": 30,
- "frames_ok": 30,
- "annotations": 182,
+ "generated_at": "2026-09-04 16:38:35",
+ "frames_total": 32,
+ "frames_ok": 32,
+ "annotations": 200,
  "issues": [],
  "missing_required": [],
  "cases": [
@@ -142,6 +142,36 @@
      "annotated": true
     },
     {
+     "frame": "m52_7_75_aux.jpg",
+     "t_s": 7.75,
+     "sha256": "1e92ce82c0f9525f035f463135777aad4c0fe1d3b1e20611618ea14f7754a212",
+     "boxes": 8,
+     "objects": [
+      "DRAWER",
+      "EXTENSION_TABLETOP",
+      "HAND",
+      "ISLAND_BODY",
+      "PERSON",
+      "SOCKET_MODULE"
+     ],
+     "annotated": true
+    },
+    {
+     "frame": "m52_8_0_aux.jpg",
+     "t_s": 8.0,
+     "sha256": "5fd6c90b1917d86193b2b92a05c8661c145f3ce1379e30427a4b90708af18845",
+     "boxes": 8,
+     "objects": [
+      "DRAWER",
+      "EXTENSION_TABLETOP",
+      "HAND",
+      "ISLAND_BODY",
+      "PERSON",
+      "SOCKET_MODULE"
+     ],
+     "annotated": true
+    },
+    {
      "frame": "m52_4.jpg",
      "t_s": 10.0,
      "sha256": "31667359b36154bb032f3ac464a6ce607788c5b0935786a0f68601e0c256fbc9",
@@ -247,8 +277,9 @@
      "frame": "m109_0.jpg",
      "t_s": 0.0,
      "sha256": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
-     "boxes": 6,
+     "boxes": 8,
      "objects": [
+      "DRAWER",
       "EXTENSION_TABLETOP",
       "HAND",
       "ISLAND_BODY",

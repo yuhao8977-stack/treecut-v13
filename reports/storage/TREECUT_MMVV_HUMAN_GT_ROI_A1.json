@@ -1,7 +1,7 @@
 {
  "annotation_version": "A1",
  "annotation_source": "L3_HUMAN_ROI",
- "generated_at": "2026-09-04 15:58:05",
+ "generated_at": "2026-09-04 16:37:53",
  "reviewer": null,
  "annotations": [
   {
@@ -2238,144 +2238,6 @@
   {
    "media_id": 109,
    "window_id": "W0.0-5.8",
-   "frame_timestamp": 0,
-   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
-   "object_name": "EXTENSION_TABLETOP",
-   "bbox_pixel": [
-    3,
-    900,
-    806,
-    1434
-   ],
-   "bbox_normalized": [
-    0.0049,
-    0.6255,
-    0.9951,
-    0.9958
-   ],
-   "annotation_source": "L3_HUMAN_ROI",
-   "reviewer": null,
-   "created_at": "2026-09-04 15:28:28",
-   "annotation_version": "A1"
-  },
-  {
-   "media_id": 109,
-   "window_id": "W0.0-5.8",
-   "frame_timestamp": 0,
-   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
-   "object_name": "TRACK_SOCKET",
-   "bbox_pixel": [
-    276,
-    819,
-    562,
-    867
-   ],
-   "bbox_normalized": [
-    0.3411,
-    0.5693,
-    0.6946,
-    0.6026
-   ],
-   "annotation_source": "L3_HUMAN_ROI",
-   "reviewer": null,
-   "created_at": "2026-09-04 15:28:28",
-   "annotation_version": "A1"
-  },
-  {
-   "media_id": 109,
-   "window_id": "W0.0-5.8",
-   "frame_timestamp": 0,
-   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
-   "object_name": "ISLAND_BODY",
-   "bbox_pixel": [
-    152,
-    688,
-    676,
-    905
-   ],
-   "bbox_normalized": [
-    0.1884,
-    0.4778,
-    0.835,
-    0.629
-   ],
-   "annotation_source": "L3_HUMAN_ROI",
-   "reviewer": null,
-   "created_at": "2026-09-04 15:28:28",
-   "annotation_version": "A1"
-  },
-  {
-   "media_id": 109,
-   "window_id": "W0.0-5.8",
-   "frame_timestamp": 0,
-   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
-   "object_name": "HAND",
-   "bbox_pixel": [
-    178,
-    577,
-    323,
-    732
-   ],
-   "bbox_normalized": [
-    0.2204,
-    0.4008,
-    0.399,
-    0.509
-   ],
-   "annotation_source": "L3_HUMAN_ROI",
-   "reviewer": null,
-   "created_at": "2026-09-04 15:28:28",
-   "annotation_version": "A1"
-  },
-  {
-   "media_id": 109,
-   "window_id": "W0.0-5.8",
-   "frame_timestamp": 0,
-   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
-   "object_name": "HAND",
-   "bbox_pixel": [
-    485,
-    529,
-    676,
-    726
-   ],
-   "bbox_normalized": [
-    0.5998,
-    0.3675,
-    0.835,
-    0.5049
-   ],
-   "annotation_source": "L3_HUMAN_ROI",
-   "reviewer": null,
-   "created_at": "2026-09-04 15:28:28",
-   "annotation_version": "A1"
-  },
-  {
-   "media_id": 109,
-   "window_id": "W0.0-5.8",
-   "frame_timestamp": 0,
-   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
-   "object_name": "PERSON",
-   "bbox_pixel": [
-    152,
-    402,
-    690,
-    731
-   ],
-   "bbox_normalized": [
-    0.1884,
-    0.2795,
-    0.8522,
-    0.5083
-   ],
-   "annotation_source": "L3_HUMAN_ROI",
-   "reviewer": null,
-   "created_at": "2026-09-04 15:28:28",
-   "annotation_version": "A1"
-  },
-  {
-   "media_id": 109,
-   "window_id": "W0.0-5.8",
    "frame_timestamp": 1.45,
    "frame_hash": "eac37517f4e1980b6404b00d8cd0f6700f515fd848ea25d772a24f9da2314cef",
    "object_name": "DRAWER",
@@ -4188,6 +4050,558 @@
    "annotation_source": "L3_HUMAN_ROI",
    "reviewer": null,
    "created_at": "2026-09-04 15:58:05",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 7.75,
+   "frame_hash": "1e92ce82c0f9525f035f463135777aad4c0fe1d3b1e20611618ea14f7754a212",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    4,
+    859,
+    810,
+    1440
+   ],
+   "bbox_normalized": [
+    0.0052,
+    0.5968,
+    1.0,
+    1.0
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:36:22",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 7.75,
+   "frame_hash": "1e92ce82c0f9525f035f463135777aad4c0fe1d3b1e20611618ea14f7754a212",
+   "object_name": "SOCKET_MODULE",
+   "bbox_pixel": [
+    289,
+    784,
+    567,
+    835
+   ],
+   "bbox_normalized": [
+    0.3573,
+    0.5447,
+    0.7008,
+    0.58
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:36:22",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 7.75,
+   "frame_hash": "1e92ce82c0f9525f035f463135777aad4c0fe1d3b1e20611618ea14f7754a212",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    491,
+    543,
+    645,
+    704
+   ],
+   "bbox_normalized": [
+    0.6073,
+    0.3773,
+    0.7969,
+    0.4896
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:36:22",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 7.75,
+   "frame_hash": "1e92ce82c0f9525f035f463135777aad4c0fe1d3b1e20611618ea14f7754a212",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    204,
+    545,
+    366,
+    702
+   ],
+   "bbox_normalized": [
+    0.2527,
+    0.3786,
+    0.4521,
+    0.4882
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:36:22",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 7.75,
+   "frame_hash": "1e92ce82c0f9525f035f463135777aad4c0fe1d3b1e20611618ea14f7754a212",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    162,
+    411,
+    667,
+    702
+   ],
+   "bbox_normalized": [
+    0.201,
+    0.2857,
+    0.8239,
+    0.4882
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:36:22",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 7.75,
+   "frame_hash": "1e92ce82c0f9525f035f463135777aad4c0fe1d3b1e20611618ea14f7754a212",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    144,
+    682,
+    252,
+    844
+   ],
+   "bbox_normalized": [
+    0.1788,
+    0.4739,
+    0.3118,
+    0.5863
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:36:22",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 7.75,
+   "frame_hash": "1e92ce82c0f9525f035f463135777aad4c0fe1d3b1e20611618ea14f7754a212",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    613,
+    698,
+    703,
+    844
+   ],
+   "bbox_normalized": [
+    0.7575,
+    0.485,
+    0.8683,
+    0.5863
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:36:22",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 7.75,
+   "frame_hash": "1e92ce82c0f9525f035f463135777aad4c0fe1d3b1e20611618ea14f7754a212",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    196,
+    678,
+    664,
+    862
+   ],
+   "bbox_normalized": [
+    0.2428,
+    0.4712,
+    0.8202,
+    0.5987
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:36:22",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 8,
+   "frame_hash": "5fd6c90b1917d86193b2b92a05c8661c145f3ce1379e30427a4b90708af18845",
+   "object_name": "SOCKET_MODULE",
+   "bbox_pixel": [
+    291,
+    787,
+    571,
+    842
+   ],
+   "bbox_normalized": [
+    0.3598,
+    0.5467,
+    0.7057,
+    0.5849
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:27",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 8,
+   "frame_hash": "5fd6c90b1917d86193b2b92a05c8661c145f3ce1379e30427a4b90708af18845",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    132,
+    696,
+    258,
+    845
+   ],
+   "bbox_normalized": [
+    0.164,
+    0.4838,
+    0.3192,
+    0.5871
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:27",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 8,
+   "frame_hash": "5fd6c90b1917d86193b2b92a05c8661c145f3ce1379e30427a4b90708af18845",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    617,
+    690,
+    746,
+    852
+   ],
+   "bbox_normalized": [
+    0.7624,
+    0.4796,
+    0.9212,
+    0.592
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:27",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 8,
+   "frame_hash": "5fd6c90b1917d86193b2b92a05c8661c145f3ce1379e30427a4b90708af18845",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    179,
+    539,
+    357,
+    707
+   ],
+   "bbox_normalized": [
+    0.2219,
+    0.3749,
+    0.441,
+    0.4914
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:27",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 8,
+   "frame_hash": "5fd6c90b1917d86193b2b92a05c8661c145f3ce1379e30427a4b90708af18845",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    483,
+    541,
+    685,
+    710
+   ],
+   "bbox_normalized": [
+    0.5974,
+    0.3763,
+    0.8461,
+    0.4935
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:27",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 8,
+   "frame_hash": "5fd6c90b1917d86193b2b92a05c8661c145f3ce1379e30427a4b90708af18845",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    161,
+    428,
+    691,
+    716
+   ],
+   "bbox_normalized": [
+    0.1997,
+    0.2974,
+    0.8535,
+    0.4977
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:27",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 8,
+   "frame_hash": "5fd6c90b1917d86193b2b92a05c8661c145f3ce1379e30427a4b90708af18845",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    169,
+    666,
+    677,
+    887
+   ],
+   "bbox_normalized": [
+    0.2096,
+    0.4627,
+    0.8363,
+    0.6166
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:27",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 52,
+   "window_id": "W0.0-10.0",
+   "frame_timestamp": 8,
+   "frame_hash": "5fd6c90b1917d86193b2b92a05c8661c145f3ce1379e30427a4b90708af18845",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    3,
+    871,
+    806,
+    1432
+   ],
+   "bbox_normalized": [
+    0.004,
+    0.6052,
+    0.9951,
+    0.9949
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:27",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 109,
+   "window_id": "W0.0-5.8",
+   "frame_timestamp": 0,
+   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    3,
+    900,
+    806,
+    1434
+   ],
+   "bbox_normalized": [
+    0.0037,
+    0.625,
+    0.9951,
+    0.9958
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:53",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 109,
+   "window_id": "W0.0-5.8",
+   "frame_timestamp": 0,
+   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    276,
+    819,
+    562,
+    867
+   ],
+   "bbox_normalized": [
+    0.3407,
+    0.5687,
+    0.6938,
+    0.6021
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:53",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 109,
+   "window_id": "W0.0-5.8",
+   "frame_timestamp": 0,
+   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    152,
+    688,
+    676,
+    905
+   ],
+   "bbox_normalized": [
+    0.1877,
+    0.4778,
+    0.8346,
+    0.6285
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:53",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 109,
+   "window_id": "W0.0-5.8",
+   "frame_timestamp": 0,
+   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    178,
+    577,
+    323,
+    732
+   ],
+   "bbox_normalized": [
+    0.2198,
+    0.4007,
+    0.3988,
+    0.5083
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:53",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 109,
+   "window_id": "W0.0-5.8",
+   "frame_timestamp": 0,
+   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    485,
+    529,
+    676,
+    726
+   ],
+   "bbox_normalized": [
+    0.5988,
+    0.3674,
+    0.8346,
+    0.5042
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:53",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 109,
+   "window_id": "W0.0-5.8",
+   "frame_timestamp": 0,
+   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    152,
+    402,
+    690,
+    731
+   ],
+   "bbox_normalized": [
+    0.1877,
+    0.2792,
+    0.8519,
+    0.5076
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:53",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 109,
+   "window_id": "W0.0-5.8",
+   "frame_timestamp": 0,
+   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    132,
+    708,
+    231,
+    876
+   ],
+   "bbox_normalized": [
+    0.164,
+    0.4918,
+    0.2859,
+    0.609
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:53",
+   "annotation_version": "A1"
+  },
+  {
+   "media_id": 109,
+   "window_id": "W0.0-5.8",
+   "frame_timestamp": 0,
+   "frame_hash": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    606,
+    712,
+    702,
+    876
+   ],
+   "bbox_normalized": [
+    0.7488,
+    0.4946,
+    0.867,
+    0.609
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "reviewer": null,
+   "created_at": "2026-09-04 16:37:53",
    "annotation_version": "A1"
   }
  ]

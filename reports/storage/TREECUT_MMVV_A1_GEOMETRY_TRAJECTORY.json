@@ -1,7 +1,7 @@
 {
  "annotation_version": "A1",
  "source": "L3_HUMAN_ROI",
- "generated_at": "2026-09-04 16:00:11",
+ "generated_at": "2026-09-04 16:38:35",
  "note": "evidence-only；不覆盖 L2_QWEN/HEURISTIC；几何变化是证据非自动真值",
  "cases": [
   {
@@ -485,8 +485,38 @@
       "right_edge": 807,
       "top_edge": 866,
       "bottom_edge": 1430,
+      "rel_island_dx": -25.5,
+      "rel_island_dy": 378.0
+     },
+     {
+      "frame": "m52_7_75_aux.jpg",
+      "t_s": 7.75,
+      "bbox_center_x": 407.0,
+      "bbox_center_y": 1149.5,
+      "bbox_width": 806,
+      "bbox_height": 581,
+      "bbox_area": 468286,
+      "left_edge": 4,
+      "right_edge": 810,
+      "top_edge": 859,
+      "bottom_edge": 1440,
+      "rel_island_dx": -16.0,
+      "rel_island_dy": 373.0
+     },
+     {
+      "frame": "m52_8_0_aux.jpg",
+      "t_s": 8.0,
+      "bbox_center_x": 404.5,
+      "bbox_center_y": 1151.5,
+      "bbox_width": 803,
+      "bbox_height": 561,
+      "bbox_area": 450483,
+      "left_edge": 3,
+      "right_edge": 806,
+      "top_edge": 871,
+      "bottom_edge": 1432,
       "rel_island_dx": -26.0,
-      "rel_island_dy": 361.5
+      "rel_island_dy": 365.0
      },
      {
       "frame": "m52_4.jpg",
@@ -562,8 +592,8 @@
       "right_edge": 545,
       "top_edge": 750,
       "bottom_edge": 802,
-      "rel_island_dx": -9.0,
-      "rel_island_dy": -10.5
+      "rel_island_dx": -8.5,
+      "rel_island_dy": 6.0
      },
      {
       "frame": "m52_3.jpg",
@@ -577,8 +607,38 @@
       "right_edge": 562,
       "top_edge": 781,
       "bottom_edge": 831,
-      "rel_island_dx": 5.5,
-      "rel_island_dy": 31.5
+      "rel_island_dx": 3.5,
+      "rel_island_dy": 29.5
+     },
+     {
+      "frame": "m52_7_75_aux.jpg",
+      "t_s": 7.75,
+      "bbox_center_x": 428.0,
+      "bbox_center_y": 809.5,
+      "bbox_width": 278,
+      "bbox_height": 51,
+      "bbox_area": 14178,
+      "left_edge": 289,
+      "right_edge": 567,
+      "top_edge": 784,
+      "bottom_edge": 835,
+      "rel_island_dx": -2.5,
+      "rel_island_dy": 23.0
+     },
+     {
+      "frame": "m52_8_0_aux.jpg",
+      "t_s": 8.0,
+      "bbox_center_x": 431.0,
+      "bbox_center_y": 814.5,
+      "bbox_width": 280,
+      "bbox_height": 55,
+      "bbox_area": 15400,
+      "left_edge": 291,
+      "right_edge": 571,
+      "top_edge": 787,
+      "bottom_edge": 842,
+      "rel_island_dx": 10.0,
+      "rel_island_dy": 40.0
      }
     ],
     "HAND": [
@@ -639,8 +699,8 @@
       "right_edge": 538,
       "top_edge": 594,
       "bottom_edge": 674,
-      "rel_island_dx": -8.0,
-      "rel_island_dy": -152.5
+      "rel_island_dx": -7.5,
+      "rel_island_dy": -136.0
      },
      {
       "frame": "m52_3.jpg",
@@ -654,8 +714,8 @@
       "right_edge": 353,
       "top_edge": 551,
       "bottom_edge": 697,
-      "rel_island_dx": -129.5,
-      "rel_island_dy": -150.5
+      "rel_island_dx": -131.5,
+      "rel_island_dy": -152.5
      },
      {
       "frame": "m52_3.jpg",
@@ -669,8 +729,68 @@
       "right_edge": 634,
       "top_edge": 543,
       "bottom_edge": 707,
-      "rel_island_dx": 140.5,
-      "rel_island_dy": -149.5
+      "rel_island_dx": 131.0,
+      "rel_island_dy": -161.5
+     },
+     {
+      "frame": "m52_7_75_aux.jpg",
+      "t_s": 7.75,
+      "bbox_center_x": 568.0,
+      "bbox_center_y": 623.5,
+      "bbox_width": 154,
+      "bbox_height": 161,
+      "bbox_area": 24794,
+      "left_edge": 491,
+      "right_edge": 645,
+      "top_edge": 543,
+      "bottom_edge": 704,
+      "rel_island_dx": 147.0,
+      "rel_island_dy": -151.0
+     },
+     {
+      "frame": "m52_7_75_aux.jpg",
+      "t_s": 7.75,
+      "bbox_center_x": 285.0,
+      "bbox_center_y": 623.5,
+      "bbox_width": 162,
+      "bbox_height": 157,
+      "bbox_area": 25434,
+      "left_edge": 204,
+      "right_edge": 366,
+      "top_edge": 545,
+      "bottom_edge": 702,
+      "rel_island_dx": -136.0,
+      "rel_island_dy": -151.0
+     },
+     {
+      "frame": "m52_8_0_aux.jpg",
+      "t_s": 8.0,
+      "bbox_center_x": 268.0,
+      "bbox_center_y": 623.0,
+      "bbox_width": 178,
+      "bbox_height": 168,
+      "bbox_area": 29904,
+      "left_edge": 179,
+      "right_edge": 357,
+      "top_edge": 539,
+      "bottom_edge": 707,
+      "rel_island_dx": -153.0,
+      "rel_island_dy": -151.5
+     },
+     {
+      "frame": "m52_8_0_aux.jpg",
+      "t_s": 8.0,
+      "bbox_center_x": 584.0,
+      "bbox_center_y": 625.5,
+      "bbox_width": 202,
+      "bbox_height": 169,
+      "bbox_area": 34138,
+      "left_edge": 483,
+      "right_edge": 685,
+      "top_edge": 541,
+      "bottom_edge": 710,
+      "rel_island_dx": 163.0,
+      "rel_island_dy": -149.0
      },
      {
       "frame": "m52_4.jpg",
@@ -761,8 +881,38 @@
       "right_edge": 636,
       "top_edge": 439,
       "bottom_edge": 691,
-      "rel_island_dx": -0.5,
-      "rel_island_dy": -221.5
+      "rel_island_dx": 0.0,
+      "rel_island_dy": -205.0
+     },
+     {
+      "frame": "m52_7_75_aux.jpg",
+      "t_s": 7.75,
+      "bbox_center_x": 414.5,
+      "bbox_center_y": 556.5,
+      "bbox_width": 505,
+      "bbox_height": 291,
+      "bbox_area": 146955,
+      "left_edge": 162,
+      "right_edge": 667,
+      "top_edge": 411,
+      "bottom_edge": 702,
+      "rel_island_dx": -8.5,
+      "rel_island_dy": -220.0
+     },
+     {
+      "frame": "m52_8_0_aux.jpg",
+      "t_s": 8.0,
+      "bbox_center_x": 426.0,
+      "bbox_center_y": 572.0,
+      "bbox_width": 530,
+      "bbox_height": 288,
+      "bbox_area": 152640,
+      "left_edge": 161,
+      "right_edge": 691,
+      "top_edge": 428,
+      "bottom_edge": 716,
+      "rel_island_dx": -4.5,
+      "rel_island_dy": -214.5
      },
      {
       "frame": "m52_4.jpg",
@@ -821,6 +971,32 @@
       "bottom_edge": 878
      },
      {
+      "frame": "m52_7_75_aux.jpg",
+      "t_s": 7.75,
+      "bbox_center_x": 430.0,
+      "bbox_center_y": 770.0,
+      "bbox_width": 468,
+      "bbox_height": 184,
+      "bbox_area": 86112,
+      "left_edge": 196,
+      "right_edge": 664,
+      "top_edge": 678,
+      "bottom_edge": 862
+     },
+     {
+      "frame": "m52_8_0_aux.jpg",
+      "t_s": 8.0,
+      "bbox_center_x": 423.0,
+      "bbox_center_y": 776.5,
+      "bbox_width": 508,
+      "bbox_height": 221,
+      "bbox_area": 112268,
+      "left_edge": 169,
+      "right_edge": 677,
+      "top_edge": 666,
+      "bottom_edge": 887
+     },
+     {
       "frame": "m52_4.jpg",
       "t_s": 10.0,
       "bbox_center_x": 430.5,
@@ -836,6 +1012,66 @@
     ],
     "DRAWER": [
      {
+      "frame": "m52_7_75_aux.jpg",
+      "t_s": 7.75,
+      "bbox_center_x": 198.0,
+      "bbox_center_y": 763.0,
+      "bbox_width": 108,
+      "bbox_height": 162,
+      "bbox_area": 17496,
+      "left_edge": 144,
+      "right_edge": 252,
+      "top_edge": 682,
+      "bottom_edge": 844,
+      "rel_island_dx": -223.0,
+      "rel_island_dy": -11.5
+     },
+     {
+      "frame": "m52_7_75_aux.jpg",
+      "t_s": 7.75,
+      "bbox_center_x": 658.0,
+      "bbox_center_y": 771.0,
+      "bbox_width": 90,
+      "bbox_height": 146,
+      "bbox_area": 13140,
+      "left_edge": 613,
+      "right_edge": 703,
+      "top_edge": 698,
+      "bottom_edge": 844,
+      "rel_island_dx": 234.5,
+      "rel_island_dy": 27.5
+     },
+     {
+      "frame": "m52_8_0_aux.jpg",
+      "t_s": 8.0,
+      "bbox_center_x": 195.0,
+      "bbox_center_y": 770.5,
+      "bbox_width": 126,
+      "bbox_height": 149,
+      "bbox_area": 18774,
+      "left_edge": 132,
+      "right_edge": 258,
+      "top_edge": 696,
+      "bottom_edge": 845,
+      "rel_island_dx": -235.5,
+      "rel_island_dy": 5.0
+     },
+     {
+      "frame": "m52_8_0_aux.jpg",
+      "t_s": 8.0,
+      "bbox_center_x": 681.5,
+      "bbox_center_y": 771.0,
+      "bbox_width": 129,
+      "bbox_height": 162,
+      "bbox_area": 20898,
+      "left_edge": 617,
+      "right_edge": 746,
+      "top_edge": 690,
+      "bottom_edge": 852,
+      "rel_island_dx": 251.5,
+      "rel_island_dy": 1.0
+     },
+     {
       "frame": "m52_4.jpg",
       "t_s": 10.0,
       "bbox_center_x": 129.5,
@@ -847,8 +1083,8 @@
       "right_edge": 220,
       "top_edge": 700,
       "bottom_edge": 873,
-      "rel_island_dx": -291.5,
-      "rel_island_dy": 12.0
+      "rel_island_dx": -293.5,
+      "rel_island_dy": 10.0
      },
      {
       "frame": "m52_4.jpg",
@@ -862,8 +1098,8 @@
       "right_edge": 802,
       "top_edge": 707,
       "bottom_edge": 856,
-      "rel_island_dx": 284.0,
-      "rel_island_dy": 38.0
+      "rel_island_dx": 277.0,
+      "rel_island_dy": -5.0
      }
     ]
    }
@@ -1942,6 +2178,36 @@
     ],
     "DRAWER": [
      {
+      "frame": "m109_0.jpg",
+      "t_s": 0.0,
+      "bbox_center_x": 181.5,
+      "bbox_center_y": 792.0,
+      "bbox_width": 99,
+      "bbox_height": 168,
+      "bbox_area": 16632,
+      "left_edge": 132,
+      "right_edge": 231,
+      "top_edge": 708,
+      "bottom_edge": 876,
+      "rel_island_dx": -232.5,
+      "rel_island_dy": -4.5
+     },
+     {
+      "frame": "m109_0.jpg",
+      "t_s": 0.0,
+      "bbox_center_x": 654.0,
+      "bbox_center_y": 794.0,
+      "bbox_width": 96,
+      "bbox_height": 164,
+      "bbox_area": 15744,
+      "left_edge": 606,
+      "right_edge": 702,
+      "top_edge": 712,
+      "bottom_edge": 876,
+      "rel_island_dx": 232.5,
+      "rel_island_dy": 10.5
+     },
+     {
       "frame": "m109_1.jpg",
       "t_s": 1.45,
       "bbox_center_x": 702.5,
@@ -1953,8 +2219,8 @@
       "right_edge": 806,
       "top_edge": 707,
       "bottom_edge": 872,
-      "rel_island_dx": 288.5,
-      "rel_island_dy": -7.0
+      "rel_island_dx": 286.5,
+      "rel_island_dy": -9.0
      },
      {
       "frame": "m109_1.jpg",
@@ -1968,8 +2234,8 @@
       "right_edge": 232,
       "top_edge": 711,
       "bottom_edge": 890,
-      "rel_island_dx": -305.5,
-      "rel_island_dy": 17.0
+      "rel_island_dx": -306.0,
+      "rel_island_dy": 11.0
      },
      {
       "frame": "m109_2.jpg",
@@ -1983,8 +2249,8 @@
       "right_edge": 806,
       "top_edge": 695,
       "bottom_edge": 866,
-      "rel_island_dx": 291.5,
-      "rel_island_dy": -18.0
+      "rel_island_dx": 288.5,
+      "rel_island_dy": -21.0
      },
      {
       "frame": "m109_2.jpg",
@@ -1998,8 +2264,8 @@
       "right_edge": 217,
       "top_edge": 697,
       "bottom_edge": 890,
-      "rel_island_dx": -312.0,
-      "rel_island_dy": 4.0
+      "rel_island_dx": -304.0,
+      "rel_island_dy": -3.0
      },
      {
       "frame": "m109_3.jpg",
@@ -2013,8 +2279,8 @@
       "right_edge": 221,
       "top_edge": 702,
       "bottom_edge": 875,
-      "rel_island_dx": -306.5,
-      "rel_island_dy": -13.0
+      "rel_island_dx": -301.5,
+      "rel_island_dy": -8.0
      },
      {
       "frame": "m109_3.jpg",

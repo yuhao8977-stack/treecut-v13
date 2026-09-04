@@ -1,90 +1,266 @@
 {
-  "annotation_version": "A1",
-  "review_version": "A1_HUMAN_TEMPORAL_REVIEW_R2",
-  "generated_at": "2026-09-04",
-  "source": "架构师逐帧人工复核（第2轮，2026-09-04）。旧版 R1 判断保留为历史（history），不删除不覆盖。",
-  "history": [
-    {
-      "review_version": "R1",
-      "generated_at": "2026-09-04",
-      "note": "R1 将 109 视为整段 DRAWER_OPEN_STATE/STATIC_NOT_PROVEN 负例、52 视为单一正例 —— 已被 R2 部分推翻/细化",
-      "cases_file": "TREECUT_MMVV_A1_HUMAN_TEMPORAL_LABELS.json (git history @0c8b6c5)"
-    }
-  ],
-  "status_summary": {
-    "A1_ROI_STRUCTURAL_STATUS": "READY",
-    "A1_TEMPORAL_EVIDENCE_STATUS": "NEEDS_REPAIR",
-    "MMVV_A1_HUMAN_REVIEW": "NEEDS_TEMPORAL_REPAIR",
-    "note": "ROI 结构层 READY（30/30 原帧 182 L3 框通过）；时间证据层待 media52 人工选择2个辅助帧并完成标注后才 READY；不得把 GT_ROI_READY 当作可直接进入 A2"
+ "annotation_version": "A1",
+ "review_version": "A1_HUMAN_TEMPORAL_REVIEW_R2",
+ "generated_at": "2026-09-04",
+ "source": "架构师逐帧人工复核（第2轮，2026-09-04）。旧版 R1 判断保留为历史（history），不删除不覆盖。",
+ "history": [
+  {
+   "review_version": "R1",
+   "generated_at": "2026-09-04",
+   "note": "R1 将 109 视为整段 DRAWER_OPEN_STATE/STATIC_NOT_PROVEN 负例、52 视为单一正例 —— 已被 R2 部分推翻/细化",
+   "cases_file": "TREECUT_MMVV_A1_HUMAN_TEMPORAL_LABELS.json (git history @0c8b6c5)"
+  }
+ ],
+ "status_summary": {
+  "A1_ROI_STRUCTURAL_STATUS": "READY",
+  "A1_TEMPORAL_EVIDENCE_STATUS": "READY",
+  "MMVV_A1_HUMAN_REVIEW": "READY_AWAITING_A2_APPROVAL",
+  "note": "32帧/200 L3框全过；52 辅助帧(7.75/8.0)与 109 F0 抽屉框已由架构师补齐；A2 批准权在架构师"
+ },
+ "a2_evaluation_set": [
+  {
+   "slice": "52_DRAWER_OPEN",
+   "expected": "PASS DRAWER_OPEN",
+   "frames_hint": "原5帧 + 待选 2 辅助帧"
   },
-  "a2_evaluation_set": [
-    {"slice": "52_DRAWER_OPEN", "expected": "PASS DRAWER_OPEN", "frames_hint": "原5帧 + 待选 2 辅助帧"},
-    {"slice": "109_ACTION_POSITIVE", "frames": [0, 1], "human_truth": "DRAWER_OPEN OUTWARD PARTIAL_OPEN→FULL_OPEN", "expected": "PASS DRAWER_OPEN"},
-    {"slice": "109_OPEN_STATE_NEGATIVE", "frames": [2, 3, 4], "human_truth": "OPEN_STATE_STATIC NO_OPENING_TRANSITION", "expected": "FAIL DRAWER_OPEN (OPEN_STATE_NOT_OPEN_ACTION)"},
-    {"slice": "89_EXTEND", "expected": "FAIL EXTEND (PERSON_MOTION_NOT_PRODUCT_MOTION / NO_TABLETOP_ACTION)"},
-    {"slice": "51_EXTEND", "expected": "FAIL EXTEND (NO_TARGET_OBJECT_MOTION)"},
-    {"slice": "1985_EXTEND", "expected": "FAIL EXTEND (SOCKET_MOTION_NOT_TABLETOP_MOTION)"},
-    {"slice": "1986_EXTEND", "expected": "FAIL EXTEND (SOCKET_MOTION_NOT_TABLETOP_MOTION)"}
-  ],
-  "cases": [
+  {
+   "slice": "109_ACTION_POSITIVE",
+   "frames": [
+    0,
+    1
+   ],
+   "human_truth": "DRAWER_OPEN OUTWARD PARTIAL_OPEN→FULL_OPEN",
+   "expected": "PASS DRAWER_OPEN"
+  },
+  {
+   "slice": "109_OPEN_STATE_NEGATIVE",
+   "frames": [
+    2,
+    3,
+    4
+   ],
+   "human_truth": "OPEN_STATE_STATIC NO_OPENING_TRANSITION",
+   "expected": "FAIL DRAWER_OPEN (OPEN_STATE_NOT_OPEN_ACTION)"
+  },
+  {
+   "slice": "89_EXTEND",
+   "expected": "FAIL EXTEND (PERSON_MOTION_NOT_PRODUCT_MOTION / NO_TABLETOP_ACTION)"
+  },
+  {
+   "slice": "51_EXTEND",
+   "expected": "FAIL EXTEND (NO_TARGET_OBJECT_MOTION)"
+  },
+  {
+   "slice": "1985_EXTEND",
+   "expected": "FAIL EXTEND (SOCKET_MOTION_NOT_TABLETOP_MOTION)"
+  },
+  {
+   "slice": "1986_EXTEND",
+   "expected": "FAIL EXTEND (SOCKET_MOTION_NOT_TABLETOP_MOTION)"
+  }
+ ],
+ "cases": [
+  {
+   "media_id": 52,
+   "requested": "DRAWER_OPEN",
+   "human_facts": {
+    "actual": "DRAWER_OPEN",
+    "direction": "OUTWARD"
+   },
+   "note": "真实正例。F4(t=7.5s) 抽屉本体不可见（仅 PREPARE_TO_OPEN/HAND_ACTION，不能写成 DRAWER_OPEN 已被视觉证明）；F5(t=10s) FULLY_OPEN。5 帧缺中间抽屉位移轨迹 → 在 [7.5,10] 内人工选 2 辅助帧(AUX1=抽屉首次清晰出现且正向外运动；AUX2=明显拉出但未完全打开)。原 5 帧不删除。",
+   "frames": [
     {
-      "media_id": 52, "requested": "DRAWER_OPEN",
-      "human_facts": {"actual": "DRAWER_OPEN", "direction": "OUTWARD"},
-      "note": "真实正例。F4(t=7.5s) 抽屉本体不可见（仅 PREPARE_TO_OPEN/HAND_ACTION，不能写成 DRAWER_OPEN 已被视觉证明）；F5(t=10s) FULLY_OPEN。5 帧缺中间抽屉位移轨迹 → 在 [7.5,10] 内人工选 2 辅助帧(AUX1=抽屉首次清晰出现且正向外运动；AUX2=明显拉出但未完全打开)。原 5 帧不删除。",
-      "frames": [
-        {"idx": 0, "t_s": 0.0, "human_state": "UNKNOWN/未见抽屉", "visibility": "NOT_VISIBLE"},
-        {"idx": 1, "t_s": 2.5, "human_state": "UNKNOWN/未见抽屉", "visibility": "NOT_VISIBLE"},
-        {"idx": 2, "t_s": 5.0, "human_state": "UNKNOWN/未见抽屉", "visibility": "NOT_VISIBLE"},
-        {"idx": 3, "t_s": 7.5, "human_state": "PREPARE_TO_OPEN", "human_action": "HAND_ACTION", "visibility": "NOT_VISIBLE", "note": "人在做向外拉抽屉动作但抽屉(含边缘)不可见"},
-        {"idx": 4, "t_s": 10.0, "human_state": "FULLY_OPEN", "human_action": "DRAWER_OPEN_COMPLETE", "visibility": "VISIBLE"}
-      ],
-      "aux_frames_status": "PENDING_HUMAN_SELECTION"
+     "idx": 0,
+     "t_s": 0.0,
+     "human_state": "UNKNOWN/未见抽屉",
+     "visibility": "NOT_VISIBLE"
     },
     {
-      "media_id": 109, "requested": "DRAWER_OPEN",
-      "note": "R2 重定义：不再整段负例。前段(帧0→1)=真实 DRAWER_OPEN 正例；后段(帧2→4)=OPEN_STATE_STATIC 负例（同一抽屉/同一人/同一视频的干净动作vs状态对照）。F0 抽屉可见(拉出一点)需补 DRAWER 框；F1-F4 抽屉可见。",
-      "frames": [
-        {"idx": 0, "t_s": 0.0, "human_state": "PARTIALLY_OPEN/OPENING", "human_action": "DRAWER_OPEN", "direction": "OUTWARD", "visibility": "VISIBLE", "note": "正在拉开，已拉出一点 → 需补 DRAWER 框"},
-        {"idx": 1, "t_s": 1.45, "human_state": "FULLY_OPEN(动作基本完成)", "human_action": "DRAWER_OPEN_END", "visibility": "VISIBLE"},
-        {"idx": 2, "t_s": 2.9, "human_state": "OPEN_STATE_STATIC", "human_action": "NONE(讲解)", "visibility": "VISIBLE"},
-        {"idx": 3, "t_s": 4.35, "human_state": "OPEN_STATE_STATIC", "human_action": "NONE(讲解)", "visibility": "VISIBLE"},
-        {"idx": 4, "t_s": 5.8, "human_state": "OPEN_STATE_STATIC", "human_action": "NONE(讲解)", "visibility": "VISIBLE"}
-      ]
+     "idx": 1,
+     "t_s": 2.5,
+     "human_state": "UNKNOWN/未见抽屉",
+     "visibility": "NOT_VISIBLE"
     },
     {
-      "media_id": 89, "requested": "EXTEND",
-      "human_facts": {"actual_product_action": "STATIC", "person_motion": "YES", "tabletop_product_motion": "NONE/NOT_PROVEN"},
-      "frames": [{"idx": i, "note": "人在讲解；可见抽屉均打开静止，无抽屉/桌板动作连贯变化"} for i in range(5)],
-      "a2_note": "FAIL EXTEND (PERSON_MOTION_NOT_PRODUCT_MOTION / NO_TABLETOP_ACTION)"
+     "idx": 2,
+     "t_s": 5.0,
+     "human_state": "UNKNOWN/未见抽屉",
+     "visibility": "NOT_VISIBLE"
     },
     {
-      "media_id": 51, "requested": "EXTEND",
-      "human_facts": {"actual": "STATIC_PRODUCT_PRESENTATION"},
-      "a2_note": "FAIL EXTEND"
+     "idx": 3,
+     "t_s": 7.5,
+     "human_state": "PREPARE_TO_OPEN",
+     "human_action": "HAND_ACTION",
+     "visibility": "NOT_VISIBLE",
+     "note": "人在做向外拉抽屉动作但抽屉(含边缘)不可见"
     },
     {
-      "media_id": 1985, "requested": "EXTEND",
-      "human_facts": {"actual": "SOCKET_ADJUST", "tabletop_action": "STATIC"},
-      "frames": [
-        {"idx": 0, "t_s": 1.9, "note": "手操作第1个轨道插座模块"},
-        {"idx": 1, "t_s": 2.525, "note": "手操作第2个插座模块"},
-        {"idx": 2, "t_s": 3.15, "note": "第2个操作完成，手离开/向第3个移动"},
-        {"idx": 3, "t_s": 3.775, "note": "开始操作第3个插座模块"},
-        {"idx": 4, "t_s": 4.4, "note": "操作手离开，另一手在台面附近，静态展示"}
-      ],
-      "a2_note": "FAIL EXTEND (SOCKET_MOTION_NOT_TABLETOP_MOTION)"
-    },
-    {
-      "media_id": 1986, "requested": "EXTEND",
-      "human_facts": {"actual": "SOCKET_ADJUST", "semantic_family": "SOCKET_ADJUST_NOT_EXTEND"},
-      "frames": [
-        {"idx": 0, "t_s": 1.9, "note": "操作第1个插头"},
-        {"idx": 1, "t_s": 2.525, "note": "操作第2个插头"},
-        {"idx": 2, "t_s": 3.15, "note": "完成第2个后手离开，准备移向第3个"},
-        {"idx": 3, "t_s": 3.775, "note": "操作第3个插头"},
-        {"idx": 4, "t_s": 4.4, "note": "操作结束，静态展示"}
-      ],
-      "a2_note": "FAIL EXTEND (SOCKET_MOTION_NOT_TABLETOP_MOTION)"
+     "idx": 4,
+     "t_s": 10.0,
+     "human_state": "FULLY_OPEN",
+     "human_action": "DRAWER_OPEN_COMPLETE",
+     "visibility": "VISIBLE"
     }
-  ]
+   ],
+   "aux_frames_status": "SELECTED_AND_ANNOTATED (AUX2@7.75, AUX1@8.0)"
+  },
+  {
+   "media_id": 109,
+   "requested": "DRAWER_OPEN",
+   "note": "R2 重定义：不再整段负例。前段(帧0→1)=真实 DRAWER_OPEN 正例；后段(帧2→4)=OPEN_STATE_STATIC 负例（同一抽屉/同一人/同一视频的干净动作vs状态对照）。F0 抽屉可见(拉出一点)需补 DRAWER 框；F1-F4 抽屉可见。",
+   "frames": [
+    {
+     "idx": 0,
+     "t_s": 0.0,
+     "human_state": "PARTIALLY_OPEN/OPENING",
+     "human_action": "DRAWER_OPEN",
+     "direction": "OUTWARD",
+     "visibility": "VISIBLE",
+     "note": "已补 DRAWER 框(×2)；PARTIALLY_OPEN/OPENING"
+    },
+    {
+     "idx": 1,
+     "t_s": 1.45,
+     "human_state": "FULLY_OPEN(动作基本完成)",
+     "human_action": "DRAWER_OPEN_END",
+     "visibility": "VISIBLE"
+    },
+    {
+     "idx": 2,
+     "t_s": 2.9,
+     "human_state": "OPEN_STATE_STATIC",
+     "human_action": "NONE(讲解)",
+     "visibility": "VISIBLE"
+    },
+    {
+     "idx": 3,
+     "t_s": 4.35,
+     "human_state": "OPEN_STATE_STATIC",
+     "human_action": "NONE(讲解)",
+     "visibility": "VISIBLE"
+    },
+    {
+     "idx": 4,
+     "t_s": 5.8,
+     "human_state": "OPEN_STATE_STATIC",
+     "human_action": "NONE(讲解)",
+     "visibility": "VISIBLE"
+    }
+   ]
+  },
+  {
+   "media_id": 89,
+   "requested": "EXTEND",
+   "human_facts": {
+    "actual_product_action": "STATIC",
+    "person_motion": "YES",
+    "tabletop_product_motion": "NONE/NOT_PROVEN"
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "note": "人在讲解；可见抽屉均打开静止，无抽屉/桌板动作连贯变化"
+    },
+    {
+     "idx": 1,
+     "note": "同 idx0：讲解 + 静止打开抽屉"
+    },
+    {
+     "idx": 2,
+     "note": "同 idx0：讲解 + 静止打开抽屉"
+    },
+    {
+     "idx": 3,
+     "note": "同 idx0：讲解 + 静止打开抽屉"
+    },
+    {
+     "idx": 4,
+     "note": "同 idx0：讲解 + 静止打开抽屉"
+    }
+   ],
+   "a2_note": "FAIL EXTEND (PERSON_MOTION_NOT_PRODUCT_MOTION / NO_TABLETOP_ACTION)"
+  },
+  {
+   "media_id": 51,
+   "requested": "EXTEND",
+   "human_facts": {
+    "actual": "STATIC_PRODUCT_PRESENTATION"
+   },
+   "a2_note": "FAIL EXTEND"
+  },
+  {
+   "media_id": 1985,
+   "requested": "EXTEND",
+   "human_facts": {
+    "actual": "SOCKET_ADJUST",
+    "tabletop_action": "STATIC"
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "t_s": 1.9,
+     "note": "手操作第1个轨道插座模块"
+    },
+    {
+     "idx": 1,
+     "t_s": 2.525,
+     "note": "手操作第2个插座模块"
+    },
+    {
+     "idx": 2,
+     "t_s": 3.15,
+     "note": "第2个操作完成，手离开/向第3个移动"
+    },
+    {
+     "idx": 3,
+     "t_s": 3.775,
+     "note": "开始操作第3个插座模块"
+    },
+    {
+     "idx": 4,
+     "t_s": 4.4,
+     "note": "操作手离开，另一手在台面附近，静态展示"
+    }
+   ],
+   "a2_note": "FAIL EXTEND (SOCKET_MOTION_NOT_TABLETOP_MOTION)"
+  },
+  {
+   "media_id": 1986,
+   "requested": "EXTEND",
+   "human_facts": {
+    "actual": "SOCKET_ADJUST",
+    "semantic_family": "SOCKET_ADJUST_NOT_EXTEND"
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "t_s": 1.9,
+     "note": "操作第1个插头"
+    },
+    {
+     "idx": 1,
+     "t_s": 2.525,
+     "note": "操作第2个插头"
+    },
+    {
+     "idx": 2,
+     "t_s": 3.15,
+     "note": "完成第2个后手离开，准备移向第3个"
+    },
+    {
+     "idx": 3,
+     "t_s": 3.775,
+     "note": "操作第3个插头"
+    },
+    {
+     "idx": 4,
+     "t_s": 4.4,
+     "note": "操作结束，静态展示"
+    }
+   ],
+   "a2_note": "FAIL EXTEND (SOCKET_MOTION_NOT_TABLETOP_MOTION)"
+  }
+ ],
+ "updated_at": "2026-09-04 16:39:04"
 }
