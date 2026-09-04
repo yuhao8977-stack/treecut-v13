@@ -14,8 +14,10 @@
  "status_summary": {
   "A1_ROI_STRUCTURAL_STATUS": "READY",
   "A1_TEMPORAL_EVIDENCE_STATUS": "READY",
-  "MMVV_A1_HUMAN_REVIEW": "READY_AWAITING_A2_APPROVAL",
-  "note": "32帧/200 L3框全过；52 辅助帧(7.75/8.0)与 109 F0 抽屉框已由架构师补齐；A2 批准权在架构师"
+  "MMVV_A1_HUMAN_REVIEW": "APPROVED_BY_ARCHITECT",
+  "approved_at": "2026-09-04",
+  "approver_note": "架构师本人框选并逐一检查 200 框/32 帧通过；1985/1986 梯形几何致局部框重合(IoU<=0.19)已确认非语义错误；A2 判定将用人工框做运动排除掩码",
+  "a2_ready": true
  },
  "a2_evaluation_set": [
   {
@@ -262,5 +264,5 @@
    "a2_note": "FAIL EXTEND (SOCKET_MOTION_NOT_TABLETOP_MOTION)"
   }
  ],
- "updated_at": "2026-09-04 16:39:04"
+ "updated_at": "2026-09-04 16:53:07"
 }
