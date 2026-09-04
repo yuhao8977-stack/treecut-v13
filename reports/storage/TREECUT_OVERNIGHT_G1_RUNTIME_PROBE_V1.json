@@ -1,0 +1,48 @@
+{
+ "experiment": "G1_RUNTIME_PROBE_ON_BENCHMARK_SAMPLE",
+ "checked": 6,
+ "results": [
+  {
+   "media_id": 4051,
+   "eligible": true,
+   "role": "PRODUCTION_CLEAN_SEMI",
+   "review": "PENDING",
+   "reasons": []
+  },
+  {
+   "media_id": 12137,
+   "eligible": true,
+   "role": "PRODUCTION_CLEAN_RAW",
+   "review": "PENDING",
+   "reasons": []
+  },
+  {
+   "media_id": 2317,
+   "eligible": true,
+   "role": "PRODUCTION_CLEAN_SEMI",
+   "review": "PENDING",
+   "reasons": []
+  },
+  {
+   "media_id": 9079,
+   "eligible": true,
+   "role": "PRODUCTION_CLEAN_RAW",
+   "review": "PENDING",
+   "reasons": []
+  },
+  {
+   "media_id": 11721,
+   "eligible": true,
+   "role": "PRODUCTION_CLEAN_RAW",
+   "review": "PENDING",
+   "reasons": []
+  },
+  {
+   "media_id": 9680,
+   "eligible": true,
+   "role": "PRODUCTION_CLEAN_RAW",
+   "review": "PENDING",
+   "reasons": []
+  }
+ ]
+}

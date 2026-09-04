@@ -36,7 +36,7 @@ def main():
              "evidence": f"funnel keyword recall RETRACT=0；EXTEND 358 命中/190 家族，最大桶「11.29 产品视频拍摄」28",
              "affects": "动作召回完整性；误召回"},
             {"rank": 4, "gap": "生产组装链未闭环（shot_usage=0、模板 4、E2E 编排 CODE_EXISTS）",
-             "evidence": probe_by["Story/Timeline"], "affects": "脚本→3 候选成片未实现"},
+             "evidence": probe_by["Story/Timeline"]["blocker"], "affects": "脚本→3 候选成片未实现"},
             {"rank": 5, "gap": "无授权 Voice/BGM 输入",
              "evidence": "VOICE_PRODUCTION_INPUT_REQUIRED / BGM_LIBRARY_INPUT_REQUIRED",
              "affects": "成片音轨只能 fallback/诊断"},

@@ -1,6 +1,6 @@
 {
  "experiment": "AUTO_ROI_GAP_REPORT",
- "generated_at": "2026-09-04 19:41:18",
+ "generated_at": "2026-09-04 19:44:48",
  "status": "NOT_SCORABLE_TONIGHT",
  "evidence": {
   "qwen_semantic_roi": "TREECUT_MMV_SEMANTIC_ROI_V1.json status=BLOCKED：qwen2.5vl 多对象 JSON bbox 回显联合名/绝对坐标/伪 JSON，MODEL_DETECTED ROI 不可信",

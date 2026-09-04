@@ -1,6 +1,6 @@
 {
  "experiment": "TREECUT_OVERNIGHT_GAP_MAP_V1",
- "generated_at": "2026-09-04 19:41:18",
+ "generated_at": "2026-09-04 19:44:48",
  "main_blockers_ranked": [
   {
    "rank": 1,
@@ -23,26 +23,7 @@
   {
    "rank": 4,
    "gap": "生产组装链未闭环（shot_usage=0、模板 4、E2E 编排 CODE_EXISTS）",
-   "evidence": {
-    "capability": "Story/Timeline",
-    "group": "Assembly",
-    "code_refs": [
-     "scripts/hrp_builder.py",
-     "scripts/b007_v07_pipeline.py",
-     "scripts/phase251_build_manifest_v2.py"
-    ],
-    "tests": [
-     "tests/test_p6_roughcut.py",
-     "tests/test_p7_templates_ext.py"
-    ],
-    "real_data_evidence": "content_templates 4；phase251 manifest 工具；b007 v0.6/v0.7 曾产出 pilot 相关",
-    "highest_level": "TESTED_SYNTHETIC",
-    "status": "PARTIAL",
-    "blocker": "模板-素材契约未在真实剪辑闭环验证",
-    "code_refs_exist": 3,
-    "code_refs_missing": [],
-    "tests_missing": []
-   },
+   "evidence": "模板-素材契约未在真实剪辑闭环验证",
    "affects": "脚本→3 候选成片未实现"
   },
   {

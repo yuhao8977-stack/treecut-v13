@@ -1,0 +1,480 @@
+{
+ "run": "OVERNIGHT_RUN_V1",
+ "generated_at": "2026-09-04 19:44:48",
+ "baseline_commit": "4fa7612",
+ "head_commit": "b76fce5",
+ "commits_since_baseline": [
+  "b76fce5 overnight(production-dryrun): calibration beat dry-run plan (stages x contract x missing/broken; no rough cut - chain not complete, honest) + code-quality inventory (310 scripts, duplicate families listed, read-only)",
+  "721d9f2 overnight(contract-probe,candidate-benchmark): contract probe 21 capabilities x six-level evidence + source funnel + non-holdout pool 13460(sample 300, seed fixed) + gap map (5 blockers) + auto-ROI gap report (NOT_SCORABLE, qwen ROI blocked)",
+  "7c0891e overnight(eval-harness): blind ROI page (opaque H001-H006, A/D/S/Delete, copy-prev draft w/ confirm, no auto submit) + server blind endpoints w/ bounds+hash checks + runner ROI gate: 0-box or hash mismatch fails closed",
+  "727420b overnight(a3-observability): temporal observability audit on blind inputs (frame-diff/flow/camera proxy/static ratio, TEMPORAL_SIGNAL only, no verdicts) + Chinese human review HTML (no GT/POS/NEG)",
+  "355612f overnight(a3-integrity): blind machine input H001-H006 (no pos/neg/extend/media/source tokens) + private case key + allowlist runner fail-closed A3_ROI_REQUIRED + scorer separation + 9 integrity tests"
+ ],
+ "a3": {
+  "holdout_status": "A3_HOLDOUT_6_FROZEN",
+  "prediction_executed": "NO",
+  "blind_integrity": "PASS(9 tests; opaque H001-H006; 无 pos/neg/extend/media/source 词元; 帧字节=源帧)",
+  "runner": "FAIL_CLOSED(A3_ROI_REQUIRED when 缺 ROI 或 0 框; allowlist 禁读 GT/key/manifest)",
+  "scoring": "独立进程; 预测哈希先于 GT 打开",
+  "observability": {
+   "H001": {
+    "signal": "STRONG_CHANGE",
+    "note": "全案例 STRONG_CHANGE=帧间强变化(含相机运动); 桌板位移过程是否可辨需人工判断(HTML)"
+   },
+   "H002": {
+    "signal": "STRONG_CHANGE",
+    "note": "全案例 STRONG_CHANGE=帧间强变化(含相机运动); 桌板位移过程是否可辨需人工判断(HTML)"
+   },
+   "H003": {
+    "signal": "STRONG_CHANGE",
+    "note": "全案例 STRONG_CHANGE=帧间强变化(含相机运动); 桌板位移过程是否可辨需人工判断(HTML)"
+   },
+   "H004": {
+    "signal": "STRONG_CHANGE",
+    "note": "全案例 STRONG_CHANGE=帧间强变化(含相机运动); 桌板位移过程是否可辨需人工判断(HTML)"
+   },
+   "H005": {
+    "signal": "STRONG_CHANGE",
+    "note": "全案例 STRONG_CHANGE=帧间强变化(含相机运动); 桌板位移过程是否可辨需人工判断(HTML)"
+   },
+   "H006": {
+    "signal": "STRONG_CHANGE",
+    "note": "全案例 STRONG_CHANGE=帧间强变化(含相机运动); 桌板位移过程是否可辨需人工判断(HTML)"
+   }
+  },
+  "roi_page": "http://127.0.0.1:8933/a3/roi (blind H001-H006, A/D/S/Delete, 复制上帧草稿需确认)"
+ },
+ "tests": {
+  "files": 49,
+  "pass_files": 48,
+  "fail_files": 1,
+  "quarantine": [
+   "test_stage2_vision.py"
+  ],
+  "quarantine_note": "test_stage2_vision.py 7 断言为文件内状态干扰(单测各自通过; 与今夜改动无关, 未触碰 src)"
+ },
+ "funnel": {
+  "experiment": "MMVV/Production Source Funnel (read-only, X1 corpus + B007 published)",
+  "generated_at": "2026-09-04 19:38:43",
+  "G1_role_rows_total": 28252,
+  "mp4_total": 23253,
+  "media_by_source": [
+   [
+    1,
+    3025
+   ],
+   [
+    2,
+    3569
+   ],
+   [
+    3,
+    332
+   ],
+   [
+    4,
+    21170
+   ],
+   [
+    5,
+    156
+   ]
+  ],
+  "G1_eligible_mp4_approx": 13700,
+  "review_APPROVED": 88,
+  "keyword_recall_media_counts(X1_mp4)": {
+   "DRAWER_OPEN": 704,
+   "EXTEND": 358,
+   "RETRACT": 0,
+   "SOCKET": 485,
+   "STORAGE": 1597,
+   "STATIC_PRESENT": 7749
+  },
+  "B007_published_notes": 30,
+  "B007_segments": [
+   609,
+   30
+  ],
+  "B007_asr_rows": [
+   866,
+   30
+  ],
+  "B007_ocr_rows": [
+   2980,
+   30
+  ],
+  "note": "候选=召回计数，非动作真值；G1 eligible 为只读近似"
+ },
+ "benchmark_pool": {
+  "size": 13460,
+  "sample": 300
+ },
+ "capability_matrix": [
+  {
+   "capability": "素材导入/资产指纹",
+   "level": "TESTED_REAL_DATA",
+   "status": "PARTIAL",
+   "group": "Source"
+  },
+  {
+   "capability": "素材去重",
+   "level": "TESTED_REAL_DATA",
+   "status": "PARTIAL",
+   "group": "Source"
+  },
+  {
+   "capability": "ASR",
+   "level": "TESTED_REAL_DATA",
+   "status": "PARTIAL",
+   "group": "Semantic"
+  },
+  {
+   "capability": "OCR/字幕检测",
+   "level": "TESTED_REAL_DATA",
+   "status": "PARTIAL",
+   "group": "Semantic"
+  },
+  {
+   "capability": "Segment(切分)",
+   "level": "TESTED_REAL_DATA",
+   "status": "PARTIAL",
+   "group": "Segment"
+  },
+  {
+   "capability": "动作识别(语义/人员)",
+   "level": "HUMAN_VALIDATED",
+   "status": "PARTIAL",
+   "group": "Cognition"
+  },
+  {
+   "capability": "对象识别/ROI",
+   "level": "HUMAN_VALIDATED",
+   "status": "PARTIAL",
+   "group": "Cognition"
+  },
+  {
+   "capability": "Camera(运动补偿)",
+   "level": "TESTED_REAL_DATA",
+   "status": "PARTIAL",
+   "group": "MMVV"
+  },
+  {
+   "capability": "方向/状态(几何)",
+   "level": "TESTED_REAL_DATA",
+   "status": "SHADOW_ONLY",
+   "group": "MMVV"
+  },
+  {
+   "capability": "Candidate Discovery",
+   "level": "TESTED_REAL_DATA",
+   "status": "PARTIAL",
+   "group": "Retrieval"
+  },
+  {
+   "capability": "G2(action subclip)",
+   "level": "TESTED_SYNTHETIC",
+   "status": "PARTIAL",
+   "group": "Retrieval"
+  },
+  {
+   "capability": "G3(claim→visual)",
+   "level": "TESTED_SYNTHETIC",
+   "status": "PARTIAL",
+   "group": "Retrieval"
+  },
+  {
+   "capability": "Story/Timeline",
+   "level": "TESTED_SYNTHETIC",
+   "status": "PARTIAL",
+   "group": "Assembly"
+  },
+  {
+   "capability": "Voice(TTS fallback)",
+   "level": "TESTED_SYNTHETIC",
+   "status": "PARTIAL",
+   "group": "Assembly"
+  },
+  {
+   "capability": "Subtitle",
+   "level": "CODE_EXISTS",
+   "status": "PARTIAL",
+   "group": "Assembly"
+  },
+  {
+   "capability": "BGM",
+   "level": "NOT_FOUND",
+   "status": "BROKEN",
+   "group": "Assembly"
+  },
+  {
+   "capability": "Render(ffmpeg)",
+   "level": "TESTED_REAL_DATA",
+   "status": "PARTIAL",
+   "group": "Assembly"
+  },
+  {
+   "capability": "Production QA(技术/内容分离)",
+   "level": "TESTED_SYNTHETIC",
+   "status": "PARTIAL",
+   "group": "QA"
+  },
+  {
+   "capability": "Human Review",
+   "level": "HUMAN_VALIDATED",
+   "status": "PARTIAL",
+   "group": "Review"
+  },
+  {
+   "capability": "3 候选输出/Workbench",
+   "level": "CODE_EXISTS",
+   "status": "PARTIAL",
+   "group": "Output"
+  },
+  {
+   "capability": "End-to-end 编排",
+   "level": "CODE_EXISTS",
+   "status": "PARTIAL",
+   "group": "Output"
+  }
+ ],
+ "gap_map": {
+  "experiment": "TREECUT_OVERNIGHT_GAP_MAP_V1",
+  "generated_at": "2026-09-04 19:44:48",
+  "main_blockers_ranked": [
+   {
+    "rank": 1,
+    "gap": "MMVV 只 SHADOW（MMVV_ENFORCEMENT 硬阻断）",
+    "evidence": "MMVV_ENFORCEMENT 硬阻断；A3 泛化待验证",
+    "affects": "动作证据无法自动阻断错误选镜；最终成片正确性依赖人工"
+   },
+   {
+    "rank": 2,
+    "gap": "A3 泛化未验证（冻结算法未在 unseen 上作答）",
+    "evidence": "缺 Human ROI；blind 已建，明日起可标",
+    "affects": "EXTEND 检索/几何判断是否可泛化未知"
+   },
+   {
+    "rank": 3,
+    "gap": "检索语义缺口：RETRACT 路径召回=0；路径关键词误导桶存在",
+    "evidence": "funnel keyword recall RETRACT=0；EXTEND 358 命中/190 家族，最大桶「11.29 产品视频拍摄」28",
+    "affects": "动作召回完整性；误召回"
+   },
+   {
+    "rank": 4,
+    "gap": "生产组装链未闭环（shot_usage=0、模板 4、E2E 编排 CODE_EXISTS）",
+    "evidence": "模板-素材契约未在真实剪辑闭环验证",
+    "affects": "脚本→3 候选成片未实现"
+   },
+   {
+    "rank": 5,
+    "gap": "无授权 Voice/BGM 输入",
+    "evidence": "VOICE_PRODUCTION_INPUT_REQUIRED / BGM_LIBRARY_INPUT_REQUIRED",
+    "affects": "成片音轨只能 fallback/诊断"
+   }
+  ],
+  "where_blocked_summary": {
+   "有素材": "G1 池≈13700（mp4 23253，review APPROVED 仅 88）",
+   "有 segment": "B007 30 note 全覆盖(609 seg)；X1 大池 segments 41834",
+   "语义证据": "ASR 51543 / OCR 289218 行存在(asset 键控)",
+   "动作候选": "路径关键词候选存在(EXTEND358 等)，但语义/几何动作真值未全量校准",
+   "claim 匹配": "G3 仅 TESTED_SYNTHETIC",
+   "MMVV": "SHADOW_ONLY + Core5/A2 闭合(受控集)",
+   "production shot": "shot_usage=0（尚未有真实成片选镜落库）"
+  },
+  "conclusion": "缺口不在“没素材/没代码”，而在：①动作→生产证据链(MMVV 未强制、泛化未验) ②检索语义层(RETRACT/误导桶) ③组装闭环(shot/模板/编排) ④外部输入(Voice/BGM)。"
+ },
+ "dryrun": {
+  "experiment": "TREECUT_OVERNIGHT_PRODUCTION_DRYRUN_V1",
+  "generated_at": "2026-09-04 19:42:03",
+  "mode": "PLAN_ONLY_DRY_RUN (不渲染、不产出 rough cut)",
+  "calibration_beat": {
+   "claim": "空镜岛台伸缩餐桌一体（EXTEND）",
+   "media_pool_ref": "NON_HOLDOUT_BENCHMARK_POOL EXTEND 命中样本（非 A3；A3 6 案例 SEALED）",
+   "a3_usage": "未使用"
+  },
+  "stages": [
+   {
+    "stage": "G1 源资格",
+    "input": "media_id",
+    "output": "eligible+role",
+    "contract": "ProductionSourceService.is_media_production_eligible",
+    "status": "OK(TESTED_REAL_DATA)",
+    "missing": [],
+    "broken": [],
+    "note": "池≈13700 已由漏斗统计"
+   },
+   {
+    "stage": "G2 action subclip",
+    "input": "media+window",
+    "output": "候选 subclip",
+    "contract": "action_subclip / hrp_g2",
+    "status": "TESTED_SYNTHETIC",
+    "missing": [
+     "真实媒体校准重跑(避 A3)"
+    ],
+    "broken": [],
+    "note": ""
+   },
+   {
+    "stage": "G3 claim→visual",
+    "input": "claim+候选",
+    "output": "匹配片段",
+    "contract": "claim_visual / hrp_g3",
+    "status": "TESTED_SYNTHETIC",
+    "missing": [
+     "真实 claim 匹配证据"
+    ],
+    "broken": [],
+    "note": ""
+   },
+   {
+    "stage": "MMVV SHADOW evidence",
+    "input": "帧+人工 ROI",
+    "output": "几何/时序证据",
+    "contract": "mmvl_master_v1 (frozen ca34678)",
+    "status": "SHADOW_ONLY",
+    "missing": [
+     "人工 ROI",
+     "blind 预测授权"
+    ],
+    "broken": [
+     "MMVV_ENFORCEMENT 硬阻断"
+    ],
+    "note": "A3 外媒体同样缺 ROI → 本 beat 无法产出 MMVV 证据"
+   },
+   {
+    "stage": "Dedup",
+    "input": "候选集",
+    "output": "去重后镜头",
+    "contract": "production_dedup / g5",
+    "status": "OK(TESTED_SYNTHETIC)",
+    "missing": [
+     "shot_usage 为空(生产未消费)"
+    ],
+    "broken": [],
+    "note": ""
+   },
+   {
+    "stage": "Timeline schema",
+    "input": "镜头序列",
+    "output": "timeline",
+    "contract": "content_templates(4) / phase251 manifest",
+    "status": "CODE_EXISTS",
+    "missing": [
+     "模板-素材契约未在真实剪辑验证"
+    ],
+    "broken": [],
+    "note": ""
+   },
+   {
+    "stage": "Narration availability",
+    "input": "timeline",
+    "output": "旁白稿",
+    "contract": "narration (test 8 pass)",
+    "status": "TESTED_SYNTHETIC",
+    "missing": [
+     "VOICE_PRODUCTION_INPUT_REQUIRED"
+    ],
+    "broken": [],
+    "note": "仅 fallback TTS 诊断"
+   },
+   {
+    "stage": "Subtitle plan",
+    "input": "ASR 文本",
+    "output": "字幕轨道",
+    "contract": "transcripts/fts + hrp_ff",
+    "status": "CODE_EXISTS",
+    "missing": [
+     "字幕样式端到端证据"
+    ],
+    "broken": [],
+    "note": ""
+   },
+   {
+    "stage": "Render preflight",
+    "input": "timeline+媒体",
+    "output": "技术预检",
+    "contract": "test_production_path_preflight_v01 (8 pass)",
+    "status": "OK(TESTED_SYNTHETIC)",
+    "missing": [],
+    "broken": [],
+    "note": ""
+   },
+   {
+    "stage": "G5 QA",
+    "input": "成片",
+    "output": "技术/内容 QA",
+    "contract": "production_qa + g5 test (10 pass)",
+    "status": "TESTED_SYNTHETIC",
+    "missing": [
+     "内容 QA 真实成片校准"
+    ],
+    "broken": [],
+    "note": ""
+   }
+  ],
+  "empty_slots_rule": "若某 beat 无有效镜头 → 保留空槽，不用错误镜头填满",
+  "diagnostic_roughcut_decision": {
+   "allowed": false,
+   "reason": "链未全通：MMVV SHADOW_ONLY(无 ROI→无证据)、shot_usage=0、Voice/BGM 无生产输入。按 §28 条件(所有 source contracts+技术路径完整)不满足 → 不生成诊断成片（避免“为工作量而开发”）。",
+   "blocked_by": [
+    "MMVV 人工 ROI",
+    "VOICE_PRODUCTION_INPUT_REQUIRED",
+    "BGM_LIBRARY_INPUT_REQUIRED"
+   ]
+  }
+ },
+ "first_screen": {
+  "1_distance_to_goal": "素材 Truth→理解→检索→选镜→自动成片→QA→人工终审：前端(源/语义/检索/MMVV 校准集) 已到 TESTED_REAL_DATA/HUMAN_VALIDATED 层；后端组装(shot→timeline→渲染→3候选) 仍 CODE_EXISTS→TESTED_SYNTHETIC，未闭环",
+  "2_done_tonight": "A3 blind 严格化(输入/密钥/runner/scoring)+可观测性审计+ROI 页硬化；契约盘点21能力；漏斗/基准池13k；缺口地图；dry-run 计划；49 文件回归(48过1隔离缺陷)",
+  "3_new_capabilities": "blind machine input + 防泄漏测试 + fail-closed runner + scorer 分离；ROI 页快捷键/草稿；observability 审计工具",
+  "4_code_only": "Subtitle(CODE_EXISTS), 3候选/Workbench(CODE_EXISTS), E2E 编排(CODE_EXISTS), BGM(NOT_FOUND)",
+  "5_real_media_validated": "G1 池/漏斗(DB), A3 盲帧字节绑定, observability(盲帧真实计算), Core5/A2.2 既往",
+  "6_human_validated": "A1 ROI 200框(A1), A3 筛选(架构师), 对象/动作校准语料(历史 stage3/4)",
+  "7_missing_links": "MMVV 强制化→泛化验证(A3 blind 作答) → shot_usage 落库 → 模板×素材契约 → 渲染/QA 真实成片 → 3候选编排",
+  "8_top5_blockers": [
+   {
+    "rank": 1,
+    "gap": "MMVV 只 SHADOW（MMVV_ENFORCEMENT 硬阻断）",
+    "evidence": "MMVV_ENFORCEMENT 硬阻断；A3 泛化待验证",
+    "affects": "动作证据无法自动阻断错误选镜；最终成片正确性依赖人工"
+   },
+   {
+    "rank": 2,
+    "gap": "A3 泛化未验证（冻结算法未在 unseen 上作答）",
+    "evidence": "缺 Human ROI；blind 已建，明日起可标",
+    "affects": "EXTEND 检索/几何判断是否可泛化未知"
+   },
+   {
+    "rank": 3,
+    "gap": "检索语义缺口：RETRACT 路径召回=0；路径关键词误导桶存在",
+    "evidence": "funnel keyword recall RETRACT=0；EXTEND 358 命中/190 家族，最大桶「11.29 产品视频拍摄」28",
+    "affects": "动作召回完整性；误召回"
+   },
+   {
+    "rank": 4,
+    "gap": "生产组装链未闭环（shot_usage=0、模板 4、E2E 编排 CODE_EXISTS）",
+    "evidence": "模板-素材契约未在真实剪辑闭环验证",
+    "affects": "脚本→3 候选成片未实现"
+   },
+   {
+    "rank": 5,
+    "gap": "无授权 Voice/BGM 输入",
+    "evidence": "VOICE_PRODUCTION_INPUT_REQUIRED / BGM_LIBRARY_INPUT_REQUIRED",
+    "affects": "成片音轨只能 fallback/诊断"
+   }
+  ],
+  "9_next_priority": [
+   "A3 人工 ROI(30帧)→blind 预测→scoring(先哈希)",
+   "检索语义层补齐(RETRACT/误导桶)",
+   "shot/timeline/渲染真实闭环(诊断 rough cut)",
+   "自动 ROI 差距实验(A1, 禁碰 A3)",
+   "test_stage2_vision 隔离修复"
+  ],
+  "10_human_actions_tomorrow": [
+   "① A3 30 帧 Human ROI(/a3/roi, blind H001–H006)",
+   "② A3 时间可观测性人工判断(HTML 单选)",
+   "③ 批准 blind 预测/评分 + 可选 BGM/Voice 生产输入"
+  ]
+ }
+}

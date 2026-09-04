@@ -3,7 +3,7 @@
  "start_time": "2026-09-04 19:32:26",
  "baseline_commit": "4fa7612",
  "current_branch": "main",
- "phase": "P3",
+ "phase": "P6",
  "task": "init",
  "status": "running",
  "checkpoints": [
@@ -24,6 +24,12 @@
    "phase": "P3",
    "commit": "7c0891e",
    "note": "contract probe 21 caps + funnel + pool 13460/sample300 + gap map + auto-roi report done"
+  },
+  {
+   "at": "2026-09-04 19:45:11",
+   "phase": "P6",
+   "commit": "b76fce5",
+   "note": "master report + desktop package done; all automatable tasks finished"
   }
  ],
  "tasks": {
@@ -89,7 +95,8 @@
   },
   "P5-tests": {
    "name": "逐文件 bounded pytest 回归矩阵",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:45:11"
   },
   "P5-code-quality": {
    "name": "legacy path / duplicate impl inventory（只读盘点）",
@@ -98,7 +105,8 @@
   },
   "P6-report": {
    "name": "主报告 md+json + 桌面 TreeCut_Overnight_2026-09-05",
-   "status": "pending"
+   "status": "done",
+   "at": "2026-09-04 19:45:11"
   },
   "P6-final": {
    "name": "收尾：停 jobs、无 orphan、final checkpoint、FINAL TERMINAL SUMMARY",
@@ -107,5 +115,5 @@
  },
  "errors": [],
  "storage_health": {},
- "last_checkpoint": "2026-09-04 19:41:19"
+ "last_checkpoint": "2026-09-04 19:45:11"
 }
