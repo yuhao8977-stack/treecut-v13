@@ -161,6 +161,25 @@ class TemporalEvidence:
     motion: MotionMetrics
     requested_action: Action
     model_action: Action = Action.UNKNOWN
+    geometry_direction_evidence: Optional["GeometryDirectionEvidence"] = None
+
+
+@dataclass
+class GeometryDirectionEvidence:
+    """A2.1 — 机器几何方向证据（由 L3_HUMAN_ROI 坐标 + ISLAND_BODY 相对几何推导；
+    与 model_action/Qwen 完全分开；不得把 Human GT 动作当输入）。"""
+    target_object: str
+    instance_id: str
+    frames_used: List[float]
+    visibility_progression: str
+    geometry_change_present: bool
+    relative_motion_present: bool
+    direction_action: str          # DRAWER_OPEN/DRAWER_CLOSE/EXTEND/RETRACT/STATIC/UNKNOWN
+    state_progress: str            # PROGRESSION_UP / STABLE / INSUFFICIENT / UNKNOWN
+    confidence_class: str          # HIGH / MEDIUM / LOW / UNSTABLE_CAMERA
+    reason_codes: List[str] = field(default_factory=list)
+    raw_features: Dict[str, Any] = field(default_factory=dict)
+    camera_unreliable: bool = False
 
 
 @dataclass
@@ -403,6 +422,123 @@ def compensate_pair(prev_bgr: np.ndarray, curr_bgr: np.ndarray):
     est = CameraMotionEstimator()
     m = est.estimate(prev_bgr, curr_bgr)
     return est.compensate(curr_bgr, m), m
+
+
+def bind_target_timeline(boxes_by_t: Dict[float, List[dict]],
+                         binding: Dict[float, Optional[int]]) -> List[dict]:
+    """A2.1 — 按人工 instance binding 取同标签多框中指定的那个框（不允许 hits[0] 串线）。
+    binding: {t_s: 该帧目标框在同标签框列表中的下标 或 None(该帧无动作目标)}。
+    返回按时间排序的 {t_s, bbox_pixel} 列表（跳过 None/越界）。"""
+    out = []
+    for t in sorted(boxes_by_t):
+        i = binding.get(t)
+        lst = boxes_by_t.get(t, [])
+        if i is None or not (0 <= i < len(lst)):
+            continue
+        out.append({"t_s": t, "bbox_pixel": list(lst[i]["bbox_pixel"])})
+    return out
+
+
+# ---- A2.1: 机器几何方向证据（公差为文档化 provisional 参数，非为通过而调）----
+_GEOM_EPS = 0.01          # 数值噪声容差（比值）
+_GEOM_STATIC_TOL = 0.06   # 连续帧特征变化 ≤ 此值视为静止（比值）
+_GEOM_GROWTH_MIN = 0.10   # 首末增长 ≥ 此值视为单调增大（比值）
+_GEOM_GROWTH_FACTOR = 1.15
+
+
+def _family_of(obj: str) -> str:
+    if obj in ("DRAWER", "UPPER_THIN_DRAWER"):
+        return "drawer"
+    if obj in ("TABLETOP", "EXTENSION_TABLETOP"):
+        return "tabletop"
+    return "other"
+
+
+def build_geometry_direction_evidence(
+        object_name: str, instance_id: str,
+        timeline: List[dict],           # [{t_s, bbox_pixel:[x1,y1,x2,y2], island_pixel:[..]|None}]
+        camera_unreliable: bool = False) -> GeometryDirectionEvidence:
+    """由 L3_HUMAN_ROI 坐标（同实例）+ ISLAND_BODY 相对几何推导方向/状态。
+    输入仅: 帧时间戳 + ROI 坐标 + 实例身份 + 岛台几何；绝不使用 Human GT 动作。"""
+    obj = object_name
+    fam = _family_of(obj)
+    feats = []
+    vis = []
+    for it in timeline:
+        bb = it["bbox_pixel"]
+        f = {"t_s": it["t_s"], "cx": (bb[0] + bb[2]) / 2.0, "cy": (bb[1] + bb[3]) / 2.0,
+             "w": bb[2] - bb[0], "h": bb[3] - bb[1], "area": (bb[2] - bb[0]) * (bb[3] - bb[1])}
+        ib = it.get("island_pixel")
+        if ib:
+            ibw = max(1, ib[2] - ib[0]); ibh = max(1, ib[3] - ib[1])
+            f.update({"rel_cx": (f["cx"] - (ib[0] + ib[2]) / 2.0) / ibw,
+                      "rel_cy": (f["cy"] - (ib[1] + ib[3]) / 2.0) / ibh,
+                      "w_ratio": f["w"] / ibw, "h_ratio": f["h"] / ibh,
+                      "area_ratio": f["area"] / (ibw * ibh),
+                      "left_off": (bb[0] - ib[0]) / ibw, "right_off": (bb[2] - ib[2]) / ibw})
+        feats.append(f)
+        vis.append(f["t_s"])
+    frames_used = vis
+    if len(feats) < 2:
+        return GeometryDirectionEvidence(obj, instance_id, frames_used, "INSUFFICIENT", False, False,
+                                         "UNKNOWN", "INSUFFICIENT", "LOW",
+                                         ["GEOMETRY_INSUFFICIENT_FRAMES"], camera_unreliable=camera_unreliable)
+    # 主暴露度代理：抽屉→area/h 增长（朝相机外拉），桌板→w/area 增长（横向伸出）
+    if fam == "drawer":
+        keys = ["area_ratio" if "area_ratio" in feats[0] else "area", "h_ratio" if "h_ratio" in feats[0] else "h"]
+    elif fam == "tabletop":
+        keys = ["w_ratio" if "w_ratio" in feats[0] else "w", "area_ratio" if "area_ratio" in feats[0] else "area"]
+    else:
+        keys = ["area"]
+    seq = []
+    for f in feats:
+        seq.append(max((f.get(k) or 0.0) for k in keys))
+    # 相对运动（rel center / ratio 逐帧变化）
+    rel_moves = []
+    for i in range(1, len(feats)):
+        if "rel_cx" in feats[i] and "rel_cx" in feats[i - 1]:
+            rel_moves.append(max(abs(feats[i]["rel_cx"] - feats[i - 1]["rel_cx"]),
+                                abs(feats[i]["rel_cy"] - feats[i - 1]["rel_cy"]),
+                                abs(feats[i].get("w_ratio", 0) - feats[i - 1].get("w_ratio", 0)),
+                                abs(feats[i].get("h_ratio", 0) - feats[i - 1].get("h_ratio", 0))))
+    relative_motion = bool(rel_moves) and max(rel_moves) > _GEOM_EPS
+    deltas = [seq[i] - seq[i - 1] for i in range(1, len(seq))]
+    growth = seq[-1] - seq[0]
+    monotonic_up = all(d >= -_GEOM_EPS for d in deltas)
+    monotonic_down = all(d <= _GEOM_EPS for d in deltas)
+    max_abs = max(abs(d) for d in deltas) if deltas else 0.0
+    static = max_abs <= _GEOM_STATIC_TOL
+    grew = growth >= _GEOM_GROWTH_MIN or (seq[0] > 0 and seq[-1] / seq[0] >= _GEOM_GROWTH_FACTOR)
+    shrank = growth <= -_GEOM_GROWTH_MIN or (seq[-1] > 0 and seq[0] / seq[-1] >= _GEOM_GROWTH_FACTOR)
+    nvis = len(feats)
+    if fam == "drawer":
+        up_tok, down_tok, static_reason = "DRAWER_OPEN", "DRAWER_CLOSE", "NO_GEOMETRY_PROGRESSION"
+    elif fam == "tabletop":
+        up_tok, down_tok, static_reason = "EXTEND", "RETRACT", "NO_TARGET_GEOMETRY_CHANGE"
+    else:
+        up_tok = down_tok = static_reason = "UNKNOWN"
+    if static:
+        action, state, codes = "STATIC", "STABLE", [static_reason, "GEOMETRY_STATIC"]
+        if not relative_motion:
+            codes.append("RELATIVE_GEOMETRY_STABLE")
+    elif monotonic_up and grew:
+        action, state, codes = up_tok, "PROGRESSION_UP", ["GEOMETRY_MONOTONIC_UP"]
+    elif monotonic_down and shrank:
+        action, state, codes = down_tok, "PROGRESSION_DOWN", ["GEOMETRY_MONOTONIC_DOWN"]
+    else:
+        action, state, codes = "UNKNOWN", "UNKNOWN", ["GEOMETRY_NON_MONOTONIC"]
+    if camera_unreliable:
+        codes.append("CAMERA_UNRELIABLE")
+    confidence = "HIGH" if (nvis >= 3 and "area_ratio" in feats[0] and action != "UNKNOWN" and not camera_unreliable) \
+        else ("MEDIUM" if not camera_unreliable else "UNSTABLE_CAMERA")
+    vis_prog = "VISIBLE_ALL" if nvis == len(timeline) else f"VISIBLE_{nvis}/{len(timeline)}"
+    return GeometryDirectionEvidence(
+        obj, instance_id, frames_used, vis_prog,
+        geometry_change_present=(not static and action != "UNKNOWN"),
+        relative_motion_present=relative_motion,
+        direction_action=action, state_progress=state, confidence_class=confidence,
+        reason_codes=codes, raw_features={"sequence": seq, "per_frame": feats, "deltas": deltas},
+        camera_unreliable=camera_unreliable)
 
 
 # ============================================================
@@ -716,6 +852,62 @@ class TemporalStateValidator:
                     "person_motion": person_motion,
                 },
             )
+
+        # ---- A2.1: MACHINE GEOMETRY DIRECTION/STATE channel（与 model_action 分开）----
+        g = ev.geometry_direction_evidence
+        if g is not None and g.target_object == motion_decision.target and g.frames_used:
+            if g.camera_unreliable or g.confidence_class == "UNSTABLE_CAMERA":
+                mandatory["direction"] = "UNSURE"
+                mandatory["state_transition"] = "UNSURE"
+                return ValidationResult(
+                    Verdict.UNSURE, Support.UNKNOWN,
+                    requested, Action.UNKNOWN, motion_decision.target,
+                    ["CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE"],
+                    mandatory, scores={"target_motion": motion_decision.score},
+                    human_review_required=True)
+            geo_token = g.direction_action
+            if geo_token == "STATIC" or (not g.geometry_change_present and geo_token != "UNKNOWN"):
+                # 证据层级：几何静止 ⇒ 无动作（pixel 运动不能单独证明动作）
+                if requested in (Action.EXTEND, Action.RETRACT):
+                    codes = ["NO_TARGET_GEOMETRY_CHANGE"]
+                elif requested in (Action.DRAWER_OPEN, Action.DRAWER_CLOSE):
+                    codes = ["NO_GEOMETRY_PROGRESSION", "OPEN_STATE_NOT_OPEN_ACTION"]
+                else:
+                    codes = ["NO_GEOMETRY_PROGRESSION"]
+                mandatory["direction"] = "FAIL"
+                mandatory["state_transition"] = "FAIL"
+                return ValidationResult(
+                    Verdict.FAIL, Support.CONTRADICTED,
+                    requested, Action.STATIC, motion_decision.target,
+                    codes, mandatory, scores={"target_motion": motion_decision.score})
+            req_token = requested.value if hasattr(requested, "value") else str(requested)
+            if geo_token == req_token:
+                mandatory["direction"] = "PASS"
+                mandatory["state_transition"] = "PASS"
+                return ValidationResult(
+                    Verdict.PASS, Support.SUPPORTED,
+                    requested, requested, motion_decision.target,
+                    ["TARGET_OBJECT_MOTION", "GEOMETRY_DIRECTION_SUPPORTED"],
+                    mandatory,
+                    optional={"geometry_action": geo_token, "instance_id": g.instance_id},
+                    scores={"target_motion": motion_decision.score})
+            if requested in OPPOSITE and geo_token == (OPPOSITE[requested].value if hasattr(OPPOSITE[requested], "value") else str(OPPOSITE[requested])):
+                mandatory["direction"] = "FAIL"
+                mandatory["state_transition"] = "FAIL"
+                return ValidationResult(
+                    Verdict.FAIL, Support.CONTRADICTED,
+                    requested, OPPOSITE[requested], motion_decision.target,
+                    ["OPPOSITE_GEOMETRY_DIRECTION"],
+                    mandatory, scores={"target_motion": motion_decision.score})
+            # 几何方向存在但与 requested 不匹配/未知 → 保守 UNSURE
+            mandatory["direction"] = "UNSURE"
+            mandatory["state_transition"] = "UNSURE"
+            return ValidationResult(
+                Verdict.UNSURE, Support.UNKNOWN,
+                requested, Action.UNKNOWN, motion_decision.target,
+                ["GEOMETRY_DIRECTION_UNPROVEN"] + g.reason_codes[:2],
+                mandatory, scores={"target_motion": motion_decision.score},
+                human_review_required=True)
 
         # 4. Full explicit transition.
         if observed_by_state == requested:

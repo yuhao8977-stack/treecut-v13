@@ -17,7 +17,14 @@ ROI_FILE = OUT / "TREECUT_MMVV_HUMAN_GT_ROI_A1.json"
 STATE_FILE = OUT / "TREECUT_MMVV_A1_ANNOTATION_STATE.json"
 INDEX = Path(__file__).parent / "index.html"
 AUX_HTML = Path(__file__).parent / "aux52.html"
+A21_HTML = Path(__file__).parent / "a21_bind.html"
 AUX_SELECT_FILE = OUT / "TREECUT_MMVV_A1_AUX52_SELECTION.json"
+A21_BIND_FILE = OUT / "TREECUT_MMVV_A21_TARGET_BINDING.json"
+
+
+def _frames_dir() -> Path:
+    man = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    return Path(man.get("frames_dir"))
 
 
 def _aux_dir() -> Path:
@@ -107,6 +114,26 @@ class Handler(BaseHTTPRequestHandler):
             else:
                 self._send(404, b"aux52.html missing", "text/plain")
             return
+        if path == "/a21/bind":
+            if A21_HTML.exists():
+                self._send(200, A21_HTML.read_bytes(), "text/html; charset=utf-8")
+            else:
+                self._send(404, b"a21_bind.html missing", "text/plain")
+            return
+        if path == "/api/a21/binding":
+            if A21_BIND_FILE.exists():
+                self._send(200, A21_BIND_FILE.read_bytes(), "application/json; charset=utf-8")
+            else:
+                self._json({"media_ids": [52, 109], "bindings": []})
+            return
+        if path.startswith("/a21/frames/"):
+            name = path.rsplit("/", 1)[-1]
+            fp = _frames_dir() / name
+            if fp.exists():
+                self._send(200, fp.read_bytes(), "image/jpeg")
+                return
+            self._send(404, b"frame missing", "text/plain")
+            return
         if path == "/api/aux52/candidates":
             aux = _aux_dir()
             items = []
@@ -154,6 +181,35 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         ln = int(self.headers.get("Content-Length") or 0)
         body = self.rfile.read(ln) if ln else b""
+        if self.path == "/api/a21/binding":
+            try:
+                data = json.loads(body.decode("utf-8"))
+            except Exception:
+                self._json({"ok": False, "error": "bad json"}, 400)
+                return
+            mid = data.get("media_id")
+            t_s = data.get("t_s")
+            idx = data.get("chosen_index")
+            if mid not in (52, 109) or not isinstance(t_s, (int, float)):
+                self._json({"ok": False, "error": "media_id 须 52/109 且 t_s 数字"}, 400)
+                return
+            if idx is not None and not isinstance(idx, int):
+                self._json({"ok": False, "error": "chosen_index 须整数或 null"}, 400)
+                return
+            doc = {"media_ids": [52, 109], "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+                   "bindings": []}
+            if A21_BIND_FILE.exists():
+                doc = json.loads(A21_BIND_FILE.read_text(encoding="utf-8"))
+            doc["bindings"] = [b for b in doc.get("bindings", [])
+                               if not (b["media_id"] == mid and b["t_s"] == t_s)]
+            doc["bindings"].append({"media_id": mid, "t_s": float(t_s),
+                                    "chosen_index": idx,
+                                    "at": time.strftime("%Y-%m-%d %H:%M:%S")})
+            tmp = A21_BIND_FILE.with_suffix(".tmp")
+            tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+            tmp.replace(A21_BIND_FILE)
+            self._json({"ok": True, "bindings": len(doc["bindings"])})
+            return
         if self.path == "/api/aux52/select":
             try:
                 data = json.loads(body.decode("utf-8"))
