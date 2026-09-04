@@ -1,6 +1,8 @@
 """P2.5 多进程并发领取验证：2 个 spawn 进程同时 claim 同一批任务。
 
-用法: python tests/test_claim_multiprocess.py
+用法: python tests/test_claim_multiprocess.py  或  pytest tests/test_claim_multiprocess.py
+（Source Audit R1 P2：原实现逻辑全在 __main__ 导致 pytest 0 collected/rc=5；
+ 已包装为真 test 函数，可被 pytest 收集。）
 """
 from __future__ import annotations
 
@@ -53,39 +55,51 @@ def _claimer(db_path: str, wid: str, out_queue) -> None:
     out_queue.put((wid, claimed))
 
 
-if __name__ == "__main__":
-    base = Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime_data\temp\p25_selftest")
-    base.mkdir(parents=True, exist_ok=True)
-    tmp = Path(tempfile.mkdtemp(prefix="p25_mp_", dir=str(base)))
-    db = _make_db(tmp, n=200)
+def _run_concurrent_claim(tmp_dir: Path, n: int = 200) -> dict:
+    """两个 spawn 进程并发领取 n 个任务；返回统计（重复数/状态分布）。"""
+    db = _make_db(tmp_dir, n=n)
     store = TaskStore(db)
     store.migrate_if_needed()
-    created = 0
-    for i in range(200):
-        created += store.create_task(f"mp_{i:04d}", "asr", stages="asr")
-    print(f"创建任务: {created}")
+    for i in range(n):
+        store.create_task(f"mp_{i:04d}", "asr", stages="asr")
 
     ctx = multiprocessing.get_context("spawn")
     out = ctx.Queue()
     p1 = ctx.Process(target=_claimer, args=(str(db), "worker_a", out))
     p2 = ctx.Process(target=_claimer, args=(str(db), "worker_b", out))
-    p1.start(); p2.start(); p1.join(timeout=60); p2.join(timeout=60)
+    p1.start(); p2.start()
+    p1.join(timeout=90); p2.join(timeout=90)
+    assert p1.exitcode == 0 and p2.exitcode == 0, f"worker 异常退出: {p1.exitcode}/{p2.exitcode}"
 
     results = {}
     for _ in range(2):
-        wid, claimed = out.get(timeout=10)
+        wid, claimed = out.get(timeout=15)
         results[wid] = claimed
     all_claimed = results.get("worker_a", []) + results.get("worker_b", [])
     dupes = len(all_claimed) - len(set(all_claimed))
-    print(f"worker_a 领取: {len(results.get('worker_a', []))}")
-    print(f"worker_b 领取: {len(results.get('worker_b', []))}")
-    print(f"总领取: {len(all_claimed)}  去重后: {len(set(all_claimed))}  重复: {dupes}")
-    print(f"库中任务总数: {store.stats()['total']}")
-    status = store.stats()["by_status"]
-    print(f"状态分布: {status}")
-    assert dupes == 0, "存在重复领取!"
-    assert status.get("processing", 0) == 200, f"应全部被领取: {status}"
-    print("PASS: 多进程并发无双领")
+    return {"db": db, "dupes": dupes, "claimed_total": len(all_claimed),
+            "claimed_unique": len(set(all_claimed)),
+            "by_status": store.stats()["by_status"]}
 
-    import shutil
-    shutil.rmtree(tmp, ignore_errors=True)
+
+def test_concurrent_claim_no_duplicate(tmp_path):
+    # Source Audit R1 P2: 真 pytest（原 __main__ 版 rc=5 零收集）；断言无重复领取、全部被领
+    res = _run_concurrent_claim(tmp_path, n=200)
+    assert res["dupes"] == 0, f"存在重复领取: dupes={res['dupes']}"
+    assert res["by_status"].get("processing", 0) == 200, f"应全部被领取: {res['by_status']}"
+
+
+if __name__ == "__main__":
+    base = Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime_data\temp\p25_selftest")
+    base.mkdir(parents=True, exist_ok=True)
+    tmp = Path(tempfile.mkdtemp(prefix="p25_mp_", dir=str(base)))
+    try:
+        res = _run_concurrent_claim(tmp, n=200)
+        print(f"总领取: {res['claimed_total']}  去重后: {res['claimed_unique']}  重复: {res['dupes']}")
+        print(f"状态分布: {res['by_status']}")
+        assert res["dupes"] == 0, "存在重复领取!"
+        assert res["by_status"].get("processing", 0) == 200, f"应全部被领取: {res['by_status']}"
+        print("PASS: 多进程并发无双领")
+    finally:
+        import shutil
+        shutil.rmtree(tmp, ignore_errors=True)

@@ -26,6 +26,7 @@ from enum import Enum
 from typing import Any, Callable, Dict, Iterable, List, Optional, Protocol, Sequence, Tuple
 import json
 import math
+import os
 import re
 import hashlib
 
@@ -1084,6 +1085,18 @@ class MMVVMode(str, Enum):
     ENFORCEMENT = "ENFORCEMENT"
 
 
+# Source Audit R1 P2: Enforcement 代码锁（不止流程纪律）。
+# 默认禁止 ENFORCEMENT；仅当显式允许（环境变量 TREECUT_MMVV_ENFORCEMENT_ALLOW=1）才可构造。
+# 后续应叠加 Known-Case Gate + Blind-Set Gate + version whitelist 后才真正允许。
+MMVV_ENFORCEMENT_ALLOWED = False
+
+
+def _mmvv_enforcement_allowed() -> bool:
+    if MMVV_ENFORCEMENT_ALLOWED:
+        return True
+    return os.environ.get("TREECUT_MMVV_ENFORCEMENT_ALLOW", "0") == "1"
+
+
 @dataclass
 class ShadowDecision:
     old_decision: str
@@ -1094,6 +1107,11 @@ class ShadowDecision:
 
 class ShadowGate:
     def __init__(self, mode: MMVVMode = MMVVMode.SHADOW):
+        if mode == MMVVMode.ENFORCEMENT and not _mmvv_enforcement_allowed():
+            raise ValueError(
+                "MMVV_ENFORCEMENT_BLOCKED: Enforcement 未获批准（默认禁止）。"
+                "需 Known-Case Gate + Blind-Set Gate + version whitelist + 显式配置"
+                "（TREECUT_MMVV_ENFORCEMENT_ALLOW=1）同时成立才允许。")
         self.mode = mode
 
     def apply(self, old_decision: str, new_decision: str, evidence: Dict[str, Any]):

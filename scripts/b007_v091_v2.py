@@ -70,6 +70,48 @@ def pick_clean(feat_kws, limit=2, exclude=()):
     return out
 
 
+def source_qa_from_db(subclips) -> dict:
+    """Source QA 证据化（Source Audit R1 P0 修复）：不再人工假设 CLEAN/无旧字幕/无水印。
+
+    对实际使用的每个 media_id 只读查询 b007_source_role_v1（G1 表）：
+    role ∈ {PRODUCTION_CLEAN_RAW, PRODUCTION_CLEAN_SEMI} 且 review_status='APPROVED'
+    且 5 个 contamination 字段全为 'ABSENT' → 该媒体判定 OK；否则 NOT_VERIFIED（附原因）。
+    返回 {"CLEAN_SOURCE": True|'NOT_VERIFIED', "OLD_SUBTITLE_ABSENT": ..., "PLATFORM_WATERMARK_ABSENT": ...,
+          "SOURCE_QA_EVIDENCE": "m<id>:OK|NOT_VERIFIED(<reasons>); ..."}
+    """
+    c = sqlite3.connect("file:" + DB.replace("\\", "/") + "?mode=ro", uri=True)
+    mids = sorted({s["media_id"] for s in subclips})
+    rows = {}
+    for m in mids:
+        try:
+            rows[m] = c.execute(
+                "SELECT entity_id, source_role, review_status, burned_subtitle_present, "
+                "platform_watermark_present, old_title_overlay_present, brand_overlay_present, "
+                "unrelated_overlay_present FROM b007_source_role_v1").fetchall()
+        except Exception:
+            rows[m] = []
+    c.close()
+    CLEAN = ("PRODUCTION_CLEAN_RAW", "PRODUCTION_CLEAN_SEMI")
+    verdicts = {}
+    for m in mids:
+        hit = next((r for r in rows.get(m, []) if str(r[0]) == str(m)), None)
+        if hit is None:
+            verdicts[m] = ("NOT_VERIFIED", "no_g1_record")
+            continue
+        role, rs, b, p, o, br, u = hit[1], hit[2], hit[3], hit[4], hit[5], hit[6], hit[7]
+        cont = {"burned": b, "watermark": p, "old_title": o, "brand": br, "unrelated": u}
+        if role in CLEAN and rs == "APPROVED" and all(v == "ABSENT" for v in cont.values()):
+            verdicts[m] = ("OK", "")
+        else:
+            bad = [k for k, v in cont.items() if v != "ABSENT"]
+            verdicts[m] = ("NOT_VERIFIED", f"role={role},review={rs},non_absent={bad or 'none'}")
+    all_ok = all(v == "OK" for v, _ in verdicts.values())
+    flag = True if (all_ok and verdicts) else "NOT_VERIFIED"
+    ev = "; ".join(f"m{mid}:{v}{('(' + r + ')') if r else ''}" for mid, (v, r) in sorted(verdicts.items()))
+    return {"CLEAN_SOURCE": flag, "OLD_SUBTITLE_ABSENT": flag,
+            "PLATFORM_WATERMARK_ABSENT": flag, "SOURCE_QA_EVIDENCE": ev}
+
+
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     t0 = time.time()
@@ -191,8 +233,8 @@ def main() -> int:
                            capture_output=True, timeout=2400)
         burn_ok = b.returncode == 0 and final.exists() and final.stat().st_size > 10000
 
-    # 8) QA（stream 级音画闸）
-    qa = {"CLEAN_SOURCE": True, "OLD_SUBTITLE_ABSENT": True, "PLATFORM_WATERMARK_ABSENT": True}
+    # 8) QA（stream 级音画闸；Source QA 基于 G1 表证据，非假设）
+    qa = source_qa_from_db(subclips)
     if burn_ok:
         p = json.loads(subprocess.run([str(FFPROBE), "-v", "error", "-show_format", "-show_streams",
                                        "-of", "json", str(final)], capture_output=True, timeout=120)
@@ -220,21 +262,30 @@ def main() -> int:
     qa["BGM_PRESENT"] = False   # 无合法 BGM 源 → 记录为限制
     qa["VOICE_SPEED_VALID"] = abs(total - (raw_dur / 1.3)) / (raw_dur / 1.3) < 0.08 if raw_dur else False
     qa["SHOT_PACING_VALID"] = 6 <= len(subclips) <= 12
-    qa["CLAIM_SUPPORTED"] = True   # 每 feature beat 用对应动作片段（薄抽/插座/伸缩）
-    qa["ACTION_VISUAL_MATCH"] = True
-    qa["STORY_ENTITY_CONSISTENT"] = True  # MONTAGE 通用语言
-    qa["BEAT_VISUAL_SYNC"] = True
+    # 语义 QA：Source Audit R1 P0 —— 不得硬编码 True。
+    # 本脚本无 ClaimVisualMatcher/MMVV/action-validation 证据输入 → 一律 NOT_VERIFIED，
+    # 并参与最终状态（未验证不得 READY）。
+    qa["CLAIM_SUPPORTED"] = "NOT_VERIFIED"
+    qa["ACTION_VISUAL_MATCH"] = "NOT_VERIFIED"
+    qa["STORY_ENTITY_CONSISTENT"] = "NOT_VERIFIED"
+    qa["BEAT_VISUAL_SYNC"] = "NOT_VERIFIED"
 
-    # P0 阻塞项：显式 False → NEEDS_REPAIR；仅限制项（BGM/VOICE 等）→ WITH_LIMITATIONS
+    # P0 阻塞项：任一 P0 项不是 True（含 Source QA NOT_VERIFIED）→ NEEDS_REPAIR；
+    # 语义未验证 → SEMANTIC_NOT_VERIFIED（不再给 READY_WITH_LIMITATIONS）。
     P0_KEYS = ("AV_SYNC", "VIDEO_DECODABLE", "AUDIO_PRESENT", "NEW_CAPTION_RENDERED",
                "OLD_SUBTITLE_ABSENT", "PLATFORM_WATERMARK_ABSENT")
-    p0_fail = any(qa.get(k) is False for k in P0_KEYS)
+    SEMANTIC_KEYS = ("CLAIM_SUPPORTED", "ACTION_VISUAL_MATCH", "STORY_ENTITY_CONSISTENT", "BEAT_VISUAL_SYNC")
+    p0_fail = any(qa.get(k) is not True for k in P0_KEYS)
+    semantic_verified = all(qa.get(k) is True for k in SEMANTIC_KEYS)
     if not burn_ok or p0_fail:
         final_status = "B007_PILOT_V2_NEEDS_REPAIR"
+    elif not semantic_verified:
+        final_status = "B007_PILOT_V2_SEMANTIC_NOT_VERIFIED"
     else:
         final_status = "B007_PILOT_V2_READY_WITH_LIMITATIONS"
-    status = "REPAIR" if final_status.endswith("NEEDS_REPAIR") else "PARTIAL"
-    if burn_ok and not p0_fail and qa.get("caption_evidence", {}).get("ok") is True:
+    status = "REPAIR" if "NEEDS_REPAIR" in final_status else (
+        "NOT_VERIFIED" if "NOT_VERIFIED" in final_status else "PARTIAL")
+    if burn_ok and not p0_fail and qa.get("caption_evidence", {}).get("ok") is True and semantic_verified:
         status = "READY_WITH_LIMITATIONS"
 
     # 输出

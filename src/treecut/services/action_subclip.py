@@ -219,7 +219,14 @@ def apply_action_gate(windows: list[ActionWindow], evidence: list[dict],
 
 
 class ActionSubclipService:
-    """读时序证据缓存 → build_windows → 动作门(方向/歧义/最小帧) → 过滤/排序 → TopK。account_id 参数化。"""
+    """读时序证据缓存 → build_windows → 动作门(方向/歧义/最小帧) → 过滤/排序 → TopK。account_id 参数化。
+
+    G1 资格门强制（Source Audit R1 P0 修复）：
+    - find_action_subclips 对每个 media 在处理前调用 eligible_check(mid)（G1 生产源门）；
+      不合格 media 一律排除，不进入窗口构建。
+    - fail-closed：未注入 eligible_check → 抛 RuntimeError(NO_ELIGIBILITY_GATE)。
+      Production 必须注入 ProductionSourceService；测试必须显式注入 Mock Gate。
+    """
 
     def __init__(self, evidence_loader: Callable | None = None, cache_dir: str | None = None,
                  eligible_check: Callable | None = None):
@@ -237,6 +244,11 @@ class ActionSubclipService:
                              scene: str | None = None, duration_target_s: float | None = None,
                              top_k: int = 3, shot_role: str = "action",
                              candidate_media_ids: list[int] | None = None) -> list[dict]:
+        if self.eligible_check is None:
+            raise RuntimeError(
+                "NO_ELIGIBILITY_GATE: ActionSubclipService 必须注入 G1 ProductionSourceService "
+                "资格门（fail-closed）；测试请显式注入 Mock Gate，如 "
+                "eligible_check=lambda mid, kind='media_file': (True, {})")
         ev = self._loader(account_id)
         per_asset: dict[int, list[ActionWindow]] = {}
         by_mid: dict[int, list[dict]] = {}
@@ -244,6 +256,9 @@ class ActionSubclipService:
             by_mid.setdefault(e.get("media_id"), []).append(e)
         for mid, frames in by_mid.items():
             if candidate_media_ids and mid not in candidate_media_ids:
+                continue
+            ok, _info = self.eligible_check(mid)  # G1: 生产源资格强制贯穿（不合格直接排除）
+            if not ok:
                 continue
             wins = build_windows(frames, float(next((x.get("duration_s") or 0) for x in frames if x.get("duration_s")) or 30),
                                  action, media_id=mid,

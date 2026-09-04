@@ -23,13 +23,50 @@ PROJECT_FILE = PROJ_DIR / "TREECUT_WORKBENCH_PROJECT_V1.json"
 INDEX = Path(__file__).parent / "index.html"
 sys.path.insert(0, str(ROOT / "src"))
 
+# Source Audit R1 P1: /file 只允许素材/工作根（防任意路径读取/目录穿越）。
+# 候选路径通常来自: X1 素材盘(UNC)、E 运行时工作目录、reports/storage(项目/帧证据)。
+ALLOWED_ROOTS = [
+    Path(r"\\X1\素材盘01"),
+    Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime"),
+    Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime_data"),
+    PROJ_DIR,
+]
+
+
+def _norm(p: Path) -> str:
+    try:
+        return os.path.normcase(str(p.resolve()))
+    except OSError:
+        return os.path.normcase(str(p))
+
 
 def resolve_local(video_path: str) -> Path | None:
-    """把 UNC/本地路径映射为可访问文件; UNC 需映射盘或直接读(Windows 可读 UNC)。"""
+    """把本地路径映射为可访问文件；仅允许 ALLOWED_ROOTS 内（防目录穿越/任意读）。
+    服务器必须保持 127.0.0.1 监听，不得改为局域网/公网。"""
     if not video_path:
         return None
     p = Path(video_path)
-    return p if p.exists() else None
+    if not p.exists() or not p.is_file():
+        return None
+    rp = _norm(p)
+    for root in ALLOWED_ROOTS:
+        if rp.startswith(_norm(root) + os.sep) or rp == _norm(root):
+            return p
+    return None
+
+
+def _probe_duration(path: str) -> float | None:
+    """ffprobe 取源时长（trim 边界校验用）；失败返回 None。"""
+    import subprocess
+    ffp = Path(r"C:\Users\admin\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.1.1-full_build\bin\ffprobe.exe")
+    if not ffp.exists():
+        return None
+    try:
+        out = subprocess.run([str(ffp), "-v", "error", "-show_entries", "format=duration",
+                              "-of", "csv=p=0", path], capture_output=True, timeout=60)
+        return float(out.stdout.decode("utf-8", errors="replace").strip())
+    except Exception:
+        return None
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -137,12 +174,40 @@ class Handler(BaseHTTPRequestHandler):
                 self._send_json({"ok": False, "error": "no beat"}, 404)
                 return
             if path == "/api/replace":
-                beat["selected"] = data.get("selection")
+                # Source Audit R1 P1: 不得用裸 selection 覆盖候选（丢 actions/object/eligible/
+                # evidence/path/source_role/semantic_correct → 动作型 Claim 本地 QA 必 FAIL）。
+                # 合并: 以原候选元数据为基底，仅更新 media_id/subclip。
+                sel_in = data.get("selection") or {}
+                cand = next((c for c in (beat.get("candidates") or [])
+                             if str(c.get("media_id")) == str(sel_in.get("media_id"))), None)
+                base = dict(cand) if cand else dict(beat.get("selected") or {})
+                base["media_id"] = sel_in.get("media_id")
+                if "subclip" in sel_in:
+                    base["subclip"] = sel_in["subclip"]
+                beat["selected"] = base
             elif path == "/api/trim":
                 sel = beat.get("selected") or {}
+                cand = next((c for c in (beat.get("candidates") or [])
+                             if str(c.get("media_id")) == str(sel.get("media_id"))), None)
+                src_path = (cand or sel or {}).get("path")
+                start = float(data.get("start_s", (sel.get("subclip") or {}).get("start_s", 0)))
+                end = float(data.get("end_s", (sel.get("subclip") or {}).get("end_s", 0)))
+                # Source Audit R1 P1: 真边界校验（原实现只 max(0,start)，称"有界"名不副实）
+                if not (0.0 <= start < end):
+                    self._send_json({"ok": False, "error": f"非法区间 start={start} end={end} (需 0<=start<end)"}, 400)
+                    return
+                dur = _probe_duration(src_path) if src_path else None
+                if dur is not None and end > dur + 0.05:
+                    self._send_json({"ok": False, "error": f"end={end} 超出源时长 {dur:.3f}s"}, 400)
+                    return
+                if dur is None:
+                    self._send_json({"ok": False,
+                                     "error": "无法探测源时长（缺 path 或 ffprobe）——禁止无界裁剪，请先回填 path"},
+                                    400)
+                    return
                 sub = dict(sel.get("subclip") or {})
-                sub["start_s"] = max(0.0, float(data.get("start_s", sub.get("start_s", 0))))
-                sub["end_s"] = float(data.get("end_s", sub.get("end_s", 0)))
+                sub["start_s"] = round(start, 3)
+                sub["end_s"] = round(end, 3)
                 sel["subclip"] = sub
                 beat["selected"] = sel
             # 本机基础重QA(无 qwen/推理; 诚实本地规则)

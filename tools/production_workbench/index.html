@@ -76,6 +76,8 @@ function renderCands(b){
   const onlyElig=fb.querySelector('#eligonly').checked;
   (b.candidates||[]).forEach((c,ci)=>{
     if(onlyElig && c.eligible===false) return;
+    // Source Audit R1 P1: 证据分层展示需先定义 ev（原代码 ev 未定义 → ReferenceError）
+    const ev=(c.evidence||c.ev||{});
     const d=document.createElement('div');
     d.className='cand'+(b.selected&&b.selected.media_id===c.media_id?' selected':'');
     const sc=c.subclip||{};

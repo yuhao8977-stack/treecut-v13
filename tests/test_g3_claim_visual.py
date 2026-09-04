@@ -90,3 +90,27 @@ def test_retract_narration_rejects_socket():
                            action_profile=lambda mid: {"actions": ["SOCKET_INSERT"], "object": "SOCKET"})
     res = m.rank(claim, "INFORMATION_MONTAGE", [cand])
     assert res[0]["status"] == "REJECT"
+
+
+def test_no_eligibility_gate_fails_closed():
+    # Source Audit R1 P0: 不注入 G1 资格门 → fail-closed，绝不默认全放行
+    claim = AtomicClaim(claim_id="C1", beat_id="B1", text="拉开以后变宽", claim_type="ACTION",
+                        required_action="EXTEND")
+    cand = Candidate(media_id=1, object_="TABLETOP", actions=["EXTEND"])
+    m = ClaimVisualMatcher()  # 无 eligible_check
+    res = m.rank(claim, "INFORMATION_MONTAGE", [cand])
+    assert res[0]["status"] == "REJECT"
+    assert any("NO_ELIGIBILITY_GATE" in r for r in res[0]["reasons"])
+
+
+def test_required_object_unproven_when_object_evidence_missing():
+    # Source Audit R1 P0: claim 声明 required_object 但候选对象证据缺失/UNKNOWN → 不得 PASS
+    for bad_obj in (None, "", "UNKNOWN", "unknown", "N/A"):
+        claim = AtomicClaim(claim_id="C1", beat_id="B1", text="轨道插座插拔", claim_type="ACTION",
+                            required_action="SOCKET_INSERT", required_object="TRACK_SOCKET")
+        cand = Candidate(media_id=2, object_=bad_obj, actions=["SOCKET_INSERT"])
+        m = ClaimVisualMatcher(eligible_check=E_OK)
+        res = m.rank(claim, "INFORMATION_MONTAGE", [cand])
+        assert res[0]["status"] == "REJECT", f"object_={bad_obj!r} must not PASS"
+        assert any("REQUIRED_OBJECT_UNPROVEN" in r for r in res[0]["reasons"]), f"object_={bad_obj!r}"
+

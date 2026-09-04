@@ -70,7 +70,7 @@ def test_parse_state_robust():
 
 
 def test_service_topk_ordering_prefers_boundary():
-    svc = ActionSubclipService()
+    svc = ActionSubclipService(eligible_check=lambda mid, kind="media_file": (True, {}))
     svc._default_loader = lambda a: [
         {"media_id": 10, "duration_s": 8.0, "full_path": "p1", "t_s": 0.1, "state": "ACTION_START"},
         {"media_id": 10, "duration_s": 8.0, "full_path": "p1", "t_s": 1.0, "state": "ACTION_IN_PROGRESS"},
@@ -95,3 +95,36 @@ def test_subclip_within_segment_bounds():
               (4.5, "ACTION_END"), (6.0, "OBJECT_PRESENT")])
     w = build_windows(ev, 7.0, "CABINET_OPEN", media_id=12)[0]
     assert 0.0 <= w.subclip_start_s < w.subclip_end_s <= 7.0
+
+
+def test_service_without_gate_fails_closed():
+    # Source Audit R1 P1: 未注入 G1 资格门 → fail-closed（抛错，不静默全放行）
+    svc = ActionSubclipService()
+    try:
+        svc.find_action_subclips("fixture", "EXTEND")
+    except RuntimeError as e:
+        assert "NO_ELIGIBILITY_GATE" in str(e)
+    else:
+        raise AssertionError("bare ActionSubclipService must fail closed")
+
+
+def test_service_gate_excludes_ineligible_media():
+    # Source Audit R1 P1: G1 门真实生效 —— 不合格 media 不进窗口
+    svc = ActionSubclipService(eligible_check=lambda mid, kind="media_file": (True, {}) if mid == 10 else (False, {"reason": "REJECTED"}))
+    svc._loader = lambda a: [
+        {"media_id": 10, "duration_s": 8.0, "full_path": "p1", "t_s": 0.1, "state": "ACTION_START"},
+        {"media_id": 10, "duration_s": 8.0, "full_path": "p1", "t_s": 1.0, "state": "ACTION_IN_PROGRESS"},
+        {"media_id": 10, "duration_s": 8.0, "full_path": "p1", "t_s": 2.0, "state": "ACTION_END"},
+        {"media_id": 10, "duration_s": 8.0, "full_path": "p1", "t_s": 3.0, "state": "OBJECT_PRESENT"},
+        {"media_id": 10, "duration_s": 8.0, "full_path": "p1", "t_s": 1.0,
+         "qwen_l2_raw": "direction=EXTEND", "direction_probe": True},
+        {"media_id": 11, "duration_s": 8.0, "full_path": "p2", "t_s": 3.0, "state": "ACTION_START"},
+        {"media_id": 11, "duration_s": 8.0, "full_path": "p2", "t_s": 4.0, "state": "ACTION_IN_PROGRESS"},
+        {"media_id": 11, "duration_s": 8.0, "full_path": "p2", "t_s": 5.0, "state": "ACTION_END"},
+        {"media_id": 11, "duration_s": 8.0, "full_path": "p2", "t_s": 6.0, "state": "OBJECT_PRESENT"},
+        {"media_id": 11, "duration_s": 8.0, "full_path": "p2", "t_s": 4.0,
+         "qwen_l2_raw": "direction=EXTEND", "direction_probe": True},
+    ]
+    res = svc.find_action_subclips("fixture", "EXTEND", top_k=3)
+    assert all(r["media_id"] == 10 for r in res)  # mid=11 被 G1 门拦截
+    assert len(res) >= 1

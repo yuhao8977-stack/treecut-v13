@@ -4,6 +4,14 @@
 严禁推断：岩板→耐高温、抽屉→静音滑轨、文件夹"伸缩"→动作、ASR插座→视觉插座。
 ACTION 动词(拉/推/打开/关闭/伸缩/收起/插入/抽出/放进去)需时序动作证据。
 account_id 参数化；B007 仅 fixture。
+
+资格门 fail-closed（Source Audit R1 P0 修复）：
+- 未显式注入 eligible_check 时，默认资格门一律返回
+  (False, {"reason": "NO_ELIGIBILITY_GATE"})，候选不进入可 PASS 集合。
+  Production 必须显式注入 ProductionSourceService 资格门；
+  测试必须显式注入 Mock Gate（如 lambda mid, kind="media_file": (True, {})）。
+- claim 声明 required_object 时，若候选对象证据缺失/空/UNKNOWN → 硬闸
+  REQUIRED_OBJECT_UNPROVEN，不得 PASS；UNKNOWN 证据永远不算支持/匹配。
 """
 from __future__ import annotations
 
@@ -124,21 +132,47 @@ class Candidate:
 
 
 class ClaimVisualMatcher:
-    """输入 claim+beat+story_mode+候选 → 硬闸过滤 → 排序 → TopK + 拒绝原因。"""
+    """输入 claim+beat+story_mode+候选 → 硬闸过滤 → 排序 → TopK + 拒绝原因。
+
+    fail-closed 语义：不注入 eligible_check → 候选一律 SOURCE_NOT_ELIGIBLE
+    (NO_ELIGIBILITY_GATE)。Production 必须注入 ProductionSourceService 门；
+    测试必须显式注入 Mock Gate。required_object 主张在对象证据缺失/UNKNOWN 时
+    判 REQUIRED_OBJECT_UNPROVEN（硬闸，不进入可 PASS 集合）。
+    """
+
+    _UNPROVEN_OBJECT = {"", "none", "null", "unknown", "unknown_object", "n/a", "na"}
 
     def __init__(self, eligible_check: Callable | None = None, action_profile: Callable | None = None):
-        self.eligible_check = eligible_check or (lambda mid, kind="media_file": (True, {}))
+        # fail-closed：无门即拒绝，绝不默认放行
+        self.eligible_check = eligible_check if eligible_check is not None else self._no_eligibility_gate
         self.action_profile = action_profile or (lambda mid: {"actions": [], "object": None})
+
+    @staticmethod
+    def _no_eligibility_gate(mid, kind="media_file"):
+        """默认资格门：未注入 G1 生产资格门 → 一律不合格(fail-closed)。"""
+        return False, {"reason": "NO_ELIGIBILITY_GATE"}
+
+    @classmethod
+    def _object_evidence(cls, cd) -> str | None:
+        """候选对象证据：缺失/空/UNKNOWN 一律视为无证据(不得当支持)。"""
+        obj = cd.object_
+        if obj is None:
+            return None
+        key = str(obj).strip().lower()
+        if key in cls._UNPROVEN_OBJECT:
+            return None
+        return str(obj).strip()
 
     def rank(self, claim: AtomicClaim, story_mode: str, candidates: list[Candidate],
              already_used: list | None = None, top_k: int = 3) -> list[dict]:
         results = []
         for cd in candidates:
             rejects = []
-            # 硬闸1: 生产资格
+            # 硬闸1: 生产资格 (fail-closed: 未注入门 → NO_ELIGIBILITY_GATE)
             ok, info = self.eligible_check(cd.media_id)
             if not ok:
-                rejects.append(f"SOURCE_NOT_ELIGIBLE:{info.get('reasons')}")
+                why = (info or {}).get("reason") or (info or {}).get("reasons")
+                rejects.append(f"SOURCE_NOT_ELIGIBLE:{why}")
             # 硬闸2: 动作匹配(ACTION 主张) — R1: 反向动作确定性拒绝
             prof = self.action_profile(cd.media_id) or {}
             cand_actions = set(prof.get("actions") or cd.actions or [])
@@ -153,12 +187,17 @@ class ClaimVisualMatcher:
                         rejects.append(f"DOMINANT_VISUAL_MISMATCH: claim {claim.required_action} vs dominant {dom}")
                     else:
                         rejects.append(f"REQUIRED_ACTION_MISSING:{claim.required_action}(cand={sorted(cand_actions)})")
-            # 硬闸3: 对象
-            if claim.required_object and cd.object_ and claim.required_object != cd.object_:
-                if claim.required_object == "UPPER_THIN_DRAWER" and cd.object_ == "DRAWER":
-                    rejects.append("THIN_DRAWER_UNVERIFIED:upper-position/thin-geometry not evidenced")
-                else:
-                    rejects.append(f"OBJECT_MISMATCH:need {claim.required_object} got {cd.object_}")
+            # 硬闸3: 对象 (required_object 主张: 无对象证据/UNKNOWN → 硬闸 REQUIRED_OBJECT_UNPROVEN)
+            if claim.required_object:
+                obj_ev = self._object_evidence(cd)
+                if obj_ev is None:
+                    rejects.append(f"REQUIRED_OBJECT_UNPROVEN:claim needs {claim.required_object} "
+                                   f"but candidate object evidence missing/UNKNOWN")
+                elif claim.required_object != obj_ev:
+                    if claim.required_object == "UPPER_THIN_DRAWER" and obj_ev == "DRAWER":
+                        rejects.append("THIN_DRAWER_UNVERIFIED:upper-position/thin-geometry not evidenced")
+                    else:
+                        rejects.append(f"OBJECT_MISMATCH:need {claim.required_object} got {obj_ev}")
             # 硬闸4: 故事一致性
             if story_mode == "SINGLE_CASE" and cd.case_id and claim.required_context and \
                     cd.case_id != claim.required_context:

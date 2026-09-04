@@ -51,13 +51,22 @@ def gray(f):
     return cv2.cvtColor(f, cv2.COLOR_BGR2GRAY)
 
 def camera_stage(a, b):
-    """L1 translation(phaseCorrelate); 残差高→L2 affine(estimateAffinePartial2D/LK)。返回 (warped_b, CameraMotion)"""
+    """L1 translation(phaseCorrelate); 残差高→L2 affine(estimateAffinePartial2D/LK)。返回 (warped_b, CameraMotion)
+
+    Source Audit R1 P1 修复（方向实证，2026-09-04 synthetic sign check）：
+    - phaseCorrelate(a,b) 返回 b 相对 a 的位移 (dx,dy)；把 b 对齐回 a 需 warp 用 (-dx,-dy)
+      （原实现用 +dx 沿相机方向叠加，残差反而放大）。
+    - estimateAffinePartial2D(pa,pb)（pa=prev, pb=curr）给出 prev→curr 变换；
+      对齐 current→previous 需 warpAffine(b, invertAffineTransform(Ma))，不得用 fwd Ma。
+    matrix 仍记录相机运动（prev→curr），对齐一律用逆变换。
+    """
     ga, gb = gray(a), gray(b)
     wa = np.zeros_like(gb, dtype=np.float32)
     sh, shp = cv2.phaseCorrelate(np.float32(ga), np.float32(gb))
     dx, dy = sh[0], sh[1]
-    M = np.float32([[1, 0, dx], [0, 1, dy]])
-    wb = cv2.warpAffine(b, M, (b.shape[1], b.shape[0]))  # 彩色 warp
+    M = np.float32([[1, 0, dx], [0, 1, dy]])          # 相机运动 prev→curr
+    Malign = np.float32([[1, 0, -dx], [0, 1, -dy]])   # 对齐 current→previous
+    wb = cv2.warpAffine(b, Malign, (b.shape[1], b.shape[0]))  # 彩色 warp
     resid = float(np.abs(gray(wb).astype(np.float32) - ga.astype(np.float32)).mean() / 40.0)
     ctype, matrix, inl = "translation", M.tolist(), 1.0
     if resid > 0.12:  # 残差高 → affine
@@ -70,7 +79,7 @@ def camera_stage(a, b):
                 if len(pa) >= 10:
                     Ma, inl = cv2.estimateAffinePartial2D(pa, pb)
                     if Ma is not None:
-                        wb = cv2.warpAffine(b, Ma, (b.shape[1], b.shape[0]))
+                        wb = cv2.warpAffine(b, cv2.invertAffineTransform(Ma), (b.shape[1], b.shape[0]))
                         resid = float(np.abs(gray(wb).astype(np.float32) - ga.astype(np.float32)).mean() / 40.0)
                         ctype, matrix, inl = "affine", Ma.tolist(), float(inl)
         except Exception:
