@@ -1,0 +1,24 @@
+{
+ "media_id": 52,
+ "window": [
+  7.5,
+  10.0
+ ],
+ "generated_at": "2026-09-04 16:27:02",
+ "chosen": [
+  {
+   "role": "AUX2",
+   "t_s": 7.75,
+   "frame": "m52_aux_7_75.jpg",
+   "selected_by": "ARCHITECT",
+   "at": "2026-09-04 16:28:09"
+  },
+  {
+   "role": "AUX1",
+   "t_s": 8.0,
+   "frame": "m52_aux_8_0.jpg",
+   "selected_by": "ARCHITECT",
+   "at": "2026-09-04 16:28:20"
+  }
+ ]
+}

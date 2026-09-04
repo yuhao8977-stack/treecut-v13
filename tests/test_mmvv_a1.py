@@ -61,9 +61,10 @@ def test_per_frame_roi_not_static_assumption():
     man = _man()
     for c in man["cases"]:
         ts = [f["t_s"] for f in c["frames"] if "error" not in f]
-        assert len(ts) == 5 and len(set(ts)) == 5, f"media {c['media_id']} 需 5 个不同时间戳帧"
+        # 原 5 帧 + media52 人工选中的最多 2 张辅助帧（A1.1）
+        assert 5 <= len(ts) <= 7, f"media {c['media_id']} 需 5~7 个不同时间戳帧"
+        assert len(set(ts)) == len(ts), f"media {c['media_id']} 时间戳重复"
         assert ts == sorted(ts)
-    # ROI 记录逐帧键控（frame_timestamp），不假设单帧静态框
     assert "annotations" in _roi()
 
 
@@ -77,15 +78,21 @@ def test_roi_coordinate_bounds():
 
 
 def test_required_object_annotations_present():
-    # 契约: 每动作必需目标对象集合存在（A1_READY 判定基础；当前人工未标=0 属预期）
+    # 契约: 每案例必需目标对象族(any-of)必须已在人工 ROI 中出现
     man = _man()
+    roi = _roi()["annotations"]
     for c in man["cases"]:
         req = a1.REQUIRED_OBJECTS.get(c["requested"], ())
         assert req, f"未知 requested {c['requested']}"
+        present = {a["object_name"] for a in roi if a["media_id"] == c["media_id"]}
+        assert any(r in present for r in req), \
+            f"media {c['media_id']} 缺少必需对象 {req} (present={sorted(present)})"
     state = json.loads(STATE_FILE.read_text(encoding="utf-8"))
     assert len(state["cases"]) == 6
-    # 目前人工尚未标注（0 整例）——A1 未 READY，正确
-    assert sum(1 for c in state["cases"] if c["fully_annotated"]) == 0
+    # 每个案例原 5 帧均已标注（52 的 2 张辅助帧可能待补，故用 ≥5 判定）
+    for c in state["cases"]:
+        annotated = sum(1 for f in c["frames"] if f.get("annotated"))
+        assert annotated >= 5, f"media {c['media_id']} 已标注帧 {annotated} < 5"
 
 
 def test_reload_annotation_deterministic():
