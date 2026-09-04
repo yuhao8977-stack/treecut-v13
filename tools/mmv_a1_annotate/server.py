@@ -16,6 +16,13 @@ MANIFEST = OUT / "TREECUT_MMVV_A1_FRAME_MANIFEST.json"
 ROI_FILE = OUT / "TREECUT_MMVV_HUMAN_GT_ROI_A1.json"
 STATE_FILE = OUT / "TREECUT_MMVV_A1_ANNOTATION_STATE.json"
 INDEX = Path(__file__).parent / "index.html"
+AUX_HTML = Path(__file__).parent / "aux52.html"
+AUX_SELECT_FILE = OUT / "TREECUT_MMVV_A1_AUX52_SELECTION.json"
+
+
+def _aux_dir() -> Path:
+    man = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    return Path(man.get("frames_dir")) / "aux52"
 
 LABELS = ["TABLETOP", "EXTENSION_TABLETOP", "DRAWER", "UPPER_THIN_DRAWER", "TRACK_SOCKET",
           "SOCKET_MODULE", "PERSON", "HAND", "ISLAND_BODY", "OTHER_MOVING_PART"]
@@ -94,6 +101,31 @@ class Handler(BaseHTTPRequestHandler):
         if path in ("/", "/index.html"):
             self._send(200, INDEX.read_bytes(), "text/html; charset=utf-8")
             return
+        if path == "/aux52":
+            if AUX_HTML.exists():
+                self._send(200, AUX_HTML.read_bytes(), "text/html; charset=utf-8")
+            else:
+                self._send(404, b"aux52.html missing", "text/plain")
+            return
+        if path == "/api/aux52/candidates":
+            aux = _aux_dir()
+            items = []
+            for fp in sorted(aux.glob("m52_aux_*.jpg")):
+                items.append({"frame": fp.name, "bytes": fp.stat().st_size})
+            sel = {}
+            if AUX_SELECT_FILE.exists():
+                sel = json.loads(AUX_SELECT_FILE.read_text(encoding="utf-8"))
+            self._json({"window": [7.5, 10.0], "step_s": 0.25, "candidates": items,
+                        "selection": sel.get("chosen", []), "media_id": 52})
+            return
+        if path.startswith("/aux52/frames/"):
+            name = path.rsplit("/", 1)[-1]
+            fp = _aux_dir() / name
+            if fp.exists():
+                self._send(200, fp.read_bytes(), "image/jpeg")
+                return
+            self._send(404, b"aux frame missing", "text/plain")
+            return
         if path == "/api/manifest":
             self._send(200, MANIFEST.read_bytes(), "application/json; charset=utf-8")
             return
@@ -122,6 +154,35 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         ln = int(self.headers.get("Content-Length") or 0)
         body = self.rfile.read(ln) if ln else b""
+        if self.path == "/api/aux52/select":
+            try:
+                data = json.loads(body.decode("utf-8"))
+            except Exception:
+                self._json({"ok": False, "error": "bad json"}, 400)
+                return
+            role = data.get("role")
+            t_s = data.get("t_s")
+            if role not in ("AUX1", "AUX2") or not isinstance(t_s, (int, float)):
+                self._json({"ok": False, "error": "role 须为 AUX1/AUX2 且 t_s 为数字"}, 400)
+                return
+            aux = _aux_dir()
+            hit = next((fp for fp in aux.glob("m52_aux_*.jpg")
+                        if abs(float(fp.stem.replace("m52_aux_", "").replace("_", ".")) - float(t_s)) < 1e-6), None)
+            if hit is None:
+                self._json({"ok": False, "error": f"候选不存在 t_s={t_s}"}, 404)
+                return
+            doc = {"media_id": 52, "window": [7.5, 10.0],
+                   "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"), "chosen": []}
+            if AUX_SELECT_FILE.exists():
+                doc = json.loads(AUX_SELECT_FILE.read_text(encoding="utf-8"))
+            doc["chosen"] = [c for c in doc.get("chosen", []) if c.get("role") != role]
+            doc["chosen"].append({"role": role, "t_s": float(t_s), "frame": hit.name,
+                                  "selected_by": "ARCHITECT", "at": time.strftime("%Y-%m-%d %H:%M:%S")})
+            tmp = AUX_SELECT_FILE.with_suffix(".tmp")
+            tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+            tmp.replace(AUX_SELECT_FILE)
+            self._json({"ok": True, "chosen": doc["chosen"]})
+            return
         if self.path == "/api/rois/save":
             try:
                 data = json.loads(body.decode("utf-8"))

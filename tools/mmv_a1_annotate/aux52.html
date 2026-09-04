@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8"/>
+<title>media52 辅助帧选择（抽屉拉出过程）</title>
+<style>
+ body{font-family:'Microsoft YaHei',sans-serif;margin:0;background:#f5f6f8;color:#222}
+ header{padding:10px 18px;background:#1f2937;color:#fff}
+ h1{font-size:16px;margin:0 0 4px}
+ .note{font-size:13px;color:#ddd}
+ .wrap{padding:14px}
+ .cand{display:inline-block;border:2px solid #ccc;border-radius:8px;margin:6px;padding:6px;background:#fff;vertical-align:top;text-align:center}
+ .cand img{width:200px;display:block;border:1px solid #eee}
+ .cand .t{font-size:12px;margin:4px 0}
+ .cand button{display:block;width:100%;margin:3px 0;padding:4px;border-radius:6px;border:1px solid #999;cursor:pointer;background:#fff}
+ .cand.AUX1{border-color:#0a7a0a;background:#effaf0}
+ .cand.AUX2{border-color:#b26a00;background:#fff7e8}
+ .cand button.used{opacity:.5;pointer-events:none}
+ .sel{background:#fff8e1;border:1px solid #f0d070;border-radius:8px;padding:10px;margin:10px 0;font-size:14px}
+ .ok{position:fixed;bottom:18px;right:18px;background:#333;color:#fff;padding:8px 14px;border-radius:6px;display:none}
+</style></head>
+<body>
+<header><h1>media52 辅助帧选择（AUX1 + AUX2，人工选，不自动选）</h1>
+  <div class="note">窗口 [7.5s, 10.0s] 每 0.25s 一张候选。请选 2 张：
+    <b>AUX1</b>=抽屉第一次清晰出现、且正在向外运动；<b>AUX2</b>=抽屉已明显拉出但尚未完全打开（仍在运动中）。</div></header>
+<div class="wrap">
+  <div class="sel" id="selinfo">当前选择：无（AUX1/AUX2 各选 1 张）</div>
+  <div id="grid"></div>
+</div>
+<div class="ok" id="ok"></div>
+<script>
+const $=s=>document.querySelector(s);
+let chosen=[];
+async function load(){
+  const d=await (await fetch('/api/aux52/candidates')).json();
+  chosen=d.selection||[];
+  const g=$('#grid');g.innerHTML='';
+  d.candidates.forEach(c=>{
+    const div=document.createElement('div');div.className='cand';
+    const t=parseFloat(c.frame.replace('m52_aux_','').replace('.jpg','').replace(/_/g,'.'));
+    div.innerHTML=`<img src="/aux52/frames/${c.frame}"/><div class="t">t=${t}s</div>`;
+    const b1=document.createElement('button');b1.textContent='选为 AUX1（首次清晰出现+正外移）';
+    const b2=document.createElement('button');b2.textContent='选为 AUX2（明显拉出未完全打开）';
+    b1.onclick=()=>pick('AUX1',t);
+    b2.onclick=()=>pick('AUX2',t);
+    div.appendChild(b1);div.appendChild(b2);
+    g.appendChild(div);
+    mark(div,c.frame);
+  });
+  renderSel();
+}
+function mark(div,frame){
+  const c=chosen.find(x=>x.frame===frame);
+  if(c){div.classList.add(c.role);div.querySelectorAll('button').forEach(b=>b.classList.add('used'));}
+}
+function renderSel(){
+  $('#selinfo').innerHTML='当前选择：'+(chosen.length?chosen.map(c=>`<b>${c.role}</b> @ ${c.t_s}s（${c.frame}）`).join('；'):'无（AUX1/AUX2 各选 1 张）');
+}
+async function pick(role,t){
+  const r=await fetch('/api/aux52/select',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({role:role,t_s:t})});
+  const j=await r.json();
+  const m=$('#ok');m.textContent=j.ok?`已保存：${role} @ ${t}s`:'保存失败：'+(j.error||'');m.style.display='block';setTimeout(()=>m.style.display='none',2000);
+  if(j.ok)load();
+}
+load();
+</script></body></html>
