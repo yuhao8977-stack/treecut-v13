@@ -1,0 +1,62 @@
+{
+ "annotation_version": "A1",
+ "source": "L3_HUMAN_ROI",
+ "generated_at": "2026-09-04 12:06:43",
+ "note": "evidence-only；不覆盖 L2_QWEN/HEURISTIC；几何变化是证据非自动真值",
+ "cases": [
+  {
+   "media_id": 51,
+   "requested": "EXTEND",
+   "frozen_window_s": [
+    0.0,
+    10.0
+   ],
+   "objects": {}
+  },
+  {
+   "media_id": 52,
+   "requested": "DRAWER_OPEN",
+   "frozen_window_s": [
+    0.0,
+    10.0
+   ],
+   "objects": {}
+  },
+  {
+   "media_id": 89,
+   "requested": "EXTEND",
+   "frozen_window_s": [
+    0.0,
+    7.12
+   ],
+   "objects": {}
+  },
+  {
+   "media_id": 109,
+   "requested": "DRAWER_OPEN",
+   "frozen_window_s": [
+    0.0,
+    5.8
+   ],
+   "objects": {}
+  },
+  {
+   "media_id": 1985,
+   "requested": "EXTEND",
+   "frozen_window_s": [
+    1.9,
+    4.4
+   ],
+   "objects": {}
+  },
+  {
+   "media_id": 1986,
+   "requested": "EXTEND",
+   "frozen_window_s": [
+    1.9,
+    4.4
+   ],
+   "objects": {}
+  }
+ ]
+}

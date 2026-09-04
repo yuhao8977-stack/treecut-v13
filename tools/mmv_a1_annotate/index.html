@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8"/>
+<title>MMVV A1 — Human GT ROI 标注</title>
+<style>
+ body{font-family:'Microsoft YaHei',sans-serif;margin:0;background:#f5f6f8;color:#222}
+ header{padding:10px 18px;background:#1f2937;color:#fff;display:flex;gap:16px;align-items:center}
+ header h1{font-size:16px;margin:0}
+ .wrap{display:flex;height:calc(100vh - 52px)}
+ .left{width:300px;border-right:1px solid #ddd;background:#fff;overflow:auto;padding:10px}
+ .right{flex:1;overflow:auto;padding:12px;text-align:center}
+ .case{border:1px solid #ddd;border-radius:8px;margin-bottom:10px;padding:8px;cursor:pointer}
+ .case.active{border-color:#1a73e8;background:#eef4ff}
+ .case .mid{font-weight:bold}.case .st{font-size:12px;color:#555}
+ .frameTab{display:inline-block;padding:6px 12px;margin:2px;border:1px solid #ccc;border-radius:6px;cursor:pointer;background:#fff}
+ .frameTab.active{background:#1a73e8;color:#fff}
+ .frameTab.done{background:#cde7cd}
+ canvas{border:1px solid #888;max-width:100%;background:#000;cursor:crosshair}
+ .boxlist{text-align:left;font-size:12px;max-height:200px;overflow:auto}
+ .tools{display:flex;gap:8px;margin:8px 0;flex-wrap:wrap;align-items:center}
+ button{padding:4px 10px;border-radius:6px;border:1px solid #999;cursor:pointer;background:#fff}
+ button.primary{background:#1a73e8;color:#fff;border-color:#1a73e8}
+ .facts{background:#fff8e1;border:1px solid #f0d070;padding:8px;border-radius:6px;font-size:12px;text-align:left;margin:8px 0}
+ .msg{position:fixed;bottom:18px;right:18px;background:#333;color:#fff;padding:8px 14px;border-radius:6px;display:none}
+</style></head>
+<body>
+<header><h1>MMVV A1 Human GT ROI 标注</h1>
+  <span style="font-size:12px">仅 6 案例 · 30 帧 · 只存 L3_HUMAN_ROI（无 Qwen/heuristic）</span>
+  <span id="stat" style="font-size:12px"></span></header>
+<div class="wrap">
+ <div class="left" id="cases"></div>
+ <div class="right">
+   <div id="frameTabs"></div>
+   <div class="tools">
+     <label>新框标签:
+       <select id="labelSel"></select></label>
+     <button id="btnAddMode" class="primary">开始画框</button>
+     <button id="btnDel">删除选中框</button>
+     <button id="btnClear">清空本帧</button>
+     <button id="btnSave" class="primary">保存本帧</button>
+     <span style="font-size:12px">(拖拽=画框；点击已有框=选中；选中后可拖动/删除)</span>
+   </div>
+   <canvas id="cv"></canvas>
+   <div class="facts" id="facts"></div>
+   <div class="boxlist" id="boxlist"></div>
+ </div>
+</div>
+<div class="msg" id="msg"></div>
+<script>
+const LABELS=["TABLETOP","EXTENSION_TABLETOP","DRAWER","UPPER_THIN_DRAWER","TRACK_SOCKET","SOCKET_MODULE","PERSON","HAND","ISLAND_BODY","OTHER_MOVING_PART"];
+let MAN=null, ROI=null, cur={mid:null,frame:null};
+let boxes=[], selBox=-1, drawing=false, drag=false, dragStart=null;
+const $=s=>document.querySelector(s);
+const img=new Image();
+const cv=$('#cv'), ctx=cv.getContext('2d');
+let scale=1;
+
+async function jget(u){const r=await fetch(u);return r.json();}
+function msg(t){const m=$('#msg');m.textContent=t;m.style.display='block';setTimeout(()=>m.style.display='none',2200);}
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+async function init(){
+  $('#labelSel').innerHTML=LABELS.map(l=>`<option>${l}</option>`).join('');
+  MAN=await jget('/api/manifest');
+  ROI=await jget('/api/rois');
+  drawCases(); pick(MAN.cases[0], MAN.cases[0].frames[0]);
+  refreshStat();
+}
+function drawCases(){
+  const el=$('#cases');el.innerHTML='';
+  MAN.cases.forEach(c=>{
+    const d=document.createElement('div');d.className='case';
+    d.innerHTML=`<div class="mid">media ${c.media_id} · ${esc(c.requested)}</div>
+      <div class="st">${esc(c.desc||'')}<br/>窗口 [${c.frozen_window_s[0]},${c.frozen_window_s[1]}]s</div>`;
+    d.onclick=()=>{document.querySelectorAll('.case').forEach(x=>x.classList.remove('active'));d.classList.add('active');pick(c,c.frames[0]);};
+    el.appendChild(d);
+  });
+}
+function refreshStat(){
+  const done=MAN.cases.filter(c=>c.frames.every(f=>ROI.annotations.some(a=>a.media_id===c.media_id&&a.frame_timestamp===f.t_s)));
+  $('#stat').textContent=`已整例标注 ${done.length}/${MAN.cases.length}`;
+}
+function pick(c,f){
+  cur={mid:c.media_id,frame:f};
+  $('#facts').innerHTML=`<b>media ${c.media_id} · ${esc(c.requested)}</b> · 窗口[${c.frozen_window_s[0]},${c.frozen_window_s[1]}]s<br/>
+    人工事实(独立字段): ${esc(JSON.stringify(c.human_facts||{}))}`;
+  document.querySelectorAll('.frameTab').forEach(x=>x.classList.remove('active'));
+  loadFrame();
+}
+async function loadFrame(){
+  const c=MAN.cases.find(x=>x.media_id===cur.mid);
+  $('#frameTabs').innerHTML='';
+  c.frames.forEach(f=>{
+    const b=document.createElement('span');b.className='frameTab';
+    const n=ROI.annotations.filter(a=>a.media_id===cur.mid&&a.frame_timestamp===f.t_s).length;
+    b.textContent=`${f.frame.replace('.jpg','')}${n?` (${n})`:''}`;
+    if(n)b.classList.add('done');
+    b.onclick=()=>{cur.frame=f;loadFrame();};
+    $('#frameTabs').appendChild(b);
+  });
+  const f=c.frames.find(x=>x.t_s===cur.frame.t_s)||c.frames[0];cur.frame=f;
+  const fr=await jget('/frames/'+f.frame);
+  img.onload=()=>{ cv.width=img.naturalWidth;cv.height=img.naturalHeight;scale=Math.min(1,(cv.parentElement.clientWidth-30)/cv.width);redraw(); };
+  img.src='/frames/'+f.frame;
+  boxes=ROI.annotations.filter(a=>a.media_id===cur.mid&&a.frame_timestamp===f.t_s)
+    .map(a=>({...a,px:a.bbox_pixel}));
+  selBox=-1;drawBoxList();
+}
+function redraw(){
+  ctx.clearRect(0,0,cv.width,cv.height);
+  ctx.drawImage(img,0,0);
+  boxes.forEach((b,i)=>{
+    ctx.strokeStyle=i===selBox?'#ff3b30':'#1a73e8';ctx.lineWidth=i===selBox?3:2;
+    ctx.strokeRect(b.px[0],b.px[1],b.px[2]-b.px[0],b.px[3]-b.px[1]);
+    ctx.fillStyle='rgba(26,115,232,.15)';ctx.fillRect(b.px[0],b.px[1],b.px[2]-b.px[0],b.px[3]-b.px[1]);
+    ctx.font='15px sans-serif';ctx.fillStyle=ctx.strokeStyle;
+    ctx.fillText(b.object_name,b.px[0]+2,Math.max(14,b.px[1]-4));
+  });
+}
+function evPos(ev){const r=cv.getBoundingClientRect();return {x:(ev.clientX-r.left)*cv.width/r.width,y:(ev.clientY-r.top)*cv.height/r.height};}
+cv.addEventListener('mousedown',ev=>{
+  const p=evPos(ev);
+  const hit=boxes.map((b,i)=>({i,b})).reverse().find(({b})=>p.x>=b.px[0]&&p.x<=b.px[2]&&p.y>=b.px[1]&&p.y<=b.px[3]);
+  if(hit){selBox=hit.i;drag=true;dragStart={x:p.x-hit.b.px[0],y:p.y-hit.b.px[1]};redraw();drawBoxList();}
+  else if(drawing){boxes.push({px:[p.x,p.y,p.x,p.y],object_name:$('#labelSel').value});selBox=boxes.length-1;drawing=false;redraw();}
+});
+cv.addEventListener('mousemove',ev=>{
+  const p=evPos(ev);
+  if(drag&&selBox>=0){const b=boxes[selBox];const w=b.px[2]-b.px[0],h=b.px[3]-b.px[1];
+    let x=p.x-dragStart.x,y=p.y-dragStart.y;
+    x=Math.max(0,Math.min(cv.width-w,x));y=Math.max(0,Math.min(cv.height-h,y));
+    b.px=[x,y,x+w,y+h];redraw();}
+});
+cv.addEventListener('mouseup',()=>{drag=false;});
+$('#btnAddMode').onclick=()=>{selBox=-1;drawing=true;msg('在画面上按下并拖动画出新框');};
+$('#btnDel').onclick=()=>{if(selBox>=0){boxes.splice(selBox,1);selBox=-1;redraw();drawBoxList();}};
+$('#btnClear').onclick=()=>{boxes=[];selBox=-1;redraw();drawBoxList();};
+$('#btnSave').onclick=async()=>{
+  const f=cur.frame;
+  const payload={media_id:cur.mid,frame_timestamp:f.t_s,rois:boxes.map(b=>({object_name:b.object_name,bbox_pixel:b.px}))};
+  const r=await fetch('/api/rois/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  const j=await r.json();
+  if(j.ok){ROI=await jget('/api/rois');msg(`已保存 ${j.saved} 框 → ${j.frame}`);refreshStat();drawBoxList();}
+  else msg('保存失败: '+j.error);
+};
+function drawBoxList(){
+  const el=$('#boxlist');el.innerHTML='<b>本帧框：</b>';
+  if(!boxes.length){el.innerHTML+=' 无（开始框选）';redraw();return;}
+  boxes.forEach((b,i)=>{
+    const d=document.createElement('span');d.style.cssText='display:inline-block;margin:2px 8px 2px 0;border:1px solid #ccc;padding:2px 6px;border-radius:6px;';
+    const sel=document.createElement('select');sel.innerHTML=LABELS.map(l=>`<option ${l===b.object_name?'selected':''}>${l}</option>`).join('');
+    sel.onchange=()=>{b.object_name=sel.value;redraw();};
+    const del=document.createElement('button');del.textContent='✕';del.onclick=()=>{boxes.splice(i,1);drawBoxList();};
+    const lab=document.createElement('span');lab.textContent=`#${i} [${Math.round(b.px[0])},${Math.round(b.px[1])},${Math.round(b.px[2])},${Math.round(b.px[3])}]`;
+    d.appendChild(sel);d.appendChild(del);d.appendChild(lab);
+    el.appendChild(d);
+  });
+  redraw();
+}
+init();
+</script></body></html>

@@ -1,0 +1,427 @@
+{
+ "generated_at": "2026-09-04 12:04:28",
+ "sampling": "5 frames per case, ts = s + i*(e-s)/(4), i=0..4",
+ "frames_dir": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames",
+ "cases": [
+  {
+   "media_id": 51,
+   "requested": "EXTEND",
+   "desc": "静态产品讲解",
+   "frozen_window_s": [
+    0.0,
+    10.0
+   ],
+   "source_duration_s": 14.234,
+   "original_width": 1728,
+   "original_height": 3072,
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛头上层薄抽收纳】01\\【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛头上层薄抽收纳】01-1.mp4",
+   "human_facts": {
+    "requested": "EXTEND",
+    "actual": "STATIC_PRODUCT_PRESENTATION"
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m51_0.jpg",
+     "t_s": 0.0,
+     "sha256": "d939753d6ac6d2cc1d2cd630b11a1418e01e84a713557ce22399c9e9652fe860",
+     "width": 810,
+     "height": 1440,
+     "bytes": 175585,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m51_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m51_1.jpg",
+     "t_s": 2.5,
+     "sha256": "610273ea1e8fe0aed20e4afb70565a6c09cf1f2eba2db4f1514ea32cbf54c040",
+     "width": 810,
+     "height": 1440,
+     "bytes": 183945,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m51_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m51_2.jpg",
+     "t_s": 5.0,
+     "sha256": "1ab3d30ba28aa30b07e8e9ff680caec63f364468952ae399f8a6d41605be8c26",
+     "width": 810,
+     "height": 1440,
+     "bytes": 189680,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m51_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m51_3.jpg",
+     "t_s": 7.5,
+     "sha256": "6218ce1cceeec3f255689b5bf484eef481111e12ff6cc48c6c3298d19cf6e10f",
+     "width": 810,
+     "height": 1440,
+     "bytes": 182678,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m51_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m51_4.jpg",
+     "t_s": 10.0,
+     "sha256": "c7a6041697e7b0e4a6e91aadd9ff4e57996ce9d8a7596da50500e46a31fc843d",
+     "width": 810,
+     "height": 1440,
+     "bytes": 186198,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m51_4.jpg"
+    }
+   ]
+  },
+  {
+   "media_id": 52,
+   "requested": "DRAWER_OPEN",
+   "desc": "抽屉真实向外打开",
+   "frozen_window_s": [
+    0.0,
+    10.0
+   ],
+   "source_duration_s": 11.145,
+   "original_width": 1728,
+   "original_height": 3072,
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛头上层薄抽收纳】01\\【04】【水泥奶油白+兰亭香樟】内蒙古孙小姐【岛头上层薄抽收纳】01-2.mp4",
+   "human_facts": {
+    "requested": "DRAWER_OPEN",
+    "actual": "DRAWER_OPEN",
+    "direction": "OUTWARD"
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m52_0.jpg",
+     "t_s": 0.0,
+     "sha256": "33c9372ecc6f1b8e586b458913439d1b13c5ddeb9bb57cf259bff1fef740f734",
+     "width": 810,
+     "height": 1440,
+     "bytes": 172054,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m52_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m52_1.jpg",
+     "t_s": 2.5,
+     "sha256": "448cf96c24ba6e370b78f197466f03bbc0f8628d3d79f48694787fa89a0ebe14",
+     "width": 810,
+     "height": 1440,
+     "bytes": 177894,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m52_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m52_2.jpg",
+     "t_s": 5.0,
+     "sha256": "8072293caec7492ea2174dce97d2abf7394975b044446b289dd699466625d7d5",
+     "width": 810,
+     "height": 1440,
+     "bytes": 177957,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m52_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m52_3.jpg",
+     "t_s": 7.5,
+     "sha256": "5e1e82c5b9796db8ae31728689059a43329a3ec7b6106e5f362005b0c65d0a3d",
+     "width": 810,
+     "height": 1440,
+     "bytes": 186078,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m52_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m52_4.jpg",
+     "t_s": 10.0,
+     "sha256": "31667359b36154bb032f3ac464a6ce607788c5b0935786a0f68601e0c256fbc9",
+     "width": 810,
+     "height": 1440,
+     "bytes": 179188,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m52_4.jpg"
+    }
+   ]
+  },
+  {
+   "media_id": 89,
+   "requested": "EXTEND",
+   "desc": "人动桌板基本不动",
+   "frozen_window_s": [
+    0.0,
+    7.12
+   ],
+   "source_duration_s": 7.337,
+   "original_width": 1728,
+   "original_height": 3072,
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【107】【白+黑】浙江潘先生【岛台做高5公分就可以增加四个薄抽】01\\【107】【白+黑】浙江潘先生【岛台做高5公分就可以增加四个薄抽】01-1.mp4",
+   "human_facts": {
+    "requested": "EXTEND",
+    "actual_product_action": "STATIC",
+    "person_motion": "YES",
+    "tabletop_product_motion": "NONE/NOT_PROVEN"
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m89_0.jpg",
+     "t_s": 0.0,
+     "sha256": "15b9532f777c78b55f38c149c57c59703312e976d7c01d274d4cf2f38b5b4148",
+     "width": 810,
+     "height": 1440,
+     "bytes": 175089,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m89_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m89_1.jpg",
+     "t_s": 1.78,
+     "sha256": "96400867c3c2e4ad4da1b43e7ff991d2704ce9fb16a05618d96ec87ad31e505b",
+     "width": 810,
+     "height": 1440,
+     "bytes": 174011,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m89_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m89_2.jpg",
+     "t_s": 3.56,
+     "sha256": "f8f066114bbd4cd3e75fad1791598015802078ec8ea594c1ae26757958d40f10",
+     "width": 810,
+     "height": 1440,
+     "bytes": 157689,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m89_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m89_3.jpg",
+     "t_s": 5.34,
+     "sha256": "cd857c384cdaf217af94cf0fb1a715978c2280860d02523c60b616a37c7a8207",
+     "width": 810,
+     "height": 1440,
+     "bytes": 156199,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m89_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m89_4.jpg",
+     "t_s": 7.12,
+     "sha256": "24b68bc16a474d8cd7ef20e48df6108437f83cf59a58a389ee71277c7a6ef335",
+     "width": 810,
+     "height": 1440,
+     "bytes": 153976,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m89_4.jpg"
+    }
+   ]
+  },
+  {
+   "media_id": 109,
+   "requested": "DRAWER_OPEN",
+   "desc": "抽屉已打开但未发生打开动作",
+   "frozen_window_s": [
+    0.0,
+    5.8
+   ],
+   "source_duration_s": 6.014,
+   "original_width": 1728,
+   "original_height": 3072,
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【01】上层薄抽\\【115】【宝格丽黑+骑士黑】中山杜小姐【岛台上层薄抽收纳层】\\【115】【宝格丽黑+骑士黑】中山杜小姐【岛台上层薄抽收纳层】-2.mp4",
+   "human_facts": {
+    "requested": "DRAWER_OPEN",
+    "state": "DRAWER_OPEN_STATE",
+    "actual_action": "STATIC/NOT_PROVEN"
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m109_0.jpg",
+     "t_s": 0.0,
+     "sha256": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
+     "width": 810,
+     "height": 1440,
+     "bytes": 160467,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m109_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m109_1.jpg",
+     "t_s": 1.45,
+     "sha256": "eac37517f4e1980b6404b00d8cd0f6700f515fd848ea25d772a24f9da2314cef",
+     "width": 810,
+     "height": 1440,
+     "bytes": 161281,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m109_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m109_2.jpg",
+     "t_s": 2.9,
+     "sha256": "6726527590d0b32335600c610c3b6f7700efcdee730cf49e3f013289f88f48ec",
+     "width": 810,
+     "height": 1440,
+     "bytes": 164281,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m109_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m109_3.jpg",
+     "t_s": 4.35,
+     "sha256": "c74d70e83e1e3f11fc2629b095bac1c38fe75df0ffec546471e63dee102ce8e9",
+     "width": 810,
+     "height": 1440,
+     "bytes": 166146,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m109_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m109_4.jpg",
+     "t_s": 5.8,
+     "sha256": "c6bf89356ac74743ba843c2808ea5a1cc41cc31e760f095d0f975e8865156749",
+     "width": 810,
+     "height": 1440,
+     "bytes": 165683,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m109_4.jpg"
+    }
+   ]
+  },
+  {
+   "media_id": 1985,
+   "requested": "EXTEND",
+   "desc": "插座在动桌板不动",
+   "frozen_window_s": [
+    1.9,
+    4.4
+   ],
+   "source_duration_s": 5.224,
+   "original_width": 1728,
+   "original_height": 3072,
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-1.mp4",
+   "human_facts": {
+    "requested": "EXTEND",
+    "actual": "SOCKET_ADJUST",
+    "tabletop_action": "STATIC"
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m1985_0.jpg",
+     "t_s": 1.9,
+     "sha256": "8b775fd7e2b7f066c8eb338e952a3ec0188212ee800fca90ac923413f90dda59",
+     "width": 810,
+     "height": 1440,
+     "bytes": 95655,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m1985_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m1985_1.jpg",
+     "t_s": 2.525,
+     "sha256": "15e9e614ffdcd81ab416fa8c344acb891839a7263407332dee4482840954ab4c",
+     "width": 810,
+     "height": 1440,
+     "bytes": 92496,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m1985_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m1985_2.jpg",
+     "t_s": 3.15,
+     "sha256": "aaf28769a0e9dad0f449c404b2b2df3ff986328e7e583af4ec7677524b452b55",
+     "width": 810,
+     "height": 1440,
+     "bytes": 85329,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m1985_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m1985_3.jpg",
+     "t_s": 3.775,
+     "sha256": "5f7b29b00d1a6e20349ed2eda23b4cc8ec3067e014d8450330cb08bcbe312058",
+     "width": 810,
+     "height": 1440,
+     "bytes": 86877,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m1985_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m1985_4.jpg",
+     "t_s": 4.4,
+     "sha256": "34369093435b1e7439bcba800003612792d7f607db560c97d37a4d29ef4c1f07",
+     "width": 810,
+     "height": 1440,
+     "bytes": 90944,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m1985_4.jpg"
+    }
+   ]
+  },
+  {
+   "media_id": 1986,
+   "requested": "EXTEND",
+   "desc": "同类插座操作",
+   "frozen_window_s": [
+    1.9,
+    4.4
+   ],
+   "source_duration_s": 5.224,
+   "original_width": 1728,
+   "original_height": 3072,
+   "source_path": "\\\\X1\\素材盘01\\已处理素材\\卖点展示类素材\\【05】公牛轨道插座\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】\\【61】【微水泥奶油白+兰亭香樟木纹】海口吴小姐 【空镜岛台伸缩公牛轨道插座】【02】-2(1).mp4",
+   "human_facts": {
+    "requested": "EXTEND",
+    "actual": "SOCKET_ADJUST",
+    "semantic_family": "SOCKET_ADJUST_NOT_EXTEND"
+   },
+   "frames": [
+    {
+     "idx": 0,
+     "frame": "m1986_0.jpg",
+     "t_s": 1.9,
+     "sha256": "8b775fd7e2b7f066c8eb338e952a3ec0188212ee800fca90ac923413f90dda59",
+     "width": 810,
+     "height": 1440,
+     "bytes": 95655,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m1986_0.jpg"
+    },
+    {
+     "idx": 1,
+     "frame": "m1986_1.jpg",
+     "t_s": 2.525,
+     "sha256": "15e9e614ffdcd81ab416fa8c344acb891839a7263407332dee4482840954ab4c",
+     "width": 810,
+     "height": 1440,
+     "bytes": 92496,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m1986_1.jpg"
+    },
+    {
+     "idx": 2,
+     "frame": "m1986_2.jpg",
+     "t_s": 3.15,
+     "sha256": "aaf28769a0e9dad0f449c404b2b2df3ff986328e7e583af4ec7677524b452b55",
+     "width": 810,
+     "height": 1440,
+     "bytes": 85329,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m1986_2.jpg"
+    },
+    {
+     "idx": 3,
+     "frame": "m1986_3.jpg",
+     "t_s": 3.775,
+     "sha256": "5f7b29b00d1a6e20349ed2eda23b4cc8ec3067e014d8450330cb08bcbe312058",
+     "width": 810,
+     "height": 1440,
+     "bytes": 86877,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m1986_3.jpg"
+    },
+    {
+     "idx": 4,
+     "frame": "m1986_4.jpg",
+     "t_s": 4.4,
+     "sha256": "34369093435b1e7439bcba800003612792d7f607db560c97d37a4d29ef4c1f07",
+     "width": 810,
+     "height": 1440,
+     "bytes": 90944,
+     "local_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\production_smoke\\B007\\mmv_a1_frames\\m1986_4.jpg"
+    }
+   ]
+  }
+ ]
+}

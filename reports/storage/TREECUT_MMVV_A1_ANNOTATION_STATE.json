@@ -1,0 +1,288 @@
+{
+ "annotation_version": "A1",
+ "generated_at": "2026-09-04 12:06:43",
+ "cases": [
+  {
+   "media_id": 51,
+   "requested": "EXTEND",
+   "frames": [
+    {
+     "frame": "m51_0.jpg",
+     "t_s": 0.0,
+     "sha256": "d939753d6ac6d2cc1d2cd630b11a1418e01e84a713557ce22399c9e9652fe860",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m51_1.jpg",
+     "t_s": 2.5,
+     "sha256": "610273ea1e8fe0aed20e4afb70565a6c09cf1f2eba2db4f1514ea32cbf54c040",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m51_2.jpg",
+     "t_s": 5.0,
+     "sha256": "1ab3d30ba28aa30b07e8e9ff680caec63f364468952ae399f8a6d41605be8c26",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m51_3.jpg",
+     "t_s": 7.5,
+     "sha256": "6218ce1cceeec3f255689b5bf484eef481111e12ff6cc48c6c3298d19cf6e10f",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m51_4.jpg",
+     "t_s": 10.0,
+     "sha256": "c7a6041697e7b0e4a6e91aadd9ff4e57996ce9d8a7596da50500e46a31fc843d",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    }
+   ],
+   "fully_annotated": false
+  },
+  {
+   "media_id": 52,
+   "requested": "DRAWER_OPEN",
+   "frames": [
+    {
+     "frame": "m52_0.jpg",
+     "t_s": 0.0,
+     "sha256": "33c9372ecc6f1b8e586b458913439d1b13c5ddeb9bb57cf259bff1fef740f734",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m52_1.jpg",
+     "t_s": 2.5,
+     "sha256": "448cf96c24ba6e370b78f197466f03bbc0f8628d3d79f48694787fa89a0ebe14",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m52_2.jpg",
+     "t_s": 5.0,
+     "sha256": "8072293caec7492ea2174dce97d2abf7394975b044446b289dd699466625d7d5",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m52_3.jpg",
+     "t_s": 7.5,
+     "sha256": "5e1e82c5b9796db8ae31728689059a43329a3ec7b6106e5f362005b0c65d0a3d",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m52_4.jpg",
+     "t_s": 10.0,
+     "sha256": "31667359b36154bb032f3ac464a6ce607788c5b0935786a0f68601e0c256fbc9",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    }
+   ],
+   "fully_annotated": false
+  },
+  {
+   "media_id": 89,
+   "requested": "EXTEND",
+   "frames": [
+    {
+     "frame": "m89_0.jpg",
+     "t_s": 0.0,
+     "sha256": "15b9532f777c78b55f38c149c57c59703312e976d7c01d274d4cf2f38b5b4148",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m89_1.jpg",
+     "t_s": 1.78,
+     "sha256": "96400867c3c2e4ad4da1b43e7ff991d2704ce9fb16a05618d96ec87ad31e505b",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m89_2.jpg",
+     "t_s": 3.56,
+     "sha256": "f8f066114bbd4cd3e75fad1791598015802078ec8ea594c1ae26757958d40f10",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m89_3.jpg",
+     "t_s": 5.34,
+     "sha256": "cd857c384cdaf217af94cf0fb1a715978c2280860d02523c60b616a37c7a8207",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m89_4.jpg",
+     "t_s": 7.12,
+     "sha256": "24b68bc16a474d8cd7ef20e48df6108437f83cf59a58a389ee71277c7a6ef335",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    }
+   ],
+   "fully_annotated": false
+  },
+  {
+   "media_id": 109,
+   "requested": "DRAWER_OPEN",
+   "frames": [
+    {
+     "frame": "m109_0.jpg",
+     "t_s": 0.0,
+     "sha256": "fa0f3f8921bd3341897e93a43e0d119ac648343dd6ff9beafe9cc7e6b4411997",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m109_1.jpg",
+     "t_s": 1.45,
+     "sha256": "eac37517f4e1980b6404b00d8cd0f6700f515fd848ea25d772a24f9da2314cef",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m109_2.jpg",
+     "t_s": 2.9,
+     "sha256": "6726527590d0b32335600c610c3b6f7700efcdee730cf49e3f013289f88f48ec",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m109_3.jpg",
+     "t_s": 4.35,
+     "sha256": "c74d70e83e1e3f11fc2629b095bac1c38fe75df0ffec546471e63dee102ce8e9",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m109_4.jpg",
+     "t_s": 5.8,
+     "sha256": "c6bf89356ac74743ba843c2808ea5a1cc41cc31e760f095d0f975e8865156749",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    }
+   ],
+   "fully_annotated": false
+  },
+  {
+   "media_id": 1985,
+   "requested": "EXTEND",
+   "frames": [
+    {
+     "frame": "m1985_0.jpg",
+     "t_s": 1.9,
+     "sha256": "8b775fd7e2b7f066c8eb338e952a3ec0188212ee800fca90ac923413f90dda59",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m1985_1.jpg",
+     "t_s": 2.525,
+     "sha256": "15e9e614ffdcd81ab416fa8c344acb891839a7263407332dee4482840954ab4c",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m1985_2.jpg",
+     "t_s": 3.15,
+     "sha256": "aaf28769a0e9dad0f449c404b2b2df3ff986328e7e583af4ec7677524b452b55",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m1985_3.jpg",
+     "t_s": 3.775,
+     "sha256": "5f7b29b00d1a6e20349ed2eda23b4cc8ec3067e014d8450330cb08bcbe312058",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m1985_4.jpg",
+     "t_s": 4.4,
+     "sha256": "34369093435b1e7439bcba800003612792d7f607db560c97d37a4d29ef4c1f07",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    }
+   ],
+   "fully_annotated": false
+  },
+  {
+   "media_id": 1986,
+   "requested": "EXTEND",
+   "frames": [
+    {
+     "frame": "m1986_0.jpg",
+     "t_s": 1.9,
+     "sha256": "8b775fd7e2b7f066c8eb338e952a3ec0188212ee800fca90ac923413f90dda59",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m1986_1.jpg",
+     "t_s": 2.525,
+     "sha256": "15e9e614ffdcd81ab416fa8c344acb891839a7263407332dee4482840954ab4c",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m1986_2.jpg",
+     "t_s": 3.15,
+     "sha256": "aaf28769a0e9dad0f449c404b2b2df3ff986328e7e583af4ec7677524b452b55",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m1986_3.jpg",
+     "t_s": 3.775,
+     "sha256": "5f7b29b00d1a6e20349ed2eda23b4cc8ec3067e014d8450330cb08bcbe312058",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    },
+    {
+     "frame": "m1986_4.jpg",
+     "t_s": 4.4,
+     "sha256": "34369093435b1e7439bcba800003612792d7f607db560c97d37a4d29ef4c1f07",
+     "boxes": 0,
+     "objects": [],
+     "annotated": false
+    }
+   ],
+   "fully_annotated": false
+  }
+ ]
+}
