@@ -8,22 +8,28 @@
  .wrap{padding:14px}
  .case{border:1px solid #ccc;border-radius:10px;background:#fff;padding:12px;margin:12px 0}
  .case h2{font-size:15px;margin:4px 0}
- .row{display:inline-block;border:1px solid #ddd;border-radius:8px;margin:6px;padding:6px;background:#fff;vertical-align:top;text-align:center}
- .row img{width:200px;display:block;border:1px solid #eee}
- .row select{margin:4px 0;width:170px}
+ .row{display:inline-block;border:1px solid #ddd;border-radius:8px;margin:6px;padding:6px;background:#fff;vertical-align:top;text-align:center;width:240px}
+ .imgholder{position:relative;display:inline-block}
+ .imgholder img{width:220px;display:block;border:1px solid #eee}
+ .imgholder svg{position:absolute;left:0;top:0;width:220px;pointer-events:none}
+ .row select{margin:4px 0;width:200px;font-size:12px}
+ .legend{font-size:12px;color:#555;margin:6px 0}
  .saved{color:#0a7a0a;font-size:12px}
- .okmsg{position:fixed;bottom:16px;right:16px;background:#333;color:#fff;padding:8px 14px;border-radius:6px;display:none}
+ .okmsg{position:fixed;bottom:16px;right:16px;background:#333;color:#fff;padding:8px 14px;border-radius:6px;display:none;z-index:9}
 </style></head>
 <body>
-<header><h1>A2.1 目标身份绑定 — 只绑定"动作/追踪的目标抽屉"（同标签多框）</h1>
-<div class="note">每帧若有多个抽屉框，请选<b>正在被拉出/要追踪的那个抽屉</b>对应框号；没有目标动作的帧选"无目标(跳过)"。
-  109：请让"追踪抽屉"在 帧0→帧4 是<b>同一个物理抽屉</b>（前段它在动、后段它静止打开），这样机器才能看出"动作 vs 状态"。</div></header>
-<div class="wrap" id="root"></div>
+<header><h1>A2.1 目标身份绑定 — 选择"动作/追踪的目标抽屉"（红色编号框）</h1>
+<div class="note">每帧图片上已标出所有抽屉框并编号（#1/#2…），与下方下拉选项一致：选"正在拉出/要追踪的那只抽屉"对应编号。
+  109：请让追踪抽屉在 帧0→帧4 是<b>同一个物理抽屉</b>（前段在动、后段静止打开）。</div></header>
+<div class="wrap">
+  <div class="legend">图例：<span style="color:#e02020;font-weight:bold">红框+编号</span> = 抽屉（可选目标）｜<span style="color:#999">灰框</span> = 其它对象（伸缩桌板/岛台主体/插座等，仅供参考，不需选）</div>
+  <div id="root"></div>
+</div>
 <div class="okmsg" id="ok"></div>
 <script>
 const $=s=>document.querySelector(s);
 let MAN, ROI, SAVED={};
-const LABEL_CN={"DRAWER":"抽屉","UPPER_THIN_DRAWER":"上层薄抽","TABLETOP":"桌板/台面","EXTENSION_TABLETOP":"伸缩桌板","SOCKET_MODULE":"插座模块","TRACK_SOCKET":"轨道插座","PERSON":"人","HAND":"手","ISLAND_BODY":"岛台主体","OTHER_MOVING_PART":"其他运动部件"};
+const CN={"DRAWER":"抽屉","UPPER_THIN_DRAWER":"上层薄抽","TABLETOP":"桌板/台面","EXTENSION_TABLETOP":"伸缩桌板","SOCKET_MODULE":"插座模块","TRACK_SOCKET":"轨道插座","PERSON":"人","HAND":"手","ISLAND_BODY":"岛台主体","OTHER_MOVING_PART":"其他运动部件"};
 async function jget(u){const r=await fetch(u);return r.json();}
 function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 async function init(){
@@ -33,22 +39,45 @@ async function init(){
   for(const mid of [52,109]){
     const c=MAN.cases.find(x=>x.media_id===mid);
     const card=document.createElement('div');card.className='case';
-    card.innerHTML=`<h2>测试视频 ${mid} · ${c.frames.length} 张</h2><div class="rows"></div>`;
-    const rows=card.querySelector('.rows');
+    card.innerHTML=`<h2>测试视频 ${mid} · ${c.frames.length} 张</h2>`;
+    const rowsDiv=document.createElement('div');card.appendChild(rowsDiv);
     c.frames.forEach(f=>{
       const anns=ROI.annotations.filter(a=>a.media_id===mid&&a.frame_timestamp===f.t_s);
       const drawers=anns.filter(a=>a.object_name==='DRAWER'||a.object_name==='UPPER_THIN_DRAWER');
       const row=document.createElement('div');row.className='row';
-      let opts='<option value="">无目标(跳过)</option>';
-      drawers.forEach((a,i)=>{opts+=`<option value="${i}">框#${i+1} ${LABEL_CN[a.object_name]||a.object_name} [${a.bbox_pixel}]</option>`;});
-      const cur=(SAVED.bindings||[]).find(b=>b.media_id===mid&&b.t_s===f.t_s);
-      row.innerHTML=`<img src="/a21/frames/${esc(f.frame)}?v=${String(f.sha256||'').slice(0,8)}"/>
+      row.innerHTML=`<div class="imgholder">
+          <img src="/a21/frames/${esc(f.frame)}?v=${String(f.sha256||'').slice(0,8)}"/>
+          <svg viewBox="0 0 ${f.width} ${f.height}"></svg></div>
         <div style="font-size:12px">${f.frame.replace('.jpg','')} @ ${f.t_s}s · 抽屉框 ${drawers.length} 个</div>
-        <select data-mid="${mid}" data-t="${f.t_s}" data-frame="${esc(f.frame)}">${opts}</select>
+        <select data-mid="${mid}" data-t="${f.t_s}" data-frame="${esc(f.frame)}"><option value="">无目标(跳过)</option></select>
         <div class="saved"></div>`;
-      row.querySelector('select').value=cur?(cur.chosen_index==null?'':String(cur.chosen_index)):'';
-      row.querySelector('select').onchange=()=>save(row);
-      rows.appendChild(row);
+      rowsDiv.appendChild(row);
+      const svg=row.querySelector('svg');
+      // 其它对象浅灰
+      anns.forEach(a=>{
+        if(a.object_name==='DRAWER'||a.object_name==='UPPER_THIN_DRAWER')return;
+        const bb=a.bbox_pixel;
+        svg.insertAdjacentHTML('beforeend',`<rect x="${bb[0]}" y="${bb[1]}" width="${bb[2]-bb[0]}" height="${bb[3]-bb[1]}" fill="none" stroke="#bbb" stroke-width="2" stroke-dasharray="4 3"/>`);
+      });
+      // 抽屉：红色+编号（编号与下拉一致，从1起）
+      drawers.forEach((a,i)=>{
+        const bb=a.bbox_pixel;
+        svg.insertAdjacentHTML('beforeend',
+          `<rect x="${bb[0]}" y="${bb[1]}" width="${bb[2]-bb[0]}" height="${bb[3]-bb[1]}" fill="none" stroke="#e02020" stroke-width="4"/>
+           <circle cx="${bb[0]+18}" cy="${bb[1]+18}" r="15" fill="#e02020"/>
+           <text x="${bb[0]+18}" y="${bb[1]+23}" font-size="22" fill="#fff" text-anchor="middle" style="font-weight:bold">${i+1}</text>`);
+      });
+      const sel=row.querySelector('select');
+      drawers.forEach((a,i)=>{
+        const o=document.createElement('option');o.value=String(i);
+        o.textContent=`框#${i+1} ${CN[a.object_name]||a.object_name} [${a.bbox_pixel.join(',')}]`;
+        sel.appendChild(o);
+      });
+      const cur=(SAVED.bindings||[]).find(b=>b.media_id===mid&&b.t_s===f.t_s);
+      if(cur){sel.value=cur.chosen_index==null?'':String(cur.chosen_index);
+        if(cur.chosen_index!=null)row.querySelector('.saved').textContent='已保存 ✓';}
+      sel.onchange=()=>save(row);
+      row.querySelector('.saved').textContent = (drawers.length===0)?'本帧无抽屉框':(row.querySelector('.saved').textContent||'');
     });
     root.appendChild(card);
   }
