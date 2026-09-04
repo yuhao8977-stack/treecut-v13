@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8"/>
+<title>MMVV A3 — 新 EXTEND 候选人工筛选</title>
+<style>
+ body{font-family:'Microsoft YaHei',sans-serif;margin:0;background:#f5f6f8;color:#222}
+ header{padding:10px 18px;background:#1f2937;color:#fff}
+ h1{font-size:16px;margin:0 0 4px} .note{font-size:13px;color:#ddd}
+ .wrap{padding:14px}
+ .card{border:1px solid #ccc;border-radius:10px;background:#fff;padding:10px;margin:10px 0}
+ .card h3{margin:4px 0;font-size:14px}
+ .thumbs img{width:150px;margin:2px;border:1px solid #eee}
+ .btn{padding:6px 12px;margin:3px;border-radius:6px;cursor:pointer;border:1px solid #999;background:#fff;font-size:13px}
+ .btn.yes{background:#e6f4ea}.btn.no{background:#fdecea}.btn.unk{background:#fff8e1}
+ .sel{background:#cde7cd !important;border-color:#0a7a0a}
+ .notearea{width:90%;height:34px;margin-top:6px;font-size:12px}
+ .stat{font-size:13px;color:#0a7a0a;font-weight:bold;margin:6px 0}
+ .msg{position:fixed;bottom:16px;right:16px;background:#333;color:#fff;padding:8px 14px;border-radius:6px;display:none;z-index:9}
+</style></head>
+<body>
+<header><h1>MMVV A3 — 新 EXTEND 候选人工筛选（勿看机器结果；只判断画面）</h1>
+<div class="note">只看这 5 张采样图：该视频是否真实发生 <b>“伸缩桌板从较收状态 → 向外拉出/伸出”</b>？
+  YES_EXTEND=确实拉出 ｜ NO_EXTEND=没有伸缩（含静态展示/人动/抽屉/插座/手部操作等）｜ UNCLEAR=看不清。
+  请勿依据素材文件夹名下结论；不要机器参与。</div></header>
+<div class="wrap">
+ <div class="stat" id="stat"></div>
+ <div id="root"></div>
+</div>
+<div class="msg" id="msg"></div>
+<script>
+const $=s=>document.querySelector(s);
+let CANDS=null, SCR={verdicts:{}};
+async function jget(u){const r=await fetch(u);return r.json();}
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+async function init(){
+  CANDS=await jget('/api/a3/candidates');
+  SCR=await jget('/api/a3/screening');
+  const root=$('#root');
+  (CANDS.candidates||[]).forEach(c=>{
+    const card=document.createElement('div');card.className='card';
+    const cur=SCR.verdicts[String(c.media_id)];
+    const thumbs=(c.thumbs||[]).map(t=>`<img src="/a3/thumbs/${esc(t.file)}" title="t=${t.ts}s"/>`).join('');
+    card.innerHTML=`<h3>候选 media ${c.media_id} ｜ 源S${c.source_id} ｜ 时长 ${c.duration_s}s</h3>
+      <div class="thumbs">${thumbs||'<span style="color:#b00">缩略图缺失</span>'}</div>
+      <div style="font-size:12px;color:#777;word-break:break-all">路径: ${esc(c.relative_path)}</div>
+      <div style="margin-top:6px">
+        <button class="btn yes" data-mid="${c.media_id}" data-label="YES_EXTEND">✅ 真拉出 (YES_EXTEND)</button>
+        <button class="btn no" data-mid="${c.media_id}" data-label="NO_EXTEND">❌ 无伸缩 (NO_EXTEND)</button>
+        <button class="btn unk" data-mid="${c.media_id}" data-label="UNCLEAR">❓ 看不清 (UNCLEAR)</button>
+      </div>
+      <div><textarea class="notearea" placeholder="备注(可选)：如‘约2-4秒拉出’"></textarea></div>`;
+    const mark=()=>{
+      card.querySelectorAll('.btn').forEach(b=>{
+        const active=SCR.verdicts[String(c.media_id)] && SCR.verdicts[String(c.media_id)].label===b.dataset.label;
+        b.classList.toggle('sel', active);
+      });
+      const n=SCR.verdicts[String(c.media_id)];
+      if(n&&n.note)card.querySelector('.notearea').value=n.note;
+    };
+    card.querySelectorAll('.btn').forEach(b=>b.onclick=()=>save(b));
+    async function save(b){
+      const note=card.querySelector('.notearea').value;
+      const r=await fetch('/api/a3/verdict',{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({media_id:parseInt(b.dataset.mid,10),label:b.dataset.label,note:note})});
+      const j=await r.json();
+      const m=$('#msg');m.textContent=j.ok?('已存 media '+b.dataset.mid+' = '+b.dataset.label):('失败:'+j.error);
+      m.style.display='block';setTimeout(()=>m.style.display='none',1600);
+      if(j.ok){SCR=await jget('/api/a3/screening');mark();refreshStat();}
+    }
+    root.appendChild(card);mark();
+  });
+  refreshStat();
+}
+function refreshStat(){
+  const vs=Object.values(SCR.verdicts||{});
+  const y=vs.filter(v=>v.label==='YES_EXTEND').length;
+  const n=vs.filter(v=>v.label==='NO_EXTEND').length;
+  const u=vs.filter(v=>v.label==='UNCLEAR').length;
+  $('#stat').textContent=`已筛选 ${vs.length}/${(CANDS.candidates||[]).length} ｜ YES_EXTEND=${y} ｜ NO_EXTEND=${n} ｜ UNCLEAR=${u}（目标：3 YES 作正例 + 3 NO(含干扰运动) 作负例后冻结 A3_HOLDOUT_6）`;
+}
+init();
+</script></body></html>

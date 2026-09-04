@@ -20,6 +20,13 @@ AUX_HTML = Path(__file__).parent / "aux52.html"
 A21_HTML = Path(__file__).parent / "a21_bind.html"
 AUX_SELECT_FILE = OUT / "TREECUT_MMVV_A1_AUX52_SELECTION.json"
 A21_BIND_FILE = OUT / "TREECUT_MMVV_A21_TARGET_BINDING.json"
+A3_HTML = Path(__file__).parent / "a3_screen.html"
+A3_CANDS_FILE = OUT / "TREECUT_MMVV_A3_CANDIDATES.json"
+A3_SCREEN_FILE = OUT / "TREECUT_MMVV_A3_SCREENING.json"
+
+
+def _a3_thumbs_dir() -> Path:
+    return Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime\production_smoke\B007\mmv_a3_frames") / "thumbs"
 
 
 def _frames_dir() -> Path:
@@ -107,6 +114,32 @@ class Handler(BaseHTTPRequestHandler):
         path = self.path.split("?")[0]
         if path in ("/", "/index.html"):
             self._send(200, INDEX.read_bytes(), "text/html; charset=utf-8")
+            return
+        if path == "/a3/screen":
+            if A3_HTML.exists():
+                self._send(200, A3_HTML.read_bytes(), "text/html; charset=utf-8")
+            else:
+                self._send(404, b"a3_screen.html missing", "text/plain")
+            return
+        if path == "/api/a3/candidates":
+            if A3_CANDS_FILE.exists():
+                self._send(200, A3_CANDS_FILE.read_bytes(), "application/json; charset=utf-8")
+            else:
+                self._json({"error": "候选未生成"})
+            return
+        if path == "/api/a3/screening":
+            if A3_SCREEN_FILE.exists():
+                self._send(200, A3_SCREEN_FILE.read_bytes(), "application/json; charset=utf-8")
+            else:
+                self._json({"verdicts": {}})
+            return
+        if path.startswith("/a3/thumbs/"):
+            name = path.rsplit("/", 1)[-1]
+            fp = _a3_thumbs_dir() / name
+            if fp.exists():
+                self._send(200, fp.read_bytes(), "image/jpeg")
+                return
+            self._send(404, b"thumb missing", "text/plain")
             return
         if path == "/aux52":
             if AUX_HTML.exists():
@@ -209,6 +242,29 @@ class Handler(BaseHTTPRequestHandler):
             tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
             tmp.replace(A21_BIND_FILE)
             self._json({"ok": True, "bindings": len(doc["bindings"])})
+            return
+        if self.path == "/api/a3/verdict":
+            try:
+                data = json.loads(body.decode("utf-8"))
+            except Exception:
+                self._json({"ok": False, "error": "bad json"}, 400)
+                return
+            mid = data.get("media_id")
+            label = data.get("label")
+            if label not in ("YES_EXTEND", "NO_EXTEND", "UNCLEAR"):
+                self._json({"ok": False, "error": "label 须 YES_EXTEND/NO_EXTEND/UNCLEAR"}, 400)
+                return
+            doc = {"verdicts": {}}
+            if A3_SCREEN_FILE.exists():
+                doc = json.loads(A3_SCREEN_FILE.read_text(encoding="utf-8"))
+            doc["verdicts"][str(mid)] = {"label": label,
+                                         "note": data.get("note", ""),
+                                         "at": time.strftime("%Y-%m-%d %H:%M:%S")}
+            doc["generated_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
+            tmp = A3_SCREEN_FILE.with_suffix(".tmp")
+            tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+            tmp.replace(A3_SCREEN_FILE)
+            self._json({"ok": True, "media_id": mid, "label": label})
             return
         if self.path == "/api/aux52/select":
             try:
