@@ -1,0 +1,413 @@
+{
+ "experiment": "MMVV_A2.1",
+ "approved": "2026-09-04 architect",
+ "method": "L3 ROI + binding -> GeometryDirectionEvidence (island-rel preferred, abs fallback) -> validator geometry-first",
+ "no_threshold_tuning": true,
+ "results": [
+  {
+   "slice": "52_DRAWER_OPEN",
+   "media_id": 52,
+   "requested": "DRAWER_OPEN",
+   "frames_used": [
+    7.5,
+    7.75,
+    8.0,
+    10.0
+   ],
+   "target_object": "DRAWER",
+   "instance_id": "A",
+   "bound_geometry": {
+    "abs_area_seq": [
+     17496,
+     18774,
+     31313
+    ],
+    "rel_seq": [
+     0.8804347826086957,
+     0.6742081447963801,
+     0.8871794871794871
+    ],
+    "mode": "abs"
+   },
+   "geometry_direction_evidence": {
+    "direction_action": "DRAWER_OPEN",
+    "state_progress": "PROGRESSION_UP",
+    "geometry_change_present": true,
+    "relative_motion_present": true,
+    "confidence_class": "MEDIUM",
+    "reason_codes": [
+     "ISLAND_REFERENCE_UNSTABLE_FALLBACK_ABSOLUTE",
+     "GEOMETRY_MONOTONIC_UP"
+    ],
+    "visibility_progression": "VISIBLE_ALL"
+   },
+   "pixel_target_motion": 1.0635,
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "PASS",
+    "state_transition": "PASS"
+   },
+   "reason_codes": [
+    "GEOMETRY_PROGRESSION_SUPPORTED"
+   ],
+   "machine_verdict": "Verdict.PASS",
+   "human_gt": "PASS",
+   "match": true,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": false
+  },
+  {
+   "slice": "109_ACTION_POSITIVE",
+   "media_id": 109,
+   "requested": "DRAWER_OPEN",
+   "frames_used": [
+    0.0,
+    1.45
+   ],
+   "target_object": "DRAWER",
+   "instance_id": "A",
+   "bound_geometry": {
+    "abs_area_seq": [
+     16632,
+     41528
+    ],
+    "rel_seq": [
+     0.7741935483870968,
+     0.8731707317073171
+    ],
+    "mode": "rel"
+   },
+   "geometry_direction_evidence": {
+    "direction_action": "DRAWER_OPEN",
+    "state_progress": "PROGRESSION_UP",
+    "geometry_change_present": true,
+    "relative_motion_present": true,
+    "confidence_class": "MEDIUM",
+    "reason_codes": [
+     "GEOMETRY_MONOTONIC_UP"
+    ],
+    "visibility_progression": "VISIBLE_ALL"
+   },
+   "pixel_target_motion": 1.5695,
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "PASS",
+    "state_transition": "PASS"
+   },
+   "reason_codes": [
+    "GEOMETRY_PROGRESSION_SUPPORTED"
+   ],
+   "machine_verdict": "Verdict.PASS",
+   "human_gt": "PASS",
+   "match": true,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": false
+  },
+  {
+   "slice": "109_OPEN_STATE_NEGATIVE",
+   "media_id": 109,
+   "requested": "DRAWER_OPEN",
+   "frames_used": [
+    2.9,
+    4.35,
+    5.8
+   ],
+   "target_object": "DRAWER",
+   "instance_id": "A",
+   "bound_geometry": {
+    "abs_area_seq": [
+     41302,
+     37541,
+     43665
+    ],
+    "rel_seq": [
+     0.9061032863849765,
+     0.7424892703862661,
+     0.8723404255319149
+    ],
+    "mode": "abs"
+   },
+   "geometry_direction_evidence": {
+    "direction_action": "UNKNOWN",
+    "state_progress": "UNKNOWN",
+    "geometry_change_present": false,
+    "relative_motion_present": true,
+    "confidence_class": "LOW",
+    "reason_codes": [
+     "GEOMETRY_NON_MONOTONIC"
+    ],
+    "visibility_progression": "VISIBLE_ALL"
+   },
+   "pixel_target_motion": 0.1242,
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "FAIL",
+   "match": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  },
+  {
+   "slice": "89_EXTEND",
+   "media_id": 89,
+   "requested": "EXTEND",
+   "frames_used": [
+    0.0,
+    1.78,
+    3.56,
+    5.34,
+    7.12
+   ],
+   "target_object": "TABLETOP",
+   "instance_id": "A",
+   "bound_geometry": {
+    "abs_area_seq": [
+     407602,
+     416000,
+     406528,
+     412228,
+     427196
+    ],
+    "rel_seq": [
+     3.853408585987502,
+     4.041581657437093,
+     3.971138469837967,
+     3.9790612978642153
+    ],
+    "mode": "rel"
+   },
+   "geometry_direction_evidence": {
+    "direction_action": "STATIC",
+    "state_progress": "STABLE",
+    "geometry_change_present": false,
+    "relative_motion_present": true,
+    "confidence_class": "HIGH",
+    "reason_codes": [
+     "NO_TARGET_GEOMETRY_CHANGE",
+     "GEOMETRY_STATIC"
+    ],
+    "visibility_progression": "VISIBLE_ALL"
+   },
+   "pixel_target_motion": 0.1885,
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "FAIL",
+    "state_transition": "FAIL"
+   },
+   "reason_codes": [
+    "NO_TARGET_GEOMETRY_CHANGE"
+   ],
+   "machine_verdict": "Verdict.FAIL",
+   "human_gt": "FAIL",
+   "match": true,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": false
+  },
+  {
+   "slice": "51_EXTEND",
+   "media_id": 51,
+   "requested": "EXTEND",
+   "frames_used": [
+    0.0,
+    2.5,
+    5.0,
+    7.5,
+    10.0
+   ],
+   "target_object": "TABLETOP",
+   "instance_id": "A",
+   "bound_geometry": {
+    "abs_area_seq": [
+     407416,
+     397792,
+     430122,
+     410112,
+     415826
+    ],
+    "rel_seq": [
+     5.445282010157712,
+     4.831970847251746,
+     4.4110552763819095,
+     5.012858749327727,
+     4.627281224962165
+    ],
+    "mode": "abs"
+   },
+   "geometry_direction_evidence": {
+    "direction_action": "UNKNOWN",
+    "state_progress": "UNKNOWN",
+    "geometry_change_present": false,
+    "relative_motion_present": true,
+    "confidence_class": "LOW",
+    "reason_codes": [
+     "GEOMETRY_NON_MONOTONIC"
+    ],
+    "visibility_progression": "VISIBLE_ALL"
+   },
+   "pixel_target_motion": 0.5503,
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "FAIL",
+   "match": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  },
+  {
+   "slice": "1985_EXTEND",
+   "media_id": 1985,
+   "requested": "EXTEND",
+   "frames_used": [
+    1.9,
+    2.525,
+    3.15,
+    3.775,
+    4.4
+   ],
+   "target_object": "TABLETOP",
+   "instance_id": "A",
+   "bound_geometry": {
+    "abs_area_seq": [
+     410550,
+     388314,
+     316710,
+     331272,
+     433314
+    ],
+    "rel_seq": [
+     1.0100376411543288,
+     1.0050314465408805,
+     0.9947984395318595,
+     0.9822335025380711,
+     1.023076923076923
+    ],
+    "mode": "rel"
+   },
+   "geometry_direction_evidence": {
+    "direction_action": "STATIC",
+    "state_progress": "STABLE",
+    "geometry_change_present": false,
+    "relative_motion_present": true,
+    "confidence_class": "UNSTABLE_CAMERA",
+    "reason_codes": [
+     "NO_TARGET_GEOMETRY_CHANGE",
+     "GEOMETRY_STATIC",
+     "CAMERA_UNRELIABLE"
+    ],
+    "visibility_progression": "VISIBLE_ALL"
+   },
+   "pixel_target_motion": 0.7348,
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "FAIL",
+   "match": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  },
+  {
+   "slice": "1986_EXTEND",
+   "media_id": 1986,
+   "requested": "EXTEND",
+   "frames_used": [
+    1.9,
+    2.525,
+    3.15,
+    3.775,
+    4.4
+   ],
+   "target_object": "TABLETOP",
+   "instance_id": "A",
+   "bound_geometry": {
+    "abs_area_seq": [
+     429324,
+     299948,
+     420224,
+     390156,
+     428128
+    ],
+    "rel_seq": [
+     0.9925373134328358,
+     1.0113493064312737,
+     0.9987261146496815,
+     1.0037974683544304,
+     0.9788557213930348
+    ],
+    "mode": "rel"
+   },
+   "geometry_direction_evidence": {
+    "direction_action": "STATIC",
+    "state_progress": "STABLE",
+    "geometry_change_present": false,
+    "relative_motion_present": true,
+    "confidence_class": "UNSTABLE_CAMERA",
+    "reason_codes": [
+     "NO_TARGET_GEOMETRY_CHANGE",
+     "GEOMETRY_STATIC",
+     "CAMERA_UNRELIABLE"
+    ],
+    "visibility_progression": "VISIBLE_ALL"
+   },
+   "pixel_target_motion": 0.7522,
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "FAIL",
+   "match": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  }
+ ],
+ "summary": {
+  "match": 3,
+  "false_pass": 0,
+  "false_fail": 0,
+  "unsure": 4
+ },
+ "generated_at": "2026-09-04 17:36:26"
+}

@@ -99,7 +99,7 @@ def test_drawer_partial_to_open_supported():
     assert g.direction_action == "DRAWER_OPEN"
     assert g.state_progress == "PROGRESSION_UP"
     v = _val(_ev(Action.DRAWER_OPEN, {"DRAWER": 1.0}, g))
-    assert v.verdict == Verdict.PASS and "GEOMETRY_DIRECTION_SUPPORTED" in v.reason_codes
+    assert v.verdict == Verdict.PASS and "GEOMETRY_PROGRESSION_SUPPORTED" in v.reason_codes
 
 
 def test_drawer_open_state_static_rejected():
