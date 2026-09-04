@@ -1,0 +1,15 @@
+{
+ "media_ids": [
+  52,
+  109
+ ],
+ "generated_at": "2026-09-04 17:15:57",
+ "bindings": [
+  {
+   "media_id": 52,
+   "t_s": 7.75,
+   "chosen_index": null,
+   "at": "2026-09-04 17:16:06"
+  }
+ ]
+}

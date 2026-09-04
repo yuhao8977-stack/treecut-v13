@@ -1,0 +1,46 @@
+{
+ "status": "AWAITING_BINDING",
+ "missing": [
+  {
+   "media": 52,
+   "t_s": 7.75,
+   "n_boxes": 2
+  },
+  {
+   "media": 52,
+   "t_s": 8.0,
+   "n_boxes": 2
+  },
+  {
+   "media": 52,
+   "t_s": 10.0,
+   "n_boxes": 2
+  },
+  {
+   "media": 109,
+   "t_s": 0.0,
+   "n_boxes": 2
+  },
+  {
+   "media": 109,
+   "t_s": 1.45,
+   "n_boxes": 2
+  },
+  {
+   "media": 109,
+   "t_s": 2.9,
+   "n_boxes": 2
+  },
+  {
+   "media": 109,
+   "t_s": 4.35,
+   "n_boxes": 2
+  },
+  {
+   "media": 109,
+   "t_s": 5.8,
+   "n_boxes": 2
+  }
+ ],
+ "url": "http://127.0.0.1:8933/a21/bind"
+}
