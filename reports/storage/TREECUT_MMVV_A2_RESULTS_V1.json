@@ -1,0 +1,1124 @@
+{
+ "experiment": "MMVV_A2",
+ "approved": "2026-09-04 architect",
+ "inputs": {
+  "human_roi": 200,
+  "frames": 32,
+  "slices": 7
+ },
+ "method": "L3_HUMAN_ROI → compensate_pair → per-object masked motion → TemporalStateValidator",
+ "no_threshold_tuning": true,
+ "machine_vs_human_separate": true,
+ "results": [
+  {
+   "slice": "52_DRAWER_OPEN",
+   "media_id": 52,
+   "requested": "DRAWER_OPEN",
+   "frames_used": [
+    "m52_3.jpg",
+    "m52_7_75_aux.jpg",
+    "m52_8_0_aux.jpg",
+    "m52_4.jpg"
+   ],
+   "frame_timestamps": [
+    7.5,
+    7.75,
+    8.0,
+    10.0
+   ],
+   "target_object": "DRAWER",
+   "target_visible_frames": 3,
+   "camera": {
+    "max_translation_px": 19.483,
+    "max_feature_residual": 0.977,
+    "models": [
+     "AFFINE",
+     "AFFINE",
+     "AFFINE"
+    ],
+    "reliable_all": true
+   },
+   "pair_evidence": [
+    {
+     "from_t": 7.5,
+     "to_t": 7.75,
+     "camera_model": "AFFINE",
+     "translation_px": 0.64,
+     "inlier_ratio": 0.885,
+     "feature_residual": 0.209,
+     "reliable": true,
+     "motion": {
+      "TABLETOP": 0.3009,
+      "SOCKET_MODULE": 0.2244,
+      "HAND": 0.0,
+      "ISLAND_BODY": 0.2406,
+      "PERSON": 0.2644,
+      "DRAWER": 0.6044
+     }
+    },
+    {
+     "from_t": 7.75,
+     "to_t": 8.0,
+     "camera_model": "AFFINE",
+     "translation_px": 1.022,
+     "inlier_ratio": 0.87,
+     "feature_residual": 0.191,
+     "reliable": true,
+     "motion": {
+      "TABLETOP": 0.2685,
+      "SOCKET_MODULE": 0.1337,
+      "HAND": 0.0,
+      "PERSON": 0.1777,
+      "DRAWER": 1.0578,
+      "ISLAND_BODY": 0.1267
+     }
+    },
+    {
+     "from_t": 8.0,
+     "to_t": 10.0,
+     "camera_model": "AFFINE",
+     "translation_px": 19.483,
+     "inlier_ratio": 0.748,
+     "feature_residual": 0.977,
+     "reliable": true,
+     "motion": {
+      "SOCKET_MODULE": 0.4247,
+      "DRAWER": 0.8625,
+      "HAND": 0.0,
+      "PERSON": 0.4722,
+      "ISLAND_BODY": 0.4153,
+      "TABLETOP": 0.3762
+     }
+    }
+   ],
+   "roi_motion": {
+    "TABLETOP": 0.376,
+    "SOCKET_MODULE": 0.425,
+    "HAND": 0.0,
+    "ISLAND_BODY": 0.415,
+    "PERSON": 0.472,
+    "DRAWER": 1.058
+   },
+   "target_geometry_trajectory": [
+    {
+     "t_s": 7.75,
+     "center_x": 198.0,
+     "center_y": 763.0,
+     "left": 144,
+     "right": 252,
+     "top": 682,
+     "bottom": 844,
+     "w": 108,
+     "h": 162
+    },
+    {
+     "t_s": 8.0,
+     "center_x": 195.0,
+     "center_y": 770.5,
+     "left": 132,
+     "right": 258,
+     "top": 696,
+     "bottom": 845,
+     "w": 126,
+     "h": 149
+    },
+    {
+     "t_s": 10.0,
+     "center_x": 129.5,
+     "center_y": 786.5,
+     "left": 39,
+     "right": 220,
+     "top": 700,
+     "bottom": 873,
+     "w": 181,
+     "h": 173
+    }
+   ],
+   "state_transition": {},
+   "direction_evidence": {
+    "note": "方向证据=目标几何位移(逐帧 center/edges), 机器未注入人工状态"
+   },
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "DRAWER_OPEN (PASS)",
+   "frames_note": "7.5=预备无抽屉; 7.75(AUX2)=首现外移; 8.0(AUX1)=明显拉出; 10.0=全开",
+   "expected_human": "PASS",
+   "machine_matches_human": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  },
+  {
+   "slice": "109_ACTION_POSITIVE",
+   "media_id": 109,
+   "requested": "DRAWER_OPEN",
+   "frames_used": [
+    "m109_0.jpg",
+    "m109_1.jpg"
+   ],
+   "frame_timestamps": [
+    0.0,
+    1.45
+   ],
+   "target_object": "DRAWER",
+   "target_visible_frames": 2,
+   "camera": {
+    "max_translation_px": 3.817,
+    "max_feature_residual": 1.122,
+    "models": [
+     "AFFINE"
+    ],
+    "reliable_all": true
+   },
+   "pair_evidence": [
+    {
+     "from_t": 0.0,
+     "to_t": 1.45,
+     "camera_model": "AFFINE",
+     "translation_px": 3.817,
+     "inlier_ratio": 0.901,
+     "feature_residual": 1.122,
+     "reliable": true,
+     "motion": {
+      "TABLETOP": 0.1621,
+      "TRACK_SOCKET": 0.2464,
+      "ISLAND_BODY": 0.4475,
+      "HAND": 0.0,
+      "PERSON": 0.3619,
+      "DRAWER": 1.1629
+     }
+    }
+   ],
+   "roi_motion": {
+    "TABLETOP": 0.162,
+    "TRACK_SOCKET": 0.246,
+    "ISLAND_BODY": 0.448,
+    "HAND": 0.0,
+    "PERSON": 0.362,
+    "DRAWER": 1.163
+   },
+   "target_geometry_trajectory": [
+    {
+     "t_s": 0.0,
+     "center_x": 181.5,
+     "center_y": 792.0,
+     "left": 132,
+     "right": 231,
+     "top": 708,
+     "bottom": 876,
+     "w": 99,
+     "h": 168
+    },
+    {
+     "t_s": 1.45,
+     "center_x": 702.5,
+     "center_y": 789.5,
+     "left": 599,
+     "right": 806,
+     "top": 707,
+     "bottom": 872,
+     "w": 207,
+     "h": 165
+    }
+   ],
+   "state_transition": {},
+   "direction_evidence": {
+    "note": "方向证据=目标几何位移(逐帧 center/edges), 机器未注入人工状态"
+   },
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "DRAWER_OPEN (PASS)",
+   "frames_note": "帧0 PARTIAL_OPEN→帧1 FULL_OPEN",
+   "expected_human": "PASS",
+   "machine_matches_human": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  },
+  {
+   "slice": "109_OPEN_STATE_NEGATIVE",
+   "media_id": 109,
+   "requested": "DRAWER_OPEN",
+   "frames_used": [
+    "m109_2.jpg",
+    "m109_3.jpg",
+    "m109_4.jpg"
+   ],
+   "frame_timestamps": [
+    2.9,
+    4.35,
+    5.8
+   ],
+   "target_object": "DRAWER",
+   "target_visible_frames": 3,
+   "camera": {
+    "max_translation_px": 2.542,
+    "max_feature_residual": 0.524,
+    "models": [
+     "AFFINE",
+     "AFFINE"
+    ],
+    "reliable_all": true
+   },
+   "pair_evidence": [
+    {
+     "from_t": 2.9,
+     "to_t": 4.35,
+     "camera_model": "AFFINE",
+     "translation_px": 1.414,
+     "inlier_ratio": 0.932,
+     "feature_residual": 0.311,
+     "reliable": true,
+     "motion": {
+      "ISLAND_BODY": 0.1653,
+      "HAND": 0.5042,
+      "PERSON": 0.3495,
+      "DRAWER": 0.0892,
+      "TRACK_SOCKET": 0.1511,
+      "TABLETOP": 0.0477
+     }
+    },
+    {
+     "from_t": 4.35,
+     "to_t": 5.8,
+     "camera_model": "AFFINE",
+     "translation_px": 2.542,
+     "inlier_ratio": 0.96,
+     "feature_residual": 0.524,
+     "reliable": true,
+     "motion": {
+      "TABLETOP": 0.0539,
+      "TRACK_SOCKET": 0.1449,
+      "DRAWER": 0.1272,
+      "ISLAND_BODY": 0.1654,
+      "HAND": 0.0,
+      "PERSON": 0.2373
+     }
+    }
+   ],
+   "roi_motion": {
+    "ISLAND_BODY": 0.165,
+    "HAND": 0.504,
+    "PERSON": 0.349,
+    "DRAWER": 0.127,
+    "TRACK_SOCKET": 0.151,
+    "TABLETOP": 0.054
+   },
+   "target_geometry_trajectory": [
+    {
+     "t_s": 2.9,
+     "center_x": 707.5,
+     "center_y": 780.5,
+     "left": 609,
+     "right": 806,
+     "top": 695,
+     "bottom": 866,
+     "w": 197,
+     "h": 171
+    },
+    {
+     "t_s": 4.35,
+     "center_x": 112.5,
+     "center_y": 788.5,
+     "left": 4,
+     "right": 221,
+     "top": 702,
+     "bottom": 875,
+     "w": 217,
+     "h": 173
+    },
+    {
+     "t_s": 5.8,
+     "center_x": 106.5,
+     "center_y": 798.5,
+     "left": 0,
+     "right": 213,
+     "top": 696,
+     "bottom": 901,
+     "w": 213,
+     "h": 205
+    }
+   ],
+   "state_transition": {},
+   "direction_evidence": {
+    "note": "方向证据=目标几何位移(逐帧 center/edges), 机器未注入人工状态"
+   },
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "NOT_OPEN_ACTION (FAIL DRAWER_OPEN)",
+   "frames_note": "帧2-4 已打开静止讲解",
+   "expected_human": "FAIL",
+   "machine_matches_human": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  },
+  {
+   "slice": "89_EXTEND",
+   "media_id": 89,
+   "requested": "EXTEND",
+   "frames_used": [
+    "m89_0.jpg",
+    "m89_1.jpg",
+    "m89_2.jpg",
+    "m89_3.jpg",
+    "m89_4.jpg"
+   ],
+   "frame_timestamps": [
+    0.0,
+    1.78,
+    3.56,
+    5.34,
+    7.12
+   ],
+   "target_object": "EXTENSION_TABLETOP",
+   "target_visible_frames": 5,
+   "camera": {
+    "max_translation_px": 5.349,
+    "max_feature_residual": 0.526,
+    "models": [
+     "AFFINE",
+     "AFFINE",
+     "AFFINE",
+     "AFFINE"
+    ],
+    "reliable_all": true
+   },
+   "pair_evidence": [
+    {
+     "from_t": 0.0,
+     "to_t": 1.78,
+     "camera_model": "AFFINE",
+     "translation_px": 2.655,
+     "inlier_ratio": 0.962,
+     "feature_residual": 0.384,
+     "reliable": true,
+     "motion": {
+      "TABLETOP": 0.0371,
+      "TRACK_SOCKET": 0.2123,
+      "DRAWER": 0.2722,
+      "ISLAND_BODY": 0.1316,
+      "HAND": 0.0,
+      "PERSON": 0.2668
+     }
+    },
+    {
+     "from_t": 1.78,
+     "to_t": 3.56,
+     "camera_model": "AFFINE",
+     "translation_px": 1.228,
+     "inlier_ratio": 0.932,
+     "feature_residual": 0.526,
+     "reliable": true,
+     "motion": {
+      "DRAWER": 0.3152,
+      "HAND": 0.0,
+      "PERSON": 0.3407,
+      "TRACK_SOCKET": 0.3952,
+      "ISLAND_BODY": 0.2205,
+      "TABLETOP": 0.1948
+     }
+    },
+    {
+     "from_t": 3.56,
+     "to_t": 5.34,
+     "camera_model": "AFFINE",
+     "translation_px": 1.019,
+     "inlier_ratio": 0.866,
+     "feature_residual": 0.52,
+     "reliable": true,
+     "motion": {
+      "TABLETOP": 0.0416,
+      "TRACK_SOCKET": 0.3055,
+      "DRAWER": 0.398,
+      "HAND": 0.0,
+      "PERSON": 0.3927,
+      "ISLAND_BODY": 0.1132
+     }
+    },
+    {
+     "from_t": 5.34,
+     "to_t": 7.12,
+     "camera_model": "AFFINE",
+     "translation_px": 5.349,
+     "inlier_ratio": 0.944,
+     "feature_residual": 0.36,
+     "reliable": true,
+     "motion": {
+      "HAND": 0.0,
+      "DRAWER": 0.2427,
+      "TRACK_SOCKET": 0.1207,
+      "ISLAND_BODY": 0.1461,
+      "TABLETOP": 0.0945,
+      "PERSON": 0.476
+     }
+    }
+   ],
+   "roi_motion": {
+    "TABLETOP": 0.195,
+    "TRACK_SOCKET": 0.395,
+    "DRAWER": 0.398,
+    "ISLAND_BODY": 0.221,
+    "HAND": 0.0,
+    "PERSON": 0.476
+   },
+   "target_geometry_trajectory": [
+    {
+     "t_s": 0.0,
+     "center_x": 399.5,
+     "center_y": 1177.0,
+     "left": 3,
+     "right": 796,
+     "top": 920,
+     "bottom": 1434,
+     "w": 793,
+     "h": 514
+    },
+    {
+     "t_s": 1.78,
+     "center_x": 402.0,
+     "center_y": 1175.0,
+     "left": 2,
+     "right": 802,
+     "top": 915,
+     "bottom": 1435,
+     "w": 800,
+     "h": 520
+    },
+    {
+     "t_s": 3.56,
+     "center_x": 400.0,
+     "center_y": 1178.0,
+     "left": 3,
+     "right": 797,
+     "top": 922,
+     "bottom": 1434,
+     "w": 794,
+     "h": 512
+    },
+    {
+     "t_s": 5.34,
+     "center_x": 403.0,
+     "center_y": 1177.0,
+     "left": 2,
+     "right": 804,
+     "top": 920,
+     "bottom": 1434,
+     "w": 802,
+     "h": 514
+    },
+    {
+     "t_s": 7.12,
+     "center_x": 402.5,
+     "center_y": 1172.0,
+     "left": 1,
+     "right": 804,
+     "top": 906,
+     "bottom": 1438,
+     "w": 803,
+     "h": 532
+    }
+   ],
+   "state_transition": {},
+   "direction_evidence": {
+    "note": "方向证据=目标几何位移(逐帧 center/edges), 机器未注入人工状态"
+   },
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "NOT_EXTEND (FAIL)",
+   "frames_note": "人讲解；桌板静止",
+   "expected_human": "FAIL",
+   "machine_matches_human": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  },
+  {
+   "slice": "51_EXTEND",
+   "media_id": 51,
+   "requested": "EXTEND",
+   "frames_used": [
+    "m51_0.jpg",
+    "m51_1.jpg",
+    "m51_2.jpg",
+    "m51_3.jpg",
+    "m51_4.jpg"
+   ],
+   "frame_timestamps": [
+    0.0,
+    2.5,
+    5.0,
+    7.5,
+    10.0
+   ],
+   "target_object": "EXTENSION_TABLETOP",
+   "target_visible_frames": 5,
+   "camera": {
+    "max_translation_px": 31.888,
+    "max_feature_residual": 1.913,
+    "models": [
+     "AFFINE",
+     "AFFINE",
+     "AFFINE",
+     "AFFINE"
+    ],
+    "reliable_all": true
+   },
+   "pair_evidence": [
+    {
+     "from_t": 0.0,
+     "to_t": 2.5,
+     "camera_model": "AFFINE",
+     "translation_px": 31.888,
+     "inlier_ratio": 0.642,
+     "feature_residual": 1.913,
+     "reliable": true,
+     "motion": {
+      "SOCKET_MODULE": 0.3236,
+      "PERSON": 0.5242,
+      "ISLAND_BODY": 0.1438,
+      "TABLETOP": 0.3523,
+      "HAND": 0.0
+     }
+    },
+    {
+     "from_t": 2.5,
+     "to_t": 5.0,
+     "camera_model": "AFFINE",
+     "translation_px": 15.452,
+     "inlier_ratio": 0.629,
+     "feature_residual": 1.538,
+     "reliable": true,
+     "motion": {
+      "HAND": 0.0,
+      "PERSON": 0.5303,
+      "TABLETOP": 0.5648,
+      "SOCKET_MODULE": 0.7044,
+      "ISLAND_BODY": 0.4423
+     }
+    },
+    {
+     "from_t": 5.0,
+     "to_t": 7.5,
+     "camera_model": "AFFINE",
+     "translation_px": 5.505,
+     "inlier_ratio": 0.658,
+     "feature_residual": 1.48,
+     "reliable": true,
+     "motion": {
+      "ISLAND_BODY": 0.6088,
+      "HAND": 0.7164,
+      "PERSON": 0.5106,
+      "TABLETOP": 0.5494,
+      "SOCKET_MODULE": 0.5513
+     }
+    },
+    {
+     "from_t": 7.5,
+     "to_t": 10.0,
+     "camera_model": "AFFINE",
+     "translation_px": 7.318,
+     "inlier_ratio": 0.677,
+     "feature_residual": 1.248,
+     "reliable": true,
+     "motion": {
+      "TABLETOP": 0.6053,
+      "SOCKET_MODULE": 0.9637,
+      "ISLAND_BODY": 0.5304,
+      "HAND": 0.0,
+      "PERSON": 0.4707
+     }
+    }
+   ],
+   "roi_motion": {
+    "SOCKET_MODULE": 0.964,
+    "PERSON": 0.53,
+    "ISLAND_BODY": 0.609,
+    "TABLETOP": 0.605,
+    "HAND": 0.716
+   },
+   "target_geometry_trajectory": [
+    {
+     "t_s": 0.0,
+     "center_x": 404.0,
+     "center_y": 1179.0,
+     "left": 3,
+     "right": 805,
+     "top": 925,
+     "bottom": 1433,
+     "w": 802,
+     "h": 508
+    },
+    {
+     "t_s": 2.5,
+     "center_x": 405.0,
+     "center_y": 1143.0,
+     "left": 4,
+     "right": 806,
+     "top": 895,
+     "bottom": 1391,
+     "w": 802,
+     "h": 496
+    },
+    {
+     "t_s": 5.0,
+     "center_x": 407.0,
+     "center_y": 1165.5,
+     "left": 8,
+     "right": 806,
+     "top": 896,
+     "bottom": 1435,
+     "w": 798,
+     "h": 539
+    },
+    {
+     "t_s": 7.5,
+     "center_x": 405.5,
+     "center_y": 1127.0,
+     "left": 5,
+     "right": 806,
+     "top": 871,
+     "bottom": 1383,
+     "w": 801,
+     "h": 512
+    },
+    {
+     "t_s": 10.0,
+     "center_x": 404.5,
+     "center_y": 1176.0,
+     "left": 0,
+     "right": 809,
+     "top": 919,
+     "bottom": 1433,
+     "w": 809,
+     "h": 514
+    }
+   ],
+   "state_transition": {},
+   "direction_evidence": {
+    "note": "方向证据=目标几何位移(逐帧 center/edges), 机器未注入人工状态"
+   },
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "NOT_EXTEND (FAIL)",
+   "frames_note": "静态产品讲解",
+   "expected_human": "FAIL",
+   "machine_matches_human": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  },
+  {
+   "slice": "1985_EXTEND",
+   "media_id": 1985,
+   "requested": "EXTEND",
+   "frames_used": [
+    "m1985_0.jpg",
+    "m1985_1.jpg",
+    "m1985_2.jpg",
+    "m1985_3.jpg",
+    "m1985_4.jpg"
+   ],
+   "frame_timestamps": [
+    1.9,
+    2.525,
+    3.15,
+    3.775,
+    4.4
+   ],
+   "target_object": "EXTENSION_TABLETOP",
+   "target_visible_frames": 5,
+   "camera": {
+    "max_translation_px": 8.609,
+    "max_feature_residual": 25.353,
+    "models": [
+     "AFFINE",
+     "AFFINE",
+     "AFFINE",
+     "AFFINE"
+    ],
+    "reliable_all": false
+   },
+   "pair_evidence": [
+    {
+     "from_t": 1.9,
+     "to_t": 2.525,
+     "camera_model": "AFFINE",
+     "translation_px": 8.609,
+     "inlier_ratio": 0.395,
+     "feature_residual": 4.488,
+     "reliable": false,
+     "motion": {
+      "PERSON": 0.4562,
+      "TRACK_SOCKET": 0.8535,
+      "ISLAND_BODY": 0.3989,
+      "TABLETOP": 0.3114
+     }
+    },
+    {
+     "from_t": 2.525,
+     "to_t": 3.15,
+     "camera_model": "AFFINE",
+     "translation_px": 6.859,
+     "inlier_ratio": 0.462,
+     "feature_residual": 3.647,
+     "reliable": true,
+     "motion": {
+      "TRACK_SOCKET": 0.1119,
+      "ISLAND_BODY": 0.287,
+      "TABLETOP": 0.2396,
+      "HAND": 0.3823,
+      "SOCKET_MODULE": 0.238
+     }
+    },
+    {
+     "from_t": 3.15,
+     "to_t": 3.775,
+     "camera_model": "AFFINE",
+     "translation_px": 3.311,
+     "inlier_ratio": 0.312,
+     "feature_residual": 25.353,
+     "reliable": false,
+     "motion": {
+      "HAND": 0.7269,
+      "SOCKET_MODULE": 0.9189,
+      "TABLETOP": 0.595,
+      "ISLAND_BODY": 0.3048
+     }
+    },
+    {
+     "from_t": 3.775,
+     "to_t": 4.4,
+     "camera_model": "AFFINE",
+     "translation_px": 1.677,
+     "inlier_ratio": 0.525,
+     "feature_residual": 1.963,
+     "reliable": true,
+     "motion": {
+      "HAND": 0.2132,
+      "SOCKET_MODULE": 0.5235,
+      "TABLETOP": 0.5125,
+      "ISLAND_BODY": 0.5066
+     }
+    }
+   ],
+   "roi_motion": {
+    "PERSON": 0.456,
+    "TRACK_SOCKET": 0.854,
+    "ISLAND_BODY": 0.507,
+    "TABLETOP": 0.595,
+    "HAND": 0.727,
+    "SOCKET_MODULE": 0.919
+   },
+   "target_geometry_trajectory": [
+    {
+     "t_s": 1.9,
+     "center_x": 403.5,
+     "center_y": 1176.0,
+     "left": 1,
+     "right": 806,
+     "top": 921,
+     "bottom": 1431,
+     "w": 805,
+     "h": 510
+    },
+    {
+     "t_s": 2.525,
+     "center_x": 409.5,
+     "center_y": 1196.0,
+     "left": 10,
+     "right": 809,
+     "top": 953,
+     "bottom": 1439,
+     "w": 799,
+     "h": 486
+    },
+    {
+     "t_s": 3.15,
+     "center_x": 424.5,
+     "center_y": 1228.0,
+     "left": 42,
+     "right": 807,
+     "top": 1021,
+     "bottom": 1435,
+     "w": 765,
+     "h": 414
+    },
+    {
+     "t_s": 3.775,
+     "center_x": 419.0,
+     "center_y": 1223.0,
+     "left": 32,
+     "right": 806,
+     "top": 1009,
+     "bottom": 1437,
+     "w": 774,
+     "h": 428
+    },
+    {
+     "t_s": 4.4,
+     "center_x": 404.0,
+     "center_y": 1167.5,
+     "left": 5,
+     "right": 803,
+     "top": 896,
+     "bottom": 1439,
+     "w": 798,
+     "h": 543
+    }
+   ],
+   "state_transition": {},
+   "direction_evidence": {
+    "note": "方向证据=目标几何位移(逐帧 center/edges), 机器未注入人工状态"
+   },
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "NOT_EXTEND (FAIL)",
+   "frames_note": "手/插座模块操作，桌板静止",
+   "expected_human": "FAIL",
+   "machine_matches_human": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  },
+  {
+   "slice": "1986_EXTEND",
+   "media_id": 1986,
+   "requested": "EXTEND",
+   "frames_used": [
+    "m1986_0.jpg",
+    "m1986_1.jpg",
+    "m1986_2.jpg",
+    "m1986_3.jpg",
+    "m1986_4.jpg"
+   ],
+   "frame_timestamps": [
+    1.9,
+    2.525,
+    3.15,
+    3.775,
+    4.4
+   ],
+   "target_object": "EXTENSION_TABLETOP",
+   "target_visible_frames": 5,
+   "camera": {
+    "max_translation_px": 8.609,
+    "max_feature_residual": 25.353,
+    "models": [
+     "AFFINE",
+     "AFFINE",
+     "AFFINE",
+     "AFFINE"
+    ],
+    "reliable_all": false
+   },
+   "pair_evidence": [
+    {
+     "from_t": 1.9,
+     "to_t": 2.525,
+     "camera_model": "AFFINE",
+     "translation_px": 8.609,
+     "inlier_ratio": 0.395,
+     "feature_residual": 4.488,
+     "reliable": false,
+     "motion": {
+      "HAND": 0.7346,
+      "TRACK_SOCKET": 0.2561,
+      "TABLETOP": 0.3264,
+      "ISLAND_BODY": 0.4324
+     }
+    },
+    {
+     "from_t": 2.525,
+     "to_t": 3.15,
+     "camera_model": "AFFINE",
+     "translation_px": 6.859,
+     "inlier_ratio": 0.462,
+     "feature_residual": 3.647,
+     "reliable": true,
+     "motion": {
+      "TRACK_SOCKET": 0.2237,
+      "HAND": 0.2644,
+      "ISLAND_BODY": 0.1864,
+      "TABLETOP": 0.2663
+     }
+    },
+    {
+     "from_t": 3.15,
+     "to_t": 3.775,
+     "camera_model": "AFFINE",
+     "translation_px": 3.311,
+     "inlier_ratio": 0.312,
+     "feature_residual": 25.353,
+     "reliable": false,
+     "motion": {
+      "HAND": 0.4575,
+      "TRACK_SOCKET": 0.0,
+      "TABLETOP": 0.5859,
+      "ISLAND_BODY": 0.244
+     }
+    },
+    {
+     "from_t": 3.775,
+     "to_t": 4.4,
+     "camera_model": "AFFINE",
+     "translation_px": 1.677,
+     "inlier_ratio": 0.525,
+     "feature_residual": 1.963,
+     "reliable": true,
+     "motion": {
+      "TRACK_SOCKET": 0.5075,
+      "HAND": 0.2147,
+      "TABLETOP": 0.4646,
+      "ISLAND_BODY": 0.3574
+     }
+    }
+   ],
+   "roi_motion": {
+    "HAND": 0.735,
+    "TRACK_SOCKET": 0.507,
+    "TABLETOP": 0.586,
+    "ISLAND_BODY": 0.432
+   },
+   "target_geometry_trajectory": [
+    {
+     "t_s": 1.9,
+     "center_x": 405.0,
+     "center_y": 1166.0,
+     "left": 6,
+     "right": 804,
+     "top": 897,
+     "bottom": 1435,
+     "w": 798,
+     "h": 538
+    },
+    {
+     "t_s": 2.525,
+     "center_x": 403.0,
+     "center_y": 1171.0,
+     "left": 2,
+     "right": 804,
+     "top": 984,
+     "bottom": 1358,
+     "w": 802,
+     "h": 374
+    },
+    {
+     "t_s": 3.15,
+     "center_x": 410.0,
+     "center_y": 1167.0,
+     "left": 18,
+     "right": 802,
+     "top": 899,
+     "bottom": 1435,
+     "w": 784,
+     "h": 536
+    },
+    {
+     "t_s": 3.775,
+     "center_x": 407.5,
+     "center_y": 1191.0,
+     "left": 11,
+     "right": 804,
+     "top": 945,
+     "bottom": 1437,
+     "w": 793,
+     "h": 492
+    },
+    {
+     "t_s": 4.4,
+     "center_x": 408.5,
+     "center_y": 1161.0,
+     "left": 15,
+     "right": 802,
+     "top": 889,
+     "bottom": 1433,
+     "w": 787,
+     "h": 544
+    }
+   ],
+   "state_transition": {},
+   "direction_evidence": {
+    "note": "方向证据=目标几何位移(逐帧 center/edges), 机器未注入人工状态"
+   },
+   "mandatory": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "TARGET_OBJECT_MOTION_BUT_DIRECTION_UNPROVEN"
+   ],
+   "machine_verdict": "Verdict.UNSURE",
+   "human_gt": "NOT_EXTEND (FAIL)",
+   "frames_note": "手操作插座，桌板静止",
+   "expected_human": "FAIL",
+   "machine_matches_human": false,
+   "false_pass": false,
+   "false_fail": false,
+   "unsure": true
+  }
+ ],
+ "summary": {
+  "false_pass": 0,
+  "false_fail": 0,
+  "unsure": 7,
+  "match": 0
+ }
+}
