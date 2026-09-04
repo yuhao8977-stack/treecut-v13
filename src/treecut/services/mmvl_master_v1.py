@@ -26,7 +26,6 @@ from enum import Enum
 from typing import Any, Callable, Dict, Iterable, List, Optional, Protocol, Sequence, Tuple
 import json
 import math
-import os
 import re
 import hashlib
 
@@ -396,6 +395,14 @@ class CameraMotionEstimator:
             )
 
         return curr_bgr.copy()
+
+
+def compensate_pair(prev_bgr: np.ndarray, curr_bgr: np.ndarray):
+    """一对帧的相机补偿——唯一实现（Source Audit R1.1：禁止 Runner 再写独立 translation/affine）。
+    返回 (warped_curr, CameraMotion)。estimate 记 prev→curr 运动，compensate 用逆变换把 curr 对齐回 prev。"""
+    est = CameraMotionEstimator()
+    m = est.estimate(prev_bgr, curr_bgr)
+    return est.compensate(curr_bgr, m), m
 
 
 # ============================================================
@@ -1085,16 +1092,10 @@ class MMVVMode(str, Enum):
     ENFORCEMENT = "ENFORCEMENT"
 
 
-# Source Audit R1 P2: Enforcement 代码锁（不止流程纪律）。
-# 默认禁止 ENFORCEMENT；仅当显式允许（环境变量 TREECUT_MMVV_ENFORCEMENT_ALLOW=1）才可构造。
-# 后续应叠加 Known-Case Gate + Blind-Set Gate + version whitelist 后才真正允许。
+# Source Audit R1.1（硬锁，无后门）：Enforcement 明确未批准。
+# KnownCaseGate / BlindSetGate / VersionWhitelist / ExplicitConfig 尚未实现——
+# 不假装存在，也不用环境变量单独解锁。未来批准任务实现这些 gate 后再放开。
 MMVV_ENFORCEMENT_ALLOWED = False
-
-
-def _mmvv_enforcement_allowed() -> bool:
-    if MMVV_ENFORCEMENT_ALLOWED:
-        return True
-    return os.environ.get("TREECUT_MMVV_ENFORCEMENT_ALLOW", "0") == "1"
 
 
 @dataclass
@@ -1107,11 +1108,11 @@ class ShadowDecision:
 
 class ShadowGate:
     def __init__(self, mode: MMVVMode = MMVVMode.SHADOW):
-        if mode == MMVVMode.ENFORCEMENT and not _mmvv_enforcement_allowed():
+        if mode == MMVVMode.ENFORCEMENT:
+            # 硬锁：任何路径（含环境变量）都不得开启；无后门。
             raise ValueError(
-                "MMVV_ENFORCEMENT_BLOCKED: Enforcement 未获批准（默认禁止）。"
-                "需 Known-Case Gate + Blind-Set Gate + version whitelist + 显式配置"
-                "（TREECUT_MMVV_ENFORCEMENT_ALLOW=1）同时成立才允许。")
+                "MMVV_ENFORCEMENT_BLOCKED: Enforcement 未获批准且无任何解锁路径。"
+                "需未来批准任务实现 KnownCaseGate+BlindSetGate+VersionWhitelist+ExplicitConfig 后才允许。")
         self.mode = mode
 
     def apply(self, old_decision: str, new_decision: str, evidence: Dict[str, Any]):

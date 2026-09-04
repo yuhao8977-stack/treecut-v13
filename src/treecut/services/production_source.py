@@ -82,6 +82,28 @@ class ProductionSourceService:
         return ok, {"eligible": ok, "reasons": reasons, "source_role": role,
                     "review_status": rev, "human_override": False}
 
+    # ---- Source Audit R1.1: 统一媒体契约（G2/G3/Workbench/Pilot 唯一入口，不再各自复制 SQL）----
+    def is_media_production_eligible(self, media_id: str | int, strict: bool = True) -> tuple[bool, dict]:
+        """G2/G3/生产脚本统一媒体资格契约：media_id → (bool, evidence)。
+        entity_kind 固定 'media_file'（隔离：同 id 跨 kind 不碰撞）。"""
+        return self.is_production_eligible("media_file", media_id, strict=strict)
+
+    def media_source_facts(self, media_id: str | int, strict: bool = True) -> dict:
+        """Source QA 独立事实（不推断，供 QA/Pilot 逐字段报告）。
+        返回每污染字段原始值(ABSENT/PRESENT/UNCERTAIN/None) + 角色/审核/资格；
+        entity_kind 固定 'media_file'。"""
+        row = self.role_row("media_file", media_id)
+        if row is None:
+            return {"exists": False, "eligible": False,
+                    "role": None, "review_status": None,
+                    "contamination": {f: None for f in CONTAM_FIELDS},
+                    "reasons": ["NO_ROLE_ROW"]}
+        ok, info = self.is_media_production_eligible(media_id, strict=strict)
+        return {"exists": True, "eligible": ok,
+                "role": row["source_role"], "review_status": row["review_status"],
+                "contamination": {f: row.get(f) for f in CONTAM_FIELDS},
+                "reasons": info.get("reasons", [])}
+
     def production_pool(self, strict: bool = True) -> Iterable[dict]:
         """全量合格生产池（media_file 维度）。"""
         with self._conn() as c:

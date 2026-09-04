@@ -174,13 +174,17 @@ class Handler(BaseHTTPRequestHandler):
                 self._send_json({"ok": False, "error": "no beat"}, 404)
                 return
             if path == "/api/replace":
-                # Source Audit R1 P1: 不得用裸 selection 覆盖候选（丢 actions/object/eligible/
-                # evidence/path/source_role/semantic_correct → 动作型 Claim 本地 QA 必 FAIL）。
-                # 合并: 以原候选元数据为基底，仅更新 media_id/subclip。
+                # Source Audit R1.1: media_id 必须∈本 beat candidates，否则 400 INVALID_CANDIDATE；
+                # 不得拿旧 selected 元数据配新 media_id。
                 sel_in = data.get("selection") or {}
                 cand = next((c for c in (beat.get("candidates") or [])
                              if str(c.get("media_id")) == str(sel_in.get("media_id"))), None)
-                base = dict(cand) if cand else dict(beat.get("selected") or {})
+                if cand is None:
+                    self._send_json({"ok": False,
+                                     "error": f"INVALID_CANDIDATE: media_id={sel_in.get('media_id')} 不在本 beat candidates"},
+                                    400)
+                    return
+                base = dict(cand)  # 以目标候选元数据为基底，保留 actions/object/eligible/evidence/path/... 
                 base["media_id"] = sel_in.get("media_id")
                 if "subclip" in sel_in:
                     base["subclip"] = sel_in["subclip"]
@@ -203,6 +207,19 @@ class Handler(BaseHTTPRequestHandler):
                 if dur is None:
                     self._send_json({"ok": False,
                                      "error": "无法探测源时长（缺 path 或 ffprobe）——禁止无界裁剪，请先回填 path"},
+                                    400)
+                    return
+                # Source Audit R1.1: 动作型镜头必须保留动作证据窗（trim 不得裁掉动作）
+                a0 = (cand or sel or {}).get("action_start_s")
+                a1 = (cand or sel or {}).get("action_end_s")
+                if a0 is None:
+                    a0 = ((sel.get("subclip") or {}).get("action_start_s"))
+                if a1 is None:
+                    a1 = ((sel.get("subclip") or {}).get("action_end_s"))
+                if a0 is not None and a1 is not None and (start > float(a0) + 1e-6 or end < float(a1) - 1e-6):
+                    self._send_json({"ok": False,
+                                     "error": f"ACTION_EVIDENCE_TRIMMED_OUT: 动作窗 [{a0},{a1}] 需被 trim 覆盖"
+                                              f" (trim=[{start},{end}])；人工 override 流程未实现，请调整区间"},
                                     400)
                     return
                 sub = dict(sel.get("subclip") or {})
@@ -250,8 +267,9 @@ def local_reqa(proj: dict, beat: dict) -> list[dict]:
                     "detail": "该 media 已在其它 beat 使用 → MAJOR_DUPLICATE(叙事近重由 builder 全量重算)"})
     else:
         out.append({"gate": "PRODUCTION", "key": "NEAR_DUPLICATE_FREE", "status": "PASS", "detail": ""})
-    out.append({"gate": "TECHNICAL", "key": "CAPTION_SIZE", "status": "PASS",
-                "detail": "字幕默认 66(62-68) 由渲染侧保证"})
+    # Source Audit R1.1: 配置期望 ≠ 成片实测——非观测事实不得冒充 PASS/完整 QA
+    out.append({"gate": "TECHNICAL", "key": "CAPTION_SIZE", "status": "WARNING",
+                "detail": "CONFIG_EXPECTED: 渲染默认 66(62-68) 由渲染侧保证，非本成片实测（完整 QA 由 ProductionQAService 重建时执行）"})
     out.append({"gate": "TECHNICAL", "key": "VOICE_PROVIDER_VALID", "status": "WARNING",
                 "detail": "SAPI=FALLBACK; 真人音 VOICE_INPUT_REQUIRED"})
     out.append({"gate": "PRODUCTION", "key": "BGM_PRESENT_IF_REQUIRED", "status": "WARNING",

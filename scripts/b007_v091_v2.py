@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
-"""V0.9.1 CP-4..6 — PILOT V2: 干净源混剪 + 1.3x 音频优先 + 硬烧字幕 + AV 硬闸 + QA。"""
+"""V0.9.1 CP-4..6 — PILOT V2: 干净源混剪 + 1.3x 音频优先 + 硬烧字幕 + AV 硬闸 + QA。
+
+Source Audit R1.1 冻结标记:
+LEGACY_REFERENCE / NOT_MAIN_PRODUCTION_PATH —— 保留为历史技术参考(曾真实渲染 V2)；
+不得演进为新 Production Orchestrator。新生产链走 services/production_source + G2/G3/MMVV。
+"""
 from __future__ import annotations
 
 import json
@@ -71,45 +76,37 @@ def pick_clean(feat_kws, limit=2, exclude=()):
 
 
 def source_qa_from_db(subclips) -> dict:
-    """Source QA 证据化（Source Audit R1 P0 修复）：不再人工假设 CLEAN/无旧字幕/无水印。
+    """Source QA 独立事实（Source Audit R1.1）：不复制 G1 SQL——走 ProductionSourceService。
 
-    对实际使用的每个 media_id 只读查询 b007_source_role_v1（G1 表）：
-    role ∈ {PRODUCTION_CLEAN_RAW, PRODUCTION_CLEAN_SEMI} 且 review_status='APPROVED'
-    且 5 个 contamination 字段全为 'ABSENT' → 该媒体判定 OK；否则 NOT_VERIFIED（附原因）。
-    返回 {"CLEAN_SOURCE": True|'NOT_VERIFIED', "OLD_SUBTITLE_ABSENT": ..., "PLATFORM_WATERMARK_ABSENT": ...,
-          "SOURCE_QA_EVIDENCE": "m<id>:OK|NOT_VERIFIED(<reasons>); ..."}
+    对每个实际使用 media_id 调 svc.media_source_facts(m)（内部固定 entity_kind='media_file'，
+    消除跨 kind 碰撞与整表 fetchall）。独立事实分开报告：
+      SOURCE_PRODUCTION_ELIGIBLE  ← 服务资格判定
+      OLD_SUBTITLE_ABSENT         ← burned_subtitle_present=='ABSENT'
+      PLATFORM_WATERMARK_ABSENT   ← platform_watermark_present=='ABSENT'
+    ABSENT→True；UNCERTAIN/PRESENT/无记录→NOT_VERIFIED；不从总体资格推断单字段。
     """
-    c = sqlite3.connect("file:" + DB.replace("\\", "/") + "?mode=ro", uri=True)
+    from treecut.services.production_source import ProductionSourceService
+    svc = ProductionSourceService(DB)
     mids = sorted({s["media_id"] for s in subclips})
-    rows = {}
-    for m in mids:
-        try:
-            rows[m] = c.execute(
-                "SELECT entity_id, source_role, review_status, burned_subtitle_present, "
-                "platform_watermark_present, old_title_overlay_present, brand_overlay_present, "
-                "unrelated_overlay_present FROM b007_source_role_v1").fetchall()
-        except Exception:
-            rows[m] = []
-    c.close()
-    CLEAN = ("PRODUCTION_CLEAN_RAW", "PRODUCTION_CLEAN_SEMI")
-    verdicts = {}
-    for m in mids:
-        hit = next((r for r in rows.get(m, []) if str(r[0]) == str(m)), None)
-        if hit is None:
-            verdicts[m] = ("NOT_VERIFIED", "no_g1_record")
-            continue
-        role, rs, b, p, o, br, u = hit[1], hit[2], hit[3], hit[4], hit[5], hit[6], hit[7]
-        cont = {"burned": b, "watermark": p, "old_title": o, "brand": br, "unrelated": u}
-        if role in CLEAN and rs == "APPROVED" and all(v == "ABSENT" for v in cont.values()):
-            verdicts[m] = ("OK", "")
-        else:
-            bad = [k for k, v in cont.items() if v != "ABSENT"]
-            verdicts[m] = ("NOT_VERIFIED", f"role={role},review={rs},non_absent={bad or 'none'}")
-    all_ok = all(v == "OK" for v, _ in verdicts.values())
-    flag = True if (all_ok and verdicts) else "NOT_VERIFIED"
-    ev = "; ".join(f"m{mid}:{v}{('(' + r + ')') if r else ''}" for mid, (v, r) in sorted(verdicts.items()))
-    return {"CLEAN_SOURCE": flag, "OLD_SUBTITLE_ABSENT": flag,
-            "PLATFORM_WATERMARK_ABSENT": flag, "SOURCE_QA_EVIDENCE": ev}
+    facts = {m: svc.media_source_facts(m) for m in mids}
+
+    def flag(key):
+        vals = [f["contamination"].get(key) for f in facts.values()]
+        if facts and all(v == "ABSENT" for v in vals):
+            return True
+        return "NOT_VERIFIED"
+
+    ev = "; ".join(
+        f"m{m}:eligible={f['eligible']}({','.join(f['reasons'] or ['ok'])});"
+        f"burned={f['contamination'].get('burned_subtitle_present')},"
+        f"watermark={f['contamination'].get('platform_watermark_present')}"
+        for m, f in sorted(facts.items()))
+    return {
+        "SOURCE_PRODUCTION_ELIGIBLE": True if (facts and all(f["eligible"] for f in facts.values())) else "NOT_VERIFIED",
+        "OLD_SUBTITLE_ABSENT": flag("burned_subtitle_present"),
+        "PLATFORM_WATERMARK_ABSENT": flag("platform_watermark_present"),
+        "SOURCE_QA_EVIDENCE": ev,
+    }
 
 
 def main() -> int:

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """MMV R2 Known6 复跑 — Semantic ROI + Target Core Motion(归属/排除) + 门序修正。
 qwen 输出对象+bbox JSON; TABLETOP_CORE = TABLETOP ROI 排除 SOCKET/DRAWER/PERSON 重叠;
-相机 translation→(残差高)affine; heuristic ROI 不得单独 PASS 方向动作。"""
+相机补偿统一走 mmvl_master_v1.compensate_pair(CameraMotionEstimator)——R1.1 去重，本脚本不再含独立 translation/affine。"""
 import base64, cv2, json, numpy as np, sqlite3, subprocess, sys, time, urllib.request
 from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
@@ -15,7 +15,7 @@ SYS = r"C:\Users\admin\github\treecut-v13\src"
 sys.path.insert(0, SYS)
 from treecut.services.mmvl_master_v1 import (ROI, Action, FrameSemantics, MotionMetrics,
                                              TemporalStateValidator, TemporalEvidence,
-                                             TargetObjectMotionRouter, CameraMotion)
+                                             TargetObjectMotionRouter, compensate_pair)
 ROI_OBJ = ("输出严格 JSON(不要其它文字): {\"objects\":[{\"name\":\"TABLETOP|EXTENSION_TABLETOP|DRAWER|"
            "UPPER_THIN_DRAWER|TRACK_SOCKET|SOCKET_MODULE|PERSON|ISLAND_BODY\",\"bbox\":[x1,y1,x2,y2] 归一化0-1,"
            "\"conf\":0-1}]} 只列出实际可见对象; 无则 {\"objects\":[]}")
@@ -49,43 +49,6 @@ def parse_rois(text, w, h, mid, ts):
 
 def gray(f):
     return cv2.cvtColor(f, cv2.COLOR_BGR2GRAY)
-
-def camera_stage(a, b):
-    """L1 translation(phaseCorrelate); 残差高→L2 affine(estimateAffinePartial2D/LK)。返回 (warped_b, CameraMotion)
-
-    Source Audit R1 P1 修复（方向实证，2026-09-04 synthetic sign check）：
-    - phaseCorrelate(a,b) 返回 b 相对 a 的位移 (dx,dy)；把 b 对齐回 a 需 warp 用 (-dx,-dy)
-      （原实现用 +dx 沿相机方向叠加，残差反而放大）。
-    - estimateAffinePartial2D(pa,pb)（pa=prev, pb=curr）给出 prev→curr 变换；
-      对齐 current→previous 需 warpAffine(b, invertAffineTransform(Ma))，不得用 fwd Ma。
-    matrix 仍记录相机运动（prev→curr），对齐一律用逆变换。
-    """
-    ga, gb = gray(a), gray(b)
-    wa = np.zeros_like(gb, dtype=np.float32)
-    sh, shp = cv2.phaseCorrelate(np.float32(ga), np.float32(gb))
-    dx, dy = sh[0], sh[1]
-    M = np.float32([[1, 0, dx], [0, 1, dy]])          # 相机运动 prev→curr
-    Malign = np.float32([[1, 0, -dx], [0, 1, -dy]])   # 对齐 current→previous
-    wb = cv2.warpAffine(b, Malign, (b.shape[1], b.shape[0]))  # 彩色 warp
-    resid = float(np.abs(gray(wb).astype(np.float32) - ga.astype(np.float32)).mean() / 40.0)
-    ctype, matrix, inl = "translation", M.tolist(), 1.0
-    if resid > 0.12:  # 残差高 → affine
-        try:
-            p0 = cv2.goodFeaturesToTrack(ga, maxCorners=200, qualityLevel=0.01, minDistance=5)
-            if p0 is not None:
-                p1, stt, _ = cv2.calcOpticalFlowPyrLK(ga, gb, p0, None)
-                good = stt.ravel() == 1
-                pa, pb = p0[good], p1[good]
-                if len(pa) >= 10:
-                    Ma, inl = cv2.estimateAffinePartial2D(pa, pb)
-                    if Ma is not None:
-                        wb = cv2.warpAffine(b, cv2.invertAffineTransform(Ma), (b.shape[1], b.shape[0]))
-                        resid = float(np.abs(gray(wb).astype(np.float32) - ga.astype(np.float32)).mean() / 40.0)
-                        ctype, matrix, inl = "affine", Ma.tolist(), float(inl)
-        except Exception:
-            pass
-    cm = CameraMotion(ctype, matrix, float(np.hypot(dx, dy)), inl, resid, resid < 0.20)
-    return wb, cm
 
 def band_motion(a_bgr, b_bgr_warped, box):
     """box ROI 内(扣 mask) absdiff 均值 → 运动代理。mask 排除区列表。"""
@@ -189,7 +152,7 @@ for mid, req, fw in CASES:
                           int(stats[i, cv2.CC_STAT_TOP] + stats[i, cv2.CC_STAT_HEIGHT])))
         return boxes
     for i in range(len(frames) - 1):
-        wb, cm = camera_stage(frames[i], frames[i + 1])
+        wb, cm = compensate_pair(frames[i], frames[i + 1])  # 唯一相机实现(CameraMotionEstimator)
         # 目标带 diff
         x1, y1, x2, y2 = tbox
         subA = gray(frames[i])[y1:y2, x1:x2].astype(np.float32)

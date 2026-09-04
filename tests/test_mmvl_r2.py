@@ -153,11 +153,14 @@ def test_enforcement_blocked_without_allow(monkeypatch):
     ShadowGate(MMVVMode.SHADOW)
 
 
-def test_enforcement_allowed_only_with_explicit_env(monkeypatch):
+def test_enforcement_env_cannot_bypass(monkeypatch):
+    # Source Audit R1.1: 硬锁无后门——env 不能单独解锁（不假装四重门存在）
     monkeypatch.delenv("TREECUT_MMVV_ENFORCEMENT_ALLOW", raising=False)
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError, match="MMVV_ENFORCEMENT_BLOCKED"):
         ShadowGate(MMVVMode.ENFORCEMENT)
     monkeypatch.setenv("TREECUT_MMVV_ENFORCEMENT_ALLOW", "1")
-    g = ShadowGate(MMVVMode.ENFORCEMENT)
-    assert g.mode == MMVVMode.ENFORCEMENT
+    with pytest.raises(ValueError, match="MMVV_ENFORCEMENT_BLOCKED"):
+        ShadowGate(MMVVMode.ENFORCEMENT)
+    ShadowGate()  # 默认 SHADOW 不受影响
+    ShadowGate(MMVVMode.SHADOW)
 

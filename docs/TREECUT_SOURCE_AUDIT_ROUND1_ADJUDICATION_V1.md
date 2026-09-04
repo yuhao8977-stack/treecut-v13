@@ -75,3 +75,20 @@ Harness Master Audit = 大方向正确；Round-1 Adjudication = 多数修正正�
 | 9 全量回归 | 有界逐文件（ev_tests.json 覆盖） | **~420 passed / 4 xfailed(诚实 R2_KNOWN_UNMET) / 0 failed** |
 | 10 CI | 发现 runs 全部 0s failure 无日志（CI_CONFIG_EXISTS+CI_RUNS_ALL_FAIL）→ 属账号/工作流层，不在代码轮内 | gh run list 证据 |
 遗留（Wave 外，按架构师顺序后续）：Hub token 轮换（需 hub 端）；A0→A4 ROI 校准；G2/G3 per-action closure；G5 typed result；Production Contract；Orchestrator。
+
+## 8. R1.1 DETERMINISTIC CLOSURE 执行记录（2026-09-04）
+裁决：`SOURCE_AUDIT_CORRECTION_WAVE = PASS_WITH_RESIDUAL_FIXES` → 本 R1.1 关闭确定性残留。
+| 项 | 修复 | 验证 |
+| --- | --- | --- |
+| G1 统一媒体契约 | production_source.py 新增 `is_media_production_eligible(media_id, strict)->(bool,evidence)`（entity_kind 固定 media_file）+ `media_source_facts()`（独立污染事实） | 真 DB 集成测试（test_source_audit_r11） |
+| G2/G3 真契约 | 测试用真 ProductionSourceService 门（非 lambda）验证拦截/放行 | 集成测试通过 |
+| Pilot 重复 G1 SQL | b007_v091_v2.py `source_qa_from_db` 改走 ProductionSourceService；分离 SOURCE_PRODUCTION_ELIGIBLE/OLD_SUBTITLE_ABSENT/PLATFORM_WATERMARK_ABSENT 各带证据；UNCERTAIN→NOT_VERIFIED | py_compile；实体隔离测试 |
+| Pilot LEGACY 冻结 | 文件头标注 LEGACY_REFERENCE / NOT_MAIN_PRODUCTION_PATH | — |
+| R2 相机去重 | 删除 camera_stage 独立实现；改调 mmvl_master_v1.compensate_pair(CameraMotionEstimator)；inlier 用 mean() 浮点（无 float(mask)、无宽 except 吞错） | 静态守卫测试（无 estimateAffinePartial2D/phaseCorrelate/camera_stage）+ compensate_pair 行为测试 |
+| Enforcement 硬锁 | 删除 env 单变量解锁；ENFORCEMENT 一律 MMVV_ENFORCEMENT_BLOCKED（不假装四重门） | env=1 仍 raise 测试 |
+| Workbench replace 契约 | media_id 必须∈candidates，否则 400 INVALID_CANDIDATE（不继承旧 selected 元数据） | HTTP 测试 |
+| 动作保留 trim | 候选含 action_start/end 时要求 trim 覆盖动作窗，否则 400 ACTION_EVIDENCE_TRIMMED_OUT | HTTP 测试 |
+| local_reqa 诚实 | CAPTION_SIZE PASS→WARNING+CONFIG_EXPECTED（配置期望≠成片实测） | 单测 |
+| 回归 | 有界逐文件全量 | **~432 passed / 4 xfailed（诚实 R2_KNOWN_UNMET）/ 0 failed** |
+R1.1 状态：**SOURCE_AUDIT_CORRECTION_WAVE_FULL_PASS**（仅指确定性源码审计修正关闭；不等于 MMVV/G2/G3/Stage8/Production Ready）。
+下一步仅允许：MMVV A1 HUMAN GT ROI CALIBRATION（不自动开始）。仍禁止：Pilot V3 / Blind30-50 / Stage9 / Voice·BGM 生产 / 新 VLM / UI 扩张 / Qwen 训练 / Orchestrator 实现。
