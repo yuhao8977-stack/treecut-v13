@@ -1,6 +1,37 @@
 {
- "annotation_version": "A1",
  "generated_at": "2026-09-04 15:47:35",
+ "frames_total": 30,
+ "frames_ok": 30,
+ "annotations": 162,
+ "issues": [],
+ "missing_required": [
+  {
+   "media": 1985,
+   "issue": "REQUIRED_OBJECT_ABSENT",
+   "required_any_of": [
+    "TABLETOP",
+    "EXTENSION_TABLETOP"
+   ],
+   "present": [
+    "HAND",
+    "PERSON",
+    "SOCKET_MODULE",
+    "TRACK_SOCKET"
+   ]
+  },
+  {
+   "media": 1986,
+   "issue": "REQUIRED_OBJECT_ABSENT",
+   "required_any_of": [
+    "TABLETOP",
+    "EXTENSION_TABLETOP"
+   ],
+   "present": [
+    "HAND",
+    "TRACK_SOCKET"
+   ]
+  }
+ ],
  "cases": [
   {
    "media_id": 51,
@@ -437,5 +468,7 @@
    ],
    "fully_annotated": true
   }
- ]
+ ],
+ "a1_ready": false,
+ "a2_not_run": true
 }

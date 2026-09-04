@@ -76,7 +76,7 @@ def main():
     gen_review.main()
     print("[4] geometry/state/review rebuilt")
 
-    # 5. missing required ROI by case/frame
+    # 5. missing required ROI by case/frame（required 元组=任一满足即可 any-of）
     missing = []
     for c in man["cases"]:
         req = a1.REQUIRED_OBJECTS.get(c["requested"], ())
@@ -87,11 +87,33 @@ def main():
             n = sum(1 for a in anns if a["media_id"] == c["media_id"] and a["frame_timestamp"] == fr["t_s"])
             if n == 0:
                 missing.append({"media": c["media_id"], "frame": fr["frame"], "issue": "NO_BOXES"})
-        absent = [r for r in req if r not in per_case_objs]
-        if absent:
+        # any-of: 案例内任一必需对象出现即视为该对象族可追踪基础
+        if not any(r in per_case_objs for r in req):
             missing.append({"media": c["media_id"], "issue": "REQUIRED_OBJECT_ABSENT",
-                            "required": list(req), "present": sorted(per_case_objs)})
-    print(f"[5] missing issues={len(missing)}")
+                            "required_any_of": list(req), "present": sorted(per_case_objs)})
+    # 追加: 重复框(同帧同对象 IoU>0.85) 与 极小框(<8px) 检查（只报告不删除）
+    for i, a in enumerate(anns):
+        x1, y1, x2, y2 = a["bbox_pixel"]
+        if (x2 - x1) < 8 or (y2 - y1) < 8:
+            issues.append({"kind": "TINY_BOX", "media": a["media_id"],
+                           "frame": next((f["frame"] for c in man["cases"] for f in c["frames"]
+                                          if c["media_id"] == a["media_id"] and f["t_s"] == a["frame_timestamp"]), "?"),
+                           "bbox": a["bbox_pixel"]})
+        for j, b in enumerate(anns):
+            if j <= i:
+                continue
+            if a["media_id"] == b["media_id"] and a["frame_timestamp"] == b["frame_timestamp"] \
+                    and a["object_name"] == b["object_name"]:
+                ax1, ay1, ax2, ay2 = a["bbox_pixel"]; bx1, by1, bx2, by2 = b["bbox_pixel"]
+                ix1, iy1 = max(ax1, bx1), max(ay1, by1)
+                ix2, iy2 = min(ax2, bx2), min(ay2, by2)
+                inter = max(0, ix2 - ix1) * max(0, iy2 - iy1)
+                au = (ax2 - ax1) * (ay2 - ay1) + (bx2 - bx1) * (by2 - by1) - inter
+                if au > 0 and inter / au > 0.85:
+                    issues.append({"kind": "DUPLICATE_BOX", "media": a["media_id"],
+                                   "frame_timestamp": a["frame_timestamp"], "object": a["object_name"]})
+                    break
+    print(f"[5] missing issues={len(missing)} extra issues={len(issues)}")
 
     report = {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
               "frames_total": len(frames), "frames_ok": len(frames) - len([i for i in issues if i["kind"].startswith("FRAME")]),

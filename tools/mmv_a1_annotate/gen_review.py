@@ -11,6 +11,13 @@ MANIFEST = OUT / "TREECUT_MMVV_A1_FRAME_MANIFEST.json"
 ROI_FILE = OUT / "TREECUT_MMVV_HUMAN_GT_ROI_A1.json"
 FRAMES_DIR = json.loads(MANIFEST.read_text(encoding="utf-8")).get("frames_dir")
 
+# 显示层中文映射（内部值不变）
+LABEL_CN = {"TABLETOP": "桌板/台面", "EXTENSION_TABLETOP": "伸缩桌板", "DRAWER": "抽屉",
+            "UPPER_THIN_DRAWER": "上层薄抽", "TRACK_SOCKET": "轨道插座", "SOCKET_MODULE": "插座模块",
+            "PERSON": "人", "HAND": "手", "ISLAND_BODY": "岛台主体", "OTHER_MOVING_PART": "其他运动部件"}
+REQ_CN = {"EXTEND": "拉出/伸出", "RETRACT": "收回", "DRAWER_OPEN": "抽屉打开",
+          "SOCKET_INSERT": "插入插座", "SOCKET_ADJUST": "调整插座"}
+
 
 def main():
     man = json.loads(MANIFEST.read_text(encoding="utf-8"))
@@ -28,7 +35,8 @@ def main():
                 f'<rect x="{a["bbox_pixel"][0]}" y="{a["bbox_pixel"][1]}" '
                 f'width="{a["bbox_pixel"][2]-a["bbox_pixel"][0]}" '
                 f'height="{a["bbox_pixel"][3]-a["bbox_pixel"][1]}" fill="none" stroke="#ff3b30" stroke-width="3"/>'
-                f'<text x="{a["bbox_pixel"][0]+6}" y="{a["bbox_pixel"][1]+22}" fill="#ff3b30" font-size="22">{a["object_name"]}</text>'
+                f'<text x="{a["bbox_pixel"][0]+6}" y="{a["bbox_pixel"][1]+24}" fill="#ff3b30" font-size="24" '
+                f'style="font-family:\'Microsoft YaHei\',sans-serif">{LABEL_CN.get(a["object_name"], a["object_name"])}</text>'
                 for a in rs)
             img = (Path(FRAMES_DIR) / f["frame"]).as_uri() if FRAMES_DIR else ""
             frames_html.append(f"""
@@ -41,8 +49,8 @@ def main():
             </div>""")
         facts = c.get("human_facts") or {}
         blocks.append(f"""
-        <h2 style="border-bottom:2px solid #333;padding-bottom:4px">media {c['media_id']} · {c['requested']} · 窗口[{c['frozen_window_s'][0]},{c['frozen_window_s'][1]}]s</h2>
-        <p style="font-size:13px">人工事实(独立字段): {json.dumps(facts, ensure_ascii=False)}</p>
+        <h2 style="border-bottom:2px solid #333;padding-bottom:4px">测试视频 {c['media_id']} · 要验证：{REQ_CN.get(c['requested'], c['requested'])} · 窗口[{c['frozen_window_s'][0]},{c['frozen_window_s'][1]}]秒</h2>
+        <p style="font-size:13px">已知人工结论(独立字段): {json.dumps(facts, ensure_ascii=False)}</p>
         <div>{''.join(frames_html) or '<p>无帧</p>'}</div>""")
     html = f"""<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"/><title>MMVV A1 Human GT ROI Review</title></head>
 <body style="font-family:'Microsoft YaHei',sans-serif;max-width:1400px;margin:20px auto;padding:0 16px">
