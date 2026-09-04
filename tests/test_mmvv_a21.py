@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """MMVV A2.1 — 目标身份 + 几何方向/状态通道测试（无真实媒体，合成几何）。
 
 覆盖（架构师 §17）：multiple_same_label_not_hits0 / target_instance_binding_deterministic /
@@ -57,7 +57,7 @@ def test_multiple_same_label_not_hits0():
     # 绑定后追踪的是左抽屉：所有 box 一致(不串线)
     g = build_geometry_direction_evidence("DRAWER", "A", tl)
     assert g.direction_action == "STATIC", g.direction_action
-    assert g.raw_features["per_frame"][0]["cx"] == g.raw_features["per_frame"][2]["cx"]  # 稳定
+    assert g.raw_features["abs_per_frame"][0]["cx"] == g.raw_features["abs_per_frame"][2]["cx"]  # 稳定
 
 
 def test_target_instance_binding_deterministic():
@@ -80,7 +80,7 @@ def test_relative_geometry_to_island_body():
                                            [{"t_s": float(i), "bbox_pixel": [100, 100, 300, 300],
                                              "island_pixel": [100, 900, 1400, 1400]} for i in range(3)])
     assert g1.direction_action == "STATIC" and g2.direction_action == "STATIC"
-    assert g1.raw_features["per_frame"][0].get("area_ratio") is not None  # 相对特征已算
+    assert g1.raw_features["rel_per_frame"][0].get("area_ratio") is not None  # 相对特征已算
 
 
 def test_static_geometry_not_action():
@@ -138,3 +138,4 @@ def test_camera_unreliable_can_remain_unsure():
     v = _val(_ev(Action.EXTEND, {"TABLETOP": 0.6}, g, obj="TABLETOP"))
     assert v.verdict == Verdict.UNSURE
     assert "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE" in v.reason_codes
+
