@@ -1,0 +1,257 @@
+{
+ "case": "CAMERA_CASE_FAMILY_SOCKET_01",
+ "members": [
+  1985,
+  1986
+ ],
+ "pairs": [
+  {
+   "shape": [
+    1440,
+    810
+   ],
+   "reason_codes": [
+    "BACKGROUND_MASKED_CAMERA_OK"
+   ],
+   "feature_count_before": 106,
+   "tracked_count": 74,
+   "forward_backward_valid_count": 74,
+   "fb_valid_ratio": 0.698,
+   "translation_median": [
+    7.03,
+    4.61
+   ],
+   "chosen_model": "translation",
+   "chosen_M": [
+    [
+     1.0,
+     0.0,
+     7.02691650390625
+    ],
+    [
+     0.0,
+     1.0,
+     4.614341735839844
+    ]
+   ],
+   "inlier_count": 74,
+   "inlier_ratio": 1.0,
+   "residual": 1.137,
+   "heldout_background_residual_px": 1.137,
+   "scale": 1.0,
+   "rotation_deg": 0.0,
+   "translation": [
+    7.03000020980835,
+    4.610000133514404
+   ],
+   "scene_difference_score": 0.741,
+   "spatial_distribution": {
+    "x_span": [
+     2,
+     806
+    ],
+    "y_span": [
+     3,
+     1438
+    ]
+   },
+   "pair_state": "SAME_SCENE",
+   "tracks_raw": 106,
+   "tracks_fb_valid": 74,
+   "from_t": 1.9,
+   "to_t": 2.525
+  },
+  {
+   "shape": [
+    1440,
+    810
+   ],
+   "reason_codes": [
+    "BACKGROUND_MASKED_CAMERA_OK"
+   ],
+   "feature_count_before": 100,
+   "tracked_count": 66,
+   "forward_backward_valid_count": 66,
+   "fb_valid_ratio": 0.66,
+   "translation_median": [
+    5.01,
+    3.69
+   ],
+   "chosen_model": "translation",
+   "chosen_M": [
+    [
+     1.0,
+     0.0,
+     5.01025390625
+    ],
+    [
+     0.0,
+     1.0,
+     3.6862106323242188
+    ]
+   ],
+   "inlier_count": 66,
+   "inlier_ratio": 1.0,
+   "residual": 0.919,
+   "heldout_background_residual_px": 0.919,
+   "scale": 1.0,
+   "rotation_deg": 0.0,
+   "translation": [
+    5.010000228881836,
+    3.690000057220459
+   ],
+   "scene_difference_score": 0.574,
+   "spatial_distribution": {
+    "x_span": [
+     4,
+     806
+    ],
+    "y_span": [
+     5,
+     1438
+    ]
+   },
+   "pair_state": "SAME_SCENE",
+   "tracks_raw": 100,
+   "tracks_fb_valid": 66,
+   "from_t": 2.525,
+   "to_t": 3.15
+  },
+  {
+   "shape": [
+    1440,
+    810
+   ],
+   "reason_codes": [
+    "BACKGROUND_MASKED_CAMERA_OK"
+   ],
+   "feature_count_before": 76,
+   "tracked_count": 37,
+   "forward_backward_valid_count": 37,
+   "fb_valid_ratio": 0.487,
+   "translation_median": [
+    -2.01,
+    1.04
+   ],
+   "chosen_model": "translation",
+   "chosen_M": [
+    [
+     1.0,
+     0.0,
+     -2.013671875
+    ],
+    [
+     0.0,
+     1.0,
+     1.037078857421875
+    ]
+   ],
+   "inlier_count": 37,
+   "inlier_ratio": 1.0,
+   "residual": 1.341,
+   "heldout_background_residual_px": 1.341,
+   "scale": 1.0,
+   "rotation_deg": 0.0,
+   "translation": [
+    -2.009999990463257,
+    1.0399999618530273
+   ],
+   "scene_difference_score": 0.814,
+   "spatial_distribution": {
+    "x_span": [
+     117,
+     805
+    ],
+    "y_span": [
+     3,
+     351
+    ]
+   },
+   "pair_state": "SAME_SCENE",
+   "tracks_raw": 76,
+   "tracks_fb_valid": 37,
+   "from_t": 3.15,
+   "to_t": 3.775
+  },
+  {
+   "shape": [
+    1440,
+    810
+   ],
+   "reason_codes": [
+    "BACKGROUND_MASKED_CAMERA_OK"
+   ],
+   "feature_count_before": 124,
+   "tracked_count": 81,
+   "forward_backward_valid_count": 81,
+   "fb_valid_ratio": 0.653,
+   "translation_median": [
+    -3.8,
+    1.0
+   ],
+   "chosen_model": "translation",
+   "chosen_M": [
+    [
+     1.0,
+     0.0,
+     -3.799102783203125
+    ],
+    [
+     0.0,
+     1.0,
+     1.002716064453125
+    ]
+   ],
+   "inlier_count": 81,
+   "inlier_ratio": 1.0,
+   "residual": 2.02,
+   "heldout_background_residual_px": 2.02,
+   "scale": 1.0,
+   "rotation_deg": 0.0,
+   "translation": [
+    -3.799999952316284,
+    1.0
+   ],
+   "scene_difference_score": 0.902,
+   "spatial_distribution": {
+    "x_span": [
+     4,
+     804
+    ],
+    "y_span": [
+     3,
+     1437
+    ]
+   },
+   "pair_state": "SAME_SCENE",
+   "tracks_raw": 124,
+   "tracks_fb_valid": 81,
+   "from_t": 3.775,
+   "to_t": 4.4
+  }
+ ],
+ "baseline_full_frame": [
+  {
+   "pair": "1.9->2.525",
+   "full_frame_max_feature_residual": null,
+   "note": "A2 全帧估计残差(历史,见 A2/A2.1 results)"
+  },
+  {
+   "pair": "2.525->3.15",
+   "full_frame_max_feature_residual": null,
+   "note": "A2 全帧估计残差(历史,见 A2/A2.1 results)"
+  },
+  {
+   "pair": "3.15->3.775",
+   "full_frame_max_feature_residual": 25.353,
+   "note": "A2 全帧估计残差(历史,见 A2/A2.1 results)"
+  },
+  {
+   "pair": "3.775->4.4",
+   "full_frame_max_feature_residual": null,
+   "note": "A2 全帧估计残差(历史,见 A2/A2.1 results)"
+  }
+ ],
+ "root_cause": "FOREGROUND_CONTAMINATED(pair3 非跳变非模型不足; 背景掩码后全对 SAME_SCENE)",
+ "scene_discontinuity": false
+}

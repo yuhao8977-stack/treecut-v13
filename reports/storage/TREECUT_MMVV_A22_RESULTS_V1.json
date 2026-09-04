@@ -1,0 +1,48 @@
+{
+ "experiment": "MMVV_A2.2",
+ "approved": "2026-09-04 architect",
+ "duplicate": {
+  "visual_case_id": "CAMERA_CASE_FAMILY_SOCKET_01",
+  "members": [
+   1985,
+   1986
+  ],
+  "unique_visual_case_count": 1,
+  "source_media_reference_count": 2,
+  "frame_hash_equivalent": true,
+  "statistics_note": "不得写成 2/2；只可 1/1 或 0/1"
+ },
+ "camera": {
+  "pair_states": [
+   "SAME_SCENE",
+   "SAME_SCENE",
+   "SAME_SCENE",
+   "SAME_SCENE"
+  ],
+  "all_same_scene": true,
+  "chosen_models": [
+   "translation"
+  ],
+  "camera_state": "RELIABLE",
+  "source": "背景掩码 LK + FB 过滤 + 模型阶梯(最简可靠=translation)，真实机器证据，非 media_id"
+ },
+ "unique_case_verdict": {
+  "machine": "Verdict.FAIL",
+  "human_gt": "FAIL",
+  "geometry": "STATIC_WITH_ANNOTATION_JITTER"
+ },
+ "core5_frozen": {
+  "machine": {
+   "52_DRAWER_OPEN": "Verdict.PASS",
+   "109_ACTION_POSITIVE": "Verdict.PASS",
+   "109_OPEN_STATE_NEGATIVE": "Verdict.FAIL",
+   "89_EXTEND": "Verdict.FAIL",
+   "51_EXTEND": "Verdict.FAIL"
+  },
+  "ok": true
+ },
+ "false_pass": 0,
+ "status": "A2_2_CAMERA_CASE_PASS",
+ "note": "A2_2_CAMERA_CASE_PASS ≠ CAMERA_SYSTEM_PASS（当前仅 1 unique camera case）",
+ "generated_at": "2026-09-04 18:04:53"
+}
