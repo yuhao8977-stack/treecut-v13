@@ -62,8 +62,8 @@
 </div>
 <div class="msg" id="msg"></div>
 <script>
-const LABELS=["TABLETOP","EXTENSION_TABLETOP","ISLAND_BODY","DRAWER","TRACK_SOCKET","SOCKET_MODULE","PERSON","HAND"];
-const LABEL_CN={"TABLETOP":"桌板/台面","EXTENSION_TABLETOP":"伸缩桌板","ISLAND_BODY":"岛台主体","DRAWER":"抽屉","TRACK_SOCKET":"轨道插座","SOCKET_MODULE":"插座模块","PERSON":"人","HAND":"手"};
+const LABELS=["TABLETOP","EXTENSION_TABLETOP","ISLAND_BODY","DRAWER","TRACK_SOCKET","SOCKET_MODULE","PERSON","HAND","SINK","CABINET_DOOR","ROCK_TABLE_LEG","ACRYLIC_TABLE_LEG"];
+const LABEL_CN={"TABLETOP":"桌板/台面","EXTENSION_TABLETOP":"伸缩桌板","ISLAND_BODY":"岛台主体","DRAWER":"抽屉","TRACK_SOCKET":"轨道插座","SOCKET_MODULE":"插座模块","PERSON":"人","HAND":"手","SINK":"水槽","CABINET_DOOR":"柜门/柜子","ROCK_TABLE_LEG":"岩板桌腿","ACRYLIC_TABLE_LEG":"亚克力桌腿"};
 function labCN(v){return LABEL_CN[v]||v;}
 function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function optsHTML(sel){return LABELS.map(l=>`<option value="${l}" ${l===sel?'selected':''}>${labCN(l)}</option>`).join('');}
@@ -87,7 +87,7 @@ function updateCurLabel(){const v=$('#labelSel').value;$('#curHint').innerHTML=`
 function caseIndex(){return MAN.cases.findIndex(c=>c.opaque_case_id===cur.oid);}
 function frameIndex(){const c=MAN.cases.find(x=>x.opaque_case_id===cur.oid);return c?c.frames.findIndex(f=>f.t_s===cur.frame.t_s):-1;}
 async function init(){
-  $('#banner').textContent='说明：A3 Blind Holdout 人工 ROI —— 案例以不透明编号 H001–H006 显示（不做任何动作/结论输入）。请为每帧中可见目标画框：桌板/伸缩桌板/岛台主体（关键），人/手/抽屉/轨道插座/插座模块（可选）。';
+  $('#banner').textContent='说明：A3 Blind Holdout 人工 ROI —— 案例以不透明编号 H001–H006 显示（不做任何动作/结论输入）。请为每帧中可见目标画框：桌板/伸缩桌板/岛台主体（关键）；水槽/柜门/抽屉/轨道插座/插座模块/岩板桌腿/亚克力桌腿（相关对象）；人/手（若与目标重叠）。';
   $('#labelSel').innerHTML=optsHTML('TABLETOP');
   $('#labelSel').onchange=updateCurLabel; updateCurLabel();
   MAN=await jget('/api/a3/blind');

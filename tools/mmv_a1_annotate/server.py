@@ -81,6 +81,10 @@ def _aux_dir() -> Path:
 
 LABELS = ["TABLETOP", "EXTENSION_TABLETOP", "DRAWER", "UPPER_THIN_DRAWER", "TRACK_SOCKET",
           "SOCKET_MODULE", "PERSON", "HAND", "ISLAND_BODY", "OTHER_MOVING_PART"]
+# A3 blind ROI 允许对象集（架构师 2026-09-05 扩展：+水槽/柜门/岩板桌腿/亚克力桌腿）
+A3_BLIND_LABELS = {"TABLETOP", "EXTENSION_TABLETOP", "ISLAND_BODY", "DRAWER", "TRACK_SOCKET",
+                   "SOCKET_MODULE", "PERSON", "HAND", "SINK", "CABINET_DOOR",
+                   "ROCK_TABLE_LEG", "ACRYLIC_TABLE_LEG"}
 # 每动作的"必需目标对象"契约（A1_READY 判定用；任一帧出现其一即满足基本可见）
 REQUIRED_OBJECTS = {
     "EXTEND": ("TABLETOP", "EXTENSION_TABLETOP"),
@@ -406,6 +410,10 @@ class Handler(BaseHTTPRequestHandler):
                                   if not (a["opaque_case_id"] == oid and a["frame_timestamp"] == t_s)]
             w, h = frame["width"], frame["height"]
             for r in rois_in:
+                obj = r.get("object_name")
+                if obj not in A3_BLIND_LABELS:
+                    self._json({"ok": False, "error": f"对象不在允许集: {obj}"}, 400)
+                    return
                 bb = [float(v) for v in r.get("bbox_pixel", [])]
                 if not bbox_ok(bb, w, h):
                     self._json({"ok": False, "error": f"bbox 越界/非法: {bb} (frame {w}x{h})"}, 400)
@@ -415,7 +423,7 @@ class Handler(BaseHTTPRequestHandler):
                     "window_id": f"W{case['frozen_window_s'][0]}-{case['frozen_window_s'][1]}",
                     "frame_timestamp": t_s, "frame": frame["frame"],
                     "frame_hash": frame["sha256"],
-                    "object_name": r.get("object_name"),
+                    "object_name": obj,
                     "bbox_pixel": [int(v) for v in bb],
                     "bbox_normalized": [round(bb[0] / w, 4), round(bb[1] / h, 4),
                                         round(bb[2] / w, 4), round(bb[3] / h, 4)],

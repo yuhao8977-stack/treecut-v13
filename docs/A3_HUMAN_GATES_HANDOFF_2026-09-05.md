@@ -20,10 +20,12 @@
 ## 2. 门控二：A3 30 帧人工 ROI
 
 - 页面：http://127.0.0.1:8933/a3/roi （本地服务已在跑；显示 H001–H006，每案例 F0–F4 共 30 帧）
-- 对象规则：
+- 对象规则（共 12 类，2026-09-05 扩展）：
   - 关键目标：`桌板/台面 TABLETOP`、`伸缩桌板 EXTENSION_TABLETOP`、`岛台主体 ISLAND_BODY`
+  - 相关对象：`抽屉 DRAWER`、`轨道插座 TRACK_SOCKET`、`插座模块 SOCKET_MODULE`、
+    `水槽 SINK`、`柜门/柜子 CABINET_DOOR`、`岩板桌腿 ROCK_TABLE_LEG`、`亚克力桌腿 ACRYLIC_TABLE_LEG`
+    （岩板/亚克力伸缩脚案例中桌腿即相关运动件，务必框出）
   - 重叠干扰也尽量框：`人 PERSON`、`手 HAND`（A2 已证明"人动≠桌板动"）
-  - 可选：`抽屉 DRAWER`、`轨道插座 TRACK_SOCKET`、`插座模块 SOCKET_MODULE`
 - 操作：
   - 选标签 →「开始框选」→ 拖出矩形；每帧画完点「保存当前图片 (S)」
   - 快捷键：`A`/`D` 切帧，`S` 保存，`Delete` 删除选中
