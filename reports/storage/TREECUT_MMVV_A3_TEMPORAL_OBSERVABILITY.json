@@ -1,6 +1,6 @@
 {
  "experiment": "MMVV_A3_TEMPORAL_OBSERVABILITY",
- "generated_at": "2026-09-04 19:34:29",
+ "generated_at": "2026-09-06 11:34:37",
  "note": "只读盲输入；不含人工答案与动作结论；TEMPORAL_SIGNAL 仅为“冻结5帧是否包含可观测时间变化”的审计信号，非 MMVV verdict。",
  "thresholds_note": "审计阈值仅供描述，非冻结算法阈值(ca34678 未改动)",
  "cases": [

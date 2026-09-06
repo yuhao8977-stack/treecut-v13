@@ -19,6 +19,8 @@ MAN = STORAGE / "TREECUT_MMVV_A3_HOLDOUT_MANIFEST.json"
 GT = STORAGE / "TREECUT_MMVV_A3_HUMAN_GT.json"
 SCREEN = STORAGE / "TREECUT_MMVV_A3_SCREENING.json"
 AUDIT = STORAGE / "TREECUT_MMVV_A3_HOLDOUT_AUDIT.json"
+OBS_HUMAN = STORAGE / "TREECUT_MMVV_A3_OBSERVABILITY_HUMAN_V1.json"
+ROI_BLIND_FILE = STORAGE / "TREECUT_MMVV_A3_HUMAN_GT_ROI_BLIND.json"
 RUNNER = REPO / "scripts" / "run_a3_blind.py"
 
 MEDIA_IDS = {2521, 2549, 2551, 2209, 2280, 2544}
@@ -96,11 +98,11 @@ def test_blind_frames_match_originals():
 
 
 def test_machine_runner_cannot_read_gt():
-    """runner allowlist 拒绝 GT / screening / key / 原 manifest / audit。"""
+    """runner allowlist 拒绝 GT / screening / key / 原 manifest / audit / observability 人工文件。"""
     spec = importlib.util.spec_from_file_location("run_a3_blind", RUNNER)
     m = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(m)
-    for bad in (GT, SCREEN, KEY, MAN, AUDIT):
+    for bad in (GT, SCREEN, KEY, MAN, AUDIT, OBS_HUMAN):
         try:
             m.ensure_allowed(bad)
             raise AssertionError(f"runner 竟允许读取: {bad.name}")
@@ -108,12 +110,46 @@ def test_machine_runner_cannot_read_gt():
             pass
 
 
-def test_blind_runner_fails_closed_without_roi():
-    """ROI 缺失 → A3_ROI_REQUIRED（fail closed，exit 3），绝不预测。"""
+def test_blind_runner_cannot_read_observability_human():
+    """Observability 人工文件不是机器输入；runner 一律拒绝（预测前、后都不读）。"""
+    spec = importlib.util.spec_from_file_location("run_a3_blind_obs", RUNNER)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    assert str(OBS_HUMAN) not in [str(r) for r in m.ALLOWED_ROOTS]
+    try:
+        m.ensure_allowed(OBS_HUMAN)
+        raise AssertionError("runner 竟允许读取 observability 人工文件")
+    except m.ForbiddenFileError:
+        pass
+
+
+def test_blind_runner_gate_opens_with_valid_roi_but_no_prediction():
+    """ROI(179 框)已满足门控 → runner 不再 A3_ROI_REQUIRED，但预测必须仍未执行
+    （A3_PREDICTION_NOT_IMPLEMENTED_TONIGHT，exit 1）—— 保证绝不静默出预测。"""
     r = subprocess.run([sys.executable, str(RUNNER)], capture_output=True, text=True,
                        timeout=120, cwd=str(REPO))
-    assert r.returncode == 3, f"exit={r.returncode} out={r.stdout[-300:]}"
-    assert "A3_ROI_REQUIRED" in r.stdout
+    assert r.returncode == 1, f"exit={r.returncode} out={r.stdout[-300:]}"
+    assert "A3_PREDICTION_NOT_IMPLEMENTED_TONIGHT" in r.stderr or \
+           "A3_PREDICTION_NOT_IMPLEMENTED_TONIGHT" in r.stdout
+    assert "A3_ROI_REQUIRED" not in r.stdout
+
+
+def test_blind_runner_fails_closed_with_empty_roi():
+    """ROI 文件存在但 0 框 → 仍 FAIL CLOSED (A3_ROI_REQUIRED, exit 3)。"""
+    bak = ROI_BLIND_FILE.with_suffix(".bak")
+    if ROI_BLIND_FILE.exists():
+        bak.write_bytes(ROI_BLIND_FILE.read_bytes())
+    try:
+        ROI_BLIND_FILE.write_text('{"annotations": []}', encoding="utf-8")
+        r = subprocess.run([sys.executable, str(RUNNER)], capture_output=True, text=True,
+                           timeout=120, cwd=str(REPO))
+        assert r.returncode == 3, f"exit={r.returncode} out={r.stdout[-300:]}"
+        assert "A3_ROI_REQUIRED" in r.stdout
+    finally:
+        if bak.exists():
+            bak.replace(ROI_BLIND_FILE)
+        elif ROI_BLIND_FILE.exists():
+            ROI_BLIND_FILE.unlink()
 
 
 def test_blind_runner_selfcheck_ok():

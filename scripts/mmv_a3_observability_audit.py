@@ -179,7 +179,14 @@ def main():
     H.append("<div class='wrap'>")
     H.append("<div style='background:#fff8e1;border:1px solid #f0d070;padding:10px 14px;border-radius:8px;font-size:13px'>")
     H.append("<b>怎么看：</b>每案例 5 帧按时间顺序排列（帧间为均匀采样）。指标含义：<b>帧差均值/最大</b>（相邻帧灰度变化，0-1）、<b>光流均值</b>（像素运动）、<b>相机平移最大</b>（稀疏特征中位平移）、<b>静态区间比</b>（几乎无变化的帧对占比）。")
-    H.append("判断依据是画面内容本身：<i>桌板/台面是否在帧间发生了可辨认的伸缩位移</i>。请为每案例选一项并点底部“导出人工结论”。</div>")
+    H.append("判断依据是画面内容本身：<i>桌板/台面是否在帧间发生了可辨认的伸缩位移</i>。请为每案例选一项；"
+             "六项完成后点【保存人工审核结果】，直接存入 reports/storage（无需下载文件）。"
+             "若本页非由本地服务打开（地址不是 http://127.0.0.1:8933/a3/observability），请改用该地址打开才能保存。</div>")
+    H.append("<div class='savebar' style='position:sticky;top:0;background:#fff;border:1px solid #ccc;"
+             "border-radius:8px;padding:8px 12px;margin:10px 0;z-index:5;display:flex;gap:12px;align-items:center'>"
+             "<span id='prog' style='font-weight:bold'>已完成 0/6</span>"
+             "<button id='saveBtn' class='p' style='padding:7px 18px'>保存人工审核结果</button>"
+             "<span id='saveMsg' style='color:#0a7d33;font-size:13px'></span></div>")
     for cs in html_cases:
         H.append(f"<div class='casebox'><h2>案例 <span class='mono'>{cs['oid']}</span>"
                  f" <span class='sig S-{cs['signal']}'>{cs['signal']}</span></h2>")
@@ -199,22 +206,40 @@ def main():
         H.append(f"<div>帧差均值 {cs['mean']} / 最大 {cs['mx']} · 光流均值 {cs['flow']} · "
                  f"相机平移最大 {cs['cam']}px · 静态区间比 {cs['static_ratio']}</div>")
         H.append(f"<div class='judge'>人工判断（只选一项）：")
-        for k, v in [("action_visible", "动作过程充分（能看到桌板位移过程）"),
-                     ("endpoints_only", "只有起止状态（看不到中间过程）"),
-                     ("static", "基本静态"),
-                     ("unclear", "看不清"),
-                     ("unsuitable", "采样不适合判断")]:
+        for k, v in [("ACTION_PROCESS_VISIBLE", "能看清连续动作过程"),
+                     ("ENDPOINTS_ONLY", "只能看到前后状态，看不清连续过程"),
+                     ("MOSTLY_STATIC", "基本是静态展示"),
+                     ("UNCLEAR", "看不清 / 无法判断")]:
             H.append(f"<label style='margin-right:10px'><input type='radio' name='j_{cs['oid']}' value='{k}'/> {v}</label>")
+        H.append(f"<br/><span style='font-size:12px;color:#666'>备注（可选）：</span>"
+                 f"<input type='text' id='n_{cs['oid']}' style='width:70%;padding:3px 6px;border:1px solid #bbb;border-radius:4px' placeholder='补充说明（如：桌腿位移但桌板未见位移）'/>")
         H.append("</div></div>")
-    H.append("<button class='p' id='export'>导出人工结论（下载 JSON）</button>")
+    H.append("<button class='p' id='saveBtn2' style='padding:7px 18px;margin-bottom:30px'>保存人工审核结果</button>")
     H.append("<script>")
-    H.append("document.getElementById('export').onclick=()=>{")
-    H.append("const cs=[];")
-    for cs in html_cases:
-        H.append(f"const el{cs['oid']}=document.querySelector('input[name=j_{cs['oid']}]:checked');")
-        H.append(f"cs.push({{opaque_case_id:'{cs['oid']}',judgment:el{cs['oid']}?el{cs['oid']}.value:null}});")
-    H.append("const blob=new Blob([JSON.stringify({experiment:'MMVV_A3_OBSERVABILITY_HUMAN_REVIEW',answers:cs},null,1)],{type:'application/json'});")
-    H.append("const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='a3_obs_human_answers.json';a.click();};")
+    H.append("const OIDS=['H001','H002','H003','H004','H005','H006'];")
+    H.append("function curAns(){return OIDS.map(oid=>{const r=document.querySelector(`input[name=j_${oid}]:checked`);")
+    H.append("const n=document.getElementById('n_'+oid);return {opaque_case_id:oid,")
+    H.append("observability_label:r?r.value:null,human_note:n?n.value:''};});}")
+    H.append("function countDone(){return curAns().filter(a=>a.observability_label).length;}")
+    H.append("function prog(){const d=countDone();document.getElementById('prog').textContent=`已完成 ${d}/6`;return d;}")
+    H.append("function persist(){try{localStorage.setItem('a3_obs_v1',JSON.stringify(curAns()));}catch(e){}}")
+    H.append("function setFrom(arr){arr.forEach(a=>{const el=document.querySelector(`input[name=j_${a.opaque_case_id}][value=${a.observability_label}]`);")
+    H.append("if(el&&a.observability_label){el.checked=true;}const n=document.getElementById('n_'+a.opaque_case_id);")
+    H.append("if(n&&a.human_note){n.value=a.human_note;}});prog();}")
+    H.append("function bind(){OIDS.forEach(oid=>{document.querySelectorAll(`input[name=j_${oid}]`).forEach(r=>r.onchange=()=>{persist();prog();});")
+    H.append("const n=document.getElementById('n_'+oid);if(n){n.oninput=persist;}});}")
+    H.append("async function saveNow(){const ans=curAns();const missing=ans.filter(a=>!a.observability_label).length;")
+    H.append("if(missing){alert(`还有 ${missing} 个案例未完成审核（请先选完 H001-H006 六项）`);return;}")
+    H.append("try{const r=await fetch('/api/a3/observability/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({answers:ans})});")
+    H.append("const j=await r.json();if(j.ok){document.getElementById('saveMsg').textContent='✅ 已保存 6/6 → reports/storage/TREECUT_MMVV_A3_OBSERVABILITY_HUMAN_V1.json';persist();}")
+    H.append("else{alert('保存失败：'+j.error);}}catch(e){alert('保存失败：请确认通过 http://127.0.0.1:8933/a3/observability 打开本页（本地服务未运行或跨域）');}}")
+    H.append("async function init2(){bind();prog();")
+    H.append("try{const r=await fetch('/api/a3/observability-human');if(r.ok){const d=await r.json();")
+    H.append("if(d&&d.answers&&d.answers.length){setFrom(d.answers);document.getElementById('saveMsg').textContent='已恢复此前保存的审核结果';return;}}}catch(e){}")
+    H.append("try{const s=localStorage.getItem('a3_obs_v1');if(s){const arr=JSON.parse(s);if(arr&&arr.length){setFrom(arr);")
+    H.append("document.getElementById('saveMsg').textContent='已从本机草稿恢复（未保存到服务端，请点保存）';}}}catch(e){}")
+    H.append("if(location.protocol==='file:'){document.getElementById('saveMsg').textContent='⚠ 当前为本地文件打开：请改用 http://127.0.0.1:8933/a3/observability 才能保存';}}")
+    H.append("document.getElementById('saveBtn').onclick=saveNow;document.getElementById('saveBtn2').onclick=saveNow;init2();")
     H.append("</script></div></body></html>")
     HTML_OUT.write_text("\n".join(H), encoding="utf-8")
     print("WROTE", JSON_OUT)

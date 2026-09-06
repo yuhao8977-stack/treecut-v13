@@ -28,7 +28,11 @@ A3_HOLDOUT_FILE = OUT / "TREECUT_MMVV_A3_HOLDOUT_MANIFEST.json"
 A3_ROI_FILE = OUT / "TREECUT_MMVV_A3_HUMAN_GT_ROI.json"
 A3_BLIND_FILE = OUT / "TREECUT_MMVV_A3_MACHINE_INPUT_BLIND_V1.json"
 A3_ROI_BLIND_FILE = OUT / "TREECUT_MMVV_A3_HUMAN_GT_ROI_BLIND.json"
+A3_OBS_HTML = OUT / "TREECUT_MMVV_A3_TEMPORAL_OBSERVABILITY_REVIEW.html"
+A3_OBS_HUMAN_FILE = OUT / "TREECUT_MMVV_A3_OBSERVABILITY_HUMAN_V1.json"
 A3_BLIND_FRAMES_DIR = Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime\production_smoke\B007\mmv_a3_blind_frames")
+# Observability 人工判断允许枚举（内部英文，界面中文）
+OBS_LABELS = {"ACTION_PROCESS_VISIBLE", "ENDPOINTS_ONLY", "MOSTLY_STATIC", "UNCLEAR"}
 
 
 def _a3_thumbs_dir() -> Path:
@@ -68,6 +72,19 @@ def save_a3_blind_rois(doc):
     tmp = A3_ROI_BLIND_FILE.with_suffix(".tmp")
     tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
     tmp.replace(A3_ROI_BLIND_FILE)
+
+
+def load_a3_obs_human():
+    if A3_OBS_HUMAN_FILE.exists():
+        return json.loads(A3_OBS_HUMAN_FILE.read_text(encoding="utf-8"))
+    return {"experiment": "MMVV_A3_OBSERVABILITY_HUMAN_V1", "review_version": "V1",
+            "reviewed_at": None, "answers": [], "done": 0}
+
+
+def save_a3_obs_human(doc):
+    tmp = A3_OBS_HUMAN_FILE.with_suffix(".tmp")
+    tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(A3_OBS_HUMAN_FILE)
 
 
 def _frames_dir() -> Path:
@@ -217,6 +234,15 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(200, fp.read_bytes(), "image/jpeg")
                 return
             self._send(404, b"blind frame missing", "text/plain")
+            return
+        if path == "/a3/observability":
+            if A3_OBS_HTML.exists():
+                self._send(200, A3_OBS_HTML.read_bytes(), "text/html; charset=utf-8")
+            else:
+                self._send(404, b"observability html missing", "text/plain")
+            return
+        if path == "/api/a3/observability-human":
+            self._json(load_a3_obs_human())
             return
         if path.startswith("/a3/hframes/"):
             name = path.rsplit("/", 1)[-1]
@@ -389,6 +415,42 @@ class Handler(BaseHTTPRequestHandler):
                     "annotation_version": "A3"})
             save_a3_rois(doc)
             self._json({"ok": True, "saved": len(rois_in), "frame": frame["frame"]})
+            return
+        if self.path == "/api/a3/observability/save":
+            try:
+                data = json.loads(body.decode("utf-8"))
+            except Exception:
+                self._json({"ok": False, "error": "bad json"}, 400)
+                return
+            answers_in = data.get("answers") or []
+            by_id = {}
+            for a in answers_in:
+                oid = a.get("opaque_case_id")
+                lab = a.get("observability_label")
+                if oid not in ("H001", "H002", "H003", "H004", "H005", "H006"):
+                    self._json({"ok": False, "error": f"未知案例: {oid}"}, 400)
+                    return
+                if lab not in OBS_LABELS:
+                    self._json({"ok": False, "error": f"判断值非法: {lab}"}, 400)
+                    return
+                by_id[oid] = a
+            missing = [f"H{i:03d}" for i in range(1, 7) if f"H{i:03d}" not in by_id]
+            if missing:
+                self._json({"ok": False, "error": f"还有 {len(missing)} 个案例未完成审核：{','.join(missing)}"}, 400)
+                return
+            doc = {"experiment": "MMVV_A3_OBSERVABILITY_HUMAN_V1", "review_version": "V1",
+                   "reviewed_at": time.strftime("%Y-%m-%d %H:%M:%S"), "answers": [],
+                   "done": 6}
+            for oid in [f"H{i:03d}" for i in range(1, 7)]:
+                a = by_id[oid]
+                doc["answers"].append({
+                    "opaque_case_id": oid,
+                    "observability_label": a.get("observability_label"),
+                    "human_note": (a.get("human_note") or "").strip()[:500],
+                    "reviewed_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "review_version": "V1"})
+            save_a3_obs_human(doc)
+            self._json({"ok": True, "saved": 6, "file": A3_OBS_HUMAN_FILE.name})
             return
         if self.path == "/api/a3/blind-rois/save":
             try:
