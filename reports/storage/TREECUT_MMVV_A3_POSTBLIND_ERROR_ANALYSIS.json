@@ -1,0 +1,205 @@
+{
+ "experiment": "MMVV_A3_POSTBLIND_ERROR_ANALYSIS",
+ "generated_at": "2026-09-06 11:58:39",
+ "prediction_sha256": "78dc777cced59e7f447917521ea342706fcdc584c941b4dfeb5005ca7c2eeb58",
+ "summary": {
+  "TP": 0,
+  "TN": 0,
+  "FP": 0,
+  "FN": 0,
+  "UNSURE_POS": 3,
+  "UNSURE_NEG": 3,
+  "positive_pass_count": 0,
+  "positive_fail_count": 0,
+  "negative_fail_count": 0,
+  "false_pass_count": 0,
+  "coverage": 0.0,
+  "A3_STATUS": "A3_CORE_GENERALIZATION_PARTIAL",
+  "EXTEND_POSITIVE_RECOGNITION": "NOT_ESTABLISHED"
+ },
+ "note": "6/6 UNSURE，FP=0。Observability 6/6 ACTION_PROCESS_VISIBLE → positive 侧 UNSURE 不得归因为‘5帧无动作信息’，一律归因算法/表征层 (此处为 camera 通道在 unseen 案例上不可用)。False PASS=0，无 Observability 辩解需求。",
+ "observability_all_visible": true,
+ "rows": [
+  {
+   "opaque_case_id": "H001",
+   "original_case_id": "A3_NEG_03",
+   "media_id": 2544,
+   "human_gt": "NO_EXTEND",
+   "machine_verdict": "UNSURE",
+   "category": "UNSURE_NEG",
+   "geometry_state": "PROGRESSION_UP",
+   "geometry_direction": "EXTEND",
+   "camera_state": "UNRELIABLE",
+   "camera_pairs_unusable": "4/4",
+   "target_frames_used": 3,
+   "target_visibility": {
+    "0.85": "TARGET_NOT_VISIBLE",
+    "1.841": "TARGET_NOT_VISIBLE",
+    "2.833": "TARGET_SINGLE",
+    "3.824": "TARGET_SINGLE",
+    "4.815": "TARGET_SINGLE"
+   },
+   "key_reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE",
+    "GEOMETRY_MONOTONIC_UP",
+    "CAMERA_UNRELIABLE"
+   ],
+   "observability": "ACTION_PROCESS_VISIBLE",
+   "correct": false,
+   "error_attribution": "ALGORITHM_OR_REPRESENTATION_LIMITATION: camera channel (UNRELIABLE; 4/4 pairs unusable -> CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE)"
+  },
+  {
+   "opaque_case_id": "H002",
+   "original_case_id": "A3_POS_01",
+   "media_id": 2521,
+   "human_gt": "YES_EXTEND",
+   "machine_verdict": "UNSURE",
+   "category": "UNSURE_POS",
+   "geometry_state": "PROGRESSION_DOWN",
+   "geometry_direction": "RETRACT",
+   "camera_state": "UNRELIABLE",
+   "camera_pairs_unusable": "3/4",
+   "target_frames_used": 5,
+   "target_visibility": {
+    "1.372": "TARGET_SINGLE",
+    "2.973": "TARGET_SINGLE",
+    "4.574": "TARGET_SINGLE",
+    "6.175": "TARGET_SINGLE",
+    "7.776": "TARGET_SINGLE"
+   },
+   "key_reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE",
+    "GEOMETRY_MONOTONIC_DOWN",
+    "CAMERA_UNRELIABLE"
+   ],
+   "observability": "ACTION_PROCESS_VISIBLE",
+   "correct": false,
+   "error_attribution": "ALGORITHM_OR_REPRESENTATION_LIMITATION: camera channel (UNRELIABLE; 3/4 pairs unusable -> CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE)"
+  },
+  {
+   "opaque_case_id": "H003",
+   "original_case_id": "A3_NEG_02",
+   "media_id": 2280,
+   "human_gt": "NO_EXTEND",
+   "machine_verdict": "UNSURE",
+   "category": "UNSURE_NEG",
+   "geometry_state": "PROGRESSION_UP",
+   "geometry_direction": "EXTEND",
+   "camera_state": "UNRELIABLE",
+   "camera_pairs_unusable": "3/4",
+   "target_frames_used": 5,
+   "target_visibility": {
+    "0.937": "TARGET_SINGLE",
+    "2.03": "TARGET_SINGLE",
+    "3.123": "TARGET_SINGLE",
+    "4.216": "TARGET_SINGLE",
+    "5.309": "TARGET_SINGLE"
+   },
+   "key_reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE",
+    "GEOMETRY_MONOTONIC_UP",
+    "CAMERA_UNRELIABLE"
+   ],
+   "observability": "ACTION_PROCESS_VISIBLE",
+   "correct": false,
+   "error_attribution": "ALGORITHM_OR_REPRESENTATION_LIMITATION: camera channel (UNRELIABLE; 3/4 pairs unusable -> CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE)"
+  },
+  {
+   "opaque_case_id": "H004",
+   "original_case_id": "A3_POS_03",
+   "media_id": 2551,
+   "human_gt": "YES_EXTEND",
+   "machine_verdict": "UNSURE",
+   "category": "UNSURE_POS",
+   "geometry_state": "PROGRESSION_UP",
+   "geometry_direction": "EXTEND",
+   "camera_state": "UNRELIABLE",
+   "camera_pairs_unusable": "4/4",
+   "target_frames_used": 5,
+   "target_visibility": {
+    "0.961": "TARGET_SINGLE",
+    "2.083": "TARGET_SINGLE",
+    "3.204": "TARGET_SINGLE",
+    "4.325": "TARGET_SINGLE",
+    "5.447": "TARGET_SINGLE"
+   },
+   "key_reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE",
+    "GEOMETRY_MONOTONIC_UP",
+    "CAMERA_UNRELIABLE"
+   ],
+   "observability": "ACTION_PROCESS_VISIBLE",
+   "correct": false,
+   "error_attribution": "ALGORITHM_OR_REPRESENTATION_LIMITATION: camera channel (UNRELIABLE; 4/4 pairs unusable -> CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE)"
+  },
+  {
+   "opaque_case_id": "H005",
+   "original_case_id": "A3_NEG_01",
+   "media_id": 2209,
+   "human_gt": "NO_EXTEND",
+   "machine_verdict": "UNSURE",
+   "category": "UNSURE_NEG",
+   "geometry_state": "STATIC_WITH_ANNOTATION_JITTER",
+   "geometry_direction": "STATIC",
+   "camera_state": "UNRELIABLE",
+   "camera_pairs_unusable": "3/4",
+   "target_frames_used": 5,
+   "target_visibility": {
+    "0.839": "TARGET_SINGLE",
+    "1.818": "TARGET_SINGLE",
+    "2.798": "TARGET_SINGLE",
+    "3.777": "TARGET_SINGLE",
+    "4.757": "TARGET_SINGLE"
+   },
+   "key_reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE",
+    "NO_TARGET_GEOMETRY_CHANGE",
+    "GEOMETRY_ANNOTATION_JITTER",
+    "BOUNDED_OSCILLATION_NO_PROGRESSION",
+    "CAMERA_UNRELIABLE"
+   ],
+   "observability": "ACTION_PROCESS_VISIBLE",
+   "correct": false,
+   "error_attribution": "ALGORITHM_OR_REPRESENTATION_LIMITATION: camera channel (UNRELIABLE; 3/4 pairs unusable -> CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE)"
+  },
+  {
+   "opaque_case_id": "H006",
+   "original_case_id": "A3_POS_02",
+   "media_id": 2549,
+   "human_gt": "YES_EXTEND",
+   "machine_verdict": "UNSURE",
+   "category": "UNSURE_POS",
+   "geometry_state": "PROGRESSION_DOWN",
+   "geometry_direction": "RETRACT",
+   "camera_state": "UNRELIABLE",
+   "camera_pairs_unusable": "4/4",
+   "target_frames_used": 5,
+   "target_visibility": {
+    "0.923": "TARGET_SINGLE",
+    "2.0": "TARGET_SINGLE",
+    "3.077": "TARGET_SINGLE",
+    "4.153": "TARGET_SINGLE",
+    "5.23": "TARGET_SINGLE"
+   },
+   "key_reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE",
+    "GEOMETRY_MONOTONIC_DOWN",
+    "CAMERA_UNRELIABLE"
+   ],
+   "observability": "ACTION_PROCESS_VISIBLE",
+   "correct": false,
+   "error_attribution": "ALGORITHM_OR_REPRESENTATION_LIMITATION: camera channel (UNRELIABLE; 4/4 pairs unusable -> CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE)"
+  }
+ ],
+ "channel_findings": {
+  "camera": "24 相邻帧对中 20 对 CAMERA_MODEL_UNRELIABLE (多为 FORWARD_BACKWARD_TRACKS_UNSTABLE / NO_RELIABLE_CAMERA_MODEL) → A2.2 R1 background-masked camera 冻结法在 6 个 unseen 案例上多数无法建模 (背景 track 不足/不稳定)。冻结 validator 相机闸 fail-safe → 全 UNSURE，0 FP。",
+  "geometry_raw": "若相机闸不存在，geometry 通道: H001/H003/H004=EXTEND PROGRESSION_UP (H001/H003 为 NO_EXTEND → 会 False PASS 风险)，H002/H006=RETRACT PROGRESSION_DOWN (YES_EXTEND，方向反)，H005=STATIC。即几何通道单独亦不可信。",
+  "target_identity": "全部案例目标框均 TARGET_SINGLE(每帧恰 1)；H001 前 2 帧 TARGET_NOT_VISIBLE (EXTENSION_TABLETOP 仅 3/5 帧可见) — 身份通道本身无歧义失败。",
+  "defect_candidates": [
+   "A3_POSTBLIND_DEFECT_CAM01: background-masked camera 背景 track 不足(低纹理/大排除区/人手运动)在 unseen 泛化失败",
+   "A3_POSTBLIND_DEFECT_GEOM01: 目标框几何方向在 2/3 正例呈 RETRACT-down、在 2/3 负例呈 EXTEND-up → 目标框覆盖语义(伸缩桌板 vs 桌腿联动)未分离",
+   "A3_POSTBLIND_DEFECT_ID01: H001 EXTENSION_TABLETOP 仅 3/5 帧可见(遮挡/出镜)"
+  ],
+  "no_repair": "本轮不改阈值/ROI/相机排除/目标选择/帧；修复须用新 calibration 数据，A3 结果永久保留为历史。"
+ }
+}
