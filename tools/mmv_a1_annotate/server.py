@@ -31,6 +31,11 @@ A3_ROI_BLIND_FILE = OUT / "TREECUT_MMVV_A3_HUMAN_GT_ROI_BLIND.json"
 A3_OBS_HTML = OUT / "TREECUT_MMVV_A3_TEMPORAL_OBSERVABILITY_REVIEW.html"
 A3_OBS_HUMAN_FILE = OUT / "TREECUT_MMVV_A3_OBSERVABILITY_HUMAN_V1.json"
 A3_BLIND_FRAMES_DIR = Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime\production_smoke\B007\mmv_a3_blind_frames")
+# POST-A3 calibration 评审
+P3_HTML = Path(__file__).parent / "posta3_review.html"
+P3_CANDS = OUT / "TREECUT_POSTA3_REVIEW_CANDIDATES_V1.json"
+P3_GT = OUT / "TREECUT_POSTA3_HUMAN_REVIEW_V1.json"
+P3_THUMBS_DIR = Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime\production_smoke\B007\mmv_posta3_frames") / "thumbs"
 # Observability 人工判断允许枚举（内部英文，界面中文）
 OBS_LABELS = {"ACTION_PROCESS_VISIBLE", "ENDPOINTS_ONLY", "MOSTLY_STATIC", "UNCLEAR"}
 
@@ -235,6 +240,32 @@ class Handler(BaseHTTPRequestHandler):
                 return
             self._send(404, b"blind frame missing", "text/plain")
             return
+        if path == "/postA3/review":
+            if P3_HTML.exists():
+                self._send(200, P3_HTML.read_bytes(), "text/html; charset=utf-8")
+            else:
+                self._send(404, b"posta3 html missing", "text/plain")
+            return
+        if path == "/api/posta3/candidates":
+            if P3_CANDS.exists():
+                self._send(200, P3_CANDS.read_bytes(), "application/json; charset=utf-8")
+            else:
+                self._json({"error": "candidates 未生成"})
+            return
+        if path == "/api/posta3/review":
+            if P3_GT.exists():
+                self._send(200, P3_GT.read_bytes(), "application/json; charset=utf-8")
+            else:
+                self._json({"verdicts": {}})
+            return
+        if path.startswith("/posta3/thumbs/"):
+            name = path.rsplit("/", 1)[-1]
+            fp = P3_THUMBS_DIR / name
+            if fp.exists():
+                self._send(200, fp.read_bytes(), "image/jpeg")
+                return
+            self._send(404, b"thumb missing", "text/plain")
+            return
         if path == "/a3/observability":
             if A3_OBS_HTML.exists():
                 self._send(200, A3_OBS_HTML.read_bytes(), "text/html; charset=utf-8")
@@ -415,6 +446,28 @@ class Handler(BaseHTTPRequestHandler):
                     "annotation_version": "A3"})
             save_a3_rois(doc)
             self._json({"ok": True, "saved": len(rois_in), "frame": frame["frame"]})
+            return
+        if self.path == "/api/posta3/verdict":
+            try:
+                data = json.loads(body.decode("utf-8"))
+            except Exception:
+                self._json({"ok": False, "error": "bad json"}, 400)
+                return
+            mid = data.get("media_id")
+            label = data.get("label")
+            if label not in ("EXTEND", "RETRACT", "NO_ACTION", "UNCLEAR"):
+                self._json({"ok": False, "error": "label 须 EXTEND/RETRACT/NO_ACTION/UNCLEAR"}, 400)
+                return
+            doc = {"verdicts": {}}
+            if P3_GT.exists():
+                doc = json.loads(P3_GT.read_text(encoding="utf-8"))
+            doc["verdicts"][str(mid)] = {"label": label, "note": data.get("note", ""),
+                                         "at": time.strftime("%Y-%m-%d %H:%M:%S")}
+            doc["generated_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
+            tmp = P3_GT.with_suffix(".tmp")
+            tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+            tmp.replace(P3_GT)
+            self._json({"ok": True, "media_id": mid, "label": label})
             return
         if self.path == "/api/a3/observability/save":
             try:

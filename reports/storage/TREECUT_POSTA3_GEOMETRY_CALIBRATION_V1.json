@@ -1,0 +1,133 @@
+{
+ "experiment": "TREECUT_POSTA3_GEOMETRY_CALIBRATION_V1",
+ "generated_at": "2026-09-06 12:17:14",
+ "phase": "SYNTHETIC_INFRA_ONLY（非真实媒体；人工 ROI 后跑真实）",
+ "method": "OLD_ABS_AREA_V1(frozen) vs RELATIVE_ANCHOR_V1(新,岛台归一锚边+外缘+跨度+axis)",
+ "scenarios": [
+  {
+   "scenario": "extend_right",
+   "OLD_ABS_AREA": "EXTEND",
+   "OLD_state": "PROGRESSION_UP",
+   "NEW_RELATIVE_ANCHOR": "EXTEND",
+   "NEW_axis": "RIGHT",
+   "NEW_codes": [
+    "ANCHOR_EDGE_STABLE",
+    "FAR_EDGE_OUTWARD_PROGRESS",
+    "SPAN_INCREASE"
+   ],
+   "NEW_stats": {
+    "net_far_norm": 0.4,
+    "net_span_norm": 0.4,
+    "anchor_range_norm": 0.0
+   }
+  },
+  {
+   "scenario": "retract_right",
+   "OLD_ABS_AREA": "RETRACT",
+   "OLD_state": "PROGRESSION_DOWN",
+   "NEW_RELATIVE_ANCHOR": "RETRACT",
+   "NEW_axis": "RIGHT",
+   "NEW_codes": [
+    "ANCHOR_EDGE_STABLE",
+    "FAR_EDGE_INWARD_PROGRESS",
+    "SPAN_DECREASE"
+   ],
+   "NEW_stats": {
+    "net_far_norm": -0.4,
+    "net_span_norm": -0.4,
+    "anchor_range_norm": 0.0
+   }
+  },
+  {
+   "scenario": "perspective_grow_static",
+   "OLD_ABS_AREA": "EXTEND",
+   "OLD_state": "PROGRESSION_UP",
+   "NEW_RELATIVE_ANCHOR": "STATIC",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "ANCHOR_EDGE_OSCILLATION_NO_PROGRESSION"
+   ],
+   "NEW_stats": {
+    "RIGHT": {
+     "net_far": 0.0009137862534763508,
+     "anchor_range": 0.0003972983710767153
+    },
+    "LEFT": {
+     "net_far": -0.0003972983710767153,
+     "anchor_range": 0.0009137862534763508
+    },
+    "DOWN": {
+     "net_far": 0.0,
+     "anchor_range": 0.0017857142857143071
+    },
+    "UP": {
+     "net_far": 0.0017857142857143071,
+     "anchor_range": 0.0
+    }
+   }
+  },
+  {
+   "scenario": "perspective_shrink_static",
+   "OLD_ABS_AREA": "RETRACT",
+   "OLD_state": "PROGRESSION_DOWN",
+   "NEW_RELATIVE_ANCHOR": "STATIC",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "ANCHOR_EDGE_OSCILLATION_NO_PROGRESSION"
+   ],
+   "NEW_stats": {
+    "RIGHT": {
+     "net_far": -0.0019607843137254832,
+     "anchor_range": 0.0
+    },
+    "LEFT": {
+     "net_far": -0.0,
+     "anchor_range": 0.0019607843137254832
+    },
+    "DOWN": {
+     "net_far": -0.0014705882352941124,
+     "anchor_range": 0.0026315789473684292
+    },
+    "UP": {
+     "net_far": 0.0014705882352941402,
+     "anchor_range": 0.0026315789473684292
+    }
+   }
+  },
+  {
+   "scenario": "static",
+   "OLD_ABS_AREA": "STATIC",
+   "OLD_state": "STATIC_STABLE",
+   "NEW_RELATIVE_ANCHOR": "STATIC",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "ANCHOR_EDGE_OSCILLATION_NO_PROGRESSION"
+   ],
+   "NEW_stats": {
+    "RIGHT": {
+     "net_far": 0.0,
+     "anchor_range": 0.0
+    },
+    "LEFT": {
+     "net_far": -0.0,
+     "anchor_range": 0.0
+    },
+    "DOWN": {
+     "net_far": 0.0,
+     "anchor_range": 0.0
+    },
+    "UP": {
+     "net_far": -0.0,
+     "anchor_range": 0.0
+    }
+   }
+  }
+ ],
+ "expected": {
+  "extend_right": "EXTEND",
+  "retract_right": "RETRACT",
+  "perspective_grow_static": "STATIC(旧会误判 EXTEND)",
+  "perspective_shrink_static": "STATIC(旧会误判 RETRACT)",
+  "static": "STATIC"
+ }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8"/>
+<title>TreeCut POST-A3 · Calibration 人工评审（动作真值）</title>
+<style>
+ body{font-family:'Microsoft YaHei',sans-serif;margin:0;background:#f5f6f8;color:#222}
+ header{padding:12px 20px;background:#1f2937;color:#fff;position:sticky;top:0;z-index:9}
+ h1{font-size:16px;margin:0 0 4px}
+ .wrap{max-width:1150px;margin:0 auto;padding:14px 20px 80px}
+ .note{background:#e8f0fe;border:1px solid #a8c7fa;padding:8px 12px;border-radius:8px;font-size:12px;margin:8px 0}
+ .bucket{font-size:14px;font-weight:bold;margin:22px 0 6px;color:#1a73e8}
+ .card{border:1px solid #d2d9e2;background:#fff;border-radius:10px;padding:10px 12px;margin:10px 0}
+ .imgs{display:flex;gap:6px;flex-wrap:wrap}
+ .imgs figure{margin:0;text-align:center}.imgs img{width:150px;border:1px solid #aaa;background:#000}
+ figcaption{font-size:10px;color:#555}
+ .verdict{margin-top:6px}
+ label{margin-right:12px;font-size:13px}
+ .done{background:#cde7cd}
+ button{padding:4px 12px;border-radius:6px;cursor:pointer}
+ button.p{background:#1a73e8;color:#fff;border:1px solid #1a73e8}
+ .msg{position:fixed;bottom:16px;right:16px;background:#333;color:#fff;padding:8px 14px;border-radius:6px;display:none}
+ .st{color:#9bb6d8;font-size:12px}
+</style></head><body>
+<header><h1>POST-A3 Calibration · 动作真值人工评审（26 候选 · 非 A1/A2/A3/Known）</h1>
+  <span class="st" id="prog"></span></header>
+<div class="wrap">
+<div class="note"><b>任务：</b>逐候选判断“这段视频里<b>目标桌板/伸缩板是否真实发生伸缩动作</b>”。
+每个候选播放/查看 5 张时间缩略（可点开大图），选：
+EXTEND=伸缩(拉出)真实发生；RETRACT=收回真实发生；NO_ACTION=无伸缩类动作(静态/他人/它物运动/腿动等)；UNCLEAR=看不清。
+<b>这是 calibration 人工真值</b>，用于 CAM01/GEOM01 修复对比；会另有一轮 ROI 标注（第二轮人工门控）。</div>
+<div id="lists"></div>
+</div>
+<div class="msg" id="msg"></div>
+<script>
+const LABELS=[["EXTEND","伸缩(拉出)真实发生"],["RETRACT","收回真实发生"],["NO_ACTION","无伸缩类动作"],["UNCLEAR","看不清"]];
+const CN={"EXTEND":"伸缩","RETRACT":"收回","NO_ACTION":"无动作","UNCLEAR":"看不清"};
+let DATA=null, SAVED={};
+async function jget(u){const r=await fetch(u);return r.json();}
+function msg(t){const m=document.getElementById('msg');m.textContent=t;m.style.display='block';clearTimeout(msg._t);msg._t=setTimeout(()=>m.style.display='none',2200);}
+async function load(){
+  DATA=await jget('/api/posta3/candidates');
+  SAVED=(await jget('/api/posta3/review')).verdicts||{};
+  render(); prog();
+}
+function prog(){const n=Object.keys(SAVED).length;
+  document.getElementById('prog').textContent=`已完成 ${n}/${DATA.candidates.length} · 状态：评审中（含 RETRACT 候选 7）`;}
+function render(){
+  const el=document.getElementById('lists');el.innerHTML='';
+  const buckets=['EXTEND','RETRACT','INTERFERENCE_SOCKET','INTERFERENCE_LEG','STATIC'];
+  buckets.forEach(bk=>{
+    const items=DATA.candidates.filter(c=>c.bucket===bk);
+    if(!items.length)return;
+    const h=document.createElement('div');
+    h.innerHTML=`<div class="bucket">${bk}（${items.length}）</div>`;
+    items.forEach(c=>{
+      const d=document.createElement('div');d.className='card';
+      const saved=SAVED[String(c.media_id)];
+      if(saved)d.classList.add('done');
+      const imgs=c.frames.map(f=>`<figure><a href="/posta3/thumbs/${f.file}" target="_blank"><img src="/posta3/thumbs/${f.file}"/></a><figcaption>${f.ts}s</figcaption></figure>`).join('');
+      const radios=LABELS.map(([v,lab])=>`<label><input type="radio" name="v_${c.media_id}" value="${v}" ${saved&&saved.label===v?'checked':''}/> ${lab}</label>`).join('');
+      const note=saved&&saved.note?`<input type="text" id="n_${c.media_id}" style="width:40%" value="${saved.note}" placeholder="备注(可选)"/>`:`<input type="text" id="n_${c.media_id}" style="width:40%" placeholder="备注(可选)"/>`;
+      d.innerHTML=`<div><b>media ${c.media_id}</b> · ${c.family} · ${c.duration_s}s · <span style="color:#666">${c.path.length>120?c.path.slice(0,120)+'…':c.path}</span></div>
+        <div class="imgs">${imgs}</div>
+        <div class="verdict">${radios} ${note} <button class="p" onclick="save(${c.media_id})">保存本候选</button></div>`;
+      h.appendChild(d);
+    });
+    el.appendChild(h);
+  });
+}
+async function save(mid){
+  const r=document.querySelector(`input[name=v_${mid}]:checked`);
+  if(!r){msg('请先选择判断');return;}
+  const note=(document.getElementById('n_'+mid)||{}).value||'';
+  const res=await fetch('/api/posta3/verdict',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({media_id:mid,label:r.value,note})});
+  const j=await res.json();
+  if(j.ok){SAVED=await (await fetch('/api/posta3/review')).json().then(d=>d.verdicts||{});
+    msg(`已保存 media ${mid}: ${CN[r.value]}`);prog();render();}
+  else msg('保存失败：'+j.error);
+}
+load();
+</script></body></html>

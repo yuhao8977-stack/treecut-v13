@@ -1,0 +1,658 @@
+{
+ "experiment": "TREECUT_POSTA3_CAMERA_CALIBRATION_V1",
+ "generated_at": "2026-09-06 12:14:27",
+ "phase": "PRELIMINARY_NO_ROI",
+ "note": "boxes=[]（无 L3 ROI 阶段，全背景采样）；仅对齐质量指标；bridge 组合(compose) 下版实现；不评价动作",
+ "pairs": [
+  {
+   "SPARSE_DIRECT": {
+    "model": null,
+    "scene_diff": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "tracks": 226,
+    "reliable": false,
+    "detail": {
+     "shape": [
+      3072,
+      1728
+     ],
+     "mode": "background",
+     "reason_codes": [
+      "NO_RELIABLE_CAMERA_MODEL"
+     ],
+     "feature_count_before": 384,
+     "tracked_count": 226,
+     "forward_backward_valid_count": 226,
+     "fb_valid_ratio": 0.589,
+     "translation_median": [
+      -17.92,
+      39.65
+     ],
+     "scene_difference_score": 0.785,
+     "pair_state": "CAMERA_MODEL_UNRELIABLE",
+     "models_tried": [
+      "translation",
+      "partial_affine",
+      "full_affine"
+     ]
+    }
+   },
+   "FULL_FRAME_DIRECT": {
+    "model": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "scene_diff": 0.785,
+    "tracks": 226,
+    "reliable": false
+   },
+   "BRIDGE_500": {
+    "skipped": "gap_too_small"
+   },
+   "BRIDGE_250": {
+    "step": 0.25,
+    "segments": 3,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "0.97->1.22",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "1.22->1.47",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "1.47->1.72",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_125": {
+    "step": 0.125,
+    "segments": 6,
+    "all_segments_ok": true,
+    "chain": [
+     {
+      "seg": "0.97->1.10",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "1.10->1.22",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "1.22->1.35",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "1.35->1.47",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "1.47->1.60",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "1.60->1.72",
+      "model": "translation",
+      "ok": true
+     }
+    ],
+    "composition_supported": false
+   },
+   "media_id": 2163,
+   "bucket": "EXTEND",
+   "semantic_pair": [
+    0.97,
+    1.81
+   ]
+  },
+  {
+   "SPARSE_DIRECT": {
+    "model": null,
+    "scene_diff": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "tracks": 291,
+    "reliable": false,
+    "detail": {
+     "shape": [
+      3840,
+      2160
+     ],
+     "mode": "background",
+     "reason_codes": [
+      "NO_RELIABLE_CAMERA_MODEL"
+     ],
+     "feature_count_before": 368,
+     "tracked_count": 291,
+     "forward_backward_valid_count": 291,
+     "fb_valid_ratio": 0.791,
+     "translation_median": [
+      -5.5,
+      -1.04
+     ],
+     "scene_difference_score": 0.573,
+     "pair_state": "CAMERA_MODEL_UNRELIABLE",
+     "models_tried": [
+      "translation",
+      "partial_affine",
+      "full_affine",
+      "homography"
+     ]
+    }
+   },
+   "FULL_FRAME_DIRECT": {
+    "model": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "scene_diff": 0.573,
+    "tracks": 291,
+    "reliable": false
+   },
+   "BRIDGE_500": {
+    "step": 0.5,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "1.20->1.70",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_250": {
+    "step": 0.25,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "1.20->1.45",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_125": {
+    "step": 0.125,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "1.20->1.33",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "media_id": 2543,
+   "bucket": "EXTEND",
+   "semantic_pair": [
+    1.2,
+    2.23
+   ]
+  },
+  {
+   "SPARSE_DIRECT": {
+    "model": null,
+    "scene_diff": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "tracks": 32,
+    "reliable": false,
+    "detail": {
+     "shape": [
+      3840,
+      2160
+     ],
+     "mode": "background",
+     "reason_codes": [
+      "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+     ],
+     "feature_count_before": 406,
+     "tracked_count": 32,
+     "forward_backward_valid_count": 32,
+     "fb_valid_ratio": 0.079,
+     "pair_state": "CAMERA_MODEL_UNRELIABLE",
+     "tracks_raw": 406,
+     "tracks_fb_valid": 32
+    }
+   },
+   "FULL_FRAME_DIRECT": {
+    "model": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "scene_diff": null,
+    "tracks": 32,
+    "reliable": false
+   },
+   "BRIDGE_500": {
+    "step": 0.5,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "3.21->3.71",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_250": {
+    "step": 0.25,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "3.21->3.46",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_125": {
+    "step": 0.125,
+    "segments": 12,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "3.21->3.34",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "3.34->3.46",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "3.46->3.59",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "3.59->3.71",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "3.71->3.84",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "3.84->3.96",
+      "model": "translation",
+      "ok": true
+     }
+    ],
+    "composition_supported": false
+   },
+   "media_id": 2552,
+   "bucket": "EXTEND",
+   "semantic_pair": [
+    3.21,
+    5.97
+   ]
+  },
+  {
+   "SPARSE_DIRECT": {
+    "model": null,
+    "scene_diff": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "tracks": 37,
+    "reliable": false,
+    "detail": {
+     "shape": [
+      3072,
+      1728
+     ],
+     "mode": "background",
+     "reason_codes": [
+      "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+     ],
+     "feature_count_before": 379,
+     "tracked_count": 37,
+     "forward_backward_valid_count": 37,
+     "fb_valid_ratio": 0.098,
+     "pair_state": "CAMERA_MODEL_UNRELIABLE",
+     "tracks_raw": 379,
+     "tracks_fb_valid": 37
+    }
+   },
+   "FULL_FRAME_DIRECT": {
+    "model": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "scene_diff": null,
+    "tracks": 37,
+    "reliable": false
+   },
+   "BRIDGE_500": {
+    "step": 0.5,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "1.21->1.71",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_250": {
+    "step": 0.25,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "1.21->1.46",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_125": {
+    "step": 0.125,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "1.21->1.33",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "media_id": 2208,
+   "bucket": "INTERFERENCE_LEG",
+   "semantic_pair": [
+    1.21,
+    2.24
+   ]
+  },
+  {
+   "SPARSE_DIRECT": {
+    "model": null,
+    "scene_diff": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "tracks": 19,
+    "reliable": false,
+    "detail": {
+     "shape": [
+      3072,
+      1728
+     ],
+     "mode": "background",
+     "reason_codes": [
+      "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+     ],
+     "feature_count_before": 408,
+     "tracked_count": 19,
+     "forward_backward_valid_count": 19,
+     "fb_valid_ratio": 0.047,
+     "pair_state": "CAMERA_MODEL_UNRELIABLE",
+     "tracks_raw": 408,
+     "tracks_fb_valid": 19
+    }
+   },
+   "FULL_FRAME_DIRECT": {
+    "model": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "scene_diff": null,
+    "tracks": 19,
+    "reliable": false
+   },
+   "BRIDGE_500": {
+    "step": 0.5,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "2.91->3.41",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_250": {
+    "step": 0.25,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "2.91->3.16",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_125": {
+    "step": 0.125,
+    "segments": 1,
+    "all_segments_ok": false,
+    "chain": [
+     {
+      "seg": "2.91->3.03",
+      "model": null,
+      "ok": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE"
+     }
+    ],
+    "composition_supported": false
+   },
+   "media_id": 1019,
+   "bucket": "STATIC",
+   "semantic_pair": [
+    2.91,
+    5.4
+   ]
+  },
+  {
+   "SPARSE_DIRECT": {
+    "model": null,
+    "scene_diff": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "tracks": 141,
+    "reliable": false,
+    "detail": {
+     "shape": [
+      3072,
+      1728
+     ],
+     "mode": "background",
+     "reason_codes": [
+      "NO_RELIABLE_CAMERA_MODEL"
+     ],
+     "feature_count_before": 337,
+     "tracked_count": 141,
+     "forward_backward_valid_count": 141,
+     "fb_valid_ratio": 0.418,
+     "translation_median": [
+      -54.56,
+      -4.4
+     ],
+     "scene_difference_score": 0.607,
+     "pair_state": "CAMERA_MODEL_UNRELIABLE",
+     "models_tried": [
+      "translation",
+      "partial_affine",
+      "full_affine",
+      "homography"
+     ]
+    }
+   },
+   "FULL_FRAME_DIRECT": {
+    "model": null,
+    "pair_state": "CAMERA_MODEL_UNRELIABLE",
+    "residual": null,
+    "scene_diff": 0.607,
+    "tracks": 141,
+    "reliable": false
+   },
+   "BRIDGE_500": {
+    "step": 0.5,
+    "segments": 7,
+    "all_segments_ok": true,
+    "chain": [
+     {
+      "seg": "4.30->4.80",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "4.80->5.30",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "5.30->5.80",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "5.80->6.30",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "6.30->6.80",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "6.80->7.30",
+      "model": "translation",
+      "ok": true
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_250": {
+    "step": 0.25,
+    "segments": 14,
+    "all_segments_ok": true,
+    "chain": [
+     {
+      "seg": "4.30->4.55",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "4.55->4.80",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "4.80->5.05",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "5.05->5.30",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "5.30->5.55",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "5.55->5.80",
+      "model": "translation",
+      "ok": true
+     }
+    ],
+    "composition_supported": false
+   },
+   "BRIDGE_125": {
+    "step": 0.125,
+    "segments": 29,
+    "all_segments_ok": true,
+    "chain": [
+     {
+      "seg": "4.30->4.42",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "4.42->4.55",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "4.55->4.67",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "4.67->4.80",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "4.80->4.92",
+      "model": "translation",
+      "ok": true
+     },
+     {
+      "seg": "4.92->5.05",
+      "model": "translation",
+      "ok": true
+     }
+    ],
+    "composition_supported": false
+   },
+   "media_id": 3571,
+   "bucket": "RETRACT",
+   "semantic_pair": [
+    4.3,
+    7.98
+   ]
+  }
+ ],
+ "reliability_rates": {
+  "SPARSE_DIRECT": 0.0,
+  "FULL_FRAME_DIRECT": 0.0,
+  "BRIDGE_250": 0.167,
+  "BRIDGE_125": 0.333,
+  "BRIDGE_500": 0.2
+ }
+}
