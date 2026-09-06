@@ -1,0 +1,1067 @@
+{
+ "experiment": "MMVV_A3_MACHINE_PREDICTIONS_BLIND",
+ "generated_at": "2026-09-06 11:57:35",
+ "algorithm_freeze_commit": "ca34678",
+ "roi_sha256": "421d5a29c1390ae59bed02f14f745148f19f2c2381b43c740aaca3d85c30c1ca",
+ "blind_manifest_sha256": "6408d0a0025d6a69753a63451a6e00fa33a67f0be35128529866fbaa9bce3558",
+ "frame_hash_check": "verified_by_selfcheck",
+ "requested_action": "EXTEND",
+ "input_boundary_note": "本文件由 blind 输入+人工 ROI 生成；不含 GT/原 media_id/POS-NEG/期望结果。",
+ "cases": [
+  {
+   "opaque_case_id": "H001",
+   "requested_action": "EXTEND",
+   "target_visibility": {
+    "0.85": "TARGET_NOT_VISIBLE",
+    "1.841": "TARGET_NOT_VISIBLE",
+    "2.833": "TARGET_SINGLE",
+    "3.824": "TARGET_SINGLE",
+    "4.815": "TARGET_SINGLE"
+   },
+   "target_identity_state": {
+    "0.85": "TARGET_NOT_VISIBLE",
+    "1.841": "TARGET_NOT_VISIBLE",
+    "2.833": "TARGET_SINGLE",
+    "3.824": "TARGET_SINGLE",
+    "4.815": "TARGET_SINGLE"
+   },
+   "target_actual_labels": {
+    "0.85": null,
+    "1.841": null,
+    "2.833": "EXTENSION_TABLETOP",
+    "3.824": "EXTENSION_TABLETOP",
+    "4.815": "EXTENSION_TABLETOP"
+   },
+   "island_reference": {
+    "0.85": "NONE_OR_AMBIGUOUS",
+    "1.841": "OK",
+    "2.833": "OK",
+    "3.824": "OK",
+    "4.815": "OK"
+   },
+   "camera_case": "UNRELIABLE",
+   "camera_evidence": {
+    "state": "UNRELIABLE",
+    "source_pairs": 4,
+    "max_feature_residual": 0.0,
+    "min_inlier_ratio": null,
+    "max_translation_px": 12.257,
+    "pairs": [
+     {
+      "pair": "0.85->1.841",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": null,
+      "translation": null,
+      "reason_codes": [
+       "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+      ]
+     },
+     {
+      "pair": "1.841->2.833",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": null,
+      "translation": null,
+      "reason_codes": [
+       "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+      ]
+     },
+     {
+      "pair": "2.833->3.824",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.937,
+      "translation": [
+       6.55,
+       -10.36
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     },
+     {
+      "pair": "3.824->4.815",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": null,
+      "translation": null,
+      "reason_codes": [
+       "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+      ]
+     }
+    ]
+   },
+   "target_motion": {
+    "pairs": [
+     {
+      "pair": "1.841->2.833",
+      "target_pixel_motion_before": 1.0635,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "2.833->3.824",
+      "target_pixel_motion_before": 1.2737,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "3.824->4.815",
+      "target_pixel_motion_before": 1.7873,
+      "target_pixel_motion_after": null
+     }
+    ],
+    "target_pixel_motion_before_max": 1.7873,
+    "target_pixel_motion_after_max": 0.0
+   },
+   "geometry_evidence": {
+    "frames_used": [
+     2.833,
+     3.824,
+     4.815
+    ],
+    "direction_action": "EXTEND",
+    "state_progress": "PROGRESSION_UP",
+    "geometry_change_present": true,
+    "relative_motion_present": true,
+    "confidence_class": "UNSTABLE_CAMERA",
+    "reason_codes": [
+     "GEOMETRY_MONOTONIC_UP",
+     "CAMERA_UNRELIABLE"
+    ],
+    "visibility_progression": "VISIBLE_ALL",
+    "robust_stats": {
+     "median_area": 353700,
+     "mad_ratio": 0.5581,
+     "first_last_change_ratio": 2.6124,
+     "reversal_count": 0,
+     "monotonicity_score": 1.0,
+     "pair_max_frac": 2.0543,
+     "grow_factor": 6.912,
+     "center_drift_norm": 0.5229,
+     "net_geometry_change": 2.6124,
+     "direction_consistency": "HIGH"
+    },
+    "abs_seq": [
+     156288,
+     353700,
+     1080304
+    ],
+    "area_jitter_class": "up"
+   },
+   "temporal_mandatory_gates": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "FAIL",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE"
+   ],
+   "machine_verdict": "UNSURE"
+  },
+  {
+   "opaque_case_id": "H002",
+   "requested_action": "EXTEND",
+   "target_visibility": {
+    "1.372": "TARGET_SINGLE",
+    "2.973": "TARGET_SINGLE",
+    "4.574": "TARGET_SINGLE",
+    "6.175": "TARGET_SINGLE",
+    "7.776": "TARGET_SINGLE"
+   },
+   "target_identity_state": {
+    "1.372": "TARGET_SINGLE",
+    "2.973": "TARGET_SINGLE",
+    "4.574": "TARGET_SINGLE",
+    "6.175": "TARGET_SINGLE",
+    "7.776": "TARGET_SINGLE"
+   },
+   "target_actual_labels": {
+    "1.372": "EXTENSION_TABLETOP",
+    "2.973": "EXTENSION_TABLETOP",
+    "4.574": "EXTENSION_TABLETOP",
+    "6.175": "EXTENSION_TABLETOP",
+    "7.776": "EXTENSION_TABLETOP"
+   },
+   "island_reference": {
+    "1.372": "OK",
+    "2.973": "OK",
+    "4.574": "OK",
+    "6.175": "OK",
+    "7.776": "OK"
+   },
+   "camera_case": "UNRELIABLE",
+   "camera_evidence": {
+    "state": "UNRELIABLE",
+    "source_pairs": 4,
+    "max_feature_residual": 0.933,
+    "min_inlier_ratio": 1.0,
+    "max_translation_px": 35.507,
+    "pairs": [
+     {
+      "pair": "1.372->2.973",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.718,
+      "translation": [
+       15.47,
+       -31.96
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     },
+     {
+      "pair": "2.973->4.574",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": null,
+      "translation": null,
+      "reason_codes": [
+       "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+      ]
+     },
+     {
+      "pair": "4.574->6.175",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.823,
+      "translation": [
+       4.1,
+       -6.03
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     },
+     {
+      "pair": "6.175->7.776",
+      "pair_state": "SAME_SCENE",
+      "chosen_model": "translation",
+      "residual": 0.933,
+      "background_validation_residual_px": 0.933,
+      "inlier_ratio": 1.0,
+      "scene_difference_score": 0.255,
+      "translation": [
+       -6.14,
+       -1.51
+      ],
+      "reason_codes": [
+       "BACKGROUND_MASKED_CAMERA_OK"
+      ]
+     }
+    ]
+   },
+   "target_motion": {
+    "pairs": [
+     {
+      "pair": "1.372->2.973",
+      "target_pixel_motion_before": 0.9008,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "2.973->4.574",
+      "target_pixel_motion_before": 0.8808,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "4.574->6.175",
+      "target_pixel_motion_before": 0.9469,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "6.175->7.776",
+      "target_pixel_motion_before": 0.5741,
+      "target_pixel_motion_after": 0.5672
+     }
+    ],
+    "target_pixel_motion_before_max": 0.9469,
+    "target_pixel_motion_after_max": 0.5672
+   },
+   "geometry_evidence": {
+    "frames_used": [
+     1.372,
+     2.973,
+     4.574,
+     6.175,
+     7.776
+    ],
+    "direction_action": "RETRACT",
+    "state_progress": "PROGRESSION_DOWN",
+    "geometry_change_present": true,
+    "relative_motion_present": true,
+    "confidence_class": "UNSTABLE_CAMERA",
+    "reason_codes": [
+     "GEOMETRY_MONOTONIC_DOWN",
+     "CAMERA_UNRELIABLE"
+    ],
+    "visibility_progression": "VISIBLE_ALL",
+    "robust_stats": {
+     "median_area": 364914,
+     "mad_ratio": 0.2076,
+     "first_last_change_ratio": -0.1729,
+     "reversal_count": 1,
+     "monotonicity_score": 0.75,
+     "pair_max_frac": 0.7611,
+     "grow_factor": 0.821,
+     "center_drift_norm": 0.4245,
+     "net_geometry_change": 0.1729,
+     "direction_consistency": "HIGH"
+    },
+    "abs_seq": [
+     352260,
+     630006,
+     577344,
+     364914,
+     289170
+    ],
+    "area_jitter_class": "down"
+   },
+   "temporal_mandatory_gates": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE"
+   ],
+   "machine_verdict": "UNSURE"
+  },
+  {
+   "opaque_case_id": "H003",
+   "requested_action": "EXTEND",
+   "target_visibility": {
+    "0.937": "TARGET_SINGLE",
+    "2.03": "TARGET_SINGLE",
+    "3.123": "TARGET_SINGLE",
+    "4.216": "TARGET_SINGLE",
+    "5.309": "TARGET_SINGLE"
+   },
+   "target_identity_state": {
+    "0.937": "TARGET_SINGLE",
+    "2.03": "TARGET_SINGLE",
+    "3.123": "TARGET_SINGLE",
+    "4.216": "TARGET_SINGLE",
+    "5.309": "TARGET_SINGLE"
+   },
+   "target_actual_labels": {
+    "0.937": "EXTENSION_TABLETOP",
+    "2.03": "EXTENSION_TABLETOP",
+    "3.123": "EXTENSION_TABLETOP",
+    "4.216": "EXTENSION_TABLETOP",
+    "5.309": "EXTENSION_TABLETOP"
+   },
+   "island_reference": {
+    "0.937": "NONE_OR_AMBIGUOUS",
+    "2.03": "NONE_OR_AMBIGUOUS",
+    "3.123": "NONE_OR_AMBIGUOUS",
+    "4.216": "NONE_OR_AMBIGUOUS",
+    "5.309": "NONE_OR_AMBIGUOUS"
+   },
+   "camera_case": "UNRELIABLE",
+   "camera_evidence": {
+    "state": "UNRELIABLE",
+    "source_pairs": 4,
+    "max_feature_residual": 2.021,
+    "min_inlier_ratio": 1.0,
+    "max_translation_px": 17.999,
+    "pairs": [
+     {
+      "pair": "0.937->2.03",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": null,
+      "translation": null,
+      "reason_codes": [
+       "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+      ]
+     },
+     {
+      "pair": "2.03->3.123",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": null,
+      "translation": null,
+      "reason_codes": [
+       "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+      ]
+     },
+     {
+      "pair": "3.123->4.216",
+      "pair_state": "SAME_SCENE",
+      "chosen_model": "translation",
+      "residual": 2.021,
+      "background_validation_residual_px": 2.021,
+      "inlier_ratio": 1.0,
+      "scene_difference_score": 0.545,
+      "translation": [
+       1.79,
+       17.91
+      ],
+      "reason_codes": [
+       "BACKGROUND_MASKED_CAMERA_OK"
+      ]
+     },
+     {
+      "pair": "4.216->5.309",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": null,
+      "translation": null,
+      "reason_codes": [
+       "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+      ]
+     }
+    ]
+   },
+   "target_motion": {
+    "pairs": [
+     {
+      "pair": "0.937->2.03",
+      "target_pixel_motion_before": 1.2067,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "2.03->3.123",
+      "target_pixel_motion_before": 1.3096,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "3.123->4.216",
+      "target_pixel_motion_before": 0.7562,
+      "target_pixel_motion_after": 0.4322
+     },
+     {
+      "pair": "4.216->5.309",
+      "target_pixel_motion_before": 2.5575,
+      "target_pixel_motion_after": null
+     }
+    ],
+    "target_pixel_motion_before_max": 2.5575,
+    "target_pixel_motion_after_max": 0.4322
+   },
+   "geometry_evidence": {
+    "frames_used": [
+     0.937,
+     2.03,
+     3.123,
+     4.216,
+     5.309
+    ],
+    "direction_action": "EXTEND",
+    "state_progress": "PROGRESSION_UP",
+    "geometry_change_present": true,
+    "relative_motion_present": false,
+    "confidence_class": "UNSTABLE_CAMERA",
+    "reason_codes": [
+     "GEOMETRY_MONOTONIC_UP",
+     "CAMERA_UNRELIABLE"
+    ],
+    "visibility_progression": "VISIBLE_ALL",
+    "robust_stats": {
+     "median_area": 114835,
+     "mad_ratio": 0.0889,
+     "first_last_change_ratio": 0.2635,
+     "reversal_count": 2,
+     "monotonicity_score": 0.75,
+     "pair_max_frac": 0.1308,
+     "grow_factor": 1.316,
+     "center_drift_norm": 0.1407,
+     "net_geometry_change": 0.2635,
+     "direction_consistency": "HIGH"
+    },
+    "abs_seq": [
+     95744,
+     104624,
+     119646,
+     114835,
+     125999
+    ],
+    "area_jitter_class": "up"
+   },
+   "temporal_mandatory_gates": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE"
+   ],
+   "machine_verdict": "UNSURE"
+  },
+  {
+   "opaque_case_id": "H004",
+   "requested_action": "EXTEND",
+   "target_visibility": {
+    "0.961": "TARGET_SINGLE",
+    "2.083": "TARGET_SINGLE",
+    "3.204": "TARGET_SINGLE",
+    "4.325": "TARGET_SINGLE",
+    "5.447": "TARGET_SINGLE"
+   },
+   "target_identity_state": {
+    "0.961": "TARGET_SINGLE",
+    "2.083": "TARGET_SINGLE",
+    "3.204": "TARGET_SINGLE",
+    "4.325": "TARGET_SINGLE",
+    "5.447": "TARGET_SINGLE"
+   },
+   "target_actual_labels": {
+    "0.961": "EXTENSION_TABLETOP",
+    "2.083": "EXTENSION_TABLETOP",
+    "3.204": "EXTENSION_TABLETOP",
+    "4.325": "EXTENSION_TABLETOP",
+    "5.447": "EXTENSION_TABLETOP"
+   },
+   "island_reference": {
+    "0.961": "OK",
+    "2.083": "OK",
+    "3.204": "OK",
+    "4.325": "OK",
+    "5.447": "OK"
+   },
+   "camera_case": "UNRELIABLE",
+   "camera_evidence": {
+    "state": "UNRELIABLE",
+    "source_pairs": 4,
+    "max_feature_residual": 0.0,
+    "min_inlier_ratio": null,
+    "max_translation_px": 61.58,
+    "pairs": [
+     {
+      "pair": "0.961->2.083",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": null,
+      "translation": null,
+      "reason_codes": [
+       "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+      ]
+     },
+     {
+      "pair": "2.083->3.204",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.761,
+      "translation": [
+       -59.21,
+       16.92
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     },
+     {
+      "pair": "3.204->4.325",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": null,
+      "translation": null,
+      "reason_codes": [
+       "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+      ]
+     },
+     {
+      "pair": "4.325->5.447",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.781,
+      "translation": [
+       -12.55,
+       3.38
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     }
+    ]
+   },
+   "target_motion": {
+    "pairs": [
+     {
+      "pair": "0.961->2.083",
+      "target_pixel_motion_before": 0.5298,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "2.083->3.204",
+      "target_pixel_motion_before": 0.7841,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "3.204->4.325",
+      "target_pixel_motion_before": 1.0177,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "4.325->5.447",
+      "target_pixel_motion_before": 1.139,
+      "target_pixel_motion_after": null
+     }
+    ],
+    "target_pixel_motion_before_max": 1.139,
+    "target_pixel_motion_after_max": 0.0
+   },
+   "geometry_evidence": {
+    "frames_used": [
+     0.961,
+     2.083,
+     3.204,
+     4.325,
+     5.447
+    ],
+    "direction_action": "EXTEND",
+    "state_progress": "PROGRESSION_UP",
+    "geometry_change_present": true,
+    "relative_motion_present": true,
+    "confidence_class": "UNSTABLE_CAMERA",
+    "reason_codes": [
+     "GEOMETRY_MONOTONIC_UP",
+     "CAMERA_UNRELIABLE"
+    ],
+    "visibility_progression": "VISIBLE_ALL",
+    "robust_stats": {
+     "median_area": 1158456,
+     "mad_ratio": 0.0997,
+     "first_last_change_ratio": 0.5961,
+     "reversal_count": 1,
+     "monotonicity_score": 0.75,
+     "pair_max_frac": 0.389,
+     "grow_factor": 1.626,
+     "center_drift_norm": 0.0279,
+     "net_geometry_change": 0.5961,
+     "direction_consistency": "HIGH"
+    },
+    "abs_seq": [
+     1103170,
+     1042944,
+     1158456,
+     1343188,
+     1793782
+    ],
+    "area_jitter_class": "up"
+   },
+   "temporal_mandatory_gates": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "FAIL",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE"
+   ],
+   "machine_verdict": "UNSURE"
+  },
+  {
+   "opaque_case_id": "H005",
+   "requested_action": "EXTEND",
+   "target_visibility": {
+    "0.839": "TARGET_SINGLE",
+    "1.818": "TARGET_SINGLE",
+    "2.798": "TARGET_SINGLE",
+    "3.777": "TARGET_SINGLE",
+    "4.757": "TARGET_SINGLE"
+   },
+   "target_identity_state": {
+    "0.839": "TARGET_SINGLE",
+    "1.818": "TARGET_SINGLE",
+    "2.798": "TARGET_SINGLE",
+    "3.777": "TARGET_SINGLE",
+    "4.757": "TARGET_SINGLE"
+   },
+   "target_actual_labels": {
+    "0.839": "EXTENSION_TABLETOP",
+    "1.818": "EXTENSION_TABLETOP",
+    "2.798": "EXTENSION_TABLETOP",
+    "3.777": "EXTENSION_TABLETOP",
+    "4.757": "EXTENSION_TABLETOP"
+   },
+   "island_reference": {
+    "0.839": "OK",
+    "1.818": "OK",
+    "2.798": "OK",
+    "3.777": "OK",
+    "4.757": "OK"
+   },
+   "camera_case": "UNRELIABLE",
+   "camera_evidence": {
+    "state": "UNRELIABLE",
+    "source_pairs": 4,
+    "max_feature_residual": 2.876,
+    "min_inlier_ratio": 1.0,
+    "max_translation_px": 51.996,
+    "pairs": [
+     {
+      "pair": "0.839->1.818",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": null,
+      "translation": null,
+      "reason_codes": [
+       "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+      ]
+     },
+     {
+      "pair": "1.818->2.798",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.785,
+      "translation": [
+       9.61,
+       51.1
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     },
+     {
+      "pair": "2.798->3.777",
+      "pair_state": "SAME_SCENE",
+      "chosen_model": "translation",
+      "residual": 2.876,
+      "background_validation_residual_px": 2.876,
+      "inlier_ratio": 1.0,
+      "scene_difference_score": 0.443,
+      "translation": [
+       8.88,
+       20.85
+      ],
+      "reason_codes": [
+       "BACKGROUND_MASKED_CAMERA_OK"
+      ]
+     },
+     {
+      "pair": "3.777->4.757",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.569,
+      "translation": [
+       -0.63,
+       26.51
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     }
+    ]
+   },
+   "target_motion": {
+    "pairs": [
+     {
+      "pair": "0.839->1.818",
+      "target_pixel_motion_before": 0.7753,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "1.818->2.798",
+      "target_pixel_motion_before": 1.2107,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "2.798->3.777",
+      "target_pixel_motion_before": 0.7022,
+      "target_pixel_motion_after": 0.5884
+     },
+     {
+      "pair": "3.777->4.757",
+      "target_pixel_motion_before": 0.7606,
+      "target_pixel_motion_after": null
+     }
+    ],
+    "target_pixel_motion_before_max": 1.2107,
+    "target_pixel_motion_after_max": 0.5884
+   },
+   "geometry_evidence": {
+    "frames_used": [
+     0.839,
+     1.818,
+     2.798,
+     3.777,
+     4.757
+    ],
+    "direction_action": "STATIC",
+    "state_progress": "STATIC_WITH_ANNOTATION_JITTER",
+    "geometry_change_present": false,
+    "relative_motion_present": true,
+    "confidence_class": "UNSTABLE_CAMERA",
+    "reason_codes": [
+     "NO_TARGET_GEOMETRY_CHANGE",
+     "GEOMETRY_ANNOTATION_JITTER",
+     "BOUNDED_OSCILLATION_NO_PROGRESSION",
+     "CAMERA_UNRELIABLE"
+    ],
+    "visibility_progression": "VISIBLE_ALL",
+    "robust_stats": {
+     "median_area": 381428,
+     "mad_ratio": 0.0254,
+     "first_last_change_ratio": 0.0657,
+     "reversal_count": 2,
+     "monotonicity_score": 0.75,
+     "pair_max_frac": 0.3145,
+     "grow_factor": 1.07,
+     "center_drift_norm": 0.067,
+     "net_geometry_change": 0.0657,
+     "direction_consistency": "HIGH"
+    },
+    "abs_seq": [
+     356384,
+     271158,
+     391128,
+     389207,
+     381428
+    ],
+    "area_jitter_class": "jitter"
+   },
+   "temporal_mandatory_gates": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "PASS",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE"
+   ],
+   "machine_verdict": "UNSURE"
+  },
+  {
+   "opaque_case_id": "H006",
+   "requested_action": "EXTEND",
+   "target_visibility": {
+    "0.923": "TARGET_SINGLE",
+    "2.0": "TARGET_SINGLE",
+    "3.077": "TARGET_SINGLE",
+    "4.153": "TARGET_SINGLE",
+    "5.23": "TARGET_SINGLE"
+   },
+   "target_identity_state": {
+    "0.923": "TARGET_SINGLE",
+    "2.0": "TARGET_SINGLE",
+    "3.077": "TARGET_SINGLE",
+    "4.153": "TARGET_SINGLE",
+    "5.23": "TARGET_SINGLE"
+   },
+   "target_actual_labels": {
+    "0.923": "EXTENSION_TABLETOP",
+    "2.0": "EXTENSION_TABLETOP",
+    "3.077": "EXTENSION_TABLETOP",
+    "4.153": "EXTENSION_TABLETOP",
+    "5.23": "EXTENSION_TABLETOP"
+   },
+   "island_reference": {
+    "0.923": "OK",
+    "2.0": "OK",
+    "3.077": "OK",
+    "4.153": "OK",
+    "5.23": "OK"
+   },
+   "camera_case": "UNRELIABLE",
+   "camera_evidence": {
+    "state": "UNRELIABLE",
+    "source_pairs": 4,
+    "max_feature_residual": 0.0,
+    "min_inlier_ratio": null,
+    "max_translation_px": 31.691,
+    "pairs": [
+     {
+      "pair": "0.923->2.0",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.866,
+      "translation": [
+       3.29,
+       31.52
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     },
+     {
+      "pair": "2.0->3.077",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.795,
+      "translation": [
+       8.75,
+       11.85
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     },
+     {
+      "pair": "3.077->4.153",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.856,
+      "translation": [
+       14.83,
+       15.8
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     },
+     {
+      "pair": "4.153->5.23",
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "chosen_model": null,
+      "residual": null,
+      "background_validation_residual_px": null,
+      "inlier_ratio": null,
+      "scene_difference_score": 0.677,
+      "translation": [
+       16.18,
+       2.37
+      ],
+      "reason_codes": [
+       "NO_RELIABLE_CAMERA_MODEL"
+      ]
+     }
+    ]
+   },
+   "target_motion": {
+    "pairs": [
+     {
+      "pair": "0.923->2.0",
+      "target_pixel_motion_before": 1.0859,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "2.0->3.077",
+      "target_pixel_motion_before": 0.9035,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "3.077->4.153",
+      "target_pixel_motion_before": 0.9991,
+      "target_pixel_motion_after": null
+     },
+     {
+      "pair": "4.153->5.23",
+      "target_pixel_motion_before": 0.9937,
+      "target_pixel_motion_after": null
+     }
+    ],
+    "target_pixel_motion_before_max": 1.0859,
+    "target_pixel_motion_after_max": 0.0
+   },
+   "geometry_evidence": {
+    "frames_used": [
+     0.923,
+     2.0,
+     3.077,
+     4.153,
+     5.23
+    ],
+    "direction_action": "RETRACT",
+    "state_progress": "PROGRESSION_DOWN",
+    "geometry_change_present": true,
+    "relative_motion_present": true,
+    "confidence_class": "UNSTABLE_CAMERA",
+    "reason_codes": [
+     "GEOMETRY_MONOTONIC_DOWN",
+     "CAMERA_UNRELIABLE"
+    ],
+    "visibility_progression": "VISIBLE_ALL",
+    "robust_stats": {
+     "median_area": 1385615,
+     "mad_ratio": 0.2642,
+     "first_last_change_ratio": -1.4259,
+     "reversal_count": 0,
+     "monotonicity_score": 1.0,
+     "pair_max_frac": 0.7008,
+     "grow_factor": 0.24,
+     "center_drift_norm": 0.0638,
+     "net_geometry_change": 1.4259,
+     "direction_consistency": "HIGH"
+    },
+    "abs_seq": [
+     2599350,
+     1628362,
+     1385615,
+     1019524,
+     623616
+    ],
+    "area_jitter_class": "down"
+   },
+   "temporal_mandatory_gates": {
+    "target_object_visible": "PASS",
+    "target_object_motion": "FAIL",
+    "opposite_absent": "PASS",
+    "direction": "UNSURE",
+    "state_transition": "UNSURE"
+   },
+   "reason_codes": [
+    "CAMERA_UNRELIABLE_GEOMETRY_UNSTABLE"
+   ],
+   "machine_verdict": "UNSURE"
+  }
+ ]
+}

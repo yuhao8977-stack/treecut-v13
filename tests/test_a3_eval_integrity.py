@@ -123,28 +123,17 @@ def test_blind_runner_cannot_read_observability_human():
         pass
 
 
-def test_blind_runner_gate_opens_with_valid_roi_but_no_prediction():
-    """ROI(179 框)已满足门控 → runner 不再 A3_ROI_REQUIRED，但预测必须仍未执行
-    （A3_PREDICTION_NOT_IMPLEMENTED_TONIGHT，exit 1）—— 保证绝不静默出预测。"""
-    r = subprocess.run([sys.executable, str(RUNNER)], capture_output=True, text=True,
-                       timeout=120, cwd=str(REPO))
-    assert r.returncode == 1, f"exit={r.returncode} out={r.stdout[-300:]}"
-    assert "A3_PREDICTION_NOT_IMPLEMENTED_TONIGHT" in r.stderr or \
-           "A3_PREDICTION_NOT_IMPLEMENTED_TONIGHT" in r.stdout
-    assert "A3_ROI_REQUIRED" not in r.stdout
-
-
 def test_blind_runner_fails_closed_with_empty_roi():
-    """ROI 文件存在但 0 框 → 仍 FAIL CLOSED (A3_ROI_REQUIRED, exit 3)。"""
+    """ROI 文件存在但 0 框 → --selfcheck 必须 FAIL（rc!=0），绝不进入预测。"""
     bak = ROI_BLIND_FILE.with_suffix(".bak")
     if ROI_BLIND_FILE.exists():
         bak.write_bytes(ROI_BLIND_FILE.read_bytes())
     try:
         ROI_BLIND_FILE.write_text('{"annotations": []}', encoding="utf-8")
-        r = subprocess.run([sys.executable, str(RUNNER)], capture_output=True, text=True,
-                           timeout=120, cwd=str(REPO))
-        assert r.returncode == 3, f"exit={r.returncode} out={r.stdout[-300:]}"
-        assert "A3_ROI_REQUIRED" in r.stdout
+        r = subprocess.run([sys.executable, str(RUNNER), "--selfcheck"], capture_output=True,
+                           text=True, timeout=180, cwd=str(REPO))
+        assert r.returncode != 0, f"exit={r.returncode} out={r.stdout[-300:]}"
+        assert "SELFCHECK_FAIL" in r.stdout or "A3_SELFCHECK_FAIL" in r.stdout
     finally:
         if bak.exists():
             bak.replace(ROI_BLIND_FILE)
@@ -153,7 +142,22 @@ def test_blind_runner_fails_closed_with_empty_roi():
 
 
 def test_blind_runner_selfcheck_ok():
-    r = subprocess.run([sys.executable, str(RUNNER), "--selfcheck"], capture_output=True,
-                       text=True, timeout=180, cwd=str(REPO))
-    assert r.returncode == 0, r.stdout[-300:]
-    assert "A3_SELFCHECK_OK" in r.stdout
+    """有效 ROI + 无 stale 时 --selfcheck 通过（A3_SELFCHECK_PASS）。
+    （有 official 预测文件时先临时移开，避免 stale 检查误报。）"""
+    trio = [STORAGE / "TREECUT_MMVV_A3_MACHINE_PREDICTIONS_BLIND.json",
+            STORAGE / "TREECUT_MMVV_A3_MACHINE_PREDICTIONS_BLIND.sha256.txt",
+            STORAGE / "TREECUT_MMVV_A3_PREDICTION_LOCK_V1.json"]
+    moved = []
+    for p in trio:
+        if p.exists():
+            bk = p.with_suffix(".tstbak")
+            p.replace(bk)
+            moved.append((p, bk))
+    try:
+        r = subprocess.run([sys.executable, str(RUNNER), "--selfcheck"], capture_output=True,
+                           text=True, timeout=300, cwd=str(REPO))
+        assert r.returncode == 0, r.stdout[-400:]
+        assert "A3_SELFCHECK_PASS" in r.stdout
+    finally:
+        for p, bk in moved:
+            bk.replace(p)

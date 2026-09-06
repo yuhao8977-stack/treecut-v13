@@ -1,0 +1,10 @@
+{
+ "experiment": "A3_PREDICTION_LOCK_V1",
+ "prediction_sha256": "78dc777cced59e7f447917521ea342706fcdc584c941b4dfeb5005ca7c2eeb58",
+ "prediction_created_at": "2026-09-06 11:57:35",
+ "algorithm_freeze_commit": "ca34678",
+ "roi_sha256": "421d5a29c1390ae59bed02f14f745148f19f2c2381b43c740aaca3d85c30c1ca",
+ "blind_manifest_sha256": "6408d0a0025d6a69753a63451a6e00fa33a67f0be35128529866fbaa9bce3558",
+ "git_head_before_gt": "b0a3514",
+ "gt_opened": false
+}
