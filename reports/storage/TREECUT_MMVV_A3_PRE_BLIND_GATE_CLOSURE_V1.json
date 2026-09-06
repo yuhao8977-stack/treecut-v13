@@ -1,0 +1,27 @@
+{
+ "experiment": "A3_PRE_BLIND_GATE_CLOSURE_V1",
+ "closed_at": "2026-09-06 11:44:57",
+ "roi": {
+  "file": "TREECUT_MMVV_A3_HUMAN_GT_ROI_BLIND.json",
+  "boxes": 179,
+  "sha256": "421d5a29c1390ae59bed02f14f745148f19f2c2381b43c740aaca3d85c30c1ca",
+  "coverage": "30/30",
+  "note": "冻结，不再改动"
+ },
+ "observability": {
+  "file": "TREECUT_MMVV_A3_OBSERVABILITY_HUMAN_V1.json",
+  "sha256": "c7b508268a81467fd9e2f36569fb07461311f367fe7b8fd2c918965a7f1c9b97",
+  "done": 6,
+  "labels": [
+   "ACTION_PROCESS_VISIBLE",
+   "ACTION_PROCESS_VISIBLE",
+   "ACTION_PROCESS_VISIBLE",
+   "ACTION_PROCESS_VISIBLE",
+   "ACTION_PROCESS_VISIBLE",
+   "ACTION_PROCESS_VISIBLE"
+  ],
+  "reviewed_at": "2026-09-06 11:42:56",
+  "human_confirmed": "每案例均有清晰连续位移(架构师 2026-09-06 目视确认)"
+ },
+ "pending": "A3 BLIND PREDICTION & SCORING(等架构师最终执行指令; 预测前不改任何门控输入)"
+}

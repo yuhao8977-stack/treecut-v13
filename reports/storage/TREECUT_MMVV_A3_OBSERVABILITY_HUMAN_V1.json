@@ -1,0 +1,50 @@
+{
+ "experiment": "MMVV_A3_OBSERVABILITY_HUMAN_V1",
+ "review_version": "V1",
+ "reviewed_at": "2026-09-06 11:42:56",
+ "answers": [
+  {
+   "opaque_case_id": "H001",
+   "observability_label": "ACTION_PROCESS_VISIBLE",
+   "human_note": "",
+   "reviewed_at": "2026-09-06 11:42:56",
+   "review_version": "V1"
+  },
+  {
+   "opaque_case_id": "H002",
+   "observability_label": "ACTION_PROCESS_VISIBLE",
+   "human_note": "",
+   "reviewed_at": "2026-09-06 11:42:56",
+   "review_version": "V1"
+  },
+  {
+   "opaque_case_id": "H003",
+   "observability_label": "ACTION_PROCESS_VISIBLE",
+   "human_note": "",
+   "reviewed_at": "2026-09-06 11:42:56",
+   "review_version": "V1"
+  },
+  {
+   "opaque_case_id": "H004",
+   "observability_label": "ACTION_PROCESS_VISIBLE",
+   "human_note": "",
+   "reviewed_at": "2026-09-06 11:42:56",
+   "review_version": "V1"
+  },
+  {
+   "opaque_case_id": "H005",
+   "observability_label": "ACTION_PROCESS_VISIBLE",
+   "human_note": "",
+   "reviewed_at": "2026-09-06 11:42:56",
+   "review_version": "V1"
+  },
+  {
+   "opaque_case_id": "H006",
+   "observability_label": "ACTION_PROCESS_VISIBLE",
+   "human_note": "",
+   "reviewed_at": "2026-09-06 11:42:56",
+   "review_version": "V1"
+  }
+ ],
+ "done": 6
+}
