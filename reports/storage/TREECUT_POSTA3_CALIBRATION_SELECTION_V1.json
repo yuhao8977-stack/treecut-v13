@@ -1,0 +1,80 @@
+{
+ "experiment": "TREECUT_POSTA3_CALIBRATION_SELECTION_V1",
+ "generated_at": "2026-09-06 13:59:24",
+ "note": "由人工 ACTION GT 派生；RETRACT_DATA_INSUFFICIENT(无素材被判 RETRACT)已记录",
+ "gt_summary": {
+  "EXTEND": 9,
+  "NO_ACTION": 17,
+  "RETRACT": 0
+ },
+ "selected_EXTEND": [
+  27433,
+  12095,
+  3571,
+  11592
+ ],
+ "selected_NO_ACTION": [
+  2212,
+  1641,
+  10000,
+  2543
+ ],
+ "cases": [
+  {
+   "media_id": 27433,
+   "role": "POS",
+   "bucket": "RETRACT",
+   "family": "小王",
+   "duration_s": 20.7
+  },
+  {
+   "media_id": 12095,
+   "role": "POS",
+   "bucket": "RETRACT",
+   "family": "【037】【20250519】深圳泡茶台",
+   "duration_s": 14.83
+  },
+  {
+   "media_id": 3571,
+   "role": "POS",
+   "bucket": "RETRACT",
+   "family": "【141】【纯黑+北美黑胡桃】江苏徐先生【岛台总长两米4+伸缩60公分】",
+   "duration_s": 12.28
+  },
+  {
+   "media_id": 11592,
+   "role": "POS",
+   "bucket": "RETRACT",
+   "family": "【030】【20250518】南京魏小姐",
+   "duration_s": 12.28
+  },
+  {
+   "media_id": 2212,
+   "role": "NEG",
+   "bucket": "INTERFERENCE_LEG",
+   "family": "【41】【宝格丽+一诺纯黑+艾米利亚棕木纹】杭州沈小姐【岛台桌角做的是t字形岩板角设计】",
+   "duration_s": 3.67
+  },
+  {
+   "media_id": 1641,
+   "role": "NEG",
+   "bucket": "INTERFERENCE_SOCKET",
+   "family": "1月4日 (1)(2【63】【微水泥奶油白】郑州张先生【岛台配置了公牛轨道插座】",
+   "duration_s": 5.28
+  },
+  {
+   "media_id": 10000,
+   "role": "NEG",
+   "bucket": "STATIC",
+   "family": "12.8 产品视频拍摄（已整理）",
+   "duration_s": 5.12
+  },
+  {
+   "media_id": 2543,
+   "role": "NEG",
+   "bucket": "EXTEND",
+   "family": "【55】【纯白+黑北美胡桃木】 天津陈先生【岛台餐桌+50公分伸缩】【小狮子】【01】",
+   "duration_s": 3.43
+  }
+ ]
+}
