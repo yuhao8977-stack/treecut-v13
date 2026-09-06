@@ -36,6 +36,14 @@ P3_HTML = Path(__file__).parent / "posta3_review.html"
 P3_CANDS = OUT / "TREECUT_POSTA3_REVIEW_CANDIDATES_V1.json"
 P3_GT = OUT / "TREECUT_POSTA3_HUMAN_REVIEW_V1.json"
 P3_THUMBS_DIR = Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime\production_smoke\B007\mmv_posta3_frames") / "thumbs"
+# POST-A3 calibration10 ROI（第二轮人工）
+P3ROI_HTML = Path(__file__).parent / "posta3_roi.html"
+P3_MANIFEST10 = OUT / "TREECUT_POSTA3_CALIBRATION10_MANIFEST_V1.json"
+P3_ROI_FILE = OUT / "TREECUT_POSTA3_HUMAN_ROI_V1.json"
+P3_ROI50_DIR = Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime\production_smoke\B007\mmv_posta3_frames") / "roi50"
+P3_ROI_LABELS = {"TABLETOP", "EXTENSION_TABLETOP", "ISLAND_BODY", "PERSON", "HAND",
+                 "ROCK_TABLE_LEG", "ACRYLIC_TABLE_LEG", "TRACK_SOCKET", "SOCKET_MODULE",
+                 "DRAWER", "CABINET_DOOR", "SINK"}
 # Observability 人工判断允许枚举（内部英文，界面中文）
 OBS_LABELS = {"ACTION_PROCESS_VISIBLE", "ENDPOINTS_ONLY", "MOSTLY_STATIC", "UNCLEAR"}
 
@@ -246,6 +254,32 @@ class Handler(BaseHTTPRequestHandler):
             else:
                 self._send(404, b"posta3 html missing", "text/plain")
             return
+        if path == "/posta3/roi":
+            if P3ROI_HTML.exists():
+                self._send(200, P3ROI_HTML.read_bytes(), "text/html; charset=utf-8")
+            else:
+                self._send(404, b"posta3 roi html missing", "text/plain")
+            return
+        if path == "/api/posta3/manifest10":
+            if P3_MANIFEST10.exists():
+                self._send(200, P3_MANIFEST10.read_bytes(), "application/json; charset=utf-8")
+            else:
+                self._json({"error": "manifest10 未生成"})
+            return
+        if path == "/api/posta3/roi":
+            if P3_ROI_FILE.exists():
+                self._send(200, P3_ROI_FILE.read_bytes(), "application/json; charset=utf-8")
+            else:
+                self._json({"annotations": []})
+            return
+        if path.startswith("/posta3/roi-frames/"):
+            name = path.rsplit("/", 1)[-1]
+            fp = P3_ROI50_DIR / name
+            if fp.exists():
+                self._send(200, fp.read_bytes(), "image/jpeg")
+                return
+            self._send(404, b"roi frame missing", "text/plain")
+            return
         if path == "/api/posta3/candidates":
             if P3_CANDS.exists():
                 self._send(200, P3_CANDS.read_bytes(), "application/json; charset=utf-8")
@@ -445,6 +479,49 @@ class Handler(BaseHTTPRequestHandler):
                     "created_at": time.strftime("%Y-%m-%d %H:%M:%S"),
                     "annotation_version": "A3"})
             save_a3_rois(doc)
+            self._json({"ok": True, "saved": len(rois_in), "frame": frame["frame"]})
+            return
+        if self.path == "/api/posta3/roi/save":
+            try:
+                data = json.loads(body.decode("utf-8"))
+            except Exception:
+                self._json({"ok": False, "error": "bad json"}, 400)
+                return
+            mid = data.get("media_id")
+            t_s = data.get("frame_timestamp")
+            rois_in = data.get("rois") or []
+            man = json.loads(P3_MANIFEST10.read_text(encoding="utf-8"))
+            case = next((c for c in man["cases"] if c["media_id"] == mid), None)
+            frame = next((f for f in (case or {}).get("frames", []) if f["t_s"] == t_s), None)
+            if case is None or frame is None:
+                self._json({"ok": False, "error": "unknown manifest10 case/frame"}, 404)
+                return
+            doc = {"annotations": []}
+            if P3_ROI_FILE.exists():
+                doc = json.loads(P3_ROI_FILE.read_text(encoding="utf-8"))
+            doc["annotations"] = [a for a in doc.get("annotations", [])
+                                  if not (a["media_id"] == mid and a["frame_timestamp"] == t_s)]
+            w, h = frame["width"], frame["height"]
+            for r in rois_in:
+                obj = r.get("object_name")
+                if obj not in P3_ROI_LABELS:
+                    self._json({"ok": False, "error": f"对象不在允许集: {obj}"}, 400)
+                    return
+                bb = [float(v) for v in r.get("bbox_pixel", [])]
+                if not bbox_ok(bb, w, h):
+                    self._json({"ok": False, "error": f"bbox 越界: {bb}"}, 400)
+                    return
+                doc["annotations"].append({
+                    "media_id": mid, "frame_timestamp": t_s, "frame": frame["frame"],
+                    "frame_hash": frame["sha256"], "object_name": obj,
+                    "bbox_pixel": [int(v) for v in bb],
+                    "annotation_source": "L3_HUMAN_ROI",
+                    "created_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "annotation_version": "POSTA3_CALIBRATION10"})
+            doc["generated_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
+            tmp = P3_ROI_FILE.with_suffix(".tmp")
+            tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+            tmp.replace(P3_ROI_FILE)
             self._json({"ok": True, "saved": len(rois_in), "frame": frame["frame"]})
             return
         if self.path == "/api/posta3/verdict":
