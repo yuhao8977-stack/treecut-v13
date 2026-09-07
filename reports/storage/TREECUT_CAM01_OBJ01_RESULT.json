@@ -1,0 +1,33 @@
+{
+ "experiment": "CAM01_OBJ01_RESULT",
+ "generated_at": "2026-09-07 18:34:52",
+ "baselines": {
+  "v24r1": 12,
+  "gftt": 17,
+  "v26r1": 7,
+  "struct01": 0
+ },
+ "metrics": {
+  "pairs": 36,
+  "validation_eligible": 33,
+  "ANISOTROPIC_validated": 0,
+  "ISOTROPIC_validated": 0,
+  "OBJECT_BOX_MULTI": 0,
+  "OBJECT_BOX_SINGLE": 0,
+  "OBJECT_BOX_CONFLICT": 0,
+  "OBJECT_BOX_NO_ANCHOR": 36,
+  "object_box_union": 0,
+  "case_coverage_9": 0,
+  "states": {
+   "OBJECT_BOX_NO_ANCHOR": 33,
+   "OBJECT_ANCHOR_VALIDATION_INSUFFICIENT": 3
+  },
+  "pooled_sym_median": null,
+  "pooled_sym_p90": null,
+  "pooled_sym_p95": null
+ },
+ "improvement_class": "FAIL_OBJECT_BOX",
+ "SEMANTIC_BOX_ANCHOR_NOT_SUFFICIENT": true,
+ "NEXT_BLOCKER": "HIGHER_LEVEL_DENSE_OBJECT_CORRESPONDENCE",
+ "status": "FAIL_OBJECT_BOX"
+}

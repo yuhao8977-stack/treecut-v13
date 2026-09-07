@@ -1,0 +1,7 @@
+{
+ "experiment": "CAM01_OBJ01_STRUCT01_CORRECTIONS",
+ "CAM01_STRUCT01_DEFECT_CHAMFER_DT_01": "DT 方向修正：edge=0/背景≠0 → distanceTransform 输出到最近 edge",
+ "raw_coord": "不再 canonical*min(sx,sy)；预测/目标点真实映回 raw 后 Euclidean",
+ "zero_not_missing": "0 残差以 is not None 判定（不吞 0）",
+ "struct01_history_untouched": true
+}

@@ -1,0 +1,8 @@
+{
+ "canonical": 512,
+ "min_val_edge_px": 100,
+ "min_val_components": 3,
+ "sym_median_max_px": 3.0,
+ "sym_p90_max_px": 8.0,
+ "agree_px": 3.0
+}
