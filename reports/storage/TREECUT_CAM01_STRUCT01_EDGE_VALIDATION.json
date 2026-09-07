@@ -1,0 +1,17 @@
+{
+ "pairs": 36,
+ "EUCLIDEAN_validated": 0,
+ "AFFINE_validated": 0,
+ "STRUCT_MULTI_MODEL_CONSENSUS": 0,
+ "STRUCT_SINGLE": 0,
+ "STRUCT_CONFLICT": 0,
+ "STRUCT_NO_ANCHOR": 36,
+ "STRUCT_union": 0,
+ "case_coverage_9": 0,
+ "states": {
+  "STRUCT_NO_ANCHOR": 36
+ },
+ "pooled_sym_median": null,
+ "pooled_sym_p90": null,
+ "pooled_sym_p95": null
+}
