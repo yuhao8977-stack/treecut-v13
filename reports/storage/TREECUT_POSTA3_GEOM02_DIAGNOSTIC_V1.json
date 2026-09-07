@@ -1,0 +1,219 @@
+{
+ "experiment": "TREECUT_POSTA3_GEOM02_DIAGNOSTIC_V1",
+ "note": "raw 指标，无判定；POS 3 MOTION_VISIBLE 用于检验框内运动可见性",
+ "cases": [
+  {
+   "media_id": 27433,
+   "role": "POS",
+   "pairs": [
+    {
+     "pair": "3.106->7.246",
+     "in_box_diff": 0.4291,
+     "edge_centroid_drift_x": 0.21
+    },
+    {
+     "pair": "7.246->10.352",
+     "in_box_diff": 0.3237,
+     "edge_centroid_drift_x": 6.02
+    },
+    {
+     "pair": "10.352->13.458",
+     "in_box_diff": 0.5186,
+     "edge_centroid_drift_x": 18.55
+    },
+    {
+     "pair": "13.458->17.598",
+     "in_box_diff": 0.439,
+     "edge_centroid_drift_x": 13.31
+    }
+   ]
+  },
+  {
+   "media_id": 12095,
+   "role": "POS",
+   "pairs": [
+    {
+     "pair": "2.225->5.191",
+     "in_box_diff": 0.5786,
+     "edge_centroid_drift_x": -19.59
+    },
+    {
+     "pair": "5.191->7.416",
+     "in_box_diff": 0.552,
+     "edge_centroid_drift_x": 117.71
+    },
+    {
+     "pair": "7.416->9.64",
+     "in_box_diff": 0.8297,
+     "edge_centroid_drift_x": -130.71
+    },
+    {
+     "pair": "9.64->12.607",
+     "in_box_diff": 0.6356,
+     "edge_centroid_drift_x": -68.88
+    }
+   ]
+  },
+  {
+   "media_id": 3571,
+   "role": "POS",
+   "pairs": [
+    {
+     "pair": "1.842->4.299",
+     "in_box_diff": 1.2085,
+     "edge_centroid_drift_x": -127.18
+    },
+    {
+     "pair": "4.299->6.142",
+     "in_box_diff": 0.7865,
+     "edge_centroid_drift_x": 28.68
+    },
+    {
+     "pair": "6.142->7.984",
+     "in_box_diff": 0.9993,
+     "edge_centroid_drift_x": 87.28
+    },
+    {
+     "pair": "7.984->10.441",
+     "in_box_diff": 0.8298,
+     "edge_centroid_drift_x": 45.65
+    }
+   ]
+  },
+  {
+   "media_id": 21674,
+   "role": "POS",
+   "pairs": [
+    {
+     "pair": "2.803->4.004",
+     "in_box_diff": 1.0455,
+     "edge_centroid_drift_x": -147.91
+    },
+    {
+     "pair": "4.004->5.205",
+     "in_box_diff": 0.9031,
+     "edge_centroid_drift_x": -55.75
+    },
+    {
+     "pair": "5.205->6.807",
+     "in_box_diff": 0.8584,
+     "edge_centroid_drift_x": -118.42
+    }
+   ]
+  },
+  {
+   "media_id": 2212,
+   "role": "NEG",
+   "pairs": [
+    {
+     "pair": "0.55->1.283",
+     "in_box_diff": 0.4038,
+     "edge_centroid_drift_x": -11.38
+    },
+    {
+     "pair": "1.283->1.833",
+     "in_box_diff": 0.3246,
+     "edge_centroid_drift_x": -41.74
+    },
+    {
+     "pair": "1.833->2.383",
+     "in_box_diff": 0.3964,
+     "edge_centroid_drift_x": 21.71
+    },
+    {
+     "pair": "2.383->3.117",
+     "in_box_diff": 0.2472,
+     "edge_centroid_drift_x": -21.37
+    }
+   ]
+  },
+  {
+   "media_id": 1641,
+   "role": "NEG",
+   "pairs": [
+    {
+     "pair": "0.792->1.849",
+     "in_box_diff": 0.5824,
+     "edge_centroid_drift_x": -113.19
+    },
+    {
+     "pair": "1.849->2.642",
+     "in_box_diff": 0.4404,
+     "edge_centroid_drift_x": 79.51
+    },
+    {
+     "pair": "2.642->3.434",
+     "in_box_diff": 0.4108,
+     "edge_centroid_drift_x": 61.64
+    },
+    {
+     "pair": "3.434->4.491",
+     "in_box_diff": 0.5191,
+     "edge_centroid_drift_x": 81.0
+    }
+   ]
+  },
+  {
+   "media_id": 10000,
+   "role": "NEG",
+   "pairs": [
+    {
+     "pair": "0.768->1.793",
+     "in_box_diff": 0.7422,
+     "edge_centroid_drift_x": 61.67
+    },
+    {
+     "pair": "1.793->2.561",
+     "in_box_diff": 1.0723,
+     "edge_centroid_drift_x": 38.12
+    },
+    {
+     "pair": "2.561->3.329",
+     "in_box_diff": 1.5165,
+     "edge_centroid_drift_x": 161.05
+    },
+    {
+     "pair": "3.329->4.354",
+     "in_box_diff": 1.362,
+     "edge_centroid_drift_x": 92.73
+    }
+   ]
+  },
+  {
+   "media_id": 2543,
+   "role": "NEG",
+   "pairs": [
+    {
+     "pair": "0.515->1.202",
+     "in_box_diff": 0.8546,
+     "edge_centroid_drift_x": -51.2
+    },
+    {
+     "pair": "1.202->1.717",
+     "in_box_diff": 0.5389,
+     "edge_centroid_drift_x": 20.17
+    },
+    {
+     "pair": "1.717->2.232",
+     "in_box_diff": 0.4523,
+     "edge_centroid_drift_x": -11.71
+    },
+    {
+     "pair": "2.232->2.918",
+     "in_box_diff": 0.8676,
+     "edge_centroid_drift_x": 41.34
+    }
+   ]
+  },
+  {
+   "media_id": 9697,
+   "role": "NEG",
+   "pairs": []
+  },
+  {
+   "media_id": 25894,
+   "role": "NEG",
+   "pairs": []
+  }
+ ]
+}
