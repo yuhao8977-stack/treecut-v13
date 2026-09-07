@@ -1,0 +1,2382 @@
+{
+ "cases": [
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "gap_s": 4.14,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.511,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.512,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 8,
+    "segs_ok": 8,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 5.241,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.512
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 16,
+    "segs_ok": 16,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 5.353,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.51
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 33,
+    "segs_ok": 33,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 4.591,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.515
+   }
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "gap_s": 3.106,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 1.178,
+    "scene_diff_after": 0.341,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 1.156,
+    "scene_diff_after": 0.341,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 6,
+    "segs_ok": 6,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.214,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.342
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 12,
+    "segs_ok": 12,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.246,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.343
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 24,
+    "segs_ok": 24,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.184,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.342
+   }
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "gap_s": 3.106,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 0.807,
+    "scene_diff_after": 0.47,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 0.761,
+    "scene_diff_after": 0.47,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 6,
+    "segs_ok": 6,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 3.176,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.507
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 12,
+    "segs_ok": 12,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 3.253,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.509
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 24,
+    "segs_ok": 24,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 3.233,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.508
+   }
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "gap_s": 4.14,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.803,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.799,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 5,
+    "segs_ok": 4,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 16,
+    "segs_ok": 16,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 18.014,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.761
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 33,
+    "segs_ok": 33,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 12.162,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.788
+   }
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "gap_s": 2.966,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.72,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": "translation",
+    "residual_median_px": 4.525,
+    "scene_diff_after": 0.715,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 5,
+    "segs_ok": 5,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 6.515,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.773
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 11,
+    "segs_ok": 11,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 5.06,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.732
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 23,
+    "segs_ok": 23,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 4.328,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.72
+   }
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "gap_s": 2.225,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 1.293,
+    "scene_diff_after": 0.424,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 1.147,
+    "scene_diff_after": 0.429,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 4,
+    "segs_ok": 4,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 2.676,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.487
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 8,
+    "segs_ok": 8,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 2.768,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.489
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 17,
+    "segs_ok": 17,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.624,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.447
+   }
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "gap_s": 2.224,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 0.709,
+    "scene_diff_after": 0.503,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 0.729,
+    "scene_diff_after": 0.505,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 4,
+    "segs_ok": 4,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 3.473,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.567
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 8,
+    "segs_ok": 8,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 3.531,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.572
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 17,
+    "segs_ok": 17,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.77,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.536
+   }
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "gap_s": 2.967,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 1.47,
+    "scene_diff_after": 0.41,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 1.286,
+    "scene_diff_after": 0.412,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 5,
+    "segs_ok": 5,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 2.119,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.438
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 11,
+    "segs_ok": 11,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.492,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.415
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 23,
+    "segs_ok": 23,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.221,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.413
+   }
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "gap_s": 2.457,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 4,
+    "segs_ok": 4,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 113.827,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 1.037
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 9,
+    "segs_ok": 9,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 118.983,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.994
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 19,
+    "segs_ok": 19,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 122.614,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.983
+   }
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "gap_s": 1.843,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": "translation",
+    "residual_median_px": 3.269,
+    "scene_diff_after": 0.437,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": "translation",
+    "residual_median_px": 3.26,
+    "scene_diff_after": 0.437,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 3,
+    "segs_ok": 3,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 7.339,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.484
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 7,
+    "segs_ok": 7,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 3.297,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.437
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 14,
+    "segs_ok": 14,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 3.203,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.437
+   }
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "gap_s": 1.842,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": "translation",
+    "residual_median_px": 3.02,
+    "scene_diff_after": 0.507,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 2.538,
+    "scene_diff_after": 0.512,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 3,
+    "segs_ok": 3,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 11.544,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.617
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 7,
+    "segs_ok": 7,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 4.528,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.523
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 14,
+    "segs_ok": 14,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 4.588,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.525
+   }
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "gap_s": 2.457,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": "translation",
+    "residual_median_px": 5.926,
+    "scene_diff_after": 0.55,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.549,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 4,
+    "segs_ok": 4,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 13.008,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.696
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 9,
+    "segs_ok": 9,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 8.549,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.628
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 19,
+    "segs_ok": 19,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 5.84,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.568
+   }
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "gap_s": 1.602,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 1.228,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 1.234,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 12,
+    "segs_ok": 12,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 30.315,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 1.243
+   }
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "gap_s": 1.201,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 1.035,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 1.054,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   }
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "gap_s": 1.201,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 1.156,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 1.144,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 9,
+    "segs_ok": 9,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 34.317,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 1.174
+   }
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "gap_s": 1.602,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 12,
+    "segs_ok": 12,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 50.127,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 1.158
+   }
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "0.55->1.283",
+   "gap_s": 0.733,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.677,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.59,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 5,
+    "segs_ok": 5,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 16.302,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.715
+   }
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.283->1.833",
+   "gap_s": 0.55,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.61,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.578,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   }
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.833->2.383",
+   "gap_s": 0.55,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "full_affine",
+    "residual_median_px": 1.407,
+    "scene_diff_after": 0.426,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.609,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   }
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "2.383->3.117",
+   "gap_s": 0.734,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.712,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.714,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "partial_affine",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 5,
+    "segs_ok": 5,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 14.028,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.7
+   }
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "gap_s": 1.057,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.831,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.826,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 8,
+    "segs_ok": 8,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 15.816,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.832
+   }
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "gap_s": 0.793,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.599,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.604,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 3,
+    "segs_ok": 2,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 6,
+    "segs_ok": 6,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 6.911,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.599
+   }
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "gap_s": 0.792,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.753,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.749,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 6,
+    "segs_ok": 6,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 15.62,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.698
+   }
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "gap_s": 1.057,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.777,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.775,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 8,
+    "segs_ok": 8,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 12.931,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.78
+   }
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "gap_s": 1.025,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 3,
+    "segs_ok": 2,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 8,
+    "segs_ok": 8,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 54.103,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.977
+   }
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "gap_s": 0.768,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 6,
+    "segs_ok": 6,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 82.886,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 1.067
+   }
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "gap_s": 0.768,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 3,
+    "segs_ok": 2,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   }
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "gap_s": 1.025,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": null,
+    "reason_codes": [
+     "FORWARD_BACKWARD_TRACKS_UNSTABLE"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   }
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "gap_s": 0.687,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.862,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.866,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 1,
+    "segs_ok": 0,
+    "seg_fail": 1,
+    "models": [
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   }
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "gap_s": 0.515,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 1.841,
+    "scene_diff_after": 0.315,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 2.346,
+    "scene_diff_after": 0.316,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 2,
+    "segs_ok": 2,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.429,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.32
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 4,
+    "segs_ok": 4,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.639,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.32
+   }
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "gap_s": 0.515,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.559,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.56,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 2,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 4.732,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.558
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 4,
+    "segs_ok": 4,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 4.768,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.561
+   }
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "gap_s": 0.686,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.761,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.763,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 2,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 7.383,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.844
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 5,
+    "segs_ok": 5,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 7.598,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.804
+   }
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "gap_s": 1.649,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.818,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.812,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 4,
+    "segs_ok": 3,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 13,
+    "segs_ok": 13,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 12.236,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.826
+   }
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "gap_s": 1.236,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 0.727,
+    "scene_diff_after": 0.394,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 0.752,
+    "scene_diff_after": 0.393,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 2,
+    "segs_ok": 2,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.35,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.391
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 4,
+    "segs_ok": 4,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.292,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.392
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 9,
+    "segs_ok": 9,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.379,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.393
+   }
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "gap_s": 1.236,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 0.478,
+    "scene_diff_after": 0.296,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 0.559,
+    "scene_diff_after": 0.296,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 2,
+    "segs_ok": 2,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.081,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.298
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 4,
+    "segs_ok": 4,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 1.067,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.297
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 9,
+    "segs_ok": 9,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 0.732,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.293
+   }
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "gap_s": 1.648,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 0.404,
+    "scene_diff_after": 0.165,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 0.501,
+    "scene_diff_after": 0.164,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "BRIDGE_500": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 3,
+    "segs_ok": 3,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 0.831,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.164
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 6,
+    "segs_ok": 6,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 0.865,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.164
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_RELIABLE",
+    "segments": 13,
+    "segs_ok": 13,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 0.437,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.165
+   }
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "gap_s": 0.958,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 2.336,
+    "scene_diff_after": 0.61,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.608,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 4,
+    "segs_ok": 3,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   }
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "gap_s": 0.718,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 2.755,
+    "scene_diff_after": 0.767,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.772,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 5,
+    "segs_ok": 4,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   }
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "gap_s": 0.718,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": "translation",
+    "residual_median_px": 3.003,
+    "scene_diff_after": 0.716,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.738,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 2,
+    "segs_ok": 1,
+    "seg_fail": 1,
+    "models": [
+     "translation",
+     null
+    ],
+    "composed_valid": false,
+    "residual_median_px": null,
+    "roundtrip_drift_px": null,
+    "scene_diff_after": null
+   }
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "gap_s": 0.958,
+   "SPARSE_DIRECT": {
+    "state": "CAMERA_RELIABLE",
+    "model": "translation",
+    "residual_median_px": 2.534,
+    "scene_diff_after": 0.49,
+    "reason_codes": [
+     "BACKGROUND_MASKED_CAMERA_OK"
+    ]
+   },
+   "FULL_FRAME_DIRECT": {
+    "state": "CAMERA_UNRELIABLE",
+    "model": null,
+    "residual_median_px": null,
+    "scene_diff_after": 0.534,
+    "reason_codes": [
+     "NO_RELIABLE_CAMERA_MODEL"
+    ]
+   },
+   "BRIDGE_500": {
+    "skipped": true
+   },
+   "BRIDGE_250": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 3,
+    "segs_ok": 3,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 6.794,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.567
+   },
+   "BRIDGE_125": {
+    "state": "CAMERA_UNRELIABLE",
+    "segments": 7,
+    "segs_ok": 7,
+    "seg_fail": 0,
+    "models": [
+     "translation"
+    ],
+    "composed_valid": true,
+    "residual_median_px": 6.225,
+    "roundtrip_drift_px": 0.0,
+    "scene_diff_after": 0.553
+   }
+  }
+ ]
+}

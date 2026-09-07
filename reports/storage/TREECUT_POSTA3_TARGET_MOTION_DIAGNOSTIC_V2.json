@@ -1,0 +1,41 @@
+{
+ "experiment": "TARGET_MOTION_DIAGNOSTIC_V2",
+ "rows": [
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "target_pixel_diff_before": 0.3146,
+   "note": "after 需可靠矩阵，单跑时补"
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "target_pixel_diff_before": 0.5166,
+   "note": "after 需可靠矩阵，单跑时补"
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "target_pixel_diff_before": 0.7715,
+   "note": "after 需可靠矩阵，单跑时补"
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "target_pixel_diff_before": 0.713,
+   "note": "after 需可靠矩阵，单跑时补"
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "target_pixel_diff_before": 0.5807,
+   "note": "after 需可靠矩阵，单跑时补"
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "target_pixel_diff_before": 0.7642,
+   "note": "after 需可靠矩阵，单跑时补"
+  }
+ ]
+}

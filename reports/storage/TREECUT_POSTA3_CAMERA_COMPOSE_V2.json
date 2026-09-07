@@ -1,0 +1,86 @@
+{
+ "experiment": "TREECUT_POSTA3_CAMERA_COMPOSE_V2",
+ "generated_at": "2026-09-07 14:17:08",
+ "note": "真 3x3 compose；可靠性=段全 ok+残差≤3+scene≤1.6；漂移=round-trip 中位；与动作 GT 无关",
+ "summary": {
+  "SPARSE_DIRECT": {
+   "pairs": 40,
+   "reliable": 13,
+   "reliable_pct": 32.5,
+   "median_residual": 1.47,
+   "p90_residual": 3.119,
+   "median_drift": null,
+   "p90_drift": null,
+   "scene_discontinuity": 0,
+   "top_failures": {
+    "['NO_RELIABLE_CAMERA_MODEL']": 17,
+    "['FORWARD_BACKWARD_TRACKS_UNSTABLE']": 6,
+    "['BACKGROUND_MASKED_CAMERA_OK']": 4
+   }
+  },
+  "FULL_FRAME_DIRECT": {
+   "pairs": 40,
+   "reliable": 10,
+   "reliable_pct": 25.0,
+   "median_residual": 1.152,
+   "p90_residual": 3.188,
+   "median_drift": null,
+   "p90_drift": null,
+   "scene_discontinuity": 0,
+   "top_failures": {
+    "['NO_RELIABLE_CAMERA_MODEL']": 22,
+    "['FORWARD_BACKWARD_TRACKS_UNSTABLE']": 6,
+    "['BACKGROUND_MASKED_CAMERA_OK']": 2
+   }
+  },
+  "BRIDGE_500": {
+   "pairs": 24,
+   "reliable": 6,
+   "reliable_pct": 25.0,
+   "median_residual": 3.324,
+   "p90_residual": 12.569,
+   "median_drift": 0.0,
+   "p90_drift": 0.0,
+   "scene_discontinuity": 0,
+   "top_failures": {
+    "seg_fail=1": 10,
+    "seg_fail=0": 8
+   }
+  },
+  "BRIDGE_250": {
+   "pairs": 40,
+   "reliable": 7,
+   "reliable_pct": 17.5,
+   "median_residual": 3.531,
+   "p90_residual": 10.442,
+   "median_drift": 0.0,
+   "p90_drift": 0.0,
+   "scene_discontinuity": 0,
+   "top_failures": {
+    "seg_fail=1": 21,
+    "seg_fail=0": 12
+   }
+  },
+  "BRIDGE_125": {
+   "pairs": 40,
+   "reliable": 8,
+   "reliable_pct": 20.0,
+   "median_residual": 6.225,
+   "p90_residual": 50.127,
+   "median_drift": 0.0,
+   "p90_drift": 0.0,
+   "scene_discontinuity": 0,
+   "top_failures": {
+    "seg_fail=0": 23,
+    "seg_fail=1": 9
+   }
+  }
+ },
+ "best_method": "SPARSE_DIRECT",
+ "CAM01_STATUS": "CAM01_PARTIAL_NEEDS_REDESIGN",
+ "LEAF_ROI_DECISION": "LEAF_ROI_DEFERRED_CAMERA_BLOCKED",
+ "target_motion_diag_pos": {
+  "count": 6,
+  "mean_before": 0.6101
+ }
+}
