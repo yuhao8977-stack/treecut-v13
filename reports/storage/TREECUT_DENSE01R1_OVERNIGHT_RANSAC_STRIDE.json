@@ -1,0 +1,312 @@
+{
+ "rows": [
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "s0": 1.0637,
+   "s1": 1.0278,
+   "ransac_thr_raw_px": 13.622,
+   "patch_raw_px0": 13.162,
+   "patch_raw_px1": 13.621
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "s0": 1.0278,
+   "s1": 1.0237,
+   "ransac_thr_raw_px": 13.676,
+   "patch_raw_px0": 13.621,
+   "patch_raw_px1": 13.676
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "s0": 1.0237,
+   "s1": 1.0117,
+   "ransac_thr_raw_px": 13.838,
+   "patch_raw_px0": 13.676,
+   "patch_raw_px1": 13.838
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "s0": 1.0117,
+   "s1": 1.0137,
+   "ransac_thr_raw_px": 13.838,
+   "patch_raw_px0": 13.838,
+   "patch_raw_px1": 13.811
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "s0": 1.1435,
+   "s1": 1.1991,
+   "ransac_thr_raw_px": 12.243,
+   "patch_raw_px0": 12.243,
+   "patch_raw_px1": 11.675
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "s0": 1.1991,
+   "s1": 1.2188,
+   "ransac_thr_raw_px": 11.676,
+   "patch_raw_px0": 11.675,
+   "patch_raw_px1": 11.487
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "s0": 1.2188,
+   "s1": 1.2047,
+   "ransac_thr_raw_px": 11.622,
+   "patch_raw_px0": 11.487,
+   "patch_raw_px1": 11.621
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "s0": 1.2047,
+   "s1": 1.1435,
+   "ransac_thr_raw_px": 12.243,
+   "patch_raw_px0": 11.621,
+   "patch_raw_px1": 12.243
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "s0": 1.0157,
+   "s1": 1.0402,
+   "ransac_thr_raw_px": 13.784,
+   "patch_raw_px0": 13.784,
+   "patch_raw_px1": 13.459
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "s0": 1.0402,
+   "s1": 1.0528,
+   "ransac_thr_raw_px": 13.459,
+   "patch_raw_px0": 13.459,
+   "patch_raw_px1": 13.298
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "s0": 1.0528,
+   "s1": 1.0465,
+   "ransac_thr_raw_px": 13.378,
+   "patch_raw_px0": 13.298,
+   "patch_raw_px1": 13.378
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "s0": 1.0465,
+   "s1": 1.1092,
+   "ransac_thr_raw_px": 13.378,
+   "patch_raw_px0": 13.378,
+   "patch_raw_px1": 12.622
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "s0": 1.0381,
+   "s1": 1.2482,
+   "ransac_thr_raw_px": 13.486,
+   "patch_raw_px0": 13.486,
+   "patch_raw_px1": 11.216
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "s0": 1.2482,
+   "s1": 0.7286,
+   "ransac_thr_raw_px": 19.216,
+   "patch_raw_px0": 11.216,
+   "patch_raw_px1": 19.215
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "s0": 0.7286,
+   "s1": 0.9136,
+   "ransac_thr_raw_px": 19.216,
+   "patch_raw_px0": 19.215,
+   "patch_raw_px1": 15.324
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "s0": 0.9136,
+   "s1": 1.2392,
+   "ransac_thr_raw_px": 15.324,
+   "patch_raw_px0": 15.324,
+   "patch_raw_px1": 11.298
+  },
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "s0": 1.055,
+   "s1": 0.9267,
+   "ransac_thr_raw_px": 15.108,
+   "patch_raw_px0": 13.27,
+   "patch_raw_px1": 15.107
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "s0": 0.9267,
+   "s1": 1.0814,
+   "ransac_thr_raw_px": 15.108,
+   "patch_raw_px0": 15.107,
+   "patch_raw_px1": 12.946
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "s0": 1.0814,
+   "s1": 1.2573,
+   "ransac_thr_raw_px": 12.946,
+   "patch_raw_px0": 12.946,
+   "patch_raw_px1": 11.135
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "s0": 1.2573,
+   "s1": 1.2603,
+   "ransac_thr_raw_px": 11.135,
+   "patch_raw_px0": 11.135,
+   "patch_raw_px1": 11.108
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "s0": 0.9981,
+   "s1": 0.9024,
+   "ransac_thr_raw_px": 15.514,
+   "patch_raw_px0": 14.027,
+   "patch_raw_px1": 15.514
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "s0": 0.9024,
+   "s1": 0.772,
+   "ransac_thr_raw_px": 18.135,
+   "patch_raw_px0": 15.514,
+   "patch_raw_px1": 18.135
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "s0": 0.772,
+   "s1": 0.6745,
+   "ransac_thr_raw_px": 20.757,
+   "patch_raw_px0": 18.135,
+   "patch_raw_px1": 20.756
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "s0": 0.6745,
+   "s1": 1.18,
+   "ransac_thr_raw_px": 20.757,
+   "patch_raw_px0": 20.756,
+   "patch_raw_px1": 11.864
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "s0": 0.9885,
+   "s1": 1.2019,
+   "ransac_thr_raw_px": 14.162,
+   "patch_raw_px0": 14.163,
+   "patch_raw_px1": 11.648
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "s0": 1.2019,
+   "s1": 1.2103,
+   "ransac_thr_raw_px": 11.649,
+   "patch_raw_px0": 11.648,
+   "patch_raw_px1": 11.567
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "s0": 1.2103,
+   "s1": 1.1588,
+   "ransac_thr_raw_px": 12.081,
+   "patch_raw_px0": 11.567,
+   "patch_raw_px1": 12.081
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "s0": 1.1588,
+   "s1": 1.0278,
+   "ransac_thr_raw_px": 13.622,
+   "patch_raw_px0": 12.081,
+   "patch_raw_px1": 13.621
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "s0": 0.4924,
+   "s1": 0.5264,
+   "ransac_thr_raw_px": 28.432,
+   "patch_raw_px0": 28.432,
+   "patch_raw_px1": 26.596
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "s0": 0.5264,
+   "s1": 0.5401,
+   "ransac_thr_raw_px": 26.595,
+   "patch_raw_px0": 26.596,
+   "patch_raw_px1": 25.921
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "s0": 0.5232,
+   "s1": 0.5238,
+   "ransac_thr_raw_px": 26.757,
+   "patch_raw_px0": 26.758,
+   "patch_raw_px1": 26.728
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "s0": 0.5238,
+   "s1": 0.4675,
+   "ransac_thr_raw_px": 29.946,
+   "patch_raw_px0": 26.728,
+   "patch_raw_px1": 29.947
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "s0": 0.4675,
+   "s1": 0.4485,
+   "ransac_thr_raw_px": 31.216,
+   "patch_raw_px0": 29.947,
+   "patch_raw_px1": 31.215
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "s0": 0.4485,
+   "s1": 0.4688,
+   "ransac_thr_raw_px": 31.216,
+   "patch_raw_px0": 31.215,
+   "patch_raw_px1": 29.863
+  }
+ ],
+ "unit_raw_px": true,
+ "thr_equals_max_patch_over_scale": false
+}

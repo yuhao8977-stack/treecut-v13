@@ -1,0 +1,10 @@
+{
+ "DINO_LK_fold_causes": {
+  "MED_AND_P90_FAIL": 50,
+  "HOLDOUT_P90_FAIL_ONLY": 24,
+  "VALIDATED": 10,
+  "NO_MODEL_OR_REASON": 20,
+  "INSUFFICIENT": 16,
+  "LOW_INLIER": 4
+ }
+}

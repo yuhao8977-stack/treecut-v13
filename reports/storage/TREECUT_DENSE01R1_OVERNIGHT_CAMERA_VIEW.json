@@ -1,0 +1,292 @@
+{
+ "per_pair": [
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "bbox_center_disp_raw": 22.02,
+   "size_ratio": 0.945,
+   "aspect_change": 0.116,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "bbox_center_disp_raw": 3.91,
+   "size_ratio": 1.047,
+   "aspect_change": 0.038,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "bbox_center_disp_raw": 17.22,
+   "size_ratio": 0.946,
+   "aspect_change": 0.073,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "bbox_center_disp_raw": 42.24,
+   "size_ratio": 0.989,
+   "aspect_change": 0.011,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "bbox_center_disp_raw": 90.59,
+   "size_ratio": 0.935,
+   "aspect_change": 0.028,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "bbox_center_disp_raw": 31.02,
+   "size_ratio": 0.944,
+   "aspect_change": 0.022,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "bbox_center_disp_raw": 10.51,
+   "size_ratio": 1.059,
+   "aspect_change": 0.034,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "bbox_center_disp_raw": 10.97,
+   "size_ratio": 1.05,
+   "aspect_change": 0.051,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "bbox_center_disp_raw": 54.97,
+   "size_ratio": 1.238,
+   "aspect_change": 0.294,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "bbox_center_disp_raw": 40.33,
+   "size_ratio": 1.117,
+   "aspect_change": 0.148,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "bbox_center_disp_raw": 21.02,
+   "size_ratio": 0.824,
+   "aspect_change": 0.186,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "bbox_center_disp_raw": 21.91,
+   "size_ratio": 1.027,
+   "aspect_change": 0.157,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "bbox_center_disp_raw": 306.45,
+   "size_ratio": 0.736,
+   "aspect_change": 0.116,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "bbox_center_disp_raw": 130.0,
+   "size_ratio": 1.8,
+   "aspect_change": 0.416,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "bbox_center_disp_raw": 111.03,
+   "size_ratio": 0.666,
+   "aspect_change": 0.045,
+   "state": "DENSE_SUPPORT_TOO_LOCALIZED"
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "bbox_center_disp_raw": 99.37,
+   "size_ratio": 0.726,
+   "aspect_change": 0.342,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "bbox_center_disp_raw": 59.72,
+   "size_ratio": 1.206,
+   "aspect_change": 0.076,
+   "state": "DENSE_SUPPORT_TOO_LOCALIZED"
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "bbox_center_disp_raw": 77.2,
+   "size_ratio": 0.841,
+   "aspect_change": 0.125,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "bbox_center_disp_raw": 82.73,
+   "size_ratio": 0.727,
+   "aspect_change": 0.131,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "bbox_center_disp_raw": 60.6,
+   "size_ratio": 0.859,
+   "aspect_change": 0.138,
+   "state": "DENSE_SUPPORT_TOO_LOCALIZED"
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "bbox_center_disp_raw": 47.21,
+   "size_ratio": 1.227,
+   "aspect_change": 0.004,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "bbox_center_disp_raw": 65.79,
+   "size_ratio": 1.08,
+   "aspect_change": 0.211,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "bbox_center_disp_raw": 61.2,
+   "size_ratio": 0.939,
+   "aspect_change": 0.284,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "bbox_center_disp_raw": 224.23,
+   "size_ratio": 0.381,
+   "aspect_change": 0.167,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "bbox_center_disp_raw": 85.68,
+   "size_ratio": 0.818,
+   "aspect_change": 0.206,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "bbox_center_disp_raw": 2.5,
+   "size_ratio": 1.0,
+   "aspect_change": 0.014,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "bbox_center_disp_raw": 24.04,
+   "size_ratio": 1.074,
+   "aspect_change": 0.011,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "bbox_center_disp_raw": 63.52,
+   "size_ratio": 1.122,
+   "aspect_change": 0.12,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "bbox_center_disp_raw": 125.36,
+   "size_ratio": 0.671,
+   "aspect_change": 0.184,
+   "state": "DENSE_MATCH_INSUFFICIENT"
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "bbox_center_disp_raw": 22.09,
+   "size_ratio": 0.971,
+   "aspect_change": 0.085,
+   "state": "DENSE_MATCH_INSUFFICIENT"
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "bbox_center_disp_raw": 47.52,
+   "size_ratio": 0.904,
+   "aspect_change": 0.032,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "bbox_center_disp_raw": 23.71,
+   "size_ratio": 0.969,
+   "aspect_change": 0.02,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "bbox_center_disp_raw": 50.48,
+   "size_ratio": 0.942,
+   "aspect_change": 0.055,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "bbox_center_disp_raw": 55.27,
+   "size_ratio": 1.13,
+   "aspect_change": 0.098,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "bbox_center_disp_raw": 14.32,
+   "size_ratio": 1.074,
+   "aspect_change": 0.013,
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "bbox_center_disp_raw": 57.76,
+   "size_ratio": 0.973,
+   "aspect_change": 0.063,
+   "state": "DENSE_NO_ANCHOR"
+  }
+ ]
+}

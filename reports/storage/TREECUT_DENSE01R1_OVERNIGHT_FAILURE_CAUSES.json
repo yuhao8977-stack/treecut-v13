@@ -1,0 +1,10 @@
+{
+ "cause_counts": {
+  "MED_AND_P90_FAIL": 141,
+  "HOLDOUT_P90_FAIL_ONLY": 24,
+  "LOW_INLIER": 37,
+  "HOLDOUT_PASS": 10,
+  "NO_MODEL": 24,
+  "INSUFFICIENT": 28
+ }
+}

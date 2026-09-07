@@ -1,0 +1,83 @@
+{
+ "experiment": "DENSE01R1_OVERNIGHT_TRACKER_LICENSE_RESEARCH",
+ "method": "GitHub API (license.spdx_id) + 官方 README/LICENSE 直读；未安装/未运行任何 tracker",
+ "verified_at": "2026-09-07",
+ "candidates": [
+  {
+   "name": "CoTracker3 (facebookresearch/co-tracker)",
+   "repo": "https://github.com/facebookresearch/co-tracker",
+   "code_license": "CC-BY-NC (官方 README: majority CC-BY-NC)",
+   "model_license": "CC-BY-NC (HuggingFace facebook/cotracker3 license: cc-by-nc-4.0)",
+   "commercial": "NO",
+   "status": "REFERENCE_ONLY_NONCOMMERCIAL",
+   "evidence": "https://github.com/facebookresearch/co-tracker README License section; https://huggingface.co/facebook/cotracker3 license: cc-by-nc-4.0",
+   "notes": "点跟踪 SOTA；不得作生产方案。其引用的 PIPs/MIT、TAP-Vid/LocoTrack/Apache-2.0 部分单独许可。"
+  },
+  {
+   "name": "TAPIR (google-deepmind/tapnet)",
+   "repo": "https://github.com/google-deepmind/tapnet",
+   "code_license": "Apache-2.0",
+   "model_license": "Apache-2.0 (repo LICENSE)",
+   "commercial": "YES",
+   "status": "COMMERCIAL_OK",
+   "evidence": "GitHub API license=Apache-2.0; LICENSE 文本 Apache License 2.0",
+   "notes": "Tracking Any Point；per-frame init + temporal refinement，语义对应 TAP-Vid 官方评估；PyTorch；checkpoints 在 HuggingFace google/tapnet。需求 GPU，visibility/confidence 输出。"
+  },
+  {
+   "name": "PIPs (aharley/pips)",
+   "repo": "https://github.com/aharley/pips",
+   "code_license": "MIT",
+   "model_license": "MIT (repo)",
+   "commercial": "YES",
+   "status": "COMMERCIAL_OK",
+   "evidence": "GitHub API license=MIT",
+   "notes": "persistent independent particles；较老（2022）；性能低于 CoTracker3/TAPIR。"
+  },
+  {
+   "name": "PIPs++ (aharley/pips2)",
+   "repo": "https://github.com/aharley/pips2",
+   "code_license": "MIT",
+   "model_license": "MIT",
+   "commercial": "YES",
+   "status": "COMMERCIAL_OK",
+   "evidence": "GitHub API license=MIT",
+   "notes": "PIPs++ improved persistent tracking。"
+  },
+  {
+   "name": "RAFT (princeton-vl/RAFT)",
+   "repo": "https://github.com/princeton-vl/RAFT",
+   "code_license": "BSD-3-Clause",
+   "model_license": "BSD-3-Clause (repo)",
+   "commercial": "YES",
+   "status": "COMMERCIAL_OK",
+   "evidence": "GitHub API license=BSD-3-Clause",
+   "notes": "稠密光流（非点跟踪）；两帧间 dense correspondence；可与语义 seed 结合；Apache-2.0 兼容。"
+  },
+  {
+   "name": "SEA-RAFT (princeton-vl/sea-raft)",
+   "repo": "https://github.com/princeton-vl/sea-raft",
+   "code_license": "BSD-3-Clause",
+   "model_license": "BSD-3-Clause",
+   "commercial": "YES",
+   "status": "COMMERCIAL_OK",
+   "evidence": "GitHub API license=BSD-3-Clause",
+   "notes": "新一代 RAFT；Efficient(速度) 与 Accurate 变体；稠密光流。"
+  },
+  {
+   "name": "LocoTrack (cvlab-kaist/locotrack)",
+   "repo": "https://github.com/cvlab-kaist/locotrack",
+   "code_license": "Apache-2.0",
+   "model_license": "Apache-2.0",
+   "commercial": "YES",
+   "status": "COMMERCIAL_OK",
+   "evidence": "GitHub API license=Apache-2.0",
+   "notes": "基于 CoTracker2 思想的局部一致点跟踪（无 OOM，稀疏可扩展）。"
+  }
+ ],
+ "verdict": {
+  "primary_commercial_candidate": "TAPIR (Apache-2.0)",
+  "dense_flow_alternative": "SEA-RAFT / RAFT (BSD-3-Clause)",
+  "cotracker3": "REFERENCE_ONLY_NONCOMMERCIAL — 不得生产",
+  "all_licenses_official": true
+ }
+}

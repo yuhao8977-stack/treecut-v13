@@ -1,0 +1,25 @@
+{
+ "taxonomy": {
+  "ACCEPTED": 1364,
+  "FWD_STATUS_FAIL": 958,
+  "DEST_OUTSIDE_ISLAND": 129,
+  "BWD_STATUS_FAIL": 70,
+  "DEST_DYNAMIC_CONTAM": 50
+ },
+ "accepted_total": 1364,
+ "fb_over_3_of_accepted": 361,
+ "fb_pooled": {
+  "n": 1364,
+  "median": 0.161,
+  "p90": 45.739,
+  "p95": 100.633,
+  "max": 806.551
+ },
+ "accepted_corr_mag": {
+  "n": 1364,
+  "median": 11.296,
+  "p90": 46.656,
+  "p95": 68.689,
+  "max": 253.649
+ }
+}

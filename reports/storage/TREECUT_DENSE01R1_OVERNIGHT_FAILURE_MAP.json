@@ -1,0 +1,2800 @@
+{
+ "rows": [
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 74,
+      "hold": 77,
+      "med": 8.016,
+      "p90": 30.626,
+      "inlier": 0.473
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 77,
+      "hold": 74,
+      "med": 10.149,
+      "p90": 37.669,
+      "inlier": 0.753
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 74,
+      "hold": 77,
+      "med": 24.125,
+      "p90": 90.174,
+      "inlier": 0.5
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 77,
+      "hold": 74,
+      "med": 13.189,
+      "p90": 39.991,
+      "inlier": 0.74
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 39,
+      "hold": 50,
+      "med": 5.696,
+      "p90": 19.205,
+      "inlier": 0.821
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 50,
+      "hold": 39,
+      "med": 4.557,
+      "p90": 15.054,
+      "inlier": 0.8
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 39,
+      "hold": 50,
+      "med": 11.734,
+      "p90": 31.095,
+      "inlier": 0.821
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 50,
+      "hold": 39,
+      "med": 5.092,
+      "p90": 16.433,
+      "inlier": 0.84
+     }
+    }
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 84,
+      "hold": 67,
+      "med": 8.637,
+      "p90": 31.997,
+      "inlier": 0.548
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 67,
+      "hold": 84,
+      "med": 7.967,
+      "p90": 33.997,
+      "inlier": 0.701
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 84,
+      "hold": 67,
+      "med": 18.585,
+      "p90": 51.892,
+      "inlier": 0.548
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 67,
+      "hold": 84,
+      "med": 13.138,
+      "p90": 29.354,
+      "inlier": 0.612
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 45,
+      "hold": 42,
+      "med": 2.485,
+      "p90": 8.906,
+      "inlier": 0.756
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 42,
+      "hold": 45,
+      "med": 2.01,
+      "p90": 29.119,
+      "inlier": 0.952
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 45,
+      "hold": 42,
+      "med": 2.813,
+      "p90": 8.155,
+      "inlier": 0.756
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 42,
+      "hold": 45,
+      "med": 2.13,
+      "p90": 29.192,
+      "inlier": 0.929
+     }
+    }
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 50,
+      "hold": 37,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 37,
+      "hold": 50,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 50,
+      "hold": 37,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 37,
+      "hold": 50,
+      "med": 22.441,
+      "p90": 42.805,
+      "inlier": 0.459
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 29,
+      "hold": 18,
+      "med": 4.621,
+      "p90": 29.571,
+      "inlier": 0.655
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 29,
+      "med": 15.046,
+      "p90": 23.813,
+      "inlier": 0.722
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 29,
+      "hold": 18,
+      "med": 12.733,
+      "p90": 27.859,
+      "inlier": 0.69
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 29,
+      "med": 7.072,
+      "p90": 29.821,
+      "inlier": 0.833
+     }
+    }
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 41,
+      "hold": 41,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 41,
+      "hold": 41,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 41,
+      "hold": 41,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 41,
+      "hold": 41,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 26,
+      "hold": 29,
+      "med": 4.124,
+      "p90": 41.918,
+      "inlier": 0.577
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 29,
+      "hold": 26,
+      "med": 18.261,
+      "p90": 49.145,
+      "inlier": 0.759
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 26,
+      "hold": 29,
+      "med": 74.013,
+      "p90": 135.745,
+      "inlier": 0.692
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 29,
+      "hold": 26,
+      "med": 14.929,
+      "p90": 40.842,
+      "inlier": 0.862
+     }
+    }
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 57,
+      "hold": 39,
+      "med": 8.88,
+      "p90": 22.243,
+      "inlier": 0.632
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 39,
+      "hold": 57,
+      "med": 13.808,
+      "p90": 30.996,
+      "inlier": 0.667
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 57,
+      "hold": 39,
+      "med": 9.849,
+      "p90": 22.65,
+      "inlier": 0.544
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 39,
+      "hold": 57,
+      "med": 16.277,
+      "p90": 30.249,
+      "inlier": 0.641
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 29,
+      "hold": 20,
+      "med": 3.047,
+      "p90": 11.805,
+      "inlier": 0.552
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 20,
+      "hold": 29,
+      "med": 7.067,
+      "p90": 48.261,
+      "inlier": 0.9
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 29,
+      "hold": 20,
+      "med": 5.447,
+      "p90": 19.814,
+      "inlier": 0.586
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 20,
+      "hold": 29,
+      "med": 21.938,
+      "p90": 65.569,
+      "inlier": 0.95
+     }
+    }
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 51,
+      "hold": 44,
+      "med": 10.773,
+      "p90": 39.016,
+      "inlier": 0.627
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 44,
+      "hold": 51,
+      "med": 7.814,
+      "p90": 21.747,
+      "inlier": 0.545
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 51,
+      "hold": 44,
+      "med": 15.023,
+      "p90": 43.764,
+      "inlier": 0.608
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 44,
+      "hold": 51,
+      "med": 16.608,
+      "p90": 34.214,
+      "inlier": 0.455
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 30,
+      "hold": 24,
+      "med": 1.996,
+      "p90": 99.337,
+      "inlier": 0.7
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 24,
+      "hold": 30,
+      "med": 5.195,
+      "p90": 44.619,
+      "inlier": 0.667
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 30,
+      "hold": 24,
+      "med": 8.522,
+      "p90": 99.277,
+      "inlier": 0.633
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 24,
+      "hold": 30,
+      "med": 18.581,
+      "p90": 46.958,
+      "inlier": 0.708
+     }
+    }
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 51,
+      "hold": 56,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 56,
+      "hold": 51,
+      "med": 10.577,
+      "p90": 38.836,
+      "inlier": 0.786
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 51,
+      "hold": 56,
+      "med": 9.138,
+      "p90": 23.245,
+      "inlier": 0.49
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 56,
+      "hold": 51,
+      "med": 14.539,
+      "p90": 34.248,
+      "inlier": 0.768
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 27,
+      "hold": 29,
+      "med": 17.272,
+      "p90": 22.061,
+      "inlier": 0.704
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 29,
+      "hold": 27,
+      "med": 19.865,
+      "p90": 68.036,
+      "inlier": 1.0
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 27,
+      "hold": 29,
+      "med": 6.847,
+      "p90": 11.533,
+      "inlier": 0.778
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 29,
+      "hold": 27,
+      "med": 18.557,
+      "p90": 67.232,
+      "inlier": 1.0
+     }
+    }
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 76,
+      "hold": 90,
+      "med": 8.22,
+      "p90": 45.115,
+      "inlier": 0.592
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 90,
+      "hold": 76,
+      "med": 8.023,
+      "p90": 31.208,
+      "inlier": 0.544
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 76,
+      "hold": 90,
+      "med": 8.754,
+      "p90": 41.034,
+      "inlier": 0.526
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 90,
+      "hold": 76,
+      "med": 7.855,
+      "p90": 28.567,
+      "inlier": 0.556
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 28,
+      "hold": 45,
+      "med": 15.078,
+      "p90": 37.741,
+      "inlier": 0.643
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 45,
+      "hold": 28,
+      "med": 4.542,
+      "p90": 55.763,
+      "inlier": 0.8
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 28,
+      "hold": 45,
+      "med": 4.678,
+      "p90": 33.95,
+      "inlier": 0.714
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 45,
+      "hold": 28,
+      "med": 4.026,
+      "p90": 57.235,
+      "inlier": 0.756
+     }
+    }
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 30,
+      "hold": 38,
+      "med": 19.458,
+      "p90": 60.638,
+      "inlier": 0.567
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 38,
+      "hold": 30,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 30,
+      "hold": 38,
+      "med": 33.378,
+      "p90": 58.292,
+      "inlier": 0.533
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 38,
+      "hold": 30,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 24,
+      "hold": 32,
+      "med": 3.12,
+      "p90": 18.954,
+      "inlier": 0.917
+     },
+     "fold1": {
+      "state": "VALIDATED",
+      "fit": 32,
+      "hold": 24,
+      "med": 2.667,
+      "p90": 7.781,
+      "inlier": 0.812
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 24,
+      "hold": 32,
+      "med": 2.518,
+      "p90": 17.919,
+      "inlier": 0.917
+     },
+     "fold1": {
+      "state": "VALIDATED",
+      "fit": 32,
+      "hold": 24,
+      "med": 1.337,
+      "p90": 4.299,
+      "inlier": 0.781
+     }
+    }
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 50,
+      "hold": 73,
+      "med": 13.25,
+      "p90": 32.315,
+      "inlier": 0.46
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 73,
+      "hold": 50,
+      "med": 11.911,
+      "p90": 26.048,
+      "inlier": 0.562
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 50,
+      "hold": 73,
+      "med": 17.512,
+      "p90": 33.232,
+      "inlier": 0.5
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 73,
+      "hold": 50,
+      "med": 12.533,
+      "p90": 29.493,
+      "inlier": 0.507
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 32,
+      "hold": 52,
+      "med": 1.898,
+      "p90": 19.99,
+      "inlier": 0.969
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 52,
+      "hold": 32,
+      "med": 0.833,
+      "p90": 8.464,
+      "inlier": 0.865
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 32,
+      "hold": 52,
+      "med": 3.338,
+      "p90": 19.688,
+      "inlier": 0.938
+     },
+     "fold1": {
+      "state": "VALIDATED",
+      "fit": 52,
+      "hold": 32,
+      "med": 1.055,
+      "p90": 7.821,
+      "inlier": 0.788
+     }
+    }
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 61,
+      "hold": 58,
+      "med": 11.406,
+      "p90": 40.783,
+      "inlier": 0.623
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 58,
+      "hold": 61,
+      "med": 8.618,
+      "p90": 25.103,
+      "inlier": 0.69
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 61,
+      "hold": 58,
+      "med": 11.154,
+      "p90": 41.404,
+      "inlier": 0.574
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 58,
+      "hold": 61,
+      "med": 10.339,
+      "p90": 26.87,
+      "inlier": 0.655
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 48,
+      "hold": 40,
+      "med": 2.421,
+      "p90": 22.895,
+      "inlier": 0.938
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 40,
+      "hold": 48,
+      "med": 1.373,
+      "p90": 9.886,
+      "inlier": 0.825
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 48,
+      "hold": 40,
+      "med": 3.323,
+      "p90": 23.975,
+      "inlier": 0.917
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 40,
+      "hold": 48,
+      "med": 1.37,
+      "p90": 9.768,
+      "inlier": 0.825
+     }
+    }
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 30,
+      "hold": 36,
+      "med": 16.612,
+      "p90": 27.176,
+      "inlier": 0.467
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 36,
+      "hold": 30,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 30,
+      "hold": 36,
+      "med": 17.521,
+      "p90": 32.468,
+      "inlier": 0.5
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 36,
+      "hold": 30,
+      "med": 20.062,
+      "p90": 38.684,
+      "inlier": 0.5
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "VALIDATED",
+      "fit": 21,
+      "hold": 18,
+      "med": 2.307,
+      "p90": 3.361,
+      "inlier": 0.905
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 21,
+      "med": 1.264,
+      "p90": 14.34,
+      "inlier": 1.0
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "VALIDATED",
+      "fit": 21,
+      "hold": 18,
+      "med": 2.2,
+      "p90": 4.158,
+      "inlier": 0.81
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 21,
+      "med": 1.393,
+      "p90": 14.264,
+      "inlier": 1.0
+     }
+    }
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 28,
+      "hold": 27,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 27,
+      "hold": 28,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 28,
+      "hold": 27,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 27,
+      "hold": 28,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 12,
+      "hold": 19,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 19,
+      "hold": 12,
+      "med": 31.13,
+      "p90": 95.002,
+      "inlier": 0.579
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 12,
+      "hold": 19,
+      "med": 37.856,
+      "p90": 64.367,
+      "inlier": 0.583
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 19,
+      "hold": 12,
+      "med": 32.753,
+      "p90": 96.314,
+      "inlier": 0.579
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "state": "DENSE_SUPPORT_TOO_LOCALIZED",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 7,
+      "hold": 17,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 17,
+      "hold": 7,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 7,
+      "hold": 17,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 17,
+      "hold": 7,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 23,
+      "med": 32.261,
+      "p90": 75.298,
+      "inlier": 0.647
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 23,
+      "hold": 17,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 23,
+      "med": 25.513,
+      "p90": 74.195,
+      "inlier": 0.706
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 23,
+      "hold": 17,
+      "med": 15.395,
+      "p90": 34.43,
+      "inlier": 0.522
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 7,
+      "hold": 12,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 12,
+      "hold": 7,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 7,
+      "hold": 12,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 12,
+      "hold": 7,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "state": "DENSE_SUPPORT_TOO_LOCALIZED",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 25,
+      "hold": 23,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 23,
+      "hold": 25,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 25,
+      "hold": 23,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 23,
+      "hold": 25,
+      "med": 29.111,
+      "p90": 63.719,
+      "inlier": 0.565
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 27,
+      "hold": 19,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 19,
+      "hold": 27,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 27,
+      "hold": 19,
+      "med": 35.458,
+      "p90": 2164.995,
+      "inlier": 0.519
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 19,
+      "hold": 27,
+      "med": 29.6,
+      "p90": 67.009,
+      "inlier": 0.526
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 29,
+      "hold": 12,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 12,
+      "hold": 29,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 29,
+      "hold": 12,
+      "med": 20.505,
+      "p90": 49.468,
+      "inlier": 0.517
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 12,
+      "hold": 29,
+      "med": 46.243,
+      "p90": 153.227,
+      "inlier": 0.5
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "state": "DENSE_SUPPORT_TOO_LOCALIZED",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 29,
+      "hold": 13,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 13,
+      "hold": 29,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 29,
+      "hold": 13,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 13,
+      "hold": 29,
+      "med": 49.423,
+      "p90": 78.698,
+      "inlier": 0.462
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 133,
+      "hold": 123,
+      "med": 17.414,
+      "p90": 30.607,
+      "inlier": 0.549
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 123,
+      "hold": 133,
+      "med": 13.192,
+      "p90": 31.997,
+      "inlier": 0.455
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 133,
+      "hold": 123,
+      "med": 10.799,
+      "p90": 28.627,
+      "inlier": 0.639
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 123,
+      "hold": 133,
+      "med": 10.306,
+      "p90": 34.522,
+      "inlier": 0.626
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 115,
+      "hold": 115,
+      "med": 7.256,
+      "p90": 11.761,
+      "inlier": 0.861
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 115,
+      "hold": 115,
+      "med": 7.248,
+      "p90": 16.021,
+      "inlier": 0.922
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "VALIDATED",
+      "fit": 115,
+      "hold": 115,
+      "med": 0.979,
+      "p90": 2.913,
+      "inlier": 0.922
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 115,
+      "hold": 115,
+      "med": 0.833,
+      "p90": 9.056,
+      "inlier": 0.991
+     }
+    }
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 76,
+      "hold": 82,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 82,
+      "hold": 76,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 76,
+      "hold": 82,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 82,
+      "hold": 76,
+      "med": 27.044,
+      "p90": 120.928,
+      "inlier": 0.476
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 38,
+      "hold": 57,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 57,
+      "hold": 38,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 38,
+      "hold": 57,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 57,
+      "hold": 38,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 10,
+      "hold": 22,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "LOW_INLIER",
+      "fit": 22,
+      "hold": 10,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 10,
+      "hold": 22,
+      "med": 222.534,
+      "p90": 1556.378,
+      "inlier": 0.6
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 22,
+      "hold": 10,
+      "med": 41.439,
+      "p90": 104.224,
+      "inlier": 0.5
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 5,
+      "hold": 13,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 13,
+      "hold": 5,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 5,
+      "hold": 13,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 13,
+      "hold": 5,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "LOW_INLIER",
+      "fit": 10,
+      "hold": 16,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 16,
+      "hold": 10,
+      "med": 60.89,
+      "p90": 80.314,
+      "inlier": 0.5
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 10,
+      "hold": 16,
+      "med": 81.578,
+      "p90": 210.29,
+      "inlier": 0.5
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 16,
+      "hold": 10,
+      "med": 88.705,
+      "p90": 134.275,
+      "inlier": 0.625
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 42,
+      "hold": 35,
+      "med": 11.617,
+      "p90": 34.921,
+      "inlier": 0.643
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 35,
+      "hold": 42,
+      "med": 9.705,
+      "p90": 40.748,
+      "inlier": 0.6
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 42,
+      "hold": 35,
+      "med": 12.11,
+      "p90": 30.383,
+      "inlier": 0.667
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 35,
+      "hold": 42,
+      "med": 10.613,
+      "p90": 45.132,
+      "inlier": 0.629
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 12,
+      "hold": 11,
+      "med": 7.331,
+      "p90": 21.124,
+      "inlier": 0.917
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 11,
+      "hold": 12,
+      "med": 43.471,
+      "p90": 141.488,
+      "inlier": 0.636
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 12,
+      "hold": 11,
+      "med": 26.865,
+      "p90": 58.605,
+      "inlier": 1.0
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 11,
+      "hold": 12,
+      "med": 49.64,
+      "p90": 88.08,
+      "inlier": 0.909
+     }
+    }
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 42,
+      "hold": 35,
+      "med": 12.168,
+      "p90": 24.804,
+      "inlier": 0.476
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 35,
+      "hold": 42,
+      "med": 23.472,
+      "p90": 44.692,
+      "inlier": 0.457
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 42,
+      "hold": 35,
+      "med": 15.65,
+      "p90": 40.228,
+      "inlier": 0.452
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 35,
+      "hold": 42,
+      "med": 15.46,
+      "p90": 33.266,
+      "inlier": 0.486
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 19,
+      "med": 1.478,
+      "p90": 11.046,
+      "inlier": 0.889
+     },
+     "fold1": {
+      "state": "VALIDATED",
+      "fit": 19,
+      "hold": 18,
+      "med": 1.889,
+      "p90": 7.689,
+      "inlier": 0.947
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 19,
+      "med": 2.795,
+      "p90": 14.723,
+      "inlier": 0.889
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 19,
+      "hold": 18,
+      "med": 4.359,
+      "p90": 9.809,
+      "inlier": 1.0
+     }
+    }
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 45,
+      "hold": 27,
+      "med": 8.069,
+      "p90": 18.961,
+      "inlier": 0.667
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 27,
+      "hold": 45,
+      "med": 10.265,
+      "p90": 41.945,
+      "inlier": 0.63
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 45,
+      "hold": 27,
+      "med": 6.942,
+      "p90": 24.52,
+      "inlier": 0.644
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 27,
+      "hold": 45,
+      "med": 10.119,
+      "p90": 308.56,
+      "inlier": 0.667
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 12,
+      "med": 2.424,
+      "p90": 14.582,
+      "inlier": 0.941
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 12,
+      "hold": 17,
+      "med": 2.928,
+      "p90": 13.686,
+      "inlier": 0.75
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 12,
+      "med": 5.198,
+      "p90": 10.839,
+      "inlier": 0.824
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 12,
+      "hold": 17,
+      "med": 2.79,
+      "p90": 12.357,
+      "inlier": 0.917
+     }
+    }
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 30,
+      "hold": 31,
+      "med": 15.725,
+      "p90": 29.584,
+      "inlier": 0.7
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 31,
+      "hold": 30,
+      "med": 14.035,
+      "p90": 28.904,
+      "inlier": 0.806
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 30,
+      "hold": 31,
+      "med": 17.667,
+      "p90": 25.046,
+      "inlier": 0.667
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 31,
+      "hold": 30,
+      "med": 15.896,
+      "p90": 40.416,
+      "inlier": 0.71
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 14,
+      "hold": 12,
+      "med": 10.787,
+      "p90": 14.633,
+      "inlier": 1.0
+     },
+     "fold1": {
+      "state": "VALIDATED",
+      "fit": 12,
+      "hold": 14,
+      "med": 1.802,
+      "p90": 2.61,
+      "inlier": 0.917
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 14,
+      "hold": 12,
+      "med": 37.548,
+      "p90": 74.955,
+      "inlier": 1.0
+     },
+     "fold1": {
+      "state": "VALIDATED",
+      "fit": 12,
+      "hold": 14,
+      "med": 1.989,
+      "p90": 3.516,
+      "inlier": 0.917
+     }
+    }
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "state": "DENSE_MATCH_INSUFFICIENT",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "state": "DENSE_MATCH_INSUFFICIENT",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NO_MODEL",
+    "folds": null
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NO_MODEL",
+    "folds": null
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 8,
+      "hold": 7,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 7,
+      "hold": 8,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 8,
+      "hold": 7,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 7,
+      "hold": 8,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 7,
+      "hold": 4,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 4,
+      "hold": 7,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 7,
+      "hold": 4,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 4,
+      "hold": 7,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 9,
+      "hold": 3,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 3,
+      "hold": 9,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 9,
+      "hold": 3,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 3,
+      "hold": 9,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 9,
+      "hold": 1,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 1,
+      "hold": 9,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "INSUFFICIENT",
+      "fit": 9,
+      "hold": 1,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     },
+     "fold1": {
+      "state": "INSUFFICIENT",
+      "fit": 1,
+      "hold": 9,
+      "med": null,
+      "p90": null,
+      "inlier": null
+     }
+    }
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 24,
+      "hold": 21,
+      "med": 20.014,
+      "p90": 89.04,
+      "inlier": 0.75
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 21,
+      "hold": 24,
+      "med": 8.992,
+      "p90": 100.966,
+      "inlier": 0.714
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 24,
+      "hold": 21,
+      "med": 20.15,
+      "p90": 74.438,
+      "inlier": 0.708
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 21,
+      "hold": 24,
+      "med": 32.623,
+      "p90": 102.156,
+      "inlier": 0.714
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 20,
+      "hold": 19,
+      "med": 2.967,
+      "p90": 47.917,
+      "inlier": 0.9
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 19,
+      "hold": 20,
+      "med": 1.511,
+      "p90": 38.031,
+      "inlier": 0.895
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 20,
+      "hold": 19,
+      "med": 6.93,
+      "p90": 102.413,
+      "inlier": 0.85
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 19,
+      "hold": 20,
+      "med": 2.24,
+      "p90": 45.689,
+      "inlier": 0.895
+     }
+    }
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 15,
+      "med": 34.757,
+      "p90": 69.31,
+      "inlier": 0.833
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 15,
+      "hold": 18,
+      "med": 8.702,
+      "p90": 82.303,
+      "inlier": 0.533
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 15,
+      "med": 60.007,
+      "p90": 146.799,
+      "inlier": 0.833
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 15,
+      "hold": 18,
+      "med": 578.703,
+      "p90": 1584.355,
+      "inlier": 0.6
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 13,
+      "med": 12.216,
+      "p90": 45.811,
+      "inlier": 0.941
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 13,
+      "hold": 17,
+      "med": 5.641,
+      "p90": 34.702,
+      "inlier": 0.923
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 13,
+      "med": 11.099,
+      "p90": 51.421,
+      "inlier": 1.0
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 13,
+      "hold": 17,
+      "med": 6.826,
+      "p90": 46.43,
+      "inlier": 0.846
+     }
+    }
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 16,
+      "hold": 17,
+      "med": 30.835,
+      "p90": 73.91,
+      "inlier": 0.5
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 16,
+      "med": 33.089,
+      "p90": 107.519,
+      "inlier": 0.529
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 16,
+      "hold": 17,
+      "med": 42.872,
+      "p90": 66.928,
+      "inlier": 0.5
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 16,
+      "med": 50.33,
+      "p90": 145.364,
+      "inlier": 0.647
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 10,
+      "hold": 13,
+      "med": 42.827,
+      "p90": 424.072,
+      "inlier": 0.5
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 13,
+      "hold": 10,
+      "med": 39.199,
+      "p90": 106.209,
+      "inlier": 0.846
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 10,
+      "hold": 13,
+      "med": 97.057,
+      "p90": 1127.279,
+      "inlier": 0.6
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 13,
+      "hold": 10,
+      "med": 39.16,
+      "p90": 100.906,
+      "inlier": 0.846
+     }
+    }
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "state": "DENSE_NO_ANCHOR",
+   "DINO_ONLY.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 18,
+      "med": 28.564,
+      "p90": 138.922,
+      "inlier": 0.611
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 18,
+      "med": 26.399,
+      "p90": 74.418,
+      "inlier": 0.778
+     }
+    }
+   },
+   "DINO_ONLY.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 18,
+      "med": 77.382,
+      "p90": 1215.785,
+      "inlier": 0.667
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 18,
+      "hold": 18,
+      "med": 29.381,
+      "p90": 437.413,
+      "inlier": 0.778
+     }
+    }
+   },
+   "DINO_LK.PARTIAL_AFFINE": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "VALIDATED",
+      "fit": 17,
+      "hold": 17,
+      "med": 1.032,
+      "p90": 2.812,
+      "inlier": 0.882
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 17,
+      "med": 0.722,
+      "p90": 32.437,
+      "inlier": 0.941
+     }
+    }
+   },
+   "DINO_LK.HOMOGRAPHY": {
+    "m": "NOT_VALIDATED",
+    "folds": {
+     "fold0": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 17,
+      "med": 0.83,
+      "p90": 21.821,
+      "inlier": 0.882
+     },
+     "fold1": {
+      "state": "NOT_VALIDATED",
+      "fit": 17,
+      "hold": 17,
+      "med": 4.556,
+      "p90": 36.307,
+      "inlier": 1.0
+     }
+    }
+   }
+  }
+ ]
+}

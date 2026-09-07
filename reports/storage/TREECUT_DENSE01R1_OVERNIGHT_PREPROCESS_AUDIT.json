@@ -1,0 +1,216 @@
+{
+ "n_frames": 5,
+ "issues": [],
+ "rows": [
+  {
+   "case": 1641,
+   "t_s": 3.434,
+   "frame": "pc10_1641_3.jpg",
+   "pre_norm_bgr": {
+    "mean": [
+     145.2646,
+     144.37984,
+     144.45958
+    ],
+    "std": [
+     44.851,
+     44.65791,
+     44.02107
+    ]
+   },
+   "post_norm_rgb": {
+    "mean": [
+     0.35593,
+     0.49194,
+     0.7274
+    ],
+    "std": [
+     0.75385,
+     0.78183,
+     0.78172
+    ]
+   },
+   "expected_post_mean": [
+    0.35593,
+    0.49194,
+    0.7274
+   ],
+   "bgr_channel_std": [
+    44.851,
+    44.658,
+    44.021
+   ],
+   "grayscale_contamination": false,
+   "swap_check": "R>B means ->0.5665,0.5697"
+  },
+  {
+   "case": 2543,
+   "t_s": 0.515,
+   "frame": "pc10_2543_0.jpg",
+   "pre_norm_bgr": {
+    "mean": [
+     129.30762,
+     144.23565,
+     147.19831
+    ],
+    "std": [
+     53.14367,
+     52.22951,
+     48.57536
+    ]
+   },
+   "post_norm_rgb": {
+    "mean": [
+     0.40283,
+     0.48942,
+     0.44928
+    ],
+    "std": [
+     0.83184,
+     0.91438,
+     0.92625
+    ]
+   },
+   "expected_post_mean": [
+    0.40283,
+    0.48942,
+    0.44928
+   ],
+   "bgr_channel_std": [
+    53.144,
+    52.23,
+    48.575
+   ],
+   "grayscale_contamination": false,
+   "swap_check": "R>B means ->0.5772,0.5071"
+  },
+  {
+   "case": 25894,
+   "t_s": 4.07,
+   "frame": "pc10_25894_4.jpg",
+   "pre_norm_bgr": {
+    "mean": [
+     79.29043,
+     84.96326,
+     96.26393
+    ],
+    "std": [
+     53.82954,
+     57.02284,
+     60.64752
+    ]
+   },
+   "post_norm_rgb": {
+    "mean": [
+     -0.46941,
+     -0.54826,
+     -0.42248
+    ],
+    "std": [
+     1.03857,
+     0.9983,
+     0.93821
+    ]
+   },
+   "expected_post_mean": [
+    -0.46941,
+    -0.54826,
+    -0.42248
+   ],
+   "bgr_channel_std": [
+    53.83,
+    57.023,
+    60.648
+   ],
+   "grayscale_contamination": false,
+   "swap_check": "R>B means ->0.3775,0.3109"
+  },
+  {
+   "case": 1641,
+   "t_s": 4.491,
+   "frame": "pc10_1641_4.jpg",
+   "pre_norm_bgr": {
+    "mean": [
+     136.39128,
+     135.59262,
+     135.5341
+    ],
+    "std": [
+     41.63067,
+     40.87989,
+     40.21545
+    ]
+   },
+   "post_norm_rgb": {
+    "mean": [
+     0.20308,
+     0.33811,
+     0.57275
+    ],
+    "std": [
+     0.68868,
+     0.71568,
+     0.72559
+    ]
+   },
+   "expected_post_mean": [
+    0.20308,
+    0.33811,
+    0.57275
+   ],
+   "bgr_channel_std": [
+    41.631,
+    40.88,
+    40.215
+   ],
+   "grayscale_contamination": false,
+   "swap_check": "R>B means ->0.5315,0.5349"
+  },
+  {
+   "case": 10000,
+   "t_s": 2.561,
+   "frame": "pc10_10000_2.jpg",
+   "pre_norm_bgr": {
+    "mean": [
+     141.81877,
+     156.66872,
+     149.52865
+    ],
+    "std": [
+     34.95691,
+     37.64232,
+     36.22157
+    ]
+   },
+   "post_norm_rgb": {
+    "mean": [
+     0.44274,
+     0.70709,
+     0.66734
+    ],
+    "std": [
+     0.62029,
+     0.659,
+     0.60927
+    ]
+   },
+   "expected_post_mean": [
+    0.44274,
+    0.70709,
+    0.66734
+   ],
+   "bgr_channel_std": [
+    34.957,
+    37.642,
+    36.222
+   ],
+   "grayscale_contamination": false,
+   "swap_check": "R>B means ->0.5864,0.5562"
+  }
+ ],
+ "checks": {
+  "grayscale_contamination": true,
+  "channel_distinct": true,
+  "post_matches_expected_rgb": true
+ }
+}

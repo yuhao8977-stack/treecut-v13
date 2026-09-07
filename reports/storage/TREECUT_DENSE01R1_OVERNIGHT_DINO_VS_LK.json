@@ -1,0 +1,564 @@
+{
+ "per_pair": [
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "PARTIAL_AFFINE": {
+    "dino_med": 8.016,
+    "lk_med": 4.557,
+    "delta_med": -3.459,
+    "dino_p90": 30.626,
+    "lk_p90": 15.054,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 13.189,
+    "lk_med": 5.092,
+    "delta_med": -8.097,
+    "dino_p90": 39.991,
+    "lk_p90": 16.433,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "PARTIAL_AFFINE": {
+    "dino_med": 7.967,
+    "lk_med": 2.01,
+    "delta_med": -5.957,
+    "dino_p90": 31.997,
+    "lk_p90": 8.906,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 13.138,
+    "lk_med": 2.13,
+    "delta_med": -11.008,
+    "dino_p90": 29.354,
+    "lk_p90": 8.155,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 22.441,
+    "lk_med": 7.072,
+    "delta_med": -15.369,
+    "dino_p90": 42.805,
+    "lk_p90": 27.859,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "PARTIAL_AFFINE": {
+    "dino_med": 8.88,
+    "lk_med": 3.047,
+    "delta_med": -5.833,
+    "dino_p90": 22.243,
+    "lk_p90": 11.805,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 9.849,
+    "lk_med": 5.447,
+    "delta_med": -4.402,
+    "dino_p90": 22.65,
+    "lk_p90": 19.814,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "PARTIAL_AFFINE": {
+    "dino_med": 7.814,
+    "lk_med": 1.996,
+    "delta_med": -5.818,
+    "dino_p90": 21.747,
+    "lk_p90": 44.619,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 15.023,
+    "lk_med": 8.522,
+    "delta_med": -6.501,
+    "dino_p90": 34.214,
+    "lk_p90": 46.958,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "PARTIAL_AFFINE": {
+    "dino_med": 10.577,
+    "lk_med": 17.272,
+    "delta_med": 6.695,
+    "dino_p90": 38.836,
+    "lk_p90": 22.061,
+    "class": "LK_HURT"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 9.138,
+    "lk_med": 6.847,
+    "delta_med": -2.291,
+    "dino_p90": 23.245,
+    "lk_p90": 11.533,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "PARTIAL_AFFINE": {
+    "dino_med": 8.023,
+    "lk_med": 4.542,
+    "delta_med": -3.481,
+    "dino_p90": 31.208,
+    "lk_p90": 37.741,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 7.855,
+    "lk_med": 4.026,
+    "delta_med": -3.829,
+    "dino_p90": 28.567,
+    "lk_p90": 33.95,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "PARTIAL_AFFINE": {
+    "dino_med": 19.458,
+    "lk_med": 2.667,
+    "delta_med": -16.791,
+    "dino_p90": 60.638,
+    "lk_p90": 7.781,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 33.378,
+    "lk_med": 1.337,
+    "delta_med": -32.041,
+    "dino_p90": 58.292,
+    "lk_p90": 4.299,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "PARTIAL_AFFINE": {
+    "dino_med": 11.911,
+    "lk_med": 0.833,
+    "delta_med": -11.078,
+    "dino_p90": 26.048,
+    "lk_p90": 8.464,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 12.533,
+    "lk_med": 1.055,
+    "delta_med": -11.478,
+    "dino_p90": 29.493,
+    "lk_p90": 7.821,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "PARTIAL_AFFINE": {
+    "dino_med": 8.618,
+    "lk_med": 1.373,
+    "delta_med": -7.245,
+    "dino_p90": 25.103,
+    "lk_p90": 9.886,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 10.339,
+    "lk_med": 1.37,
+    "delta_med": -8.969,
+    "dino_p90": 26.87,
+    "lk_p90": 9.768,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "PARTIAL_AFFINE": {
+    "dino_med": 16.612,
+    "lk_med": 1.264,
+    "delta_med": -15.348,
+    "dino_p90": 27.176,
+    "lk_p90": 3.361,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 17.521,
+    "lk_med": 1.393,
+    "delta_med": -16.128,
+    "dino_p90": 32.468,
+    "lk_p90": 4.158,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "PARTIAL_AFFINE": {
+    "dino_med": 13.192,
+    "lk_med": 7.248,
+    "delta_med": -5.944,
+    "dino_p90": 30.607,
+    "lk_p90": 11.761,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 10.306,
+    "lk_med": 0.833,
+    "delta_med": -9.473,
+    "dino_p90": 28.627,
+    "lk_p90": 2.913,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "PARTIAL_AFFINE": {
+    "dino_med": 9.705,
+    "lk_med": 7.331,
+    "delta_med": -2.374,
+    "dino_p90": 34.921,
+    "lk_p90": 21.124,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 10.613,
+    "lk_med": 26.865,
+    "delta_med": 16.252,
+    "dino_p90": 30.383,
+    "lk_p90": 58.605,
+    "class": "LK_HURT"
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "PARTIAL_AFFINE": {
+    "dino_med": 12.168,
+    "lk_med": 1.478,
+    "delta_med": -10.69,
+    "dino_p90": 24.804,
+    "lk_p90": 7.689,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 15.46,
+    "lk_med": 2.795,
+    "delta_med": -12.665,
+    "dino_p90": 33.266,
+    "lk_p90": 9.809,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "PARTIAL_AFFINE": {
+    "dino_med": 8.069,
+    "lk_med": 2.424,
+    "delta_med": -5.645,
+    "dino_p90": 18.961,
+    "lk_p90": 13.686,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 6.942,
+    "lk_med": 2.79,
+    "delta_med": -4.152,
+    "dino_p90": 24.52,
+    "lk_p90": 10.839,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "PARTIAL_AFFINE": {
+    "dino_med": 14.035,
+    "lk_med": 1.802,
+    "delta_med": -12.233,
+    "dino_p90": 28.904,
+    "lk_p90": 2.61,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 15.896,
+    "lk_med": 1.989,
+    "delta_med": -13.907,
+    "dino_p90": 25.046,
+    "lk_p90": 3.516,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "PARTIAL_AFFINE": {
+    "class": "LK_NA"
+   },
+   "HOMOGRAPHY": {
+    "class": "LK_NA"
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "PARTIAL_AFFINE": {
+    "dino_med": 8.992,
+    "lk_med": 1.511,
+    "delta_med": -7.481,
+    "dino_p90": 89.04,
+    "lk_p90": 38.031,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 20.15,
+    "lk_med": 2.24,
+    "delta_med": -17.91,
+    "dino_p90": 74.438,
+    "lk_p90": 45.689,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "PARTIAL_AFFINE": {
+    "dino_med": 8.702,
+    "lk_med": 5.641,
+    "delta_med": -3.061,
+    "dino_p90": 69.31,
+    "lk_p90": 34.702,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 60.007,
+    "lk_med": 6.826,
+    "delta_med": -53.181,
+    "dino_p90": 146.799,
+    "lk_p90": 46.43,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "PARTIAL_AFFINE": {
+    "dino_med": 30.835,
+    "lk_med": 39.199,
+    "delta_med": 8.364,
+    "dino_p90": 73.91,
+    "lk_p90": 106.209,
+    "class": "LK_HURT"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 42.872,
+    "lk_med": 39.16,
+    "delta_med": -3.712,
+    "dino_p90": 66.928,
+    "lk_p90": 100.906,
+    "class": "LK_HELPED"
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "PARTIAL_AFFINE": {
+    "dino_med": 26.399,
+    "lk_med": 0.722,
+    "delta_med": -25.677,
+    "dino_p90": 74.418,
+    "lk_p90": 2.812,
+    "class": "LK_HELPED"
+   },
+   "HOMOGRAPHY": {
+    "dino_med": 29.381,
+    "lk_med": 0.83,
+    "delta_med": -28.551,
+    "dino_p90": 437.413,
+    "lk_p90": 21.821,
+    "class": "LK_HELPED"
+   }
+  }
+ ],
+ "class_counts": {
+  "LK_HELPED": 36,
+  "LK_NA": 33,
+  "LK_HURT": 3
+ }
+}

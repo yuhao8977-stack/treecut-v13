@@ -1,0 +1,814 @@
+{
+ "experiment": "DENSE01R1_OVERNIGHT_STRUCTURAL_DIAGNOSTIC",
+ "note": "audit-only support-hull structural validator（正式代码未实现结构通道，NOT_IMPLEMENTED）; raw chamfer px: t0 结构边经 corr-fit transform 投影到 t1 结构 DT",
+ "rows": [
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 89,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 1915,
+    "n_edge_t1": 2556,
+    "struct": {
+     "median": 0.955,
+     "p90": 5.73,
+     "p95": 6.685,
+     "max": 173.88
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 1915,
+    "n_edge_t1": 2556,
+    "struct": {
+     "median": 1.369,
+     "p90": 5.73,
+     "p95": 13.857,
+     "max": 184.385
+    }
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 87,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 2556,
+    "n_edge_t1": 3273,
+    "struct": {
+     "median": 0.955,
+     "p90": 1.91,
+     "p95": 2.865,
+     "max": 7.099
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 2556,
+    "n_edge_t1": 3273,
+    "struct": {
+     "median": 0.0,
+     "p90": 1.91,
+     "p95": 1.91,
+     "max": 7.099
+    }
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 47,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 3273,
+    "n_edge_t1": 2142,
+    "struct": {
+     "median": 0.955,
+     "p90": 56.495,
+     "p95": 85.95,
+     "max": 102.185
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 3273,
+    "n_edge_t1": 2142,
+    "struct": {
+     "median": 3.82,
+     "p90": 68.669,
+     "p95": 106.96,
+     "max": 123.609
+    }
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 55,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 2142,
+    "n_edge_t1": 1763,
+    "struct": {
+     "median": 4.712,
+     "p90": 16.109,
+     "p95": 18.974,
+     "max": 29.605
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 2142,
+    "n_edge_t1": 1763,
+    "struct": {
+     "median": 1.91,
+     "p90": 12.415,
+     "p95": 13.784,
+     "max": 25.785
+    }
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 49,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 3768,
+    "n_edge_t1": 1914,
+    "struct": {
+     "median": 3.82,
+     "p90": 28.65,
+     "p95": 32.863,
+     "max": 76.47
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 3768,
+    "n_edge_t1": 1914,
+    "struct": {
+     "median": 3.82,
+     "p90": 29.738,
+     "p95": 34.118,
+     "max": 76.47
+    }
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 54,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 1914,
+    "n_edge_t1": 1855,
+    "struct": {
+     "median": 0.955,
+     "p90": 6.346,
+     "p95": 37.189,
+     "max": 135.463
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 1914,
+    "n_edge_t1": 1855,
+    "struct": {
+     "median": 0.955,
+     "p90": 6.685,
+     "p95": 35.739,
+     "max": 134.634
+    }
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 56,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 1855,
+    "n_edge_t1": 2155,
+    "struct": {
+     "median": 1.369,
+     "p90": 7.272,
+     "p95": 52.106,
+     "max": 134.655
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 1855,
+    "n_edge_t1": 2155,
+    "struct": {
+     "median": 0.955,
+     "p90": 21.611,
+     "p95": 89.229,
+     "max": 140.87
+    }
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 73,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 2155,
+    "n_edge_t1": 3026,
+    "struct": {
+     "median": 0.955,
+     "p90": 2.739,
+     "p95": 5.604,
+     "max": 16.937
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 2155,
+    "n_edge_t1": 3026,
+    "struct": {
+     "median": 0.955,
+     "p90": 4.234,
+     "p95": 9.009,
+     "max": 31.676
+    }
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 56,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 2224,
+    "n_edge_t1": 2373,
+    "struct": {
+     "median": 3.694,
+     "p90": 69.336,
+     "p95": 79.355,
+     "max": 92.902
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 2224,
+    "n_edge_t1": 2373,
+    "struct": {
+     "median": 2.739,
+     "p90": 70.628,
+     "p95": 81.017,
+     "max": 95.514
+    }
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 84,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 2373,
+    "n_edge_t1": 2049,
+    "struct": {
+     "median": 0.955,
+     "p90": 23.875,
+     "p95": 36.811,
+     "max": 59.407
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 2373,
+    "n_edge_t1": 2049,
+    "struct": {
+     "median": 0.955,
+     "p90": 23.604,
+     "p95": 37.245,
+     "max": 66.794
+    }
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 88,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 2049,
+    "n_edge_t1": 2524,
+    "struct": {
+     "median": 0.955,
+     "p90": 9.895,
+     "p95": 27.489,
+     "max": 148.664
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 2049,
+    "n_edge_t1": 2524,
+    "struct": {
+     "median": 0.955,
+     "p90": 10.151,
+     "p95": 27.68,
+     "max": 148.25
+    }
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 39,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 2524,
+    "n_edge_t1": 799,
+    "struct": {
+     "median": 10.045,
+     "p90": 64.382,
+     "p95": 81.765,
+     "max": 117.851
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 2524,
+    "n_edge_t1": 799,
+    "struct": {
+     "median": 9.171,
+     "p90": 64.236,
+     "p95": 82.249,
+     "max": 119.22
+    }
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 5,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 2486,
+    "n_edge_t1": 557,
+    "struct": {
+     "median": 286.065,
+     "p90": 456.48,
+     "p95": 481.793,
+     "max": 517.586
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 2486,
+    "n_edge_t1": 557,
+    "struct": {
+     "median": 379.585,
+     "p90": 848.838,
+     "p95": 1155.769,
+     "max": 1271.24
+    }
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 6,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 557,
+    "n_edge_t1": 891,
+    "struct": {
+     "median": 11.46,
+     "p90": 32.585,
+     "p95": 39.677,
+     "max": 45.84
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 557,
+    "n_edge_t1": 891,
+    "struct": {
+     "median": 12.289,
+     "p90": 371.457,
+     "p95": 605.723,
+     "max": 1185.321
+    }
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "state": "DENSE_SUPPORT_TOO_LOCALIZED",
+   "n_corr": 6,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 891,
+    "n_edge_t1": 909,
+    "struct": {
+     "median": 128.925,
+     "p90": 190.207,
+     "p95": 261.979,
+     "max": 290.859
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 891,
+    "n_edge_t1": 909,
+    "struct": {
+     "median": 9.964,
+     "p90": 87.193,
+     "p95": 190.859,
+     "max": 1175.61
+    }
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 19,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 909,
+    "n_edge_t1": 2198,
+    "struct": {
+     "median": 4.649,
+     "p90": 20.818,
+     "p95": 56.765,
+     "max": 172.756
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 909,
+    "n_edge_t1": 2198,
+    "struct": {
+     "median": 3.82,
+     "p90": 21.83,
+     "p95": 54.56,
+     "max": 165.046
+    }
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "state": "DENSE_SUPPORT_TOO_LOCALIZED",
+   "n_corr": 6,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 240,
+    "n_edge_t1": 259,
+    "struct": {
+     "median": 1.91,
+     "p90": 17.19,
+     "p95": 18.058,
+     "max": 19.423
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 240,
+    "n_edge_t1": 259,
+    "struct": {
+     "median": 9.631,
+     "p90": 258.521,
+     "p95": 605.988,
+     "max": 1319.29
+    }
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "state": "DENSE_SUPPORT_TOO_LOCALIZED",
+   "n_corr": 5,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 202,
+    "n_edge_t1": 349,
+    "struct": {
+     "median": 5.73,
+     "p90": 25.894,
+     "p95": 28.306,
+     "max": 88.45
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 202,
+    "n_edge_t1": 349,
+    "struct": {
+     "median": 5.874,
+     "p90": 31.395,
+     "p95": 77.033,
+     "max": 875.768
+    }
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 230,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 1419,
+    "n_edge_t1": 1573,
+    "struct": {
+     "median": 7.64,
+     "p90": 33.877,
+     "p95": 51.656,
+     "max": 87.354
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 1419,
+    "n_edge_t1": 1573,
+    "struct": {
+     "median": 2.865,
+     "p90": 31.573,
+     "p95": 49.537,
+     "max": 84.995
+    }
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 95,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 1573,
+    "n_edge_t1": 1743,
+    "struct": {
+     "median": 10.793,
+     "p90": 24.83,
+     "p95": 65.325,
+     "max": 192.531
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 1573,
+    "n_edge_t1": 1743,
+    "struct": {
+     "median": 7.801,
+     "p90": 49.281,
+     "p95": 109.828,
+     "max": 167.701
+    }
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 18,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 1743,
+    "n_edge_t1": 2248,
+    "struct": {
+     "median": 6.432,
+     "p90": 61.044,
+     "p95": 82.939,
+     "max": 140.308
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 1743,
+    "n_edge_t1": 2248,
+    "struct": {
+     "median": 6.685,
+     "p90": 75.445,
+     "p95": 75.445,
+     "max": 85.641
+    }
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 23,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 934,
+    "n_edge_t1": 1030,
+    "struct": {
+     "median": 1.91,
+     "p90": 49.38,
+     "p95": 53.48,
+     "max": 55.39
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 934,
+    "n_edge_t1": 1030,
+    "struct": {
+     "median": 2.739,
+     "p90": 49.794,
+     "p95": 57.218,
+     "max": 59.21
+    }
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 37,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 1030,
+    "n_edge_t1": 810,
+    "struct": {
+     "median": 0.955,
+     "p90": 10.505,
+     "p95": 14.739,
+     "max": 38.27
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 1030,
+    "n_edge_t1": 810,
+    "struct": {
+     "median": 0.955,
+     "p90": 12.415,
+     "p95": 16.052,
+     "max": 36.613
+    }
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 29,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 810,
+    "n_edge_t1": 774,
+    "struct": {
+     "median": 1.91,
+     "p90": 16.539,
+     "p95": 25.305,
+     "max": 75.607
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 810,
+    "n_edge_t1": 774,
+    "struct": {
+     "median": 0.955,
+     "p90": 17.387,
+     "p95": 25.017,
+     "max": 80.094
+    }
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 26,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 774,
+    "n_edge_t1": 734,
+    "struct": {
+     "median": 1.91,
+     "p90": 140.003,
+     "p95": 149.5,
+     "max": 159.457
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 774,
+    "n_edge_t1": 734,
+    "struct": {
+     "median": 1.369,
+     "p90": 131.888,
+     "p95": 150.927,
+     "max": 160.412
+    }
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 11,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 926,
+    "n_edge_t1": 484,
+    "struct": {
+     "median": 12.415,
+     "p90": 54.091,
+     "p95": 65.951,
+     "max": 605.278
+    }
+   },
+   "HOMOGRAPHY": {
+    "struct": null,
+    "note": "NO_FIT"
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 10,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 484,
+    "n_edge_t1": 809,
+    "struct": {
+     "median": 0.955,
+     "p90": 13.206,
+     "p95": 17.327,
+     "max": 27.154
+    }
+   },
+   "HOMOGRAPHY": {
+    "struct": null,
+    "note": "NO_FIT"
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 39,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 2910,
+    "n_edge_t1": 3521,
+    "struct": {
+     "median": 2.324,
+     "p90": 24.36,
+     "p95": 33.318,
+     "max": 57.602
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 2910,
+    "n_edge_t1": 3521,
+    "struct": {
+     "median": 2.739,
+     "p90": 20.688,
+     "p95": 27.695,
+     "max": 59.386
+    }
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 30,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 3521,
+    "n_edge_t1": 2251,
+    "struct": {
+     "median": 6.846,
+     "p90": 24.774,
+     "p95": 29.766,
+     "max": 68.219
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 3521,
+    "n_edge_t1": 2251,
+    "struct": {
+     "median": 5.604,
+     "p90": 21.459,
+     "p95": 29.352,
+     "max": 71.822
+    }
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 23,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 2251,
+    "n_edge_t1": 1409,
+    "struct": {
+     "median": 57.405,
+     "p90": 394.989,
+     "p95": 424.594,
+     "max": 462.245
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 2251,
+    "n_edge_t1": 1409,
+    "struct": {
+     "median": 43.909,
+     "p90": 422.684,
+     "p95": 444.1,
+     "max": 462.793
+    }
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "state": "DENSE_NO_ANCHOR",
+   "n_corr": 34,
+   "PARTIAL_AFFINE": {
+    "n_edge_t0": 1409,
+    "n_edge_t1": 1912,
+    "struct": {
+     "median": 5.73,
+     "p90": 49.66,
+     "p95": 56.679,
+     "max": 79.061
+    }
+   },
+   "HOMOGRAPHY": {
+    "n_edge_t0": 1409,
+    "n_edge_t1": 1912,
+    "struct": {
+     "median": 18.433,
+     "p90": 159.441,
+     "p95": 187.546,
+     "max": 207.873
+    }
+   }
+  }
+ ],
+ "pooled": {
+  "ANISO": {
+   "n": 53817,
+   "median": 2.865,
+   "p90": 64.134,
+   "p95": 236.37
+  },
+  "ISO": {
+   "n": 52407,
+   "median": 2.865,
+   "p90": 76.4,
+   "p95": 240.554
+  }
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "experiment": "DENSE01R1_OVERNIGHT_PERFORMANCE",
+ "n_pairs": 36,
+ "total_s": 41.2,
+ "feature_extract_s": 0.5,
+ "feature_per_frame_s": 0.0069,
+ "model_load_s": 1.8,
+ "matching_ms_per_pair_median": 288.9,
+ "lk_ms_per_pair_median": 280.9,
+ "vram_peak_gb": 0.13,
+ "device": "cuda",
+ "note": "DINO vits14_reg forward 极快(GPU)；瓶颈在 MNN 矩阵乘与 LK(CPU) 非 DINO"
+}

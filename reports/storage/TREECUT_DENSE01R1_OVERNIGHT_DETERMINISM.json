@@ -1,0 +1,19 @@
+{
+ "replay1_tag": "replay1",
+ "replay2_tag": "replay2",
+ "seed2": 42,
+ "n_pairs": 36,
+ "mismatches": [],
+ "nondeterminism_found": false,
+ "state_counts_1": {
+  "DENSE_NO_ANCHOR": 31,
+  "DENSE_SUPPORT_TOO_LOCALIZED": 3,
+  "DENSE_MATCH_INSUFFICIENT": 2
+ },
+ "state_counts_2": {
+  "DENSE_NO_ANCHOR": 31,
+  "DENSE_SUPPORT_TOO_LOCALIZED": 3,
+  "DENSE_MATCH_INSUFFICIENT": 2
+ },
+ "state_counts_equal": true
+}

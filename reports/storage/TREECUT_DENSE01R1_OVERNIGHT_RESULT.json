@@ -1,0 +1,193 @@
+{
+ "experiment": "DENSE01R1_OVERNIGHT_RESULT",
+ "generated_at": "2026-09-07 (overnight)",
+ "baseline": {
+  "head": "08a6d2840021444b24d2b7f8f0d9e7a5d00a2e5b",
+  "branch": "main",
+  "working_tree_clean": false,
+  "working_tree": "?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_CAMERA_VIEW.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_DETERMINISM.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_DINO_VS_LK.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_FAILURE_CAUSES.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_FAILURE_MAP.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_FOLD_INDEPENDENCE.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_HOLDOUT_ANALYSIS.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_LK_AUDIT.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_LK_QUALITY_MAP.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_LK_SEED_SAMPLE.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_MATCH_QUALITY.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_METRICS_RECOMPUTED.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_RANSAC_STRIDE.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_REPLAY_replay1.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_REPLAY_replay2.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_REPLAY_replay_smoke.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_SOFTMAX_AUDIT.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_SPATIAL_COVERAGE.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_TEMPORAL_GAP.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_TOKEN_DOMAIN_AUDIT.json\n?? reports/storage/TREECUT_DENSE01R1_OVERNIGHT_TRUE_POOLED.json\n?? scripts/audit_dense01r1_overnight.py\n?? scripts/audit_dense01r1_overnight_analyze.py\n?? scripts/audit_dense01r1_overnight_diag.py\n?? tests/test_dense01r1_overnight_audit.py"
+ },
+ "defect_status": {
+  "claimed_8_8_fixed": false,
+  "structural_channel": "NOT_IMPLEMENTED",
+  "structural_rows_empty": true,
+  "per_defect": {
+   "DENSE01_DEFECT_01_rgb_input": "VERIFIED_FIXED",
+   "DENSE01_DEFECT_02_imagenet_norm": "VERIFIED_FIXED",
+   "DENSE01_DEFECT_03_padding_tokens": "VERIFIED_FIXED",
+   "DENSE01_DEFECT_04_valid_domain_mnn": "VERIFIED_FIXED",
+   "DENSE01_DEFECT_05_temperature_cancel": "VERIFIED_FIXED",
+   "DENSE01_DEFECT_06_ransac_stride": "VERIFIED_FIXED",
+   "DENSE01_DEFECT_07_true_disagreement": "VERIFIED_FIXED_IMPL_PRESENT_UNTESTED_ON_DATA",
+   "DENSE01_DEFECT_08_structural_channel": "NOT_IMPLEMENTED"
+  },
+  "true_completion": {
+   "VERIFIED_FIXED": 6,
+   "IMPL_PRESENT": 1,
+   "NOT_IMPLEMENTED": 1
+  },
+  "note": "STRUCTURAL_VALIDATION.json 仍为 placeholder（rows 空，注明后补）→ 不得写 8/8 fixed；真实 7 fixed/implemented + 1 NOT_IMPLEMENTED（结构通道）。07 需合成测试验证非 dead code（见 §18）。"
+ },
+ "metrics_recomputed": {
+  "pairs": 36,
+  "old_mnn_sufficient": 36,
+  "corrected_mnn_sufficient": 34,
+  "lk_attempted_total": 2571,
+  "lk_accepted_prod_semantics_total": 1434,
+  "lk_accepted_fb3_total": 1003,
+  "DINO_ONLY": {
+   "AFFINE": 0,
+   "HOMOGRAPHY": 0
+  },
+  "DINO_LK": {
+   "AFFINE": 0,
+   "HOMOGRAPHY": 0,
+   "MULTI": 0,
+   "SINGLE": 0,
+   "CONFLICT": 0,
+   "NO": 36,
+   "union": 0,
+   "case_coverage_9": 0
+  },
+  "state_counts": {
+   "DENSE_NO_ANCHOR": 31,
+   "DENSE_SUPPORT_TOO_LOCALIZED": 3,
+   "DENSE_MATCH_INSUFFICIENT": 2
+  },
+  "mnn_mismatch_vs_prod": []
+ },
+ "core_numbers_reproduced": true,
+ "determinism": {
+  "nondeterminism_found": false,
+  "state_counts_equal": true
+ },
+ "lk": {
+  "taxonomy": {
+   "ACCEPTED": 1364,
+   "FWD_STATUS_FAIL": 958,
+   "DEST_OUTSIDE_ISLAND": 129,
+   "BWD_STATUS_FAIL": 70,
+   "DEST_DYNAMIC_CONTAM": 50
+  },
+  "fb_pooled": {
+   "n": 1364,
+   "median": 0.161,
+   "p90": 45.739,
+   "p95": 100.633,
+   "max": 806.551
+  },
+  "accepted_fb3_of_1434": 1003
+ },
+ "holdout_global": {
+  "DINO_ONLY": {
+   "n": 3959,
+   "median": 14.208,
+   "p75": 28.153,
+   "p90": 50.25,
+   "p95": 76.392,
+   "p99": 308.143,
+   "max": 75369.976
+  },
+  "DINO_LK": {
+   "n": 2496,
+   "median": 4.037,
+   "p75": 12.892,
+   "p90": 37.3,
+   "p95": 60.54,
+   "p99": 151.263,
+   "max": 1192.701
+  }
+ },
+ "dino_vs_lk": {
+  "LK_HELPED": 36,
+  "LK_NA": 33,
+  "LK_HURT": 3
+ },
+ "fold_level_pass": {
+  "validated_folds": 10,
+  "total_folds": 144,
+  "note": "7 pairs 各有 1 个 validated fold（median 0.98-2.7px）但 pair 级双 fold 均需过"
+ },
+ "structural_diagnostic_pooled": {
+  "ANISO": {
+   "n": 53817,
+   "median": 2.865,
+   "p90": 64.134,
+   "p95": 236.37
+  },
+  "ISO": {
+   "n": 52407,
+   "median": 2.865,
+   "p90": 76.4,
+   "p95": 240.554
+  }
+ },
+ "temporal_buckets": {
+  "<1s": {
+   "n": 12,
+   "n_validated": 0,
+   "med_median": 2.113,
+   "p90_median": 15.982,
+   "lk_acc_rate": 0.501
+  },
+  "1-2s": {
+   "n": 14,
+   "n_validated": 0,
+   "med_median": 0.833,
+   "p90_median": 7.821,
+   "lk_acc_rate": 0.598
+  },
+  "2-3s": {
+   "n": 6,
+   "n_validated": 0,
+   "med_median": 2.522,
+   "p90_median": 11.669,
+   "lk_acc_rate": 0.547
+  },
+  ">3s": {
+   "n": 4,
+   "n_validated": 0,
+   "med_median": 4.341,
+   "p90_median": 19.433,
+   "lk_acc_rate": 0.59
+  }
+ },
+ "preprocess_checks": {
+  "grayscale_contamination": true,
+  "channel_distinct": true,
+  "post_matches_expected_rgb": true
+ },
+ "findings": [
+  {
+   "id": "AUDIT_FINDING_LK_FB_GATE_NOT_IMPLEMENTED",
+   "severity": "MEDIUM (不影响 0/36 方向)",
+   "detail": "production 声明 LK FB≤3 门(config fb_max=3.0, docstring FB≤3) 但 lk_refine 仅单次 forward calcOpticalFlowPyrLK，无 backward、无 FB 判定。audit 独立实现 backward 后：1434 accepted 中仅 1003 FB≤3；70 个 backward 失败被 production 计入 accepted。若真实施 FB 门 accepted 降至 ~1003 → union 仍 0，结论方向不变（更严格）。",
+   "flips_0_36": false
+  },
+  {
+   "id": "AUDIT_FINDING_STRUCTURAL_CHANNEL_NOT_IMPLEMENTED",
+   "severity": "REPORTING (原报告/DEFECT_AUDIT 已注明后补)",
+   "detail": "STRUCTURAL_VALIDATION.json rows 为空占位 → 结构通道 NOT_IMPLEMENTED。原 DEFECT_AUDIT 记 8/8 fixed 不准确；真实 7 实现 + 1 NOT_IMPLEMENTED。",
+   "flips_0_36": false
+  },
+  {
+   "id": "AUDIT_FINDING_COVERAGE_GATE_USES_ALL_MNN",
+   "severity": "LOW (本数据无翻转：state 与 accepted-coverage 判定一致? 见 rows)",
+   "detail": "production SUPPORT_TOO_LOCALIZED 用全量 MNN corr 的 bins/quads 而非 accepted refined 子集（§17 疑点）；audit 对比 state vs state_under_accepted_coverage，差异 pair 数 = 9",
+   "flips_0_36": false
+  },
+  {
+   "id": "AUDIT_FINDING_MODEL_PROVENANCE_INCOMPLETE",
+   "severity": "LOW",
+   "detail": "正式 MODEL_PROVENANCE.json checkpoint='?' sha256=''；audit 补录 checkpoint sha256=F4331770...（不改正式文件）",
+   "flips_0_36": false
+  }
+ ],
+ "final_classification": "A_DENSE01R1_VERIFIED_FAIL",
+ "next_route_recommendation": {
+  "primary": "EVIDENCE_HIERARCHY_REDESIGN (LOCAL/GLOBAL/UNSURE)",
+  "secondary": "TEMPORAL_LEARNED_TRACKER (TAPIR Apache-2.0 或 SEA-RAFT BSD-3-Clause)",
+  "rationale": "audit 显示：单 fold 7 pair 极准(median<3px)但双 fold 泛化 0/36——问题在支撑区一致性/尾部而非锚点召回；hierarchy 用现有 GFTT/consensus/camera/DINO 分层表决可先行，无需新模型；若 hierarchy 标定后仍不足再上 temporal tracker（中间帧约束直接针对 1-4s 大 gap）。"
+ },
+ "stop": true
+}
