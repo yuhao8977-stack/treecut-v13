@@ -1,0 +1,19 @@
+{
+ "experiment": "CAM01_V24_V23_CORRECTIONS",
+ "generated_at": "2026-09-07 15:54:18",
+ "fixed": [
+  "state aggregation: INSUFFICIENT no longer folded into UNKNOWN",
+  "case diagnostic: per-case real 4-pair states (not global)",
+  "P90: pooled holdout median/P90 from real residual arrays (not median of fold P90)",
+  "NEG target control: strict t0/t1 contract (EXTENSION_TABLETOP->TABLETOP->invalid)"
+ ],
+ "hard_case_true_states": {
+  "10000": "0/4 VALIDATED (all NO_VALID_ANCHOR; NOT_VALIDATED x3 + INSUFFICIENT x1)",
+  "2543": {
+   "GFTT": "1 VALIDATED + 2 PARTIAL + 1 INSUFFICIENT"
+  },
+  "21674": "SIFT+SIFT_GRID pair1 both VALIDATED (consensus); AKAZE none",
+  "1641": "GFTT 1/4 VALIDATED (correct in v2.3)"
+ },
+ "note": "v2.3 report claims CLAHE 4/4 on 10000 and GFTT 3/4 on 2543 were wrong -> superseded"
+}

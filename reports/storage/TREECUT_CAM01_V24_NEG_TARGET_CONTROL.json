@@ -1,0 +1,15 @@
+{
+ "consensus": [],
+ "single_source": [
+  {
+   "case": 1641,
+   "pair": "2.642->3.434"
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717"
+  }
+ ],
+ "consensus_cases": 0,
+ "single_source_cases": 2
+}

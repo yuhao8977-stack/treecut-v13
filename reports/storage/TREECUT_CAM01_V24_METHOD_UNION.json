@@ -1,0 +1,242 @@
+{
+ "experiment": "CAM01_V24_METHOD_UNION",
+ "metrics": {
+  "island_present_pairs": 36,
+  "oracle_union_validated": 22,
+  "multi_method_consensus": 12,
+  "single_method_validated": 6,
+  "method_conflict": 4,
+  "no_valid_anchor": 14,
+  "union_case_coverage": 8,
+  "consensus_case_coverage": 6,
+  "consensus_pooled_holdout_median": 0.922,
+  "consensus_pooled_holdout_p90": 3.46,
+  "transform_disagreement_median_px": 0.944,
+  "transform_disagreement_p90_px": 1.164,
+  "representative_distribution": {
+   "GFTT_LK_LOCAL": 11,
+   "SIFT_BASELINE": 2,
+   "AKAZE_CLAHE": 2,
+   "AKAZE_BASELINE": 2,
+   "SIFT_GRID_BALANCED": 1
+  }
+ },
+ "per_pair": [
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "validated_method_count": 1
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "validated_method_count": 5
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "validated_method_count": 5
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "validated_method_count": 0
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "validated_method_count": 2
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "validated_method_count": 3
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "validated_method_count": 5
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "validated_method_count": 5
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "validated_method_count": 1
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "validated_method_count": 5
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "validated_method_count": 5
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "validated_method_count": 1
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "validated_method_count": 2
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "validated_method_count": 0
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "validated_method_count": 0
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "validated_method_count": 0
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "validated_method_count": 0
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "validated_method_count": 0
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "validated_method_count": 1
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "validated_method_count": 0
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "validated_method_count": 0
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "validated_method_count": 0
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "validated_method_count": 0
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "validated_method_count": 0
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "validated_method_count": 0
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "validated_method_count": 1
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "validated_method_count": 0
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "validated_method_count": 0
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "validated_method_count": 2
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "validated_method_count": 2
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "validated_method_count": 5
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "validated_method_count": 5
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "validated_method_count": 5
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "validated_method_count": 2
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "validated_method_count": 1
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "validated_method_count": 3
+  }
+ ]
+}

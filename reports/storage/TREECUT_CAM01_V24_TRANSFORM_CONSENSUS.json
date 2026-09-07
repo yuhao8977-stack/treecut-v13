@@ -1,0 +1,331 @@
+{
+ "experiment": "CAM01_V24_TRANSFORM_CONSENSUS",
+ "metrics": {
+  "island_present_pairs": 36,
+  "oracle_union_validated": 22,
+  "multi_method_consensus": 12,
+  "single_method_validated": 6,
+  "method_conflict": 4,
+  "no_valid_anchor": 14,
+  "union_case_coverage": 8,
+  "consensus_case_coverage": 6,
+  "consensus_pooled_holdout_median": 0.922,
+  "consensus_pooled_holdout_p90": 3.46,
+  "transform_disagreement_median_px": 0.944,
+  "transform_disagreement_p90_px": 1.164,
+  "representative_distribution": {
+   "GFTT_LK_LOCAL": 11,
+   "SIFT_BASELINE": 2,
+   "AKAZE_CLAHE": 2,
+   "AKAZE_BASELINE": 2,
+   "SIFT_GRID_BALANCED": 1
+  }
+ },
+ "pairs": [
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "consensus": "SINGLE_METHOD_VALIDATED",
+   "representative": "AKAZE_BASELINE"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "SIFT_BASELINE",
+    "SIFT_GRID_BALANCED",
+    "GFTT_LK_LOCAL"
+   ],
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "SIFT_BASELINE",
+    "SIFT_GRID_BALANCED",
+    "GFTT_LK_LOCAL"
+   ],
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "consensus": "METHOD_CONFLICT",
+   "representative": null
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "GFTT_LK_LOCAL"
+   ],
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "SIFT_BASELINE",
+    "SIFT_GRID_BALANCED",
+    "GFTT_LK_LOCAL"
+   ],
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "SIFT_BASELINE",
+    "SIFT_GRID_BALANCED",
+    "GFTT_LK_LOCAL"
+   ],
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "consensus": "SINGLE_METHOD_VALIDATED",
+   "representative": "AKAZE_BASELINE"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "GFTT_LK_LOCAL"
+   ],
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "GFTT_LK_LOCAL"
+   ],
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "consensus": "SINGLE_METHOD_VALIDATED",
+   "representative": "AKAZE_CLAHE"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "SIFT_BASELINE",
+    "SIFT_GRID_BALANCED"
+   ],
+   "representative": "SIFT_GRID_BALANCED"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "consensus": "SINGLE_METHOD_VALIDATED",
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "consensus": "SINGLE_METHOD_VALIDATED",
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "consensus": "NO_VALID_ANCHOR"
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "SIFT_BASELINE",
+    "SIFT_GRID_BALANCED"
+   ],
+   "representative": "SIFT_BASELINE"
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "consensus": "METHOD_CONFLICT",
+   "representative": null
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "consensus": "METHOD_CONFLICT",
+   "representative": null
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "consensus": "METHOD_CONFLICT",
+   "representative": null
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "SIFT_BASELINE",
+    "SIFT_GRID_BALANCED",
+    "GFTT_LK_LOCAL"
+   ],
+   "representative": "SIFT_BASELINE"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "AKAZE_CLAHE",
+    "GFTT_LK_LOCAL"
+   ],
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "consensus": "SINGLE_METHOD_VALIDATED",
+   "representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "consensus": "MULTI_METHOD_CONSENSUS",
+   "consensus_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "GFTT_LK_LOCAL"
+   ],
+   "representative": "AKAZE_CLAHE"
+  }
+ ]
+}
