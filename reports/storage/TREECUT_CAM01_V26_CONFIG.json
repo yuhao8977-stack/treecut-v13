@@ -1,0 +1,34 @@
+{
+ "grid": 6,
+ "canonical": 512,
+ "dynamic_labels": [
+  "ACRYLIC_TABLE_LEG",
+  "CABINET_DOOR",
+  "DRAWER",
+  "EMBEDDED_APPLIANCE",
+  "EXTENSION_TABLETOP",
+  "HAND",
+  "OTHER_MOVING_PART",
+  "PERSON",
+  "ROCK_TABLE_LEG",
+  "SOCKET_MODULE",
+  "TRACK_SOCKET"
+ ],
+ "min_common_clean_px": 800,
+ "min_corners": 12,
+ "max_candidates": 6,
+ "fb_max_px": 3.0,
+ "fit_inlier_min": 0.45,
+ "holdout_min": 8,
+ "holdout_median_max_px": 3.0,
+ "agreement_px": 3.0,
+ "gftt": {
+  "maxCorners": 200,
+  "qualityLevel": 0.02,
+  "minDistance": 6
+ },
+ "lk": {
+  "win": 21,
+  "maxLevel": 3
+ }
+}

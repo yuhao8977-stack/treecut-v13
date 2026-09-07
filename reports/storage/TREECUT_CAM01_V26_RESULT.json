@@ -1,0 +1,34 @@
+{
+ "experiment": "CAM01_V26_RESULT",
+ "generated_at": "2026-09-07 16:37:54",
+ "baselines": {
+  "v24r1_multi_consensus": 12,
+  "gftt_whole_island": 17,
+  "v25_case_patch": 0
+ },
+ "metrics": {
+  "island_present_pairs": 36,
+  "pair_common_clean_availability": 34,
+  "avg_candidate_regions_per_pair": 4.94,
+  "validated_region_instances": 31,
+  "PAIR_REGION_MULTI": 2,
+  "PAIR_REGION_SINGLE": 5,
+  "PAIR_REGION_CONFLICT": 6,
+  "PAIR_REGION_NO_ANCHOR": 23,
+  "region_union": 7,
+  "case_coverage_9": 3,
+  "multi_case_coverage_9": 1,
+  "true_pooled_median": 0.436,
+  "true_pooled_p90": 1.774,
+  "true_pooled_p95": 3.317,
+  "states": {
+   "PAIR_REGION_SINGLE": 5,
+   "PAIR_REGION_NO_ANCHOR": 23,
+   "PAIR_REGION_CONFLICT": 6,
+   "PAIR_REGION_MULTI_CONSENSUS": 2
+  }
+ },
+ "improvement_class": "FAIL",
+ "status": "FAIL",
+ "next_blocker_if_failed": "STRUCTURAL_OBJECT_ANCHOR_V1"
+}

@@ -1,0 +1,7 @@
+{
+ "experiment": "CAM01_V26_V25_CORRECTIONS",
+ "generated_at": "2026-09-07 16:37:31",
+ "CAM01_V25_DEFECT_OVERLAP_SUM_01": "overlap 累加交叉面积(重复计数) → 真 union raster (∈[0,1])",
+ "no_data_metrics": "V2.5 true_pooled 0.0 → 应为 null（0px≠无数据）",
+ "island_present_cases": 9
+}
