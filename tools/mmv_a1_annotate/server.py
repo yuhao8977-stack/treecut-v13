@@ -43,7 +43,7 @@ P3_ROI_FILE = OUT / "TREECUT_POSTA3_HUMAN_ROI_V1.json"
 P3_ROI50_DIR = Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime\production_smoke\B007\mmv_posta3_frames") / "roi50"
 P3_ROI_LABELS = {"TABLETOP", "EXTENSION_TABLETOP", "ISLAND_BODY", "PERSON", "HAND",
                  "ROCK_TABLE_LEG", "ACRYLIC_TABLE_LEG", "TRACK_SOCKET", "SOCKET_MODULE",
-                 "DRAWER", "CABINET_DOOR", "SINK"}
+                 "DRAWER", "CABINET_DOOR", "SINK", "EMBEDDED_APPLIANCE"}
 # Observability 人工判断允许枚举（内部英文，界面中文）
 OBS_LABELS = {"ACTION_PROCESS_VISIBLE", "ENDPOINTS_ONLY", "MOSTLY_STATIC", "UNCLEAR"}
 
