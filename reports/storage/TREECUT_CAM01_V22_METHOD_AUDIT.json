@@ -1,0 +1,20 @@
+{
+ "TARGET_RELATIVE_T1_BBOX_REUSED_FOR_T0": true,
+ "LOCAL_ANCHOR_RESIDUAL_IN_SAMPLE": true,
+ "evidence": {
+  "v21_file": "scripts/posta3_cam01_v21.py",
+  "target_bug": "v21 目标相对运动仅取 t1 target 框同时算 f0/f1",
+  "anchor_bug": "v21 岛台 descriptor residual 在拟合同一批 RANSAC inliers 上计算(in-sample)"
+ },
+ "summary": {
+  "total": 40,
+  "island_present": 36,
+  "anchor_states": {
+   "LOCAL_ANCHOR_VALIDATED": 14,
+   "LOCAL_ANCHOR_NOT_VALIDATED": 8,
+   "LOCAL_ANCHOR_PARTIAL": 2,
+   "LOCAL_ANCHOR_INSUFFICIENT": 12,
+   "N/A": 4
+  }
+ }
+}
