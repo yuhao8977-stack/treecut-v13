@@ -1,0 +1,10 @@
+{
+ "grid": 4,
+ "overlap_max": 0.25,
+ "margin": 0.15,
+ "min_corners": 8,
+ "min_grad": 250.0,
+ "max_patches": 4,
+ "score": "0.5*clip(min_grad/2500) + 0.5*clip(min_corners/30)",
+ "texture_persistence": "min over 5 semantic frames (conservative)"
+}

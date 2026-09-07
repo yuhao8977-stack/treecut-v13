@@ -1,0 +1,718 @@
+{
+ "cases": [
+  {
+   "case": 27433,
+   "valid_cells": 0,
+   "rejected": {
+    "r0c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r0c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ]
+   },
+   "selected": [],
+   "bank_state": "PATCH_BANK_INSUFFICIENT"
+  },
+  {
+   "case": 12095,
+   "valid_cells": 0,
+   "rejected": {
+    "r0c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r0c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ]
+   },
+   "selected": [],
+   "bank_state": "PATCH_BANK_INSUFFICIENT"
+  },
+  {
+   "case": 3571,
+   "valid_cells": 0,
+   "rejected": {
+    "r0c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ]
+   },
+   "selected": [],
+   "bank_state": "PATCH_BANK_INSUFFICIENT"
+  },
+  {
+   "case": 21674,
+   "valid_cells": 0,
+   "rejected": {
+    "r0c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ]
+   },
+   "selected": [],
+   "bank_state": "PATCH_BANK_INSUFFICIENT"
+  },
+  {
+   "case": 1641,
+   "valid_cells": 0,
+   "rejected": {
+    "r0c0": [
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r0c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r0c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ]
+   },
+   "selected": [],
+   "bank_state": "PATCH_BANK_INSUFFICIENT"
+  },
+  {
+   "case": 10000,
+   "valid_cells": 0,
+   "rejected": {
+    "r0c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ]
+   },
+   "selected": [],
+   "bank_state": "PATCH_BANK_INSUFFICIENT"
+  },
+  {
+   "case": 2543,
+   "valid_cells": 0,
+   "rejected": {
+    "r0c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r0c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ]
+   },
+   "selected": [],
+   "bank_state": "PATCH_BANK_INSUFFICIENT"
+  },
+  {
+   "case": 9697,
+   "valid_cells": 0,
+   "rejected": {
+    "r0c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r0c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r1c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r3c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ]
+   },
+   "selected": [],
+   "bank_state": "PATCH_BANK_INSUFFICIENT"
+  },
+  {
+   "case": 25894,
+   "valid_cells": 0,
+   "rejected": {
+    "r0c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r0c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r1c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE",
+     "FEW_FEATURES"
+    ],
+    "r2c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r2c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c0": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c1": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c2": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ],
+    "r3c3": [
+     "PATCH_FOREGROUND_CONTAMINATED",
+     "LOW_TEXTURE"
+    ]
+   },
+   "selected": [],
+   "bank_state": "PATCH_BANK_INSUFFICIENT"
+  }
+ ]
+}

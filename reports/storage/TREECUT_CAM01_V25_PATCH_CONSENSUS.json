@@ -1,0 +1,18 @@
+{
+ "island_present_pairs": 36,
+ "patch_states": {
+  "PATCH_NO_ANCHOR": 36
+ },
+ "PATCH_MULTI_CONSENSUS": 0,
+ "PATCH_SINGLE": 0,
+ "PATCH_CONFLICT": 0,
+ "PATCH_NO_ANCHOR": 36,
+ "patch_union": 0,
+ "case_coverage_9": 0,
+ "multi_case_coverage_9": 0,
+ "true_pooled_median": 0.0,
+ "true_pooled_p90": 0.0,
+ "true_pooled_p95": 0.0,
+ "selected_patches_total": 0,
+ "validated_patch_instances": 0
+}
