@@ -1,0 +1,4981 @@
+{
+ "annotations": [
+  {
+   "media_id": 27433,
+   "frame_timestamp": 3.106,
+   "frame": "pc10_27433_0.jpg",
+   "frame_hash": "1be394bf51c087943d770757e48bfbca9a72f21f27484bb92870c4d44271c2a9",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    353,
+    917,
+    484,
+    1264
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:37:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 3.106,
+   "frame": "pc10_27433_0.jpg",
+   "frame_hash": "1be394bf51c087943d770757e48bfbca9a72f21f27484bb92870c4d44271c2a9",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    529,
+    952,
+    739,
+    1208
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:37:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 3.106,
+   "frame": "pc10_27433_0.jpg",
+   "frame_hash": "1be394bf51c087943d770757e48bfbca9a72f21f27484bb92870c4d44271c2a9",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    309,
+    1389,
+    700,
+    1968
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:37:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 3.106,
+   "frame": "pc10_27433_0.jpg",
+   "frame_hash": "1be394bf51c087943d770757e48bfbca9a72f21f27484bb92870c4d44271c2a9",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    1228,
+    1257,
+    1275,
+    1631
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:37:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 3.106,
+   "frame": "pc10_27433_0.jpg",
+   "frame_hash": "1be394bf51c087943d770757e48bfbca9a72f21f27484bb92870c4d44271c2a9",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1232,
+    1084,
+    1277,
+    1190
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:37:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 3.106,
+   "frame": "pc10_27433_0.jpg",
+   "frame_hash": "1be394bf51c087943d770757e48bfbca9a72f21f27484bb92870c4d44271c2a9",
+   "object_name": "SOCKET_MODULE",
+   "bbox_pixel": [
+    837,
+    1070,
+    1132,
+    1172
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:37:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 3.106,
+   "frame": "pc10_27433_0.jpg",
+   "frame_hash": "1be394bf51c087943d770757e48bfbca9a72f21f27484bb92870c4d44271c2a9",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    101,
+    1141,
+    1219,
+    1467
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:37:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 3.106,
+   "frame": "pc10_27433_0.jpg",
+   "frame_hash": "1be394bf51c087943d770757e48bfbca9a72f21f27484bb92870c4d44271c2a9",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    759,
+    995,
+    1270,
+    1645
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:37:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 3.106,
+   "frame": "pc10_27433_0.jpg",
+   "frame_hash": "1be394bf51c087943d770757e48bfbca9a72f21f27484bb92870c4d44271c2a9",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    280,
+    715,
+    759,
+    1297
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:37:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 7.246,
+   "frame": "pc10_27433_1.jpg",
+   "frame_hash": "2eb5b9df7c0ebdc9149940a73186526e4b21d0caebbf75d0d3a190478da2ecc7",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    302,
+    965,
+    462,
+    1304
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:39:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 7.246,
+   "frame": "pc10_27433_1.jpg",
+   "frame_hash": "2eb5b9df7c0ebdc9149940a73186526e4b21d0caebbf75d0d3a190478da2ecc7",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    558,
+    956,
+    682,
+    1244
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:39:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 7.246,
+   "frame": "pc10_27433_1.jpg",
+   "frame_hash": "2eb5b9df7c0ebdc9149940a73186526e4b21d0caebbf75d0d3a190478da2ecc7",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    209,
+    1427,
+    642,
+    2041
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:39:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 7.246,
+   "frame": "pc10_27433_1.jpg",
+   "frame_hash": "2eb5b9df7c0ebdc9149940a73186526e4b21d0caebbf75d0d3a190478da2ecc7",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    1252,
+    1284,
+    1275,
+    1657
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:39:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 7.246,
+   "frame": "pc10_27433_1.jpg",
+   "frame_hash": "2eb5b9df7c0ebdc9149940a73186526e4b21d0caebbf75d0d3a190478da2ecc7",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1263,
+    1108,
+    1275,
+    1208
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:39:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 7.246,
+   "frame": "pc10_27433_1.jpg",
+   "frame_hash": "2eb5b9df7c0ebdc9149940a73186526e4b21d0caebbf75d0d3a190478da2ecc7",
+   "object_name": "SOCKET_MODULE",
+   "bbox_pixel": [
+    859,
+    1097,
+    1170,
+    1188
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:39:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 7.246,
+   "frame": "pc10_27433_1.jpg",
+   "frame_hash": "2eb5b9df7c0ebdc9149940a73186526e4b21d0caebbf75d0d3a190478da2ecc7",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    14,
+    1183,
+    1246,
+    1525
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:39:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 7.246,
+   "frame": "pc10_27433_1.jpg",
+   "frame_hash": "2eb5b9df7c0ebdc9149940a73186526e4b21d0caebbf75d0d3a190478da2ecc7",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    795,
+    1001,
+    1262,
+    1673
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:39:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 7.246,
+   "frame": "pc10_27433_1.jpg",
+   "frame_hash": "2eb5b9df7c0ebdc9149940a73186526e4b21d0caebbf75d0d3a190478da2ecc7",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    260,
+    764,
+    696,
+    1306
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:39:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 10.352,
+   "frame": "pc10_27433_2.jpg",
+   "frame_hash": "4e42a9a80b7dfcd734f35e29d4b1ea989e314e1170c7e892c4424933bdf80759",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    362,
+    830,
+    511,
+    1068
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:40:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 10.352,
+   "frame": "pc10_27433_2.jpg",
+   "frame_hash": "4e42a9a80b7dfcd734f35e29d4b1ea989e314e1170c7e892c4424933bdf80759",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    618,
+    812,
+    726,
+    1077
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:40:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 10.352,
+   "frame": "pc10_27433_2.jpg",
+   "frame_hash": "4e42a9a80b7dfcd734f35e29d4b1ea989e314e1170c7e892c4424933bdf80759",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    302,
+    1405,
+    743,
+    1988
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:40:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 10.352,
+   "frame": "pc10_27433_2.jpg",
+   "frame_hash": "4e42a9a80b7dfcd734f35e29d4b1ea989e314e1170c7e892c4424933bdf80759",
+   "object_name": "SOCKET_MODULE",
+   "bbox_pixel": [
+    892,
+    1092,
+    1226,
+    1188
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:40:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 10.352,
+   "frame": "pc10_27433_2.jpg",
+   "frame_hash": "4e42a9a80b7dfcd734f35e29d4b1ea989e314e1170c7e892c4424933bdf80759",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    72,
+    1192,
+    1272,
+    1479
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:40:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 10.352,
+   "frame": "pc10_27433_2.jpg",
+   "frame_hash": "4e42a9a80b7dfcd734f35e29d4b1ea989e314e1170c7e892c4424933bdf80759",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    788,
+    997,
+    1275,
+    1672
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:40:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 10.352,
+   "frame": "pc10_27433_2.jpg",
+   "frame_hash": "4e42a9a80b7dfcd734f35e29d4b1ea989e314e1170c7e892c4424933bdf80759",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    322,
+    692,
+    721,
+    1286
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:40:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 17.598,
+   "frame": "pc10_27433_4.jpg",
+   "frame_hash": "385345b17f974d734d605aa6e82a3174c0bed108266cecb2febf18984f6da01d",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    238,
+    966,
+    427,
+    1163
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:42:19",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 17.598,
+   "frame": "pc10_27433_4.jpg",
+   "frame_hash": "385345b17f974d734d605aa6e82a3174c0bed108266cecb2febf18984f6da01d",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    544,
+    958,
+    817,
+    1147
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:42:19",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 17.598,
+   "frame": "pc10_27433_4.jpg",
+   "frame_hash": "385345b17f974d734d605aa6e82a3174c0bed108266cecb2febf18984f6da01d",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    262,
+    1469,
+    750,
+    2145
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:42:19",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 17.598,
+   "frame": "pc10_27433_4.jpg",
+   "frame_hash": "385345b17f974d734d605aa6e82a3174c0bed108266cecb2febf18984f6da01d",
+   "object_name": "SOCKET_MODULE",
+   "bbox_pixel": [
+    906,
+    1124,
+    1226,
+    1226
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:42:19",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 17.598,
+   "frame": "pc10_27433_4.jpg",
+   "frame_hash": "385345b17f974d734d605aa6e82a3174c0bed108266cecb2febf18984f6da01d",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    68,
+    1216,
+    1270,
+    1621
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:42:19",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 17.598,
+   "frame": "pc10_27433_4.jpg",
+   "frame_hash": "385345b17f974d734d605aa6e82a3174c0bed108266cecb2febf18984f6da01d",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    826,
+    1043,
+    1277,
+    1725
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:42:19",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 17.598,
+   "frame": "pc10_27433_4.jpg",
+   "frame_hash": "385345b17f974d734d605aa6e82a3174c0bed108266cecb2febf18984f6da01d",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    131,
+    732,
+    815,
+    1368
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:42:19",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 13.458,
+   "frame": "pc10_27433_3.jpg",
+   "frame_hash": "5a1f594a4aab2750ee0411c5d343facddef9793beb96d2b5dcca2a162dd8f9cb",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    98,
+    998,
+    328,
+    1361
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:44:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 13.458,
+   "frame": "pc10_27433_3.jpg",
+   "frame_hash": "5a1f594a4aab2750ee0411c5d343facddef9793beb96d2b5dcca2a162dd8f9cb",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    429,
+    1032,
+    613,
+    1275
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:44:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 13.458,
+   "frame": "pc10_27433_3.jpg",
+   "frame_hash": "5a1f594a4aab2750ee0411c5d343facddef9793beb96d2b5dcca2a162dd8f9cb",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    81,
+    1477,
+    547,
+    2166
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:44:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 13.458,
+   "frame": "pc10_27433_3.jpg",
+   "frame_hash": "5a1f594a4aab2750ee0411c5d343facddef9793beb96d2b5dcca2a162dd8f9cb",
+   "object_name": "SOCKET_MODULE",
+   "bbox_pixel": [
+    888,
+    1095,
+    1186,
+    1192
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:44:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 13.458,
+   "frame": "pc10_27433_3.jpg",
+   "frame_hash": "5a1f594a4aab2750ee0411c5d343facddef9793beb96d2b5dcca2a162dd8f9cb",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    5,
+    1170,
+    1263,
+    1585
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:44:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 13.458,
+   "frame": "pc10_27433_3.jpg",
+   "frame_hash": "5a1f594a4aab2750ee0411c5d343facddef9793beb96d2b5dcca2a162dd8f9cb",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    819,
+    1001,
+    1275,
+    1683
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:44:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 27433,
+   "frame_timestamp": 13.458,
+   "frame": "pc10_27433_3.jpg",
+   "frame_hash": "5a1f594a4aab2750ee0411c5d343facddef9793beb96d2b5dcca2a162dd8f9cb",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    61,
+    792,
+    687,
+    1364
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 10:44:35",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 1.842,
+   "frame": "pc10_3571_0.jpg",
+   "frame_hash": "e91fbb72d01938b60ccad3e4a44894be3345c94e9fd44c3bf8e07d43bc26fe9b",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    274,
+    1216,
+    813,
+    1486
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:03:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 1.842,
+   "frame": "pc10_3571_0.jpg",
+   "frame_hash": "e91fbb72d01938b60ccad3e4a44894be3345c94e9fd44c3bf8e07d43bc26fe9b",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    267,
+    1628,
+    562,
+    2166
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:03:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 1.842,
+   "frame": "pc10_3571_0.jpg",
+   "frame_hash": "e91fbb72d01938b60ccad3e4a44894be3345c94e9fd44c3bf8e07d43bc26fe9b",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    988,
+    1265,
+    1263,
+    1394
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:03:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 1.842,
+   "frame": "pc10_3571_0.jpg",
+   "frame_hash": "e91fbb72d01938b60ccad3e4a44894be3345c94e9fd44c3bf8e07d43bc26fe9b",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    86,
+    1331,
+    1279,
+    1744
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:03:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 1.842,
+   "frame": "pc10_3571_0.jpg",
+   "frame_hash": "e91fbb72d01938b60ccad3e4a44894be3345c94e9fd44c3bf8e07d43bc26fe9b",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    910,
+    1176,
+    1279,
+    1856
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:03:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 1.842,
+   "frame": "pc10_3571_0.jpg",
+   "frame_hash": "e91fbb72d01938b60ccad3e4a44894be3345c94e9fd44c3bf8e07d43bc26fe9b",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    267,
+    1003,
+    826,
+    1555
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:03:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 4.299,
+   "frame": "pc10_3571_1.jpg",
+   "frame_hash": "7ca411111e18e58089333aa660d33b0eacee0a9bbc29c39067aad1798e9097b6",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    331,
+    1138,
+    886,
+    1386
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:05:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 4.299,
+   "frame": "pc10_3571_1.jpg",
+   "frame_hash": "7ca411111e18e58089333aa660d33b0eacee0a9bbc29c39067aad1798e9097b6",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    411,
+    1528,
+    710,
+    2006
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:05:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 4.299,
+   "frame": "pc10_3571_1.jpg",
+   "frame_hash": "7ca411111e18e58089333aa660d33b0eacee0a9bbc29c39067aad1798e9097b6",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    863,
+    1273,
+    1092,
+    1359
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:05:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 4.299,
+   "frame": "pc10_3571_1.jpg",
+   "frame_hash": "7ca411111e18e58089333aa660d33b0eacee0a9bbc29c39067aad1798e9097b6",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1132,
+    1287,
+    1268,
+    1394
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:05:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 4.299,
+   "frame": "pc10_3571_1.jpg",
+   "frame_hash": "7ca411111e18e58089333aa660d33b0eacee0a9bbc29c39067aad1798e9097b6",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1126,
+    1441,
+    1277,
+    1799
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:05:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 4.299,
+   "frame": "pc10_3571_1.jpg",
+   "frame_hash": "7ca411111e18e58089333aa660d33b0eacee0a9bbc29c39067aad1798e9097b6",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    238,
+    1320,
+    1142,
+    1606
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:05:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 4.299,
+   "frame": "pc10_3571_1.jpg",
+   "frame_hash": "7ca411111e18e58089333aa660d33b0eacee0a9bbc29c39067aad1798e9097b6",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    810,
+    1163,
+    1277,
+    1828
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:05:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 4.299,
+   "frame": "pc10_3571_1.jpg",
+   "frame_hash": "7ca411111e18e58089333aa660d33b0eacee0a9bbc29c39067aad1798e9097b6",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    347,
+    955,
+    841,
+    1412
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:05:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 6.142,
+   "frame": "pc10_3571_2.jpg",
+   "frame_hash": "5af9acb7287543bb4b2499af0819b4b7a8ce6ec74c467453453fb034e85dcc91",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    507,
+    1083,
+    888,
+    1406
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:06:46",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 6.142,
+   "frame": "pc10_3571_2.jpg",
+   "frame_hash": "5af9acb7287543bb4b2499af0819b4b7a8ce6ec74c467453453fb034e85dcc91",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    347,
+    1528,
+    642,
+    2030
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:06:46",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 6.142,
+   "frame": "pc10_3571_2.jpg",
+   "frame_hash": "5af9acb7287543bb4b2499af0819b4b7a8ce6ec74c467453453fb034e85dcc91",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    790,
+    1270,
+    1010,
+    1363
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:06:46",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 6.142,
+   "frame": "pc10_3571_2.jpg",
+   "frame_hash": "5af9acb7287543bb4b2499af0819b4b7a8ce6ec74c467453453fb034e85dcc91",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1072,
+    1245,
+    1270,
+    1392
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:06:46",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 6.142,
+   "frame": "pc10_3571_2.jpg",
+   "frame_hash": "5af9acb7287543bb4b2499af0819b4b7a8ce6ec74c467453453fb034e85dcc91",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1070,
+    1412,
+    1268,
+    1787
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:06:46",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 6.142,
+   "frame": "pc10_3571_2.jpg",
+   "frame_hash": "5af9acb7287543bb4b2499af0819b4b7a8ce6ec74c467453453fb034e85dcc91",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    153,
+    1332,
+    1092,
+    1616
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:06:46",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 6.142,
+   "frame": "pc10_3571_2.jpg",
+   "frame_hash": "5af9acb7287543bb4b2499af0819b4b7a8ce6ec74c467453453fb034e85dcc91",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    741,
+    1154,
+    1270,
+    1810
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:06:46",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 6.142,
+   "frame": "pc10_3571_2.jpg",
+   "frame_hash": "5af9acb7287543bb4b2499af0819b4b7a8ce6ec74c467453453fb034e85dcc91",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    436,
+    912,
+    895,
+    1451
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:06:46",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 7.984,
+   "frame": "pc10_3571_3.jpg",
+   "frame_hash": "a9239e2c1e8964a669de8b752db49ae25faadc9e7dc852a663a89a0437a85cd1",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    413,
+    1125,
+    817,
+    1446
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:07:50",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 7.984,
+   "frame": "pc10_3571_3.jpg",
+   "frame_hash": "a9239e2c1e8964a669de8b752db49ae25faadc9e7dc852a663a89a0437a85cd1",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    144,
+    1633,
+    444,
+    2161
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:07:50",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 7.984,
+   "frame": "pc10_3571_3.jpg",
+   "frame_hash": "a9239e2c1e8964a669de8b752db49ae25faadc9e7dc852a663a89a0437a85cd1",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    817,
+    1256,
+    1028,
+    1363
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:07:50",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 7.984,
+   "frame": "pc10_3571_3.jpg",
+   "frame_hash": "a9239e2c1e8964a669de8b752db49ae25faadc9e7dc852a663a89a0437a85cd1",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1081,
+    1264,
+    1275,
+    1386
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:07:50",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 7.984,
+   "frame": "pc10_3571_3.jpg",
+   "frame_hash": "a9239e2c1e8964a669de8b752db49ae25faadc9e7dc852a663a89a0437a85cd1",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1088,
+    1437,
+    1270,
+    1786
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:07:50",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 7.984,
+   "frame": "pc10_3571_3.jpg",
+   "frame_hash": "a9239e2c1e8964a669de8b752db49ae25faadc9e7dc852a663a89a0437a85cd1",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    5,
+    1329,
+    1087,
+    1676
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:07:50",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 7.984,
+   "frame": "pc10_3571_3.jpg",
+   "frame_hash": "a9239e2c1e8964a669de8b752db49ae25faadc9e7dc852a663a89a0437a85cd1",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    810,
+    1151,
+    1243,
+    1811
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:07:50",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 7.984,
+   "frame": "pc10_3571_3.jpg",
+   "frame_hash": "a9239e2c1e8964a669de8b752db49ae25faadc9e7dc852a663a89a0437a85cd1",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    438,
+    909,
+    835,
+    1486
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:07:50",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 10.441,
+   "frame": "pc10_3571_4.jpg",
+   "frame_hash": "2ce6bf277d653c9bceaa8f265e975a2941adc9fe1207d3bb9d9d83374e64d68b",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    604,
+    1072,
+    986,
+    1414
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:08:59",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 10.441,
+   "frame": "pc10_3571_4.jpg",
+   "frame_hash": "2ce6bf277d653c9bceaa8f265e975a2941adc9fe1207d3bb9d9d83374e64d68b",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    144,
+    1617,
+    449,
+    2153
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:08:59",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 10.441,
+   "frame": "pc10_3571_4.jpg",
+   "frame_hash": "2ce6bf277d653c9bceaa8f265e975a2941adc9fe1207d3bb9d9d83374e64d68b",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    877,
+    1272,
+    1122,
+    1357
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:08:59",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 10.441,
+   "frame": "pc10_3571_4.jpg",
+   "frame_hash": "2ce6bf277d653c9bceaa8f265e975a2941adc9fe1207d3bb9d9d83374e64d68b",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1168,
+    1268,
+    1275,
+    1413
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:08:59",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 10.441,
+   "frame": "pc10_3571_4.jpg",
+   "frame_hash": "2ce6bf277d653c9bceaa8f265e975a2941adc9fe1207d3bb9d9d83374e64d68b",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1166,
+    1444,
+    1270,
+    1812
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:08:59",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 10.441,
+   "frame": "pc10_3571_4.jpg",
+   "frame_hash": "2ce6bf277d653c9bceaa8f265e975a2941adc9fe1207d3bb9d9d83374e64d68b",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    6,
+    1329,
+    1161,
+    1708
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:08:59",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 10.441,
+   "frame": "pc10_3571_4.jpg",
+   "frame_hash": "2ce6bf277d653c9bceaa8f265e975a2941adc9fe1207d3bb9d9d83374e64d68b",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    803,
+    1188,
+    1275,
+    1810
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:08:59",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 3571,
+   "frame_timestamp": 10.441,
+   "frame": "pc10_3571_4.jpg",
+   "frame_hash": "2ce6bf277d653c9bceaa8f265e975a2941adc9fe1207d3bb9d9d83374e64d68b",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    560,
+    865,
+    999,
+    1750
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:08:59",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 1.201,
+   "frame": "pc10_21674_0.jpg",
+   "frame_hash": "ced356cefbbfdd3515537eb3109588b700ede011aba1806d1abf84af47ef6739",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    832,
+    2192,
+    975,
+    2268
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:10:38",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 1.201,
+   "frame": "pc10_21674_0.jpg",
+   "frame_hash": "ced356cefbbfdd3515537eb3109588b700ede011aba1806d1abf84af47ef6739",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    647,
+    1601,
+    1257,
+    2266
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:10:38",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 1.201,
+   "frame": "pc10_21674_0.jpg",
+   "frame_hash": "ced356cefbbfdd3515537eb3109588b700ede011aba1806d1abf84af47ef6739",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    50,
+    1138,
+    276,
+    1805
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:10:38",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 1.201,
+   "frame": "pc10_21674_0.jpg",
+   "frame_hash": "ced356cefbbfdd3515537eb3109588b700ede011aba1806d1abf84af47ef6739",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    633,
+    1248,
+    823,
+    1648
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:10:38",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 1.201,
+   "frame": "pc10_21674_0.jpg",
+   "frame_hash": "ced356cefbbfdd3515537eb3109588b700ede011aba1806d1abf84af47ef6739",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    39,
+    761,
+    689,
+    2257
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:10:38",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 2.803,
+   "frame": "pc10_21674_1.jpg",
+   "frame_hash": "1af425693c54683eb9967b3722b00c706d61aa85380690dadc55a9a8ce04f669",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    327,
+    1130,
+    673,
+    1381
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:11:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 2.803,
+   "frame": "pc10_21674_1.jpg",
+   "frame_hash": "1af425693c54683eb9967b3722b00c706d61aa85380690dadc55a9a8ce04f669",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    775,
+    984,
+    981,
+    1347
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:11:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 2.803,
+   "frame": "pc10_21674_1.jpg",
+   "frame_hash": "1af425693c54683eb9967b3722b00c706d61aa85380690dadc55a9a8ce04f669",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    846,
+    1577,
+    1270,
+    1830
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:11:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 2.803,
+   "frame": "pc10_21674_1.jpg",
+   "frame_hash": "1af425693c54683eb9967b3722b00c706d61aa85380690dadc55a9a8ce04f669",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    17,
+    1673,
+    1272,
+    2266
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:11:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 2.803,
+   "frame": "pc10_21674_1.jpg",
+   "frame_hash": "1af425693c54683eb9967b3722b00c706d61aa85380690dadc55a9a8ce04f669",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    710,
+    1359,
+    1263,
+    1899
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:11:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 2.803,
+   "frame": "pc10_21674_1.jpg",
+   "frame_hash": "1af425693c54683eb9967b3722b00c706d61aa85380690dadc55a9a8ce04f669",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    229,
+    880,
+    899,
+    1878
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:11:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 4.004,
+   "frame": "pc10_21674_2.jpg",
+   "frame_hash": "c77eb8a90f00a005d7727232e062b204523367937b912f9872c21fc9444ca4fa",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    217,
+    1227,
+    508,
+    1732
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:12:03",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 4.004,
+   "frame": "pc10_21674_2.jpg",
+   "frame_hash": "c77eb8a90f00a005d7727232e062b204523367937b912f9872c21fc9444ca4fa",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    656,
+    1165,
+    841,
+    1650
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:12:03",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 4.004,
+   "frame": "pc10_21674_2.jpg",
+   "frame_hash": "c77eb8a90f00a005d7727232e062b204523367937b912f9872c21fc9444ca4fa",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    837,
+    1437,
+    1188,
+    1590
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:12:03",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 4.004,
+   "frame": "pc10_21674_2.jpg",
+   "frame_hash": "c77eb8a90f00a005d7727232e062b204523367937b912f9872c21fc9444ca4fa",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    17,
+    1497,
+    1255,
+    2264
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:12:03",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 4.004,
+   "frame": "pc10_21674_2.jpg",
+   "frame_hash": "c77eb8a90f00a005d7727232e062b204523367937b912f9872c21fc9444ca4fa",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    703,
+    1285,
+    1270,
+    2233
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:12:03",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 4.004,
+   "frame": "pc10_21674_2.jpg",
+   "frame_hash": "c77eb8a90f00a005d7727232e062b204523367937b912f9872c21fc9444ca4fa",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    247,
+    977,
+    823,
+    1779
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:12:03",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 5.205,
+   "frame": "pc10_21674_3.jpg",
+   "frame_hash": "4dc918624e0b7aa4ae7085fef143b8fa068ec3e72a01e31f369563cd15edff64",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    471,
+    1247,
+    832,
+    1536
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:13:11",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 5.205,
+   "frame": "pc10_21674_3.jpg",
+   "frame_hash": "4dc918624e0b7aa4ae7085fef143b8fa068ec3e72a01e31f369563cd15edff64",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    843,
+    1368,
+    1137,
+    1499
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:13:11",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 5.205,
+   "frame": "pc10_21674_3.jpg",
+   "frame_hash": "4dc918624e0b7aa4ae7085fef143b8fa068ec3e72a01e31f369563cd15edff64",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    136,
+    1804,
+    723,
+    2264
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:13:11",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 5.205,
+   "frame": "pc10_21674_3.jpg",
+   "frame_hash": "4dc918624e0b7aa4ae7085fef143b8fa068ec3e72a01e31f369563cd15edff64",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1195,
+    1408,
+    1279,
+    1559
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:13:11",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 5.205,
+   "frame": "pc10_21674_3.jpg",
+   "frame_hash": "4dc918624e0b7aa4ae7085fef143b8fa068ec3e72a01e31f369563cd15edff64",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1183,
+    1588,
+    1272,
+    1985
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:13:11",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 5.205,
+   "frame": "pc10_21674_3.jpg",
+   "frame_hash": "4dc918624e0b7aa4ae7085fef143b8fa068ec3e72a01e31f369563cd15edff64",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    12,
+    1448,
+    1228,
+    1958
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:13:11",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 5.205,
+   "frame": "pc10_21674_3.jpg",
+   "frame_hash": "4dc918624e0b7aa4ae7085fef143b8fa068ec3e72a01e31f369563cd15edff64",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    795,
+    1279,
+    1268,
+    2036
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:13:11",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 5.205,
+   "frame": "pc10_21674_3.jpg",
+   "frame_hash": "4dc918624e0b7aa4ae7085fef143b8fa068ec3e72a01e31f369563cd15edff64",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    380,
+    1014,
+    835,
+    1551
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:13:11",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 6.807,
+   "frame": "pc10_21674_4.jpg",
+   "frame_hash": "04da8b81e48d3fe9d817b99e5f2b121790c96f998bc265df2e42e1dccbf6cd46",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    516,
+    1242,
+    790,
+    1475
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:06",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 6.807,
+   "frame": "pc10_21674_4.jpg",
+   "frame_hash": "04da8b81e48d3fe9d817b99e5f2b121790c96f998bc265df2e42e1dccbf6cd46",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    801,
+    1372,
+    983,
+    1456
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:06",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 6.807,
+   "frame": "pc10_21674_4.jpg",
+   "frame_hash": "04da8b81e48d3fe9d817b99e5f2b121790c96f998bc265df2e42e1dccbf6cd46",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    380,
+    1588,
+    730,
+    1986
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:06",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 6.807,
+   "frame": "pc10_21674_4.jpg",
+   "frame_hash": "04da8b81e48d3fe9d817b99e5f2b121790c96f998bc265df2e42e1dccbf6cd46",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1021,
+    1371,
+    1201,
+    1471
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:06",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 6.807,
+   "frame": "pc10_21674_4.jpg",
+   "frame_hash": "04da8b81e48d3fe9d817b99e5f2b121790c96f998bc265df2e42e1dccbf6cd46",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    990,
+    1484,
+    1212,
+    1839
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:06",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 6.807,
+   "frame": "pc10_21674_4.jpg",
+   "frame_hash": "04da8b81e48d3fe9d817b99e5f2b121790c96f998bc265df2e42e1dccbf6cd46",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    171,
+    1430,
+    1165,
+    1660
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:06",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 6.807,
+   "frame": "pc10_21674_4.jpg",
+   "frame_hash": "04da8b81e48d3fe9d817b99e5f2b121790c96f998bc265df2e42e1dccbf6cd46",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    763,
+    1286,
+    1230,
+    1843
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:06",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 21674,
+   "frame_timestamp": 6.807,
+   "frame": "pc10_21674_4.jpg",
+   "frame_hash": "04da8b81e48d3fe9d817b99e5f2b121790c96f998bc265df2e42e1dccbf6cd46",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    493,
+    1083,
+    797,
+    1499
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:06",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 0.55,
+   "frame": "pc10_2212_0.jpg",
+   "frame_hash": "8f2824ef71943d7970211ab51b97aae6abd4f038be112d1cc1c5b6fe136a1832",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    17,
+    1032,
+    496,
+    1322
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 0.55,
+   "frame": "pc10_2212_0.jpg",
+   "frame_hash": "8f2824ef71943d7970211ab51b97aae6abd4f038be112d1cc1c5b6fe136a1832",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    407,
+    648,
+    895,
+    1768
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 0.55,
+   "frame": "pc10_2212_0.jpg",
+   "frame_hash": "8f2824ef71943d7970211ab51b97aae6abd4f038be112d1cc1c5b6fe136a1832",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    5,
+    474,
+    1263,
+    725
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:14:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 1.283,
+   "frame": "pc10_2212_1.jpg",
+   "frame_hash": "4cb451114a25c4e49264abd9da50944b3fc465dc53f2f5e700ba9e6f3c0ede48",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    5,
+    849,
+    487,
+    1246
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:15:05",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 1.283,
+   "frame": "pc10_2212_1.jpg",
+   "frame_hash": "4cb451114a25c4e49264abd9da50944b3fc465dc53f2f5e700ba9e6f3c0ede48",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    387,
+    554,
+    948,
+    1645
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:15:05",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 1.283,
+   "frame": "pc10_2212_1.jpg",
+   "frame_hash": "4cb451114a25c4e49264abd9da50944b3fc465dc53f2f5e700ba9e6f3c0ede48",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    10,
+    411,
+    1272,
+    663
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:15:05",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 1.833,
+   "frame": "pc10_2212_2.jpg",
+   "frame_hash": "dbda0a73220d3477b2fccfc0f8c800f1bcb63c2eaa085cf466827c7a69cb8c5d",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    8,
+    946,
+    407,
+    1394
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:15:52",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 1.833,
+   "frame": "pc10_2212_2.jpg",
+   "frame_hash": "dbda0a73220d3477b2fccfc0f8c800f1bcb63c2eaa085cf466827c7a69cb8c5d",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    447,
+    482,
+    917,
+    1632
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:15:52",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 1.833,
+   "frame": "pc10_2212_2.jpg",
+   "frame_hash": "dbda0a73220d3477b2fccfc0f8c800f1bcb63c2eaa085cf466827c7a69cb8c5d",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    3,
+    301,
+    1275,
+    571
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:15:52",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 2.383,
+   "frame": "pc10_2212_3.jpg",
+   "frame_hash": "d5b44b84486fcc02414b005d99b8d53352c30075da287db7f0fccb443255c18a",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    5,
+    918,
+    491,
+    1238
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:16:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 2.383,
+   "frame": "pc10_2212_3.jpg",
+   "frame_hash": "d5b44b84486fcc02414b005d99b8d53352c30075da287db7f0fccb443255c18a",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    396,
+    384,
+    972,
+    1597
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:16:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 2.383,
+   "frame": "pc10_2212_3.jpg",
+   "frame_hash": "d5b44b84486fcc02414b005d99b8d53352c30075da287db7f0fccb443255c18a",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    8,
+    226,
+    1277,
+    496
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:16:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 3.117,
+   "frame": "pc10_2212_4.jpg",
+   "frame_hash": "b88504649ee77487d74bf71961bce3fa22e673f28074fe9f44ceda85e7c4dfe1",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    387,
+    328,
+    1041,
+    1668
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:16:34",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2212,
+   "frame_timestamp": 3.117,
+   "frame": "pc10_2212_4.jpg",
+   "frame_hash": "b88504649ee77487d74bf71961bce3fa22e673f28074fe9f44ceda85e7c4dfe1",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    7,
+    129,
+    1274,
+    450
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:16:34",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 0.792,
+   "frame": "pc10_1641_0.jpg",
+   "frame_hash": "f53a65be8013eaf8c75409d2252b8bdb5e7a0ceb919774941829248114d6e6f2",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    276,
+    1029,
+    968,
+    1602
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:17:28",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 0.792,
+   "frame": "pc10_1641_0.jpg",
+   "frame_hash": "f53a65be8013eaf8c75409d2252b8bdb5e7a0ceb919774941829248114d6e6f2",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    5,
+    1609,
+    531,
+    1903
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:17:28",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 0.792,
+   "frame": "pc10_1641_0.jpg",
+   "frame_hash": "f53a65be8013eaf8c75409d2252b8bdb5e7a0ceb919774941829248114d6e6f2",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    5,
+    1744,
+    1250,
+    2268
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:17:28",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 0.792,
+   "frame": "pc10_1641_0.jpg",
+   "frame_hash": "f53a65be8013eaf8c75409d2252b8bdb5e7a0ceb919774941829248114d6e6f2",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    10,
+    1374,
+    664,
+    1952
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:17:28",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 0.792,
+   "frame": "pc10_1641_0.jpg",
+   "frame_hash": "f53a65be8013eaf8c75409d2252b8bdb5e7a0ceb919774941829248114d6e6f2",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    331,
+    747,
+    1099,
+    1836
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:17:28",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 1.849,
+   "frame": "pc10_1641_1.jpg",
+   "frame_hash": "24bea6773c7ec1dfac0d63bf5537f120c025b05a27f8f912edd0a35e574a78a1",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    369,
+    1047,
+    1063,
+    1743
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:18:10",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 1.849,
+   "frame": "pc10_1641_1.jpg",
+   "frame_hash": "24bea6773c7ec1dfac0d63bf5537f120c025b05a27f8f912edd0a35e574a78a1",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    144,
+    1587,
+    682,
+    1864
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:18:10",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 1.849,
+   "frame": "pc10_1641_1.jpg",
+   "frame_hash": "24bea6773c7ec1dfac0d63bf5537f120c025b05a27f8f912edd0a35e574a78a1",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    14,
+    1750,
+    1277,
+    2270
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:18:10",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 1.849,
+   "frame": "pc10_1641_1.jpg",
+   "frame_hash": "24bea6773c7ec1dfac0d63bf5537f120c025b05a27f8f912edd0a35e574a78a1",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    23,
+    1369,
+    768,
+    1981
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:18:10",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 1.849,
+   "frame": "pc10_1641_1.jpg",
+   "frame_hash": "24bea6773c7ec1dfac0d63bf5537f120c025b05a27f8f912edd0a35e574a78a1",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    293,
+    757,
+    1137,
+    1786
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:18:10",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 2.642,
+   "frame": "pc10_1641_2.jpg",
+   "frame_hash": "2f87199ce7dcd44e03e38628dfd4a51da4f2e561151a3316edfe17556c090d94",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    496,
+    1045,
+    1021,
+    1442
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:18:53",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 2.642,
+   "frame": "pc10_1641_2.jpg",
+   "frame_hash": "2f87199ce7dcd44e03e38628dfd4a51da4f2e561151a3316edfe17556c090d94",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    1,
+    1607,
+    516,
+    1938
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:18:53",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 2.642,
+   "frame": "pc10_1641_2.jpg",
+   "frame_hash": "2f87199ce7dcd44e03e38628dfd4a51da4f2e561151a3316edfe17556c090d94",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    17,
+    1730,
+    1268,
+    2270
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:18:53",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 2.642,
+   "frame": "pc10_1641_2.jpg",
+   "frame_hash": "2f87199ce7dcd44e03e38628dfd4a51da4f2e561151a3316edfe17556c090d94",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    14,
+    1421,
+    653,
+    2021
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:18:53",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 2.642,
+   "frame": "pc10_1641_2.jpg",
+   "frame_hash": "2f87199ce7dcd44e03e38628dfd4a51da4f2e561151a3316edfe17556c090d94",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    527,
+    776,
+    1092,
+    1895
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:18:53",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 3.434,
+   "frame": "pc10_1641_3.jpg",
+   "frame_hash": "45371a392891389c5fe6923a786821843aa5f7b1bd58b0369514ef2d8f2ebf5a",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    184,
+    934,
+    979,
+    1442
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:19:42",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 3.434,
+   "frame": "pc10_1641_3.jpg",
+   "frame_hash": "45371a392891389c5fe6923a786821843aa5f7b1bd58b0369514ef2d8f2ebf5a",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    3,
+    1698,
+    313,
+    1967
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:19:42",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 3.434,
+   "frame": "pc10_1641_3.jpg",
+   "frame_hash": "45371a392891389c5fe6923a786821843aa5f7b1bd58b0369514ef2d8f2ebf5a",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    10,
+    1835,
+    1261,
+    2268
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:19:42",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 3.434,
+   "frame": "pc10_1641_3.jpg",
+   "frame_hash": "45371a392891389c5fe6923a786821843aa5f7b1bd58b0369514ef2d8f2ebf5a",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    3,
+    1478,
+    511,
+    2027
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:19:42",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 3.434,
+   "frame": "pc10_1641_3.jpg",
+   "frame_hash": "45371a392891389c5fe6923a786821843aa5f7b1bd58b0369514ef2d8f2ebf5a",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    182,
+    717,
+    963,
+    1988
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:19:42",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 4.491,
+   "frame": "pc10_1641_4.jpg",
+   "frame_hash": "bb76f7c7bddd8f898bf929997c2fd8221b63701748417b2458fc3d8e814e2c56",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    240,
+    993,
+    1057,
+    1636
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:21:33",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 4.491,
+   "frame": "pc10_1641_4.jpg",
+   "frame_hash": "bb76f7c7bddd8f898bf929997c2fd8221b63701748417b2458fc3d8e814e2c56",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    17,
+    1799,
+    211,
+    2021
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:21:33",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 4.491,
+   "frame": "pc10_1641_4.jpg",
+   "frame_hash": "bb76f7c7bddd8f898bf929997c2fd8221b63701748417b2458fc3d8e814e2c56",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    10,
+    1966,
+    1176,
+    2270
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:21:33",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 4.491,
+   "frame": "pc10_1641_4.jpg",
+   "frame_hash": "bb76f7c7bddd8f898bf929997c2fd8221b63701748417b2458fc3d8e814e2c56",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    12,
+    1533,
+    449,
+    2081
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:21:33",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 1641,
+   "frame_timestamp": 4.491,
+   "frame": "pc10_1641_4.jpg",
+   "frame_hash": "bb76f7c7bddd8f898bf929997c2fd8221b63701748417b2458fc3d8e814e2c56",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    220,
+    683,
+    1046,
+    2123
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:21:33",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 0.768,
+   "frame": "pc10_10000_0.jpg",
+   "frame_hash": "d3cd83caf66e81a88f86c41877d60158d99c11256d3118109986f5e135cc8b1c",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    273,
+    1291,
+    473,
+    1528
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:23:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 0.768,
+   "frame": "pc10_10000_0.jpg",
+   "frame_hash": "d3cd83caf66e81a88f86c41877d60158d99c11256d3118109986f5e135cc8b1c",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    533,
+    1279,
+    812,
+    1463
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:23:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 0.768,
+   "frame": "pc10_10000_0.jpg",
+   "frame_hash": "d3cd83caf66e81a88f86c41877d60158d99c11256d3118109986f5e135cc8b1c",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    524,
+    1420,
+    808,
+    1906
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:23:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 0.768,
+   "frame": "pc10_10000_0.jpg",
+   "frame_hash": "d3cd83caf66e81a88f86c41877d60158d99c11256d3118109986f5e135cc8b1c",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    198,
+    1191,
+    656,
+    1402
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:23:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 0.768,
+   "frame": "pc10_10000_0.jpg",
+   "frame_hash": "d3cd83caf66e81a88f86c41877d60158d99c11256d3118109986f5e135cc8b1c",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    531,
+    1225,
+    1161,
+    1917
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:23:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 1.793,
+   "frame": "pc10_10000_1.jpg",
+   "frame_hash": "e499b18d2e927c08aa5bdc1a6bfd1a5b6ea589fd6b00998d10cfefd9c464df7a",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    231,
+    1250,
+    458,
+    1474
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:24:07",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 1.793,
+   "frame": "pc10_10000_1.jpg",
+   "frame_hash": "e499b18d2e927c08aa5bdc1a6bfd1a5b6ea589fd6b00998d10cfefd9c464df7a",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    544,
+    1244,
+    886,
+    1437
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:24:07",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 1.793,
+   "frame": "pc10_10000_1.jpg",
+   "frame_hash": "e499b18d2e927c08aa5bdc1a6bfd1a5b6ea589fd6b00998d10cfefd9c464df7a",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    520,
+    1399,
+    886,
+    1911
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:24:07",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 1.793,
+   "frame": "pc10_10000_1.jpg",
+   "frame_hash": "e499b18d2e927c08aa5bdc1a6bfd1a5b6ea589fd6b00998d10cfefd9c464df7a",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    110,
+    1156,
+    631,
+    1352
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:24:07",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 1.793,
+   "frame": "pc10_10000_1.jpg",
+   "frame_hash": "e499b18d2e927c08aa5bdc1a6bfd1a5b6ea589fd6b00998d10cfefd9c464df7a",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    538,
+    1166,
+    1237,
+    1931
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:24:07",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 2.561,
+   "frame": "pc10_10000_2.jpg",
+   "frame_hash": "9a0b16d3768656647de75ddd218ffba88728cd1505d85e488525e58fb3e284d8",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    200,
+    1239,
+    438,
+    1436
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:24:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 2.561,
+   "frame": "pc10_10000_2.jpg",
+   "frame_hash": "9a0b16d3768656647de75ddd218ffba88728cd1505d85e488525e58fb3e284d8",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    629,
+    1247,
+    1077,
+    1474
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:24:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 2.561,
+   "frame": "pc10_10000_2.jpg",
+   "frame_hash": "9a0b16d3768656647de75ddd218ffba88728cd1505d85e488525e58fb3e284d8",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    611,
+    1421,
+    1070,
+    1987
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:24:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 2.561,
+   "frame": "pc10_10000_2.jpg",
+   "frame_hash": "9a0b16d3768656647de75ddd218ffba88728cd1505d85e488525e58fb3e284d8",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    94,
+    1141,
+    693,
+    1392
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:24:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 2.561,
+   "frame": "pc10_10000_2.jpg",
+   "frame_hash": "9a0b16d3768656647de75ddd218ffba88728cd1505d85e488525e58fb3e284d8",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    627,
+    1123,
+    1272,
+    2018
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:24:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 3.329,
+   "frame": "pc10_10000_3.jpg",
+   "frame_hash": "ecdb0ee8856044447270a8caec13a0e0494347ab604f807cb4d9f8f0a17944b8",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    142,
+    1244,
+    418,
+    1496
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:25:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 3.329,
+   "frame": "pc10_10000_3.jpg",
+   "frame_hash": "ecdb0ee8856044447270a8caec13a0e0494347ab604f807cb4d9f8f0a17944b8",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    761,
+    1251,
+    1272,
+    1497
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:25:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 3.329,
+   "frame": "pc10_10000_3.jpg",
+   "frame_hash": "ecdb0ee8856044447270a8caec13a0e0494347ab604f807cb4d9f8f0a17944b8",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    721,
+    1441,
+    1272,
+    2067
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:25:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 3.329,
+   "frame": "pc10_10000_3.jpg",
+   "frame_hash": "ecdb0ee8856044447270a8caec13a0e0494347ab604f807cb4d9f8f0a17944b8",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    37,
+    1098,
+    839,
+    1411
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:25:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 3.329,
+   "frame": "pc10_10000_3.jpg",
+   "frame_hash": "ecdb0ee8856044447270a8caec13a0e0494347ab604f807cb4d9f8f0a17944b8",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    746,
+    1063,
+    1275,
+    2088
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:25:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 4.354,
+   "frame": "pc10_10000_4.jpg",
+   "frame_hash": "b891a59cb210d594d23854af918bde215e0b742023893a390d1779494221b6ae",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    72,
+    1264,
+    353,
+    1635
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:26:17",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 4.354,
+   "frame": "pc10_10000_4.jpg",
+   "frame_hash": "b891a59cb210d594d23854af918bde215e0b742023893a390d1779494221b6ae",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    972,
+    1253,
+    1275,
+    1435
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:26:17",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 4.354,
+   "frame": "pc10_10000_4.jpg",
+   "frame_hash": "b891a59cb210d594d23854af918bde215e0b742023893a390d1779494221b6ae",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    977,
+    1482,
+    1270,
+    1626
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:26:17",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 4.354,
+   "frame": "pc10_10000_4.jpg",
+   "frame_hash": "b891a59cb210d594d23854af918bde215e0b742023893a390d1779494221b6ae",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    5,
+    1107,
+    983,
+    1462
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:26:17",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 10000,
+   "frame_timestamp": 4.354,
+   "frame": "pc10_10000_4.jpg",
+   "frame_hash": "b891a59cb210d594d23854af918bde215e0b742023893a390d1779494221b6ae",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    919,
+    1075,
+    1272,
+    1661
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:26:17",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 0.515,
+   "frame": "pc10_2543_0.jpg",
+   "frame_hash": "90114ff77118f1a95262eb4df7562173db5fb0431b95b48f13221486d2d8da6a",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    633,
+    1066,
+    1037,
+    1345
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:27:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 0.515,
+   "frame": "pc10_2543_0.jpg",
+   "frame_hash": "90114ff77118f1a95262eb4df7562173db5fb0431b95b48f13221486d2d8da6a",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    149,
+    1313,
+    420,
+    1396
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:27:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 0.515,
+   "frame": "pc10_2543_0.jpg",
+   "frame_hash": "90114ff77118f1a95262eb4df7562173db5fb0431b95b48f13221486d2d8da6a",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    8,
+    1335,
+    90,
+    1462
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:27:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 0.515,
+   "frame": "pc10_2543_0.jpg",
+   "frame_hash": "90114ff77118f1a95262eb4df7562173db5fb0431b95b48f13221486d2d8da6a",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    3,
+    1482,
+    108,
+    1880
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:27:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 0.515,
+   "frame": "pc10_2543_0.jpg",
+   "frame_hash": "90114ff77118f1a95262eb4df7562173db5fb0431b95b48f13221486d2d8da6a",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    105,
+    1358,
+    1268,
+    1829
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:27:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 0.515,
+   "frame": "pc10_2543_0.jpg",
+   "frame_hash": "90114ff77118f1a95262eb4df7562173db5fb0431b95b48f13221486d2d8da6a",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    995,
+    1760,
+    1277,
+    2243
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:27:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 0.515,
+   "frame": "pc10_2543_0.jpg",
+   "frame_hash": "90114ff77118f1a95262eb4df7562173db5fb0431b95b48f13221486d2d8da6a",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    12,
+    1205,
+    471,
+    1903
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:27:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 0.515,
+   "frame": "pc10_2543_0.jpg",
+   "frame_hash": "90114ff77118f1a95262eb4df7562173db5fb0431b95b48f13221486d2d8da6a",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    624,
+    872,
+    1015,
+    1885
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:27:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.202,
+   "frame": "pc10_2543_1.jpg",
+   "frame_hash": "5a885ae486dd6aecd544647c977cdcbe92b49607d9db2100052f3393fb3f738d",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    373,
+    1045,
+    981,
+    1192
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:29:01",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.202,
+   "frame": "pc10_2543_1.jpg",
+   "frame_hash": "5a885ae486dd6aecd544647c977cdcbe92b49607d9db2100052f3393fb3f738d",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    863,
+    1604,
+    1099,
+    2064
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:29:01",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.202,
+   "frame": "pc10_2543_1.jpg",
+   "frame_hash": "5a885ae486dd6aecd544647c977cdcbe92b49607d9db2100052f3393fb3f738d",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    180,
+    1274,
+    396,
+    1350
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:29:01",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.202,
+   "frame": "pc10_2543_1.jpg",
+   "frame_hash": "5a885ae486dd6aecd544647c977cdcbe92b49607d9db2100052f3393fb3f738d",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    3,
+    1277,
+    119,
+    1384
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:29:01",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.202,
+   "frame": "pc10_2543_1.jpg",
+   "frame_hash": "5a885ae486dd6aecd544647c977cdcbe92b49607d9db2100052f3393fb3f738d",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    8,
+    1406,
+    133,
+    1749
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:29:01",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.202,
+   "frame": "pc10_2543_1.jpg",
+   "frame_hash": "5a885ae486dd6aecd544647c977cdcbe92b49607d9db2100052f3393fb3f738d",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    140,
+    1323,
+    1270,
+    1694
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:29:01",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.202,
+   "frame": "pc10_2543_1.jpg",
+   "frame_hash": "5a885ae486dd6aecd544647c977cdcbe92b49607d9db2100052f3393fb3f738d",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    8,
+    1181,
+    464,
+    1756
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:29:01",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.202,
+   "frame": "pc10_2543_1.jpg",
+   "frame_hash": "5a885ae486dd6aecd544647c977cdcbe92b49607d9db2100052f3393fb3f738d",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    402,
+    904,
+    979,
+    1790
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:29:01",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.717,
+   "frame": "pc10_2543_2.jpg",
+   "frame_hash": "0ea96480a8d78cfb145d98c5885831ffb206ae7a8ab94881d1c778ac5c9cfbcd",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    427,
+    1060,
+    915,
+    1246
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:30:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.717,
+   "frame": "pc10_2543_2.jpg",
+   "frame_hash": "0ea96480a8d78cfb145d98c5885831ffb206ae7a8ab94881d1c778ac5c9cfbcd",
+   "object_name": "SOCKET_MODULE",
+   "bbox_pixel": [
+    167,
+    1267,
+    384,
+    1359
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:30:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.717,
+   "frame": "pc10_2543_2.jpg",
+   "frame_hash": "0ea96480a8d78cfb145d98c5885831ffb206ae7a8ab94881d1c778ac5c9cfbcd",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    815,
+    1587,
+    1092,
+    2043
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:30:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.717,
+   "frame": "pc10_2543_2.jpg",
+   "frame_hash": "0ea96480a8d78cfb145d98c5885831ffb206ae7a8ab94881d1c778ac5c9cfbcd",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    3,
+    1270,
+    117,
+    1387
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:30:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.717,
+   "frame": "pc10_2543_2.jpg",
+   "frame_hash": "0ea96480a8d78cfb145d98c5885831ffb206ae7a8ab94881d1c778ac5c9cfbcd",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    5,
+    1403,
+    123,
+    1732
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:30:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.717,
+   "frame": "pc10_2543_2.jpg",
+   "frame_hash": "0ea96480a8d78cfb145d98c5885831ffb206ae7a8ab94881d1c778ac5c9cfbcd",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    131,
+    1301,
+    1268,
+    1705
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:30:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.717,
+   "frame": "pc10_2543_2.jpg",
+   "frame_hash": "0ea96480a8d78cfb145d98c5885831ffb206ae7a8ab94881d1c778ac5c9cfbcd",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    5,
+    1181,
+    464,
+    1752
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:30:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 1.717,
+   "frame": "pc10_2543_2.jpg",
+   "frame_hash": "0ea96480a8d78cfb145d98c5885831ffb206ae7a8ab94881d1c778ac5c9cfbcd",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    376,
+    912,
+    928,
+    1437
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:30:14",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.232,
+   "frame": "pc10_2543_3.jpg",
+   "frame_hash": "a9d753a1b844aff30229e16d57940cb56151d35975eda5b765e764b692364fb9",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    560,
+    1032,
+    837,
+    1350
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:31:25",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.232,
+   "frame": "pc10_2543_3.jpg",
+   "frame_hash": "a9d753a1b844aff30229e16d57940cb56151d35975eda5b765e764b692364fb9",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    857,
+    1624,
+    1148,
+    2157
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:31:25",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.232,
+   "frame": "pc10_2543_3.jpg",
+   "frame_hash": "a9d753a1b844aff30229e16d57940cb56151d35975eda5b765e764b692364fb9",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    153,
+    1272,
+    407,
+    1365
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:31:25",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.232,
+   "frame": "pc10_2543_3.jpg",
+   "frame_hash": "a9d753a1b844aff30229e16d57940cb56151d35975eda5b765e764b692364fb9",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    3,
+    1290,
+    94,
+    1403
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:31:25",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.232,
+   "frame": "pc10_2543_3.jpg",
+   "frame_hash": "a9d753a1b844aff30229e16d57940cb56151d35975eda5b765e764b692364fb9",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    10,
+    1427,
+    108,
+    1781
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:31:25",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.232,
+   "frame": "pc10_2543_3.jpg",
+   "frame_hash": "a9d753a1b844aff30229e16d57940cb56151d35975eda5b765e764b692364fb9",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    119,
+    1324,
+    1266,
+    1754
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:31:25",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.232,
+   "frame": "pc10_2543_3.jpg",
+   "frame_hash": "a9d753a1b844aff30229e16d57940cb56151d35975eda5b765e764b692364fb9",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    5,
+    1192,
+    478,
+    1787
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:31:25",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.232,
+   "frame": "pc10_2543_3.jpg",
+   "frame_hash": "a9d753a1b844aff30229e16d57940cb56151d35975eda5b765e764b692364fb9",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    498,
+    879,
+    839,
+    1779
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:31:25",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.918,
+   "frame": "pc10_2543_4.jpg",
+   "frame_hash": "b35ea8123deeca05d0412121c5a959591b9ede96a45c98c393cd31005277ecdc",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    627,
+    1056,
+    1035,
+    1357
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:32:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.918,
+   "frame": "pc10_2543_4.jpg",
+   "frame_hash": "b35ea8123deeca05d0412121c5a959591b9ede96a45c98c393cd31005277ecdc",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    153,
+    1306,
+    419,
+    1403
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:32:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.918,
+   "frame": "pc10_2543_4.jpg",
+   "frame_hash": "b35ea8123deeca05d0412121c5a959591b9ede96a45c98c393cd31005277ecdc",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    968,
+    1739,
+    1235,
+    2261
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:32:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.918,
+   "frame": "pc10_2543_4.jpg",
+   "frame_hash": "b35ea8123deeca05d0412121c5a959591b9ede96a45c98c393cd31005277ecdc",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    3,
+    1332,
+    90,
+    1452
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:32:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.918,
+   "frame": "pc10_2543_4.jpg",
+   "frame_hash": "b35ea8123deeca05d0412121c5a959591b9ede96a45c98c393cd31005277ecdc",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    3,
+    1485,
+    105,
+    1856
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:32:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.918,
+   "frame": "pc10_2543_4.jpg",
+   "frame_hash": "b35ea8123deeca05d0412121c5a959591b9ede96a45c98c393cd31005277ecdc",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    101,
+    1339,
+    1266,
+    1866
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:32:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.918,
+   "frame": "pc10_2543_4.jpg",
+   "frame_hash": "b35ea8123deeca05d0412121c5a959591b9ede96a45c98c393cd31005277ecdc",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    8,
+    1217,
+    478,
+    1889
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:32:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 2543,
+   "frame_timestamp": 2.918,
+   "frame": "pc10_2543_4.jpg",
+   "frame_hash": "b35ea8123deeca05d0412121c5a959591b9ede96a45c98c393cd31005277ecdc",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    596,
+    906,
+    1028,
+    1892
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:32:58",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 1.236,
+   "frame": "pc10_9697_0.jpg",
+   "frame_hash": "629eded1602642516556970d177bc587067afa9d0276238db5aa8c5175f76933",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    723,
+    925,
+    1246,
+    1437
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:33:47",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 1.236,
+   "frame": "pc10_9697_0.jpg",
+   "frame_hash": "629eded1602642516556970d177bc587067afa9d0276238db5aa8c5175f76933",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    37,
+    588,
+    706,
+    906
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:33:47",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 1.236,
+   "frame": "pc10_9697_0.jpg",
+   "frame_hash": "629eded1602642516556970d177bc587067afa9d0276238db5aa8c5175f76933",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    70,
+    920,
+    1012,
+    2025
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:33:47",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 1.236,
+   "frame": "pc10_9697_0.jpg",
+   "frame_hash": "629eded1602642516556970d177bc587067afa9d0276238db5aa8c5175f76933",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    17,
+    499,
+    948,
+    2133
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:33:47",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 1.236,
+   "frame": "pc10_9697_0.jpg",
+   "frame_hash": "629eded1602642516556970d177bc587067afa9d0276238db5aa8c5175f76933",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    768,
+    399,
+    1277,
+    1989
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:33:47",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 2.885,
+   "frame": "pc10_9697_1.jpg",
+   "frame_hash": "d901bb04027e09c99738a3716dca11ae1dd35e96775d7ff05f5f201760f2f30d",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    671,
+    1036,
+    1246,
+    1395
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:34:29",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 2.885,
+   "frame": "pc10_9697_1.jpg",
+   "frame_hash": "d901bb04027e09c99738a3716dca11ae1dd35e96775d7ff05f5f201760f2f30d",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1,
+    608,
+    658,
+    933
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:34:29",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 2.885,
+   "frame": "pc10_9697_1.jpg",
+   "frame_hash": "d901bb04027e09c99738a3716dca11ae1dd35e96775d7ff05f5f201760f2f30d",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    19,
+    945,
+    841,
+    1960
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:34:29",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 2.885,
+   "frame": "pc10_9697_1.jpg",
+   "frame_hash": "d901bb04027e09c99738a3716dca11ae1dd35e96775d7ff05f5f201760f2f30d",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    21,
+    530,
+    710,
+    2012
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:34:29",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 2.885,
+   "frame": "pc10_9697_1.jpg",
+   "frame_hash": "d901bb04027e09c99738a3716dca11ae1dd35e96775d7ff05f5f201760f2f30d",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    712,
+    551,
+    1268,
+    1930
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:34:29",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 4.121,
+   "frame": "pc10_9697_2.jpg",
+   "frame_hash": "c7900ea230111a41f0b9678d9fea575ed5e6978694ad2ea613cb00a90b385fe6",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    516,
+    1079,
+    1203,
+    1425
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:35:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 4.121,
+   "frame": "pc10_9697_2.jpg",
+   "frame_hash": "c7900ea230111a41f0b9678d9fea575ed5e6978694ad2ea613cb00a90b385fe6",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    19,
+    611,
+    636,
+    903
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:35:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 4.121,
+   "frame": "pc10_9697_2.jpg",
+   "frame_hash": "c7900ea230111a41f0b9678d9fea575ed5e6978694ad2ea613cb00a90b385fe6",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    23,
+    948,
+    737,
+    1887
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:35:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 4.121,
+   "frame": "pc10_9697_2.jpg",
+   "frame_hash": "c7900ea230111a41f0b9678d9fea575ed5e6978694ad2ea613cb00a90b385fe6",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    14,
+    548,
+    721,
+    1950
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:35:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 4.121,
+   "frame": "pc10_9697_2.jpg",
+   "frame_hash": "c7900ea230111a41f0b9678d9fea575ed5e6978694ad2ea613cb00a90b385fe6",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    609,
+    500,
+    1270,
+    1932
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:35:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 5.357,
+   "frame": "pc10_9697_3.jpg",
+   "frame_hash": "0cb8e479cb36f937d01bac22bb960c52312ecf761c31a4b8b3c072b7ee1d45ce",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    651,
+    1127,
+    1161,
+    1460
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:36:02",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 5.357,
+   "frame": "pc10_9697_3.jpg",
+   "frame_hash": "0cb8e479cb36f937d01bac22bb960c52312ecf761c31a4b8b3c072b7ee1d45ce",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    21,
+    605,
+    678,
+    925
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:36:02",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 5.357,
+   "frame": "pc10_9697_3.jpg",
+   "frame_hash": "0cb8e479cb36f937d01bac22bb960c52312ecf761c31a4b8b3c072b7ee1d45ce",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    12,
+    927,
+    698,
+    1795
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:36:02",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 5.357,
+   "frame": "pc10_9697_3.jpg",
+   "frame_hash": "0cb8e479cb36f937d01bac22bb960c52312ecf761c31a4b8b3c072b7ee1d45ce",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    19,
+    546,
+    702,
+    1858
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:36:02",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 5.357,
+   "frame": "pc10_9697_3.jpg",
+   "frame_hash": "0cb8e479cb36f937d01bac22bb960c52312ecf761c31a4b8b3c072b7ee1d45ce",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    660,
+    528,
+    1259,
+    1942
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:36:02",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 7.005,
+   "frame": "pc10_9697_4.jpg",
+   "frame_hash": "1e38ad83c410de272eb8c576e2f44550f9cb8131f2c3df00aabe3e30e9dd4dc8",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    529,
+    1016,
+    1179,
+    1391
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:36:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 7.005,
+   "frame": "pc10_9697_4.jpg",
+   "frame_hash": "1e38ad83c410de272eb8c576e2f44550f9cb8131f2c3df00aabe3e30e9dd4dc8",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    14,
+    629,
+    662,
+    914
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:36:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 7.005,
+   "frame": "pc10_9697_4.jpg",
+   "frame_hash": "1e38ad83c410de272eb8c576e2f44550f9cb8131f2c3df00aabe3e30e9dd4dc8",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    23,
+    935,
+    660,
+    1818
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:36:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 7.005,
+   "frame": "pc10_9697_4.jpg",
+   "frame_hash": "1e38ad83c410de272eb8c576e2f44550f9cb8131f2c3df00aabe3e30e9dd4dc8",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    5,
+    545,
+    684,
+    1824
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:36:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 9697,
+   "frame_timestamp": 7.005,
+   "frame": "pc10_9697_4.jpg",
+   "frame_hash": "1e38ad83c410de272eb8c576e2f44550f9cb8131f2c3df00aabe3e30e9dd4dc8",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    629,
+    523,
+    1252,
+    1939
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:36:40",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 2.225,
+   "frame": "pc10_12095_0.jpg",
+   "frame_hash": "8c5cdf49552c17862f2e477868249cd6ef5db62adf8f0e8ad469fec885f6bc9b",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    571,
+    941,
+    684,
+    1143
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 2.225,
+   "frame": "pc10_12095_0.jpg",
+   "frame_hash": "8c5cdf49552c17862f2e477868249cd6ef5db62adf8f0e8ad469fec885f6bc9b",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    766,
+    908,
+    895,
+    1052
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 2.225,
+   "frame": "pc10_12095_0.jpg",
+   "frame_hash": "8c5cdf49552c17862f2e477868249cd6ef5db62adf8f0e8ad469fec885f6bc9b",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    691,
+    1521,
+    1061,
+    2115
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 2.225,
+   "frame": "pc10_12095_0.jpg",
+   "frame_hash": "8c5cdf49552c17862f2e477868249cd6ef5db62adf8f0e8ad469fec885f6bc9b",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    258,
+    1204,
+    509,
+    1261
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 2.225,
+   "frame": "pc10_12095_0.jpg",
+   "frame_hash": "8c5cdf49552c17862f2e477868249cd6ef5db62adf8f0e8ad469fec885f6bc9b",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    57,
+    1177,
+    176,
+    1297
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 2.225,
+   "frame": "pc10_12095_0.jpg",
+   "frame_hash": "8c5cdf49552c17862f2e477868249cd6ef5db62adf8f0e8ad469fec885f6bc9b",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    57,
+    1445,
+    187,
+    1668
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 2.225,
+   "frame": "pc10_12095_0.jpg",
+   "frame_hash": "8c5cdf49552c17862f2e477868249cd6ef5db62adf8f0e8ad469fec885f6bc9b",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    180,
+    1262,
+    1272,
+    1600
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 2.225,
+   "frame": "pc10_12095_0.jpg",
+   "frame_hash": "8c5cdf49552c17862f2e477868249cd6ef5db62adf8f0e8ad469fec885f6bc9b",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    48,
+    1090,
+    620,
+    1694
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 2.225,
+   "frame": "pc10_12095_0.jpg",
+   "frame_hash": "8c5cdf49552c17862f2e477868249cd6ef5db62adf8f0e8ad469fec885f6bc9b",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    580,
+    846,
+    919,
+    1341
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 2.225,
+   "frame": "pc10_12095_0.jpg",
+   "frame_hash": "8c5cdf49552c17862f2e477868249cd6ef5db62adf8f0e8ad469fec885f6bc9b",
+   "object_name": "EMBEDDED_APPLIANCE",
+   "bbox_pixel": [
+    37,
+    1299,
+    189,
+    1499
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:22",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 5.191,
+   "frame": "pc10_12095_1.jpg",
+   "frame_hash": "f56cf0fe07f619ff0e72fb8928abf3902b9cad512025529a69c7720acefe7183",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    529,
+    1008,
+    775,
+    1252
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 5.191,
+   "frame": "pc10_12095_1.jpg",
+   "frame_hash": "f56cf0fe07f619ff0e72fb8928abf3902b9cad512025529a69c7720acefe7183",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    863,
+    1021,
+    968,
+    1241
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 5.191,
+   "frame": "pc10_12095_1.jpg",
+   "frame_hash": "f56cf0fe07f619ff0e72fb8928abf3902b9cad512025529a69c7720acefe7183",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    627,
+    1568,
+    1061,
+    2193
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 5.191,
+   "frame": "pc10_12095_1.jpg",
+   "frame_hash": "f56cf0fe07f619ff0e72fb8928abf3902b9cad512025529a69c7720acefe7183",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    211,
+    1242,
+    496,
+    1337
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 5.191,
+   "frame": "pc10_12095_1.jpg",
+   "frame_hash": "f56cf0fe07f619ff0e72fb8928abf3902b9cad512025529a69c7720acefe7183",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    32,
+    1227,
+    160,
+    1382
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 5.191,
+   "frame": "pc10_12095_1.jpg",
+   "frame_hash": "f56cf0fe07f619ff0e72fb8928abf3902b9cad512025529a69c7720acefe7183",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    37,
+    1513,
+    156,
+    1744
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 5.191,
+   "frame": "pc10_12095_1.jpg",
+   "frame_hash": "f56cf0fe07f619ff0e72fb8928abf3902b9cad512025529a69c7720acefe7183",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    149,
+    1303,
+    1242,
+    1677
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 5.191,
+   "frame": "pc10_12095_1.jpg",
+   "frame_hash": "f56cf0fe07f619ff0e72fb8928abf3902b9cad512025529a69c7720acefe7183",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    15,
+    1186,
+    576,
+    1762
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 5.191,
+   "frame": "pc10_12095_1.jpg",
+   "frame_hash": "f56cf0fe07f619ff0e72fb8928abf3902b9cad512025529a69c7720acefe7183",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    509,
+    824,
+    983,
+    1430
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 5.191,
+   "frame": "pc10_12095_1.jpg",
+   "frame_hash": "f56cf0fe07f619ff0e72fb8928abf3902b9cad512025529a69c7720acefe7183",
+   "object_name": "EMBEDDED_APPLIANCE",
+   "bbox_pixel": [
+    5,
+    1368,
+    179,
+    1581
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:36",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 7.416,
+   "frame": "pc10_12095_2.jpg",
+   "frame_hash": "af292b3eac1022895a574157734b18e2a6e882cdf6908b00d6c1552873213e21",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    806,
+    1136,
+    1277,
+    1504
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:44",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 7.416,
+   "frame": "pc10_12095_2.jpg",
+   "frame_hash": "af292b3eac1022895a574157734b18e2a6e882cdf6908b00d6c1552873213e21",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    662,
+    1599,
+    1050,
+    2204
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:44",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 7.416,
+   "frame": "pc10_12095_2.jpg",
+   "frame_hash": "af292b3eac1022895a574157734b18e2a6e882cdf6908b00d6c1552873213e21",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    195,
+    1280,
+    489,
+    1351
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:44",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 7.416,
+   "frame": "pc10_12095_2.jpg",
+   "frame_hash": "af292b3eac1022895a574157734b18e2a6e882cdf6908b00d6c1552873213e21",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    23,
+    1262,
+    151,
+    1386
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:44",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 7.416,
+   "frame": "pc10_12095_2.jpg",
+   "frame_hash": "af292b3eac1022895a574157734b18e2a6e882cdf6908b00d6c1552873213e21",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    17,
+    1540,
+    144,
+    1774
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:44",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 7.416,
+   "frame": "pc10_12095_2.jpg",
+   "frame_hash": "af292b3eac1022895a574157734b18e2a6e882cdf6908b00d6c1552873213e21",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    162,
+    1336,
+    1268,
+    1699
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:44",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 7.416,
+   "frame": "pc10_12095_2.jpg",
+   "frame_hash": "af292b3eac1022895a574157734b18e2a6e882cdf6908b00d6c1552873213e21",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    37,
+    1220,
+    576,
+    1786
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:44",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 7.416,
+   "frame": "pc10_12095_2.jpg",
+   "frame_hash": "af292b3eac1022895a574157734b18e2a6e882cdf6908b00d6c1552873213e21",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    712,
+    928,
+    1272,
+    1514
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:44",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 7.416,
+   "frame": "pc10_12095_2.jpg",
+   "frame_hash": "af292b3eac1022895a574157734b18e2a6e882cdf6908b00d6c1552873213e21",
+   "object_name": "EMBEDDED_APPLIANCE",
+   "bbox_pixel": [
+    0,
+    1403,
+    212,
+    1574
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:44",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 9.64,
+   "frame": "pc10_12095_3.jpg",
+   "frame_hash": "7e20336525833f8b1e9f7d7204c0924eecb2a52c920396a446e9f0fd89156303",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    788,
+    1080,
+    1055,
+    1524
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 9.64,
+   "frame": "pc10_12095_3.jpg",
+   "frame_hash": "7e20336525833f8b1e9f7d7204c0924eecb2a52c920396a446e9f0fd89156303",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    478,
+    1524,
+    839,
+    2068
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 9.64,
+   "frame": "pc10_12095_3.jpg",
+   "frame_hash": "7e20336525833f8b1e9f7d7204c0924eecb2a52c920396a446e9f0fd89156303",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    222,
+    1296,
+    502,
+    1365
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 9.64,
+   "frame": "pc10_12095_3.jpg",
+   "frame_hash": "7e20336525833f8b1e9f7d7204c0924eecb2a52c920396a446e9f0fd89156303",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    37,
+    1270,
+    164,
+    1401
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 9.64,
+   "frame": "pc10_12095_3.jpg",
+   "frame_hash": "7e20336525833f8b1e9f7d7204c0924eecb2a52c920396a446e9f0fd89156303",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    30,
+    1556,
+    158,
+    1788
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 9.64,
+   "frame": "pc10_12095_3.jpg",
+   "frame_hash": "7e20336525833f8b1e9f7d7204c0924eecb2a52c920396a446e9f0fd89156303",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    155,
+    1348,
+    1021,
+    1624
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 9.64,
+   "frame": "pc10_12095_3.jpg",
+   "frame_hash": "7e20336525833f8b1e9f7d7204c0924eecb2a52c920396a446e9f0fd89156303",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    34,
+    1221,
+    598,
+    1794
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 9.64,
+   "frame": "pc10_12095_3.jpg",
+   "frame_hash": "7e20336525833f8b1e9f7d7204c0924eecb2a52c920396a446e9f0fd89156303",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    721,
+    855,
+    1072,
+    1979
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 9.64,
+   "frame": "pc10_12095_3.jpg",
+   "frame_hash": "7e20336525833f8b1e9f7d7204c0924eecb2a52c920396a446e9f0fd89156303",
+   "object_name": "EMBEDDED_APPLIANCE",
+   "bbox_pixel": [
+    0,
+    1434,
+    248,
+    1558
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:43:55",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 12.607,
+   "frame": "pc10_12095_4.jpg",
+   "frame_hash": "a25a1b3f31115665d8a15db55823079678a9a13b5562e5572e7cd00038bbaea0",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    786,
+    1054,
+    1081,
+    1510
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 12.607,
+   "frame": "pc10_12095_4.jpg",
+   "frame_hash": "a25a1b3f31115665d8a15db55823079678a9a13b5562e5572e7cd00038bbaea0",
+   "object_name": "ROCK_TABLE_LEG",
+   "bbox_pixel": [
+    476,
+    1498,
+    808,
+    2054
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 12.607,
+   "frame": "pc10_12095_4.jpg",
+   "frame_hash": "a25a1b3f31115665d8a15db55823079678a9a13b5562e5572e7cd00038bbaea0",
+   "object_name": "TRACK_SOCKET",
+   "bbox_pixel": [
+    249,
+    1311,
+    542,
+    1364
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 12.607,
+   "frame": "pc10_12095_4.jpg",
+   "frame_hash": "a25a1b3f31115665d8a15db55823079678a9a13b5562e5572e7cd00038bbaea0",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    37,
+    1267,
+    191,
+    1416
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 12.607,
+   "frame": "pc10_12095_4.jpg",
+   "frame_hash": "a25a1b3f31115665d8a15db55823079678a9a13b5562e5572e7cd00038bbaea0",
+   "object_name": "CABINET_DOOR",
+   "bbox_pixel": [
+    65,
+    1572,
+    189,
+    1792
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 12.607,
+   "frame": "pc10_12095_4.jpg",
+   "frame_hash": "a25a1b3f31115665d8a15db55823079678a9a13b5562e5572e7cd00038bbaea0",
+   "object_name": "EXTENSION_TABLETOP",
+   "bbox_pixel": [
+    182,
+    1349,
+    975,
+    1591
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 12.607,
+   "frame": "pc10_12095_4.jpg",
+   "frame_hash": "a25a1b3f31115665d8a15db55823079678a9a13b5562e5572e7cd00038bbaea0",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    39,
+    1216,
+    602,
+    1819
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 12.607,
+   "frame": "pc10_12095_4.jpg",
+   "frame_hash": "a25a1b3f31115665d8a15db55823079678a9a13b5562e5572e7cd00038bbaea0",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    710,
+    863,
+    1152,
+    2003
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 12095,
+   "frame_timestamp": 12.607,
+   "frame": "pc10_12095_4.jpg",
+   "frame_hash": "a25a1b3f31115665d8a15db55823079678a9a13b5562e5572e7cd00038bbaea0",
+   "object_name": "EMBEDDED_APPLIANCE",
+   "bbox_pixel": [
+    35,
+    1401,
+    225,
+    1611
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:13",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 0.718,
+   "frame": "pc10_25894_0.jpg",
+   "frame_hash": "ab236bba98d69d61d47bacecf07dc0d4a908c2385621f135f7eb793e02ab13ba",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    598,
+    1102,
+    1172,
+    1509
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 0.718,
+   "frame": "pc10_25894_0.jpg",
+   "frame_hash": "ab236bba98d69d61d47bacecf07dc0d4a908c2385621f135f7eb793e02ab13ba",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    26,
+    800,
+    771,
+    1153
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 0.718,
+   "frame": "pc10_25894_0.jpg",
+   "frame_hash": "ab236bba98d69d61d47bacecf07dc0d4a908c2385621f135f7eb793e02ab13ba",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    9,
+    719,
+    789,
+    2040
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 0.718,
+   "frame": "pc10_25894_0.jpg",
+   "frame_hash": "ab236bba98d69d61d47bacecf07dc0d4a908c2385621f135f7eb793e02ab13ba",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    682,
+    651,
+    1266,
+    2003
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 0.718,
+   "frame": "pc10_25894_0.jpg",
+   "frame_hash": "ab236bba98d69d61d47bacecf07dc0d4a908c2385621f135f7eb793e02ab13ba",
+   "object_name": "EMBEDDED_APPLIANCE",
+   "bbox_pixel": [
+    105,
+    1106,
+    756,
+    1767
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:44:56",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 1.676,
+   "frame": "pc10_25894_1.jpg",
+   "frame_hash": "b6f489288bfabee8f40c1ada324e8ac811a512c107b91fd8b850359d01f102af",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    293,
+    1015,
+    1228,
+    1503
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:45:20",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 1.676,
+   "frame": "pc10_25894_1.jpg",
+   "frame_hash": "b6f489288bfabee8f40c1ada324e8ac811a512c107b91fd8b850359d01f102af",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    12,
+    787,
+    728,
+    1133
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:45:20",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 1.676,
+   "frame": "pc10_25894_1.jpg",
+   "frame_hash": "b6f489288bfabee8f40c1ada324e8ac811a512c107b91fd8b850359d01f102af",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    3,
+    678,
+    739,
+    1997
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:45:20",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 1.676,
+   "frame": "pc10_25894_1.jpg",
+   "frame_hash": "b6f489288bfabee8f40c1ada324e8ac811a512c107b91fd8b850359d01f102af",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    360,
+    714,
+    1270,
+    2048
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:45:20",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 1.676,
+   "frame": "pc10_25894_1.jpg",
+   "frame_hash": "b6f489288bfabee8f40c1ada324e8ac811a512c107b91fd8b850359d01f102af",
+   "object_name": "EMBEDDED_APPLIANCE",
+   "bbox_pixel": [
+    115,
+    1086,
+    739,
+    1798
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:45:20",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 2.394,
+   "frame": "pc10_25894_2.jpg",
+   "frame_hash": "54879d25b5c808d20c77eed1f7d88c28d60cfe87b91b6a06f8821f761f073ba5",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    404,
+    1062,
+    1255,
+    1618
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:45:47",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 2.394,
+   "frame": "pc10_25894_2.jpg",
+   "frame_hash": "54879d25b5c808d20c77eed1f7d88c28d60cfe87b91b6a06f8821f761f073ba5",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    10,
+    776,
+    755,
+    1142
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:45:47",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 2.394,
+   "frame": "pc10_25894_2.jpg",
+   "frame_hash": "54879d25b5c808d20c77eed1f7d88c28d60cfe87b91b6a06f8821f761f073ba5",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    5,
+    654,
+    748,
+    2131
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:45:47",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 2.394,
+   "frame": "pc10_25894_2.jpg",
+   "frame_hash": "54879d25b5c808d20c77eed1f7d88c28d60cfe87b91b6a06f8821f761f073ba5",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    394,
+    690,
+    1273,
+    2193
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:45:47",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 2.394,
+   "frame": "pc10_25894_2.jpg",
+   "frame_hash": "54879d25b5c808d20c77eed1f7d88c28d60cfe87b91b6a06f8821f761f073ba5",
+   "object_name": "EMBEDDED_APPLIANCE",
+   "bbox_pixel": [
+    68,
+    1083,
+    740,
+    1859
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:45:47",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 3.112,
+   "frame": "pc10_25894_3.jpg",
+   "frame_hash": "61c07af7187a5009c981b68f588ae3084fb9beb713f8fbf95d204a3c7f6fb332",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    509,
+    937,
+    1243,
+    1598
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:46:08",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 3.112,
+   "frame": "pc10_25894_3.jpg",
+   "frame_hash": "61c07af7187a5009c981b68f588ae3084fb9beb713f8fbf95d204a3c7f6fb332",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    8,
+    768,
+    739,
+    1133
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:46:08",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 3.112,
+   "frame": "pc10_25894_3.jpg",
+   "frame_hash": "61c07af7187a5009c981b68f588ae3084fb9beb713f8fbf95d204a3c7f6fb332",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    8,
+    619,
+    773,
+    2160
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:46:08",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 3.112,
+   "frame": "pc10_25894_3.jpg",
+   "frame_hash": "61c07af7187a5009c981b68f588ae3084fb9beb713f8fbf95d204a3c7f6fb332",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    527,
+    611,
+    1268,
+    2223
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:46:08",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 3.112,
+   "frame": "pc10_25894_3.jpg",
+   "frame_hash": "61c07af7187a5009c981b68f588ae3084fb9beb713f8fbf95d204a3c7f6fb332",
+   "object_name": "EMBEDDED_APPLIANCE",
+   "bbox_pixel": [
+    2,
+    1129,
+    688,
+    1960
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:46:08",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 4.07,
+   "frame": "pc10_25894_4.jpg",
+   "frame_hash": "fbc64096a6bd30f88872a95c2a697e1784b48526d04054af02c7bd233a0137d5",
+   "object_name": "HAND",
+   "bbox_pixel": [
+    547,
+    1169,
+    1230,
+    1657
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:47:09",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 4.07,
+   "frame": "pc10_25894_4.jpg",
+   "frame_hash": "fbc64096a6bd30f88872a95c2a697e1784b48526d04054af02c7bd233a0137d5",
+   "object_name": "DRAWER",
+   "bbox_pixel": [
+    1,
+    791,
+    763,
+    1162
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:47:09",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 4.07,
+   "frame": "pc10_25894_4.jpg",
+   "frame_hash": "fbc64096a6bd30f88872a95c2a697e1784b48526d04054af02c7bd233a0137d5",
+   "object_name": "ISLAND_BODY",
+   "bbox_pixel": [
+    7,
+    710,
+    785,
+    2184
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:47:09",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 4.07,
+   "frame": "pc10_25894_4.jpg",
+   "frame_hash": "fbc64096a6bd30f88872a95c2a697e1784b48526d04054af02c7bd233a0137d5",
+   "object_name": "PERSON",
+   "bbox_pixel": [
+    553,
+    667,
+    1261,
+    2235
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:47:09",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  },
+  {
+   "media_id": 25894,
+   "frame_timestamp": 4.07,
+   "frame": "pc10_25894_4.jpg",
+   "frame_hash": "fbc64096a6bd30f88872a95c2a697e1784b48526d04054af02c7bd233a0137d5",
+   "object_name": "EMBEDDED_APPLIANCE",
+   "bbox_pixel": [
+    55,
+    1096,
+    713,
+    1963
+   ],
+   "annotation_source": "L3_HUMAN_ROI",
+   "created_at": "2026-09-07 11:47:09",
+   "annotation_version": "POSTA3_CALIBRATION10"
+  }
+ ],
+ "generated_at": "2026-09-07 11:47:09"
+}
