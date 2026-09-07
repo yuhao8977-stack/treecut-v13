@@ -1,0 +1,14 @@
+{
+ "experiment": "CAM01_V22R1_METHOD_CORRECTION",
+ "generated_at": "2026-09-07 15:11:36",
+ "defect": "CAM01_V22_DEFECT_HOLDOUT_COUNT_01",
+ "bug": "two_fold_validate 用 len(vi)>=8；vi 为布尔数组 → len=全部 match 数",
+ "fix": "int(vi.sum())>=CRIT_HOLDOUT_N",
+ "contaminated_example": {
+  "case": 2543,
+  "pair": "1.202->1.717",
+  "fold": "fit1val0",
+  "holdout_n": 6,
+  "v22_marked": "VALIDATED"
+ }
+}

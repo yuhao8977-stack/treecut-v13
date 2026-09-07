@@ -1,0 +1,33 @@
+{
+ "total": 40,
+ "states": {
+  "LOCAL_ANCHOR_VALIDATED": 13,
+  "LOCAL_ANCHOR_NOT_VALIDATED": 8,
+  "LOCAL_ANCHOR_PARTIAL": 3,
+  "LOCAL_ANCHOR_INSUFFICIENT": 12,
+  "NO_ISLAND": 4
+ },
+ "failure_reasons": {
+  "TARGET_NEIGHBORHOOD_UNSUPPORTED": 9,
+  "LOW_FIT_INLIER": 5,
+  "HIGH_HOLDOUT_MEDIAN": 15,
+  "MATCHES_TOO_FEW": 6,
+  "FOLD_HOLDOUT_TOO_FEW": 5,
+  "SPATIALLY_CLUSTERED": 7,
+  "FEATURES_TOO_FEW": 5,
+  "VALIDATED_CLEAN": 2
+ },
+ "validated_tail": [
+  [
+   "VALIDATED_WITH_HEAVY_TAIL",
+   11
+  ]
+ ],
+ "spatial": {
+  "with_spatial_info": 25,
+  "mean_hull_ratio": 0.376,
+  "clustered_count": 7
+ },
+ "target_neighborhood_pairs": 17,
+ "near_bucket_insufficient_on_validated": 9
+}
