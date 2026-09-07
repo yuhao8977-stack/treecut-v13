@@ -1,0 +1,3944 @@
+{
+ "experiment": "CAM01_V21_CORRECTED_GLOBAL",
+ "generated_at": "2026-09-07 14:49:25",
+ "method_summary": {
+  "SPARSE_MASK_A": {
+   "n": 40,
+   "reliable_pct": 27.5
+  },
+  "SPARSE_MASK_B": {
+   "n": 40,
+   "reliable_pct": 40.0
+  },
+  "SPARSE_MASK_C": {
+   "n": 40,
+   "reliable_pct": 40.0
+  },
+  "BRIDGE_500_MASK_B": {
+   "n": 40,
+   "reliable_pct": 37.5
+  },
+  "BRIDGE_250_MASK_B": {
+   "n": 40,
+   "reliable_pct": 40.0
+  },
+  "BRIDGE_125_MASK_B": {
+   "n": 40,
+   "reliable_pct": 40.0
+  },
+  "BRIDGE_250_MASK_C": {
+   "n": 40,
+   "reliable_pct": 40.0
+  }
+ },
+ "pairs": [
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "gap_s": 4.14,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "gap_s": 4.14,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "gap_s": 4.14,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "gap_s": 4.14,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 9,
+   "scene_diff": 0.517,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 899,
+    "inlier_ratio": 0.533,
+    "residual_median_px": 4.004,
+    "residual_p90_px": 14.251
+   },
+   "edge_residual_after": 0.0677
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "gap_s": 4.14,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 17,
+   "scene_diff": 0.516,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 899,
+    "inlier_ratio": 0.533,
+    "residual_median_px": 4.077,
+    "residual_p90_px": 14.299
+   },
+   "edge_residual_after": 0.0677
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "gap_s": 4.14,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 34,
+   "scene_diff": 0.517,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 899,
+    "inlier_ratio": 0.533,
+    "residual_median_px": 4.064,
+    "residual_p90_px": 14.311
+   },
+   "edge_residual_after": 0.0683
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "gap_s": 4.14,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 17,
+   "scene_diff": 0.516,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 897,
+    "inlier_ratio": 0.535,
+    "residual_median_px": 4.079,
+    "residual_p90_px": 13.386
+   },
+   "edge_residual_after": 0.0677
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "gap_s": 3.106,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.341,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1515,
+    "inlier_ratio": 0.833,
+    "residual_median_px": 1.534,
+    "residual_p90_px": 4.732
+   },
+   "edge_residual_after": 0.0656
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "gap_s": 3.106,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.341,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1089,
+    "inlier_ratio": 0.892,
+    "residual_median_px": 1.221,
+    "residual_p90_px": 4.227
+   },
+   "edge_residual_after": 0.0652
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "gap_s": 3.106,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.341,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1085,
+    "inlier_ratio": 0.876,
+    "residual_median_px": 1.22,
+    "residual_p90_px": 4.222
+   },
+   "edge_residual_after": 0.0652
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "gap_s": 3.106,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 7,
+   "scene_diff": 0.341,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1089,
+    "inlier_ratio": 0.892,
+    "residual_median_px": 1.206,
+    "residual_p90_px": 4.141
+   },
+   "edge_residual_after": 0.0651
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "gap_s": 3.106,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 13,
+   "scene_diff": 0.342,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1089,
+    "inlier_ratio": 0.892,
+    "residual_median_px": 1.239,
+    "residual_p90_px": 4.114
+   },
+   "edge_residual_after": 0.0658
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "gap_s": 3.106,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 25,
+   "scene_diff": 0.342,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1089,
+    "inlier_ratio": 0.892,
+    "residual_median_px": 1.193,
+    "residual_p90_px": 4.199
+   },
+   "edge_residual_after": 0.0646
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "gap_s": 3.106,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 13,
+   "scene_diff": 0.342,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1085,
+    "inlier_ratio": 0.876,
+    "residual_median_px": 1.232,
+    "residual_p90_px": 4.14
+   },
+   "edge_residual_after": 0.0658
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "gap_s": 3.106,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.47,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1369,
+    "inlier_ratio": 0.886,
+    "residual_median_px": 0.958,
+    "residual_p90_px": 4.447
+   },
+   "edge_residual_after": 0.0644
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "gap_s": 3.106,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.468,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1061,
+    "inlier_ratio": 0.935,
+    "residual_median_px": 0.776,
+    "residual_p90_px": 3.325
+   },
+   "edge_residual_after": 0.0629
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "gap_s": 3.106,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.467,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1040,
+    "inlier_ratio": 0.94,
+    "residual_median_px": 0.756,
+    "residual_p90_px": 3.433
+   },
+   "edge_residual_after": 0.0626
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "gap_s": 3.106,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 7,
+   "scene_diff": 0.469,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1061,
+    "inlier_ratio": 0.935,
+    "residual_median_px": 0.886,
+    "residual_p90_px": 3.183
+   },
+   "edge_residual_after": 0.0638
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "gap_s": 3.106,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 13,
+   "scene_diff": 0.469,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1061,
+    "inlier_ratio": 0.935,
+    "residual_median_px": 0.899,
+    "residual_p90_px": 3.158
+   },
+   "edge_residual_after": 0.0634
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "gap_s": 3.106,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 25,
+   "scene_diff": 0.469,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1061,
+    "inlier_ratio": 0.935,
+    "residual_median_px": 0.922,
+    "residual_p90_px": 3.261
+   },
+   "edge_residual_after": 0.0633
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "gap_s": 3.106,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 13,
+   "scene_diff": 0.468,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1040,
+    "inlier_ratio": 0.94,
+    "residual_median_px": 0.872,
+    "residual_p90_px": 3.242
+   },
+   "edge_residual_after": 0.0632
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "gap_s": 4.14,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "gap_s": 4.14,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "gap_s": 4.14,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "gap_s": 4.14,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 9,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "gap_s": 4.14,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 17,
+   "scene_diff": 0.791,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 565,
+    "inlier_ratio": 0.241,
+    "residual_median_px": 10.897,
+    "residual_p90_px": 27.78
+   },
+   "edge_residual_after": 0.0752
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "gap_s": 4.14,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 34,
+   "scene_diff": 0.791,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 565,
+    "inlier_ratio": 0.241,
+    "residual_median_px": 11.0,
+    "residual_p90_px": 27.587
+   },
+   "edge_residual_after": 0.0766
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "gap_s": 4.14,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 17,
+   "scene_diff": 0.79,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 564,
+    "inlier_ratio": 0.27,
+    "residual_median_px": 10.915,
+    "residual_p90_px": 27.747
+   },
+   "edge_residual_after": 0.0754
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "gap_s": 2.966,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "model": "translation",
+   "scene_diff": 0.715,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2435,
+    "inlier_ratio": 0.648,
+    "residual_median_px": 7.491,
+    "residual_p90_px": 15.259
+   },
+   "edge_residual_after": 0.123
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "gap_s": 2.966,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "gap_s": 2.966,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "gap_s": 2.966,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 6,
+   "scene_diff": 0.694,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2029,
+    "inlier_ratio": 0.634,
+    "residual_median_px": 5.666,
+    "residual_p90_px": 12.555
+   },
+   "edge_residual_after": 0.1223
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "gap_s": 2.966,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 12,
+   "scene_diff": 0.69,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2029,
+    "inlier_ratio": 0.634,
+    "residual_median_px": 5.581,
+    "residual_p90_px": 12.388
+   },
+   "edge_residual_after": 0.1204
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "gap_s": 2.966,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 24,
+   "scene_diff": 0.691,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2029,
+    "inlier_ratio": 0.634,
+    "residual_median_px": 5.572,
+    "residual_p90_px": 12.249
+   },
+   "edge_residual_after": 0.1207
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "gap_s": 2.966,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 12,
+   "scene_diff": 0.689,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2025,
+    "inlier_ratio": 0.671,
+    "residual_median_px": 5.562,
+    "residual_p90_px": 12.381
+   },
+   "edge_residual_after": 0.12
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "gap_s": 2.225,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.429,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2567,
+    "inlier_ratio": 0.873,
+    "residual_median_px": 1.577,
+    "residual_p90_px": 4.445
+   },
+   "edge_residual_after": 0.1052
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "gap_s": 2.225,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.422,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2108,
+    "inlier_ratio": 0.943,
+    "residual_median_px": 1.451,
+    "residual_p90_px": 3.241
+   },
+   "edge_residual_after": 0.108
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "gap_s": 2.225,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.425,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2047,
+    "inlier_ratio": 0.916,
+    "residual_median_px": 1.5,
+    "residual_p90_px": 3.177
+   },
+   "edge_residual_after": 0.1092
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "gap_s": 2.225,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 5,
+   "scene_diff": 0.424,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2108,
+    "inlier_ratio": 0.943,
+    "residual_median_px": 1.466,
+    "residual_p90_px": 3.21
+   },
+   "edge_residual_after": 0.1086
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "gap_s": 2.225,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 9,
+   "scene_diff": 0.425,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2108,
+    "inlier_ratio": 0.943,
+    "residual_median_px": 1.471,
+    "residual_p90_px": 3.157
+   },
+   "edge_residual_after": 0.1099
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "gap_s": 2.225,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 18,
+   "scene_diff": 0.429,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2108,
+    "inlier_ratio": 0.943,
+    "residual_median_px": 1.494,
+    "residual_p90_px": 3.121
+   },
+   "edge_residual_after": 0.1108
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "gap_s": 2.225,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 9,
+   "scene_diff": 0.427,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2047,
+    "inlier_ratio": 0.916,
+    "residual_median_px": 1.506,
+    "residual_p90_px": 3.092
+   },
+   "edge_residual_after": 0.1101
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "gap_s": 2.224,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.505,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2611,
+    "inlier_ratio": 0.889,
+    "residual_median_px": 1.232,
+    "residual_p90_px": 4.13
+   },
+   "edge_residual_after": 0.0848
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "gap_s": 2.224,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.503,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2326,
+    "inlier_ratio": 0.88,
+    "residual_median_px": 1.122,
+    "residual_p90_px": 3.66
+   },
+   "edge_residual_after": 0.0837
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "gap_s": 2.224,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.502,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2295,
+    "inlier_ratio": 0.919,
+    "residual_median_px": 1.13,
+    "residual_p90_px": 3.667
+   },
+   "edge_residual_after": 0.0836
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "gap_s": 2.224,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 5,
+   "scene_diff": 0.5,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2326,
+    "inlier_ratio": 0.88,
+    "residual_median_px": 0.986,
+    "residual_p90_px": 3.39
+   },
+   "edge_residual_after": 0.084
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "gap_s": 2.224,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 9,
+   "scene_diff": 0.501,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2326,
+    "inlier_ratio": 0.88,
+    "residual_median_px": 1.023,
+    "residual_p90_px": 3.44
+   },
+   "edge_residual_after": 0.0845
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "gap_s": 2.224,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 18,
+   "scene_diff": 0.502,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2326,
+    "inlier_ratio": 0.88,
+    "residual_median_px": 1.085,
+    "residual_p90_px": 3.504
+   },
+   "edge_residual_after": 0.0842
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "gap_s": 2.224,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 9,
+   "scene_diff": 0.501,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2295,
+    "inlier_ratio": 0.919,
+    "residual_median_px": 1.014,
+    "residual_p90_px": 3.444
+   },
+   "edge_residual_after": 0.0842
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "gap_s": 2.967,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.412,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2817,
+    "inlier_ratio": 0.867,
+    "residual_median_px": 1.39,
+    "residual_p90_px": 5.155
+   },
+   "edge_residual_after": 0.0863
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "gap_s": 2.967,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.41,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2326,
+    "inlier_ratio": 0.859,
+    "residual_median_px": 1.392,
+    "residual_p90_px": 4.184
+   },
+   "edge_residual_after": 0.0836
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "gap_s": 2.967,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.41,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2326,
+    "inlier_ratio": 0.859,
+    "residual_median_px": 1.392,
+    "residual_p90_px": 4.186
+   },
+   "edge_residual_after": 0.0836
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "gap_s": 2.967,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 6,
+   "scene_diff": 0.41,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2326,
+    "inlier_ratio": 0.859,
+    "residual_median_px": 1.336,
+    "residual_p90_px": 4.318
+   },
+   "edge_residual_after": 0.0865
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "gap_s": 2.967,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 12,
+   "scene_diff": 0.407,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2326,
+    "inlier_ratio": 0.859,
+    "residual_median_px": 1.374,
+    "residual_p90_px": 4.156
+   },
+   "edge_residual_after": 0.0842
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "gap_s": 2.967,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 24,
+   "scene_diff": 0.407,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2326,
+    "inlier_ratio": 0.859,
+    "residual_median_px": 1.423,
+    "residual_p90_px": 3.807
+   },
+   "edge_residual_after": 0.0822
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "gap_s": 2.967,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 12,
+   "scene_diff": 0.407,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2326,
+    "inlier_ratio": 0.859,
+    "residual_median_px": 1.373,
+    "residual_p90_px": 4.154
+   },
+   "edge_residual_after": 0.0838
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "gap_s": 2.457,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "gap_s": 2.457,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "gap_s": 2.457,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "gap_s": 2.457,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "scene_diff": 0.993,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 482,
+    "inlier_ratio": 0.425,
+    "residual_median_px": 5.367,
+    "residual_p90_px": 11.838
+   },
+   "edge_residual_after": 0.0828
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "gap_s": 2.457,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 10,
+   "scene_diff": 0.999,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 482,
+    "inlier_ratio": 0.425,
+    "residual_median_px": 6.173,
+    "residual_p90_px": 11.97
+   },
+   "edge_residual_after": 0.0831
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "gap_s": 2.457,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 20,
+   "scene_diff": 1.0,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 482,
+    "inlier_ratio": 0.425,
+    "residual_median_px": 6.282,
+    "residual_p90_px": 12.176
+   },
+   "edge_residual_after": 0.0834
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "gap_s": 2.457,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 10,
+   "scene_diff": 0.998,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 458,
+    "inlier_ratio": 0.4,
+    "residual_median_px": 6.341,
+    "residual_p90_px": 12.328
+   },
+   "edge_residual_after": 0.082
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "gap_s": 1.843,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.437,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1386,
+    "inlier_ratio": 0.607,
+    "residual_median_px": 2.649,
+    "residual_p90_px": 5.473
+   },
+   "edge_residual_after": 0.0727
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "gap_s": 1.843,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.438,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 947,
+    "inlier_ratio": 0.541,
+    "residual_median_px": 2.764,
+    "residual_p90_px": 5.095
+   },
+   "edge_residual_after": 0.0743
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "gap_s": 1.843,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.438,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 936,
+    "inlier_ratio": 0.538,
+    "residual_median_px": 2.789,
+    "residual_p90_px": 5.098
+   },
+   "edge_residual_after": 0.0743
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "gap_s": 1.843,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 4,
+   "scene_diff": 0.439,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 947,
+    "inlier_ratio": 0.541,
+    "residual_median_px": 2.895,
+    "residual_p90_px": 4.824
+   },
+   "edge_residual_after": 0.0759
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "gap_s": 1.843,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 8,
+   "scene_diff": 0.439,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 947,
+    "inlier_ratio": 0.541,
+    "residual_median_px": 2.869,
+    "residual_p90_px": 4.71
+   },
+   "edge_residual_after": 0.0767
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "gap_s": 1.843,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 15,
+   "scene_diff": 0.44,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 947,
+    "inlier_ratio": 0.541,
+    "residual_median_px": 2.876,
+    "residual_p90_px": 4.766
+   },
+   "edge_residual_after": 0.0776
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "gap_s": 1.843,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 8,
+   "scene_diff": 0.44,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 936,
+    "inlier_ratio": 0.538,
+    "residual_median_px": 2.915,
+    "residual_p90_px": 4.717
+   },
+   "edge_residual_after": 0.0775
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "gap_s": 1.842,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.513,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1416,
+    "inlier_ratio": 0.585,
+    "residual_median_px": 2.636,
+    "residual_p90_px": 7.521
+   },
+   "edge_residual_after": 0.0766
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "gap_s": 1.842,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.507,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1117,
+    "inlier_ratio": 0.561,
+    "residual_median_px": 2.943,
+    "residual_p90_px": 4.346
+   },
+   "edge_residual_after": 0.0748
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "gap_s": 1.842,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.507,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1114,
+    "inlier_ratio": 0.677,
+    "residual_median_px": 2.943,
+    "residual_p90_px": 4.342
+   },
+   "edge_residual_after": 0.0748
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "gap_s": 1.842,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "scene_diff": 0.512,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1117,
+    "inlier_ratio": 0.561,
+    "residual_median_px": 3.059,
+    "residual_p90_px": 4.322
+   },
+   "edge_residual_after": 0.0762
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "gap_s": 1.842,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 8,
+   "scene_diff": 0.51,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1117,
+    "inlier_ratio": 0.561,
+    "residual_median_px": 3.077,
+    "residual_p90_px": 4.349
+   },
+   "edge_residual_after": 0.076
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "gap_s": 1.842,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 15,
+   "scene_diff": 0.511,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1117,
+    "inlier_ratio": 0.561,
+    "residual_median_px": 3.031,
+    "residual_p90_px": 4.277
+   },
+   "edge_residual_after": 0.0766
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "gap_s": 1.842,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 8,
+   "scene_diff": 0.51,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1114,
+    "inlier_ratio": 0.677,
+    "residual_median_px": 3.074,
+    "residual_p90_px": 4.334
+   },
+   "edge_residual_after": 0.076
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "gap_s": 2.457,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "gap_s": 2.457,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.551,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 901,
+    "inlier_ratio": 0.548,
+    "residual_median_px": 2.601,
+    "residual_p90_px": 7.693
+   },
+   "edge_residual_after": 0.0758
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "gap_s": 2.457,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.551,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 885,
+    "inlier_ratio": 0.542,
+    "residual_median_px": 2.578,
+    "residual_p90_px": 7.723
+   },
+   "edge_residual_after": 0.0759
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "gap_s": 2.457,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 5,
+   "scene_diff": 0.551,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 901,
+    "inlier_ratio": 0.548,
+    "residual_median_px": 2.688,
+    "residual_p90_px": 7.582
+   },
+   "edge_residual_after": 0.0761
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "gap_s": 2.457,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 10,
+   "scene_diff": 0.561,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 901,
+    "inlier_ratio": 0.548,
+    "residual_median_px": 2.952,
+    "residual_p90_px": 7.161
+   },
+   "edge_residual_after": 0.0801
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "gap_s": 2.457,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 20,
+   "scene_diff": 0.561,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 901,
+    "inlier_ratio": 0.548,
+    "residual_median_px": 2.99,
+    "residual_p90_px": 7.208
+   },
+   "edge_residual_after": 0.0802
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "gap_s": 2.457,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 10,
+   "scene_diff": 0.56,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 885,
+    "inlier_ratio": 0.542,
+    "residual_median_px": 2.904,
+    "residual_p90_px": 7.22
+   },
+   "edge_residual_after": 0.0798
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "gap_s": 1.602,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "gap_s": 1.602,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "gap_s": 1.602,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "gap_s": 1.602,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "gap_s": 1.602,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 7,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "gap_s": 1.602,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 13,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "gap_s": 1.602,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 7,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "gap_s": 1.201,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "gap_s": 1.201,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "gap_s": 1.201,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "gap_s": 1.201,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "gap_s": 1.201,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "gap_s": 1.201,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 10,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "gap_s": 1.201,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "gap_s": 1.201,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "gap_s": 1.201,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "gap_s": 1.201,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "gap_s": 1.201,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "gap_s": 1.201,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "gap_s": 1.201,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 10,
+   "scene_diff": 1.177,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 383,
+    "inlier_ratio": 0.473,
+    "residual_median_px": 18.095,
+    "residual_p90_px": 43.778
+   },
+   "edge_residual_after": 0.0781
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "gap_s": 1.201,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "gap_s": 1.602,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "gap_s": 1.602,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "gap_s": 1.602,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "gap_s": 1.602,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "gap_s": 1.602,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 7,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "gap_s": 1.602,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 13,
+   "scene_diff": 1.125,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 317,
+    "inlier_ratio": 0.29,
+    "residual_median_px": 34.168,
+    "residual_p90_px": 128.087
+   },
+   "edge_residual_after": 0.084
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "gap_s": 1.602,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 7,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "0.55->1.283",
+   "gap_s": 0.733,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "0.55->1.283",
+   "gap_s": 0.733,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "0.55->1.283",
+   "gap_s": 0.733,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "0.55->1.283",
+   "gap_s": 0.733,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "0.55->1.283",
+   "gap_s": 0.733,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "0.55->1.283",
+   "gap_s": 0.733,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 6,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "0.55->1.283",
+   "gap_s": 0.733,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.283->1.833",
+   "gap_s": 0.55,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.283->1.833",
+   "gap_s": 0.55,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.283->1.833",
+   "gap_s": 0.55,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.283->1.833",
+   "gap_s": 0.55,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.283->1.833",
+   "gap_s": 0.55,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.283->1.833",
+   "gap_s": 0.55,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.283->1.833",
+   "gap_s": 0.55,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.833->2.383",
+   "gap_s": 0.55,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.833->2.383",
+   "gap_s": 0.55,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.833->2.383",
+   "gap_s": 0.55,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.833->2.383",
+   "gap_s": 0.55,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.833->2.383",
+   "gap_s": 0.55,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.833->2.383",
+   "gap_s": 0.55,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "1.833->2.383",
+   "gap_s": 0.55,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "2.383->3.117",
+   "gap_s": 0.734,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "2.383->3.117",
+   "gap_s": 0.734,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "2.383->3.117",
+   "gap_s": 0.734,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "2.383->3.117",
+   "gap_s": 0.734,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "2.383->3.117",
+   "gap_s": 0.734,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "2.383->3.117",
+   "gap_s": 0.734,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 6,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2212,
+   "role": "NEG",
+   "pair": "2.383->3.117",
+   "gap_s": 0.734,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "gap_s": 1.057,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "gap_s": 1.057,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "gap_s": 1.057,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "gap_s": 1.057,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "gap_s": 1.057,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "gap_s": 1.057,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 9,
+   "scene_diff": 0.849,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 605,
+    "inlier_ratio": 0.364,
+    "residual_median_px": 13.421,
+    "residual_p90_px": 39.625
+   },
+   "edge_residual_after": 0.0844
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "gap_s": 1.057,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "gap_s": 0.793,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "gap_s": 0.793,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "gap_s": 0.793,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "gap_s": 0.793,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "gap_s": 0.793,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "scene_diff": 0.597,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1018,
+    "inlier_ratio": 0.398,
+    "residual_median_px": 5.958,
+    "residual_p90_px": 13.138
+   },
+   "edge_residual_after": 0.0865
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "gap_s": 0.793,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 7,
+   "scene_diff": 0.597,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1018,
+    "inlier_ratio": 0.398,
+    "residual_median_px": 5.916,
+    "residual_p90_px": 13.16
+   },
+   "edge_residual_after": 0.0866
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "gap_s": 0.793,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "scene_diff": 0.597,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1018,
+    "inlier_ratio": 0.398,
+    "residual_median_px": 5.958,
+    "residual_p90_px": 13.138
+   },
+   "edge_residual_after": 0.0865
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "gap_s": 0.792,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "gap_s": 0.792,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "gap_s": 0.792,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "gap_s": 0.792,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "gap_s": 0.792,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "scene_diff": 0.667,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 749,
+    "inlier_ratio": 0.505,
+    "residual_median_px": 6.5,
+    "residual_p90_px": 43.805
+   },
+   "edge_residual_after": 0.093
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "gap_s": 0.792,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 7,
+   "scene_diff": 0.675,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 749,
+    "inlier_ratio": 0.505,
+    "residual_median_px": 8.0,
+    "residual_p90_px": 42.455
+   },
+   "edge_residual_after": 0.0941
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "gap_s": 0.792,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "scene_diff": 0.67,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 717,
+    "inlier_ratio": 0.52,
+    "residual_median_px": 7.206,
+    "residual_p90_px": 43.277
+   },
+   "edge_residual_after": 0.0934
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "gap_s": 1.057,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "gap_s": 1.057,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "gap_s": 1.057,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "gap_s": 1.057,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "gap_s": 1.057,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "gap_s": 1.057,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 9,
+   "scene_diff": 0.81,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 582,
+    "inlier_ratio": 0.378,
+    "residual_median_px": 9.438,
+    "residual_p90_px": 47.406
+   },
+   "edge_residual_after": 0.0898
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "gap_s": 1.057,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "gap_s": 1.025,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "gap_s": 1.025,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "gap_s": 1.025,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "gap_s": 1.025,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "gap_s": 1.025,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "gap_s": 1.025,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 9,
+   "scene_diff": 0.979,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 843,
+    "inlier_ratio": 0.286,
+    "residual_median_px": 9.794,
+    "residual_p90_px": 77.794
+   },
+   "edge_residual_after": 0.0852
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "gap_s": 1.025,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "gap_s": 0.768,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "gap_s": 0.768,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "gap_s": 0.768,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "gap_s": 0.768,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "gap_s": 0.768,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "gap_s": 0.768,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 7,
+   "scene_diff": 1.067,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 813,
+    "inlier_ratio": 0.308,
+    "residual_median_px": 10.102,
+    "residual_p90_px": 74.655
+   },
+   "edge_residual_after": 0.0778
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "gap_s": 0.768,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "gap_s": 0.768,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "gap_s": 0.768,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "gap_s": 0.768,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "gap_s": 0.768,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "gap_s": 0.768,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "gap_s": 0.768,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 7,
+   "scene_diff": 1.367,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 708,
+    "inlier_ratio": 0.347,
+    "residual_median_px": 8.514,
+    "residual_p90_px": 85.283
+   },
+   "edge_residual_after": 0.0755
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "gap_s": 0.768,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "gap_s": 1.025,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "gap_s": 1.025,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "gap_s": 1.025,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "gap_s": 1.025,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "gap_s": 1.025,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "gap_s": 1.025,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 9,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "gap_s": 1.025,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 5,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "gap_s": 0.687,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "gap_s": 0.687,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "gap_s": 0.687,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "gap_s": 0.687,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "gap_s": 0.687,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "gap_s": 0.687,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 6,
+   "scene_diff": 0.852,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1496,
+    "inlier_ratio": 0.645,
+    "residual_median_px": 4.969,
+    "residual_p90_px": 40.092
+   },
+   "edge_residual_after": 0.1065
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "gap_s": 0.687,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "gap_s": 0.515,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.316,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 3189,
+    "inlier_ratio": 0.625,
+    "residual_median_px": 2.747,
+    "residual_p90_px": 5.404
+   },
+   "edge_residual_after": 0.1083
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "gap_s": 0.515,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.315,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2395,
+    "inlier_ratio": 0.757,
+    "residual_median_px": 2.096,
+    "residual_p90_px": 3.694
+   },
+   "edge_residual_after": 0.1095
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "gap_s": 0.515,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.315,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2394,
+    "inlier_ratio": 0.723,
+    "residual_median_px": 2.091,
+    "residual_p90_px": 3.696
+   },
+   "edge_residual_after": 0.1096
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "gap_s": 0.515,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 2,
+   "scene_diff": 0.315,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2395,
+    "inlier_ratio": 0.757,
+    "residual_median_px": 1.994,
+    "residual_p90_px": 3.779
+   },
+   "edge_residual_after": 0.1101
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "gap_s": 0.515,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 3,
+   "scene_diff": 0.322,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2395,
+    "inlier_ratio": 0.757,
+    "residual_median_px": 1.436,
+    "residual_p90_px": 4.602
+   },
+   "edge_residual_after": 0.1106
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "gap_s": 0.515,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 5,
+   "scene_diff": 0.32,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2395,
+    "inlier_ratio": 0.757,
+    "residual_median_px": 1.524,
+    "residual_p90_px": 4.366
+   },
+   "edge_residual_after": 0.1115
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "gap_s": 0.515,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 3,
+   "scene_diff": 0.322,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2394,
+    "inlier_ratio": 0.723,
+    "residual_median_px": 1.436,
+    "residual_p90_px": 4.593
+   },
+   "edge_residual_after": 0.1106
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "gap_s": 0.515,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "gap_s": 0.515,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "gap_s": 0.515,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "gap_s": 0.515,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "reason": "SEG_FAIL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "gap_s": 0.515,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 3,
+   "scene_diff": 0.559,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2147,
+    "inlier_ratio": 0.649,
+    "residual_median_px": 1.84,
+    "residual_p90_px": 11.315
+   },
+   "edge_residual_after": 0.1106
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "gap_s": 0.515,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 5,
+   "scene_diff": 0.558,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2147,
+    "inlier_ratio": 0.649,
+    "residual_median_px": 1.865,
+    "residual_p90_px": 11.238
+   },
+   "edge_residual_after": 0.1088
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "gap_s": 0.515,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 3,
+   "scene_diff": 0.559,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 2124,
+    "inlier_ratio": 0.683,
+    "residual_median_px": 1.861,
+    "residual_p90_px": 11.361
+   },
+   "edge_residual_after": 0.1106
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "gap_s": 0.686,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "gap_s": 0.686,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "gap_s": 0.686,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "gap_s": 0.686,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 2,
+   "scene_diff": 0.764,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1840,
+    "inlier_ratio": 0.565,
+    "residual_median_px": 3.083,
+    "residual_p90_px": 26.818
+   },
+   "edge_residual_after": 0.1179
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "gap_s": 0.686,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "scene_diff": 0.774,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1840,
+    "inlier_ratio": 0.565,
+    "residual_median_px": 3.437,
+    "residual_p90_px": 26.499
+   },
+   "edge_residual_after": 0.1196
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "gap_s": 0.686,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 6,
+   "scene_diff": 0.774,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1840,
+    "inlier_ratio": 0.565,
+    "residual_median_px": 3.513,
+    "residual_p90_px": 26.371
+   },
+   "edge_residual_after": 0.1195
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "gap_s": 0.686,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 3,
+   "scene_diff": 0.773,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1836,
+    "inlier_ratio": 0.621,
+    "residual_median_px": 3.411,
+    "residual_p90_px": 26.612
+   },
+   "edge_residual_after": 0.1193
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "gap_s": 1.649,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "gap_s": 1.649,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "gap_s": 1.649,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "gap_s": 1.649,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 4,
+   "scene_diff": 0.813,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 305,
+    "inlier_ratio": 0.682,
+    "residual_median_px": 3.555,
+    "residual_p90_px": 8.267
+   },
+   "edge_residual_after": 0.0376
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "gap_s": 1.649,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 7,
+   "scene_diff": 0.812,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 305,
+    "inlier_ratio": 0.682,
+    "residual_median_px": 3.886,
+    "residual_p90_px": 8.746
+   },
+   "edge_residual_after": 0.0382
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "gap_s": 1.649,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 14,
+   "scene_diff": 0.812,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 305,
+    "inlier_ratio": 0.682,
+    "residual_median_px": 3.827,
+    "residual_p90_px": 8.664
+   },
+   "edge_residual_after": 0.0382
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "gap_s": 1.649,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_UNRELIABLE",
+   "segments": 7,
+   "scene_diff": 0.812,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 294,
+    "inlier_ratio": 0.721,
+    "residual_median_px": 3.788,
+    "residual_p90_px": 8.677
+   },
+   "edge_residual_after": 0.0382
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "gap_s": 1.236,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.393,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 831,
+    "inlier_ratio": 0.721,
+    "residual_median_px": 0.915,
+    "residual_p90_px": 10.326
+   },
+   "edge_residual_after": 0.0338
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "gap_s": 1.236,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.396,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 401,
+    "inlier_ratio": 0.923,
+    "residual_median_px": 0.584,
+    "residual_p90_px": 2.161
+   },
+   "edge_residual_after": 0.0335
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "gap_s": 1.236,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.396,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 401,
+    "inlier_ratio": 0.923,
+    "residual_median_px": 0.584,
+    "residual_p90_px": 2.161
+   },
+   "edge_residual_after": 0.0335
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "gap_s": 1.236,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 3,
+   "scene_diff": 0.395,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 401,
+    "inlier_ratio": 0.923,
+    "residual_median_px": 0.602,
+    "residual_p90_px": 2.113
+   },
+   "edge_residual_after": 0.0337
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "gap_s": 1.236,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 5,
+   "scene_diff": 0.396,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 401,
+    "inlier_ratio": 0.923,
+    "residual_median_px": 0.594,
+    "residual_p90_px": 2.047
+   },
+   "edge_residual_after": 0.0338
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "gap_s": 1.236,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 10,
+   "scene_diff": 0.395,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 401,
+    "inlier_ratio": 0.923,
+    "residual_median_px": 0.612,
+    "residual_p90_px": 2.095
+   },
+   "edge_residual_after": 0.0337
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "gap_s": 1.236,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 5,
+   "scene_diff": 0.396,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 401,
+    "inlier_ratio": 0.923,
+    "residual_median_px": 0.594,
+    "residual_p90_px": 2.047
+   },
+   "edge_residual_after": 0.0338
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "gap_s": 1.236,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.296,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 780,
+    "inlier_ratio": 0.815,
+    "residual_median_px": 0.594,
+    "residual_p90_px": 6.792
+   },
+   "edge_residual_after": 0.0305
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "gap_s": 1.236,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.296,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 391,
+    "inlier_ratio": 0.99,
+    "residual_median_px": 0.323,
+    "residual_p90_px": 0.824
+   },
+   "edge_residual_after": 0.0296
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "gap_s": 1.236,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.296,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 391,
+    "inlier_ratio": 0.99,
+    "residual_median_px": 0.323,
+    "residual_p90_px": 0.824
+   },
+   "edge_residual_after": 0.0296
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "gap_s": 1.236,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 3,
+   "scene_diff": 0.297,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 391,
+    "inlier_ratio": 0.99,
+    "residual_median_px": 0.289,
+    "residual_p90_px": 0.879
+   },
+   "edge_residual_after": 0.0305
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "gap_s": 1.236,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 5,
+   "scene_diff": 0.297,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 391,
+    "inlier_ratio": 0.99,
+    "residual_median_px": 0.316,
+    "residual_p90_px": 0.876
+   },
+   "edge_residual_after": 0.0304
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "gap_s": 1.236,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 10,
+   "scene_diff": 0.298,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 391,
+    "inlier_ratio": 0.99,
+    "residual_median_px": 0.35,
+    "residual_p90_px": 0.898
+   },
+   "edge_residual_after": 0.0312
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "gap_s": 1.236,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 5,
+   "scene_diff": 0.297,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 391,
+    "inlier_ratio": 0.99,
+    "residual_median_px": 0.316,
+    "residual_p90_px": 0.876
+   },
+   "edge_residual_after": 0.0304
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "gap_s": 1.648,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.164,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 959,
+    "inlier_ratio": 0.835,
+    "residual_median_px": 0.653,
+    "residual_p90_px": 6.444
+   },
+   "edge_residual_after": 0.032
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "gap_s": 1.648,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.165,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 424,
+    "inlier_ratio": 0.986,
+    "residual_median_px": 0.35,
+    "residual_p90_px": 0.914
+   },
+   "edge_residual_after": 0.0319
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "gap_s": 1.648,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.165,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 424,
+    "inlier_ratio": 0.986,
+    "residual_median_px": 0.35,
+    "residual_p90_px": 0.914
+   },
+   "edge_residual_after": 0.0319
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "gap_s": 1.648,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 4,
+   "scene_diff": 0.166,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 424,
+    "inlier_ratio": 0.986,
+    "residual_median_px": 0.343,
+    "residual_p90_px": 0.924
+   },
+   "edge_residual_after": 0.032
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "gap_s": 1.648,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 7,
+   "scene_diff": 0.165,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 424,
+    "inlier_ratio": 0.986,
+    "residual_median_px": 0.351,
+    "residual_p90_px": 0.893
+   },
+   "edge_residual_after": 0.0317
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "gap_s": 1.648,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 14,
+   "scene_diff": 0.168,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 424,
+    "inlier_ratio": 0.986,
+    "residual_median_px": 0.342,
+    "residual_p90_px": 0.915
+   },
+   "edge_residual_after": 0.0325
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "gap_s": 1.648,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 7,
+   "scene_diff": 0.165,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 424,
+    "inlier_ratio": 0.986,
+    "residual_median_px": 0.351,
+    "residual_p90_px": 0.894
+   },
+   "edge_residual_after": 0.0317
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "gap_s": 0.958,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "gap_s": 0.958,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.61,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1532,
+    "inlier_ratio": 0.753,
+    "residual_median_px": 2.432,
+    "residual_p90_px": 5.324
+   },
+   "edge_residual_after": 0.1035
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "gap_s": 0.958,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.611,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1491,
+    "inlier_ratio": 0.736,
+    "residual_median_px": 2.396,
+    "residual_p90_px": 4.777
+   },
+   "edge_residual_after": 0.1037
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "gap_s": 0.958,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 2,
+   "scene_diff": 0.608,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1532,
+    "inlier_ratio": 0.753,
+    "residual_median_px": 2.433,
+    "residual_p90_px": 5.138
+   },
+   "edge_residual_after": 0.1027
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "gap_s": 0.958,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 4,
+   "scene_diff": 0.61,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1532,
+    "inlier_ratio": 0.753,
+    "residual_median_px": 2.438,
+    "residual_p90_px": 5.27
+   },
+   "edge_residual_after": 0.1033
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "gap_s": 0.958,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 8,
+   "scene_diff": 0.609,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1532,
+    "inlier_ratio": 0.753,
+    "residual_median_px": 2.455,
+    "residual_p90_px": 5.216
+   },
+   "edge_residual_after": 0.1034
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "gap_s": 0.958,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 4,
+   "scene_diff": 0.611,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1491,
+    "inlier_ratio": 0.736,
+    "residual_median_px": 2.386,
+    "residual_p90_px": 4.789
+   },
+   "edge_residual_after": 0.1039
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "gap_s": 0.718,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "gap_s": 0.718,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.767,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1449,
+    "inlier_ratio": 0.587,
+    "residual_median_px": 2.522,
+    "residual_p90_px": 5.646
+   },
+   "edge_residual_after": 0.1009
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "gap_s": 0.718,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.767,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1448,
+    "inlier_ratio": 0.682,
+    "residual_median_px": 2.521,
+    "residual_p90_px": 5.647
+   },
+   "edge_residual_after": 0.1009
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "gap_s": 0.718,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 2,
+   "scene_diff": 0.765,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1449,
+    "inlier_ratio": 0.587,
+    "residual_median_px": 2.368,
+    "residual_p90_px": 5.76
+   },
+   "edge_residual_after": 0.1007
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "gap_s": 0.718,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 3,
+   "scene_diff": 0.765,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1449,
+    "inlier_ratio": 0.587,
+    "residual_median_px": 2.358,
+    "residual_p90_px": 5.774
+   },
+   "edge_residual_after": 0.1007
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "gap_s": 0.718,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 6,
+   "scene_diff": 0.763,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1449,
+    "inlier_ratio": 0.587,
+    "residual_median_px": 2.321,
+    "residual_p90_px": 5.805
+   },
+   "edge_residual_after": 0.1001
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "gap_s": 0.718,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 3,
+   "scene_diff": 0.765,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1448,
+    "inlier_ratio": 0.682,
+    "residual_median_px": 2.358,
+    "residual_p90_px": 5.772
+   },
+   "edge_residual_after": 0.1007
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "gap_s": 0.718,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "gap_s": 0.718,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.715,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1040,
+    "inlier_ratio": 0.67,
+    "residual_median_px": 2.446,
+    "residual_p90_px": 5.422
+   },
+   "edge_residual_after": 0.095
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "gap_s": 0.718,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.716,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1002,
+    "inlier_ratio": 0.664,
+    "residual_median_px": 2.339,
+    "residual_p90_px": 5.152
+   },
+   "edge_residual_after": 0.0953
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "gap_s": 0.718,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 2,
+   "scene_diff": 0.714,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1040,
+    "inlier_ratio": 0.67,
+    "residual_median_px": 2.383,
+    "residual_p90_px": 5.605
+   },
+   "edge_residual_after": 0.0941
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "gap_s": 0.718,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 3,
+   "scene_diff": 0.714,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1040,
+    "inlier_ratio": 0.67,
+    "residual_median_px": 2.38,
+    "residual_p90_px": 5.606
+   },
+   "edge_residual_after": 0.0943
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "gap_s": 0.718,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 6,
+   "scene_diff": 0.715,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1040,
+    "inlier_ratio": 0.67,
+    "residual_median_px": 2.398,
+    "residual_p90_px": 5.524
+   },
+   "edge_residual_after": 0.0949
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "gap_s": 0.718,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 3,
+   "scene_diff": 0.715,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1002,
+    "inlier_ratio": 0.664,
+    "residual_median_px": 2.262,
+    "residual_p90_px": 5.303
+   },
+   "edge_residual_after": 0.0949
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "gap_s": 0.958,
+   "tag": "SPARSE_MASK_A",
+   "state": "CAMERA_UNRELIABLE",
+   "reason": "NO_MODEL"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "gap_s": 0.958,
+   "tag": "SPARSE_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.49,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1069,
+    "inlier_ratio": 0.969,
+    "residual_median_px": 2.337,
+    "residual_p90_px": 4.534
+   },
+   "edge_residual_after": 0.0945
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "gap_s": 0.958,
+   "tag": "SPARSE_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "model": "translation",
+   "scene_diff": 0.49,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1069,
+    "inlier_ratio": 0.969,
+    "residual_median_px": 2.337,
+    "residual_p90_px": 4.534
+   },
+   "edge_residual_after": 0.0945
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "gap_s": 0.958,
+   "tag": "BRIDGE_500_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 2,
+   "scene_diff": 0.491,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1069,
+    "inlier_ratio": 0.969,
+    "residual_median_px": 2.342,
+    "residual_p90_px": 4.549
+   },
+   "edge_residual_after": 0.0954
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "gap_s": 0.958,
+   "tag": "BRIDGE_250_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 4,
+   "scene_diff": 0.492,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1069,
+    "inlier_ratio": 0.969,
+    "residual_median_px": 2.337,
+    "residual_p90_px": 4.55
+   },
+   "edge_residual_after": 0.0956
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "gap_s": 0.958,
+   "tag": "BRIDGE_125_MASK_B",
+   "state": "CAMERA_RELIABLE",
+   "segments": 8,
+   "scene_diff": 0.491,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1069,
+    "inlier_ratio": 0.969,
+    "residual_median_px": 2.361,
+    "residual_p90_px": 4.538
+   },
+   "edge_residual_after": 0.0954
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "gap_s": 0.958,
+   "tag": "BRIDGE_250_MASK_C",
+   "state": "CAMERA_RELIABLE",
+   "segments": 4,
+   "scene_diff": 0.492,
+   "descriptor": {
+    "validation": "OK",
+    "matches": 1069,
+    "inlier_ratio": 0.969,
+    "residual_median_px": 2.337,
+    "residual_p90_px": 4.55
+   },
+   "edge_residual_after": 0.0956
+  }
+ ]
+}

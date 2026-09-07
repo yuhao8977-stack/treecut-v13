@@ -1,0 +1,86 @@
+{
+ "experiment": "CAM01_V21_METHOD_AUDIT",
+ "generated_at": "2026-09-07 14:49:25",
+ "audit": {
+  "endpoint_not_closed_count": 120,
+  "endpoint_not_closed_examples": [
+   {
+    "case": 27433,
+    "pair": "3.106->7.246",
+    "step": 0.5,
+    "old_last": 7.106,
+    "t1": 7.246,
+    "endpoint_gap_ms": 140.0
+   },
+   {
+    "case": 27433,
+    "pair": "3.106->7.246",
+    "step": 0.25,
+    "old_last": 7.106,
+    "t1": 7.246,
+    "endpoint_gap_ms": 140.0
+   },
+   {
+    "case": 27433,
+    "pair": "3.106->7.246",
+    "step": 0.125,
+    "old_last": 7.231,
+    "t1": 7.246,
+    "endpoint_gap_ms": 15.0
+   },
+   {
+    "case": 27433,
+    "pair": "7.246->10.352",
+    "step": 0.5,
+    "old_last": 10.246,
+    "t1": 10.352,
+    "endpoint_gap_ms": 106.0
+   },
+   {
+    "case": 27433,
+    "pair": "7.246->10.352",
+    "step": 0.25,
+    "old_last": 10.246,
+    "t1": 10.352,
+    "endpoint_gap_ms": 106.0
+   },
+   {
+    "case": 27433,
+    "pair": "7.246->10.352",
+    "step": 0.125,
+    "old_last": 10.246,
+    "t1": 10.352,
+    "endpoint_gap_ms": 106.0
+   },
+   {
+    "case": 27433,
+    "pair": "10.352->13.458",
+    "step": 0.5,
+    "old_last": 13.352,
+    "t1": 13.458,
+    "endpoint_gap_ms": 106.0
+   },
+   {
+    "case": 27433,
+    "pair": "10.352->13.458",
+    "step": 0.25,
+    "old_last": 13.352,
+    "t1": 13.458,
+    "endpoint_gap_ms": 106.0
+   }
+  ],
+  "roundtrip_not_independent": true,
+  "note": "旧 v2 中间帧无人工框(仅 5 语义帧有) → 旧报告‘ROI-aware’不实; 修正后 MASK_B(端点并集+8px)/MASK_C(走廊)如实声明",
+  "bridge_segments_total_by_step": {
+   "500": 144,
+   "250": 260,
+   "125": 502
+  },
+  "bridge_intermediate_segments_with_human_roi": 0,
+  "bridge_intermediate_segments_without_human_roi": {
+   "500": 144,
+   "250": 260,
+   "125": 502
+  }
+ }
+}
