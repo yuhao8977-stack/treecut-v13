@@ -1,0 +1,7 @@
+{
+ "experiment": "CAM01_V26R1_METHOD_CORRECTION",
+ "generated_at": "2026-09-07 16:51:32",
+ "CAM01_V26_DEFECT_CANONICAL_CELL_01": "t1 clean 曾用 t0 像素矩形 → 现真 canonical 512 平面 + AND",
+ "CAM01_V26_DEFECT_NEG_CONTROL_PLACEHOLDER_02": "NEG control 占位 → 真实 pick_target 严格 contract",
+ "v26_superseded": "V26_RESULT_SUPERSEDED_PENDING_R1"
+}

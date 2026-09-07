@@ -1,0 +1,23 @@
+{
+ "island_present_pairs": 36,
+ "v26_old_common_clean_availability": 34,
+ "r1_canonical_common_clean_availability": 36,
+ "avg_candidate_regions_per_pair": 5.11,
+ "validated_region_instances": 31,
+ "PAIR_REGION_MULTI": 2,
+ "PAIR_REGION_SINGLE": 5,
+ "PAIR_REGION_CONFLICT": 6,
+ "PAIR_REGION_NO_ANCHOR": 23,
+ "region_union": 7,
+ "case_coverage_9": 3,
+ "multi_case_coverage_9": 1,
+ "pooled_median": 0.436,
+ "pooled_p90": 1.774,
+ "pooled_p95": 3.317,
+ "states": {
+  "PAIR_REGION_SINGLE": 5,
+  "PAIR_REGION_NO_ANCHOR": 23,
+  "PAIR_REGION_CONFLICT": 6,
+  "PAIR_REGION_MULTI_CONSENSUS": 2
+ }
+}
