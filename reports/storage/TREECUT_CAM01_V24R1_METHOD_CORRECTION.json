@@ -1,0 +1,46 @@
+{
+ "experiment": "CAM01_V24R1_METHOD_CORRECTION",
+ "generated_at": "2026-09-07 16:05:46",
+ "defect": "CAM01_V24_DEFECT_STAR_CLUSTER_01",
+ "old_cluster_semantics": "star: 以某方法为中心收拢 <=3px 方法（非 pairwise clique）",
+ "fixed_to": "true pairwise clique (穷举, edge<=3.0px)",
+ "affected_pairs": [
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "old_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "GFTT_LK_LOCAL"
+   ],
+   "true_clique": [
+    "AKAZE_BASELINE",
+    "GFTT_LK_LOCAL"
+   ],
+   "removed_methods": [
+    "AKAZE_CLAHE"
+   ],
+   "old_representative": "GFTT_LK_LOCAL",
+   "new_representative": "GFTT_LK_LOCAL"
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "old_cluster": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE",
+    "GFTT_LK_LOCAL"
+   ],
+   "true_clique": [
+    "AKAZE_BASELINE",
+    "AKAZE_CLAHE"
+   ],
+   "removed_methods": [
+    "GFTT_LK_LOCAL"
+   ],
+   "old_representative": "AKAZE_CLAHE",
+   "new_representative": "AKAZE_CLAHE"
+  }
+ ],
+ "v24_consensus_was": 12
+}

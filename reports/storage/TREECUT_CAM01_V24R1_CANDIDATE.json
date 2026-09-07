@@ -1,0 +1,43 @@
+{
+ "candidate": null,
+ "candidate_frozen": false,
+ "diagnostic_recipe": {
+  "methods": [
+   "AKAZE_BASELINE",
+   "AKAZE_CLAHE",
+   "SIFT_BASELINE",
+   "SIFT_GRID_BALANCED",
+   "GFTT_LK_LOCAL"
+  ],
+  "consensus_rule": "true pairwise clique (edge = island-grid median disagreement<=3.0px); max size; tie: max member pooled median -> max pooled P90 -> lexicographic",
+  "representative_rule": "member lowest pooled median -> P90 -> TIE_ORDER",
+  "agreement_px": 3.0,
+  "v24r1_metrics": {
+   "island_present": 36,
+   "oracle_union": 22,
+   "union_case_coverage": 8,
+   "TRUE_MULTI_METHOD_CONSENSUS": 12,
+   "consensus_case_coverage": 6,
+   "SINGLE_METHOD_VALIDATED": 6,
+   "METHOD_CONFLICT": 4,
+   "NO_VALID_ANCHOR": 14,
+   "consensus_only_pooled_holdout_median": 0.538,
+   "consensus_only_pooled_holdout_p90": 2.819,
+   "consensus_only_representative_distribution": {
+    "GFTT_LK_LOCAL": 8,
+    "SIFT_BASELINE": 2,
+    "SIFT_GRID_BALANCED": 1,
+    "AKAZE_CLAHE": 1
+   },
+   "single_source_pooled_holdout_median": 1.895,
+   "single_source_pooled_holdout_p90": 13.417,
+   "single_source_representative_distribution": {
+    "GFTT_LK_LOCAL": 3,
+    "AKAZE_BASELINE": 2,
+    "AKAZE_CLAHE": 1
+   },
+   "consensus_count_unchanged": true
+  }
+ },
+ "status": "CONSENSUS_PARTIAL"
+}
