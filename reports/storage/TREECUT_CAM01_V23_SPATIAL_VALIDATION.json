@@ -1,0 +1,96 @@
+{
+ "experiment": "CAM01_V23_SPATIAL_VALIDATION",
+ "summary": {
+  "AKAZE_BASELINE": {
+   "states": {
+    "LOCAL_ANCHOR_VALIDATED": 13,
+    "LOCAL_ANCHOR_NOT_VALIDATED": 8,
+    "LOCAL_ANCHOR_PARTIAL": 3,
+    "UNKNOWN": 11,
+    "NO_ISLAND": 4,
+    "LOCAL_ANCHOR_INSUFFICIENT": 1
+   },
+   "validated": 13,
+   "validated_case_coverage": 5,
+   "median_holdout_residual": 1.603,
+   "p90_holdout_residual": 12.463,
+   "heavy_tail_validated": 13,
+   "median_hull_ratio": 0.436
+  },
+  "AKAZE_CLAHE": {
+   "states": {
+    "LOCAL_ANCHOR_NOT_VALIDATED": 8,
+    "LOCAL_ANCHOR_VALIDATED": 15,
+    "LOCAL_ANCHOR_PARTIAL": 1,
+    "UNKNOWN": 10,
+    "NO_ISLAND": 4,
+    "LOCAL_ANCHOR_INSUFFICIENT": 2
+   },
+   "validated": 15,
+   "validated_case_coverage": 5,
+   "median_holdout_residual": 1.76,
+   "p90_holdout_residual": 6.993,
+   "heavy_tail_validated": 14,
+   "median_hull_ratio": 0.489
+  },
+  "SIFT_BASELINE": {
+   "states": {
+    "LOCAL_ANCHOR_PARTIAL": 2,
+    "LOCAL_ANCHOR_VALIDATED": 11,
+    "LOCAL_ANCHOR_NOT_VALIDATED": 6,
+    "LOCAL_ANCHOR_INSUFFICIENT": 4,
+    "UNKNOWN": 13,
+    "NO_ISLAND": 4
+   },
+   "validated": 11,
+   "validated_case_coverage": 6,
+   "median_holdout_residual": 1.048,
+   "p90_holdout_residual": 25.433,
+   "heavy_tail_validated": 9,
+   "median_hull_ratio": 0.493
+  },
+  "SIFT_GRID_BALANCED": {
+   "states": {
+    "LOCAL_ANCHOR_NOT_VALIDATED": 6,
+    "LOCAL_ANCHOR_VALIDATED": 11,
+    "LOCAL_ANCHOR_INSUFFICIENT": 4,
+    "LOCAL_ANCHOR_PARTIAL": 2,
+    "UNKNOWN": 13,
+    "NO_ISLAND": 4
+   },
+   "validated": 11,
+   "validated_case_coverage": 6,
+   "median_holdout_residual": 0.912,
+   "p90_holdout_residual": 27.713,
+   "heavy_tail_validated": 9,
+   "median_hull_ratio": 0.493
+  },
+  "GFTT_LK_LOCAL": {
+   "states": {
+    "LOCAL_ANCHOR_NOT_VALIDATED": 4,
+    "LOCAL_ANCHOR_VALIDATED": 17,
+    "LOCAL_ANCHOR_INSUFFICIENT": 3,
+    "UNKNOWN": 9,
+    "NO_ISLAND": 4,
+    "LOCAL_ANCHOR_PARTIAL": 3
+   },
+   "validated": 17,
+   "validated_case_coverage": 7,
+   "median_holdout_residual": 0.923,
+   "p90_holdout_residual": 3.514,
+   "heavy_tail_validated": 6,
+   "median_hull_ratio": 0.501
+  }
+ },
+ "neg_target_control_available_cases": [
+  {
+   "case": 1641,
+   "validated_with_target_pairs": 1
+  },
+  {
+   "case": 2543,
+   "validated_with_target_pairs": 1
+  }
+ ],
+ "note": "quadrant TL/TR/BL/BR 已修正；target_neighborhood 用 holdout 残差"
+}

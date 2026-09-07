@@ -1,0 +1,44 @@
+{
+ "experiment": "CAM01_V23_METHOD_CONFIG",
+ "config": {
+  "analysis_width_max": 960,
+  "grid_cell": 40,
+  "ratio": 0.8,
+  "ransac_thr": 3.0,
+  "fit_inlier_min": 0.45,
+  "holdout_min": 8,
+  "holdout_median_max_px": 3.0,
+  "akaze": {
+   "default": true
+  },
+  "clahe": {
+   "clipLimit": 2.0,
+   "tileGridSize": [
+    8,
+    8
+   ]
+  },
+  "sift": {
+   "nfeatures": 2000,
+   "contrastThreshold": 0.04
+  },
+  "sift_grid": {
+   "cap_per_cell": 6
+  },
+  "gftt": {
+   "maxCorners": 300,
+   "qualityLevel": 0.02,
+   "minDistance": 6,
+   "lk_win": 21,
+   "lk_maxLevel": 3,
+   "fb_max_px": 3.0
+  }
+ },
+ "methods": [
+  "AKAZE_BASELINE",
+  "AKAZE_CLAHE",
+  "SIFT_BASELINE",
+  "SIFT_GRID_BALANCED",
+  "GFTT_LK_LOCAL"
+ ]
+}

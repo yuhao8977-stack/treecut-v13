@@ -1,0 +1,10 @@
+{
+ "experiment": "CAM01_V23_WINNER",
+ "generated_at": "2026-09-07 15:28:35",
+ "akaze_baseline_validated": 13,
+ "best_method": "GFTT_LK_LOCAL",
+ "best_validated": 17,
+ "improvement_class": "NO_MEANINGFUL_IMPROVEMENT",
+ "candidate": null,
+ "status": "LOCAL_ANCHOR_FEATURE_BAKEOFF_FAILED"
+}
