@@ -1,0 +1,777 @@
+{
+ "experiment": "TREECUT_POSTA3_CAMERA_GATE_V1",
+ "generated_at": "2026-09-07 12:03:17",
+ "note": "前景排除=除 ISLAND_BODY 外全部人工框；bridge=逐段可建模率(compose 待下版)；宽<=720；125ms 后补",
+ "cases": [
+  {
+   "media_id": 27433,
+   "role": "POS",
+   "pairs": [
+    {
+     "pair": "3.106->7.246",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 209
+     },
+     "BRIDGE_500": {
+      "segments": 8,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 16,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "7.246->10.352",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 1.364,
+      "tracks": 231
+     },
+     "BRIDGE_500": {
+      "segments": 6,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 12,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "10.352->13.458",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 1.005,
+      "tracks": 206
+     },
+     "BRIDGE_500": {
+      "segments": 6,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 12,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "13.458->17.598",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 157
+     },
+     "BRIDGE_500": {
+      "segments": 5,
+      "all_segments_ok": false
+     },
+     "BRIDGE_250": {
+      "segments": 16,
+      "all_segments_ok": true
+     }
+    }
+   ]
+  },
+  {
+   "media_id": 12095,
+   "role": "POS",
+   "pairs": [
+    {
+     "pair": "2.225->5.191",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 187
+     },
+     "BRIDGE_500": {
+      "segments": 5,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 11,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "5.191->7.416",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 0.816,
+      "tracks": 219
+     },
+     "BRIDGE_500": {
+      "segments": 4,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 8,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "7.416->9.64",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 1.027,
+      "tracks": 236
+     },
+     "BRIDGE_500": {
+      "segments": 4,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 8,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "9.64->12.607",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 1.149,
+      "tracks": 281
+     },
+     "BRIDGE_500": {
+      "segments": 5,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 11,
+      "all_segments_ok": true
+     }
+    }
+   ]
+  },
+  {
+   "media_id": 3571,
+   "role": "POS",
+   "pairs": [
+    {
+     "pair": "1.842->4.299",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 38
+     },
+     "BRIDGE_500": {
+      "segments": 4,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 9,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "4.299->6.142",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 1.843,
+      "tracks": 175
+     },
+     "BRIDGE_500": {
+      "segments": 3,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 7,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "6.142->7.984",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 2.234,
+      "tracks": 254
+     },
+     "BRIDGE_500": {
+      "segments": 3,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 7,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "7.984->10.441",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 2.509,
+      "tracks": 137
+     },
+     "BRIDGE_500": {
+      "segments": 4,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 9,
+      "all_segments_ok": true
+     }
+    }
+   ]
+  },
+  {
+   "media_id": 21674,
+   "role": "POS",
+   "pairs": [
+    {
+     "pair": "1.201->2.803",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 127
+     },
+     "BRIDGE_500": {
+      "segments": 1,
+      "all_segments_ok": false
+     },
+     "BRIDGE_250": {
+      "segments": 2,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "2.803->4.004",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 141
+     },
+     "BRIDGE_500": {
+      "segments": 1,
+      "all_segments_ok": false
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "4.004->5.205",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 144
+     },
+     "BRIDGE_500": {
+      "segments": 1,
+      "all_segments_ok": false
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "5.205->6.807",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 122
+     },
+     "BRIDGE_500": {
+      "segments": 1,
+      "all_segments_ok": false
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    }
+   ]
+  },
+  {
+   "media_id": 2212,
+   "role": "NEG",
+   "pairs": [
+    {
+     "pair": "0.55->1.283",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 143
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "1.283->1.833",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 102
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "1.833->2.383",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 136
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "2.383->3.117",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 79
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    }
+   ]
+  },
+  {
+   "media_id": 1641,
+   "role": "NEG",
+   "pairs": [
+    {
+     "pair": "0.792->1.849",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 189
+     },
+     "BRIDGE_500": {
+      "segments": 1,
+      "all_segments_ok": false
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "1.849->2.642",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 240
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 3,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "2.642->3.434",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 198
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "3.434->4.491",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 190
+     },
+     "BRIDGE_500": {
+      "segments": 1,
+      "all_segments_ok": false
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    }
+   ]
+  },
+  {
+   "media_id": 10000,
+   "role": "NEG",
+   "pairs": [
+    {
+     "pair": "0.768->1.793",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 102
+     },
+     "BRIDGE_500": {
+      "segments": 1,
+      "all_segments_ok": false
+     },
+     "BRIDGE_250": {
+      "segments": 3,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "1.793->2.561",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 97
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "2.561->3.329",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 53
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "3.329->4.354",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 38
+     },
+     "BRIDGE_500": {
+      "segments": 1,
+      "all_segments_ok": false
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    }
+   ]
+  },
+  {
+   "media_id": 2543,
+   "role": "NEG",
+   "pairs": [
+    {
+     "pair": "0.515->1.202",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 191
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "1.202->1.717",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 1.819,
+      "tracks": 282
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 2,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "1.717->2.232",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 266
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 2,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "2.232->2.918",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 227
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    }
+   ]
+  },
+  {
+   "media_id": 9697,
+   "role": "NEG",
+   "pairs": [
+    {
+     "pair": "1.236->2.885",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 112
+     },
+     "BRIDGE_500": {
+      "segments": 2,
+      "all_segments_ok": false
+     },
+     "BRIDGE_250": {
+      "segments": 3,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "2.885->4.121",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 0.981,
+      "tracks": 186
+     },
+     "BRIDGE_500": {
+      "segments": 2,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 4,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "4.121->5.357",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 0.386,
+      "tracks": 161
+     },
+     "BRIDGE_500": {
+      "segments": 2,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 4,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "5.357->7.005",
+     "SPARSE_DIRECT": {
+      "reliable": true,
+      "pair_state": "SAME_SCENE",
+      "model": "translation",
+      "residual": 0.448,
+      "tracks": 192
+     },
+     "BRIDGE_500": {
+      "segments": 3,
+      "all_segments_ok": true
+     },
+     "BRIDGE_250": {
+      "segments": 6,
+      "all_segments_ok": true
+     }
+    }
+   ]
+  },
+  {
+   "media_id": 25894,
+   "role": "NEG",
+   "pairs": [
+    {
+     "pair": "0.718->1.676",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 265
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 3,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "1.676->2.394",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 266
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 2,
+      "all_segments_ok": true
+     }
+    },
+    {
+     "pair": "2.394->3.112",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 211
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 1,
+      "all_segments_ok": false
+     }
+    },
+    {
+     "pair": "3.112->4.07",
+     "SPARSE_DIRECT": {
+      "reliable": false,
+      "pair_state": "CAMERA_MODEL_UNRELIABLE",
+      "model": null,
+      "residual": null,
+      "tracks": 242
+     },
+     "BRIDGE_500": {
+      "skipped": true
+     },
+     "BRIDGE_250": {
+      "segments": 3,
+      "all_segments_ok": true
+     }
+    }
+   ]
+  }
+ ],
+ "reliability_rates": {
+  "SPARSE_DIRECT": 0.3,
+  "BRIDGE_500": 0.583,
+  "BRIDGE_250": 0.525
+ },
+ "gate_80pct": false
+}

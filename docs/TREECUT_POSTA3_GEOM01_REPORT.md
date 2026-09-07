@@ -38,3 +38,9 @@
 ## 证据路径
 scripts/posta3_geometry_lab.py · tests/test_posta3_geometry_lab.py ·
 reports/storage/TREECUT_POSTA3_GEOMETRY_CALIBRATION_V1.json
+
+## 6. GEOM Gate（真实 calibration10 ROI，2026-09-06）
+- OLD_ABS_AREA: POS EXTEND correct 0/4；NEG False EXTEND **3/6**(2212/10000/2543 误判)——真实数据复现 A3 面积误判模式。
+- RELATIVE_ANCHOR_V1: POS EXTEND correct 0/4（全 STATIC/INSUFFICIENT）；NEG False EXTEND **0/6** ✓（修复了最危险的假阳性轴）。
+- **GEOM GATE NOT PASSED**（POS<3/4）。待查：POS 4 案例的均匀 5 帧是否真的含桌板位移（人工以同缩略图判 EXTEND，若帧内确有位移则问题在框语义/特征粒度；若无则窗口错过动作→校准 v2 需动作窗口采样）。
+- NEG 2212 无 ISLAND_BODY 参照 → NEW INSUFFICIENT(非 EXTEND) 合理；NEG 9697/25894 无动件 → 天然非 EXTEND。

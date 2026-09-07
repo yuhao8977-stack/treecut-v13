@@ -29,10 +29,14 @@ def island():  # 合成岛台
 
 
 def new_classify(tl):
-    """tl: [{t_s, bbox:[x1,y1,x2,y2], island:[..]}] → dict"""
+    """tl: [{t_s, bbox:[x1,y1,x2,y2], island:[..]|None}] → dict
+    仅用有岛台参照的帧（RELATIVE_ANCHOR 依赖岛台归一）；不足 2 帧 → INSUFFICIENT。"""
     feats = []
     for it in tl:
-        bb, ib = it["bbox"], it["island"]
+        ib = it.get("island")
+        if ib is None:
+            continue
+        bb = it["bbox"]
         ibw = max(1, ib[2] - ib[0])
         ibh = max(1, ib[3] - ib[1])
         feats.append({

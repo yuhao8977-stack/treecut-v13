@@ -40,3 +40,8 @@
 
 ## 证据路径
 scripts/posta3_camera_bridge_lab.py · reports/storage/TREECUT_POSTA3_CAMERA_CALIBRATION_V1.json
+
+## 6. CAM Gate（真实 calibration10 ROI 前景排除，2026-09-06；720w；125 未跑）
+- 可靠率: SPARSE_DIRECT 0.3 · BRIDGE_500 0.583 · BRIDGE_250 0.525。
+- bridge 明显优于 sparse（≈0.55 vs 0.30，每案例均一致），但 <80% 门 → **CAM GATE NOT PASSED**（CAM01_NEEDS_REDESIGN 延续）。
+- 下一步: 实现矩阵 compose+漂移；125ms；逐案例排查失败对（多数仍 FORWARD_BACKWARD_TRACKS_UNSTABLE）。

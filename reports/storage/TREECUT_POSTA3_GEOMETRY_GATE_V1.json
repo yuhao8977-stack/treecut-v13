@@ -1,0 +1,136 @@
+{
+ "experiment": "TREECUT_POSTA3_GEOMETRY_GATE_V1",
+ "generated_at": "2026-09-07 11:52:05",
+ "gate": {
+  "pos_correct_ge": "3/4",
+  "neg_false_extend": 0
+ },
+ "summary": {
+  "OLD_pos_correct": 0,
+  "NEW_pos_correct": 0,
+  "OLD_neg_false_extend": 3,
+  "NEW_neg_false_extend": 0
+ },
+ "rows": [
+  {
+   "media_id": 27433,
+   "role": "POS",
+   "target_frames": 5,
+   "island_present": true,
+   "OLD_direction": "UNKNOWN",
+   "NEW_direction": "STATIC",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "ANCHOR_EDGE_OSCILLATION_NO_PROGRESSION"
+   ]
+  },
+  {
+   "media_id": 12095,
+   "role": "POS",
+   "target_frames": 5,
+   "island_present": true,
+   "OLD_direction": "RETRACT",
+   "NEW_direction": "STATIC",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "ANCHOR_EDGE_OSCILLATION_NO_PROGRESSION"
+   ]
+  },
+  {
+   "media_id": 3571,
+   "role": "POS",
+   "target_frames": 5,
+   "island_present": true,
+   "OLD_direction": "RETRACT",
+   "NEW_direction": "STATIC",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "ANCHOR_EDGE_OSCILLATION_NO_PROGRESSION"
+   ]
+  },
+  {
+   "media_id": 21674,
+   "role": "POS",
+   "target_frames": 4,
+   "island_present": true,
+   "OLD_direction": "UNKNOWN",
+   "NEW_direction": "STATIC",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "ANCHOR_EDGE_OSCILLATION_NO_PROGRESSION"
+   ]
+  },
+  {
+   "media_id": 2212,
+   "role": "NEG",
+   "target_frames": 5,
+   "island_present": false,
+   "OLD_direction": "EXTEND",
+   "NEW_direction": "UNKNOWN",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "RELATIVE_GEOMETRY_INSUFFICIENT"
+   ]
+  },
+  {
+   "media_id": 1641,
+   "role": "NEG",
+   "target_frames": 5,
+   "island_present": true,
+   "OLD_direction": "UNKNOWN",
+   "NEW_direction": "STATIC",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "ANCHOR_EDGE_OSCILLATION_NO_PROGRESSION"
+   ]
+  },
+  {
+   "media_id": 10000,
+   "role": "NEG",
+   "target_frames": 5,
+   "island_present": true,
+   "OLD_direction": "EXTEND",
+   "NEW_direction": "STATIC",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "ANCHOR_EDGE_OSCILLATION_NO_PROGRESSION"
+   ]
+  },
+  {
+   "media_id": 2543,
+   "role": "NEG",
+   "target_frames": 5,
+   "island_present": true,
+   "OLD_direction": "EXTEND",
+   "NEW_direction": "STATIC",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "ANCHOR_EDGE_OSCILLATION_NO_PROGRESSION"
+   ]
+  },
+  {
+   "media_id": 9697,
+   "role": "NEG",
+   "target_frames": 0,
+   "island_present": false,
+   "OLD_direction": "UNKNOWN(insufficient)",
+   "NEW_direction": "UNKNOWN",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "RELATIVE_GEOMETRY_INSUFFICIENT"
+   ]
+  },
+  {
+   "media_id": 25894,
+   "role": "NEG",
+   "target_frames": 0,
+   "island_present": false,
+   "OLD_direction": "UNKNOWN(insufficient)",
+   "NEW_direction": "UNKNOWN",
+   "NEW_axis": "UNKNOWN",
+   "NEW_codes": [
+    "RELATIVE_GEOMETRY_INSUFFICIENT"
+   ]
+  }
+ ]
+}
