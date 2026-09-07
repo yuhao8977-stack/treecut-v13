@@ -1,0 +1,1700 @@
+{
+ "pairs": [
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "3.106->7.246",
+   "mnn_count": 210,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 94,
+       "hold": 116,
+       "inlier_ratio": 0.755,
+       "holdout_med": 7.479,
+       "holdout_p90": 25.491
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 116,
+       "hold": 94,
+       "inlier_ratio": 0.724,
+       "holdout_med": 8.002,
+       "holdout_p90": 25.204
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 94,
+       "hold": 116,
+       "inlier_ratio": 0.681,
+       "holdout_med": 7.27,
+       "holdout_p90": 23.8
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 116,
+       "hold": 94,
+       "inlier_ratio": 0.716,
+       "holdout_med": 7.557,
+       "holdout_p90": 35.251
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "7.246->10.352",
+   "mnn_count": 270,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 129,
+       "hold": 127,
+       "inlier_ratio": 0.729,
+       "holdout_med": 7.842,
+       "holdout_p90": 26.226
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 127,
+       "hold": 129,
+       "inlier_ratio": 0.701,
+       "holdout_med": 8.896,
+       "holdout_p90": 20.371
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 129,
+       "hold": 127,
+       "inlier_ratio": 0.667,
+       "holdout_med": 7.654,
+       "holdout_p90": 28.822
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 127,
+       "hold": 129,
+       "inlier_ratio": 0.772,
+       "holdout_med": 5.687,
+       "holdout_p90": 20.799
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "10.352->13.458",
+   "mnn_count": 239,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 128,
+       "hold": 111,
+       "inlier_ratio": 0.578,
+       "holdout_med": 13.423,
+       "holdout_p90": 32.97
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 111,
+       "hold": 128,
+       "inlier_ratio": 0.459,
+       "holdout_med": 10.778,
+       "holdout_p90": 22.555
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 128,
+       "hold": 111,
+       "inlier_ratio": 0.57,
+       "holdout_med": 12.552,
+       "holdout_p90": 56.129
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 111,
+       "hold": 128,
+       "inlier_ratio": 0.577,
+       "holdout_med": 17.716,
+       "holdout_p90": 36.43
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 27433,
+   "role": "POS",
+   "pair": "13.458->17.598",
+   "mnn_count": 265,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 117,
+       "hold": 139,
+       "inlier_ratio": 0.735,
+       "holdout_med": 4.304,
+       "holdout_p90": 26.075
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 139,
+       "hold": 117,
+       "inlier_ratio": 0.784,
+       "holdout_med": 5.553,
+       "holdout_p90": 21.793
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 117,
+       "hold": 139,
+       "inlier_ratio": 0.778,
+       "holdout_med": 4.739,
+       "holdout_p90": 26.558
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 139,
+       "hold": 117,
+       "inlier_ratio": 0.755,
+       "holdout_med": 5.054,
+       "holdout_p90": 21.335
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "2.225->5.191",
+   "mnn_count": 92,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 56,
+       "hold": 36,
+       "inlier_ratio": 0.679,
+       "holdout_med": 11.465,
+       "holdout_p90": 22.91
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 36,
+       "hold": 56,
+       "inlier_ratio": 0.806,
+       "holdout_med": 10.911,
+       "holdout_p90": 19.992
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 56,
+       "hold": 36,
+       "inlier_ratio": 0.75,
+       "holdout_med": 13.127,
+       "holdout_p90": 32.008
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 36,
+       "hold": 56,
+       "inlier_ratio": 0.667,
+       "holdout_med": 10.557,
+       "holdout_p90": 21.332
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "5.191->7.416",
+   "mnn_count": 98,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 59,
+       "hold": 39,
+       "inlier_ratio": 0.814,
+       "holdout_med": 8.674,
+       "holdout_p90": 27.865
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 39,
+       "hold": 59,
+       "inlier_ratio": 0.795,
+       "holdout_med": 7.018,
+       "holdout_p90": 24.358
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 59,
+       "hold": 39,
+       "inlier_ratio": 0.831,
+       "holdout_med": 9.462,
+       "holdout_p90": 30.154
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 39,
+       "hold": 59,
+       "inlier_ratio": 0.718,
+       "holdout_med": 11.962,
+       "holdout_p90": 23.842
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "7.416->9.64",
+   "mnn_count": 105,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 46,
+       "hold": 59,
+       "inlier_ratio": 0.696,
+       "holdout_med": 6.995,
+       "holdout_p90": 17.965
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 59,
+       "hold": 46,
+       "inlier_ratio": 0.915,
+       "holdout_med": 13.488,
+       "holdout_p90": 35.975
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 46,
+       "hold": 59,
+       "inlier_ratio": 0.674,
+       "holdout_med": 10.155,
+       "holdout_p90": 21.119
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 59,
+       "hold": 46,
+       "inlier_ratio": 0.898,
+       "holdout_med": 14.322,
+       "holdout_p90": 34.463
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 12095,
+   "role": "POS",
+   "pair": "9.64->12.607",
+   "mnn_count": 140,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 69,
+       "hold": 71,
+       "inlier_ratio": 0.681,
+       "holdout_med": 7.15,
+       "holdout_p90": 26.892
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 71,
+       "hold": 69,
+       "inlier_ratio": 0.746,
+       "holdout_med": 5.981,
+       "holdout_p90": 37.408
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 69,
+       "hold": 71,
+       "inlier_ratio": 0.725,
+       "holdout_med": 8.846,
+       "holdout_p90": 26.219
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 71,
+       "hold": 69,
+       "inlier_ratio": 0.648,
+       "holdout_med": 8.958,
+       "holdout_p90": 36.301
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "1.842->4.299",
+   "mnn_count": 191,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.329
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.275
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 82,
+       "hold": 109,
+       "inlier_ratio": 0.537,
+       "holdout_med": 82.592,
+       "holdout_p90": 180.273
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.367
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "4.299->6.142",
+   "mnn_count": 206,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 80,
+       "hold": 126,
+       "inlier_ratio": 0.537,
+       "holdout_med": 14.88,
+       "holdout_p90": 36.492
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 126,
+       "hold": 80,
+       "inlier_ratio": 0.468,
+       "holdout_med": 12.516,
+       "holdout_p90": 29.057
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 80,
+       "hold": 126,
+       "inlier_ratio": 0.537,
+       "holdout_med": 22.361,
+       "holdout_p90": 49.244
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 126,
+       "hold": 80,
+       "inlier_ratio": 0.452,
+       "holdout_med": 13.371,
+       "holdout_p90": 31.112
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "6.142->7.984",
+   "mnn_count": 178,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 77,
+       "hold": 101,
+       "inlier_ratio": 0.623,
+       "holdout_med": 12.118,
+       "holdout_p90": 37.964
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 101,
+       "hold": 77,
+       "inlier_ratio": 0.733,
+       "holdout_med": 9.543,
+       "holdout_p90": 27.826
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 77,
+       "hold": 101,
+       "inlier_ratio": 0.675,
+       "holdout_med": 10.145,
+       "holdout_p90": 28.669
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 101,
+       "hold": 77,
+       "inlier_ratio": 0.644,
+       "holdout_med": 10.462,
+       "holdout_p90": 27.123
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 3571,
+   "role": "POS",
+   "pair": "7.984->10.441",
+   "mnn_count": 128,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 60,
+       "hold": 68,
+       "inlier_ratio": 0.483,
+       "holdout_med": 15.219,
+       "holdout_p90": 48.169
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 68,
+       "hold": 60,
+       "inlier_ratio": 0.544,
+       "holdout_med": 14.088,
+       "holdout_p90": 44.973
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 60,
+       "hold": 68,
+       "inlier_ratio": 0.65,
+       "holdout_med": 15.616,
+       "holdout_p90": 46.434
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 68,
+       "hold": 60,
+       "inlier_ratio": 0.544,
+       "holdout_med": 13.836,
+       "holdout_p90": 33.024
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "1.201->2.803",
+   "mnn_count": 44,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.235
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.259
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.353
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.37
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "2.803->4.004",
+   "mnn_count": 24,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 8,
+       "hold": 16,
+       "inlier_ratio": 0.5,
+       "holdout_med": 80.655,
+       "holdout_p90": 212.156
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.312
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 8,
+       "hold": 16,
+       "inlier_ratio": 0.625,
+       "holdout_med": 44.55,
+       "holdout_p90": 161.104
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.375
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "4.004->5.205",
+   "mnn_count": 185,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 88,
+       "hold": 97,
+       "inlier_ratio": 0.841,
+       "holdout_med": 2.47,
+       "holdout_p90": 21.988
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 97,
+       "hold": 88,
+       "inlier_ratio": 0.753,
+       "holdout_med": 2.733,
+       "holdout_p90": 15.958
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 88,
+       "hold": 97,
+       "inlier_ratio": 0.852,
+       "holdout_med": 8.469,
+       "holdout_p90": 31.534
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 97,
+       "hold": 88,
+       "inlier_ratio": 0.804,
+       "holdout_med": 2.971,
+       "holdout_p90": 14.373
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 21674,
+   "role": "POS",
+   "pair": "5.205->6.807",
+   "mnn_count": 82,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.371
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.298
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 35,
+       "hold": 47,
+       "inlier_ratio": 0.486,
+       "holdout_med": 34.072,
+       "holdout_p90": 873.217
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.447
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "0.792->1.849",
+   "mnn_count": 63,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.41
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 24,
+       "hold": 39,
+       "inlier_ratio": 0.458,
+       "holdout_med": 24.052,
+       "holdout_p90": 47.742
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 39,
+       "hold": 24,
+       "inlier_ratio": 0.513,
+       "holdout_med": 19.287,
+       "holdout_p90": 51.9
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 24,
+       "hold": 39,
+       "inlier_ratio": 0.542,
+       "holdout_med": 43.648,
+       "holdout_p90": 125.483
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "1.849->2.642",
+   "mnn_count": 47,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.387
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.438
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 31,
+       "hold": 16,
+       "inlier_ratio": 0.516,
+       "holdout_med": 33.881,
+       "holdout_p90": 45.915
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 16,
+       "hold": 31,
+       "inlier_ratio": 0.5,
+       "holdout_med": 184.604,
+       "holdout_p90": 399.859
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "2.642->3.434",
+   "mnn_count": 40,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 29,
+       "hold": 11,
+       "inlier_ratio": 0.483,
+       "holdout_med": 26.383,
+       "holdout_p90": 96.603
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 11,
+       "hold": 29,
+       "inlier_ratio": 0.636,
+       "holdout_med": 21.379,
+       "holdout_p90": 32.397
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 29,
+       "hold": 11,
+       "inlier_ratio": 0.621,
+       "holdout_med": 15.285,
+       "holdout_p90": 64.05
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 11,
+       "hold": 29,
+       "inlier_ratio": 0.636,
+       "holdout_med": 13.509,
+       "holdout_p90": 35.498
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 1641,
+   "role": "NEG",
+   "pair": "3.434->4.491",
+   "mnn_count": 61,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 43,
+       "hold": 18,
+       "inlier_ratio": 0.512,
+       "holdout_med": 33.374,
+       "holdout_p90": 91.184
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.444
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 43,
+       "hold": 18,
+       "inlier_ratio": 0.581,
+       "holdout_med": 148.126,
+       "holdout_p90": 490.469
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 18,
+       "hold": 43,
+       "inlier_ratio": 0.5,
+       "holdout_med": 62.303,
+       "holdout_p90": 98.853
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "0.768->1.793",
+   "mnn_count": 362,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 130,
+       "hold": 126,
+       "inlier_ratio": 0.523,
+       "holdout_med": 15.245,
+       "holdout_p90": 27.331
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.437
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 130,
+       "hold": 126,
+       "inlier_ratio": 0.554,
+       "holdout_med": 12.312,
+       "holdout_p90": 27.051
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 126,
+       "hold": 130,
+       "inlier_ratio": 0.603,
+       "holdout_med": 14.244,
+       "holdout_p90": 45.347
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "1.793->2.561",
+   "mnn_count": 162,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.179
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.179
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.254
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.232
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "2.561->3.329",
+   "mnn_count": 148,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.208
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.263
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.306
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.303
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 10000,
+   "role": "NEG",
+   "pair": "3.329->4.354",
+   "mnn_count": 179,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 78,
+       "hold": 101,
+       "inlier_ratio": 0.564,
+       "holdout_med": 13.227,
+       "holdout_p90": 25.156
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.416
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 78,
+       "hold": 101,
+       "inlier_ratio": 0.615,
+       "holdout_med": 9.861,
+       "holdout_p90": 38.49
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 101,
+       "hold": 78,
+       "inlier_ratio": 0.475,
+       "holdout_med": 8.824,
+       "holdout_p90": 24.505
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "0.515->1.202",
+   "mnn_count": 128,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 64,
+       "hold": 64,
+       "inlier_ratio": 0.5,
+       "holdout_med": 12.738,
+       "holdout_p90": 36.368
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 64,
+       "hold": 64,
+       "inlier_ratio": 0.516,
+       "holdout_med": 11.147,
+       "holdout_p90": 36.173
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 64,
+       "hold": 64,
+       "inlier_ratio": 0.562,
+       "holdout_med": 13.607,
+       "holdout_p90": 28.8
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 64,
+       "hold": 64,
+       "inlier_ratio": 0.531,
+       "holdout_med": 12.107,
+       "holdout_p90": 33.715
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.202->1.717",
+   "mnn_count": 157,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 85,
+       "hold": 72,
+       "inlier_ratio": 0.8,
+       "holdout_med": 4.587,
+       "holdout_p90": 21.344
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 72,
+       "hold": 85,
+       "inlier_ratio": 0.764,
+       "holdout_med": 6.444,
+       "holdout_p90": 24.793
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 85,
+       "hold": 72,
+       "inlier_ratio": 0.788,
+       "holdout_med": 4.585,
+       "holdout_p90": 23.558
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 72,
+       "hold": 85,
+       "inlier_ratio": 0.819,
+       "holdout_med": 6.204,
+       "holdout_p90": 23.71
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "1.717->2.232",
+   "mnn_count": 159,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 85,
+       "hold": 74,
+       "inlier_ratio": 0.871,
+       "holdout_med": 4.806,
+       "holdout_p90": 10.389
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 74,
+       "hold": 85,
+       "inlier_ratio": 0.919,
+       "holdout_med": 6.032,
+       "holdout_p90": 18.314
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 85,
+       "hold": 74,
+       "inlier_ratio": 0.871,
+       "holdout_med": 4.108,
+       "holdout_p90": 24.063
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 74,
+       "hold": 85,
+       "inlier_ratio": 0.865,
+       "holdout_med": 4.103,
+       "holdout_p90": 20.353
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 2543,
+   "role": "NEG",
+   "pair": "2.232->2.918",
+   "mnn_count": 140,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 70,
+       "hold": 70,
+       "inlier_ratio": 0.786,
+       "holdout_med": 11.111,
+       "holdout_p90": 26.918
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 70,
+       "hold": 70,
+       "inlier_ratio": 0.757,
+       "holdout_med": 10.918,
+       "holdout_p90": 19.459
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 70,
+       "hold": 70,
+       "inlier_ratio": 0.714,
+       "holdout_med": 12.248,
+       "holdout_p90": 44.198
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 70,
+       "hold": 70,
+       "inlier_ratio": 0.8,
+       "holdout_med": 7.819,
+       "holdout_p90": 18.498
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "1.236->2.885",
+   "mnn_count": 188,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.253
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.287
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.345
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.386
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "2.885->4.121",
+   "mnn_count": 237,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 119,
+       "hold": 118,
+       "inlier_ratio": 0.563,
+       "holdout_med": 13.693,
+       "holdout_p90": 40.045
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 118,
+       "hold": 119,
+       "inlier_ratio": 0.475,
+       "holdout_med": 1.76,
+       "holdout_p90": 28.416
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 119,
+       "hold": 118,
+       "inlier_ratio": 0.58,
+       "holdout_med": 11.389,
+       "holdout_p90": 40.436
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 118,
+       "hold": 119,
+       "inlier_ratio": 0.475,
+       "holdout_med": 1.706,
+       "holdout_p90": 28.78
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "4.121->5.357",
+   "mnn_count": 257,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 131,
+       "hold": 125,
+       "inlier_ratio": 0.679,
+       "holdout_med": 1.146,
+       "holdout_p90": 26.608
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 125,
+       "hold": 131,
+       "inlier_ratio": 0.632,
+       "holdout_med": 1.273,
+       "holdout_p90": 18.792
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 131,
+       "hold": 125,
+       "inlier_ratio": 0.679,
+       "holdout_med": 1.357,
+       "holdout_p90": 26.9
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 125,
+       "hold": 131,
+       "inlier_ratio": 0.64,
+       "holdout_med": 1.512,
+       "holdout_p90": 18.317
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 9697,
+   "role": "NEG",
+   "pair": "5.357->7.005",
+   "mnn_count": 251,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 125,
+       "hold": 126,
+       "inlier_ratio": 0.648,
+       "holdout_med": 1.472,
+       "holdout_p90": 21.312
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 126,
+       "hold": 125,
+       "inlier_ratio": 0.706,
+       "holdout_med": 2.231,
+       "holdout_p90": 24.738
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 125,
+       "hold": 126,
+       "inlier_ratio": 0.656,
+       "holdout_med": 3.048,
+       "holdout_p90": 23.311
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 126,
+       "hold": 125,
+       "inlier_ratio": 0.683,
+       "holdout_med": 1.709,
+       "holdout_p90": 25.218
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "0.718->1.676",
+   "mnn_count": 255,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.426
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 133,
+       "hold": 122,
+       "inlier_ratio": 0.459,
+       "holdout_med": 13.225,
+       "holdout_p90": 29.653
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 122,
+       "hold": 133,
+       "inlier_ratio": 0.459,
+       "holdout_med": 10.427,
+       "holdout_p90": 40.226
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 133,
+       "hold": 122,
+       "inlier_ratio": 0.451,
+       "holdout_med": 13.418,
+       "holdout_p90": 29.464
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "1.676->2.394",
+   "mnn_count": 252,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.292
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.333
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "LOW_INLIER",
+       "ratio": 0.375
+      },
+      "fold1": {
+       "state": "LOW_INLIER",
+       "ratio": 0.348
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "2.394->3.112",
+   "mnn_count": 288,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 125,
+       "hold": 131,
+       "inlier_ratio": 0.824,
+       "holdout_med": 0.862,
+       "holdout_p90": 15.774
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 131,
+       "hold": 125,
+       "inlier_ratio": 0.733,
+       "holdout_med": 0.673,
+       "holdout_p90": 15.685
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 125,
+       "hold": 131,
+       "inlier_ratio": 0.824,
+       "holdout_med": 0.843,
+       "holdout_p90": 16.087
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 131,
+       "hold": 125,
+       "inlier_ratio": 0.733,
+       "holdout_med": 1.545,
+       "holdout_p90": 15.402
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  },
+  {
+   "case": 25894,
+   "role": "NEG",
+   "pair": "3.112->4.07",
+   "mnn_count": 265,
+   "models": {
+    "PARTIAL_AFFINE": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 125,
+       "hold": 131,
+       "inlier_ratio": 0.616,
+       "holdout_med": 1.474,
+       "holdout_p90": 42.298
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 131,
+       "hold": 125,
+       "inlier_ratio": 0.565,
+       "holdout_med": 1.368,
+       "holdout_p90": 29.99
+      }
+     },
+     "validated": false
+    },
+    "HOMOGRAPHY": {
+     "folds": {
+      "fold0": {
+       "state": "NOT_VALIDATED",
+       "fit": 125,
+       "hold": 131,
+       "inlier_ratio": 0.6,
+       "holdout_med": 1.604,
+       "holdout_p90": 42.238
+      },
+      "fold1": {
+       "state": "NOT_VALIDATED",
+       "fit": 131,
+       "hold": 125,
+       "inlier_ratio": 0.557,
+       "holdout_med": 1.589,
+       "holdout_p90": 29.719
+      }
+     },
+     "validated": false
+    }
+   },
+   "state": "DENSE_NO_ANCHOR"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "model": "dinov2_vits14_reg",
+ "input": 518,
+ "stride": 14,
+ "license": "Apache-2.0",
+ "mnn": true,
+ "top_k": 256,
+ "min_mnn": 12,
+ "fold": "4x4 checkerboard",
+ "fit_min": 8,
+ "inlier_min": 0.45,
+ "holdout_min": 8,
+ "holdout_med_max": 3.0,
+ "holdout_p90_max": 8.0,
+ "bins_min": 4,
+ "quads_min": 2,
+ "agree_px": 3.0,
+ "dilate_tokens": 1,
+ "subtoken_temp": 1.0
+}

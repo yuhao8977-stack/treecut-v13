@@ -1,0 +1,8 @@
+{
+ "model": "dinov2_vits14_reg",
+ "source": "facebookresearch/dinov2 (github hub)",
+ "license": "Apache-2.0",
+ "checkpoint": "?",
+ "sha256": "",
+ "cache": "G:\\TreeCut_AI\\torch_cache"
+}
