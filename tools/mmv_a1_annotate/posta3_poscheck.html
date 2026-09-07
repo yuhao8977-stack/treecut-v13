@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8"/>
+<title>POST-A3 · GEOM 阳性可观察性目视确认</title>
+<style>
+ body{font-family:'Microsoft YaHei',sans-serif;margin:0;background:#f5f6f8;color:#222}
+ header{padding:12px 20px;background:#1f2937;color:#fff;position:sticky;top:0}
+ h1{font-size:16px;margin:0 0 4px}.st{color:#9bb6d8;font-size:12px}
+ .wrap{max-width:1150px;margin:0 auto;padding:16px 20px 80px}
+ .note{background:#fff8e1;border:1px solid #f0d070;padding:8px 12px;border-radius:8px;font-size:13px;margin:8px 0}
+ .card{border:1px solid #d2d9e2;background:#fff;border-radius:10px;padding:12px;margin:14px 0}
+ .imgs{display:flex;gap:8px;flex-wrap:wrap}.imgs figure{margin:0;text-align:center}
+ .imgs img{width:190px;border:1px solid #aaa;background:#000}
+ figcaption{font-size:11px;color:#555}
+ .q{margin-top:10px;font-weight:bold}
+ label{margin-right:14px;font-weight:normal;font-size:13px}
+ button{padding:5px 14px;border-radius:6px;cursor:pointer;background:#1a73e8;color:#fff;border:1px solid #1a73e8}
+ .done{background:#cde7cd}
+ .msg{position:fixed;bottom:16px;right:16px;background:#333;color:#fff;padding:8px 14px;border-radius:6px;display:none}
+</style></head><body>
+<header><h1>POST-A3 · GEOM 阳性可观察性目视确认（4 案例 × 5 帧）</h1>
+<span class="st" id="prog"></span></header>
+<div class="wrap">
+<div class="note"><b>只回答一个问题（每案例）</b>：这 5 张冻结帧（F0→F4 按时间顺序）里，<b>桌板/伸缩板是否发生了可辨认的伸缩位移</b>？
+选项：<b>帧内明显位移</b>＝能看到板子在逐步拉出/推进；<b>只有起止变化</b>＝前后不一样但中间过程看不清；<b>基本无位移</b>＝5 帧里板子没动（静止/只有镜头或人动）；<b>看不清</b>。选完点【保存本案例】。</div>
+<div id="list"></div>
+</div>
+<div class="msg" id="msg"></div>
+<script>
+let MAN=null,SAVED={};
+async function jget(u){return (await fetch(u)).json();}
+function msg(t){const m=document.getElementById('msg');m.textContent=t;m.style.display='block';clearTimeout(msg._t);msg._t=setTimeout(()=>m.style.display='none',2200);}
+async function load(){
+ MAN=await jget('/api/posta3/manifest10');
+ const pos=MAN.cases.filter(c=>c.role==='POS');
+ try{SAVED=(await jget('/api/posta3/poscheck')).answers||{};}catch(e){}
+ const el=document.getElementById('list');el.innerHTML='';
+ pos.forEach(c=>{
+  const d=document.createElement('div');d.className='card';
+  const s=SAVED[String(c.media_id)];
+  if(s)d.classList.add('done');
+  const imgs=c.frames.map(f=>`<figure><a href="/posta3/roi-frames/${f.frame}" target="_blank"><img src="/posta3/roi-frames/${f.frame}"/></a><figcaption>F@${f.t_s}s</figcaption></figure>`).join('');
+  const opts=[["MOTION_VISIBLE","帧内明显位移"],["ENDPOINTS_ONLY","只有起止变化"],["STATIC","基本无位移"],["UNCLEAR","看不清"]]
+    .map(([v,t])=>`<label><input type="radio" name="p_${c.media_id}" value="${v}" ${s&&s.label===v?'checked':''}>${t}</label>`).join('');
+  d.innerHTML=`<b>media ${c.media_id}</b> · ${String(c.family||'').slice(0,45)} · ${c.duration_s}s
+   <div class="imgs">${imgs}</div>
+   <div class="q">5 帧中桌板/伸缩板是否发生可辨认伸缩位移？</div>
+   <div>${opts} <button onclick="save(${c.media_id})">保存本案例</button></div>`;
+  el.appendChild(d);
+ });
+ prog();
+}
+function prog(){const n=Object.keys(SAVED).length;document.getElementById('prog').textContent=`已完成 ${n}/4`;}
+async function save(mid){
+ const r=document.querySelector(`input[name=p_${mid}]:checked`);
+ if(!r){msg('请先选择一项');return;}
+ const res=await fetch('/api/posta3/poscheck/save',{method:'POST',headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({media_id:mid,label:r.value})});
+ const j=await res.json();
+ if(j.ok){try{SAVED=(await jget('/api/posta3/poscheck')).answers||{};}catch(e){}
+  msg(`已保存 media ${mid}`);prog();load();}else msg('失败:'+j.error);
+}
+load();
+</script></body></html>

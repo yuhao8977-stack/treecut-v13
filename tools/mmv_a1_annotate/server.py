@@ -41,6 +41,8 @@ P3ROI_HTML = Path(__file__).parent / "posta3_roi.html"
 P3_MANIFEST10 = OUT / "TREECUT_POSTA3_CALIBRATION10_MANIFEST_V1.json"
 P3_ROI_FILE = OUT / "TREECUT_POSTA3_HUMAN_ROI_V1.json"
 P3_ROI50_DIR = Path(r"E:\树剪整理\02_安装程序\TreeCut_v13\runtime\production_smoke\B007\mmv_posta3_frames") / "roi50"
+P3_POSCHECK_HTML = Path(__file__).parent / "posta3_poscheck.html"
+P3_POSCHECK_FILE = OUT / "TREECUT_POSTA3_POS_OBSERVABILITY_V1.json"
 P3_ROI_LABELS = {"TABLETOP", "EXTENSION_TABLETOP", "ISLAND_BODY", "PERSON", "HAND",
                  "ROCK_TABLE_LEG", "ACRYLIC_TABLE_LEG", "TRACK_SOCKET", "SOCKET_MODULE",
                  "DRAWER", "CABINET_DOOR", "SINK", "EMBEDDED_APPLIANCE"}
@@ -253,6 +255,18 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(200, P3_HTML.read_bytes(), "text/html; charset=utf-8")
             else:
                 self._send(404, b"posta3 html missing", "text/plain")
+            return
+        if path == "/posta3/poscheck":
+            if P3_POSCHECK_HTML.exists():
+                self._send(200, P3_POSCHECK_HTML.read_bytes(), "text/html; charset=utf-8")
+            else:
+                self._send(404, b"poscheck html missing", "text/plain")
+            return
+        if path == "/api/posta3/poscheck":
+            if P3_POSCHECK_FILE.exists():
+                self._send(200, P3_POSCHECK_FILE.read_bytes(), "application/json; charset=utf-8")
+            else:
+                self._json({"answers": {}})
             return
         if path == "/posta3/roi":
             if P3ROI_HTML.exists():
@@ -480,6 +494,27 @@ class Handler(BaseHTTPRequestHandler):
                     "annotation_version": "A3"})
             save_a3_rois(doc)
             self._json({"ok": True, "saved": len(rois_in), "frame": frame["frame"]})
+            return
+        if self.path == "/api/posta3/poscheck/save":
+            try:
+                data = json.loads(body.decode("utf-8"))
+            except Exception:
+                self._json({"ok": False, "error": "bad json"}, 400)
+                return
+            mid = data.get("media_id")
+            label = data.get("label")
+            if label not in ("MOTION_VISIBLE", "ENDPOINTS_ONLY", "STATIC", "UNCLEAR"):
+                self._json({"ok": False, "error": "label 非法"}, 400)
+                return
+            doc = {"answers": {}}
+            if P3_POSCHECK_FILE.exists():
+                doc = json.loads(P3_POSCHECK_FILE.read_text(encoding="utf-8"))
+            doc["answers"][str(mid)] = {"label": label, "at": time.strftime("%Y-%m-%d %H:%M:%S")}
+            doc["generated_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
+            tmp = P3_POSCHECK_FILE.with_suffix(".tmp")
+            tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+            tmp.replace(P3_POSCHECK_FILE)
+            self._json({"ok": True, "media_id": mid, "label": label})
             return
         if self.path == "/api/posta3/roi/save":
             try:
