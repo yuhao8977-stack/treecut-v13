@@ -1,0 +1,13 @@
+{
+ "AFFINE": 0,
+ "HOMOGRAPHY": 0,
+ "MULTI": 0,
+ "SINGLE": 0,
+ "CONFLICT": 0,
+ "NO": 36,
+ "union": 0,
+ "case_coverage_9": 0,
+ "true_pooled_median": null,
+ "true_pooled_p90": null,
+ "true_pooled_p95": null
+}
