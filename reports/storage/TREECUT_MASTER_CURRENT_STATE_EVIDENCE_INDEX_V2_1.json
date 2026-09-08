@@ -1,0 +1,266 @@
+{
+ "audit": "TREECUT_MASTER_CURRENT_STATE_EVIDENCE_INDEX_V2_1",
+ "supersedes": "TREECUT_MASTER_CURRENT_STATE_EVIDENCE_INDEX_V2",
+ "baseline_sha": "c2bb7b655e1c8224ce3c4584dda6ca128a591a12",
+ "entries": [
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_V23_METHOD_MATRIX.json",
+   "evidence_type": "file",
+   "commit_or_blob": "09e3b5b",
+   "sha256": "cb9e75dcead01f149b11aa223ee764f7c6f76acd8a1c79327f46e80931593fcd",
+   "status": "authoritative",
+   "supports": "pair-state truth",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_V23_METHOD_CONFIG.json",
+   "evidence_type": "file",
+   "commit_or_blob": "09e3b5b",
+   "sha256": "f9b640ab8539c81a6a9842f0b0ca9a6adbabb8635bc66c5f301675adab7f3c2a",
+   "status": "authoritative",
+   "supports": "frozen config",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_POSTA3_CALIBRATION10_MANIFEST_V1.json",
+   "evidence_type": "file",
+   "commit_or_blob": "136e466",
+   "sha256": "54aa4ddc1380f60ae65c71e1dcb832f06f37a1ff3f6f51d85d4460ef2118b1fb",
+   "status": "authoritative",
+   "supports": "36-pair universe",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_POSTA3_HUMAN_ROI_V1.json",
+   "evidence_type": "file",
+   "commit_or_blob": "git-log",
+   "sha256": "22cdedf86eff41edb2f0a7dafaa0162765dbdcfcdaed3039dd3e406769498148",
+   "status": "authoritative",
+   "supports": "ROI/target",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_POSTA3_HUMAN_REVIEW_V1.json",
+   "evidence_type": "file",
+   "commit_or_blob": "git-log",
+   "sha256": "f78751195e8f7c2ac9abe68fbac6f0fdc004b8a7a659a1502c521a5481809106",
+   "status": "authoritative(human)",
+   "supports": "NO_ACTION verdicts",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json",
+   "evidence_type": "file",
+   "commit_or_blob": "8f84735",
+   "sha256": "28367f8de1d95d4dd49e5b54eed3ef9156af69b7f07b0c3be5aab3b790bee490",
+   "status": "generated",
+   "supports": "R2 local",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json",
+   "evidence_type": "file",
+   "commit_or_blob": "e2bb0ae",
+   "sha256": "d115b9e665bdb2aac84214fedeb5271163cad6af1f1218a7953c02c0753523ed",
+   "status": "generated",
+   "supports": "V24 12/36",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json",
+   "evidence_type": "file",
+   "commit_or_blob": "f85b363",
+   "sha256": "1880ed9ccc4385d72ab2149391f5ae67853b9bc7beb1bc9e9f116f59603e3552",
+   "status": "generated",
+   "supports": "global state",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH01M1_GFTT_TRANSFORMS.json",
+   "evidence_type": "file",
+   "commit_or_blob": "644c206",
+   "sha256": "d370ba102e18085ca314f93e2f8692041dfedca9ed1e4dc2df646bcc8b0b417d",
+   "status": "generated",
+   "supports": "17/17 materialized",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH01M1_REPLAY_FINGERPRINT.json",
+   "evidence_type": "file",
+   "commit_or_blob": "644c206",
+   "sha256": "5e4dd5b7fb59377cec9e811f0cd282706abe6bcd0aadf611014a412f627af8b4",
+   "status": "generated",
+   "supports": "36/36 fp",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH01M1_LOCAL_AGREEMENT.json",
+   "evidence_type": "file",
+   "commit_or_blob": "644c206",
+   "sha256": "da6945dd752fe35e32b874a8ace177fa6a603c9662ac2b4b6b85f8b62a0c933c",
+   "status": "generated",
+   "supports": "agreement",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH01M1_STRUCTURAL_DIAGNOSTIC.json",
+   "evidence_type": "file",
+   "commit_or_blob": "644c206",
+   "sha256": "57ddb526f1bbfef4f267dd542c35df242239453d5f06e2a96280943c8211497e",
+   "status": "generated",
+   "supports": "7C/10D/0U (superseded)",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH01M1_V23_STALE_REPORT_NOTE.json",
+   "evidence_type": "file",
+   "commit_or_blob": "644c206",
+   "sha256": "2fcb0a8533b8baa854e9dfee442434537923d5b63bd135edb98245dd8e477ccf",
+   "status": "generated",
+   "supports": "stale",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH02_STRUCTURAL_CORRECTED.json",
+   "evidence_type": "file",
+   "commit_or_blob": "b757daf",
+   "sha256": "2e768f84191e8fb46c93723db69266a8589c6ac1f686322d6ddb02fcdfbf3515",
+   "status": "generated",
+   "supports": "7C/9D/1U",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH02_ROUTER_FREEZE.json",
+   "evidence_type": "file",
+   "commit_or_blob": "b757daf",
+   "sha256": "f4e98f9c920095546384fb202753089f87929049917f979f70f51167871fe73c",
+   "status": "generated(frozen)",
+   "supports": "router routes/rules hash",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH02_ROUTER_CONFIG.json",
+   "evidence_type": "file",
+   "commit_or_blob": "b757daf",
+   "sha256": "5ab80fe745b14de0ba3a723929e6462f6b047b83133f388f01255a72ab792071",
+   "status": "generated(frozen)",
+   "supports": "S1/S2/S3 text",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH02_TARGET_READINESS.json",
+   "evidence_type": "file",
+   "commit_or_blob": "b757daf",
+   "sha256": "1dc93aeff70e314ff0a22aff148575c3a3e2f9bf34152dd9ca53f65512ebd22e",
+   "status": "generated",
+   "supports": "NEG PRESENT",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH02_M1_CORRECTIONS.json",
+   "evidence_type": "file",
+   "commit_or_blob": "b757daf",
+   "sha256": "8797d5ef8aded9d446e3d0339b229aae8d01d0608976337475d5733185a0b7eb",
+   "status": "generated",
+   "supports": "2 corrections",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH02_GLOBAL_UPPER_BOUND.json",
+   "evidence_type": "file",
+   "commit_or_blob": "b757daf",
+   "sha256": "032971a43c6b51146d25bae1f22137c7e1159ba33dc2f0db8c04da2122566154",
+   "status": "generated",
+   "supports": "bound 0",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH02_GFTT_INLIERS.json",
+   "evidence_type": "file",
+   "commit_or_blob": "b757daf",
+   "sha256": "16f23b983842d6014159f00565833e8af7e2fe42a4b08edc82189d8d55c354c9",
+   "status": "generated",
+   "supports": "inlier masks",
+   "exists": true
+  },
+  {
+   "evidence_path": "reports/storage/TREECUT_CAM01_EH02_RESULT.json",
+   "evidence_type": "file",
+   "commit_or_blob": "b757daf",
+   "sha256": "27b089446dc9fd2a949adc0c847fad1ae323672626c567e4e520b2a585360141",
+   "status": "generated",
+   "supports": "result",
+   "exists": true
+  },
+  {
+   "evidence_path": "docs/TREECUT_ROADMAP_MASTER_V1.md",
+   "evidence_type": "file",
+   "commit_or_blob": "git-log",
+   "sha256": "6064a6c51826e3ff7f9bc0a14b37da87ce771611cf7b5fd9a302cd768ad5b550",
+   "status": "authoritative(scope)",
+   "supports": "Stage0-10/B007/AutoPublish",
+   "exists": true
+  },
+  {
+   "evidence_path": "docs/TREECUT_CAM01_EH02_NEG_POLICY_DECISION.md",
+   "evidence_type": "file",
+   "commit_or_blob": "this-commit",
+   "sha256": "aae53819b8c1ab6f90336678d036227b4ce64556b150175dd8fc33ceaa8d4681",
+   "status": "authoritative(policy, this commit)",
+   "supports": "NEG policy 17 clauses",
+   "exists": true
+  },
+  {
+   "evidence_path": "scripts/eh02_router_freeze.py",
+   "evidence_type": "file",
+   "commit_or_blob": "b757daf",
+   "sha256": "60f63ff9e442047b1265a82f8056aab1024da9a9f63c7ecb9b6c383ac1c6b048",
+   "status": "code",
+   "supports": "router impl",
+   "exists": true
+  },
+  {
+   "evidence_path": "tests/test_eh02_router.py",
+   "evidence_type": "file",
+   "commit_or_blob": "b757daf",
+   "sha256": "6f96cb3c3f3fa957bb9db908300bc975f29d2817b28d8a03fa41c31337022d3d",
+   "status": "code(test)",
+   "supports": "16 tests",
+   "exists": true
+  },
+  {
+   "evidence_path": "tests/test_eh01m1_gftt.py",
+   "evidence_type": "file",
+   "commit_or_blob": "644c206",
+   "sha256": "54b7e16910d8ebcd99e2562ba8fb3bd8976ff7a26a4c002ce1b601adc7aa0748",
+   "status": "code(test)",
+   "supports": "13 tests",
+   "exists": true
+  },
+  {
+   "evidence_path": "tests/test_eh01r1_reference.py",
+   "evidence_type": "file",
+   "commit_or_blob": "4aec680",
+   "sha256": "8be84794f09dc0c7c694e5f806f3d654cee70f82372a78d5bae04e652a42ee34",
+   "status": "code(test)",
+   "supports": "11 tests",
+   "exists": true
+  },
+  {
+   "evidence_path": "tests/test_eh01_inventory.py",
+   "evidence_type": "file",
+   "commit_or_blob": "f46701a",
+   "sha256": "8a03c76376a3a6e3e065e2c0e4422c9788e62b8c7e0acd8ab07174d5cac159b4",
+   "status": "code(test)",
+   "supports": "6 tests",
+   "exists": true
+  }
+ ],
+ "real_frame_replay": {
+  "real_frame_replay_independent_command": "python scripts/eh01m1_gftt_materialize.py (ran at 644c206; artifact REPLAY_FINGERPRINT 36/36)",
+  "ran_in_this_audit": false,
+  "result_artifact": "reports/storage/TREECUT_CAM01_EH01M1_REPLAY_FINGERPRINT.json",
+  "sha256": "5e4dd5b7fb59377cec9e811f0cd282706abe6bcd0aadf611014a412f627af8b4",
+  "note": "M1 replay was real-frame at 644c206. This D0 audit did NOT rerun the real-frame runner; artifact-level matrix rebuild from corr JSON was performed instead."
+ }
+}
