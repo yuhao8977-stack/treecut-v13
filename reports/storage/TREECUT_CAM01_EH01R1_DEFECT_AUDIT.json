@@ -1,0 +1,21 @@
+{
+ "EH01_RESULT_PENDING_REFERENCE_SEMANTICS_CORRECTION": true,
+ "defects": {
+  "EH01_DEFECT_USABLE_CONFLATES_EVIDENCE_AND_REFERENCE_01": {
+   "detail": "ROUTER_USABLE = STRONG+PARTIAL+GLOBAL 把无 transform 的 evidence(如 GFTT null)计入 usable",
+   "r1_fix": "拆 EVIDENCE_AVAILABLE / TRANSFORM_MATERIALIZED / REFERENCE_EMITTABLE_STRONG / REFERENCE_PARTIAL_WITH_TRANSFORM / EVIDENCE_ONLY_NO_TRANSFORM"
+  },
+  "EH01_DEFECT_R2_TRANSFORM_RECONSTRUCTION_02": {
+   "detail": "EH01 r2_transform() 固定 PARTIAL_AFFINE + 4px，非 R2 正式 pipeline",
+   "r1_fix": "按 R2 representative model + pair ransac_thr_raw + FB3 corr 重建；不得固定 4px/强制 affine"
+  },
+  "EH01_DEFECT_GLOBAL_STATE_ONLY_03": {
+   "detail": "GLOBAL 只 materialize RELIABLE/UNRELIABLE state，无 transform",
+   "r1_fix": "拆 GLOBAL_STATE_MATERIALIZED(YES) / GLOBAL_TRANSFORM_MATERIALIZED(NO)"
+  },
+  "EH01_DEFECT_POSTHOC_FEASIBLE_THRESHOLD_04": {
+   "detail": "eh01_result.py 新增 if usable>12 -> HIERARCHY_FEASIBLE，违反不设新 performance threshold",
+   "r1_fix": "删除该 classification；R1 只输出语义状态 A/B/C/D 不设 coverage gate"
+  }
+ }
+}

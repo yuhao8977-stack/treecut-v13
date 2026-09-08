@@ -1,0 +1,26 @@
+{
+ "DENSE01R2_FB3": {
+  "commit": "8f84735",
+  "blob": "748e3ccba54603e428461319fb0291416379ac48"
+ },
+ "DENSE01R2_STRUCTURAL": {
+  "commit": "8f84735",
+  "blob": "b567302ff1523ec7c1d62fcea4dd2cf36a551777"
+ },
+ "V24R1_CONSENSUS": {
+  "commit": "e2bb0ae",
+  "blob": "e433a90e9b1c6ced681690e60d61fe059f116d53"
+ },
+ "V23_GFTT": {
+  "commit": "09e3b5b",
+  "blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7"
+ },
+ "GLOBAL_CAMERA_V2": {
+  "commit": "f85b363",
+  "blob": "268695d759e327029156f5a5f87faad17ef9adb3"
+ },
+ "CALIBRATION10_MANIFEST": {
+  "commit": "136e466",
+  "blob": "714998a4da64252a8a107459cb68b7cb32e2b13c"
+ }
+}

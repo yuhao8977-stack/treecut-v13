@@ -1,0 +1,536 @@
+{
+ "rows": [
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "state": "LK_INSUFFICIENT_AFTER_FB",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "state": "LK_INSUFFICIENT_AFTER_FB",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "state": "LK_INSUFFICIENT_AFTER_FB",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "state": "LK_INSUFFICIENT_AFTER_FB",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "state": "SUPPORT_TOO_LOCALIZED",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "state": "DENSE_MULTI_MODEL_CONSENSUS",
+   "validated": true,
+   "representative": "PARTIAL_AFFINE",
+   "thr_raw": 13.783784,
+   "model_used": "PARTIAL_AFFINE",
+   "thr_used": 13.783784,
+   "n_fb3_corr": 44,
+   "deterministic_rebuild": true,
+   "matrix": [
+    [
+     0.9688566538893723,
+     -0.017615700078451986,
+     -66.93280692021665
+    ],
+    [
+     0.017615700078451986,
+     0.9688566538893723,
+     5.469312626578784
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "materialized": true,
+   "materialization_status": "TRANSFORM_MATERIALIZED",
+   "provenance": {
+    "commit": "8f84735",
+    "blob": "748e3ccba54603e428461319fb0291416379ac48"
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "state": "DENSE_MULTI_MODEL_CONSENSUS",
+   "validated": true,
+   "representative": "PARTIAL_AFFINE",
+   "thr_raw": 13.459459,
+   "model_used": "PARTIAL_AFFINE",
+   "thr_used": 13.459459,
+   "n_fb3_corr": 58,
+   "deterministic_rebuild": true,
+   "matrix": [
+    [
+     0.9998508299947677,
+     -0.0004612164692138305,
+     -43.53561907580759
+    ],
+    [
+     0.0004612164692138305,
+     0.9998508299947677,
+     -1.5247013376280143
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "materialized": true,
+   "materialization_status": "TRANSFORM_MATERIALIZED",
+   "provenance": {
+    "commit": "8f84735",
+    "blob": "748e3ccba54603e428461319fb0291416379ac48"
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "state": "DENSE_MULTI_MODEL_CONSENSUS",
+   "validated": true,
+   "representative": "PARTIAL_AFFINE",
+   "thr_raw": 13.378378,
+   "model_used": "PARTIAL_AFFINE",
+   "thr_used": 13.378378,
+   "n_fb3_corr": 69,
+   "deterministic_rebuild": true,
+   "matrix": [
+    [
+     0.9943040949486419,
+     0.011710124518013478,
+     7.7529886278952524
+    ],
+    [
+     -0.011710124518013478,
+     0.9943040949486419,
+     13.305324128027557
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "materialized": true,
+   "materialization_status": "TRANSFORM_MATERIALIZED",
+   "provenance": {
+    "commit": "8f84735",
+    "blob": "748e3ccba54603e428461319fb0291416379ac48"
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "state": "DENSE_MULTI_MODEL_CONSENSUS",
+   "validated": true,
+   "representative": "PARTIAL_AFFINE",
+   "thr_raw": 13.378378,
+   "model_used": "PARTIAL_AFFINE",
+   "thr_used": 13.378378,
+   "n_fb3_corr": 33,
+   "deterministic_rebuild": true,
+   "matrix": [
+    [
+     1.0149828784393367,
+     -0.014109971188675468,
+     56.25882610512554
+    ],
+    [
+     0.014109971188675468,
+     1.0149828784393367,
+     -23.91684612595716
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "materialized": true,
+   "materialization_status": "TRANSFORM_MATERIALIZED",
+   "provenance": {
+    "commit": "8f84735",
+    "blob": "748e3ccba54603e428461319fb0291416379ac48"
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "state": "MATCH_INSUFFICIENT",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "state": "MATCH_INSUFFICIENT",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "state": "SUPPORT_TOO_LOCALIZED",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "state": "DENSE_SINGLE_MODEL",
+   "validated": true,
+   "representative": "HOMOGRAPHY",
+   "thr_raw": 15.513514,
+   "model_used": "HOMOGRAPHY",
+   "thr_used": 15.513514,
+   "n_fb3_corr": 204,
+   "deterministic_rebuild": true,
+   "matrix": [
+    [
+     1.1233652026099783,
+     -0.0014371953137063613,
+     40.76589405392887
+    ],
+    [
+     0.07521380600340954,
+     1.1723522065306524,
+     -164.92675194722938
+    ],
+    [
+     0.00011077713012205437,
+     1.2142195552478468e-05,
+     1.0
+    ]
+   ],
+   "materialized": true,
+   "materialization_status": "TRANSFORM_MATERIALIZED",
+   "provenance": {
+    "commit": "8f84735",
+    "blob": "748e3ccba54603e428461319fb0291416379ac48"
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "state": "LK_INSUFFICIENT_AFTER_FB",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "state": "LK_INSUFFICIENT_AFTER_FB",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "state": "DENSE_SINGLE_MODEL",
+   "validated": true,
+   "representative": "PARTIAL_AFFINE",
+   "thr_raw": 11.675676,
+   "model_used": "PARTIAL_AFFINE",
+   "thr_used": 11.675676,
+   "n_fb3_corr": 23,
+   "deterministic_rebuild": true,
+   "matrix": [
+    [
+     1.006282416339174,
+     0.003689976831291505,
+     -9.018609830345877
+    ],
+    [
+     -0.003689976831291505,
+     1.006282416339174,
+     14.14950815794463
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "materialized": true,
+   "materialization_status": "TRANSFORM_MATERIALIZED",
+   "provenance": {
+    "commit": "8f84735",
+    "blob": "748e3ccba54603e428461319fb0291416379ac48"
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "state": "LK_INSUFFICIENT_AFTER_FB",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "state": "LK_INSUFFICIENT_AFTER_FB",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "state": "LK_INSUFFICIENT_AFTER_FB",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "state": "LK_INSUFFICIENT_AFTER_FB",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "state": "DENSE_MULTI_MODEL_CONSENSUS",
+   "validated": true,
+   "representative": "PARTIAL_AFFINE",
+   "thr_raw": 26.756757,
+   "model_used": "PARTIAL_AFFINE",
+   "thr_used": 26.756757,
+   "n_fb3_corr": 31,
+   "deterministic_rebuild": true,
+   "matrix": [
+    [
+     1.0241281976207979,
+     -0.002426109434550818,
+     -15.946961875525346
+    ],
+    [
+     0.002426109434550818,
+     1.0241281976207979,
+     -42.7060473267234
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "materialized": true,
+   "materialization_status": "TRANSFORM_MATERIALIZED",
+   "provenance": {
+    "commit": "8f84735",
+    "blob": "748e3ccba54603e428461319fb0291416379ac48"
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "state": "SUPPORT_TOO_LOCALIZED",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "state": "SUPPORT_TOO_LOCALIZED",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "state": "DENSE_MULTI_MODEL_CONSENSUS",
+   "validated": true,
+   "representative": "PARTIAL_AFFINE",
+   "thr_raw": 31.216216,
+   "model_used": "PARTIAL_AFFINE",
+   "thr_used": 31.216216,
+   "n_fb3_corr": 31,
+   "deterministic_rebuild": true,
+   "matrix": [
+    [
+     0.9823086079660638,
+     -4.650331775138698e-05,
+     24.355905198143095
+    ],
+    [
+     4.650331775138698e-05,
+     0.9823086079660638,
+     33.26517983174347
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "materialized": true,
+   "materialization_status": "TRANSFORM_MATERIALIZED",
+   "provenance": {
+    "commit": "8f84735",
+    "blob": "748e3ccba54603e428461319fb0291416379ac48"
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "state": "DENSE_NO_ANCHOR",
+   "validated": false,
+   "materialized": false,
+   "matrix": null,
+   "materialization_status": "NOT_VALIDATED"
+  }
+ ]
+}
