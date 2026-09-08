@@ -1,0 +1,187 @@
+{
+ "materialized": true,
+ "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json (SPARSE_DIRECT)",
+ "per_pair_states_among_36": 12,
+ "rows": [
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "state": "CAMERA_RELIABLE"
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "state": "CAMERA_RELIABLE"
+  }
+ ]
+}

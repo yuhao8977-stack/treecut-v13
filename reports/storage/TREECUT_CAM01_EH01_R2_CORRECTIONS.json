@@ -1,0 +1,15 @@
+{
+ "EH01_CORRECTION_R2_STRUCT_FLAG_01": {
+  "r2_behavior": "DENSE_STRUCTURAL_DISAGREEMENT 只按 forward P90>12px",
+  "eh01_rule": "symmetric P90 <=12 = STRUCTURAL_CONSISTENT; >12 = STRUCTURAL_DISAGREEMENT; 无 symmetric = STRUCTURAL_UNKNOWN",
+  "boundary_not_new": "12px 沿用 R2 diagnostic boundary"
+ },
+ "EH01_CORRECTION_R2_ABLATION_02": {
+  "r2_issue": "DINO_ONLY_SUBTOKEN 在 FB3 accepted correspondence subset 上评估，非全量独立 baseline",
+  "eh01_label": "CONDITIONAL_DINO_ONLY_ABLATION",
+  "facts_preserved": {
+   "SEMANTIC_MATCH_SUFFICIENT": "34/36",
+   "RAW_REFINEMENT_EFFECTIVE_CONDITIONAL": "YES"
+  }
+ }
+}

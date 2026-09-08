@@ -1,0 +1,105 @@
+{
+ "experiment": "CAM01_EH01_RESULT",
+ "generated_at": "2026-09-08 (EH01)",
+ "baseline": "main @ 8f84735",
+ "pairs_36": 36,
+ "route_counts": {
+  "ROUTE_UNSURE_NO_EVIDENCE": 15,
+  "ROUTE_LOCAL_STRONG": 9,
+  "ROUTE_LOCAL_PARTIAL": 10,
+  "ROUTE_UNSURE_CONFLICT": 2
+ },
+ "LOCAL_STRONG": 9,
+ "LOCAL_PARTIAL": 10,
+ "LOCAL_CONFLICT": 2,
+ "LOCAL_NONE": 15,
+ "GLOBAL_RELIABLE_FALLBACK": 0,
+ "ROUTER_USABLE": 19,
+ "RAW_SOURCE_UNION": 22,
+ "case_coverage_9": 8,
+ "source_available_pairs": {
+  "V24R1_CONSENSUS": 12,
+  "GFTT_V23": 17,
+  "GLOBAL_CAMERA": 12,
+  "DENSE_R2_MULTI_SINGLE": 8
+ },
+ "source_unique_contribution": {
+  "V24R1_CONSENSUS": 2,
+  "GFTT_V23": 3,
+  "GLOBAL_CAMERA": 0,
+  "DENSE_R2_MULTI_SINGLE": 2
+ },
+ "structural_corrected_8": {
+  "among_r2_validated_8": {
+   "consistent": 3,
+   "disagreement": 5,
+   "unknown": 0
+  },
+  "consistent_detail": [
+   [
+    12095,
+    "5.191->7.416"
+   ],
+   [
+    3571,
+    "4.299->6.142"
+   ],
+   [
+    3571,
+    "6.142->7.984"
+   ]
+  ],
+  "disagreement_detail": [
+   [
+    3571,
+    "1.842->4.299"
+   ],
+   [
+    3571,
+    "7.984->10.441"
+   ],
+   [
+    10000,
+    "0.768->1.793"
+   ],
+   [
+    25894,
+    "0.718->1.676"
+   ],
+   [
+    25894,
+    "3.112->4.07"
+   ]
+  ],
+  "unknown_detail": []
+ },
+ "local_agreement": {
+  "pairs_compared": 5,
+  "agree": 3,
+  "conflict": 2
+ },
+ "global_evidence": {
+  "materialized": true,
+  "reliable_among_36": 12
+ },
+ "target_diagnostic": {
+  "POS": {
+   "usable": 10,
+   "target_valid": 9
+  },
+  "NEG": {
+   "usable": 9,
+   "target_valid": 2
+  }
+ },
+ "comparison_vs_r2": {
+  "dense_r2_union": 8,
+  "router_gain": 11,
+  "gain_without_gate_relaxation": true
+ },
+ "eh01_classification": "HIERARCHY_FEASIBLE",
+ "next_capability_candidate": "EH02_ROUTER_CALIBRATION",
+ "no_action_verdict": true,
+ "no_new_threshold": true,
+ "note": "shadow routing only; not wired to GEOM/MMVV; role-blind until router frozen"
+}

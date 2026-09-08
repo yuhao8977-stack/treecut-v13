@@ -1,0 +1,423 @@
+{
+ "rows": [
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "route": "ROUTE_LOCAL_STRONG",
+   "detail": "V24R1 multi-method consensus + structural ok",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS",
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "route": "ROUTE_LOCAL_STRONG",
+   "detail": "V24R1 multi-method consensus + structural ok",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS",
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "route": "ROUTE_LOCAL_PARTIAL",
+   "detail": "GFTT single-source",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "route": "ROUTE_UNSURE_CONFLICT",
+   "detail": "local sources disagree",
+   "structural": "STRUCTURAL_CONSISTENT",
+   "conflict": true,
+   "local_avail": [
+    "DENSE01R2:DENSE_SINGLE_MODEL",
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS",
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "route": "ROUTE_LOCAL_STRONG",
+   "detail": "V24R1 multi-method consensus + structural ok",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS",
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "route": "ROUTE_LOCAL_STRONG",
+   "detail": "V24R1 multi-method consensus + structural ok",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS",
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "route": "ROUTE_LOCAL_PARTIAL",
+   "detail": "DENSE_R2_MULTI downgraded by structural veto",
+   "structural": "STRUCTURAL_DISAGREEMENT",
+   "conflict": false,
+   "local_avail": [
+    "DENSE01R2:DENSE_MULTI_MODEL_CONSENSUS"
+   ],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "route": "ROUTE_LOCAL_STRONG",
+   "detail": "DENSE_R2_MULTI + structural ok",
+   "structural": "STRUCTURAL_CONSISTENT",
+   "conflict": false,
+   "local_avail": [
+    "DENSE01R2:DENSE_MULTI_MODEL_CONSENSUS",
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS",
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "route": "ROUTE_LOCAL_STRONG",
+   "detail": "DENSE_R2_MULTI + structural ok",
+   "structural": "STRUCTURAL_CONSISTENT",
+   "conflict": false,
+   "local_avail": [
+    "DENSE01R2:DENSE_MULTI_MODEL_CONSENSUS",
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS",
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "route": "ROUTE_LOCAL_PARTIAL",
+   "detail": "DENSE_R2_MULTI downgraded by structural veto",
+   "structural": "STRUCTURAL_DISAGREEMENT",
+   "conflict": false,
+   "local_avail": [
+    "DENSE01R2:DENSE_MULTI_MODEL_CONSENSUS"
+   ],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "route": "ROUTE_LOCAL_STRONG",
+   "detail": "V24R1 multi-method consensus + structural ok",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS"
+   ],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "route": "ROUTE_LOCAL_PARTIAL",
+   "detail": "GFTT single-source",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "DENSE_R2_SINGLE vetoed by structural disagreement",
+   "structural": "STRUCTURAL_DISAGREEMENT",
+   "conflict": false,
+   "local_avail": [
+    "DENSE01R2:DENSE_SINGLE_MODEL"
+   ],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "route": "ROUTE_LOCAL_PARTIAL",
+   "detail": "GFTT single-source",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "route": "ROUTE_UNSURE_NO_EVIDENCE",
+   "detail": "no reliable local/global",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "route": "ROUTE_LOCAL_STRONG",
+   "detail": "V24R1 multi-method consensus + structural ok",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS"
+   ],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "route": "ROUTE_LOCAL_PARTIAL",
+   "detail": "GFTT single-source",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "route": "ROUTE_LOCAL_PARTIAL",
+   "detail": "GFTT single-source",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "route": "ROUTE_LOCAL_PARTIAL",
+   "detail": "GFTT single-source",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "route": "ROUTE_LOCAL_PARTIAL",
+   "detail": "DENSE_R2_MULTI downgraded by structural veto",
+   "structural": "STRUCTURAL_DISAGREEMENT",
+   "conflict": false,
+   "local_avail": [
+    "DENSE01R2:DENSE_MULTI_MODEL_CONSENSUS",
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS",
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "route": "ROUTE_LOCAL_STRONG",
+   "detail": "V24R1 multi-method consensus + structural ok",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS",
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "route": "ROUTE_LOCAL_PARTIAL",
+   "detail": "GFTT single-source",
+   "structural": "STRUCTURAL_UNKNOWN",
+   "conflict": false,
+   "local_avail": [
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "UNRELIABLE"
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "route": "ROUTE_UNSURE_CONFLICT",
+   "detail": "local sources disagree",
+   "structural": "STRUCTURAL_DISAGREEMENT",
+   "conflict": true,
+   "local_avail": [
+    "DENSE01R2:DENSE_MULTI_MODEL_CONSENSUS",
+    "V24R1:TRUE_MULTI_METHOD_CONSENSUS",
+    "GFTT:LOCAL_ANCHOR_VALIDATED"
+   ],
+   "global": "RELIABLE"
+  }
+ ]
+}

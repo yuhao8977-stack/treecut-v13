@@ -1,0 +1,3260 @@
+{
+ "pairs": [
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "island_t0": [
+    759,
+    995,
+    1270,
+    1645
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 27433,
+     "pair": "3.106->7.246",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 54,
+     "coverage": {
+      "bins": 7,
+      "quads": 4,
+      "hull_ratio": 0.766,
+      "n_fb3": 54
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 27433,
+     "pair": "3.106->7.246",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 27433,
+     "pair": "3.106->7.246",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 27433,
+     "pair": "3.106->7.246",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 151,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "island_t0": [
+    795,
+    1001,
+    1262,
+    1673
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 27433,
+     "pair": "7.246->10.352",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 71,
+     "coverage": {
+      "bins": 8,
+      "quads": 4,
+      "hull_ratio": 0.8095,
+      "n_fb3": 71
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 27433,
+     "pair": "7.246->10.352",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "GFTT_LK_LOCAL",
+     "residual": {
+      "median": 0.409,
+      "p90": 1.368
+     },
+     "transform": [
+      [
+       1.0053646166295462,
+       -0.0009764065812703521,
+       19.654696558925863
+      ],
+      [
+       0.0009764065812703521,
+       1.0053646166295462,
+       -5.390899404674915
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 27433,
+     "pair": "7.246->10.352",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.391,
+      "p90": 1.333
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 27433,
+     "pair": "7.246->10.352",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 27433,
+     "pair": "7.246->10.352",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 27433,
+     "pair": "7.246->10.352",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 151,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "island_t0": [
+    788,
+    997,
+    1275,
+    1672
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 27433,
+     "pair": "10.352->13.458",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 32,
+     "coverage": {
+      "bins": 8,
+      "quads": 4,
+      "hull_ratio": 0.7607,
+      "n_fb3": 32
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 27433,
+     "pair": "10.352->13.458",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "GFTT_LK_LOCAL",
+     "residual": {
+      "median": 0.212,
+      "p90": 0.522
+     },
+     "transform": [
+      [
+       1.0038309604011069,
+       0.005382773360123809,
+       -15.886450058730118
+      ],
+      [
+       -0.005382773360123809,
+       1.0038309604011069,
+       -2.7664500134035874
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 27433,
+     "pair": "10.352->13.458",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.249,
+      "p90": 0.514
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 27433,
+     "pair": "10.352->13.458",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 27433,
+     "pair": "10.352->13.458",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 27433,
+     "pair": "10.352->13.458",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 87,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "island_t0": [
+    819,
+    1001,
+    1275,
+    1683
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 27433,
+     "pair": "13.458->17.598",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 37,
+     "coverage": {
+      "bins": 7,
+      "quads": 4,
+      "hull_ratio": 0.7291,
+      "n_fb3": 37
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 27433,
+     "pair": "13.458->17.598",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 27433,
+     "pair": "13.458->17.598",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 27433,
+     "pair": "13.458->17.598",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 82,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "island_t0": [
+    48,
+    1090,
+    620,
+    1694
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 12095,
+     "pair": "2.225->5.191",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 25,
+     "coverage": {
+      "bins": 6,
+      "quads": 4,
+      "hull_ratio": 0.3776,
+      "n_fb3": 25
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 12095,
+     "pair": "2.225->5.191",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 2.152,
+      "p90": 7.097
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 12095,
+     "pair": "2.225->5.191",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 12095,
+     "pair": "2.225->5.191",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 12095,
+     "pair": "2.225->5.191",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 96,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "island_t0": [
+    15,
+    1186,
+    576,
+    1762
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 12095,
+     "pair": "5.191->7.416",
+     "availability": "AVAILABLE",
+     "state": "DENSE_SINGLE_MODEL",
+     "support_size": 23,
+     "coverage": {
+      "bins": 5,
+      "quads": 4,
+      "hull_ratio": 0.5003,
+      "n_fb3": 23
+     },
+     "transform": [
+      [
+       1.0070362758530815,
+       -0.0006204699176553998,
+       -5.1441547274727695
+      ],
+      [
+       0.0006204699176553998,
+       1.0070362758530815,
+       12.395416599623838
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 12095,
+     "pair": "5.191->7.416",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "GFTT_LK_LOCAL",
+     "residual": {
+      "median": 0.449,
+      "p90": 0.733
+     },
+     "transform": [
+      [
+       1.0000053489426466,
+       0.004632168279351641,
+       -8.349548045726506
+      ],
+      [
+       -0.004632168279351641,
+       1.0000053489426466,
+       19.791543749229472
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 12095,
+     "pair": "5.191->7.416",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.464,
+      "p90": 4.617
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 12095,
+     "pair": "5.191->7.416",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 12095,
+     "pair": "5.191->7.416",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_CONSISTENT",
+     "symmetric_p90": 3.279,
+     "forward_p90": 3.82,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 12095,
+     "pair": "5.191->7.416",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 95,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "island_t0": [
+    37,
+    1220,
+    576,
+    1786
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 12095,
+     "pair": "7.416->9.64",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 44,
+     "coverage": {
+      "bins": 6,
+      "quads": 3,
+      "hull_ratio": 0.5479,
+      "n_fb3": 44
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 12095,
+     "pair": "7.416->9.64",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "GFTT_LK_LOCAL",
+     "residual": {
+      "median": 0.804,
+      "p90": 2.829
+     },
+     "transform": [
+      [
+       0.9839054315559161,
+       -0.000931895706425333,
+       15.062565846306983
+      ],
+      [
+       0.000931895706425333,
+       0.9839054315559161,
+       26.02683989064191
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 12095,
+     "pair": "7.416->9.64",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.796,
+      "p90": 2.361
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 12095,
+     "pair": "7.416->9.64",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 12095,
+     "pair": "7.416->9.64",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 12095,
+     "pair": "7.416->9.64",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 107,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "island_t0": [
+    34,
+    1221,
+    598,
+    1794
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 12095,
+     "pair": "9.64->12.607",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 55,
+     "coverage": {
+      "bins": 6,
+      "quads": 4,
+      "hull_ratio": 0.6238,
+      "n_fb3": 55
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 12095,
+     "pair": "9.64->12.607",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "GFTT_LK_LOCAL",
+     "residual": {
+      "median": 0.239,
+      "p90": 0.544
+     },
+     "transform": [
+      [
+       0.9932154319907445,
+       -0.004175236722252406,
+       23.880810270433106
+      ],
+      [
+       0.004175236722252406,
+       0.9932154319907445,
+       11.335203175245946
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 12095,
+     "pair": "9.64->12.607",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.208,
+      "p90": 0.544
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 12095,
+     "pair": "9.64->12.607",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 12095,
+     "pair": "9.64->12.607",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 12095,
+     "pair": "9.64->12.607",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 166,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "island_t0": [
+    910,
+    1176,
+    1279,
+    1856
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 3571,
+     "pair": "1.842->4.299",
+     "availability": "AVAILABLE",
+     "state": "DENSE_MULTI_MODEL_CONSENSUS",
+     "support_size": 44,
+     "coverage": {
+      "bins": 7,
+      "quads": 4,
+      "hull_ratio": 0.6335,
+      "n_fb3": 44
+     },
+     "transform": [
+      [
+       0.9696333195530048,
+       -0.017012681367943122,
+       -68.43006807992751
+      ],
+      [
+       0.017012681367943122,
+       0.9696333195530048,
+       4.6283144366362885
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 3571,
+     "pair": "1.842->4.299",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 3571,
+     "pair": "1.842->4.299",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_DISAGREEMENT",
+     "symmetric_p90": 25.733,
+     "forward_p90": 3.82,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 3571,
+     "pair": "1.842->4.299",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 68,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "island_t0": [
+    810,
+    1163,
+    1277,
+    1828
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 3571,
+     "pair": "4.299->6.142",
+     "availability": "AVAILABLE",
+     "state": "DENSE_MULTI_MODEL_CONSENSUS",
+     "support_size": 58,
+     "coverage": {
+      "bins": 6,
+      "quads": 3,
+      "hull_ratio": 0.5067,
+      "n_fb3": 58
+     },
+     "transform": [
+      [
+       0.9991242604280276,
+       -0.0011194957078880514,
+       -42.389059605620716
+      ],
+      [
+       0.0011194957078880514,
+       0.9991242604280276,
+       -1.2910127563469187
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 3571,
+     "pair": "4.299->6.142",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "GFTT_LK_LOCAL",
+     "residual": {
+      "median": 0.598,
+      "p90": 4.251
+     },
+     "transform": [
+      [
+       0.9971714651240424,
+       -0.0025672346160379184,
+       -39.451480958486286
+      ],
+      [
+       0.0025672346160379184,
+       0.9971714651240424,
+       -0.7536097835486608
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 3571,
+     "pair": "4.299->6.142",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.426,
+      "p90": 7.325
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 3571,
+     "pair": "4.299->6.142",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 3571,
+     "pair": "4.299->6.142",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_CONSISTENT",
+     "symmetric_p90": 7.099,
+     "forward_p90": 9.55,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 3571,
+     "pair": "4.299->6.142",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 123,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "island_t0": [
+    741,
+    1154,
+    1270,
+    1810
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 3571,
+     "pair": "6.142->7.984",
+     "availability": "AVAILABLE",
+     "state": "DENSE_MULTI_MODEL_CONSENSUS",
+     "support_size": 69,
+     "coverage": {
+      "bins": 6,
+      "quads": 4,
+      "hull_ratio": 0.4715,
+      "n_fb3": 69
+     },
+     "transform": [
+      [
+       0.9949670829333152,
+       0.011134299769775334,
+       7.50510701925642
+      ],
+      [
+       -0.011134299769775334,
+       0.9949670829333152,
+       11.771726539256697
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 3571,
+     "pair": "6.142->7.984",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "GFTT_LK_LOCAL",
+     "residual": {
+      "median": 0.928,
+      "p90": 2.808
+     },
+     "transform": [
+      [
+       0.9951765099830048,
+       0.008526160573788286,
+       9.634957109927223
+      ],
+      [
+       -0.008526160573788286,
+       0.9951765099830048,
+       9.575556495208392
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 3571,
+     "pair": "6.142->7.984",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.906,
+      "p90": 1.61
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 3571,
+     "pair": "6.142->7.984",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 3571,
+     "pair": "6.142->7.984",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_CONSISTENT",
+     "symmetric_p90": 6.685,
+     "forward_p90": 3.279,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 3571,
+     "pair": "6.142->7.984",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 119,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "island_t0": [
+    810,
+    1151,
+    1243,
+    1811
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 3571,
+     "pair": "7.984->10.441",
+     "availability": "AVAILABLE",
+     "state": "DENSE_MULTI_MODEL_CONSENSUS",
+     "support_size": 33,
+     "coverage": {
+      "bins": 6,
+      "quads": 4,
+      "hull_ratio": 0.4365,
+      "n_fb3": 33
+     },
+     "transform": [
+      [
+       1.0154271233134955,
+       -0.014268713287598071,
+       56.033685113516135
+      ],
+      [
+       0.014268713287598071,
+       1.0154271233134955,
+       -24.464703798419325
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 3571,
+     "pair": "7.984->10.441",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 3571,
+     "pair": "7.984->10.441",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_DISAGREEMENT",
+     "symmetric_p90": 39.346,
+     "forward_p90": 48.27,
+     "r2_flag": "DENSE_STRUCTURAL_DISAGREEMENT",
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 3571,
+     "pair": "7.984->10.441",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 66,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "island_t0": [
+    647,
+    1601,
+    1257,
+    2266
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 21674,
+     "pair": "1.201->2.803",
+     "availability": "NOT_VALIDATED",
+     "state": "LK_INSUFFICIENT_AFTER_FB",
+     "support_size": 1,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 21674,
+     "pair": "1.201->2.803",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "SIFT_GRID_BALANCED",
+     "residual": {
+      "median": 0.0,
+      "p90": 124.654
+     },
+     "transform": [
+      [
+       -0.0,
+       -0.0,
+       765.0840454101562
+      ],
+      [
+       0.0,
+       -0.0,
+       1161.9884033203123
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 21674,
+     "pair": "1.201->2.803",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 21674,
+     "pair": "1.201->2.803",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 21674,
+     "pair": "1.201->2.803",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 55,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "island_t0": [
+    710,
+    1359,
+    1263,
+    1899
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 21674,
+     "pair": "2.803->4.004",
+     "availability": "NOT_VALIDATED",
+     "state": "LK_INSUFFICIENT_AFTER_FB",
+     "support_size": 2,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 21674,
+     "pair": "2.803->4.004",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 21674,
+     "pair": "2.803->4.004",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 21674,
+     "pair": "2.803->4.004",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 31,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "island_t0": [
+    703,
+    1285,
+    1270,
+    2233
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 21674,
+     "pair": "4.004->5.205",
+     "availability": "NOT_VALIDATED",
+     "state": "LK_INSUFFICIENT_AFTER_FB",
+     "support_size": 0,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 21674,
+     "pair": "4.004->5.205",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 21674,
+     "pair": "4.004->5.205",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 21674,
+     "pair": "4.004->5.205",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 24,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "island_t0": [
+    795,
+    1279,
+    1268,
+    2036
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 21674,
+     "pair": "5.205->6.807",
+     "availability": "NOT_VALIDATED",
+     "state": "LK_INSUFFICIENT_AFTER_FB",
+     "support_size": 0,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 21674,
+     "pair": "5.205->6.807",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 21674,
+     "pair": "5.205->6.807",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 21674,
+     "pair": "5.205->6.807",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 40,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "island_t0": [
+    10,
+    1374,
+    664,
+    1952
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 1641,
+     "pair": "0.792->1.849",
+     "availability": "NOT_VALIDATED",
+     "state": "LK_INSUFFICIENT_AFTER_FB",
+     "support_size": 2,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 1641,
+     "pair": "0.792->1.849",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 1641,
+     "pair": "0.792->1.849",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 1641,
+     "pair": "0.792->1.849",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 48,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "island_t0": [
+    23,
+    1369,
+    768,
+    1981
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 1641,
+     "pair": "1.849->2.642",
+     "availability": "NOT_VALIDATED",
+     "state": "LK_INSUFFICIENT_AFTER_FB",
+     "support_size": 0,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 1641,
+     "pair": "1.849->2.642",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 1641,
+     "pair": "1.849->2.642",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 1641,
+     "pair": "1.849->2.642",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 46,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "island_t0": [
+    14,
+    1421,
+    653,
+    2021
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 1641,
+     "pair": "2.642->3.434",
+     "availability": "NOT_VALIDATED",
+     "state": "LK_INSUFFICIENT_AFTER_FB",
+     "support_size": 0,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 1641,
+     "pair": "2.642->3.434",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 1.677,
+      "p90": 3.266
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 1641,
+     "pair": "2.642->3.434",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 1641,
+     "pair": "2.642->3.434",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 1641,
+     "pair": "2.642->3.434",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 41,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "island_t0": [
+    3,
+    1478,
+    511,
+    2027
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 1641,
+     "pair": "3.434->4.491",
+     "availability": "NOT_VALIDATED",
+     "state": "LK_INSUFFICIENT_AFTER_FB",
+     "support_size": 4,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 1641,
+     "pair": "3.434->4.491",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 1641,
+     "pair": "3.434->4.491",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 1641,
+     "pair": "3.434->4.491",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 42,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "island_t0": [
+    531,
+    1225,
+    1161,
+    1917
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 10000,
+     "pair": "0.768->1.793",
+     "availability": "AVAILABLE",
+     "state": "DENSE_SINGLE_MODEL",
+     "support_size": 204,
+     "coverage": {
+      "bins": 12,
+      "quads": 4,
+      "hull_ratio": 0.3896,
+      "n_fb3": 204
+     },
+     "transform": [
+      [
+       1.0649183464287217,
+       0.0342923637041819,
+       -29.959366558948147
+      ],
+      [
+       -0.0342923637041819,
+       1.0649183464287217,
+       -67.96211267087982
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 10000,
+     "pair": "0.768->1.793",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 10000,
+     "pair": "0.768->1.793",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_DISAGREEMENT",
+     "symmetric_p90": 15.694,
+     "forward_p90": 29.749,
+     "r2_flag": "DENSE_STRUCTURAL_DISAGREEMENT",
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 10000,
+     "pair": "0.768->1.793",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 256,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "island_t0": [
+    538,
+    1166,
+    1237,
+    1931
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 10000,
+     "pair": "1.793->2.561",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 24,
+     "coverage": {
+      "bins": 5,
+      "quads": 2,
+      "hull_ratio": 0.2077,
+      "n_fb3": 24
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 10000,
+     "pair": "1.793->2.561",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 10000,
+     "pair": "1.793->2.561",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 10000,
+     "pair": "1.793->2.561",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 158,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "island_t0": [
+    627,
+    1123,
+    1272,
+    2018
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 10000,
+     "pair": "2.561->3.329",
+     "availability": "NOT_VALIDATED",
+     "state": "LK_INSUFFICIENT_AFTER_FB",
+     "support_size": 6,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 10000,
+     "pair": "2.561->3.329",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 10000,
+     "pair": "2.561->3.329",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 10000,
+     "pair": "2.561->3.329",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 32,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "island_t0": [
+    746,
+    1063,
+    1275,
+    2088
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 10000,
+     "pair": "3.329->4.354",
+     "availability": "NOT_VALIDATED",
+     "state": "LK_INSUFFICIENT_AFTER_FB",
+     "support_size": 2,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 10000,
+     "pair": "3.329->4.354",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 10000,
+     "pair": "3.329->4.354",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 10000,
+     "pair": "3.329->4.354",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 26,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "island_t0": [
+    12,
+    1205,
+    471,
+    1903
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 2543,
+     "pair": "0.515->1.202",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 16,
+     "coverage": {
+      "bins": 5,
+      "quads": 4,
+      "hull_ratio": 0.5376,
+      "n_fb3": 16
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 2543,
+     "pair": "0.515->1.202",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 2543,
+     "pair": "0.515->1.202",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 2543,
+     "pair": "0.515->1.202",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 77,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "island_t0": [
+    8,
+    1181,
+    464,
+    1756
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 2543,
+     "pair": "1.202->1.717",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 34,
+     "coverage": {
+      "bins": 6,
+      "quads": 4,
+      "hull_ratio": 0.5272,
+      "n_fb3": 34
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 2543,
+     "pair": "1.202->1.717",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.914,
+      "p90": 1.124
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 2543,
+     "pair": "1.202->1.717",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 2543,
+     "pair": "1.202->1.717",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 2543,
+     "pair": "1.202->1.717",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 77,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "island_t0": [
+    5,
+    1181,
+    464,
+    1752
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 2543,
+     "pair": "1.717->2.232",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 24,
+     "coverage": {
+      "bins": 5,
+      "quads": 4,
+      "hull_ratio": 0.3881,
+      "n_fb3": 24
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 2543,
+     "pair": "1.717->2.232",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 2543,
+     "pair": "1.717->2.232",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 2543,
+     "pair": "1.717->2.232",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 72,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "island_t0": [
+    5,
+    1192,
+    478,
+    1787
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 2543,
+     "pair": "2.232->2.918",
+     "availability": "NOT_VALIDATED",
+     "state": "SUPPORT_TOO_LOCALIZED",
+     "support_size": 25,
+     "coverage": {
+      "bins": 3,
+      "quads": 2,
+      "hull_ratio": 0.0696,
+      "n_fb3": 25
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 2543,
+     "pair": "2.232->2.918",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 2543,
+     "pair": "2.232->2.918",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 2543,
+     "pair": "2.232->2.918",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 61,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "island_t0": [
+    17,
+    499,
+    948,
+    2133
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 9697,
+     "pair": "1.236->2.885",
+     "availability": "NOT_VALIDATED",
+     "state": "MATCH_INSUFFICIENT",
+     "support_size": 0,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 9697,
+     "pair": "1.236->2.885",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "SIFT_BASELINE",
+     "residual": {
+      "median": 2.28,
+      "p90": 14.172
+     },
+     "transform": [
+      [
+       0.9986408101926123,
+       0.0059328454570481744,
+       -9.220480308913375
+      ],
+      [
+       -0.0059328454570481744,
+       0.9986408101926123,
+       12.577507853849278
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 9697,
+     "pair": "1.236->2.885",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 9697,
+     "pair": "1.236->2.885",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 9697,
+     "pair": "1.236->2.885",
+     "availability": "MATCH_INSUFFICIENT",
+     "valid_mnn": 8,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "island_t0": [
+    21,
+    530,
+    710,
+    2012
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 9697,
+     "pair": "2.885->4.121",
+     "availability": "NOT_VALIDATED",
+     "state": "MATCH_INSUFFICIENT",
+     "support_size": 0,
+     "coverage": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 9697,
+     "pair": "2.885->4.121",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.526,
+      "p90": 4.54
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 9697,
+     "pair": "2.885->4.121",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 9697,
+     "pair": "2.885->4.121",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 9697,
+     "pair": "2.885->4.121",
+     "availability": "MATCH_INSUFFICIENT",
+     "valid_mnn": 9,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "island_t0": [
+    14,
+    548,
+    721,
+    1950
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 9697,
+     "pair": "4.121->5.357",
+     "availability": "NOT_VALIDATED",
+     "state": "DENSE_NO_ANCHOR",
+     "support_size": 11,
+     "coverage": {
+      "bins": 4,
+      "quads": 2,
+      "hull_ratio": 0.0,
+      "n_fb3": 11
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 9697,
+     "pair": "4.121->5.357",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.555,
+      "p90": 0.814
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 9697,
+     "pair": "4.121->5.357",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 9697,
+     "pair": "4.121->5.357",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 9697,
+     "pair": "4.121->5.357",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 15,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "island_t0": [
+    19,
+    546,
+    702,
+    1858
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 9697,
+     "pair": "5.357->7.005",
+     "availability": "NOT_VALIDATED",
+     "state": "SUPPORT_TOO_LOCALIZED",
+     "support_size": 10,
+     "coverage": {
+      "bins": 3,
+      "quads": 2,
+      "hull_ratio": 0.0,
+      "n_fb3": 10
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 9697,
+     "pair": "5.357->7.005",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.308,
+      "p90": 0.439
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 9697,
+     "pair": "5.357->7.005",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 9697,
+     "pair": "5.357->7.005",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 9697,
+     "pair": "5.357->7.005",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 12,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "island_t0": [
+    9,
+    719,
+    789,
+    2040
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 25894,
+     "pair": "0.718->1.676",
+     "availability": "AVAILABLE",
+     "state": "DENSE_MULTI_MODEL_CONSENSUS",
+     "support_size": 31,
+     "coverage": {
+      "bins": 4,
+      "quads": 2,
+      "hull_ratio": 0.1235,
+      "n_fb3": 31
+     },
+     "transform": [
+      [
+       1.0241281976207979,
+       -0.002426109434550818,
+       -15.946961875525346
+      ],
+      [
+       0.002426109434550818,
+       1.0241281976207979,
+       -42.7060473267234
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 25894,
+     "pair": "0.718->1.676",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "SIFT_BASELINE",
+     "residual": {
+      "median": 0.478,
+      "p90": 0.898
+     },
+     "transform": [
+      [
+       1.0261888554306806,
+       0.001573023443988541,
+       -21.726194796644727
+      ],
+      [
+       -0.001573023443988541,
+       1.0261888554306806,
+       -45.48006507517541
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 25894,
+     "pair": "0.718->1.676",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 0.547,
+      "p90": 1.457
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 25894,
+     "pair": "0.718->1.676",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 25894,
+     "pair": "0.718->1.676",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_DISAGREEMENT",
+     "symmetric_p90": 16.033,
+     "forward_p90": 20.805,
+     "r2_flag": "DENSE_STRUCTURAL_DISAGREEMENT",
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 25894,
+     "pair": "0.718->1.676",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 45,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "island_t0": [
+    3,
+    678,
+    739,
+    1997
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 25894,
+     "pair": "1.676->2.394",
+     "availability": "NOT_VALIDATED",
+     "state": "SUPPORT_TOO_LOCALIZED",
+     "support_size": 18,
+     "coverage": {
+      "bins": 2,
+      "quads": 1,
+      "hull_ratio": 0.0288,
+      "n_fb3": 18
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 25894,
+     "pair": "1.676->2.394",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "GFTT_LK_LOCAL",
+     "residual": {
+      "median": 1.382,
+      "p90": 3.479
+     },
+     "transform": [
+      [
+       1.1025843885272364,
+       0.008323243778990519,
+       -52.592347469513406
+      ],
+      [
+       -0.008323243778990519,
+       1.1025843885272364,
+       -71.6134619932207
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 25894,
+     "pair": "1.676->2.394",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 1.36,
+      "p90": 3.421
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 25894,
+     "pair": "1.676->2.394",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 25894,
+     "pair": "1.676->2.394",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 25894,
+     "pair": "1.676->2.394",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 33,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "island_t0": [
+    5,
+    654,
+    748,
+    2131
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 25894,
+     "pair": "2.394->3.112",
+     "availability": "NOT_VALIDATED",
+     "state": "SUPPORT_TOO_LOCALIZED",
+     "support_size": 13,
+     "coverage": {
+      "bins": 3,
+      "quads": 2,
+      "hull_ratio": 0.125,
+      "n_fb3": 13
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 25894,
+     "pair": "2.394->3.112",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 2.29,
+      "p90": 74.255
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 25894,
+     "pair": "2.394->3.112",
+     "availability": "UNRELIABLE",
+     "state": "CAMERA_UNRELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 25894,
+     "pair": "2.394->3.112",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_UNKNOWN",
+     "symmetric_p90": null,
+     "forward_p90": null,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 25894,
+     "pair": "2.394->3.112",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 33,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "island_t0": [
+    8,
+    619,
+    773,
+    2160
+   ],
+   "records": [
+    {
+     "source_name": "DENSE01R2_FB3",
+     "case": 25894,
+     "pair": "3.112->4.07",
+     "availability": "AVAILABLE",
+     "state": "DENSE_MULTI_MODEL_CONSENSUS",
+     "support_size": 31,
+     "coverage": {
+      "bins": 4,
+      "quads": 3,
+      "hull_ratio": 0.2719,
+      "n_fb3": 31
+     },
+     "transform": [
+      [
+       0.9823086079660638,
+       -4.650331775138698e-05,
+       24.355905198143095
+      ],
+      [
+       4.650331775138698e-05,
+       0.9823086079660638,
+       33.26517983174347
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "V24R1_CONSENSUS",
+     "case": 25894,
+     "pair": "3.112->4.07",
+     "availability": "AVAILABLE",
+     "state": "TRUE_MULTI_METHOD_CONSENSUS",
+     "rep_method": "AKAZE_CLAHE",
+     "residual": {
+      "median": 1.708,
+      "p90": 7.138
+     },
+     "transform": [
+      [
+       0.9860790604153433,
+       0.010408632612509289,
+       7.013179597771421
+      ],
+      [
+       -0.010408632612509289,
+       0.9860790604153433,
+       30.143300142846503
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V24R1_TRUE_CLIQUE_CONSENSUS.json"
+     }
+    },
+    {
+     "source_name": "GFTT_V23_WHOLE_ISLAND",
+     "case": 25894,
+     "pair": "3.112->4.07",
+     "availability": "AVAILABLE",
+     "state": "LOCAL_ANCHOR_VALIDATED",
+     "residual": {
+      "median": 2.34,
+      "p90": 4.815
+     },
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json"
+     }
+    },
+    {
+     "source_name": "GLOBAL_CAMERA_SPARSE",
+     "case": 25894,
+     "pair": "3.112->4.07",
+     "availability": "RELIABLE",
+     "state": "CAMERA_RELIABLE",
+     "transform": null,
+     "provenance": {
+      "source_commit": "08a6d28-era",
+      "artifact": "TREECUT_POSTA3_CAMERA_PAIR_MATRIX_V2.json"
+     }
+    },
+    {
+     "source_name": "STRUCTURAL_DIAGNOSTIC",
+     "case": 25894,
+     "pair": "3.112->4.07",
+     "availability": "AVAILABLE",
+     "state": "STRUCTURAL_DISAGREEMENT",
+     "symmetric_p90": 25.975,
+     "forward_p90": 2.865,
+     "r2_flag": null,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_STRUCTURAL_VALIDATION.json"
+     }
+    },
+    {
+     "source_name": "DINO_SEMANTIC_MNN",
+     "case": 25894,
+     "pair": "3.112->4.07",
+     "availability": "MATCH_SUFFICIENT",
+     "valid_mnn": 36,
+     "transform": null,
+     "provenance": {
+      "source_commit": "8f84735",
+      "artifact": "TREECUT_CAM01_DENSE01R2_MATCH_MATRIX.json"
+     }
+    }
+   ]
+  }
+ ]
+}

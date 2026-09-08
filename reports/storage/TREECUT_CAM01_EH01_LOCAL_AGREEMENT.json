@@ -1,0 +1,89 @@
+{
+ "rows": [
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "sources": [
+    {
+     "a": "DENSE01R2_FB3",
+     "b": "V24R1_CONSENSUS",
+     "median_px": 5.483,
+     "p90_px": 7.259
+    }
+   ],
+   "verdict": "LOCAL_CONFLICT",
+   "disagreement": {
+    "median": 5.483,
+    "p90": 7.259
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "sources": [
+    {
+     "a": "DENSE01R2_FB3",
+     "b": "V24R1_CONSENSUS",
+     "median_px": 1.593,
+     "p90_px": 2.161
+    }
+   ],
+   "verdict": "LOCAL_AGREE",
+   "disagreement": {
+    "median": 1.593,
+    "p90": 2.161
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "sources": [
+    {
+     "a": "DENSE01R2_FB3",
+     "b": "V24R1_CONSENSUS",
+     "median_px": 1.742,
+     "p90_px": 2.344
+    }
+   ],
+   "verdict": "LOCAL_AGREE",
+   "disagreement": {
+    "median": 1.742,
+    "p90": 2.344
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "sources": [
+    {
+     "a": "DENSE01R2_FB3",
+     "b": "V24R1_CONSENSUS",
+     "median_px": 2.455,
+     "p90_px": 3.472
+    }
+   ],
+   "verdict": "LOCAL_AGREE",
+   "disagreement": {
+    "median": 2.455,
+    "p90": 3.472
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "sources": [
+    {
+     "a": "DENSE01R2_FB3",
+     "b": "V24R1_CONSENSUS",
+     "median_px": 5.352,
+     "p90_px": 9.225
+    }
+   ],
+   "verdict": "LOCAL_CONFLICT",
+   "disagreement": {
+    "median": 5.352,
+    "p90": 9.225
+   }
+  }
+ ]
+}

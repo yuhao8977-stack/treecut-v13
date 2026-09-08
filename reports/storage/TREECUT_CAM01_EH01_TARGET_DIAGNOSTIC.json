@@ -1,0 +1,128 @@
+{
+ "POS": {
+  "usable": 10,
+  "target_valid": 9,
+  "pairs": [
+   {
+    "case": 27433,
+    "pair": "7.246->10.352",
+    "route": "ROUTE_LOCAL_STRONG",
+    "target_valid": true
+   },
+   {
+    "case": 27433,
+    "pair": "10.352->13.458",
+    "route": "ROUTE_LOCAL_STRONG",
+    "target_valid": true
+   },
+   {
+    "case": 12095,
+    "pair": "2.225->5.191",
+    "route": "ROUTE_LOCAL_PARTIAL",
+    "target_valid": true
+   },
+   {
+    "case": 12095,
+    "pair": "7.416->9.64",
+    "route": "ROUTE_LOCAL_STRONG",
+    "target_valid": true
+   },
+   {
+    "case": 12095,
+    "pair": "9.64->12.607",
+    "route": "ROUTE_LOCAL_STRONG",
+    "target_valid": true
+   },
+   {
+    "case": 3571,
+    "pair": "1.842->4.299",
+    "route": "ROUTE_LOCAL_PARTIAL",
+    "target_valid": true
+   },
+   {
+    "case": 3571,
+    "pair": "4.299->6.142",
+    "route": "ROUTE_LOCAL_STRONG",
+    "target_valid": true
+   },
+   {
+    "case": 3571,
+    "pair": "6.142->7.984",
+    "route": "ROUTE_LOCAL_STRONG",
+    "target_valid": true
+   },
+   {
+    "case": 3571,
+    "pair": "7.984->10.441",
+    "route": "ROUTE_LOCAL_PARTIAL",
+    "target_valid": true
+   },
+   {
+    "case": 21674,
+    "pair": "1.201->2.803",
+    "route": "ROUTE_LOCAL_STRONG",
+    "target_valid": false
+   }
+  ]
+ },
+ "NEG": {
+  "usable": 9,
+  "target_valid": 2,
+  "pairs": [
+   {
+    "case": 1641,
+    "pair": "2.642->3.434",
+    "route": "ROUTE_LOCAL_PARTIAL",
+    "target_valid": true
+   },
+   {
+    "case": 2543,
+    "pair": "1.202->1.717",
+    "route": "ROUTE_LOCAL_PARTIAL",
+    "target_valid": true
+   },
+   {
+    "case": 9697,
+    "pair": "1.236->2.885",
+    "route": "ROUTE_LOCAL_STRONG",
+    "target_valid": false
+   },
+   {
+    "case": 9697,
+    "pair": "2.885->4.121",
+    "route": "ROUTE_LOCAL_PARTIAL",
+    "target_valid": false
+   },
+   {
+    "case": 9697,
+    "pair": "4.121->5.357",
+    "route": "ROUTE_LOCAL_PARTIAL",
+    "target_valid": false
+   },
+   {
+    "case": 9697,
+    "pair": "5.357->7.005",
+    "route": "ROUTE_LOCAL_PARTIAL",
+    "target_valid": false
+   },
+   {
+    "case": 25894,
+    "pair": "0.718->1.676",
+    "route": "ROUTE_LOCAL_PARTIAL",
+    "target_valid": false
+   },
+   {
+    "case": 25894,
+    "pair": "1.676->2.394",
+    "route": "ROUTE_LOCAL_STRONG",
+    "target_valid": false
+   },
+   {
+    "case": 25894,
+    "pair": "2.394->3.112",
+    "route": "ROUTE_LOCAL_PARTIAL",
+    "target_valid": false
+   }
+  ]
+ }
+}
