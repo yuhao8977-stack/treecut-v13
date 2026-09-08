@@ -1,0 +1,43 @@
+{
+ "experiment": "CAM01_EH02N0_REVIEW_PACK_MANIFEST",
+ "baseline": "8f84a1a1e0f0334256adf79f752e7cfe6c84e9d3",
+ "status": "BLIND_REVIEW_PACK_READY",
+ "candidate_count": 11,
+ "universe_hash": "a12f68741c5dac45b6fe48f273c2776336b8ab7f7349115cac8047064d1ba82e",
+ "frame_policy": {
+  "sampling": "uniform <=5 timeline frames per candidate (fixed, algorithm-independent)",
+  "scene_boundary": "ffprobe scene threshold 0.4 (read-only, no tuning)",
+  "t0_t1_pair_candidates": "uniform early/late frames for human pair choice; NOT chosen by match ease",
+  "seed": 20260908,
+  "cross_scene_cut_flag": "per frame pair, from ffprobe scene log"
+ },
+ "per_candidate_outputs": [
+  "global timeline representative frame(s)",
+  "scene-boundary frames",
+  "t0/t1 candidate frames",
+  "original timestamps",
+  "source frame sha256",
+  "cross-scene-cut flag",
+  "original resolution",
+  "no-algorithm-prediction frames",
+  "ROI entry (reuse mmv_a1_annotate /posta3/roi semantics)"
+ ],
+ "git_boundary": {
+  "git_tracked": [
+   "this manifest + candidate universe + design doc + schema (4 files only)"
+  ],
+  "gitignored_local": [
+   "runtime_data/temp/batch1/eh02n0_blind/blind_review.html",
+   "runtime_data/temp/batch1/eh02n0_blind/frames/",
+   "runtime_data/temp/batch1/eh02n0_blind/reviewer_map.json",
+   "runtime_data/temp/batch1/eh02n0_blind/roi_entry/"
+  ],
+  "never_in_git": [
+   "videos",
+   "large images",
+   "database",
+   "model weights"
+  ]
+ },
+ "universe_sha256": "037b271b4569b20fab54768505ef617125250b16ebeade0844e87d0064b155c4"
+}

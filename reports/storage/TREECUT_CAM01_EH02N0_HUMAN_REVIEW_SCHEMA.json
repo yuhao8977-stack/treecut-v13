@@ -1,0 +1,79 @@
+{
+ "experiment": "CAM01_EH02N0_HUMAN_REVIEW_SCHEMA",
+ "baseline": "8f84a1a1e0f0334256adf79f752e7cfe6c84e9d3",
+ "blind": true,
+ "reviewer_codes": [
+  "R01",
+  "R02",
+  "R03",
+  "R04",
+  "R05",
+  "R06",
+  "R07",
+  "R08",
+  "R09",
+  "R10",
+  "R11"
+ ],
+ "display_shuffle_seed": 20260908,
+ "leakage_protection": {
+  "hidden_from_reviewer": [
+   "algorithm states (GFTT/V24/DENSE/GLOBAL)",
+   "router route/rule/reason",
+   "structural verdict",
+   "symmetric P90",
+   "expected strong/partial/conflict",
+   "algorithm success probability",
+   "real media_id (interface shows reviewer_code only)"
+  ],
+  "mapping_file": "runtime_data/temp/batch1/eh02n0_blind/reviewer_map.json (gitignored)"
+ },
+ "required_fields": {
+  "reviewer_code": "R01-R11",
+  "media_available": "YES/NO",
+  "NO_ACTION_pair_confirmed": "YES/NO/UNSURE",
+  "target_visible_at_t0": "YES/NO/UNSURE",
+  "target_visible_at_t1": "YES/NO/UNSURE",
+  "target_unique_at_t0": "YES/NO/UNSURE",
+  "target_unique_at_t1": "YES/NO/UNSURE",
+  "same_target_identity": "YES/NO/UNSURE",
+  "scene_cut_between_pair": "YES/NO/UNSURE",
+  "severe_occlusion": "YES/NO/UNSURE",
+  "ROI_t0": "pixel box (x1,y1,x2,y2)",
+  "ROI_t1": "pixel box (x1,y1,x2,y2)",
+  "proposed_visual_family": "free text / UNKNOWN",
+  "visual_family_reason": "free text",
+  "near_duplicate_of": "media_id or NONE or UNKNOWN",
+  "reviewer_notes": "free text",
+  "reviewed_at": "ISO timestamp",
+  "reviewer_identity_version": "reviewer id + schema version"
+ },
+ "eligibility_prerecorded": {
+  "note": "only if ALL hold may a candidate enter N2 algorithm evaluation",
+  "frame_level_NO_ACTION": "YES",
+  "target_visible_t0_and_t1": true,
+  "target_unique_t0_and_t1": true,
+  "same_target_identity": true,
+  "no_scene_cut": true,
+  "ROI_valid": true,
+  "not_excluded_near_duplicate": true
+ },
+ "family_definitions": {
+  "visual_content_family": "sample diversity: source/asset, scene type, target object & material, composition & target ratio, camera motion, occlusion, person/pot/hand interference, scene switches, action type or none",
+  "algorithm_evidence_family": "method chain: FEATURE_LOCAL / FEATURE_LOCAL_ENSEMBLE / SEMANTIC_DENSE_LK / GLOBAL_CAMERA",
+  "rules": [
+   "3 algorithms on 1 visual sample = 1 visual family",
+   "V24 & GFTT same FEATURE_LOCAL chain, not independent",
+   "same canonical asset or near-dup clip != multiple families",
+   "same video same scene pairs = 1 family",
+   "different media_id alone insufficient for different family",
+   "need different source/near-dup cluster + real visual difference",
+   "2543 is family anchor; do not force candidates in/out"
+  ]
+ },
+ "n0_status": {
+  "visual_family_id_all": "UNKNOWN (awaiting human)",
+  "human_conclusions_filled": false,
+  "filled_by_harness": false
+ }
+}
