@@ -1,0 +1,74 @@
+{
+ "risks": [
+  {
+   "severity": "P0",
+   "risk": "脚本→镜头语义层缺失",
+   "evidence": "D2 NOT_FOUND",
+   "impact": "无法自动按句选镜",
+   "blocking": true
+  },
+  {
+   "severity": "P0",
+   "risk": "历史素材路径失效",
+   "evidence": "media 5/6 unreadable",
+   "impact": "E2E 不可当前复现",
+   "blocking": true
+  },
+  {
+   "severity": "P1",
+   "risk": "Source gate 未接入生产",
+   "evidence": "prod matching uses eligible only",
+   "impact": "可能选到不合格素材",
+   "blocking": true
+  },
+  {
+   "severity": "P1",
+   "risk": "测试顺序依赖假绿",
+   "evidence": "test_source_audit_r11/stage3 全量失败单独通过",
+   "impact": "部分测试非隔离",
+   "blocking": false
+  },
+  {
+   "severity": "P1",
+   "risk": "GPU 测试环境错位",
+   "evidence": "test_stage2_vision 7 fail (system py CPU torch)",
+   "impact": "需 runtime py 跑",
+   "blocking": false
+  },
+  {
+   "severity": "P2",
+   "risk": "反馈仅 DB+ranking 未到 embedding/training",
+   "evidence": "C3 note",
+   "impact": "学习浅",
+   "blocking": false
+  },
+  {
+   "severity": "P2",
+   "risk": "BGM 单曲无版权库",
+   "evidence": "single mp3",
+   "impact": "规模受限",
+   "blocking": false
+  },
+  {
+   "severity": "P2",
+   "risk": "voice clone 未实现",
+   "evidence": "melo TTS",
+   "impact": "无克隆能力",
+   "blocking": false
+  },
+  {
+   "severity": "P2",
+   "risk": "多套 DB(生产4表 vs CAM 88表)",
+   "evidence": "two materials.db",
+   "impact": "身份 confusion 风险",
+   "blocking": false
+  },
+  {
+   "severity": "P3",
+   "risk": "README 路径 stale(G vs E)",
+   "evidence": "README says G:",
+   "impact": "误导",
+   "blocking": false
+  }
+ ]
+}

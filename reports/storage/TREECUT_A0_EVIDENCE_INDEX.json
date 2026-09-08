@@ -1,0 +1,137 @@
+{
+ "entries": [
+  {
+   "evidence": "PRE_RUN_BASELINE",
+   "path_or_value": "TREECUT_A0_PRE_RUN_BASELINE.json",
+   "status": "generated",
+   "supports": "HEAD/origin/clean"
+  },
+  {
+   "evidence": "PROD_DB_SCHEMA",
+   "path_or_value": "runtime_data/database/materials.db (4 tables)",
+   "status": "authoritative",
+   "supports": "prod chain tables"
+  },
+  {
+   "evidence": "PROD_DB_ROWS",
+   "path_or_value": "media_files 15378/analysis_jobs 4347/eligible 3319/classified 3207",
+   "status": "real",
+   "supports": "db counts"
+  },
+  {
+   "evidence": "CAM_DB_ROWS",
+   "path_or_value": "temp/batch1: assets 22466/segments 41834/transcripts 51543/ocr 289218",
+   "status": "real",
+   "supports": "CAM db"
+  },
+  {
+   "evidence": "REAL_ANALYSIS_JOB",
+   "path_or_value": "analysis_jobs result_json sample (Florence captions+objects+speech)",
+   "status": "real",
+   "supports": "Domain B"
+  },
+  {
+   "evidence": "REAL_E2E_PROJECT",
+   "path_or_value": "output/projects/20260806_110330+120231 (success + full outputs)",
+   "status": "real",
+   "supports": "E2E full chain"
+  },
+  {
+   "evidence": "E2E_FAILURE_EVIDENCE",
+   "path_or_value": "20260806_102815 failed: 合格素材不足",
+   "status": "real",
+   "supports": "fail-closed"
+  },
+  {
+   "evidence": "MP4_OUTPUT",
+   "path_or_value": "TreeCut_成片.mp4 5.8MB 1080x1080@30",
+   "status": "real",
+   "supports": "H1"
+  },
+  {
+   "evidence": "JIANYING_DRAFT",
+   "path_or_value": "TreeCut_剪映草稿/draft_content.json (tracks/materials)",
+   "status": "real",
+   "supports": "H2"
+  },
+  {
+   "evidence": "TTS_EVIDENCE",
+   "path_or_value": "voice_timeline.wav + 02_配音字幕预览.mp4",
+   "status": "real",
+   "supports": "G3"
+  },
+  {
+   "evidence": "SUBTITLE_EVIDENCE",
+   "path_or_value": "narration.srt + burned TreeCut_成片.mp4",
+   "status": "real",
+   "supports": "G4"
+  },
+  {
+   "evidence": "BGM_EVIDENCE",
+   "path_or_value": "bgm_timeline.wav + 03_配音音乐预览.mp4",
+   "status": "real",
+   "supports": "G5"
+  },
+  {
+   "evidence": "PROD_REPORT",
+   "path_or_value": "production_report.json (matches/plan/quality passed)",
+   "status": "real",
+   "supports": "E2E QA"
+  },
+  {
+   "evidence": "DESKTOP_UI",
+   "path_or_value": "src/treecut/desktop.py 731 lines",
+   "status": "code",
+   "supports": "H3"
+  },
+  {
+   "evidence": "API",
+   "path_or_value": "src/treecut/api.py FastAPI",
+   "status": "code",
+   "supports": "H4"
+  },
+  {
+   "evidence": "PROD_CHAIN_SRC",
+   "path_or_value": "application/production.py + workflow/{matching,planning} + output/{mp4,narration,jianying,inspection,cover}",
+   "status": "code",
+   "supports": "main chain"
+  },
+  {
+   "evidence": "ASR_OCR_SRC",
+   "path_or_value": "asr/engine.py (faster-whisper) + ocr/engine.py (RapidOCR)",
+   "status": "code",
+   "supports": "Domain B"
+  },
+  {
+   "evidence": "MODELS",
+   "path_or_value": "models/tts_local.py sherpa_onnx + vision_florence + registry",
+   "status": "code",
+   "supports": "models"
+  },
+  {
+   "evidence": "CAM_EH_RESEARCH",
+   "path_or_value": "EH02 router/scripts/posta3_cam01_* + N0 decision status",
+   "status": "generated",
+   "supports": "Track B shadow"
+  },
+  {
+   "evidence": "N0_STATUS",
+   "path_or_value": "TREECUT_CAM01_EH02N0_ARCHITECT_DECISION_STATUS.json",
+   "status": "generated",
+   "supports": "N1=NO/PRESENT=YES"
+  },
+  {
+   "evidence": "TEST_RUN",
+   "path_or_value": "586 collected/570 pass/12 fail/4 xfail",
+   "status": "run",
+   "supports": "test truth"
+  },
+  {
+   "evidence": "HISTORICAL_E2E_MEDIA_INVALID",
+   "path_or_value": "media 5/6 exists=False",
+   "status": "real",
+   "supports": "repro blocker"
+  }
+ ],
+ "count": 22
+}

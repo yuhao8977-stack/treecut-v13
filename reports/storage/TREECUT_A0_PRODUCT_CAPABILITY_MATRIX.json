@@ -1,0 +1,343 @@
+{
+ "capabilities": [
+  {
+   "capability_id": "A1_disk_scan_discovery",
+   "domain": "A_ASSET_INGESTION",
+   "user_goal": "新增视频被扫描发现",
+   "implementation": "src/treecut/media + scanner/incremental.py",
+   "entrypoint": "desktop._scan / main.py --catalog-scan",
+   "caller": "desktop",
+   "table": "sources/media_files",
+   "real_data": "15378 media_files",
+   "test": "test suite includes scan tests",
+   "artifact": "materials.db media_files 15378 rows",
+   "ui": "desktop choose-source",
+   "highest_verified_level": "DATA_CONNECTED",
+   "limitations": "需源盘在线",
+   "confidence": "HIGH",
+   "provenance": "production db rows verified"
+  },
+  {
+   "capability_id": "A2_ffprobe_hash",
+   "domain": "A_ASSET_INGESTION",
+   "user_goal": "读取元数据+指纹",
+   "implementation": "treecut/media probe_media + bundled_ffprobe",
+   "entrypoint": "AnalysisWorker",
+   "caller": "analysis/worker.py",
+   "table": "media_files.fingerprint",
+   "real_data": "15378 fingerprint non-null",
+   "test": "media tests",
+   "artifact": "fingerprint column",
+   "ui": "none direct",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "HIGH",
+   "provenance": "db query fingerprint count=15378"
+  },
+  {
+   "capability_id": "A3_dedup",
+   "domain": "A_ASSET_INGESTION",
+   "user_goal": "去重",
+   "implementation": "duplicate detection via fingerprint",
+   "entrypoint": "scan",
+   "table": "media_files.fingerprint",
+   "real_data": "dup groups not in prod db",
+   "highest_verified_level": "CODE_EXISTS",
+   "confidence": "MEDIUM",
+   "limitations": "production db has no duplicate_groups table; dedup module is CAM-era (temp db)",
+   "provenance": "prod db schema 4 tables"
+  },
+  {
+   "capability_id": "A4_source_finished_classify",
+   "domain": "A_ASSET_INGESTION",
+   "user_goal": "原片/成片识别",
+   "implementation": "category via analysis",
+   "table": "media_files.category",
+   "real_data": "3207 classified / 12171 unclassified",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "MEDIUM",
+   "limitations": "多数 unclassified; L3 asset-type gate is CAM research",
+   "provenance": "db query"
+  },
+  {
+   "capability_id": "B1_segment",
+   "domain": "B_SEGMENT_MM",
+   "user_goal": "镜头切分落库",
+   "implementation": "segments table (analysis db)",
+   "table": "segments (temp/batch1)",
+   "real_data": "41834 segments / 22466 assets in analysis db",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "HIGH",
+   "note": "analysis db separate from production db; production chain uses whole-file clips not segments",
+   "provenance": "temp/batch1 db query"
+  },
+  {
+   "capability_id": "B2_ASR",
+   "domain": "B_SEGMENT_MM",
+   "user_goal": "语音识别",
+   "implementation": "asr/engine.py WhisperEngine (faster-whisper small/medium)",
+   "entrypoint": "analysis worker",
+   "table": "transcripts (analysis db)",
+   "real_data": "51543 transcripts",
+   "test": "asr tests",
+   "artifact": "transcript rows",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "HIGH",
+   "provenance": "analysis db + engine source"
+  },
+  {
+   "capability_id": "B3_OCR",
+   "domain": "B_SEGMENT_MM",
+   "user_goal": "画面文字/硬字幕",
+   "implementation": "ocr/engine.py OcrEngine (RapidOCR)",
+   "table": "ocr_text (analysis db)",
+   "real_data": "289218 ocr_text",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "B4_vision",
+   "domain": "B_SEGMENT_MM",
+   "user_goal": "画面理解",
+   "implementation": "models/vision_florence.py FlorenceVision + vision_qwen",
+   "real_data": "analysis_jobs result_json vision captions (florence-2-base)",
+   "artifact": "real job: captions + objects (human face/man boxes)",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "HIGH",
+   "provenance": "production db analysis_jobs sample inspected"
+  },
+  {
+   "capability_id": "B5_objects_people",
+   "domain": "B_SEGMENT_MM",
+   "user_goal": "物体/人物检测",
+   "implementation": "florence-2-base-od",
+   "real_data": "objects detections in analysis_jobs",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "B6_embedding_faiss",
+   "domain": "B_SEGMENT_MM",
+   "user_goal": "向量检索",
+   "implementation": "analysis/embedding_worker.py + semantic_matching bge/clip",
+   "real_data": "production report semantic_models bge_scored=2 clip_scored=2",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH",
+   "note": "BGE/CLIP scored real matches in 2026-08-06 E2E"
+  },
+  {
+   "capability_id": "B7_action_understanding",
+   "domain": "B_SEGMENT_MM",
+   "user_goal": "动作理解",
+   "implementation": "CAM research (action_subclip/claim_visual/MMVV/EH)",
+   "highest_verified_level": "CODE_EXISTS",
+   "confidence": "HIGH",
+   "note": "SHADOW_NOT_PRODUCTION_CONNECTED; no production caller"
+  },
+  {
+   "capability_id": "C1_industry_knowledge",
+   "domain": "C_KNOWLEDGE_FEEDBACK",
+   "user_goal": "岛台行业知识",
+   "implementation": "knowledge/ JSON + configs (content_roles_v1, mother_themes_v1, source_registry)",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "HIGH",
+   "note": "knowledge dir + assets/knowledge tracked"
+  },
+  {
+   "capability_id": "C2_human_feedback_save",
+   "domain": "C_KNOWLEDGE_FEEDBACK",
+   "user_goal": "人工修改保存",
+   "implementation": "FeedbackStore + review_center _persist/_save + human_annotation tables (analysis db)",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "C3_feedback_consumed",
+   "domain": "C_KNOWLEDGE_FEEDBACK",
+   "user_goal": "反馈影响后续",
+   "implementation": "production.py:178 feedback.adjustments() in match_materials",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH",
+   "evidence": "FeedbackStore.adjustments read at production match step",
+   "note": "DATABASE_MEMORY + RULE/RANKING_UPDATE; not embedding/model training"
+  },
+  {
+   "capability_id": "D1_script_input",
+   "domain": "D_SCRIPT_CLAIM_TEMPLATE",
+   "user_goal": "脚本输入",
+   "implementation": "desktop narration Text widget (free text)",
+   "highest_verified_level": "USER_USABLE",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "D2_script_parse_beat",
+   "domain": "D_SCRIPT_CLAIM_TEMPLATE",
+   "user_goal": "脚本→Beat/Claim 拆分",
+   "implementation": "NONE in production chain (match_materials treats narration as whole query)",
+   "highest_verified_level": "NOT_FOUND",
+   "confidence": "HIGH",
+   "note": "planning _fill_plan: category-dedup + clip fill, no per-sentence beat; claim_visual is CAM-only"
+  },
+  {
+   "capability_id": "D3_template_slot",
+   "domain": "D_SCRIPT_CLAIM_TEMPLATE",
+   "user_goal": "模板/Slot",
+   "implementation": "content_templates table (analysis db) + templates dir",
+   "highest_verified_level": "CODE_EXISTS",
+   "confidence": "MEDIUM",
+   "note": "production chain single preset, no slot templates wired"
+  },
+  {
+   "capability_id": "E1_retrieval",
+   "domain": "E_RETRIEVAL_SELECTION",
+   "user_goal": "真实库检索",
+   "implementation": "workflow/matching.py load_candidates + match_materials (real prod db)",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH",
+   "provenance": "production_report matches media 5/6 with bge/clip scores"
+  },
+  {
+   "capability_id": "E2_source_gate",
+   "domain": "E_RETRIEVAL_SELECTION",
+   "user_goal": "源合格性",
+   "implementation": "eligible_for_auto_edit in analysis selection",
+   "real_data": "3319 eligible media",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "HIGH",
+   "note": "A4 source-role / G1 gate is CAM research (b007_source_role), not in prod matching"
+  },
+  {
+   "capability_id": "E3_fail_closed",
+   "domain": "E_RETRIEVAL_SELECTION",
+   "user_goal": "不确定时拒产",
+   "implementation": "build_edit_plan complete check raises if insufficient",
+   "real_data": "20260806_102815 failed: '合格素材不足：计划 0.0 秒，目标 30.0 秒'",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "F1_edit_plan",
+   "domain": "F_TIMELINE_EDITING",
+   "user_goal": "时间线计划",
+   "implementation": "workflow/planning.py build_edit_plan",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "F2_render_mp4",
+   "domain": "F_TIMELINE_EDITING",
+   "user_goal": "渲染视频",
+   "implementation": "output/mp4.py render_video_plan (ffmpeg)",
+   "real_data": "TreeCut_成片.mp4 5.8MB 1080x1080@30 + audio 30s (2026-08-06)",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH",
+   "limitations": "历史产物素材路径已失效；当前需重扫素材才可复现"
+  },
+  {
+   "capability_id": "G1_old_subtitle",
+   "domain": "G_SUBTITLE_VOICE_BGM",
+   "user_goal": "原字幕检测/水印",
+   "implementation": "RapidOCR hard-subtitle detect (analysis)",
+   "highest_verified_level": "DATA_CONNECTED",
+   "confidence": "MEDIUM",
+   "note": "检测有；生产中裁剪/遮盖/换素材策略未在 production chain 验证"
+  },
+  {
+   "capability_id": "G2_voice_clone",
+   "domain": "G_SUBTITLE_VOICE_BGM",
+   "user_goal": "声音克隆",
+   "implementation": "NOT_FOUND in production (TTS is synthesized sherpa_onnx vits-melo, not cloning)",
+   "highest_verified_level": "NOT_FOUND",
+   "confidence": "HIGH",
+   "note": "README 提到克隆能力但生产链用 melo TTS 合成；克隆未接授权/样音/运行证据"
+  },
+  {
+   "capability_id": "G3_tts",
+   "domain": "G_SUBTITLE_VOICE_BGM",
+   "user_goal": "配音",
+   "implementation": "models/tts_local.py synthesize (sherpa_onnx vits-melo-tts-zh_en) + output/narration.py",
+   "real_data": "02_配音字幕预览.mp4 + voice_timeline.wav (2026-08-06)",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "G4_new_subtitle",
+   "domain": "G_SUBTITLE_VOICE_BGM",
+   "user_goal": "新字幕生成烧录",
+   "implementation": "output/narration.py burn_subtitles + work/narration.srt",
+   "real_data": "TreeCut_成片.mp4 (burned) + narration.srt",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "G5_bgm",
+   "domain": "G_SUBTITLE_VOICE_BGM",
+   "user_goal": "BGM 混音",
+   "implementation": "output/narration.py mix_background_music + assets/bgm/mixkit mp3",
+   "real_data": "03_配音音乐预览.mp4 + bgm_timeline.wav",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH",
+   "note": "仅 1 内置 BGM; 无授权曲库管理"
+  },
+  {
+   "capability_id": "H1_mp4_output",
+   "domain": "H_OUTPUT_UI_OPS",
+   "user_goal": "输出 MP4",
+   "implementation": "production._create final_mp4",
+   "real_data": "TreeCut_成片.mp4 exists",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "H2_jianying_draft",
+   "domain": "H_OUTPUT_UI_OPS",
+   "user_goal": "剪映草稿",
+   "implementation": "output/jianying.py build_jianying_draft",
+   "real_data": "draft_content.json real Jianying format (tracks/materials/keyframes) + voice/bgm wav",
+   "highest_verified_level": "E2E_PROVEN",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "H3_desktop_ui",
+   "domain": "H_OUTPUT_UI_OPS",
+   "user_goal": "桌面可用",
+   "implementation": "src/treecut/desktop.py 731 lines Tk (scan/generate/produce/narration/timeline/library/schedule/dashboard)",
+   "highest_verified_level": "USER_USABLE",
+   "confidence": "HIGH",
+   "note": "731-line Tk UI real callable; review center via services.review_center"
+  },
+  {
+   "capability_id": "H4_api",
+   "domain": "H_OUTPUT_UI_OPS",
+   "user_goal": "本地 API",
+   "implementation": "src/treecut/api.py FastAPI (submit/get/retry/category/tags/feedback)",
+   "highest_verified_level": "USER_USABLE",
+   "confidence": "HIGH"
+  },
+  {
+   "capability_id": "H5_ops_team_perm",
+   "domain": "H_OUTPUT_UI_OPS",
+   "user_goal": "团队/权限/备份",
+   "implementation": "remote hub exists; permissions/backup unknown",
+   "highest_verified_level": "CODE_EXISTS",
+   "confidence": "LOW",
+   "note": "未验证"
+  },
+  {
+   "capability_id": "X1_cam_eh",
+   "domain": "CAM_EH_RESEARCH",
+   "user_goal": "camera/object reference evidence",
+   "implementation": "EH02 router / REFERENCE_STRONG / structural veto (research)",
+   "highest_verified_level": "UNIT_TESTED",
+   "confidence": "HIGH",
+   "note": "SHADOW_NOT_PRODUCTION_CONNECTED; desktop does NOT import CAM modules; solves reference evidence only, NOT action/script/video"
+  }
+ ],
+ "level_counts": {
+  "DATA_CONNECTED": 12,
+  "CODE_EXISTS": 4,
+  "E2E_PROVEN": 11,
+  "USER_USABLE": 3,
+  "NOT_FOUND": 2,
+  "UNIT_TESTED": 1
+ }
+}

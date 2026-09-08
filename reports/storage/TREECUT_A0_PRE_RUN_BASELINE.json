@@ -1,0 +1,31 @@
+{
+ "audit": "TREECUT_A0_PRE_RUN_BASELINE",
+ "recorded_before_a0_outputs": true,
+ "head": "740ca949fd30388d4887a7eb0edd46a440528f2d",
+ "branch": "main",
+ "origin_main": "740ca949fd30388d4887a7eb0edd46a440528f2d",
+ "head_equals_origin": true,
+ "git_status_porcelain_count": 1,
+ "tracked_worktree_clean": false,
+ "python_runtime": "3.12.13 (runtime E:\\...\\runtime\\python.exe)",
+ "os": "Windows 11",
+ "ffmpeg": "8.1.1-full_build (gyan.dev)",
+ "production_db": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\database\\materials.db",
+ "production_db_tables": [
+  "sources",
+  "media_files",
+  "analysis_jobs",
+  "media_tags"
+ ],
+ "analysis_db_cam01": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\database\\materials.db",
+ "launcher": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\启动树剪v13.cmd",
+ "launcher_chain": "启动树剪v13.cmd -> runtime\\pythonw.exe -m treecut.watchdog -> pythonw -m treecut.desktop (Tk)",
+ "console_scripts": {
+  "treecut": "treecut.main:main",
+  "treecut-desktop": "treecut.desktop:main",
+  "treecut-api": "treecut.api:main",
+  "treecut-xhs-browser": "treecut.browser.main:main"
+ },
+ "tracked_file_count": 1608,
+ "note": "baseline recorded BEFORE any A0 file generated"
+}

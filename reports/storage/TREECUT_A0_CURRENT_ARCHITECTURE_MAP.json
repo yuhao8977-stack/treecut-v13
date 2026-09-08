@@ -1,0 +1,17 @@
+{
+ "real_launch_chain": "启动树剪v13.cmd -> runtime pythonw -m treecut.watchdog -> pythonw -m treecut.desktop (Tk UI)",
+ "cli_entry": "treecut.main:main (--status/--scan/--catalog-scan)",
+ "api_server": "treecut.api:main (FastAPI: submit/get/retry_job/category/tags/feedback)",
+ "desktop_ui": "treecut.desktop (731 lines Tk: scan/generate/produce/narration/library/schedule/dashboard/review)",
+ "browser_ui": "treecut.browser (XHS work browser, separate)",
+ "formal_main_chain": "media scan -> analysis(worker/p2/p3: ffprobe+frames+Florence vision+RapidOCR+faster-whisper) -> analysis_jobs result_json(category/objects/speech/selection) -> ProductionService._create: load_candidates -> semantic_scores(BGE/CLIP) -> match_materials -> build_edit_plan -> render_video_plan(mp4) -> create_narrated_video(melo TTS) -> mix_bgm -> burn_subtitles -> build_jianying_draft -> QA inspect -> MP4+draft+cover+report",
+ "experimental_chain": "CAM01 (scripts/posta3_cam01_*), MMVV/EH02 router, N0/N1 NEG (research; no prod caller)",
+ "legacy_or_dual": "CAM analysis DB (temp/batch1 88 tables) separate from production DB (database 4 tables); b007_* legacy tables in CAM db",
+ "dead_or_orphan": "many src modules no prod caller (claim_visual/visual_beat/mmvl_master/action_subclip etc = CAM)",
+ "production_db": "runtime_data/database/materials.db (4 tables: sources/media_files/analysis_jobs/media_tags)",
+ "cam_db": "runtime_data/temp/batch1/database/materials.db (88 tables)",
+ "config_load": "bootstrap() -> RuntimePaths.discover + settings",
+ "models": "install models dir (LocalTTS vits-melo, Florence via torch hub cache G:), torch cache G:\\TreeCut_AI",
+ "output": "runtime_data/output/projects/<ts>/",
+ "note": "user today actually runs desktop Tk chain; CAM/EH are shadow research not in UI chain"
+}

@@ -1,0 +1,39 @@
+{
+ "CURRENT_USER_WORKFLOW_ESTABLISHED": "PARTIAL",
+ "note": "存在可操作的半自动产出链（扫描→分析→填文案→制作→MP4/剪映草稿→审核窗），但无'输入脚本自动拆镜'层；多数素材 unclassified 需先分析",
+ "steps": [
+  {
+   "action": "启动 启动树剪v13.cmd",
+   "result": "watchdog -> Tk desktop 打开"
+  },
+  {
+   "action": "选择素材目录 扫描",
+   "result": "媒体入 media_files，分析任务排队 (可看到 15378 已登记)"
+  },
+  {
+   "action": "等待/查看分析",
+   "result": "analysis_jobs 4347 完成含 caption/ASR/OCR/category"
+  },
+  {
+   "action": "填写卖点词 + 文案 (或按卖点生成)",
+   "result": "narration 文本框预填模板文案"
+  },
+  {
+   "action": "选 输出MP4/剪映草稿 + 时长",
+   "result": "ProductionService 后台制作"
+  },
+  {
+   "action": "制作完成",
+   "result": "output/projects/<ts>/ 下 TreeCut_成片.mp4 + TreeCut_剪映草稿 + cover + report"
+  },
+  {
+   "action": "打开审核中心",
+   "result": "review_center 可看任务/填审 (CAM-era 通道)"
+  },
+  {
+   "action": "失败时",
+   "result": "STATUS.json failed + advice (如 合格素材不足)"
+  }
+ ],
+ "missing_for_full_manual": "脚本→逐句镜选；人工替换后回流制作未验证；素材重扫后源可用性"
+}

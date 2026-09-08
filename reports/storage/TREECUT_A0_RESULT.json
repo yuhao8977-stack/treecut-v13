@@ -1,0 +1,51 @@
+{
+ "experiment": "TREECUT_A0_RESULT",
+ "baseline": "740ca949fd30388d4887a7eb0edd46a440528f2d",
+ "overall_product_state": "半自动素材资产+生产链真实存在且 2026-08-06 E2E 跑通(MP4+剪映草稿)；但脚本→逐句镜选层缺失、素材源路径失效需重扫、Source-gate 未接入生产；CAM/EH 为 shadow 未连生产",
+ "current_user_workflow": "PARTIAL (可操作产出链存在；无脚本自动拆镜层)",
+ "capability_domains": {
+  "A_ASSET_INGESTION": "DATA_CONNECTED",
+  "B_SEGMENT_MM": "DATA_CONNECTED",
+  "C_KNOWLEDGE_FEEDBACK": "E2E_PROVEN(feedback consumed)",
+  "D_SCRIPT_CLAIM_TEMPLATE": "NOT_FOUND(beat)/USER_USABLE(manual input)",
+  "E_RETRIEVAL_SELECTION": "E2E_PROVEN",
+  "F_TIMELINE_EDITING": "E2E_PROVEN",
+  "G_SUBTITLE_VOICE_BGM": "E2E_PROVEN",
+  "H_OUTPUT_UI_OPS": "USER_USABLE",
+  "CAM_EH_RESEARCH": "UNIT_TESTED(SHADOW)"
+ },
+ "capability_level_counts": {
+  "DATA_CONNECTED": 12,
+  "E2E_PROVEN": 11,
+  "CODE_EXISTS": 4,
+  "USER_USABLE": 3,
+  "NOT_FOUND": 2,
+  "UNIT_TESTED": 1
+ },
+ "real_db_material_connected": true,
+ "e2e_trace_last_success": "jianying_draft (full chain reached 2026-08-06)",
+ "FIRST_REAL_E2E_BLOCKER": "NONE_in_2026-08-06_historical_run; CURRENT repro blocker = historical media paths invalid",
+ "mp4_actual_output": "YES(2026-08-06)",
+ "jianying_draft_actual_output": "YES(2026-08-06)",
+ "voice_clone_actual": "NO(melo TTS synthesis only)",
+ "new_subtitle_actual": "YES",
+ "bgm_actual": "YES",
+ "human_feedback_consumed": "PARTIAL (DB stored + ranking adjustment read in match; not embedding/training)",
+ "cam_eh_production_caller": "NO (SHADOW_NOT_PRODUCTION_CONNECTED)",
+ "n0_state_preserved": "YES (N1=NO/PRESENT=YES/ESTABLISHED=NO/GEOM=NO/NEW_NEG=0)",
+ "gap_counts": {
+  "P0": 3,
+  "P1": 4,
+  "P2": 3,
+  "RESEARCH": 3
+ },
+ "shortest_mvp_blockers": [
+  "D2 script→beat parse (NOT_FOUND)",
+  "source-gate into prod matching",
+  "current media rescan (paths invalid)"
+ ],
+ "track_a_recommendation": "连接已有链(检索/渲染/TTS/字幕/BGM/草稿) + 建脚本拆层 + 人工确认门；不依赖 Track B",
+ "track_b_recommendation": "CAM/EH/GEOM/动作理解保持 shadow 研究；N1 暂停",
+ "tests": "586 collected/570 pass/12 fail/4 xfail(全量一次, system py)",
+ "no_overall_pct": "按证据等级不输出百分比"
+}

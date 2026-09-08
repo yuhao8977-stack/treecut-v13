@@ -1,0 +1,30 @@
+{
+ "TRACK_A_SEMI_AUTO_MVP": {
+  "goal": "脚本→Beat→推荐镜头→人工确认→时间线→配音字幕BGM→MP4/剪映草稿",
+  "mvp_shape": "9:16 25-35s 单岛台模板 3候选 人工终审 禁自动发布",
+  "already_working": [
+   "素材检索(E1 E2E)",
+   "匹配(E2E)",
+   "时间线+渲染(F E2E)",
+   "TTS配音(G3)",
+   "字幕烧录(G4)",
+   "BGM(G5)",
+   "MP4(H1)",
+   "剪映草稿(H2)",
+   "桌面UI(H3)"
+  ],
+  "must_build_or_connect": [
+   "脚本→Beat 拆分层(D2 NOT_FOUND)",
+   "Source gate 接入生产(E2)",
+   "人工替换回流生产(未验证)",
+   "当前源盘素材重扫(P0)"
+  ],
+  "note": "Track A 不依赖 Track B (CAM/EH/GEOM/动作理解)"
+ },
+ "TRACK_B_FULL_AUTO_RD": {
+  "goal": "N0/N1/NEG families/Router/GEOM/动作理解/自动 Claim 验证",
+  "status": "SHADOW research; N1_APPROVED=NO; PRESENT=YES ESTABLISHED=NO",
+  "dependency": "不得自动成为 Track A 全部前置"
+ },
+ "parallelizable": "素材扫描/检索/渲染链(A-F,H) 与 CAM/EH 研究(Track B) 可并行；Track A MVP 不阻塞于 Track B"
+}

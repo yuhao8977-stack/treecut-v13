@@ -1,0 +1,103 @@
+{
+ "experiment": "A0_E2E_TRACE_01",
+ "evidence_basis": "real production projects 20260806_110330/120231 (STATUS=success) + current source",
+ "script_input": "小户型岛台，可伸缩设计，分区收纳，实用尺寸，家庭办公与会客两用 (selling_points + narration from desktop)",
+ "steps": [
+  {
+   "step": "script_input",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "desktop._start_request",
+   "artifact": "CreativeRequest(narration,selling_points,target_duration=30)",
+   "id": "request dict"
+  },
+  {
+   "step": "parser_beat_claim",
+   "status": "NOT_FOUND_IN_PRODUCTION",
+   "note": "no per-sentence beat split in prod chain; narration used whole"
+  },
+  {
+   "step": "retrieval_query",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "workflow/matching.py match_materials",
+   "table": "materials.db media_files+analysis_jobs+sources",
+   "artifact": "2 matches (media 5/6)",
+   "caller": "ProductionService._create"
+  },
+  {
+   "step": "candidate_segments",
+   "status": "REACHED_E2E_PROVEN",
+   "note": "whole-file clips (clip_seconds), not segment-based",
+   "artifact": "matches with bge 0.569/0.61 clip 0.387/0.373"
+  },
+  {
+   "step": "source_eligibility",
+   "status": "PARTIAL",
+   "note": "eligible_for_auto_edit used (3319); G1/A4 source-role gate is CAM-only not in prod matching"
+  },
+  {
+   "step": "semantic_evidence",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "semantic_scores BGE+CLIP",
+   "artifact": "bge_scored=2 clip_scored=2 errors=[]"
+  },
+  {
+   "step": "selection",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "build_edit_plan category-dedup fill",
+   "artifact": "plan 2 segments 30s complete"
+  },
+  {
+   "step": "trim",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "ffmpeg segment trim in render_video_plan",
+   "artifact": "01_高清画面底片.mp4"
+  },
+  {
+   "step": "timeline",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "render_video_plan concat",
+   "artifact": "preview mp4"
+  },
+  {
+   "step": "voice_tts",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "tts_local synthesize sherpa_onnx vits-melo",
+   "artifact": "02_配音字幕预览.mp4 + voice_timeline.wav"
+  },
+  {
+   "step": "new_subtitle",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "narration.py burn_subtitles",
+   "artifact": "TreeCut_成片.mp4 burned + narration.srt"
+  },
+  {
+   "step": "bgm",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "narration.py mix_background_music",
+   "artifact": "03_配音音乐预览.mp4 + bgm_timeline.wav"
+  },
+  {
+   "step": "qa",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "inspection (final video/playback/burned subtitles/draft)",
+   "artifact": "production_report quality passed=True"
+  },
+  {
+   "step": "render_mp4",
+   "status": "REACHED_E2E_PROVEN",
+   "artifact": "TreeCut_成片.mp4 5.8MB 1080x1080@30"
+  },
+  {
+   "step": "jianying_draft",
+   "status": "REACHED_E2E_PROVEN",
+   "function": "output/jianying.py",
+   "artifact": "TreeCut_剪映草稿 draft_content.json real format"
+  }
+ ],
+ "FIRST_REAL_E2E_BLOCKER": "NONE_IN_20260806_HISTORICAL_RUN (chain completed on 2026-08-06)",
+ "current_repro_blocker": "HISTORICAL_MEDIA_PATH_INVALID — E2E 用过的 media 5/6 源文件当前不可读（旧 E:\\treecut-v13 素材路径已失效）；当前环境复现需先重新扫描接入现源盘素材",
+ "not_reached": [
+  "per-sentence beat/claim alignment (no such step exists in prod chain)"
+ ],
+ "note": "historical E2E full-chain succeeded 2026-08-06 (2 projects success); media paths since invalid -> current re-run requires rescan"
+}

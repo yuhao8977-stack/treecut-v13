@@ -1,0 +1,41 @@
+{
+ "identity_audit": {
+  "media_files.id": {
+   "meaning": "file identity (physical discovered file)",
+   "pk": "id",
+   "table": "media_files",
+   "prod_rows": 15378,
+   "parent": "sources.source_id",
+   "consumers": "analysis_jobs.media_id"
+  },
+  "assets.asset_id": {
+   "meaning": "canonical asset identity",
+   "pk": "asset_id",
+   "table": "assets (CAM analysis db only)",
+   "cam_rows": 22466,
+   "note": "NOT in production db — asset identity lives only in CAM db"
+  },
+  "segments.segment_id": {
+   "meaning": "segment identity",
+   "pk": "segment_id",
+   "table": "segments (CAM db)",
+   "cam_rows": 41834,
+   "note": "NOT in production db; prod chain uses whole-file clips"
+  },
+  "analysis_jobs": {
+   "identity": "job per media",
+   "rows": 4347,
+   "table": "analysis_jobs (prod db)",
+   "consumers": "load_candidates join"
+  },
+  "conflict_or_mix": {
+   "two_db_split": "production db(4 tables) vs CAM db(88 tables) same file name materials.db in different dirs — 身份混淆风险",
+   "entity_kind_mix": "b007_source_role_v1 uses entity_kind/entity_id generic (CAM); not in prod",
+   "fourth_shot_id": "NOT_FOUND (shot_usage uses segment_id+beat_id)"
+  },
+  "sql_bypass": "NOT_EXHAUSTIVELY_AUDITED (scripts/*.py direct sqlite probes exist; service layer not proven bypass-free)"
+ },
+ "orphan_or_path_issue": {
+  "historical_e2e_media_unreadable": "media 5/6 source paths invalid (old E:\\treecut-v13)"
+ }
+}

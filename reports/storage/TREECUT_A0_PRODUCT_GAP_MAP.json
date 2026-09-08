@@ -1,0 +1,69 @@
+{
+ "P0_PRODUCT_BLOCKERS": [
+  {
+   "id": "P0_script_beat_parse",
+   "desc": "生产链无脚本→逐句 Beat/Claim 拆分层（matching 整段匹配）",
+   "evidence": "planning._fill_plan category-dedup; desktop narration free text; claim_visual CAM-only"
+  },
+  {
+   "id": "P0_source_gate_in_prod",
+   "desc": "Source/G1/A4 source-role gate 未接入生产 matching（只有 eligible flag）",
+   "evidence": "production.py uses eligible_for_auto_edit; b007_source_role CAM-only"
+  },
+  {
+   "id": "P0_media_path_validity",
+   "desc": "历史 E2E 素材路径已失效；需当前源盘重扫才可复现",
+   "evidence": "media 5/6 exists=False in current ROOTS"
+  }
+ ],
+ "P1_PRODUCT": [
+  {
+   "id": "P1_segment_based_selection",
+   "desc": "生产链按整文件 clip 而非 segment 级选择",
+   "evidence": "build_edit_plan clip_seconds on match.duration"
+  },
+  {
+   "id": "P1_old_subtitle_handling",
+   "desc": "硬字幕检测有（RapidOCR）但生产中裁剪/遮盖/换素材未接通",
+   "evidence": "G1 note"
+  },
+  {
+   "id": "P1_bgm_library",
+   "desc": "仅 1 内置 BGM, 无授权曲库/版权管理",
+   "evidence": "assets/bgm single mp3"
+  },
+  {
+   "id": "P1_review_center_in_prod_flow",
+   "desc": "ReviewCenterWindow 存在且可开, 但人工替换如何回流 production plan 未验证",
+   "evidence": "desktop._open_review_center + plan_override path exists but unverified"
+  }
+ ],
+ "P2_PRODUCT": [
+  {
+   "id": "P2_voice_clone",
+   "desc": "生产用 melo TTS 合成非克隆；克隆无授权/样音/运行证据",
+   "evidence": "tts_local sherpa_onnx"
+  },
+  {
+   "id": "P2_team_perm_backup",
+   "desc": "团队/权限/备份/恢复未验证",
+   "evidence": "unknown"
+  }
+ ],
+ "RESEARCH_NOT_BLOCKING_MVP": [
+  {
+   "id": "R1_cam_eh",
+   "desc": "CAM/EH router/GEOM/action understanding = CAM LOCAL RESEARCH BLOCKER，不阻生产 MVP",
+   "evidence": "SHADOW_NOT_PRODUCTION_CONNECTED; desktop no CAM import"
+  },
+  {
+   "id": "R2_auto_publish",
+   "desc": "AutoPublish 明确非目标"
+  },
+  {
+   "id": "R3_learning_loop",
+   "desc": "自动学习回流未验证真实效果"
+  }
+ ],
+ "product_vs_research_note": "P0/P1/P2 above are PRODUCT blockers; CAM/EH/GEOM are RESEARCH blockers (R-track) - must not gate Track A MVP"
+}

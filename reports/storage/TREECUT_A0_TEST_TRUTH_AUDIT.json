@@ -1,0 +1,30 @@
+{
+ "total_collected": 586,
+ "files": 63,
+ "run_result": {
+  "passed": 570,
+  "failed": 12,
+  "xfailed": 4,
+  "skipped": 0,
+  "error": 0
+ },
+ "run_time_s": 184.57,
+ "failures": {
+  "test_stage2_vision.py (7)": "GPU/real-inference tests run under system python (CPU torch) — environment mismatch; expected RTX3050 CUDA; NOT code defect (runtime py has CUDA)",
+  "test_source_audit_r11.py (3)": "workbench replace/trim/qa — pass when run alone -> ORDER-DEPENDENT/state pollution",
+  "test_stage3 (2)": "people output structure / v2 smoke — pass alone -> same isolation issue"
+ },
+ "categories": {
+  "unit": "majority",
+  "integration": "some",
+  "real_media": "few (CAM runners are real-frame, not pytest)",
+  "artifact_regression": "EH02/EH01/EH01M1/EH01R1 test files read frozen JSON — ARTIFACT_REGRESSION_TEST (46 tests)",
+  "synthetic": "some (camera/geometry synthetic)",
+  "placeholder_or_dead": "not proven"
+ },
+ "cautions": [
+  "artifact-regression tests verify frozen numbers not live behavior",
+  "12 failures include environment + order-dependency; 570 pass is NOT clean green"
+ ],
+ "note": "586 collected / 570 passed / 12 failed / 4 xfailed in one full run (system py); GPU tests require runtime py"
+}
