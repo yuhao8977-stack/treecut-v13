@@ -1,0 +1,26 @@
+{
+ "route_counts": {
+  "UNSURE_NO_EVIDENCE": 14,
+  "REFERENCE_STRONG": 8,
+  "REFERENCE_PARTIAL_VETOED": 11,
+  "UNSURE_CONFLICT": 2,
+  "REFERENCE_PARTIAL": 1
+ },
+ "REFERENCE_STRONG": 8,
+ "REFERENCE_PARTIAL": 1,
+ "REFERENCE_PARTIAL_VETOED": 11,
+ "UNSURE_CONFLICT": 2,
+ "UNSURE_EVIDENCE_ONLY": 0,
+ "UNSURE_NO_EVIDENCE": 14,
+ "safe_emit": 8,
+ "case_coverage_9": 6,
+ "gftt_new_strong_additions": [
+  "2543 1.202->1.717"
+ ],
+ "gftt_new_strong_count": 1,
+ "vs_eh01r1_strong_9": {
+  "old_strong": 9,
+  "new_strong": 8,
+  "delta": -1
+ }
+}

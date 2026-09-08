@@ -1,0 +1,148 @@
+{
+ "experiment": "CAM01_EH02_RESULT",
+ "baseline": "main @ 644c206",
+ "M1_materialization_preserved": true,
+ "corrections": {
+  "EH02_CORRECTION_M1_AGREEMENT_REPORT_01": "registered",
+  "EH02_CORRECTION_M1_STRUCT_HULL_02": "registered"
+ },
+ "structural_old": {
+  "STRUCTURAL_DISAGREEMENT": 10,
+  "STRUCTURAL_CONSISTENT": 7
+ },
+ "structural_corrected": {
+  "STRUCTURAL_UNKNOWN": 1,
+  "STRUCTURAL_CONSISTENT": 7,
+  "STRUCTURAL_DISAGREEMENT": 9
+ },
+ "structural_verdict_changed": [
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "old": "STRUCTURAL_DISAGREEMENT",
+   "new": "STRUCTURAL_UNKNOWN"
+  }
+ ],
+ "metrics": {
+  "route_counts": {
+   "UNSURE_NO_EVIDENCE": 14,
+   "REFERENCE_STRONG": 8,
+   "REFERENCE_PARTIAL_VETOED": 11,
+   "UNSURE_CONFLICT": 2,
+   "REFERENCE_PARTIAL": 1
+  },
+  "REFERENCE_STRONG": 8,
+  "REFERENCE_PARTIAL": 1,
+  "REFERENCE_PARTIAL_VETOED": 11,
+  "UNSURE_CONFLICT": 2,
+  "UNSURE_EVIDENCE_ONLY": 0,
+  "UNSURE_NO_EVIDENCE": 14,
+  "safe_emit": 8,
+  "case_coverage_9": 6,
+  "gftt_new_strong_additions": [
+   "2543 1.202->1.717"
+  ],
+  "gftt_new_strong_count": 1,
+  "vs_eh01r1_strong_9": {
+   "old_strong": 9,
+   "new_strong": 8,
+   "delta": -1
+  }
+ },
+ "NEG_REFERENCE_CONTROL": "PRESENT",
+ "NEG_REFERENCE_CONTROL_PRESENT": true,
+ "NEG_REFERENCE_CONTROL_ESTABLISHED": false,
+ "readiness": {
+  "POS_strong_target_valid": 5,
+  "NEG_strong_target_valid": 1,
+  "NEG_unique_families": [
+   "FEATURE_LOCAL"
+  ],
+  "NEG_REFERENCE_CONTROL": "PRESENT",
+  "NEG_REFERENCE_CONTROL_PRESENT": true,
+  "NEG_REFERENCE_CONTROL_ESTABLISHED": false,
+  "note": "ESTABLISHED 需 >=3 unique visual families AND target-valid AND STRONG；单/双样本只能 PRESENT"
+ },
+ "route_1641": {
+  "case": 1641,
+  "pair": "2.642->3.434",
+  "route": "REFERENCE_PARTIAL",
+  "reason": "transform present not STRONG (struct=STRUCTURAL_UNKNOWN global=False)"
+ },
+ "route_2543": {
+  "case": 2543,
+  "pair": "1.202->1.717",
+  "route": "REFERENCE_STRONG",
+  "rule": "S2",
+  "reason": "MEDIUM(GFTT_M1) struct=CONSISTENT global=RELIABLE"
+ },
+ "GLOBAL_MATERIALIZATION_UPPER_BOUND": 0,
+ "GLOBAL_TRANSFORM_NEEDED": false,
+ "ROUTER_RULESET_FROZEN": true,
+ "no_new_coverage_gate": true,
+ "no_geom": true,
+ "no_action_verdict": true,
+ "NEXT_BLOCKER": "TARGETED_NEGATIVE_REFERENCE_SET",
+ "targeted_negative_recommendation": {
+  "note": "diagnostic only; NO auto sample-add / ROI / run",
+  "criteria": "target 两端可见 / 独立视觉 family / 非 1641/2543 重复 family",
+  "candidates_cal10_external_NO_ACTION": [
+   {
+    "media_id": 1019,
+    "src": 1,
+    "file": "32运动者+实木升降台 内蒙古炖锅"
+   },
+   {
+    "media_id": 1025,
+    "src": 1,
+    "file": "34可折叠水桶+实木桌 南京炖锅"
+   },
+   {
+    "media_id": 103,
+    "src": 1,
+    "file": "113欧式沙发+实木梳妆 山东炖锅"
+   },
+   {
+    "media_id": 1600,
+    "src": 1,
+    "file": "04壁挂水龙头+凉亭 内蒙古炖锅"
+   },
+   {
+    "media_id": 1638,
+    "src": 1,
+    "file": "1-4 55大理石+深黑 实木"
+   },
+   {
+    "media_id": 1639,
+    "src": 1,
+    "file": "05烤牛肉串"
+   },
+   {
+    "media_id": 2163,
+    "src": 1,
+    "file": "85瓷白+深灰+黑白 岩板炖锅"
+   },
+   {
+    "media_id": 2208,
+    "src": 1,
+    "file": "48大理石+运动者+深灰 拼花"
+   },
+   {
+    "media_id": 2211,
+    "src": 1,
+    "file": "32运动者+实木 内蒙古 餐厅"
+   },
+   {
+    "media_id": 2492,
+    "src": 1,
+    "file": "岩板白 鱼尾锅 01壁挂水龙头"
+   },
+   {
+    "media_id": 26023,
+    "src": 4,
+    "file": "DJI 青岛 2.18 (未处理工厂)"
+   }
+  ]
+ },
+ "targeted_negative_note": "见 §27 recommendation；不得自动加样本/画 ROI/运行"
+}

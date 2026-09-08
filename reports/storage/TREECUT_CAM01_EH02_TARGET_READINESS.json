@@ -1,0 +1,71 @@
+{
+ "POS_strong_target_valid": 5,
+ "POS_detail": [
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "target_valid": true,
+   "rule": "S1",
+   "rep": "V24R1"
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "target_valid": true,
+   "rule": "S1",
+   "rep": "V24R1"
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "target_valid": true,
+   "rule": "S1",
+   "rep": "V24R1"
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "target_valid": true,
+   "rule": "S1",
+   "rep": "DENSE_R2"
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "target_valid": true,
+   "rule": "S1",
+   "rep": "DENSE_R2"
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "target_valid": false,
+   "rule": "S1",
+   "rep": "V24R1"
+  }
+ ],
+ "NEG_strong_target_valid": 1,
+ "NEG_detail": [
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "target_valid": true,
+   "rule": "S2",
+   "rep": "GFTT_M1"
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "target_valid": false,
+   "rule": "S1",
+   "rep": "V24R1"
+  }
+ ],
+ "NEG_unique_families": [
+  "FEATURE_LOCAL"
+ ],
+ "NEG_REFERENCE_CONTROL": "PRESENT",
+ "NEG_REFERENCE_CONTROL_PRESENT": true,
+ "NEG_REFERENCE_CONTROL_ESTABLISHED": false,
+ "note": "ESTABLISHED 需 >=3 unique visual families AND target-valid AND STRONG；单/双样本只能 PRESENT"
+}

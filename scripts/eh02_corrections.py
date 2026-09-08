@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""EH02 Stage 0A/0B corrections registration."""
+import json
+from pathlib import Path
+
+OUT = Path(r"C:\Users\admin\github\treecut-v13\reports\storage")
+
+corr = {
+    "EH02_CORRECTION_M1_AGREEMENT_REPORT_01": {
+        "issue": "M1 REPORT.md / final response 把 GFTT-vs-V24 conflict pair 写错（写 12095 5.191->7.416，"
+                 "实际该对 AGREE med 0.001px）",
+        "truth_artifact": "TREECUT_CAM01_EH01M1_LOCAL_AGREEMENT.json",
+        "actual": {
+            "GFTT_vs_V24": {"agree": 9, "conflict": 1,
+                            "conflict_pair": [25894, "3.112->4.07"],
+                            "conflict_med_px": 4.245},
+            "GFTT_vs_DENSE": {"agree": 3, "conflict": 2,
+                              "conflict_pairs": [[12095, "5.191->7.416"],
+                                                 [25894, "3.112->4.07"]]}},
+        "note": "V24 representative 多为 GFTT_LK_LOCAL 同源 -> GFTT-vs-V24 多数 med~0.000; "
+                "EH02 代码重算不硬编码；旧 M1 报告不改"},
+    "EH02_CORRECTION_M1_STRUCT_HULL_02": {
+        "issue": "M1 structural hull 用全部 FB<=3 accepted GFTT tracks（含 RANSAC outlier），"
+                 "非 materialized affine 的 RANSAC inliers",
+        "impact": "outlier 撑大 hull 可放大 structural P90（如 1641 inlier 0.80、12095 2.225 "
+                  "inlier 0.672、9697 2.885 inlier 0.738、25894 2.394 inlier 0.548）",
+        "fix": "support hull 只用 fit-all materialization RANSAC inliers"},
+}
+
+(OUT / "TREECUT_CAM01_EH02_M1_CORRECTIONS.json").write_text(
+    json.dumps(corr, ensure_ascii=False, indent=1), encoding="utf-8")
+print("corrections registered")

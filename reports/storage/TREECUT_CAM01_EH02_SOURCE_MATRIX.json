@@ -1,0 +1,328 @@
+{
+ "rows": [
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "DENSE": false,
+   "V24": true,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_CONSISTENT"
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "DENSE": false,
+   "V24": true,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": true,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "DENSE": true,
+   "V24": true,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_CONSISTENT"
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "DENSE": false,
+   "V24": true,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_CONSISTENT"
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "DENSE": false,
+   "V24": true,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_CONSISTENT"
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "DENSE": true,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "DENSE": true,
+   "V24": true,
+   "GFTT": true,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_CONSISTENT"
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "DENSE": true,
+   "V24": true,
+   "GFTT": true,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_CONSISTENT"
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "DENSE": true,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "DENSE": false,
+   "V24": true,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": true,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "DENSE": true,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_CONSISTENT"
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "DENSE": false,
+   "V24": true,
+   "GFTT": false,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_UNKNOWN"
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "DENSE": true,
+   "V24": true,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "DENSE": false,
+   "V24": true,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "DENSE": false,
+   "V24": false,
+   "GFTT": true,
+   "GLOBAL_state": false,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "DENSE": true,
+   "V24": true,
+   "GFTT": true,
+   "GLOBAL_state": true,
+   "STRUCTURAL": "STRUCTURAL_DISAGREEMENT"
+  }
+ ]
+}

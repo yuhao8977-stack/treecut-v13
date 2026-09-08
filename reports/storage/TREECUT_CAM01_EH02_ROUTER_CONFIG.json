@@ -1,0 +1,32 @@
+{
+ "ROUTER_VERSION": "EH02_V2",
+ "confidence_classes": {
+  "HIGH_CONF_LOCAL": [
+   "V24R1 TRUE_MULTI_METHOD_CONSENSUS",
+   "DENSE_R2 MULTI_MODEL_CONSENSUS"
+  ],
+  "MEDIUM_CONF_LOCAL": [
+   "DENSE_R2 SINGLE_MODEL",
+   "GFTT_V23 VALIDATED materialized (bakeoff FAILED, not natively strong)"
+  ]
+ },
+ "strong_rules": {
+  "S1": "HIGH_CONF_LOCAL + no LOCAL_CONFLICT + structural != DISAGREEMENT (structural UNKNOWN = NO_STRUCTURAL_VETO_AVAILABLE, not CONFIRMED)",
+  "S2": "MEDIUM_CONF_LOCAL + STRUCTURAL_CONSISTENT + GLOBAL reliable state + no LOCAL_CONFLICT",
+  "S3": "MEDIUM_CONF_LOCAL + cross-family materialized local source AGREE + structural != DISAGREEMENT + no conflict (V24<->GFTT same family cannot satisfy; DENSE<->GFTT / DENSE<->V24 can)"
+ },
+ "partial_rules": "real transform present but not STRONG; DISAGREEMENT -> REFERENCE_PARTIAL_VETOED (SAFE_EMIT=False)",
+ "conflict_precedence": "LOCAL_CONFLICT > STRONG > PARTIAL > EVIDENCE_ONLY/NONE",
+ "representative_tiebreak": "DENSE_R2 > V24R1 > GFTT_M1; cross-family agreement cluster preferred; no matrix averaging",
+ "structural_boundary": "symmetric P90 <=12 CONSISTENT / >12 DISAGREEMENT / none UNKNOWN (unchanged 12)",
+ "global_role": "state-only SUPPORT (no transform; no veto; unreliable = NO_GLOBAL_SUPPORT)",
+ "evidence_family": {
+  "DENSE_R2": "SEMANTIC_DENSE_LK",
+  "V24R1": "FEATURE_LOCAL_ENSEMBLE",
+  "GFTT_M1": "FEATURE_LOCAL",
+  "GLOBAL": "GLOBAL_CAMERA",
+  "STRUCTURAL": "STRUCTURAL_VALIDATION",
+  "DINO_MNN": "SEMANTIC_AVAILABILITY"
+ },
+ "note": "V24R1 与 GFTT_M1 同 feature-local 链，非完全独立 family"
+}

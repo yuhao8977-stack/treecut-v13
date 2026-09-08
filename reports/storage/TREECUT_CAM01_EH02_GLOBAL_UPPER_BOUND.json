@@ -1,0 +1,104 @@
+{
+ "UNSURE_or_PARTIAL_with_global_reliable": [
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "route": "UNSURE_CONFLICT",
+   "has_local_transform": true
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "route": "UNSURE_CONFLICT",
+   "has_local_transform": true
+  }
+ ],
+ "already_have_local_transform": [
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "route": "UNSURE_CONFLICT",
+   "has_local_transform": true
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "has_local_transform": true
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "route": "UNSURE_CONFLICT",
+   "has_local_transform": true
+  }
+ ],
+ "no_local_transform": [],
+ "GLOBAL_MATERIALIZATION_UPPER_BOUND": 0
+}

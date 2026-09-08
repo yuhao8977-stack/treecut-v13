@@ -1,0 +1,686 @@
+{
+ "rules_hash": "98ca12ca6663ba90",
+ "rules": "S1:HIGH+no-conflict+struct!=DISC;S2:MED+CONSISTENT+global-rel;S3:MED+cross-family-agree+struct!=DISC;conflict-precedence;tiebreak DENSE_R2>V24R1>GFTT_M1",
+ "source_hashes": {
+  "DENSE_R2": "8f84735/748e3ccb",
+  "V24R1": "e2bb0ae/e433a90e",
+  "GFTT_M1": "644c206/(M1 derived)",
+  "GLOBAL_V2": "f85b363/268695d7"
+ },
+ "ROUTER_FREEZE": true,
+ "36_pair_routes": [
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "route": "REFERENCE_STRONG",
+   "rule": "S1",
+   "reason": "HIGH_CONF(V24R1) no-conflict struct=STRUCTURAL_CONSISTENT",
+   "confidence_annotation": "STRONG_INTERNAL_CONSENSUS_STRUCTURAL_SUPPORTED",
+   "safe_emit": true,
+   "representative": "V24R1",
+   "representative_transform": [
+    [
+     1.0053646166295462,
+     -0.0009764065812703521,
+     19.654696558925863
+    ],
+    [
+     0.0009764065812703521,
+     1.0053646166295462,
+     -5.390899404674915
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "V24R1",
+   "representative_transform": [
+    [
+     1.0038309604011069,
+     0.005382773360123809,
+     -15.886450058730118
+    ],
+    [
+     -0.005382773360123809,
+     1.0038309604011069,
+     -2.7664500134035874
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "GFTT_M1",
+   "representative_transform": [
+    [
+     1.0029906273030305,
+     0.002152846642523913,
+     -17.80151181114575
+    ],
+    [
+     -0.002152846642523913,
+     1.0029906273030305,
+     42.773104856228585
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "route": "UNSURE_CONFLICT",
+   "reason": "LOCAL_CONFLICT",
+   "conflict_detail": [
+    {
+     "a": "DENSE_R2",
+     "b": "V24R1",
+     "median_px": 4.106
+    },
+    {
+     "a": "DENSE_R2",
+     "b": "GFTT_M1",
+     "median_px": 4.107
+    }
+   ],
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "route": "REFERENCE_STRONG",
+   "rule": "S1",
+   "reason": "HIGH_CONF(V24R1) no-conflict struct=STRUCTURAL_CONSISTENT",
+   "confidence_annotation": "STRONG_INTERNAL_CONSENSUS_STRUCTURAL_SUPPORTED",
+   "safe_emit": true,
+   "representative": "V24R1",
+   "representative_transform": [
+    [
+     0.9839054315559161,
+     -0.000931895706425333,
+     15.062565846306983
+    ],
+    [
+     0.000931895706425333,
+     0.9839054315559161,
+     26.02683989064191
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "route": "REFERENCE_STRONG",
+   "rule": "S1",
+   "reason": "HIGH_CONF(V24R1) no-conflict struct=STRUCTURAL_CONSISTENT",
+   "confidence_annotation": "STRONG_INTERNAL_CONSENSUS_STRUCTURAL_SUPPORTED",
+   "safe_emit": true,
+   "representative": "V24R1",
+   "representative_transform": [
+    [
+     0.9932154319907445,
+     -0.004175236722252406,
+     23.880810270433106
+    ],
+    [
+     0.004175236722252406,
+     0.9932154319907445,
+     11.335203175245946
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "DENSE_R2",
+   "representative_transform": [
+    [
+     0.9688566538893723,
+     -0.017615700078451986,
+     -66.93280692021665
+    ],
+    [
+     0.017615700078451986,
+     0.9688566538893723,
+     5.469312626578784
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "route": "REFERENCE_STRONG",
+   "rule": "S1",
+   "reason": "HIGH_CONF(DENSE_R2+V24R1) no-conflict struct=STRUCTURAL_CONSISTENT",
+   "confidence_annotation": "STRONG_INTERNAL_CONSENSUS_STRUCTURAL_SUPPORTED",
+   "safe_emit": true,
+   "representative": "DENSE_R2",
+   "representative_transform": [
+    [
+     0.9998508299947677,
+     -0.0004612164692138305,
+     -43.53561907580759
+    ],
+    [
+     0.0004612164692138305,
+     0.9998508299947677,
+     -1.5247013376280143
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "route": "REFERENCE_STRONG",
+   "rule": "S1",
+   "reason": "HIGH_CONF(DENSE_R2+V24R1) no-conflict struct=STRUCTURAL_CONSISTENT",
+   "confidence_annotation": "STRONG_INTERNAL_CONSENSUS_STRUCTURAL_SUPPORTED",
+   "safe_emit": true,
+   "representative": "DENSE_R2",
+   "representative_transform": [
+    [
+     0.9943040949486419,
+     0.011710124518013478,
+     7.7529886278952524
+    ],
+    [
+     -0.011710124518013478,
+     0.9943040949486419,
+     13.305324128027557
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "DENSE_R2",
+   "representative_transform": [
+    [
+     1.0149828784393367,
+     -0.014109971188675468,
+     56.25882610512554
+    ],
+    [
+     0.014109971188675468,
+     1.0149828784393367,
+     -23.91684612595716
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "route": "REFERENCE_STRONG",
+   "rule": "S1",
+   "reason": "HIGH_CONF(V24R1) no-conflict struct=STRUCTURAL_UNKNOWN",
+   "confidence_annotation": "STRONG_INTERNAL_CONSENSUS_NO_STRUCTURAL_VETO_AVAILABLE",
+   "safe_emit": true,
+   "representative": "V24R1",
+   "representative_transform": [
+    [
+     -0.0,
+     -0.0,
+     765.0840454101562
+    ],
+    [
+     0.0,
+     -0.0,
+     1161.9884033203123
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "route": "REFERENCE_PARTIAL",
+   "reason": "transform present not STRONG (struct=STRUCTURAL_UNKNOWN global=False)",
+   "safe_emit": false,
+   "representative": "GFTT_M1",
+   "representative_transform": [
+    [
+     1.0269800096984283,
+     0.0020634504791260536,
+     -53.26937982584003
+    ],
+    [
+     -0.0020634504791260536,
+     1.0269800096984283,
+     -11.863933482047125
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "DENSE_R2",
+   "representative_transform": [
+    [
+     1.1233652026099783,
+     -0.0014371953137063613,
+     40.76589405392887
+    ],
+    [
+     0.07521380600340954,
+     1.1723522065306524,
+     -164.92675194722938
+    ],
+    [
+     0.00011077713012205437,
+     1.2142195552478468e-05,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "route": "REFERENCE_STRONG",
+   "rule": "S2",
+   "reason": "MEDIUM(GFTT_M1) struct=CONSISTENT global=RELIABLE",
+   "confidence_annotation": "S2_MEDIUM_STRUCT_GLOBAL",
+   "safe_emit": true,
+   "representative": "GFTT_M1",
+   "representative_transform": [
+    [
+     0.9943553284397617,
+     -0.0068603151990380435,
+     0.4244827483678051
+    ],
+    [
+     0.0068603151990380435,
+     0.9943553284397617,
+     -0.7203413284853202
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "route": "UNSURE_NO_EVIDENCE",
+   "reason": "no local/global evidence",
+   "safe_emit": false,
+   "representative": null
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "route": "REFERENCE_STRONG",
+   "rule": "S1",
+   "reason": "HIGH_CONF(V24R1) no-conflict struct=STRUCTURAL_UNKNOWN",
+   "confidence_annotation": "STRONG_INTERNAL_CONSENSUS_NO_STRUCTURAL_VETO_AVAILABLE",
+   "safe_emit": true,
+   "representative": "V24R1",
+   "representative_transform": [
+    [
+     0.9986408101926123,
+     0.0059328454570481744,
+     -9.220480308913375
+    ],
+    [
+     -0.0059328454570481744,
+     0.9986408101926123,
+     12.577507853849278
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "GFTT_M1",
+   "representative_transform": [
+    [
+     0.998469357990343,
+     0.0013608475307651372,
+     1.5473015978848852
+    ],
+    [
+     -0.0013608475307651372,
+     0.998469357990343,
+     8.79990198399421
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "GFTT_M1",
+   "representative_transform": [
+    [
+     1.000021669635203,
+     0.0025466287899206744,
+     2.9466728958960835
+    ],
+    [
+     -0.0025466287899206744,
+     1.000021669635203,
+     4.610732039166245
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "GFTT_M1",
+   "representative_transform": [
+    [
+     0.9990303358840659,
+     -9.799872053502418e-05,
+     4.996688602336968
+    ],
+    [
+     9.799872053502418e-05,
+     0.9990303358840659,
+     4.751557058178088
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "DENSE_R2",
+   "representative_transform": [
+    [
+     1.0241281976207979,
+     -0.002426109434550818,
+     -15.946961875525346
+    ],
+    [
+     0.002426109434550818,
+     1.0241281976207979,
+     -42.7060473267234
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "V24R1",
+   "representative_transform": [
+    [
+     1.1025843885272364,
+     0.008323243778990519,
+     -52.592347469513406
+    ],
+    [
+     -0.008323243778990519,
+     1.1025843885272364,
+     -71.6134619932207
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "route": "REFERENCE_PARTIAL_VETOED",
+   "reason": "struct disagreement veto",
+   "safe_emit": false,
+   "representative": "GFTT_M1",
+   "representative_transform": [
+    [
+     1.1137667690080377,
+     0.017504247095796985,
+     -87.94617810862749
+    ],
+    [
+     -0.017504247095796985,
+     1.1137667690080377,
+     -104.21657992627658
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "route": "UNSURE_CONFLICT",
+   "reason": "LOCAL_CONFLICT",
+   "conflict_detail": [
+    {
+     "a": "DENSE_R2",
+     "b": "V24R1",
+     "median_px": 5.352
+    },
+    {
+     "a": "DENSE_R2",
+     "b": "GFTT_M1",
+     "median_px": 8.377
+    },
+    {
+     "a": "V24R1",
+     "b": "GFTT_M1",
+     "median_px": 4.245
+    }
+   ],
+   "safe_emit": false,
+   "representative": null
+  }
+ ]
+}
