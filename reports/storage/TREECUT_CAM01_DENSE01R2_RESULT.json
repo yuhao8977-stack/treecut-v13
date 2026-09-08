@@ -1,0 +1,279 @@
+{
+ "experiment": "CAM01_DENSE01R2_RESULT",
+ "generated_at": "2026-09-08 10:43:51",
+ "historical": {
+  "dense01": 0,
+  "dense01r1_forward_only": 0,
+  "overnight_replay_forward_only": 0
+ },
+ "metrics": {
+  "pairs": 36,
+  "mnn_sufficient": 34,
+  "lk_attempted_total": 2571,
+  "fwd_ok_total": 1613,
+  "bwd_ok_total": 1522,
+  "fb3_raw_total": 1060,
+  "final_accepted_fb3_total": 1003,
+  "pairs_fb3_ge8": 24,
+  "DINO_LK_FB3": {
+   "AFFINE": 7,
+   "HOMOGRAPHY": 7,
+   "MULTI": 6,
+   "SINGLE": 2,
+   "CONFLICT": 0,
+   "NO": 12,
+   "LK_INSUFFICIENT_AFTER_FB": 10,
+   "MATCH_INSUFFICIENT": 2,
+   "SUPPORT_TOO_LOCALIZED": 4,
+   "union": 8,
+   "case_coverage_9": 4,
+   "true_pooled_median": 0.995,
+   "true_pooled_p90": 2.752,
+   "true_pooled_p95": 4.162
+  },
+  "DINO_ONLY_SUBTOKEN": {
+   "AFFINE": 0,
+   "HOMOGRAPHY": 0
+  },
+  "state_counts": {
+   "DENSE_NO_ANCHOR": 12,
+   "DENSE_SINGLE_MODEL": 2,
+   "DENSE_MULTI_MODEL_CONSENSUS": 6,
+   "LK_INSUFFICIENT_AFTER_FB": 10,
+   "SUPPORT_TOO_LOCALIZED": 4,
+   "MATCH_INSUFFICIENT": 2
+  }
+ },
+ "fold_retention": {
+  "old_validated": 10,
+  "new_validated": 33,
+  "retained": 8,
+  "lost": 2,
+  "new": 25,
+  "retained_detail": [
+   [
+    2543,
+    "1.202->1.717",
+    "PARTIAL_AFFINE",
+    "fold1"
+   ],
+   [
+    3571,
+    "1.842->4.299",
+    "HOMOGRAPHY",
+    "fold1"
+   ],
+   [
+    3571,
+    "1.842->4.299",
+    "PARTIAL_AFFINE",
+    "fold1"
+   ],
+   [
+    3571,
+    "4.299->6.142",
+    "HOMOGRAPHY",
+    "fold1"
+   ],
+   [
+    3571,
+    "7.984->10.441",
+    "HOMOGRAPHY",
+    "fold0"
+   ],
+   [
+    3571,
+    "7.984->10.441",
+    "PARTIAL_AFFINE",
+    "fold0"
+   ],
+   [
+    10000,
+    "0.768->1.793",
+    "HOMOGRAPHY",
+    "fold0"
+   ],
+   [
+    25894,
+    "3.112->4.07",
+    "PARTIAL_AFFINE",
+    "fold0"
+   ]
+  ],
+  "lost_detail": [
+   [
+    2543,
+    "2.232->2.918",
+    "HOMOGRAPHY",
+    "fold1"
+   ],
+   [
+    2543,
+    "2.232->2.918",
+    "PARTIAL_AFFINE",
+    "fold1"
+   ]
+  ],
+  "new_detail": [
+   [
+    2543,
+    "1.717->2.232",
+    "PARTIAL_AFFINE",
+    "fold1"
+   ],
+   [
+    3571,
+    "1.842->4.299",
+    "HOMOGRAPHY",
+    "fold0"
+   ],
+   [
+    3571,
+    "1.842->4.299",
+    "PARTIAL_AFFINE",
+    "fold0"
+   ],
+   [
+    3571,
+    "4.299->6.142",
+    "HOMOGRAPHY",
+    "fold0"
+   ],
+   [
+    3571,
+    "4.299->6.142",
+    "PARTIAL_AFFINE",
+    "fold0"
+   ],
+   [
+    3571,
+    "4.299->6.142",
+    "PARTIAL_AFFINE",
+    "fold1"
+   ],
+   [
+    3571,
+    "6.142->7.984",
+    "HOMOGRAPHY",
+    "fold0"
+   ],
+   [
+    3571,
+    "6.142->7.984",
+    "HOMOGRAPHY",
+    "fold1"
+   ],
+   [
+    3571,
+    "6.142->7.984",
+    "PARTIAL_AFFINE",
+    "fold0"
+   ],
+   [
+    3571,
+    "6.142->7.984",
+    "PARTIAL_AFFINE",
+    "fold1"
+   ],
+   [
+    3571,
+    "7.984->10.441",
+    "HOMOGRAPHY",
+    "fold1"
+   ],
+   [
+    3571,
+    "7.984->10.441",
+    "PARTIAL_AFFINE",
+    "fold1"
+   ],
+   [
+    10000,
+    "0.768->1.793",
+    "HOMOGRAPHY",
+    "fold1"
+   ],
+   [
+    12095,
+    "5.191->7.416",
+    "HOMOGRAPHY",
+    "fold0"
+   ],
+   [
+    12095,
+    "5.191->7.416",
+    "PARTIAL_AFFINE",
+    "fold0"
+   ],
+   [
+    12095,
+    "5.191->7.416",
+    "PARTIAL_AFFINE",
+    "fold1"
+   ],
+   [
+    12095,
+    "9.64->12.607",
+    "HOMOGRAPHY",
+    "fold0"
+   ],
+   [
+    25894,
+    "0.718->1.676",
+    "HOMOGRAPHY",
+    "fold0"
+   ],
+   [
+    25894,
+    "0.718->1.676",
+    "HOMOGRAPHY",
+    "fold1"
+   ],
+   [
+    25894,
+    "0.718->1.676",
+    "PARTIAL_AFFINE",
+    "fold0"
+   ],
+   [
+    25894,
+    "0.718->1.676",
+    "PARTIAL_AFFINE",
+    "fold1"
+   ],
+   [
+    25894,
+    "1.676->2.394",
+    "HOMOGRAPHY",
+    "fold1"
+   ],
+   [
+    25894,
+    "3.112->4.07",
+    "HOMOGRAPHY",
+    "fold0"
+   ],
+   [
+    25894,
+    "3.112->4.07",
+    "HOMOGRAPHY",
+    "fold1"
+   ],
+   [
+    25894,
+    "3.112->4.07",
+    "PARTIAL_AFFINE",
+    "fold1"
+   ]
+  ]
+ },
+ "semantic_match_sufficient": "34/36",
+ "semantic_recall_status": "NOT_FORMALLY_GATED",
+ "raw_refinement_effective": true,
+ "raw_refinement_sufficient": false,
+ "improvement_class": "FAIL_DENSE",
+ "DENSE_ENDPOINT_ROUTE_CLOSED": true,
+ "DENSE_ENDPOINT_CAPABILITY": "NOT_ESTABLISHED",
+ "NEXT_BLOCKER": "EVIDENCE_HIERARCHY_REDESIGN_or_TEMPORAL_LEARNED_TRACKER",
+ "status": "FAIL_DENSE"
+}

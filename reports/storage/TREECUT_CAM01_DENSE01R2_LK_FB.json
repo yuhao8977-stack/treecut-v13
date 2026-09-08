@@ -1,0 +1,15 @@
+{
+ "attempted": 2571,
+ "fwd_ok": 1613,
+ "bwd_ok": 1522,
+ "fb3_raw": 1060,
+ "final_accepted_fb3": 1003,
+ "reject_counts": {
+  "FB>3": 462,
+  "ACCEPT": 1003,
+  "FWD_FAIL": 958,
+  "BWD_FAIL": 91,
+  "OUTSIDE_ISLAND": 52,
+  "DYNAMIC": 5
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "DINO_LK_FB3": {
+  "AFFINE": 7,
+  "HOMOGRAPHY": 7,
+  "MULTI": 6,
+  "SINGLE": 2,
+  "CONFLICT": 0,
+  "NO": 12,
+  "LK_INSUFFICIENT_AFTER_FB": 10,
+  "MATCH_INSUFFICIENT": 2,
+  "SUPPORT_TOO_LOCALIZED": 4,
+  "union": 8,
+  "case_coverage_9": 4,
+  "true_pooled_median": 0.995,
+  "true_pooled_p90": 2.752,
+  "true_pooled_p95": 4.162
+ },
+ "DINO_ONLY_SUBTOKEN": {
+  "AFFINE": 0,
+  "HOMOGRAPHY": 0
+ }
+}

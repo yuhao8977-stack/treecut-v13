@@ -1,0 +1,9 @@
+{
+ "experiment": "DENSE01R2_PRE_RUN_GIT_STATUS",
+ "recorded_before_any_r2_artifact": true,
+ "head": "8cb7682deca79e19530ac0f9141ea4db54e1d805",
+ "branch": "main",
+ "porcelain_count": 0,
+ "clean": true,
+ "recorded_at": "before R2 generation"
+}

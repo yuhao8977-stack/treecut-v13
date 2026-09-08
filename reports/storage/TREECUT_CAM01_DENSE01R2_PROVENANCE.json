@@ -1,0 +1,14 @@
+{
+ "experiment": "DENSE01R2_PROVENANCE",
+ "model": "dinov2_vits14_reg",
+ "checkpoint_abs_path": "G:\\TreeCut_AI\\torch_cache\\checkpoints\\dinov2_vits14_reg4_pretrain.pth",
+ "checkpoint_sha256": "F433177089A681826F849F194ECE3BB48F4D63FB38D32FC837E3DC7A4E5641FB",
+ "license": "Apache-2.0",
+ "torch": "2.6.0+cu124",
+ "cuda": "12.4",
+ "device": "NVIDIA GeForce RTX 3050",
+ "cv2": "4.10.0",
+ "numpy": "2.5.2",
+ "cache_path": "G:\\TreeCut_AI\\torch_cache",
+ "note": "checkpoint 字段全部填写（修正 MODEL_PROVENANCE 遗留 checkpoint=?/sha256= 问题，正式记录）"
+}

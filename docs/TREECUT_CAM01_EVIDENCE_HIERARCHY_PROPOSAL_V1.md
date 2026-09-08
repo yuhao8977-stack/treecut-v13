@@ -1,8 +1,10 @@
 # TREECUT CAM01 — LOCAL / GLOBAL / UNSURE Evidence Hierarchy V1（架构草案）
 
-- 状态：**架构提案，未实现**（overnight audit §28 输出；不开发代码）
+- 状态：**PROPOSAL_PENDING_DENSE_R2_CLOSURE**（未实现；DENSE01 R2 完成后待架构师决策是否启动；
+  不接入 MMVV）
 - 依据：CAM01 锚点路线全链数据（feature 12/36 · GFTT 17/36 · V25/26 patch 0/7/7 ·
-  STRUCT01 0 · OBJ01 0 · DENSE01 0 · DENSE01R1 0；本 overnight audit 独立 replay 确认）
+  STRUCT01 0 · OBJ01 0 · DENSE01 0 · DENSE01R1 0；本 overnight audit 独立 replay 确认；
+  DENSE01R2 true-FB3 8/36，仍 FAIL_DENSE，endpoint route closed 待架构师正式批准）
 - 原则：**fail closed**；允许 UNSURE；绝不为 coverage 把 UNKNOWN 变 PASS。
 
 ## 1. 为什么需要层级（本 audit 证据）

@@ -1,0 +1,11 @@
+{
+ "MULTI_pairs": [],
+ "MULTI_cases": 0,
+ "SINGLE_pairs": [
+  {
+   "case": 10000,
+   "pair": "0.768->1.793"
+  }
+ ],
+ "SINGLE_cases": 1
+}
