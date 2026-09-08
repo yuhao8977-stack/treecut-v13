@@ -1,0 +1,76 @@
+{
+ "experiment": "CAM01_EH01M1_RESULT",
+ "baseline": "main @ 4aec680",
+ "GFTT_REPLAY_VERIFIED": true,
+ "historical_gftt_validated": 17,
+ "replay_gftt_validated": 17,
+ "pair_state_fingerprint_match_36": 1,
+ "fold_state_fingerprint_match": 1,
+ "GFTT_TRANSFORM_MATERIALIZATION_COMPLETE": "YES",
+ "materialized_count": 17,
+ "deterministic_count": 17,
+ "no_transform_routes_now_materialized": {
+  "total_no_tf": 7,
+  "materialized": 7,
+  "pairs": [
+   "12095 2.225->5.191",
+   "1641 2.642->3.434",
+   "2543 1.202->1.717",
+   "25894 2.394->3.112",
+   "9697 2.885->4.121",
+   "9697 4.121->5.357",
+   "9697 5.357->7.005"
+  ]
+ },
+ "local_agreement": {
+  "GFTT_vs_V24": {
+   "agree": 9,
+   "conflict": 1,
+   "not_comparable": 7
+  },
+  "GFTT_vs_DENSE": {
+   "agree": 3,
+   "conflict": 2,
+   "not_comparable": 12
+  }
+ },
+ "structural": {
+  "consistent": 7,
+  "disagreement": 10,
+  "unknown": 0
+ },
+ "target": {
+  "POS_materialized": 8,
+  "POS_materialized_target_valid": 8,
+  "NEG_materialized": 9,
+  "NEG_materialized_target_valid": 2,
+  "NEG_MATERIALIZED_REFERENCE_TARGET_VALID": 2,
+  "NEG_STRONG_REFERENCE_TARGET_VALID": 0,
+  "strength_note": "NEG materialized != NEG strong；强度等级等 EH02"
+ },
+ "NEG_focus_pairs": [
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "target_valid": true,
+   "materialized": true,
+   "deterministic": true,
+   "structural": "STRUCTURAL_DISAGREEMENT",
+   "global_state": "CAMERA_UNRELIABLE"
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "target_valid": true,
+   "materialized": true,
+   "deterministic": true,
+   "structural": "STRUCTURAL_CONSISTENT",
+   "global_state": "CAMERA_RELIABLE"
+  }
+ ],
+ "no_new_coverage_gate": true,
+ "no_action_verdict": true,
+ "NEXT_BLOCKER": "EH02_ROUTER_CALIBRATION",
+ "GLOBAL_TRANSFORM_MATERIALIZATION_RECOMMENDED": "GLOBAL_TRANSFORM_MATERIALIZATION_RECOMMENDED_AFTER_EH02_OR_AS_EH02_SUBTASK",
+ "note": "shadow only; EH01R1 router 未修改; GFTT materialized 标 GFTT_MATERIALIZED_REFERENCE_CANDIDATE 未自动升级 strong"
+}

@@ -1,0 +1,121 @@
+{
+ "GFTT_vs_V24": {
+  "agree": 9,
+  "conflict": 1,
+  "not_comparable": 7,
+  "rows": [
+   {
+    "case": 3571,
+    "pair": "4.299->6.142",
+    "median_px": 0.0,
+    "p90_px": 0.0,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 3571,
+    "pair": "6.142->7.984",
+    "median_px": 0.0,
+    "p90_px": 0.0,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 12095,
+    "pair": "5.191->7.416",
+    "median_px": 0.001,
+    "p90_px": 0.001,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 12095,
+    "pair": "7.416->9.64",
+    "median_px": 0.0,
+    "p90_px": 0.001,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 12095,
+    "pair": "9.64->12.607",
+    "median_px": 0.0,
+    "p90_px": 0.0,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 25894,
+    "pair": "0.718->1.676",
+    "median_px": 0.486,
+    "p90_px": 0.718,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 25894,
+    "pair": "1.676->2.394",
+    "median_px": 0.0,
+    "p90_px": 0.0,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 25894,
+    "pair": "3.112->4.07",
+    "median_px": 4.245,
+    "p90_px": 6.013,
+    "verdict": "CONFLICT"
+   },
+   {
+    "case": 27433,
+    "pair": "10.352->13.458",
+    "median_px": 0.0,
+    "p90_px": 0.0,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 27433,
+    "pair": "7.246->10.352",
+    "median_px": 0.001,
+    "p90_px": 0.001,
+    "verdict": "AGREE"
+   }
+  ]
+ },
+ "GFTT_vs_DENSE": {
+  "agree": 3,
+  "conflict": 2,
+  "not_comparable": 12,
+  "rows": [
+   {
+    "case": 3571,
+    "pair": "4.299->6.142",
+    "median_px": 2.196,
+    "p90_px": 2.981,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 3571,
+    "pair": "6.142->7.984",
+    "median_px": 2.204,
+    "p90_px": 3.016,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 12095,
+    "pair": "5.191->7.416",
+    "median_px": 4.107,
+    "p90_px": 5.452,
+    "verdict": "CONFLICT"
+   },
+   {
+    "case": 25894,
+    "pair": "0.718->1.676",
+    "median_px": 1.961,
+    "p90_px": 2.782,
+    "verdict": "AGREE"
+   },
+   {
+    "case": 25894,
+    "pair": "3.112->4.07",
+    "median_px": 8.377,
+    "p90_px": 11.452,
+    "verdict": "CONFLICT"
+   }
+  ]
+ }
+}

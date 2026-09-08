@@ -1,0 +1,10 @@
+{
+ "note": "V23 REPORT.md (docs/TREECUT_CAM01_V23_FEATURE_BAKEOFF_REPORT.md) 困难案例文字与 METHOD_MATRIX.json 存在差异；METHOD_MATRIX 为 replay truth source",
+ "truth_source": {
+  "artifact": "TREECUT_CAM01_V23_METHOD_MATRIX.json",
+  "commit": "09e3b5b",
+  "blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7"
+ },
+ "report_md_untouched": true,
+ "known_stale_claims": "V23 REPORT.md 旧描述（如 2543 GFTT 3/4、10000 GFTT 3/4）与 matrix 实际 (1641 1/4 validated; 2543 1V+2P+1I; 10000 0V; 21674 0V) 不符——本轮以 matrix 为准，未修改历史 REPORT.md"
+}

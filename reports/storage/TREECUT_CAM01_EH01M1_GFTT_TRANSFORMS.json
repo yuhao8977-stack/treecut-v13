@@ -1,0 +1,1090 @@
+{
+ "rows": [
+  {
+   "case": 1641,
+   "pair": "0.792->1.849",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 1641,
+   "pair": "1.849->2.642",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 1641,
+   "pair": "2.642->3.434",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 20,
+   "fit_all_inlier_ratio": 0.8,
+   "matrix": [
+    [
+     1.0269800096984283,
+     0.0020634504791260536,
+     -53.26937982584003
+    ],
+    [
+     -0.0020634504791260536,
+     1.0269800096984283,
+     -11.863933482047125
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     1.0269800096984283,
+     0.0020634504791260536,
+     -53.26937982584003
+    ],
+    [
+     -0.0020634504791260536,
+     1.0269800096984283,
+     -11.863933482047125
+    ]
+   ],
+   "translation": [
+    -53.2694,
+    -11.8639
+   ],
+   "scale_x": 1.02698,
+   "scale_y": 1.02698,
+   "rotation_deg": -0.115,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 1641,
+   "pair": "3.434->4.491",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 2212,
+   "pair": "0.55->1.283",
+   "pair_state_replay": "NO_ISLAND",
+   "pair_state_hist": null,
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 2212,
+   "pair": "1.283->1.833",
+   "pair_state_replay": "NO_ISLAND",
+   "pair_state_hist": null,
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 2212,
+   "pair": "1.833->2.383",
+   "pair_state_replay": "NO_ISLAND",
+   "pair_state_hist": null,
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 2212,
+   "pair": "2.383->3.117",
+   "pair_state_replay": "NO_ISLAND",
+   "pair_state_hist": null,
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 2543,
+   "pair": "0.515->1.202",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 2543,
+   "pair": "1.202->1.717",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 21,
+   "fit_all_inlier_ratio": 1.0,
+   "matrix": [
+    [
+     0.9943553284397617,
+     -0.0068603151990380435,
+     0.4244827483678051
+    ],
+    [
+     0.0068603151990380435,
+     0.9943553284397617,
+     -0.7203413284853202
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     0.9943553284397617,
+     -0.0068603151990380435,
+     0.4244827483678051
+    ],
+    [
+     0.0068603151990380435,
+     0.9943553284397617,
+     -0.7203413284853202
+    ]
+   ],
+   "translation": [
+    0.4245,
+    -0.7203
+   ],
+   "scale_x": 0.99438,
+   "scale_y": 0.99438,
+   "rotation_deg": 0.395,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 2543,
+   "pair": "1.717->2.232",
+   "pair_state_replay": "LOCAL_ANCHOR_PARTIAL",
+   "pair_state_hist": "LOCAL_ANCHOR_PARTIAL",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 2543,
+   "pair": "2.232->2.918",
+   "pair_state_replay": "LOCAL_ANCHOR_PARTIAL",
+   "pair_state_hist": "LOCAL_ANCHOR_PARTIAL",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 3571,
+   "pair": "1.842->4.299",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 3571,
+   "pair": "4.299->6.142",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 48,
+   "fit_all_inlier_ratio": 0.958,
+   "matrix": [
+    [
+     0.9971711946114593,
+     -0.0025672526492756644,
+     -39.451298702341525
+    ],
+    [
+     0.0025672526492756644,
+     0.9971711946114593,
+     -0.7532901567796035
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     0.9971711946114593,
+     -0.0025672526492756644,
+     -39.451298702341525
+    ],
+    [
+     0.0025672526492756644,
+     0.9971711946114593,
+     -0.7532901567796035
+    ]
+   ],
+   "translation": [
+    -39.4513,
+    -0.7533
+   ],
+   "scale_x": 0.99717,
+   "scale_y": 0.99717,
+   "rotation_deg": 0.148,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "6.142->7.984",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 69,
+   "fit_all_inlier_ratio": 0.942,
+   "matrix": [
+    [
+     0.995176676748602,
+     0.008526367821818117,
+     9.634595246588905
+    ],
+    [
+     -0.008526367821818117,
+     0.995176676748602,
+     9.575570091190494
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     0.995176676748602,
+     0.008526367821818117,
+     9.634595246588905
+    ],
+    [
+     -0.008526367821818117,
+     0.995176676748602,
+     9.575570091190494
+    ]
+   ],
+   "translation": [
+    9.6346,
+    9.5756
+   ],
+   "scale_x": 0.99521,
+   "scale_y": 0.99521,
+   "rotation_deg": -0.491,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 3571,
+   "pair": "7.984->10.441",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 9697,
+   "pair": "1.236->2.885",
+   "pair_state_replay": "LOCAL_ANCHOR_PARTIAL",
+   "pair_state_hist": "LOCAL_ANCHOR_PARTIAL",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 9697,
+   "pair": "2.885->4.121",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 61,
+   "fit_all_inlier_ratio": 0.738,
+   "matrix": [
+    [
+     0.998469357990343,
+     0.0013608475307651372,
+     1.5473015978848852
+    ],
+    [
+     -0.0013608475307651372,
+     0.998469357990343,
+     8.79990198399421
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     0.998469357990343,
+     0.0013608475307651372,
+     1.5473015978848852
+    ],
+    [
+     -0.0013608475307651372,
+     0.998469357990343,
+     8.79990198399421
+    ]
+   ],
+   "translation": [
+    1.5473,
+    8.7999
+   ],
+   "scale_x": 0.99847,
+   "scale_y": 0.99847,
+   "rotation_deg": -0.078,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "4.121->5.357",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 35,
+   "fit_all_inlier_ratio": 0.943,
+   "matrix": [
+    [
+     1.000021669635203,
+     0.0025466287899206744,
+     2.9466728958960835
+    ],
+    [
+     -0.0025466287899206744,
+     1.000021669635203,
+     4.610732039166245
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     1.000021669635203,
+     0.0025466287899206744,
+     2.9466728958960835
+    ],
+    [
+     -0.0025466287899206744,
+     1.000021669635203,
+     4.610732039166245
+    ]
+   ],
+   "translation": [
+    2.9467,
+    4.6107
+   ],
+   "scale_x": 1.00002,
+   "scale_y": 1.00002,
+   "rotation_deg": -0.146,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 9697,
+   "pair": "5.357->7.005",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 49,
+   "fit_all_inlier_ratio": 1.0,
+   "matrix": [
+    [
+     0.9990303358840659,
+     -9.799872053502418e-05,
+     4.996688602336968
+    ],
+    [
+     9.799872053502418e-05,
+     0.9990303358840659,
+     4.751557058178088
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     0.9990303358840659,
+     -9.799872053502418e-05,
+     4.996688602336968
+    ],
+    [
+     9.799872053502418e-05,
+     0.9990303358840659,
+     4.751557058178088
+    ]
+   ],
+   "translation": [
+    4.9967,
+    4.7516
+   ],
+   "scale_x": 0.99903,
+   "scale_y": 0.99903,
+   "rotation_deg": 0.006,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 10000,
+   "pair": "0.768->1.793",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 10000,
+   "pair": "1.793->2.561",
+   "pair_state_replay": "LOCAL_ANCHOR_NOT_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_NOT_VALIDATED",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 10000,
+   "pair": "2.561->3.329",
+   "pair_state_replay": "LOCAL_ANCHOR_NOT_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_NOT_VALIDATED",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 10000,
+   "pair": "3.329->4.354",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 12095,
+   "pair": "2.225->5.191",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 58,
+   "fit_all_inlier_ratio": 0.672,
+   "matrix": [
+    [
+     1.0029906273030305,
+     0.002152846642523913,
+     -17.80151181114575
+    ],
+    [
+     -0.002152846642523913,
+     1.0029906273030305,
+     42.773104856228585
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     1.0029906273030305,
+     0.002152846642523913,
+     -17.80151181114575
+    ],
+    [
+     -0.002152846642523913,
+     1.0029906273030305,
+     42.773104856228585
+    ]
+   ],
+   "translation": [
+    -17.8015,
+    42.7731
+   ],
+   "scale_x": 1.00299,
+   "scale_y": 1.00299,
+   "rotation_deg": -0.123,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "5.191->7.416",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 47,
+   "fit_all_inlier_ratio": 0.936,
+   "matrix": [
+    [
+     1.000004396111721,
+     0.004632373807064039,
+     -8.349442205377706
+    ],
+    [
+     -0.004632373807064039,
+     1.000004396111721,
+     19.79240645239495
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     1.000004396111721,
+     0.004632373807064039,
+     -8.349442205377706
+    ],
+    [
+     -0.004632373807064039,
+     1.000004396111721,
+     19.79240645239495
+    ]
+   ],
+   "translation": [
+    -8.3494,
+    19.7924
+   ],
+   "scale_x": 1.00002,
+   "scale_y": 1.00002,
+   "rotation_deg": -0.265,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "7.416->9.64",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 46,
+   "fit_all_inlier_ratio": 0.891,
+   "matrix": [
+    [
+     0.9839048273320606,
+     -0.0009319767876907737,
+     15.06281821026456
+    ],
+    [
+     0.0009319767876907737,
+     0.9839048273320606,
+     26.027377340839983
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     0.9839048273320606,
+     -0.0009319767876907737,
+     15.06281821026456
+    ],
+    [
+     0.0009319767876907737,
+     0.9839048273320606,
+     26.027377340839983
+    ]
+   ],
+   "translation": [
+    15.0628,
+    26.0274
+   ],
+   "scale_x": 0.98391,
+   "scale_y": 0.98391,
+   "rotation_deg": 0.054,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 12095,
+   "pair": "9.64->12.607",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 65,
+   "fit_all_inlier_ratio": 1.0,
+   "matrix": [
+    [
+     0.9932151276949266,
+     -0.004175140645243308,
+     23.88079669536746
+    ],
+    [
+     0.004175140645243308,
+     0.9932151276949266,
+     11.335493018958267
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     0.9932151276949266,
+     -0.004175140645243308,
+     23.88079669536746
+    ],
+    [
+     0.004175140645243308,
+     0.9932151276949266,
+     11.335493018958267
+    ]
+   ],
+   "translation": [
+    23.8808,
+    11.3355
+   ],
+   "scale_x": 0.99322,
+   "scale_y": 0.99322,
+   "rotation_deg": 0.241,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 21674,
+   "pair": "1.201->2.803",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 21674,
+   "pair": "2.803->4.004",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 21674,
+   "pair": "4.004->5.205",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 21674,
+   "pair": "5.205->6.807",
+   "pair_state_replay": "LOCAL_ANCHOR_INSUFFICIENT",
+   "pair_state_hist": "LOCAL_ANCHOR_INSUFFICIENT",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 25894,
+   "pair": "0.718->1.676",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 256,
+   "fit_all_inlier_ratio": 0.934,
+   "matrix": [
+    [
+     1.025901673580656,
+     0.0006715431485779366,
+     -20.579749089272728
+    ],
+    [
+     -0.0006715431485779366,
+     1.025901673580656,
+     -45.20666470819093
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     1.025901673580656,
+     0.0006715431485779366,
+     -20.579749089272728
+    ],
+    [
+     -0.0006715431485779366,
+     1.025901673580656,
+     -45.20666470819093
+    ]
+   ],
+   "translation": [
+    -20.5797,
+    -45.2067
+   ],
+   "scale_x": 1.0259,
+   "scale_y": 1.0259,
+   "rotation_deg": -0.038,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "1.676->2.394",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 159,
+   "fit_all_inlier_ratio": 0.881,
+   "matrix": [
+    [
+     1.102584245378548,
+     0.00832304434811272,
+     -52.59212326701863
+    ],
+    [
+     -0.00832304434811272,
+     1.102584245378548,
+     -71.61333101847737
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     1.102584245378548,
+     0.00832304434811272,
+     -52.59212326701863
+    ],
+    [
+     -0.00832304434811272,
+     1.102584245378548,
+     -71.61333101847737
+    ]
+   ],
+   "translation": [
+    -52.5921,
+    -71.6133
+   ],
+   "scale_x": 1.10262,
+   "scale_y": 1.10262,
+   "rotation_deg": -0.432,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "2.394->3.112",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 42,
+   "fit_all_inlier_ratio": 0.548,
+   "matrix": [
+    [
+     1.1137667690080377,
+     0.017504247095796985,
+     -87.94617810862749
+    ],
+    [
+     -0.017504247095796985,
+     1.1137667690080377,
+     -104.21657992627658
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     1.1137667690080377,
+     0.017504247095796985,
+     -87.94617810862749
+    ],
+    [
+     -0.017504247095796985,
+     1.1137667690080377,
+     -104.21657992627658
+    ]
+   ],
+   "translation": [
+    -87.9462,
+    -104.2166
+   ],
+   "scale_x": 1.1139,
+   "scale_y": 1.1139,
+   "rotation_deg": -0.9,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 25894,
+   "pair": "3.112->4.07",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 82,
+   "fit_all_inlier_ratio": 0.768,
+   "matrix": [
+    [
+     0.9837665594594031,
+     0.012688021860888134,
+     6.044007811765151
+    ],
+    [
+     -0.012688021860888134,
+     0.9837665594594031,
+     30.30242212341848
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     0.9837665594594031,
+     0.012688021860888134,
+     6.044007811765151
+    ],
+    [
+     -0.012688021860888134,
+     0.9837665594594031,
+     30.30242212341848
+    ]
+   ],
+   "translation": [
+    6.044,
+    30.3024
+   ],
+   "scale_x": 0.98385,
+   "scale_y": 0.98385,
+   "rotation_deg": -0.739,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "10.352->13.458",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 106,
+   "fit_all_inlier_ratio": 1.0,
+   "matrix": [
+    [
+     1.0038311686206896,
+     0.005382768077029792,
+     -15.886562335341978
+    ],
+    [
+     -0.005382768077029792,
+     1.0038311686206896,
+     -2.76660244093621
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     1.0038311686206896,
+     0.005382768077029792,
+     -15.886562335341978
+    ],
+    [
+     -0.005382768077029792,
+     1.0038311686206896,
+     -2.76660244093621
+    ]
+   ],
+   "translation": [
+    -15.8866,
+    -2.7666
+   ],
+   "scale_x": 1.00385,
+   "scale_y": 1.00385,
+   "rotation_deg": -0.307,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  },
+  {
+   "case": 27433,
+   "pair": "13.458->17.598",
+   "pair_state_replay": "LOCAL_ANCHOR_NOT_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_NOT_VALIDATED",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 27433,
+   "pair": "3.106->7.246",
+   "pair_state_replay": "LOCAL_ANCHOR_NOT_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_NOT_VALIDATED",
+   "can_materialize": false,
+   "matrix": null
+  },
+  {
+   "case": 27433,
+   "pair": "7.246->10.352",
+   "pair_state_replay": "LOCAL_ANCHOR_VALIDATED",
+   "pair_state_hist": "LOCAL_ANCHOR_VALIDATED",
+   "can_materialize": true,
+   "n_accepted": 60,
+   "fit_all_inlier_ratio": 1.0,
+   "matrix": [
+    [
+     1.005365348566372,
+     -0.0009759161608591232,
+     19.653750490582706
+    ],
+    [
+     0.0009759161608591232,
+     1.005365348566372,
+     -5.391148908632207
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "M2x3": [
+    [
+     1.005365348566372,
+     -0.0009759161608591232,
+     19.653750490582706
+    ],
+    [
+     0.0009759161608591232,
+     1.005365348566372,
+     -5.391148908632207
+    ]
+   ],
+   "translation": [
+    19.6538,
+    -5.3911
+   ],
+   "scale_x": 1.00537,
+   "scale_y": 1.00537,
+   "rotation_deg": 0.056,
+   "deterministic_rebuild": true,
+   "deterministic_disagreement_med_px": 0.0,
+   "status": "GFTT_MATERIALIZED_REFERENCE_CANDIDATE",
+   "source": {
+    "source_artifact_commit": "09e3b5b",
+    "source_artifact_blob": "98e74be9973097e7e02cc708482c1be5ea1d4da7",
+    "script_commit": "09e3b5b (scripts/posta3_cam01_v23.py)"
+   }
+  }
+ ],
+ "note": "DERIVED_V23_GFTT_REFERENCE_TRANSFORM（非历史原始 matrix）；affine RANSAC thr=3.0 on full FB<=3 accepted"
+}

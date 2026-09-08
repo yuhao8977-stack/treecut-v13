@@ -1,0 +1,170 @@
+{
+ "POS": {
+  "count": 8,
+  "target_valid": 8,
+  "rows": [
+   {
+    "case": 3571,
+    "pair": "4.299->6.142",
+    "target_valid": true,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_CONSISTENT",
+    "global_state": "CAMERA_UNRELIABLE"
+   },
+   {
+    "case": 3571,
+    "pair": "6.142->7.984",
+    "target_valid": true,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_CONSISTENT",
+    "global_state": "CAMERA_UNRELIABLE"
+   },
+   {
+    "case": 12095,
+    "pair": "2.225->5.191",
+    "target_valid": true,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_DISAGREEMENT",
+    "global_state": "CAMERA_UNRELIABLE"
+   },
+   {
+    "case": 12095,
+    "pair": "5.191->7.416",
+    "target_valid": true,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_CONSISTENT",
+    "global_state": "CAMERA_RELIABLE"
+   },
+   {
+    "case": 12095,
+    "pair": "7.416->9.64",
+    "target_valid": true,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_CONSISTENT",
+    "global_state": "CAMERA_RELIABLE"
+   },
+   {
+    "case": 12095,
+    "pair": "9.64->12.607",
+    "target_valid": true,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_CONSISTENT",
+    "global_state": "CAMERA_RELIABLE"
+   },
+   {
+    "case": 27433,
+    "pair": "10.352->13.458",
+    "target_valid": true,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_DISAGREEMENT",
+    "global_state": "CAMERA_RELIABLE"
+   },
+   {
+    "case": 27433,
+    "pair": "7.246->10.352",
+    "target_valid": true,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_CONSISTENT",
+    "global_state": "CAMERA_RELIABLE"
+   }
+  ]
+ },
+ "NEG": {
+  "count": 9,
+  "target_valid": 2,
+  "rows": [
+   {
+    "case": 1641,
+    "pair": "2.642->3.434",
+    "target_valid": true,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_DISAGREEMENT",
+    "global_state": "CAMERA_UNRELIABLE"
+   },
+   {
+    "case": 2543,
+    "pair": "1.202->1.717",
+    "target_valid": true,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_CONSISTENT",
+    "global_state": "CAMERA_RELIABLE"
+   },
+   {
+    "case": 9697,
+    "pair": "2.885->4.121",
+    "target_valid": false,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_DISAGREEMENT",
+    "global_state": "CAMERA_RELIABLE"
+   },
+   {
+    "case": 9697,
+    "pair": "4.121->5.357",
+    "target_valid": false,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_DISAGREEMENT",
+    "global_state": "CAMERA_RELIABLE"
+   },
+   {
+    "case": 9697,
+    "pair": "5.357->7.005",
+    "target_valid": false,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_DISAGREEMENT",
+    "global_state": "CAMERA_RELIABLE"
+   },
+   {
+    "case": 25894,
+    "pair": "0.718->1.676",
+    "target_valid": false,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_DISAGREEMENT",
+    "global_state": "CAMERA_RELIABLE"
+   },
+   {
+    "case": 25894,
+    "pair": "1.676->2.394",
+    "target_valid": false,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_DISAGREEMENT",
+    "global_state": "CAMERA_RELIABLE"
+   },
+   {
+    "case": 25894,
+    "pair": "2.394->3.112",
+    "target_valid": false,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_DISAGREEMENT",
+    "global_state": "CAMERA_UNRELIABLE"
+   },
+   {
+    "case": 25894,
+    "pair": "3.112->4.07",
+    "target_valid": false,
+    "materialized": true,
+    "deterministic": true,
+    "structural": "STRUCTURAL_DISAGREEMENT",
+    "global_state": "CAMERA_RELIABLE"
+   }
+  ]
+ },
+ "NEG_MATERIALIZED_REFERENCE_TARGET_VALID": 2,
+ "NEG_STRONG_REFERENCE_TARGET_VALID": 0,
+ "note": "NEG materialized target-valid ≠ NEG strong；强度等 EH02 决定"
+}

@@ -1,0 +1,22 @@
+{
+ "experiment": "EH01M1_CONFIG",
+ "config": {
+  "analysis_width_max": 960,
+  "grid_cell": 40,
+  "ransac_thr": 3.0,
+  "fit_inlier_min": 0.45,
+  "holdout_min": 8,
+  "holdout_median_max_px": 3.0,
+  "gftt": {
+   "maxCorners": 300,
+   "qualityLevel": 0.02,
+   "minDistance": 6,
+   "lk_win": 21,
+   "lk_maxLevel": 3,
+   "fb_max_px": 3.0
+  }
+ },
+ "config_sha256": "d2a769678ea66a7e9a070e8cc8ad573bfed6daf25fb41795107c56ee447eefd8",
+ "frozen_from": "V23 @ 09e3b5b (TREECUT_CAM01_V23_METHOD_CONFIG.json)",
+ "note": "只 replay GFTT_LK_LOCAL；V23 exact params 原样"
+}
