@@ -1,0 +1,133 @@
+{
+ "total": 15378,
+ "path_valid": 15246,
+ "path_missing": 132,
+ "eligible_total": 3319,
+ "eligible_valid": 3260,
+ "eligible_missing": 59,
+ "video_media_total_approx": 4347,
+ "missing_video_samples": [
+  {
+   "mid": 20,
+   "src": 1,
+   "rel": "346686\\1228-1\\video\\2S5GEQJR-X1CH-HPV3-LUUU-OXPZ0GGOE3P4.MP4",
+   "eligible": true
+  },
+  {
+   "mid": 23,
+   "src": 1,
+   "rel": "346686\\1228-1\\video\\7O1V3I6M-MFD2-4G1Q-IADT-0T4VD7DXY05O.MP4",
+   "eligible": true
+  },
+  {
+   "mid": 28,
+   "src": 1,
+   "rel": "346686\\1228-1\\video\\TOOIRWK1-N30L-8AYY-APZ5-UM5T6BTITESI.MP4",
+   "eligible": true
+  },
+  {
+   "mid": 13460,
+   "src": 2,
+   "rel": "已发布【20250517起】\\6月份\\【6】【20250603】网购岛台翻车了\\天呐！网购岛台还能翻车？.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13482,
+   "src": 2,
+   "rel": "待发布【20250517起】\\5月份\\岛台电都没留….mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13499,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【10】【20250607】【岛台5点建议】\\岛台5点建议.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13500,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【11】【20250607】【岛台6点建议】\\岛台6点建议.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13501,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【12】【20250607】【岛台翻车7点】\\岛台翻车7个点.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13502,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【12】【20250607】【岛台翻车7点】\\岛台翻车7点.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13503,
+   "src": 2,
+   "rel": "20250607】【岛台翻车7点】\\.__jianying_export_temp_folder__\\九做九不做.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13504,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【13】【20250608】【岛台九做九不做】\\岛台九做九不做.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13505,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【14】【20250609】【奶油风岛台产品视频】\\奶油风产品.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13506,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【15】【20250609】【岛台九做九不做】\\九做就不做（新剪）.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13507,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【15】【20250609】【岛台九做九不做】\\岛台九做九不做.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13509,
+   "src": 2,
+   "rel": "【20250517起】\\6月份\\【16】【20250610】【岛台遇到不靠谱商家】\\岛台遇到不靠谱商家（修改版）.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13510,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【17】【20250610】【早知道买岛台】\\早知道就买岛台.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13511,
+   "src": 2,
+   "rel": "布【20250517起】\\6月份\\【18】【20250611】【早知道买岛台（奶油风）】\\早知道买岛台（奶油风）.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13512,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【19】【20250612】【岛台避坑】\\岛台避坑.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13514,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【1】【20250601】不该把餐桌做成岛台！\\不该把餐桌换成岛台！.mp4",
+   "eligible": true
+  },
+  {
+   "mid": 13515,
+   "src": 2,
+   "rel": "待发布【20250517起】\\6月份\\【20】【20250612】【岛台12点建议】\\岛台12点建议.mp4",
+   "eligible": true
+  }
+ ],
+ "note": "using real sources.path (D:/E: local dirs); previous A0 used wrong \\X1 mapping -> corrected",
+ "sha256_db": "d069fcf1c17eefc9d4e7a3306593abde1448da1fe397a4e58611f513e110c4bb"
+}

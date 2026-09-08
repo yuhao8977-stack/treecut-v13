@@ -1,0 +1,133 @@
+{
+ "head": "bdc7506005c3914049f56d6c38020a0fc2797b41",
+ "files": [
+  {
+   "path": "src/treecut/application/production.py",
+   "exists": true,
+   "sha256": "c421772463cbb7bbb91710985742d1ccd5cca618183c98297a2717f04d471c47",
+   "git_blob_at_head": "46ff3bdfecb651bd1f2c6cd7348a2e43738c0161",
+   "bytes": 13150
+  },
+  {
+   "path": "src/treecut/workflow/matching.py",
+   "exists": true,
+   "sha256": "25f050bd708e598dab18edd9d483d59093fc5134b294330fc864f4896e300ceb",
+   "git_blob_at_head": "b852f07ef78041e44b439ebb7972225d9eb9ca4d",
+   "bytes": 10303
+  },
+  {
+   "path": "src/treecut/workflow/planning.py",
+   "exists": true,
+   "sha256": "964f1da157bbd05df35f5be53d9eb0139feebf55d3a0abebf4dddc7ce3f9b836",
+   "git_blob_at_head": "791524eb931c59cc9dfea16e10cf9449b67f7b3c",
+   "bytes": 3938
+  },
+  {
+   "path": "src/treecut/output/mp4.py",
+   "exists": true,
+   "sha256": "283543a1b580f91b5bd1a0a6533a7c50ef248a739a8be76d05cb7d3335642f60",
+   "git_blob_at_head": "f1c5c54a1cb8123fa5c3e7ab2f3f9302f8983900",
+   "bytes": 3768
+  },
+  {
+   "path": "src/treecut/output/narration.py",
+   "exists": true,
+   "sha256": "d68979000d8dfa21b8dae46f40b6b1ba869e0a695e72f3944227ab4f3c728e8f",
+   "git_blob_at_head": "868658afecf1f4d616e70ef1118167319cc71f60",
+   "bytes": 15070
+  },
+  {
+   "path": "src/treecut/output/jianying.py",
+   "exists": true,
+   "sha256": "e741a3dd131da82c476eab835f5c3f4661eb244cc87c46a4bfbe014be7f0710c",
+   "git_blob_at_head": "ac40e7fc4e8ae50d7ecd7a4eeda448a77b0198a2",
+   "bytes": 8301
+  },
+  {
+   "path": "src/treecut/output/inspection.py",
+   "exists": false,
+   "sha256": null,
+   "git_blob_at_head": "NOT_IN_GIT",
+   "bytes": null
+  },
+  {
+   "path": "src/treecut/models/tts_local.py",
+   "exists": true,
+   "sha256": "1db5dd8f2cbe181955ba58b9ba41b0ab0381e0a1299bba6a46d4199febba2ab1",
+   "git_blob_at_head": "HEAD:src/treecut/models/tts_local.py",
+   "bytes": 2409
+  },
+  {
+   "path": "src/treecut/desktop.py",
+   "exists": true,
+   "sha256": "221d9abcfe5771a4a0cda0d6a973627d450e249e4b62907f146e600d4d2fd1ae",
+   "git_blob_at_head": "f5a651f2e343d0ce7be68c1353b8c5e8a709614b",
+   "bytes": 37202
+  },
+  {
+   "path": "src/treecut/api.py",
+   "exists": true,
+   "sha256": "40ceac12025f6a41a8be2cde497ecba01317f9add6809b51f72fa65f96e384b0",
+   "git_blob_at_head": "fcfbec16be5dc4df0aee6951d53f3e6a4d96a7b2",
+   "bytes": 13549
+  },
+  {
+   "path": "src/treecut/asr/engine.py",
+   "exists": true,
+   "sha256": "125fdd6875101bf46dae5642ff1ff39a11a5bb8e9ff900caf921720185a1de35",
+   "git_blob_at_head": "a94a04ada19de6fc402264e2153c9b2ce5df4e81",
+   "bytes": 4794
+  },
+  {
+   "path": "src/treecut/ocr/engine.py",
+   "exists": true,
+   "sha256": "07e24f16fedb2dd3ed56cddb06d855d4f73c4bb6eb8c635cce81ab404d4828fe",
+   "git_blob_at_head": "1e0adb4e3f2a5f4d20765a8f4f4e6aab7231e3b5",
+   "bytes": 3332
+  },
+  {
+   "path": "src/treecut/models/vision_florence.py",
+   "exists": true,
+   "sha256": "06a5c8338e0571be18ca0b736f8bcdd897d6d5467a0e0fe921f15251a75a1ec5",
+   "git_blob_at_head": "HEAD:src/treecut/models/vision_florence.py",
+   "bytes": 5848
+  },
+  {
+   "path": "src/treecut/scanner/incremental.py",
+   "exists": true,
+   "sha256": "03d95747310dc2798031f4025b45e6ea581b229f269512541ca4f6165ff8fb0f",
+   "git_blob_at_head": "f28f67c4c27e334cc7f2f2e8419be4cabb37492e",
+   "bytes": 4435
+  },
+  {
+   "path": "src/treecut/application/jobs.py",
+   "exists": true,
+   "sha256": "b7c163b0c696ddb124f6e5847003e9908aa48e4c4c0aac7e74c6ceec18c82d6d",
+   "git_blob_at_head": "ba92f2baf9345c071cbbb1eb2c9b43f7bc9198ac",
+   "bytes": 7435
+  },
+  {
+   "caller_scan": {
+    "imports_ProductionService": [
+     "src\\treecut\\api.py",
+     "src\\treecut\\desktop.py",
+     "src\\treecut\\application\\production.py",
+     "src\\treecut\\application\\__init__.py",
+     "src\\treecut\\remote\\remote_produce.py"
+    ],
+    "imports_FeedbackStore": [
+     "src\\treecut\\api.py",
+     "src\\treecut\\desktop.py",
+     "src\\treecut\\stats.py",
+     "src\\treecut\\application\\production.py",
+     "src\\treecut\\learning\\feedback.py",
+     "src\\treecut\\learning\\__init__.py"
+    ],
+    "imports_semantic_scores": [
+     "src\\treecut\\application\\production.py",
+     "src\\treecut\\models\\semantic_matching.py"
+    ]
+   }
+  }
+ ]
+}

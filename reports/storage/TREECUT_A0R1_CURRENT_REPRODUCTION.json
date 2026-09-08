@@ -1,0 +1,14 @@
+{
+ "reproduction_dir": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\a0r1_repro3\\output\\projects\\20260908_172116_125160",
+ "project_exists": true,
+ "mp4": {
+  "exists": true,
+  "bytes": 16041800,
+  "sha256": "7e6fce3230b71e5e0779774c03d9cf4eaed8b3178312d0de0446666f25dcb884",
+  "ffprobe": "{\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_type\": \"video\",\n            \"width\": 1080,\n            \"height\": 1920,\n            \"duration\": \"25.066667\"\n        }\n    ]\n}\n"
+ },
+ "status": "failed",
+ "error": "RuntimeError: D:\\a\\sherpa-onnx\\sherpa-onnx\\build\\temp.win-amd64-cpython-312\\Release\\_deps\\kaldifst-src\\kaldifst\\csrc\\kaldi-io.cc:Input:744\n[E] Error opening input stream 'E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\date.fst'",
+ "classification": "CURRENT_REDUCED_CHAIN_REACHED_RENDER_ONLY",
+ "first_blocker": "TTS_MODEL_LOAD_CHINESE_PATH"
+}

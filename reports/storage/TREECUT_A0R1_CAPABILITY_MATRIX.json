@@ -1,0 +1,98 @@
+{
+ "note": "levels use real evidence; E2E_PROVEN requires current-baseline run (reaches render only) or full-version-correspondence; historical-only outputs => HISTORICALLY_E2E_PROVEN",
+ "items": [
+  {
+   "capability_id": "A1_scan",
+   "current_level": "DATA_CONNECTED",
+   "historical_level": "DATA_CONNECTED",
+   "evidence": "15378 media in prod db; real sources present",
+   "first_blocker": "source path drift (132 missing)"
+  },
+  {
+   "capability_id": "B2_ASR",
+   "current_level": "DATA_CONNECTED",
+   "historical_level": "DATA_CONNECTED",
+   "evidence": "faster-whisper engine + 51543 transcripts (CAM db)"
+  },
+  {
+   "capability_id": "B3_OCR",
+   "current_level": "DATA_CONNECTED",
+   "historical_level": "DATA_CONNECTED",
+   "evidence": "RapidOCR + 289218 ocr rows"
+  },
+  {
+   "capability_id": "B4_vision",
+   "current_level": "DATA_CONNECTED",
+   "historical_level": "DATA_CONNECTED",
+   "evidence": "Florence captions/objects in analysis_jobs"
+  },
+  {
+   "capability_id": "E1_retrieval",
+   "current_level": "DATA_CONNECTED",
+   "historical_level": "HISTORICALLY_E2E_PROVEN",
+   "evidence": "load_candidates live 3260; historical matches real; current chain reached matching in repro",
+   "first_blocker": "full E2E blocked downstream at TTS"
+  },
+  {
+   "capability_id": "F2_render_mp4",
+   "current_level": "E2E_PROVEN_CURRENT_RENDER",
+   "historical_level": "HISTORICALLY_E2E_PROVEN",
+   "evidence": "a0r1_repro3 01_高清画面底片.mp4 15.7MB real (current baseline, vertical)"
+  },
+  {
+   "capability_id": "G3_tts",
+   "current_level": "BLOCKED_AT_LOAD",
+   "historical_level": "HISTORICALLY_E2E_PROVEN",
+   "evidence": "current repro: sherpa-onnx date.fst open fail under Chinese path; historical E:\\treecut-v13 no-Chinese worked",
+   "first_blocker": "TTS_MODEL_LOAD_CHINESE_PATH"
+  },
+  {
+   "capability_id": "G4_subtitle",
+   "current_level": "NOT_REACHED_CURRENT",
+   "historical_level": "HISTORICALLY_E2E_PROVEN",
+   "evidence": "blocked upstream at TTS; historical burned srt existed"
+  },
+  {
+   "capability_id": "G5_bgm",
+   "current_level": "NOT_REACHED_CURRENT",
+   "historical_level": "HISTORICALLY_E2E_PROVEN"
+  },
+  {
+   "capability_id": "H1_mp4_final",
+   "current_level": "NOT_REACHED_CURRENT",
+   "historical_level": "HISTORICALLY_E2E_PROVEN",
+   "evidence": "historical TreeCut_成片.mp4; current blocked at TTS"
+  },
+  {
+   "capability_id": "H2_jianying",
+   "current_level": "NOT_REACHED_CURRENT",
+   "historical_level": "HISTORICALLY_E2E_PROVEN",
+   "evidence": "historical real draft_content.json; current not reached"
+  },
+  {
+   "capability_id": "H3_desktop_ui",
+   "current_level": "USER_USABLE_NOT_PROVEN_LIVE",
+   "historical_level": "CODE_EXISTS",
+   "evidence": "731-line Tk exists; NO live UI launch/session evidence in this audit",
+   "first_blocker": "no real user session captured"
+  },
+  {
+   "capability_id": "D2_script_beat",
+   "current_level": "NOT_FOUND",
+   "historical_level": "NOT_FOUND",
+   "evidence": "no beat layer in production chain"
+  },
+  {
+   "capability_id": "C3_feedback",
+   "current_level": "CODE_PATH_CONNECTED",
+   "historical_level": "CODE_PATH_CONNECTED",
+   "evidence": "FeedbackStore.adjustments read in production.py:178; NO before/after ranking counterfactual -> not E2E_PROVEN"
+  },
+  {
+   "capability_id": "X1_cam_eh",
+   "current_level": "UNIT_TESTED_SHADOW",
+   "historical_level": "UNIT_TESTED_SHADOW",
+   "evidence": "no production caller"
+  }
+ ]
+}

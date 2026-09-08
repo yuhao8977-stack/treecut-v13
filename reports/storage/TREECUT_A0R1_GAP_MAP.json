@@ -1,0 +1,69 @@
+{
+ "P0_PRODUCT_BLOCKERS": [
+  {
+   "id": "P0_script_beat_parse",
+   "desc": "生产链无脚本→逐句 Beat/Claim 拆分层",
+   "evidence": "D2 NOT_FOUND in production chain"
+  },
+  {
+   "id": "P0_tts_chinese_path",
+   "desc": "sherpa-onnx 读 LocalTTS date.fst 在中文安装路径失败（当前 reproduction blocker）",
+   "evidence": "a0r1_repro3 STATUS error date.fst"
+  },
+  {
+   "id": "P0_current_e2e_not_proven",
+   "desc": "当前 baseline 全链（含 TTS/字幕/BGM/MP4/草稿）未跑通",
+   "evidence": "repro stops at TTS"
+  }
+ ],
+ "P1_PRODUCT": [
+  {
+   "id": "P1_source_gate_prod",
+   "desc": "Source/A4 gate 未接入生产 matching（仅 eligible flag）",
+   "evidence": "prod matching uses eligible"
+  },
+  {
+   "id": "P1_segment_bridge",
+   "desc": "生产库(4表)与 CAM/segment 库(88表) 身份不互连；Track A 若需 segment 级选择需桥接",
+   "evidence": "two materials.db; prod no assets/segments"
+  },
+  {
+   "id": "P1_old_subtitle",
+   "desc": "硬字幕检测有(RapidOCR) 但生产中拒绝/裁剪策略未验证",
+   "evidence": "OCR data exists; no prod handling"
+  },
+  {
+   "id": "P1_9x16_multi_shot",
+   "desc": "历史产物 1080x1080 2 整片段；9:16 多镜头信息流混剪未验证（repro render vertical 成功但被 TTS 阻断）",
+   "evidence": "hist canvas square; repro vertical mp4 exists"
+  }
+ ],
+ "P2_PRODUCT": [
+  {
+   "id": "P2_bgm_library",
+   "desc": "仅 1 内置 BGM 无版权曲库管理",
+   "evidence": "single mixkit mp3"
+  },
+  {
+   "id": "P2_voice_clone",
+   "desc": "生产用 melo TTS 非克隆",
+   "evidence": "tts_local sherpa_onnx"
+  }
+ ],
+ "RESEARCH_NOT_BLOCKING_MVP": [
+  {
+   "id": "R1_cam_eh",
+   "desc": "CAM/EH/GEOM/N0 动作理解 research",
+   "evidence": "SHADOW_NOT_PRODUCTION_CONNECTED"
+  },
+  {
+   "id": "R2_auto_publish",
+   "desc": "非目标"
+  },
+  {
+   "id": "R3_team_ops",
+   "desc": "团队/权限/备份"
+  }
+ ],
+ "unified_rule": "P0=阻当前半自动闭环 / P1=较强自动化所需 / P2=规模体验 / RESEARCH=不阻 MVP"
+}

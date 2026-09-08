@@ -1,0 +1,60 @@
+{
+ "audit": "TREECUT_A0R1_REAL_BASELINE",
+ "head": "bdc7506005c3914049f56d6c38020a0fc2797b41",
+ "origin_main": "bdc7506005c3914049f56d6c38020a0fc2797b41",
+ "head_eq_origin": true,
+ "branch": "main",
+ "git_status_porcelain_v1_all": [
+  "?? reports/storage/TREECUT_A0R1_CURRENT_REPRODUCTION.json",
+  "?? reports/storage/TREECUT_A0R1_GAP_MAP.json",
+  "?? reports/storage/TREECUT_A0R1_HISTORICAL_ARTIFACT_MANIFEST.json",
+  "?? reports/storage/TREECUT_A0R1_PATH_VALIDITY_CORRECTED.json",
+  "?? reports/storage/TREECUT_A0R1_RAW_DB_EVIDENCE.json",
+  "?? reports/storage/TREECUT_A0R1_RESULT.json",
+  "?? reports/storage/TREECUT_A0R1_SOURCE_EVIDENCE.json",
+  "?? reports/storage/TREECUT_A0R1_TEST_TRUTH.json",
+  "?? reports/storage/TREECUT_A0R1_THREE_E2E_TRACE.json",
+  "?? scripts/audit_treecut_a0r1_baseline.py",
+  "?? scripts/audit_treecut_a0r1_db.py",
+  "?? scripts/audit_treecut_a0r1_final.py",
+  "?? scripts/audit_treecut_a0r1_historical.py",
+  "?? scripts/audit_treecut_a0r1_path.py",
+  "?? scripts/audit_treecut_a0r1_repro.py",
+  "?? scripts/audit_treecut_a0r1_source.py"
+ ],
+ "untracked_count": 16,
+ "untracked_files": [
+  "reports/storage/TREECUT_A0R1_CURRENT_REPRODUCTION.json",
+  "reports/storage/TREECUT_A0R1_GAP_MAP.json",
+  "reports/storage/TREECUT_A0R1_HISTORICAL_ARTIFACT_MANIFEST.json",
+  "reports/storage/TREECUT_A0R1_PATH_VALIDITY_CORRECTED.json",
+  "reports/storage/TREECUT_A0R1_RAW_DB_EVIDENCE.json",
+  "reports/storage/TREECUT_A0R1_RESULT.json",
+  "reports/storage/TREECUT_A0R1_SOURCE_EVIDENCE.json",
+  "reports/storage/TREECUT_A0R1_TEST_TRUTH.json",
+  "reports/storage/TREECUT_A0R1_THREE_E2E_TRACE.json",
+  "scripts/audit_treecut_a0r1_baseline.py",
+  "scripts/audit_treecut_a0r1_db.py",
+  "scripts/audit_treecut_a0r1_final.py",
+  "scripts/audit_treecut_a0r1_historical.py",
+  "scripts/audit_treecut_a0r1_path.py",
+  "scripts/audit_treecut_a0r1_repro.py",
+  "scripts/audit_treecut_a0r1_source.py"
+ ],
+ "tracked_diff_name_status": [],
+ "cached_diff_name_status": [],
+ "tracked_clean": false,
+ "ignored_runtime_present": "runtime_data not tracked (gitignore); N0 blind evidence in E: install runtime_data (git-external)",
+ "utc_timestamp": "2026-09-08T09:53:59.053367+00:00",
+ "start_state_before_a0r1": {
+  "tracked_clean": true,
+  "untracked_count": 0,
+  "evidence": "git status --porcelain=v1 --untracked-files=all returned empty at bdc7506 BEFORE A0R1 generation (verified live)"
+ },
+ "capture_note": "this file records state at generation time (audit files untracked -> dirty); start state was clean",
+ "tracked_files_clean": true,
+ "untracked_all_are_a0r1_outputs": true,
+ "untracked_entries_kinds": [
+  "??"
+ ]
+}

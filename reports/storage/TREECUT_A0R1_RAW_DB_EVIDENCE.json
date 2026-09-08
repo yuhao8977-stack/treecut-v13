@@ -1,0 +1,249 @@
+{
+ "production_db": {
+  "db_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\database\\materials.db",
+  "sha256": "d069fcf1c17eefc9d4e7a3306593abde1448da1fe397a4e58611f513e110c4bb",
+  "tables": 4,
+  "table_rows": {
+   "sources": 11,
+   "media_files": 15378,
+   "analysis_jobs": 4347,
+   "media_tags": 0
+  }
+ },
+ "cam_db": {
+  "db_path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\database\\materials.db",
+  "sha256": "577acd3cdc7266e6708542350d756881a88b5e1d557b6b9a0862b23f8afce6e1",
+  "tables": 88,
+  "table_rows": {
+   "sources": 5,
+   "media_files": 28252,
+   "analysis_jobs": 23312,
+   "media_tags": 0,
+   "assets": 22466,
+   "asset_locations": 23312,
+   "sqlite_sequence": 30,
+   "asset_processing_state": 224650,
+   "processing_history": 275797,
+   "segments": 41834,
+   "keyframes": 125199,
+   "transcripts": 51543,
+   "ocr_text": 289218,
+   "labels": 26396,
+   "duplicate_groups": 0,
+   "asset_types": 22465,
+   "fts_transcript": 51516,
+   "fts_transcript_data": 845,
+   "fts_transcript_idx": 1539,
+   "fts_transcript_content": 51516,
+   "fts_transcript_docsize": 51516,
+   "fts_transcript_config": 1,
+   "fts_ocr": 238770,
+   "fts_ocr_data": 1522,
+   "fts_ocr_idx": 1144,
+   "fts_ocr_content": 238770,
+   "fts_ocr_docsize": 238770,
+   "fts_ocr_config": 1,
+   "analysis_tasks": 31106,
+   "schema_version": 3,
+   "human_feedback": 0,
+   "broken_assets": 13,
+   "asset_quality": 0,
+   "asset_status": 0,
+   "quality_report": 1,
+   "scene_semantics": 4986,
+   "knowledge_entries": 39,
+   "content_classification": 140,
+   "account_dna": 1,
+   "content_templates": 4,
+   "learning_rules": 237,
+   "production_plans": 2,
+   "accuracy_test": 100,
+   "accuracy_review": 100,
+   "content_value": 22465,
+   "schema_migrations": 9,
+   "shot_usage": 0,
+   "visual_clusters": 0,
+   "visual_cluster_members": 0,
+   "semantic_annotations": 300,
+   "human_annotations": 300,
+   "segment_boundary_reviews": 300,
+   "human_annotation_v2": 60,
+   "review_queue": 0,
+   "annotation_coverage": 18,
+   "validation_snapshots": 1,
+   "annotation_dictionary": 2,
+   "canonical_human_truth": 360,
+   "canonical_human_truth_history": 393,
+   "human_annotation_v3": 34,
+   "targeted_human_review_v1": 141,
+   "fresh_holdout_human_review_v1": 60,
+   "stage2_business_cognition_review_v1": 24,
+   "stage2_business_cognition_adjudication_v2": 0,
+   "stage2_business_cognition_adjudication_v2b": 12,
+   "stage2_business_cognition_calibration_v3": 30,
+   "published_content_v1": 3465,
+   "performance_snapshot_v1": 2995,
+   "content_join_status_v1": 2840,
+   "spotlight_account_v1": 1,
+   "spotlight_campaign_v1": 48,
+   "spotlight_unit_v1": 48,
+   "spotlight_note_link_v1": 4625,
+   "spotlight_paid_snapshot_v1": 265,
+   "spotlight_note_paid_snapshot_v1": 5694,
+   "b007_note_dual_source_fact_v1": 2851,
+   "b007_note_month_paid_fact_v1": 5193,
+   "b007_note_paid_association_fact_v1": 4625,
+   "b007_published_media_recovery_v1": 30,
+   "b007_media_asset_v1": 30,
+   "b007_segment_v1": 609,
+   "b007_keyframe_v1": 608,
+   "b007_asr_v1": 866,
+   "b007_ocr_v1": 2980,
+   "b007_visual_evidence_v1": 608,
+   "b007_business_cognition_v1": 609,
+   "b007_l3_review16_v1": 16,
+   "b007_source_role_v1": 28282
+  }
+ },
+ "production_media_path_audit": {
+  "total": 15378,
+  "path_valid": 0,
+  "path_missing": 15276,
+  "source_offline": 102,
+  "available_false": 0,
+  "missing_samples": [
+   {
+    "media_id": 1,
+    "source_id": 1,
+    "rel": "ingPro Drafts\\.cloud_cache_3773982557346686\\1228-1\\cover.png"
+   },
+   {
+    "media_id": 2,
+    "source_id": 1,
+    "rel": " Drafts\\.cloud_cache_3773982557346686\\1228-1\\draft_cover.jpg"
+   },
+   {
+    "media_id": 3,
+    "source_id": 1,
+    "rel": "346686\\1228-1\\audio\\BODXFIRK-9BQC-1LBY-2X2H-OW7FPHECFCUI.mp3"
+   },
+   {
+    "media_id": 4,
+    "source_id": 1,
+    "rel": "346686\\1228-1\\audio\\QR360X9I-JNS9-MOXD-6US6-4HS36FBVLBP4.mp3"
+   },
+   {
+    "media_id": 5,
+    "source_id": 1,
+    "rel": "ces\\audioAlg\\3495dd297d482a787a81d78f21881232_0_48366666.wav"
+   },
+   {
+    "media_id": 6,
+    "source_id": 1,
+    "rel": "3495dd297d482a787a81d78f21881232_0_48366666.wav_download.wav"
+   },
+   {
+    "media_id": 7,
+    "source_id": 1,
+    "rel": "dioAlg\\3495dd297d482a787a81d78f21881232_0_48366666_human.wav"
+   },
+   {
+    "media_id": 8,
+    "source_id": 1,
+    "rel": "ces\\audioAlg\\78d38673e676ba5a5aa682499e192404_0_21433333.wav"
+   },
+   {
+    "media_id": 9,
+    "source_id": 1,
+    "rel": "78d38673e676ba5a5aa682499e192404_0_21433333.wav_download.wav"
+   },
+   {
+    "media_id": 10,
+    "source_id": 1,
+    "rel": "g\\78d38673e676ba5a5aa682499e192404_0_21433333_background.wav"
+   },
+   {
+    "media_id": 11,
+    "source_id": 1,
+    "rel": "ces\\audioAlg\\d16638c973836dd9a41cd4129c92707f_0_48366666.wav"
+   },
+   {
+    "media_id": 12,
+    "source_id": 1,
+    "rel": "d16638c973836dd9a41cd4129c92707f_0_48366666.wav_download.wav"
+   },
+   {
+    "media_id": 13,
+    "source_id": 1,
+    "rel": "g\\d16638c973836dd9a41cd4129c92707f_0_48366666_background.wav"
+   },
+   {
+    "media_id": 14,
+    "source_id": 1,
+    "rel": "ioAlg\\f1bb76917e9b3c3dc8f1c5fa03fd1560_0_48366666_upload.wav"
+   },
+   {
+    "media_id": 15,
+    "source_id": 1,
+    "rel": "ces\\audioAlg\\f63d2082c499d52cae2d7caafe1fa7db_0_21433333.wav"
+   }
+  ]
+ },
+ "eligible": 3319,
+ "classified": 3207,
+ "jobs_with_result": 4347,
+ "sources": [
+  {
+   "id": 8,
+   "path_present": true
+  },
+  {
+   "id": 10,
+   "path_present": true
+  },
+  {
+   "id": 7,
+   "path_present": true
+  },
+  {
+   "id": 1,
+   "path_present": true
+  },
+  {
+   "id": 11,
+   "path_present": true
+  },
+  {
+   "id": 9,
+   "path_present": true
+  },
+  {
+   "id": 2,
+   "path_present": true
+  },
+  {
+   "id": 3,
+   "path_present": true
+  },
+  {
+   "id": 4,
+   "path_present": true
+  },
+  {
+   "id": 6,
+   "path_present": true
+  },
+  {
+   "id": 5,
+   "path_present": false
+  }
+ ],
+ "cam_join": {
+  "assets": 22466,
+  "segments": 41834,
+  "transcripts": 51543,
+  "ocr": 289218,
+  "segments_distinct_assets": 22391,
+  "segments_without_asset": 0
+ }
+}

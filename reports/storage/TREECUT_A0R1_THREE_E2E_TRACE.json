@@ -1,0 +1,42 @@
+{
+ "A_HISTORICAL_REDUCED_CHAIN": {
+  "evidence": "2026-08-06 projects",
+  "success_projects": [
+   "20260806_110330_049600",
+   "20260806_120231_028104"
+  ],
+  "failed_projects": [
+   "20260806_102314_697635",
+   "20260806_102815_919887"
+  ],
+  "unique_inputs": 1,
+  "note": "2 success projects share same narration+media [6,5] -> same input run twice, not 2 independent E2E",
+  "last_reached": "jianying_draft (full reduced chain output existed)",
+  "first_blocker": "NONE in historical reduced chain",
+  "mp4": "YES(historical)",
+  "jianying": "YES(historical)"
+ },
+ "B_CURRENT_REDUCED_CHAIN": {
+  "evidence": "a0r1_repro3 live run on current baseline bdc7506",
+  "current_run": "failed",
+  "last_reached": "render (01_高清画面底片.mp4 15.7MB generated)",
+  "first_blocker": "TTS_MODEL_LOAD_CHINESE_PATH",
+  "mp4_generated_current": true,
+  "jianying_generated_current": false,
+  "current_e2e_proven": false,
+  "note": "chain validated+matching+plan+render real; TTS blocked by sherpa-onnx reading date.fst under Chinese install path"
+ },
+ "C_TARGET_PRODUCT_CHAIN": {
+  "definition": "script -> Beat/Claim -> segment-level -> human confirm/replace -> timeline -> 9:16 -> 3 candidates -> MP4/Jianying",
+  "last_reached": "script_input (manual narration only; no beat layer)",
+  "first_blocker": "SCRIPT_TO_BEAT_CLAIM_NOT_FOUND",
+  "not_reached": [
+   "Beat/Claim parse",
+   "segment-level candidates",
+   "human confirm/replace loop",
+   "3-candidate generation",
+   "target chain E2E"
+  ]
+ },
+ "FIRST_REAL_TARGET_BLOCKER": "SCRIPT_TO_BEAT_CLAIM_NOT_FOUND"
+}

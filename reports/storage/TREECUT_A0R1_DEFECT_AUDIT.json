@@ -1,0 +1,41 @@
+{
+ "A0_01_hardcoded_audit": {
+  "confirmed": true,
+  "fixed_by": "A0R1 scripts run live DB/git/disk queries",
+  "evidence": "RAW_DB_EVIDENCE/SOURCE_EVIDENCE/CURRENT_REPRODUCTION live-generated"
+ },
+ "A0_02_baseline_clean_conflict": {
+  "confirmed": true,
+  "fixed_by": "A0R1_REAL_BASELINE captures real status lines",
+  "explanation": "A0 PRE_RUN recorded 1 untracked (its own generator mid-write); real start state clean (bdc7506, 0 untracked)"
+ },
+ "A0_03_historical_vs_target_e2e_mixed": {
+  "confirmed": true,
+  "fixed_by": "THREE_E2E_TRACE splits A/B/C; target first blocker = SCRIPT_TO_BEAT_CLAIM_NOT_FOUND (not NONE)"
+ },
+ "A0_04_historical_as_current_e2e": {
+  "confirmed": true,
+  "fixed_by": "capability regrade: historical outputs -> HISTORICALLY_E2E_PROVEN; current chain reaches render only"
+ },
+ "A0_05_capability_overgrade": {
+  "confirmed": true,
+  "fixed_by": "regrade matrix below (USER_USABLE/E2E_PROVEN re-verified)"
+ },
+ "A0_06_gap_count_inconsistent": {
+  "confirmed": true,
+  "fixed_by": "A0R1 GAP_MAP P2=2 (actual array), counts verified in tests"
+ },
+ "A0_07_tests_self-verify": {
+  "confirmed": true,
+  "fixed_by": "A0R1 tests read real baseline/db/artifact files"
+ },
+ "A0_08_shortest_mvp_incomplete": {
+  "confirmed": true,
+  "fixed_by": "corrected blockers incl tts_chinese_path/segment_bridge/9x16"
+ },
+ "A0_path_mapping_wrong": {
+  "confirmed": true,
+  "note": "A0 used \\\\X1 mapping for media paths -> 0 valid; real sources.path are D:/E: local -> 15246 valid",
+  "fixed_by": "PATH_VALIDITY_CORRECTED"
+ }
+}

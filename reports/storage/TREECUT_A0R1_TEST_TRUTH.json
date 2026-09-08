@@ -1,0 +1,38 @@
+{
+ "system_python": {
+  "interpreter": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "torch_cuda": false,
+  "result": {
+   "collected": 586,
+   "passed": 570,
+   "failed": 12,
+   "xfailed": 4,
+   "skipped": 0
+  },
+  "runtime_s": 184.57,
+  "failures_by_file": {
+   "test_stage2_vision.py": 7,
+   "test_source_audit_r11.py": 3,
+   "test_stage3_mini_v2.py": 1,
+   "test_stage3_model_dev.py": 1
+  }
+ },
+ "runtime_python": {
+  "interpreter": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\python.exe",
+  "torch_cuda": true,
+  "run_partial": {
+   "test_stage2_vision.py": {
+    "passed": 13,
+    "failed": 0,
+    "runtime_s": 50.64,
+    "note": "all GPU tests pass under runtime py"
+   }
+  }
+ },
+ "classification": {
+  "gpu_7_fail": "ENVIRONMENT_MISMATCH_CONFIRMED (system py CPU torch; runtime py CUDA passes 13/13)",
+  "order_dependent_5": "TEST_ISOLATION_DEFECT (pass when run alone; fail in full suite order) - not removed",
+  "artifact_regression": "46 EH02/EH01M1/EH01R1/EH01 tests read frozen JSON"
+ },
+ "note": "12 fail NOT clean-green; 5 isolation defects remain defects even if pass-alone"
+}

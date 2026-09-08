@@ -1,0 +1,139 @@
+{
+ "experiment": "TREECUT_A0R1_RESULT",
+ "baseline": "bdc7506005c3914049f56d6c38020a0fc2797b41",
+ "a0_status": "DIRECTIONALLY_USEFUL_BUT_EVIDENCE_NOT_CLOSED (preserved)",
+ "actual_baseline": {
+  "start_clean": true,
+  "start_untracked": 0,
+  "generation_tracked_files_clean": true,
+  "generation_untracked": 16,
+  "untracked_all_a0r1_outputs": true,
+  "head_eq_origin": true,
+  "source": "derived from TREECUT_A0R1_REAL_BASELINE.json (machine git capture)"
+ },
+ "production_db_path": {
+  "valid": 15246,
+  "missing": 132,
+  "total": 15378,
+  "eligible_valid": 3260,
+  "eligible_missing": 59
+ },
+ "cam_db": {
+  "assets": 22466,
+  "segments": 41834,
+  "transcripts": 51543,
+  "ocr": 289218,
+  "segments_with_asset": 41834,
+  "distinct_assets": 22391
+ },
+ "historical": {
+  "projects": 4,
+  "success": 2,
+  "unique_inputs": 1,
+  "note": "2 success = same input rerun"
+ },
+ "three_e2e": {
+  "A_HISTORICAL_REDUCED_CHAIN": {
+   "evidence": "2026-08-06 projects",
+   "success_projects": [
+    "20260806_110330_049600",
+    "20260806_120231_028104"
+   ],
+   "failed_projects": [
+    "20260806_102314_697635",
+    "20260806_102815_919887"
+   ],
+   "unique_inputs": 1,
+   "note": "2 success projects share same narration+media [6,5] -> same input run twice, not 2 independent E2E",
+   "last_reached": "jianying_draft (full reduced chain output existed)",
+   "first_blocker": "NONE in historical reduced chain",
+   "mp4": "YES(historical)",
+   "jianying": "YES(historical)"
+  },
+  "B_CURRENT_REDUCED_CHAIN": {
+   "evidence": "a0r1_repro3 live run on current baseline bdc7506",
+   "current_run": "failed",
+   "last_reached": "render (01_高清画面底片.mp4 15.7MB generated)",
+   "first_blocker": "TTS_MODEL_LOAD_CHINESE_PATH",
+   "mp4_generated_current": true,
+   "jianying_generated_current": false,
+   "current_e2e_proven": false,
+   "note": "chain validated+matching+plan+render real; TTS blocked by sherpa-onnx reading date.fst under Chinese install path"
+  },
+  "C_TARGET_PRODUCT_CHAIN": {
+   "definition": "script -> Beat/Claim -> segment-level -> human confirm/replace -> timeline -> 9:16 -> 3 candidates -> MP4/Jianying",
+   "last_reached": "script_input (manual narration only; no beat layer)",
+   "first_blocker": "SCRIPT_TO_BEAT_CLAIM_NOT_FOUND",
+   "not_reached": [
+    "Beat/Claim parse",
+    "segment-level candidates",
+    "human confirm/replace loop",
+    "3-candidate generation",
+    "target chain E2E"
+   ]
+  },
+  "FIRST_REAL_TARGET_BLOCKER": "SCRIPT_TO_BEAT_CLAIM_NOT_FOUND"
+ },
+ "current_reproduction": {
+  "PASS": false,
+  "last_reached": "render",
+  "blocker": "TTS_MODEL_LOAD_CHINESE_PATH",
+  "mp4_render_generated": true,
+  "final_mp4": false,
+  "jianying": false
+ },
+ "capability_regrade_note": "A0 E2E_PROVEN(11) mostly downgraded to HISTORICALLY_E2E_PROVEN; current reduced chain reaches render only; target chain first blocker SCRIPT_TO_BEAT_CLAIM_NOT_FOUND",
+ "test_truth": {
+  "system_python": {
+   "interpreter": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "torch_cuda": false,
+   "result": {
+    "collected": 586,
+    "passed": 570,
+    "failed": 12,
+    "xfailed": 4,
+    "skipped": 0
+   },
+   "runtime_s": 184.57,
+   "failures_by_file": {
+    "test_stage2_vision.py": 7,
+    "test_source_audit_r11.py": 3,
+    "test_stage3_mini_v2.py": 1,
+    "test_stage3_model_dev.py": 1
+   }
+  },
+  "runtime_python": {
+   "interpreter": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\python.exe",
+   "torch_cuda": true,
+   "run_partial": {
+    "test_stage2_vision.py": {
+     "passed": 13,
+     "failed": 0,
+     "runtime_s": 50.64,
+     "note": "all GPU tests pass under runtime py"
+    }
+   }
+  },
+  "classification": {
+   "gpu_7_fail": "ENVIRONMENT_MISMATCH_CONFIRMED (system py CPU torch; runtime py CUDA passes 13/13)",
+   "order_dependent_5": "TEST_ISOLATION_DEFECT (pass when run alone; fail in full suite order) - not removed",
+   "artifact_regression": "46 EH02/EH01M1/EH01R1/EH01 tests read frozen JSON"
+  },
+  "note": "12 fail NOT clean-green; 5 isolation defects remain defects even if pass-alone"
+ },
+ "gap_counts": {
+  "P0": 3,
+  "P1": 4,
+  "P2": 2,
+  "RESEARCH": 3
+ },
+ "corrected_shortest_mvp_blockers": [
+  "P0_script_beat_parse",
+  "P0_tts_chinese_path",
+  "P0_current_e2e_not_proven",
+  "P1_segment_bridge",
+  "P1_9x16_multi_shot"
+ ],
+ "n0_preserved": "YES (N1=NO/PRESENT=YES/ESTABLISHED=NO/GEOM=NO/NEW_NEG=0)",
+ "stop": true
+}

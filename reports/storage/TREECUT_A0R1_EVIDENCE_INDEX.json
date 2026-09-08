@@ -1,0 +1,90 @@
+{
+ "audit": "TREECUT_A0R1_EVIDENCE_INDEX",
+ "entries": [
+  {
+   "path": "TREECUT_A0R1_REAL_BASELINE.json",
+   "exists": true,
+   "sha256": "25935534a90859b1d07fa1cac5a997b470b65506334a0b03b62fb56e42fd539e",
+   "type": "generated_evidence",
+   "supports": "REAL_BASELINE"
+  },
+  {
+   "path": "TREECUT_A0R1_RAW_DB_EVIDENCE.json",
+   "exists": true,
+   "sha256": "1fafc2e00bb2c0ac814eb4557dbbc94ca38172addd84eaf2c4136d3b8405b5d3",
+   "type": "generated_evidence",
+   "supports": "RAW_DB_EVIDENCE"
+  },
+  {
+   "path": "TREECUT_A0R1_PATH_VALIDITY_CORRECTED.json",
+   "exists": true,
+   "sha256": "3bea1df7182157caf3a685b022c98c02d2e2c655b064bb3ed09a1961b8cad0dc",
+   "type": "generated_evidence",
+   "supports": "PATH_VALIDITY_CORRECTED"
+  },
+  {
+   "path": "TREECUT_A0R1_SOURCE_EVIDENCE.json",
+   "exists": true,
+   "sha256": "534048984b519759b61d1f6e17c75d9261801e8f728a2aec44fd0d914018b9de",
+   "type": "generated_evidence",
+   "supports": "SOURCE_EVIDENCE"
+  },
+  {
+   "path": "TREECUT_A0R1_HISTORICAL_ARTIFACT_MANIFEST.json",
+   "exists": true,
+   "sha256": "6d30bb56c0aa502ada165dab33aeea0ac0af0ceaaa3afa37afaefe17d842381c",
+   "type": "generated_evidence",
+   "supports": "HISTORICAL_ARTIFACT_MANIFEST"
+  },
+  {
+   "path": "TREECUT_A0R1_CURRENT_REPRODUCTION.json",
+   "exists": true,
+   "sha256": "f23c28d602530b4ff58a5ca9294d18d4f7c025691e2bef39aeef23cf89f69391",
+   "type": "generated_evidence",
+   "supports": "CURRENT_REPRODUCTION"
+  },
+  {
+   "path": "TREECUT_A0R1_THREE_E2E_TRACE.json",
+   "exists": true,
+   "sha256": "2746cec1fa21e7fe5ebaf83ac7dfa286fccee33aa405ea662e8e2d48d3a7233e",
+   "type": "generated_evidence",
+   "supports": "THREE_E2E_TRACE"
+  },
+  {
+   "path": "TREECUT_A0R1_TEST_TRUTH.json",
+   "exists": true,
+   "sha256": "f09c588ed44ca4e805d95281a8bab0b95e6b95dd332e672ee0c4bbe0d320b0c6",
+   "type": "generated_evidence",
+   "supports": "TEST_TRUTH"
+  },
+  {
+   "path": "TREECUT_A0R1_GAP_MAP.json",
+   "exists": true,
+   "sha256": "e847817948499b9d5b1b46ce11dd45c8c4809660c4aa6e7fa75520f5fea110f5",
+   "type": "generated_evidence",
+   "supports": "GAP_MAP"
+  },
+  {
+   "path": "TREECUT_A0R1_CAPABILITY_MATRIX.json",
+   "exists": true,
+   "sha256": "ceeb82aa160883b972a0b91e3eb6432e5a28b4bfdf7423fd99d975050bbc64ab",
+   "type": "generated_evidence",
+   "supports": "CAPABILITY_MATRIX"
+  },
+  {
+   "path": "TREECUT_A0R1_DEFECT_AUDIT.json",
+   "exists": true,
+   "sha256": "79b3ae150461715f576e957603c962d1e5a02d5974fc77b8a88c78f2364450cc",
+   "type": "generated_evidence",
+   "supports": "DEFECT_AUDIT"
+  },
+  {
+   "path": "TREECUT_A0R1_RESULT.json",
+   "exists": true,
+   "sha256": "dea3658a647b436bc73a420cb648069ca3c41868efecc40fe8e5d015c85658fe",
+   "type": "generated_evidence",
+   "supports": "RESULT"
+  }
+ ],
+ "count": 12
+}

@@ -1,0 +1,448 @@
+{
+ "20260806_102314_697635": {
+  "status": "failed",
+  "error": "ValueError: 卖点或文案不能为空",
+  "report": {},
+  "draft_summary": null,
+  "files": {
+   "STATUS.json": {
+    "exists": true,
+    "size": 946,
+    "sha256": "ce36d84e109311d246e7bbca913e60d57d83a87b103fe676eb116b14dee80940",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_102314_697635\\STATUS.json"
+   }
+  }
+ },
+ "20260806_102815_919887": {
+  "status": "failed",
+  "error": "RuntimeError: 合格素材不足：计划 0.0 秒，目标 30.0 秒",
+  "report": {},
+  "draft_summary": null,
+  "files": {
+   "STATUS.json": {
+    "exists": true,
+    "size": 751,
+    "sha256": "d219400a32ad40c330d26a4974ece111db75d3b12406334e3ffa81598ef399cf",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_102815_919887\\STATUS.json"
+   }
+  }
+ },
+ "20260806_110330_049600": {
+  "status": "success",
+  "error": "",
+  "report": {
+   "request_selling": "小户型岛台，可伸缩设计，分区收纳，实用尺寸，家庭办公与会客两用",
+   "request_narration": "小户型也能有实用岛台。伸缩设计兼顾办公、用餐和会客，分区收纳让常用物品随手可取，台面尺寸还能定制，让小空间更有条理。",
+   "n_matches": 2,
+   "match_media_ids": [
+    6,
+    5
+   ],
+   "plan_segments": 2,
+   "plan_duration": 30.0,
+   "quality_passed": true,
+   "final_mp4": "E:\\treecut-v13\\runtime_data\\output\\projects\\20260806_110330_049600\\TreeCut_成片.mp4",
+   "draft": "E:\\treecut-v13\\runtime_data\\output\\projects\\20260806_110330_049600\\TreeCut_剪映草稿"
+  },
+  "draft_summary": {
+   "duration": 30000000,
+   "has_tracks": true,
+   "n_materials": 45,
+   "canvas": {
+    "width": 1080,
+    "height": 1080,
+    "ratio": "original"
+   }
+  },
+  "files": {
+   "01_高清画面底片.mp4": {
+    "exists": true,
+    "size": 8169619,
+    "sha256": "53e25d3e631892c92edae096f20f7f145178275e7eda69a2260eb73179c86022",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\01_高清画面底片.mp4",
+    "ffprobe": {
+     "programs": [],
+     "stream_groups": [],
+     "streams": [
+      {
+       "codec_type": "video",
+       "width": 1080,
+       "height": 1080,
+       "r_frame_rate": "30/1",
+       "duration": "30.000000"
+      }
+     ],
+     "format": {
+      "duration": "30.000000"
+     }
+    }
+   },
+   "02_配音字幕预览.mp4": {
+    "exists": true,
+    "size": 8358042,
+    "sha256": "e109cb834f882a4c397e567c5ffdd58c28357229d3d6870466bcb33bb52ef53a",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\02_配音字幕预览.mp4",
+    "ffprobe": {
+     "programs": [],
+     "stream_groups": [],
+     "streams": [
+      {
+       "codec_type": "video",
+       "width": 1080,
+       "height": 1080,
+       "r_frame_rate": "30/1",
+       "duration": "30.000000"
+      },
+      {
+       "codec_type": "audio",
+       "r_frame_rate": "0/0",
+       "duration": "30.000000"
+      },
+      {
+       "codec_type": "subtitle",
+       "r_frame_rate": "0/0",
+       "duration": "8.624000"
+      }
+     ],
+     "format": {
+      "duration": "30.000000"
+     }
+    }
+   },
+   "03_配音音乐预览.mp4": {
+    "exists": true,
+    "size": 8722606,
+    "sha256": "412292a572ca383e10c18e49111c54d2d5db14a4ab9c46b1bc8fa28115d61d50",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\03_配音音乐预览.mp4",
+    "ffprobe": {
+     "programs": [],
+     "stream_groups": [],
+     "streams": [
+      {
+       "codec_type": "video",
+       "width": 1080,
+       "height": 1080,
+       "r_frame_rate": "30/1",
+       "duration": "30.000000"
+      },
+      {
+       "codec_type": "audio",
+       "r_frame_rate": "0/0",
+       "duration": "30.000000"
+      },
+      {
+       "codec_type": "subtitle",
+       "r_frame_rate": "0/0",
+       "duration": "8.624000"
+      }
+     ],
+     "format": {
+      "duration": "30.000000"
+     }
+    }
+   },
+   "cover.jpg": {
+    "exists": true,
+    "size": 169010,
+    "sha256": "ac593be3a13ddf50eaa6eaebd8053b1814ef8aa5ad3f952a8a9eb2edeb366135",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\cover.jpg"
+   },
+   "production_report.json": {
+    "exists": true,
+    "size": 10950,
+    "sha256": "639a056b0624e96a3cdb96300006ebf3867baa30b721516a0c9fc55aa1b88666",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\production_report.json"
+   },
+   "STATUS.json": {
+    "exists": true,
+    "size": 117,
+    "sha256": "d8bb19caaec08915cea26fc8b97e3d5387834fe082a6e1e094a6d66cf773ebfd",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\STATUS.json"
+   },
+   "draft_content.json": {
+    "exists": true,
+    "size": 27463,
+    "sha256": "2ab0b29e9a7cd92bf653d599462a6b1b4983aea69bdb1a490fdd1b5b31ac4d16",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\TreeCut_剪映草稿\\draft_content.json"
+   },
+   "draft_meta_info.json": {
+    "exists": true,
+    "size": 359,
+    "sha256": "bdfb3ada0d06fb4bd790e94237404125d9d8ff1ac6e20d3af6c5d4aef2fad627",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\TreeCut_剪映草稿\\draft_meta_info.json"
+   },
+   "draft_settings": {
+    "exists": true,
+    "size": 74,
+    "sha256": "a094a5eaf0087ff0e0a9be695dee717357f977b0ee869ebadaae842df62b1e2c",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\TreeCut_剪映草稿\\draft_settings"
+   },
+   "bgm_timeline.wav": {
+    "exists": true,
+    "size": 5760122,
+    "sha256": "7bcab282bc3b9de54a3585ef9f6105d8a25a3af3baf8965634d91e31261b61d7",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\TreeCut_剪映草稿\\treecut_assets\\bgm_timeline.wav"
+   },
+   "voice_timeline.wav": {
+    "exists": true,
+    "size": 2646078,
+    "sha256": "c2775583854c0631bbdff1bdd34633a6a866868c1f25fb5436ea055ad3f8361b",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\TreeCut_剪映草稿\\treecut_assets\\voice_timeline.wav"
+   },
+   "TreeCut_成片.mp4": {
+    "exists": true,
+    "size": 6099168,
+    "sha256": "062c3b09f1a74dc2853bf8144d593370ffb53b9f17619ce4edc49042271d46e0",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\TreeCut_成片.mp4",
+    "ffprobe": {
+     "programs": [],
+     "stream_groups": [],
+     "streams": [
+      {
+       "codec_type": "video",
+       "width": 1080,
+       "height": 1080,
+       "r_frame_rate": "30/1",
+       "duration": "30.000000"
+      },
+      {
+       "codec_type": "audio",
+       "r_frame_rate": "0/0",
+       "duration": "30.000000"
+      }
+     ],
+     "format": {
+      "duration": "30.000000"
+     }
+    }
+   },
+   "cover_frame.jpg": {
+    "exists": true,
+    "size": 91460,
+    "sha256": "48a25240ef953f4fd83cec08ea71022c92bb164e271f5e82778f1c12198a8c75",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\work\\cover_frame.jpg"
+   },
+   "narration.srt": {
+    "exists": true,
+    "size": 403,
+    "sha256": "786dbe7ead1772ea922f667a159e560543ea1860305a5b7e54f6c097d629bbfb",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\work\\narration.srt"
+   },
+   "narration.wav": {
+    "exists": true,
+    "size": 760748,
+    "sha256": "19eee9f9b49e9a1eedb19d6642f760f8c96fd0105071b53b2de039adc4ba9b58",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_110330_049600\\work\\narration.wav"
+   }
+  }
+ },
+ "20260806_120231_028104": {
+  "status": "success",
+  "error": "",
+  "report": {
+   "request_selling": "小户型岛台，可伸缩设计，分区收纳，实用尺寸，家庭办公与会客两用",
+   "request_narration": "小户型也能有实用岛台。伸缩设计兼顾办公、用餐和会客，分区收纳让常用物品随手可取，台面尺寸还能定制，让小空间更有条理。",
+   "n_matches": 2,
+   "match_media_ids": [
+    6,
+    5
+   ],
+   "plan_segments": 2,
+   "plan_duration": 30.0,
+   "quality_passed": true,
+   "final_mp4": "E:\\treecut-v13\\runtime_data\\output\\projects\\20260806_120231_028104\\TreeCut_成片.mp4",
+   "draft": "E:\\treecut-v13\\runtime_data\\output\\projects\\20260806_120231_028104\\TreeCut_剪映草稿"
+  },
+  "draft_summary": {
+   "duration": 30000000,
+   "has_tracks": true,
+   "n_materials": 45,
+   "canvas": {
+    "width": 1080,
+    "height": 1080,
+    "ratio": "original"
+   }
+  },
+  "files": {
+   "01_高清画面底片.mp4": {
+    "exists": true,
+    "size": 8169619,
+    "sha256": "53e25d3e631892c92edae096f20f7f145178275e7eda69a2260eb73179c86022",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\01_高清画面底片.mp4",
+    "ffprobe": {
+     "programs": [],
+     "stream_groups": [],
+     "streams": [
+      {
+       "codec_type": "video",
+       "width": 1080,
+       "height": 1080,
+       "r_frame_rate": "30/1",
+       "duration": "30.000000"
+      }
+     ],
+     "format": {
+      "duration": "30.000000"
+     }
+    }
+   },
+   "02_配音字幕预览.mp4": {
+    "exists": true,
+    "size": 8356373,
+    "sha256": "857d3c86db88b4ba2f22ac9c99b34d854f186dce227c9db4419a24825fd25930",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\02_配音字幕预览.mp4",
+    "ffprobe": {
+     "programs": [],
+     "stream_groups": [],
+     "streams": [
+      {
+       "codec_type": "video",
+       "width": 1080,
+       "height": 1080,
+       "r_frame_rate": "30/1",
+       "duration": "30.000000"
+      },
+      {
+       "codec_type": "audio",
+       "r_frame_rate": "0/0",
+       "duration": "30.000000"
+      },
+      {
+       "codec_type": "subtitle",
+       "r_frame_rate": "0/0",
+       "duration": "8.624000"
+      }
+     ],
+     "format": {
+      "duration": "30.000000"
+     }
+    }
+   },
+   "03_配音音乐预览.mp4": {
+    "exists": true,
+    "size": 8721323,
+    "sha256": "9b23907c405698167cbfd734cb9b7e1d558f10d6857de8f5989cffc09e6ae93c",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\03_配音音乐预览.mp4",
+    "ffprobe": {
+     "programs": [],
+     "stream_groups": [],
+     "streams": [
+      {
+       "codec_type": "video",
+       "width": 1080,
+       "height": 1080,
+       "r_frame_rate": "30/1",
+       "duration": "30.000000"
+      },
+      {
+       "codec_type": "audio",
+       "r_frame_rate": "0/0",
+       "duration": "30.000000"
+      },
+      {
+       "codec_type": "subtitle",
+       "r_frame_rate": "0/0",
+       "duration": "8.624000"
+      }
+     ],
+     "format": {
+      "duration": "30.000000"
+     }
+    }
+   },
+   "cover.jpg": {
+    "exists": true,
+    "size": 169010,
+    "sha256": "ac593be3a13ddf50eaa6eaebd8053b1814ef8aa5ad3f952a8a9eb2edeb366135",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\cover.jpg"
+   },
+   "production_report.json": {
+    "exists": true,
+    "size": 10949,
+    "sha256": "a6914ff551a43a094b30acdf0052e29759b69c097acf76c7904158cf9ed679d3",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\production_report.json"
+   },
+   "STATUS.json": {
+    "exists": true,
+    "size": 117,
+    "sha256": "7a3c58eedf3c8aecc48e609ed1aae79ef4c76c156f0e6142e0c485a8d386aa46",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\STATUS.json"
+   },
+   "draft_content.json": {
+    "exists": true,
+    "size": 27463,
+    "sha256": "cc4845ae33e3908c0770ecd336b5008a9a02722a364d05b7286069fa5435983e",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\TreeCut_剪映草稿\\draft_content.json"
+   },
+   "draft_meta_info.json": {
+    "exists": true,
+    "size": 359,
+    "sha256": "6ae207093ea686ab46d9e035ee0f570208294d45974fce83fb8570c4ed3d2591",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\TreeCut_剪映草稿\\draft_meta_info.json"
+   },
+   "draft_settings": {
+    "exists": true,
+    "size": 74,
+    "sha256": "5eefc55fe37505f5da9a404386856c8f92c75ee25818a2991118e145d6e0727f",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\TreeCut_剪映草稿\\draft_settings"
+   },
+   "bgm_timeline.wav": {
+    "exists": true,
+    "size": 5760122,
+    "sha256": "7bcab282bc3b9de54a3585ef9f6105d8a25a3af3baf8965634d91e31261b61d7",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\TreeCut_剪映草稿\\treecut_assets\\bgm_timeline.wav"
+   },
+   "voice_timeline.wav": {
+    "exists": true,
+    "size": 2646078,
+    "sha256": "a1a1d2745ef355fa08104b890247e2b72bfe54421795b3913c832471d8fec871",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\TreeCut_剪映草稿\\treecut_assets\\voice_timeline.wav"
+   },
+   "TreeCut_成片.mp4": {
+    "exists": true,
+    "size": 6098247,
+    "sha256": "79effd870d5ea1c156509b0af65eb650cd6977b07214bdde6a0edfce67d89c37",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\TreeCut_成片.mp4",
+    "ffprobe": {
+     "programs": [],
+     "stream_groups": [],
+     "streams": [
+      {
+       "codec_type": "video",
+       "width": 1080,
+       "height": 1080,
+       "r_frame_rate": "30/1",
+       "duration": "30.000000"
+      },
+      {
+       "codec_type": "audio",
+       "r_frame_rate": "0/0",
+       "duration": "30.000000"
+      }
+     ],
+     "format": {
+      "duration": "30.000000"
+     }
+    }
+   },
+   "cover_frame.jpg": {
+    "exists": true,
+    "size": 91460,
+    "sha256": "48a25240ef953f4fd83cec08ea71022c92bb164e271f5e82778f1c12198a8c75",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\work\\cover_frame.jpg"
+   },
+   "narration.srt": {
+    "exists": true,
+    "size": 403,
+    "sha256": "bd205efacad9dc670f6a0dc6fa8237265a175132ce537ce763bf3b825b090c13",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\work\\narration.srt"
+   },
+   "narration.wav": {
+    "exists": true,
+    "size": 760678,
+    "sha256": "e0fe11f241a8085896097e3d45483fdb8231dfb32e9aa7c352c393dccbae25b7",
+    "path": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\output\\projects\\20260806_120231_028104\\work\\narration.wav"
+   }
+  }
+ }
+}
