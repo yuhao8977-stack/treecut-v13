@@ -1,0 +1,40 @@
+{
+ "20260806_102314_697635": {
+  "status": "no_report"
+ },
+ "20260806_102815_919887": {
+  "status": "no_report"
+ },
+ "20260806_110330_049600": {
+  "canonical": {
+   "selling": "小户型岛台，可伸缩设计，分区收纳，实用尺寸，家庭办公与会客两用",
+   "narration": "小户型也能有实用岛台。伸缩设计兼顾办公、用餐和会客，分区收纳让常用物品随手可取，台面尺寸还能定制，让小空间更有条理。",
+   "media_ids_sorted": [
+    "5",
+    "6"
+   ],
+   "plan_duration": 30.0,
+   "n_matches": 2,
+   "preset": "xiaohongshu",
+   "style": "natural",
+   "target_duration": 30.0
+  },
+  "canonical_hash": "b368c734e42aebb8617027e12ed9a2b744fcd0cad878b7f0cd1de2a29fbee99a"
+ },
+ "20260806_120231_028104": {
+  "canonical": {
+   "selling": "小户型岛台，可伸缩设计，分区收纳，实用尺寸，家庭办公与会客两用",
+   "narration": "小户型也能有实用岛台。伸缩设计兼顾办公、用餐和会客，分区收纳让常用物品随手可取，台面尺寸还能定制，让小空间更有条理。",
+   "media_ids_sorted": [
+    "5",
+    "6"
+   ],
+   "plan_duration": 30.0,
+   "n_matches": 2,
+   "preset": "xiaohongshu",
+   "style": "natural",
+   "target_duration": 30.0
+  },
+  "canonical_hash": "b368c734e42aebb8617027e12ed9a2b744fcd0cad878b7f0cd1de2a29fbee99a"
+ }
+}

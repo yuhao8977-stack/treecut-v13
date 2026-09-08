@@ -1,0 +1,78 @@
+{
+ "experiment": "TREECUT_A0R2_RAW_PREFLIGHT",
+ "head": "02c1fc8abb4f28ec45745bb4e484a4efa0bb5bef",
+ "origin_main": "02c1fc8abb4f28ec45745bb4e484a4efa0bb5bef",
+ "head_eq_origin": true,
+ "branch": "main",
+ "worktree_clean": true,
+ "status_porcelain_lines": [],
+ "tracked_diff_lines": [],
+ "cached_diff_lines": [],
+ "untracked_lines": [],
+ "git_commands": {
+  "rev_parse_HEAD": {
+   "exit_code": 0,
+   "file": "E:\\EchoBird-main\\_treecut_audit_temp\\preflight_20260908_183213\\rev_parse_HEAD.txt"
+  },
+  "rev_parse_origin": {
+   "exit_code": 0,
+   "file": "E:\\EchoBird-main\\_treecut_audit_temp\\preflight_20260908_183213\\rev_parse_origin.txt"
+  },
+  "status": {
+   "exit_code": 0,
+   "file": "E:\\EchoBird-main\\_treecut_audit_temp\\preflight_20260908_183213\\status.txt"
+  },
+  "branch": {
+   "exit_code": 0,
+   "file": "E:\\EchoBird-main\\_treecut_audit_temp\\preflight_20260908_183213\\branch.txt"
+  },
+  "log1": {
+   "exit_code": 0,
+   "file": "E:\\EchoBird-main\\_treecut_audit_temp\\preflight_20260908_183213\\log1.txt"
+  },
+  "diff_name": {
+   "exit_code": 0,
+   "file": "E:\\EchoBird-main\\_treecut_audit_temp\\preflight_20260908_183213\\diff_name.txt"
+  },
+  "cached": {
+   "exit_code": 0,
+   "file": "E:\\EchoBird-main\\_treecut_audit_temp\\preflight_20260908_183213\\cached.txt"
+  },
+  "ls_untracked": {
+   "exit_code": 0,
+   "file": "E:\\EchoBird-main\\_treecut_audit_temp\\preflight_20260908_183213\\ls_untracked.txt"
+  }
+ },
+ "external_raw_capture_dir": "E:\\EchoBird-main\\_treecut_audit_temp\\preflight_20260908_183213",
+ "versions": {
+  "sys_python": {
+   "lines": [
+    "# sys python",
+    "Python 3.12.10"
+   ],
+   "raw": "# sys python\nPython 3.12.10\n"
+  },
+  "rt_python": {
+   "lines": [
+    "# runtime python",
+    "Python 3.12.13",
+    "E:\\��������\\02_��װ����\\TreeCut_v13\\runtime\\python.exe",
+    "torch 2.6.0+cu124 cuda True",
+    "sherpa_onnx 1.13.4",
+    "onnxruntime 1.28.0"
+   ],
+   "raw": "# runtime python\nPython 3.12.13\nE:\\��������\\02_��װ����\\TreeCut_v13\\runtime\\python.exe\ntorch 2.6.0+cu124 cuda True\nsherpa_onnx 1.13.4\nonnxruntime 1.28.0\n"
+  },
+  "ffmpeg": {
+   "lines": [
+    "# ffmpeg",
+    "ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers"
+   ],
+   "raw": "# ffmpeg\nffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers\n"
+  }
+ },
+ "disk_free": [
+  "E free GB=154.17"
+ ],
+ "note": "captured BEFORE any A0R2 repo file existed (ordering requirement met)"
+}

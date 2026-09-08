@@ -1,0 +1,62 @@
+{
+ "experiment": "TREECUT_A0R2_CORRECTED_GAP_MAP",
+ "rule": "ROOT_CAUSE=当前真根因；ACCEPTANCE_GATE=目标达成门槛（current_e2e_not_proven 是 gate 不是独立根因）",
+ "ROOT_CAUSE": [
+  {
+   "id": "RC_script_beat_parse",
+   "desc": "生产链无脚本→逐句 Beat/Claim 拆分层",
+   "evidence": "production closure 21 modules, 0 beat/claim (machine)"
+  },
+  {
+   "id": "RC_tts_non_ascii_model_path",
+   "desc": "sherpa-onnx 打不开中文路径下 date.fst",
+   "evidence": "TTS A/B CONFIRMED (A fail / B pass / hashes same)"
+  },
+  {
+   "id": "RC_baseline_not_self_contained",
+   "desc": "运行源码不属 Git HEAD：models/ 12 文件被 .gitignore 忽略从未入 git + 4 文件 E 内容异于 HEAD",
+   "evidence": "SOURCE_PROVENANCE BASELINE_SELF_CONTAINED=False"
+  },
+  {
+   "id": "RC_prod_cam_identity_split",
+   "desc": "生产 4 表库与 CAM 88 表库身份不互连；生产用整文件 clip 非 segment",
+   "evidence": "A0R1 RAW_DB_EVIDENCE counts"
+  }
+ ],
+ "ACCEPTANCE_GATE": [
+  {
+   "id": "GATE_current_e2e_to_final",
+   "desc": "当前简化链跑通到最终 MP4+剪映草稿",
+   "evidence": "PASS (repro run_id=20260908_184606_986514)"
+  },
+  {
+   "id": "GATE_target_mvp_missing_human_review_replace",
+   "desc": "目标 MVP 尚缺：human review/replace 闭环"
+  },
+  {
+   "id": "GATE_target_mvp_missing_old_subtitle_policy",
+   "desc": "目标 MVP 尚缺：旧字幕拒绝/裁剪策略（未验证）"
+  },
+  {
+   "id": "GATE_target_mvp_missing_segment_bridge",
+   "desc": "目标 MVP 尚缺：segment 级选材桥接"
+  },
+  {
+   "id": "GATE_target_mvp_missing_9x16_multishot",
+   "desc": "目标 MVP 尚缺：9:16 多镜头信息流混剪验证"
+  },
+  {
+   "id": "GATE_target_mvp_missing_candidate_generation",
+   "desc": "目标 MVP 尚缺：3 候选生成"
+  },
+  {
+   "id": "GATE_target_beat_claim",
+   "desc": "目标链 script→Beat/Claim→segment 级→人工确认→时间线→9:16→3候选→MP4/剪映",
+   "evidence": "第一阻断 SCRIPT_TO_BEAT_CLAIM_NOT_FOUND"
+  }
+ ],
+ "counts": {
+  "ROOT_CAUSE": 4,
+  "ACCEPTANCE_GATE": 7
+ }
+}

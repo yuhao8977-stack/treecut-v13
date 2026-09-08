@@ -1,0 +1,395 @@
+{
+ "experiment": "TREECUT_A0R2_RAW_TEST_RUNS",
+ "runs": {
+  "system_full": {
+   "file": "system_full_junit.xml",
+   "tests": 614,
+   "failures": 12,
+   "skipped": 4,
+   "time_s": 122.409,
+   "failure_list": [
+    {
+     "classname": "tests.test_source_audit_r11",
+     "name": "test_workbench_replace_invalid_candidate_400",
+     "type": "failure",
+     "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+     "file": "test_source_audit_r11"
+    },
+    {
+     "classname": "tests.test_source_audit_r11",
+     "name": "test_workbench_trim_preserves_action_window",
+     "type": "failure",
+     "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+     "file": "test_source_audit_r11"
+    },
+    {
+     "classname": "tests.test_source_audit_r11",
+     "name": "test_workbench_local_qa_caption_size_honest",
+     "type": "failure",
+     "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+     "file": "test_source_audit_r11"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_gpu_runtime_detection",
+     "type": "failure",
+     "message": "AssertionError: RTX 3050 应被 torch 识别\nassert False is True",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_gpu_real_inference_smoke",
+     "type": "failure",
+     "message": "AssertionError: assert 'output_shape' in {'backend': 'PYTORCH_CPU', 'device': 'cpu', 'note': 'no CUDA runtime; GPU smoke skipped (CPU path active)'}",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_model_unload_reload",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_vram_leak_stable",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_static_inference_fields",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_multilabel_output",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_policy_mode_routing_final",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage3_mini_v2",
+     "name": "test_v2_smoke_on_sample",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage3_mini_v2"
+    },
+    {
+     "classname": "tests.test_stage3_model_dev",
+     "name": "test_people_output_structure",
+     "type": "failure",
+     "message": "AssertionError: assert 'technical_failure' in ('yolo', 'siglip_fallback', 'no_evidence')\n +  where 'technical_failure' = PeopleResult(prediction='UNKNOWN', max_person_conf=0.0, frame_hit_count=0, fram",
+     "file": "test_stage3_model_dev"
+    }
+   ],
+   "product_failures": 12,
+   "audit_self_failures": 0,
+   "command": "﻿# cmd: C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m pytest tests -q -p no:cacheprovider --junitxml=E:\\EchoBird-main\\_treecut_audit_temp\\tests\\system_full_junit.xml",
+   "exit_code_line": ""
+  },
+  "runtime_full": {
+   "file": "runtime_full_junit.xml",
+   "tests": 614,
+   "failures": 3,
+   "skipped": 4,
+   "time_s": 164.102,
+   "failure_list": [
+    {
+     "classname": "tests.test_source_audit_r11",
+     "name": "test_workbench_replace_invalid_candidate_400",
+     "type": "failure",
+     "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+     "file": "test_source_audit_r11"
+    },
+    {
+     "classname": "tests.test_source_audit_r11",
+     "name": "test_workbench_trim_preserves_action_window",
+     "type": "failure",
+     "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+     "file": "test_source_audit_r11"
+    },
+    {
+     "classname": "tests.test_source_audit_r11",
+     "name": "test_workbench_local_qa_caption_size_honest",
+     "type": "failure",
+     "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+     "file": "test_source_audit_r11"
+    }
+   ],
+   "product_failures": 3,
+   "audit_self_failures": 0,
+   "command": "﻿# cmd: E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime\\python.exe -m pytest tests -q -p no:cacheprovider --junitxml=E:\\EchoBird-main\\_treecut_audit_temp\\tests\\runtime_full_junit.xml",
+   "exit_code_line": ""
+  },
+  "iso_test_source_audit_r11": {
+   "file": "iso_test_source_audit_r11_junit.xml",
+   "tests": 12,
+   "failures": 0,
+   "skipped": 0,
+   "time_s": 2.507,
+   "failure_list": [],
+   "product_failures": 0,
+   "audit_self_failures": 0,
+   "command": "﻿# cmd: C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m pytest tests/test_source_audit_r11.py -q -p no:cacheprovider --junitxml=E:\\EchoBird-main\\_treecut_audit_temp\\tests\\iso_test_source_audit_r11_junit.xml",
+   "exit_code_line": ""
+  },
+  "iso_test_stage3_mini_v2": {
+   "file": "iso_test_stage3_mini_v2_junit.xml",
+   "tests": 10,
+   "failures": 0,
+   "skipped": 0,
+   "time_s": 28.767,
+   "failure_list": [],
+   "product_failures": 0,
+   "audit_self_failures": 0,
+   "command": "﻿# cmd: C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m pytest tests/test_stage3_mini_v2.py -q -p no:cacheprovider --junitxml=E:\\EchoBird-main\\_treecut_audit_temp\\tests\\iso_test_stage3_mini_v2_junit.xml",
+   "exit_code_line": ""
+  },
+  "iso_test_stage3_model_dev": {
+   "file": "iso_test_stage3_model_dev_junit.xml",
+   "tests": 11,
+   "failures": 0,
+   "skipped": 0,
+   "time_s": 9.102,
+   "failure_list": [],
+   "product_failures": 0,
+   "audit_self_failures": 0,
+   "command": "﻿# cmd: C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m pytest tests/test_stage3_model_dev.py -q -p no:cacheprovider --junitxml=E:\\EchoBird-main\\_treecut_audit_temp\\tests\\iso_test_stage3_model_dev_junit.xml",
+   "exit_code_line": ""
+  },
+  "reorder_first": {
+   "file": "reorder_first_junit.xml",
+   "tests": 614,
+   "failures": 10,
+   "skipped": 4,
+   "time_s": 123.597,
+   "failure_list": [
+    {
+     "classname": "tests.test_source_audit_r11",
+     "name": "test_workbench_replace_invalid_candidate_400",
+     "type": "failure",
+     "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+     "file": "test_source_audit_r11"
+    },
+    {
+     "classname": "tests.test_source_audit_r11",
+     "name": "test_workbench_trim_preserves_action_window",
+     "type": "failure",
+     "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+     "file": "test_source_audit_r11"
+    },
+    {
+     "classname": "tests.test_source_audit_r11",
+     "name": "test_workbench_local_qa_caption_size_honest",
+     "type": "failure",
+     "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+     "file": "test_source_audit_r11"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_gpu_runtime_detection",
+     "type": "failure",
+     "message": "AssertionError: RTX 3050 应被 torch 识别\nassert False is True",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_gpu_real_inference_smoke",
+     "type": "failure",
+     "message": "AssertionError: assert 'output_shape' in {'backend': 'PYTORCH_CPU', 'device': 'cpu', 'note': 'no CUDA runtime; GPU smoke skipped (CPU path active)'}",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_model_unload_reload",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_vram_leak_stable",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_static_inference_fields",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_multilabel_output",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage2_vision"
+    },
+    {
+     "classname": "tests.test_stage2_vision",
+     "name": "test_policy_mode_routing_final",
+     "type": "failure",
+     "message": "AssertionError: Torch not compiled with CUDA enabled",
+     "file": "test_stage2_vision"
+    }
+   ],
+   "product_failures": 10,
+   "audit_self_failures": 0,
+   "command": "﻿# cmd: C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m pytest (r11+stage3 first) -q -p no:cacheprovider --junitxml=E:\\EchoBird-main\\_treecut_audit_temp\\tests\\reorder_first_junit.xml",
+   "exit_code_line": ""
+  }
+ },
+ "per_failure_classification": {
+  "tests.test_source_audit_r11::test_workbench_replace_invalid_candidate_400": {
+   "classname": "tests.test_source_audit_r11",
+   "name": "test_workbench_replace_invalid_candidate_400",
+   "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+   "isolated_pass": true,
+   "order_reorder_pass": false,
+   "runtime_pass": false,
+   "gpu_hint": false,
+   "classification": "TEST_ISOLATION_DEFECT_COLLECTION",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first still fails (order-independent, collection-time collision)"
+  },
+  "tests.test_source_audit_r11::test_workbench_trim_preserves_action_window": {
+   "classname": "tests.test_source_audit_r11",
+   "name": "test_workbench_trim_preserves_action_window",
+   "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+   "isolated_pass": true,
+   "order_reorder_pass": false,
+   "runtime_pass": false,
+   "gpu_hint": false,
+   "classification": "TEST_ISOLATION_DEFECT_COLLECTION",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first still fails (order-independent, collection-time collision)"
+  },
+  "tests.test_source_audit_r11::test_workbench_local_qa_caption_size_honest": {
+   "classname": "tests.test_source_audit_r11",
+   "name": "test_workbench_local_qa_caption_size_honest",
+   "message": "AttributeError: <module 'server' from 'C:\\\\Users\\\\admin\\\\github\\\\treecut-v13\\\\tools\\\\mmv_a1_annotate\\\\server.py'> has no attribute 'PROJECT_FILE'",
+   "isolated_pass": true,
+   "order_reorder_pass": false,
+   "runtime_pass": false,
+   "gpu_hint": false,
+   "classification": "TEST_ISOLATION_DEFECT_COLLECTION",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first still fails (order-independent, collection-time collision)"
+  },
+  "tests.test_stage2_vision::test_gpu_runtime_detection": {
+   "classname": "tests.test_stage2_vision",
+   "name": "test_gpu_runtime_detection",
+   "message": "AssertionError: RTX 3050 应被 torch 识别\nassert False is True",
+   "isolated_pass": false,
+   "order_reorder_pass": false,
+   "runtime_pass": true,
+   "gpu_hint": true,
+   "classification": "ENVIRONMENT_MISMATCH",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first still fails (order-independent, collection-time collision)"
+  },
+  "tests.test_stage2_vision::test_gpu_real_inference_smoke": {
+   "classname": "tests.test_stage2_vision",
+   "name": "test_gpu_real_inference_smoke",
+   "message": "AssertionError: assert 'output_shape' in {'backend': 'PYTORCH_CPU', 'device': 'cpu', 'note': 'no CUDA runtime; GPU smoke skipped (CPU path active)'}",
+   "isolated_pass": false,
+   "order_reorder_pass": false,
+   "runtime_pass": true,
+   "gpu_hint": true,
+   "classification": "ENVIRONMENT_MISMATCH",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first still fails (order-independent, collection-time collision)"
+  },
+  "tests.test_stage2_vision::test_model_unload_reload": {
+   "classname": "tests.test_stage2_vision",
+   "name": "test_model_unload_reload",
+   "message": "AssertionError: Torch not compiled with CUDA enabled",
+   "isolated_pass": false,
+   "order_reorder_pass": false,
+   "runtime_pass": true,
+   "gpu_hint": true,
+   "classification": "ENVIRONMENT_MISMATCH",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first still fails (order-independent, collection-time collision)"
+  },
+  "tests.test_stage2_vision::test_vram_leak_stable": {
+   "classname": "tests.test_stage2_vision",
+   "name": "test_vram_leak_stable",
+   "message": "AssertionError: Torch not compiled with CUDA enabled",
+   "isolated_pass": false,
+   "order_reorder_pass": false,
+   "runtime_pass": true,
+   "gpu_hint": true,
+   "classification": "ENVIRONMENT_MISMATCH",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first still fails (order-independent, collection-time collision)"
+  },
+  "tests.test_stage2_vision::test_static_inference_fields": {
+   "classname": "tests.test_stage2_vision",
+   "name": "test_static_inference_fields",
+   "message": "AssertionError: Torch not compiled with CUDA enabled",
+   "isolated_pass": false,
+   "order_reorder_pass": false,
+   "runtime_pass": true,
+   "gpu_hint": true,
+   "classification": "ENVIRONMENT_MISMATCH",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first still fails (order-independent, collection-time collision)"
+  },
+  "tests.test_stage2_vision::test_multilabel_output": {
+   "classname": "tests.test_stage2_vision",
+   "name": "test_multilabel_output",
+   "message": "AssertionError: Torch not compiled with CUDA enabled",
+   "isolated_pass": false,
+   "order_reorder_pass": false,
+   "runtime_pass": true,
+   "gpu_hint": true,
+   "classification": "ENVIRONMENT_MISMATCH",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first still fails (order-independent, collection-time collision)"
+  },
+  "tests.test_stage2_vision::test_policy_mode_routing_final": {
+   "classname": "tests.test_stage2_vision",
+   "name": "test_policy_mode_routing_final",
+   "message": "AssertionError: Torch not compiled with CUDA enabled",
+   "isolated_pass": false,
+   "order_reorder_pass": false,
+   "runtime_pass": true,
+   "gpu_hint": true,
+   "classification": "ENVIRONMENT_MISMATCH",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first still fails (order-independent, collection-time collision)"
+  },
+  "tests.test_stage3_mini_v2::test_v2_smoke_on_sample": {
+   "classname": "tests.test_stage3_mini_v2",
+   "name": "test_v2_smoke_on_sample",
+   "message": "AssertionError: Torch not compiled with CUDA enabled",
+   "isolated_pass": true,
+   "order_reorder_pass": true,
+   "runtime_pass": true,
+   "gpu_hint": true,
+   "classification": "TEST_ISOLATION_DEFECT",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first pass"
+  },
+  "tests.test_stage3_model_dev::test_people_output_structure": {
+   "classname": "tests.test_stage3_model_dev",
+   "name": "test_people_output_structure",
+   "message": "AssertionError: assert 'technical_failure' in ('yolo', 'siglip_fallback', 'no_evidence')\n +  where 'technical_failure' = PeopleResult(prediction='UNKNOWN', max_person_conf=0.0, frame_hit_count=0, fram",
+   "isolated_pass": true,
+   "order_reorder_pass": true,
+   "runtime_pass": true,
+   "gpu_hint": false,
+   "classification": "TEST_ISOLATION_DEFECT",
+   "evidence_chain": "full-suite fail + isolated pass + reorder-first pass"
+  }
+ },
+ "classification_counts": {
+  "TEST_ISOLATION_DEFECT_COLLECTION": 3,
+  "ENVIRONMENT_MISMATCH": 7,
+  "TEST_ISOLATION_DEFECT": 2
+ },
+ "note": "system=CPU torch; runtime=E install python CUDA; reorder_first puts r11+stage3 files at suite head"
+}

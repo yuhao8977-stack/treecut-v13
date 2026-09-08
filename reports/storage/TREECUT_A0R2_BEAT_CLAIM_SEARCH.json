@@ -1,0 +1,80 @@
+{
+ "experiment": "TREECUT_A0R2_BEAT_CLAIM_SEARCH",
+ "E_running_src": {
+  "module_name_hits": [],
+  "content_hit_files": [
+   "treecut/analysis/parallel.py:15",
+   "treecut/analysis/pool.py:61",
+   "treecut/analysis/worker.py:1",
+   "treecut/desktop.py:244",
+   "treecut/library/catalog.py:506",
+   "treecut/remote/agent.py:99"
+  ]
+ },
+ "repo_worktree_src": {
+  "module_name_hits": [
+   "treecut/services/claim_visual.py",
+   "treecut/services/visual_beat.py"
+  ],
+  "content_hit_files": [
+   "treecut/analysis/p2_worker.py:4",
+   "treecut/analysis/p3_worker.py:75",
+   "treecut/analysis/parallel.py:15",
+   "treecut/analysis/pool.py:61",
+   "treecut/analysis/worker.py:1",
+   "treecut/analysis/worker_p25.py:255",
+   "treecut/analysis/worker_pool.py:4",
+   "treecut/desktop.py:259",
+   "treecut/library/assets.py:241",
+   "treecut/library/catalog.py:506",
+   "treecut/library/probe_worker.py:3",
+   "treecut/library/task_store.py:1",
+   "treecut/remote/agent.py:99",
+   "treecut/services/annotation_governance.py:241",
+   "treecut/services/business_cognition_service.py:79",
+   "treecut/services/business_cognition_v2.py:2",
+   "treecut/services/business_cognition_v2_1.py:2",
+   "treecut/services/claim_visual.py:1",
+   "treecut/services/conflict_resolver.py:60",
+   "treecut/services/conflict_resolver_v2.py:79",
+   "treecut/services/evidence_strength_v2.py:4",
+   "treecut/services/mmvl_master_v1.py:16",
+   "treecut/services/phase3_review_ui.py:794",
+   "treecut/services/production_qa.py:11",
+   "treecut/services/review_center.py:97",
+   "treecut/services/shot_usage.py:29",
+   "treecut/services/visual_beat.py:1",
+   "treecut/services/visual_understanding_v2.py:18"
+  ]
+ },
+ "production_import_closure": {
+  "entry": "treecut/application/production.py",
+  "closure_module_count": 21,
+  "closure_modules": [
+   "treecut/application/production.py",
+   "treecut/bootstrap.py",
+   "treecut/config.py",
+   "treecut/extensions.py",
+   "treecut/knowledge.py",
+   "treecut/learning.py",
+   "treecut/models/cache.py",
+   "treecut/models/policy.py",
+   "treecut/models/semantic_matching.py",
+   "treecut/models/validation.py",
+   "treecut/output.py",
+   "treecut/output/cover.py",
+   "treecut/output/filters.py",
+   "treecut/output/presets.py",
+   "treecut/platform/capabilities.py",
+   "treecut/platform/logging.py",
+   "treecut/platform/memory.py",
+   "treecut/platform/paths.py",
+   "treecut/platform/progress.py",
+   "treecut/quality.py",
+   "treecut/workflow.py"
+  ],
+  "beat_or_claim_modules_in_closure": []
+ },
+ "target_beat_layer_in_production": "NOT_FOUND",
+ "note": "production.py is the only formal orchestration path (desktop/CLI/API); closure = all treecut.* modules statically reachable from its imports"
+}

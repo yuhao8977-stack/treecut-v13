@@ -1,0 +1,97 @@
+{
+ "experiment": "TREECUT_A0R2_CORRECTED_CAPABILITY_MATRIX",
+ "note": "DATA_PRESENT_SHADOW/NOT_PRODUCTION_CONNECTED replaces DATA_CONNECTED when data lives in CAM db or module is absent from the production import closure (machine: BEAT_CLAIM_SEARCH.production_import_closure)",
+ "items": [
+  {
+   "capability": "A1_scan",
+   "level": "DATA_CONNECTED",
+   "evidence": "15378 media prod db; sources local; 132 path-missing",
+   "production_connected": true
+  },
+  {
+   "capability": "B2_ASR",
+   "level": "DATA_PRESENT_SHADOW / NOT_PRODUCTION_CONNECTED",
+   "evidence": "CAM transcripts 51543; asr module not in production import closure",
+   "production_connected": false
+  },
+  {
+   "capability": "B3_OCR",
+   "level": "DATA_PRESENT_SHADOW / NOT_PRODUCTION_CONNECTED",
+   "evidence": "CAM ocr 289218; ocr not in production import closure",
+   "production_connected": false
+  },
+  {
+   "capability": "B4_vision",
+   "level": "DATA_PRESENT_SHADOW / NOT_PRODUCTION_CONNECTED",
+   "evidence": "Florence captions in analysis_jobs; models/vision_* NOT_IN_HEAD; not in production import closure",
+   "production_connected": false
+  },
+  {
+   "capability": "segment_level",
+   "level": "DATA_PRESENT_SHADOW / NOT_PRODUCTION_CONNECTED",
+   "evidence": "CAM assets 22466/segments 41834; no identity bridge; prod uses whole-file clips",
+   "production_connected": false
+  },
+  {
+   "capability": "E1_retrieval",
+   "level": "DATA_CONNECTED",
+   "evidence": "load_candidates real; BGE/CLIP in closure",
+   "production_connected": true,
+   "current_e2e": true
+  },
+  {
+   "capability": "F2_render_mp4",
+   "level": "E2E_PROVEN_CURRENT_RENDER",
+   "evidence": "vertical render mp4 generated in current runs",
+   "production_connected": true
+  },
+  {
+   "capability": "G3_tts",
+   "level": "BLOCKED_AT_LOAD(CHINESE_PATH)/PASS_AT_ASCII_PATH",
+   "evidence": "TTS A/B: A fail date.fst open (Chinese path), B pass 7.059s wav, copy hashes identical => TTS_NON_ASCII_ROOT_CAUSE=CONFIRMED",
+   "production_connected": true
+  },
+  {
+   "capability": "G4_subtitle_burn",
+   "level": "REACHED_IN_E2E_RUN",
+   "evidence": "upstream TTS; historical burned srt existed",
+   "production_connected": true
+  },
+  {
+   "capability": "H1_final_mp4",
+   "level": "REACHED_IN_E2E_RUN",
+   "evidence": "final TreeCut_成片.mp4 only historical",
+   "production_connected": true
+  },
+  {
+   "capability": "H2_jianying_draft",
+   "level": "REACHED_IN_E2E_RUN",
+   "evidence": "draft_content.json historical only",
+   "production_connected": true
+  },
+  {
+   "capability": "D2_script_beat_claim",
+   "level": "NOT_FOUND_IN_PRODUCTION",
+   "evidence": "production import closure 21 modules, 0 beat/claim; E src name-hits=0; repo-only visual_beat.py not in E install",
+   "production_connected": false
+  },
+  {
+   "capability": "X1_cam_eh",
+   "level": "UNIT_TESTED_SHADOW / NOT_PRODUCTION_CONNECTED",
+   "evidence": "no production caller (repo research modules absent from E install)",
+   "production_connected": false
+  },
+  {
+   "capability": "C3_feedback",
+   "level": "CODE_PATH_CONNECTED",
+   "evidence": "FeedbackStore.adjustments read in production.py:178; no before/after ranking counterfactual",
+   "production_connected": true
+  },
+  {
+   "capability": "H3_desktop_ui",
+   "level": "USER_USABLE_NOT_PROVEN_LIVE",
+   "evidence": "no live UI session in audit; desktop.py E-content differs from HEAD",
+   "production_connected": true
+  }
+ ]
+}

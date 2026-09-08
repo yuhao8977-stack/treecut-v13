@@ -1,0 +1,107 @@
+{
+ "experiment": "TREECUT_A0R2_TTS_AB_RESULT",
+ "inventory_A": {
+  "model_root": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS",
+  "file_count": 20,
+  "total_bytes": 191246256,
+  "required_files": {
+   "date.fst": [
+    {
+     "rel": "vits-melo-tts-zh_en\\date.fst",
+     "size": 59154,
+     "sha256": "eb8aa079ae3cb81d8f4404992f39d61a0cb990947512b5b8d1e54d1f6980e718"
+    }
+   ],
+   "model.onnx": [
+    {
+     "rel": "vits-melo-tts-zh_en\\model.onnx",
+     "size": 170429550,
+     "sha256": "bf30582eb1b012250a35b1a4a80e7dfbcf8485e7bb9de0d95efbbeef0e4ad86d"
+    }
+   ],
+   "model.int8.onnx": [
+    {
+     "rel": "vits-melo-tts-zh_en\\model.int8.onnx",
+     "size": 133,
+     "sha256": "0a1462eef98f05c15a6f57569bf2fb57a6b3995891bb17956187ff5e2694273e"
+    }
+   ],
+   "tokens.txt": [
+    {
+     "rel": "vits-melo-tts-zh_en\\tokens.txt",
+     "size": 655,
+     "sha256": "d18664a7e12bd7ea1022ddaf951e534e136815016c5a809d6b64156bffb4369d"
+    }
+   ],
+   "lexicon.txt": [
+    {
+     "rel": "vits-melo-tts-zh_en\\lexicon.txt",
+     "size": 6837671,
+     "sha256": "7236884b02435ac5d10cf69b4be40a61b45aa676b5300f0e412f185748fee528"
+    }
+   ]
+  }
+ },
+ "inventory_B": {
+  "model_root": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS",
+  "file_count": 20,
+  "total_bytes": 191246256,
+  "required_files": {
+   "date.fst": [
+    {
+     "rel": "vits-melo-tts-zh_en\\date.fst",
+     "size": 59154,
+     "sha256": "eb8aa079ae3cb81d8f4404992f39d61a0cb990947512b5b8d1e54d1f6980e718"
+    }
+   ],
+   "model.onnx": [
+    {
+     "rel": "vits-melo-tts-zh_en\\model.onnx",
+     "size": 170429550,
+     "sha256": "bf30582eb1b012250a35b1a4a80e7dfbcf8485e7bb9de0d95efbbeef0e4ad86d"
+    }
+   ],
+   "model.int8.onnx": [
+    {
+     "rel": "vits-melo-tts-zh_en\\model.int8.onnx",
+     "size": 133,
+     "sha256": "0a1462eef98f05c15a6f57569bf2fb57a6b3995891bb17956187ff5e2694273e"
+    }
+   ],
+   "tokens.txt": [
+    {
+     "rel": "vits-melo-tts-zh_en\\tokens.txt",
+     "size": 655,
+     "sha256": "d18664a7e12bd7ea1022ddaf951e534e136815016c5a809d6b64156bffb4369d"
+    }
+   ],
+   "lexicon.txt": [
+    {
+     "rel": "vits-melo-tts-zh_en\\lexicon.txt",
+     "size": 6837671,
+     "sha256": "7236884b02435ac5d10cf69b4be40a61b45aa676b5300f0e412f185748fee528"
+    }
+   ]
+  }
+ },
+ "A": {
+  "rc": 1,
+  "error": "RuntimeError: D:\\a\\sherpa-onnx\\sherpa-onnx\\build\\temp.win-amd64-cpython-312\\Release\\_deps\\kaldifst-src\\kaldifst\\csrc\\kaldi-io.cc:Input:744\n[E] Error opening input stream 'E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\date.fst'",
+  "wav": null
+ },
+ "B": {
+  "rc": 0,
+  "error": null,
+  "wav": {
+   "path": "E:\\EchoBird-main\\_treecut_audit_temp\\tts_B\\out.wav",
+   "size": 622636,
+   "sha256": "30acb6552fe6e80f78478e2fff0a875fdf071550512248cb44e2efc3f7895f22",
+   "sample_rate": 44100,
+   "num_samples": 311296,
+   "duration_s": 7.059
+  }
+ },
+ "copy_identical": true,
+ "verdict": "TTS_NON_ASCII_ROOT_CAUSE=CONFIRMED",
+ "rule": "A fail + B pass + model hashes same => CONFIRMED; both fail => REFUTED; unstable => INCONCLUSIVE"
+}

@@ -1,0 +1,61 @@
+{
+ "audit": "TREECUT_A0R2_EVIDENCE_INDEX",
+ "count": 11,
+ "entries": [
+  {
+   "path": "TREECUT_A0R2_BEAT_CLAIM_SEARCH.json",
+   "exists": true,
+   "sha256": "9e4871c86256e9427eff8545147ada30d661762da45bc259cc5054a8c4aec046"
+  },
+  {
+   "path": "TREECUT_A0R2_CORRECTED_CAPABILITY_MATRIX.json",
+   "exists": true,
+   "sha256": "d4f1d0c1da60579d34957d3fcd2b60728783755f42f98cc93c0758e45ddcf3c2"
+  },
+  {
+   "path": "TREECUT_A0R2_CORRECTED_GAP_MAP.json",
+   "exists": true,
+   "sha256": "36987225f1db179fc278096f6bc86dfa8240779331bc7653af0516b353ce15b2"
+  },
+  {
+   "path": "TREECUT_A0R2_CURRENT_REPRODUCTION.json",
+   "exists": true,
+   "sha256": "ddf502e1c034b9d6dc5a9e3f120513c4a9a10359b7218ba77953077fd237960d"
+  },
+  {
+   "path": "TREECUT_A0R2_HISTORICAL_CANONICAL_INPUT.json",
+   "exists": true,
+   "sha256": "01f06c501b987ede92ca27eb42bfbd2e221e96d708d65604b52ad0d74d43f619"
+  },
+  {
+   "path": "TREECUT_A0R2_HISTORICAL_RELPATH_MANIFEST.json",
+   "exists": true,
+   "sha256": "682371f512f6abdb3194ec091fcb98fd7ff7083bd034f70c3e4a048e511074fb"
+  },
+  {
+   "path": "TREECUT_A0R2_RAW_PREFLIGHT.json",
+   "exists": true,
+   "sha256": "b7b714a46ff8fa9e984d8e037cf60f07fb799b48daece3de45641b0cf98b3d62"
+  },
+  {
+   "path": "TREECUT_A0R2_RAW_TEST_RUNS.json",
+   "exists": true,
+   "sha256": "2de6e05d825cc3bb0ea956cc3e85dfa55530232d3274fe8631434a55d7adb83e"
+  },
+  {
+   "path": "TREECUT_A0R2_RESULT.json",
+   "exists": true,
+   "sha256": "eff77623cf1ec7fbb31662123610f51cbf0b71f9b176130069eddf09fe66cf42"
+  },
+  {
+   "path": "TREECUT_A0R2_SOURCE_PROVENANCE.json",
+   "exists": true,
+   "sha256": "4ed983fce6d792df55f58b816c6d2573e8b6a1e975122bf3c48f247323a86da3"
+  },
+  {
+   "path": "TREECUT_A0R2_TTS_AB_RESULT.json",
+   "exists": true,
+   "sha256": "12c06f9f905ca35217a282b4bd850230011c19f5ed1f12132c916635a11a299f"
+  }
+ ]
+}
