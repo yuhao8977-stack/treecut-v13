@@ -1,0 +1,141 @@
+{
+ "experiment": "CAM01_EH02_N0_ARCHITECT_DECISION",
+ "date": "2026-09-08",
+ "baseline_sha": "db2ff37708aa355cb977f9f4075323160ade8a02",
+ "N1_APPROVED": false,
+ "RAW_BLIND_REVIEWS_RECEIVED": "11/11",
+ "PROVISIONALLY_ELIGIBLE": 4,
+ "provisionally_eligible_list": [
+  {
+   "reviewer_code": "R02",
+   "media_id": 1019,
+   "family_hint": "工厂/产品展示区-产品展示-抽屉"
+  },
+  {
+   "reviewer_code": "R05",
+   "media_id": 2492,
+   "family_hint": "客户家-产品展示-岩板伸缩岛台"
+  },
+  {
+   "reviewer_code": "R07",
+   "media_id": 1025,
+   "family_hint": "工厂/产品展示区-产品展示-抽屉"
+  },
+  {
+   "reviewer_code": "R08",
+   "media_id": 103,
+   "family_hint": "工厂/产品展示区-产品展示-抽屉"
+  }
+ ],
+ "PROVISIONALLY_INELIGIBLE_OBSERVED_ACTION": 7,
+ "provisionally_ineligible_observed_action_list": [
+  {
+   "reviewer_code": "R01",
+   "media_id": 1638,
+   "no_action": "NO",
+   "visible_same": "YES",
+   "jump_or_occlusion": "NO"
+  },
+  {
+   "reviewer_code": "R03",
+   "media_id": 2163,
+   "no_action": "NO",
+   "visible_same": "YES",
+   "jump_or_occlusion": "NO"
+  },
+  {
+   "reviewer_code": "R04",
+   "media_id": 2208,
+   "no_action": "NO",
+   "visible_same": "YES",
+   "jump_or_occlusion": "NO"
+  },
+  {
+   "reviewer_code": "R06",
+   "media_id": 2211,
+   "no_action": "NO",
+   "visible_same": "NO",
+   "jump_or_occlusion": "YES"
+  },
+  {
+   "reviewer_code": "R09",
+   "media_id": 1639,
+   "no_action": "NO",
+   "visible_same": "YES",
+   "jump_or_occlusion": "NO"
+  },
+  {
+   "reviewer_code": "R10",
+   "media_id": 26023,
+   "no_action": "NO",
+   "visible_same": "YES",
+   "jump_or_occlusion": "NO"
+  },
+  {
+   "reviewer_code": "R11",
+   "media_id": 1600,
+   "no_action": "NO",
+   "visible_same": "YES",
+   "jump_or_occlusion": "NO"
+  }
+ ],
+ "HISTORICAL_LABEL_CONFLICT": 7,
+ "label_conflict_status": "MEDIA_LEVEL_VS_FROZEN_WINDOW_LABEL_CONFLICT",
+ "label_conflict_possible_causes": [
+  "label granularity (media-level vs window-level)",
+  "window mismatch (N0 sampled window != original review window)",
+  "timestamp mismatch",
+  "media/segment/frame join mismatch",
+  "historical review error"
+ ],
+ "label_conflict_action": "不修改历史 POSTA3_HUMAN_REVIEW NO_ACTION truth；需后续证据审计",
+ "VISUAL_FAMILY_COUNT": "UNKNOWN_PENDING_ADJUDICATION",
+ "family_adjudication_required_fields": [
+  "source asset/video",
+  "physical object instance",
+  "scene/background",
+  "camera position/viewpoint",
+  "composition",
+  "action/distractor pattern",
+  "temporal/source lineage"
+ ],
+ "family_note": "禁止仅凭 工厂/产品展示区/产品展示/抽屉 分类字段自动合并 1019/1025/103",
+ "2492_NEG_ELIGIBILITY": "PROVISIONAL_YES",
+ "2492_NEG_ELIGIBILITY_note": "可伸缩目标存在但未动作 = 高价值 hard negative；不因语义接近 EXTEND 排除",
+ "2492_FAMILY_INDEPENDENCE": "UNKNOWN",
+ "2492_family_audit_required": [
+  "2492 vs 2543 同一原视频?",
+  "同一产品/场景?",
+  "同一拍摄序列?",
+  "相邻或重叠窗口?",
+  "高度视觉相关?"
+ ],
+ "2492_family_note": "2492_NEG_ELIGIBILITY 与 2492_FAMILY_INDEPENDENCE 两项分开，不得混为一项",
+ "no_reframe_for_static_instant": true,
+ "no_reframe_note": "7 个 OBSERVED_ACTION 候选不得为找无动作瞬间重抽帧（事后挑样本）；如需重新利用须进入新的预注册候选发现任务",
+ "NEW_NEG_REFERENCE_ADDED": 0,
+ "NEW_STRONG_REFERENCE_ADDED": 0,
+ "PRESENT": "YES",
+ "ESTABLISHED": "NO",
+ "GEOM_ALLOWED": "NO",
+ "router_unchanged": true,
+ "historical_truth_unchanged": true,
+ "evidence_freeze": {
+  "blind_review_html": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\eh02n0_blind\\blind_review.html",
+  "blind_review_html_sha256": "6c15b5b8cd020c204d1e4a389381ccfa767d9660f3618eae8c66ad78c0de7b2d",
+  "reviewer_map": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\eh02n0_blind\\reviewer_map.json",
+  "reviewer_map_sha256": "1e0e7e6403046bf8f568fad02a98f9142bdd271730dfcbcdda04057f0ae83184",
+  "frame_manifest": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\eh02n0_blind\\frame_index.json",
+  "frame_manifest_sha256": "0e7fa7780e61e1c432b837c53d88bef8e4acb0d6b21faf50ab87507caa161121",
+  "pack_meta": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\eh02n0_blind\\pack_meta.json",
+  "pack_meta_sha256": "9cafb4f301aaf2a3ba2c8531b91e93d041b0379f5b5f64c3c0aa9f5c7a567c69",
+  "review_results_archived": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\eh02n0_blind\\review_results_archived.json",
+  "review_results_archived_sha256": "632e52d8bb792327252a5ad3d4803d96a51d222fa3d618a585d1e954c8482028",
+  "desktop_original": "C:\\Users\\admin\\Desktop\\eh02n0_blind_review_results_cn.json",
+  "desktop_original_sha256": "632e52d8bb792327252a5ad3d4803d96a51d222fa3d618a585d1e954c8482028",
+  "frame_jpg_count": 62,
+  "frames_dir": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\runtime_data\\temp\\batch1\\eh02n0_blind\\frames",
+  "readonly_note": "原始 N0 证据只读冻结；最终 eligibility/family/N1 promotion 未冻结"
+ },
+ "next": "等待 MASTER PRODUCT AUDIT (A0) 指令；不自动开始 N1/GEOM/新审计"
+}
