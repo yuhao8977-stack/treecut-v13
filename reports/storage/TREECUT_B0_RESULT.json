@@ -1,0 +1,52 @@
+{
+ "experiment": "TREECUT_B0_RESULT",
+ "adjudications": {
+  "A0R2_CORE_FINDINGS": "ACCEPTED_FOR_DECISION",
+  "MASTER_AUDIT_PHASE": "COMPLETE",
+  "PERMANENT_ASCII_MODEL_ROOT": "APPROVED",
+  "TRACK_A_ALLOWED": "NO",
+  "N1_GEOM_CAM_PRODUCTION": "NO"
+ },
+ "BASELINE_SELF_CONTAINED": "YES",
+ "provenance_match_counts": {
+  "E_CONTENT_EQ_HEAD": 221
+ },
+ "MODELS_SOURCE_FILES_TRACKED": "YES (13 src/treecut/models/*.py tracked; zero ignored .py under src verified)",
+ "E_INSTALL_EQ_HEAD": "YES",
+ "PERMANENT_MODEL_ROOT": "E:\\TreeCutRuntime\\models",
+ "MODEL_FILE_HASH_MATCH": "95/95",
+ "all_match_original_and_temp": true,
+ "DEFAULT_PATH_RESOLUTION": "PASS",
+ "TTS_SMOKE": "PASS",
+ "tts_smoke_wav": {
+  "sha256": "4999bfd9dd5e09aab1708b240ed360f4fc9112641db87ba2853757c13ef9b308",
+  "duration_s": 4.667
+ },
+ "A0R2_ERRATA_RECORDED": "YES",
+ "errata_ids": [
+  "E1_ffmpeg_version",
+  "E2_tts_hash_claim",
+  "E3_h1_h2_levels",
+  "E4_next_blocker",
+  "E5_e2e_quality_scope"
+ ],
+ "TEMP_TTS_COPY_REMOVED": "YES",
+ "TEMP_FULL_MODELS_COPY_REMOVED": "YES",
+ "cleanup_record": [
+  {
+   "Path": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905",
+   "Label": "TEMP_TTS_COPY (182MB LocalTTS copy)",
+   "Files": 20,
+   "Bytes": 191246256
+  },
+  {
+   "Path": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_models_ascii_20260908_184122",
+   "Label": "TEMP_FULL_MODELS_COPY (10.4GB)",
+   "Files": 95,
+   "Bytes": 11172542902
+  }
+ ],
+ "CURRENT_E2E_RUN_PRESERVED": "YES (a0r2_repro_20260908_184606_986514 intact; compact archive TREECUT_B0_COMPACT_EVIDENCE.json committed)",
+ "CLIP_DEFECT_STATUS": "OPEN_UNCHANGED",
+ "NEXT_BLOCKER": "CHINESE_CLIP_SEMANTIC_RERANKER"
+}

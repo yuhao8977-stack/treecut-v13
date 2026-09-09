@@ -1,0 +1,30 @@
+{
+ "experiment": "TREECUT_B0_SMOKES",
+ "DEFAULT_PATH_RESOLUTION": {
+  "resolved_models": "E:\\TreeCutRuntime\\models",
+  "expected_permanent": "E:\\TreeCutRuntime\\models",
+  "pass": true,
+  "env_TREECUT_MODEL_ROOT_was_set": false,
+  "pointer_used": true
+ },
+ "MODEL_DISCOVERY": {
+  "BGE-M3": true,
+  "Chinese-CLIP-ViT-B-16": true,
+  "Florence-2-base": true,
+  "LocalTTS": true,
+  "Qwen3-VL-4B-Instruct-FP8": true,
+  "SenseVoiceSmall": true,
+  "Whisper-small": true
+ },
+ "all_expected_dirs_present": true,
+ "TTS_SMOKE": {
+  "pass": true,
+  "wav": "E:\\EchoBird-main\\_treecut_audit_temp\\b0_tts_smoke.wav",
+  "size": 411692,
+  "sha256": "4999bfd9dd5e09aab1708b240ed360f4fc9112641db87ba2853757c13ef9b308",
+  "sample_rate": 44100,
+  "duration_s": 4.667,
+  "seconds": 5.8
+ },
+ "overall": true
+}
