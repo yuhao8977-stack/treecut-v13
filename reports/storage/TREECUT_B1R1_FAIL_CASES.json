@@ -1,0 +1,21 @@
+{
+ "mode": "truncated",
+ "results": {
+  "SHORT_64": {
+   "intercepted": true,
+   "failure_code": "NARRATION_TOO_SHORT",
+   "expected": "NARRATION_TOO_SHORT",
+   "match": true,
+   "error": "时长契约失败 [NARRATION_TOO_SHORT]: 旁白 11.63s 短于目标 25.00s 超过 0.8s"
+  },
+  "OLD139_TRUNCATED": {
+   "intercepted": true,
+   "failure_code": "SCRIPT_TRUNCATED",
+   "expected": "SCRIPT_TRUNCATED",
+   "match": true,
+   "error": "脚本完整性失败 [SCRIPT_TRUNCATED]: 脚本必须以完整句子与结束标点结尾（当前尾字符: 户）"
+  }
+ },
+ "all_match": true,
+ "data_root": "E:\\EchoBird-main\\_treecut_audit_temp\\b1r1_truncated_20260909_150714_245783"
+}

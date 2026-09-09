@@ -1,0 +1,147 @@
+{
+ "experiment": "TREECUT_B1R1_RESULT",
+ "baseline": "f378fda23404655004c9aa4e8c018e40805c5b35",
+ "adjudications": {
+  "B2_CLIP_SEGMENT_BEAT_N1_GEOM_CAM": "NOT_STARTED"
+ },
+ "implemented": [
+  "script completeness gate BEFORE TTS: SCRIPT_TRUNCATED / SCRIPT_NO_TERMINAL_PUNCTUATION (whole-sentence edits only; the old 139-char mid-cut '...台面宽度可以按户' is rejected)",
+  "full narration text + sha256 + last sentence + last char recorded in machine evidence (not just char count)",
+  "three-track audio mix (output/mix.py): voice loudnorm once (constant gain, no automation), BGM separate loudness + fades + voice-triggered sidechain ducking (BGM only), true-peak limiter; voice_stem/bgm_stem/final_mix.wav + loudness/peak/windowed evidence; pump & peak gates",
+  "audible-end alignment on REAL last-voice time (0.25-0.8s tail); last subtitle must be a complete sentence",
+  "statuses: SCRIPT_COMPLETENESS_PASS / AUDIO_MIX_PASS / AUDIBLE_END_ALIGNMENT_PASS / B1_ACCEPTANCE_PASS; generic 'quality_passed' no longer used as success evidence (use TECHNICAL_RENDER_PASS)"
+ ],
+ "fail_cases": {
+  "mode": "truncated",
+  "results": {
+   "SHORT_64": {
+    "intercepted": true,
+    "failure_code": "NARRATION_TOO_SHORT",
+    "expected": "NARRATION_TOO_SHORT",
+    "match": true,
+    "error": "时长契约失败 [NARRATION_TOO_SHORT]: 旁白 11.63s 短于目标 25.00s 超过 0.8s"
+   },
+   "OLD139_TRUNCATED": {
+    "intercepted": true,
+    "failure_code": "SCRIPT_TRUNCATED",
+    "expected": "SCRIPT_TRUNCATED",
+    "match": true,
+    "error": "脚本完整性失败 [SCRIPT_TRUNCATED]: 脚本必须以完整句子与结束标点结尾（当前尾字符: 户）"
+   }
+  },
+  "all_match": true,
+  "data_root": "E:\\EchoBird-main\\_treecut_audit_temp\\b1r1_truncated_20260909_150714_245783"
+ },
+ "success_repro": {
+  "mode": "success",
+  "PASS": true,
+  "seconds": 42.1,
+  "run_id": "20260909_153206_237084",
+  "project_dir": "E:\\EchoBird-main\\_treecut_audit_temp\\b1r1_success_20260909_153001_459398\\output\\projects\\20260909_153206_237084",
+  "final_mp4": "E:\\EchoBird-main\\_treecut_audit_temp\\b1r1_success_20260909_153001_459398\\output\\projects\\20260909_153206_237084\\TreeCut_成片.mp4",
+  "final_mp4_sha256": "11d6c8c98473733b35f1669e4538af729929a65cd46b53140645959816cf6e4c",
+  "final_mp4_duration_s": 25.0,
+  "jianying_draft": "E:\\EchoBird-main\\_treecut_audit_temp\\b1r1_success_20260909_153001_459398\\output\\projects\\20260909_153206_237084\\TreeCut_剪映草稿",
+  "whole_sentence_window": [
+   14,
+   30
+  ],
+  "script": {
+   "text": "用了几个月，家人最大的感受就是，动线顺畅了，家务也变轻了。总之，这台小岛台让日常生活方便了许多。拉开是一张桌。收回不占地方。抽屉放杂物，柜门放餐具。高度随意调。宽度按户型做。打理很简单。用着很顺手。家人都喜欢。很实用。刚刚好。很方便。正合适。不占地方。很好打理。",
+   "sha256": "3a706740479797281b9ea68794515ae2707bd2ee464a98d1f253676ee81f9689",
+   "char_count": 131,
+   "last_sentence": "很好打理。",
+   "last_char": "。"
+  },
+  "duration_contract": {
+   "narration_duration": 24.527,
+   "video_duration": 25.0,
+   "narration_coverage": 0.9811,
+   "narration_tail_gap": 0.473,
+   "intentional_outro": false,
+   "duration_contract_pass": true,
+   "code": null,
+   "strategy": "strict_reject"
+  },
+  "audio_mix": {
+   "voice": {
+    "mean_volume_db": -19.9,
+    "max_volume_db": -4.5
+   },
+   "bgm": {
+    "mean_volume_db": -31.8,
+    "max_volume_db": -17.6
+   },
+   "final": {
+    "mean_volume_db": -19.8,
+    "max_volume_db": -4.5
+   },
+   "final_windowed_mean_db": [
+    -18.1,
+    -19.9,
+    -20.0,
+    -17.8,
+    -20.4,
+    -20.7,
+    -19.6,
+    -19.7,
+    -20.9,
+    -21.8,
+    -20.2,
+    -20.7,
+    -20.8
+   ],
+   "max_adjacent_window_delta_db": 2.6,
+   "voice_windowed_loudness_range_db": 4.1,
+   "voice_gain_automation": false,
+   "voice_gain_constant": true,
+   "pump_ok": true,
+   "peak_ok": true
+  },
+  "audible_end": {
+   "last_voice_s": 24.517,
+   "narration_duration_s": 24.527,
+   "video_duration_s": 25.0,
+   "audible_tail_gap": 0.483,
+   "intentional_outro": false
+  },
+  "statuses": {
+   "TECHNICAL_RENDER_PASS": true,
+   "DURATION_CONTRACT_PASS": true,
+   "SCRIPT_COMPLETENESS_PASS": true,
+   "AUDIO_MIX_PASS": true,
+   "AUDIBLE_END_ALIGNMENT_PASS": true,
+   "B1_ACCEPTANCE_PASS": true,
+   "SUBTITLE_HYGIENE_PASS": false,
+   "SEMANTIC_MATCH_PASS": false,
+   "VISUAL_GRAMMAR_PASS": false,
+   "CONTENT_QUALITY_PASS": false,
+   "HUMAN_ACCEPTANCE_PASS": false,
+   "PUBLISH_READY": false,
+   "note": "B1R1 scope: script completeness + three-track audio mix + audible-end alignment. Subtitle hygiene (B2 occlusion plates: bottom-subtitle cover then redraw; top/mid multi-text reject) / semantic match / visual grammar / human acceptance are NOT yet passed."
+  },
+  "semantic_models": {
+   "bge_scored": 0,
+   "clip_scored": 0,
+   "errors": []
+  },
+  "media": {
+   "id": 32,
+   "path": "D:\\剪影草稿\\JianyingPro Drafts\\0619-01\\video\\IOS_ALBUM@5509BF3D-2B06-4FE1-AC56-7EFAC381CD41_L0_001@1718726753000.mov",
+   "duration_s": 96.705
+  },
+  "data_root": "E:\\EchoBird-main\\_treecut_audit_temp\\b1r1_success_20260909_153001_459398"
+ },
+ "acceptance": {
+  "old139_truncated_rejected": true,
+  "short64_rejected": true,
+  "success_new_run_id": "20260909_153206_237084",
+  "success_new_sha256": "11d6c8c98473733b35f1669e4538af729929a65cd46b53140645959816cf6e4c",
+  "script_complete": true,
+  "audio_mix_pass": true,
+  "audible_end_pass": true,
+  "b1_acceptance_pass": true,
+  "narration_coverage_pct": 0.9811,
+  "not_fixed": "subtitle hygiene (B2 occlusion plates: cover bottom subtitle then redraw; reject top/mid multi-text) + semantic/CLIP/segment/beat NOT implemented in B1R1"
+ }
+}

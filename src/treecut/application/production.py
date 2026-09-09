@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass
 from datetime import datetime
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -13,7 +14,11 @@ from treecut.bootstrap import AppContext, bootstrap
 from treecut.learning import FeedbackStore
 from treecut.output import (
     build_jianying_draft, burn_subtitles, create_narrated_video,
-    mix_background_music, render_video_plan,
+    render_video_plan,
+)
+from treecut.output.mix import build_mix, last_voice_time, remux_video_audio
+from treecut.quality.publish_gates import (
+    LAST_SUBTITLE_INCOMPLETE, check_audible_end, check_script_completeness,
 )
 from treecut.output.cover import make_cover
 from treecut.output.filters import resolve_style
@@ -115,6 +120,12 @@ QUALITY_ADVICE = {
     "VOICE_TAIL_TOO_LONG": "结尾无旁白超过 0.8 秒且未声明片尾（B1 时长契约）。",
     "BGM_ONLY_AUDIO": "检测不到旁白音轨，背景音乐不得计为旁白（B1 时长契约）。",
     "DURATION_CONTRACT_NOT_RUN": "时长契约未执行，禁止放行（B1）。",
+    "SCRIPT_TRUNCATED": "脚本被中途截断（非完整句子结尾）：请按完整句子/Beat 增删，禁止字符切片（B1R1）。",
+    "SCRIPT_NO_TERMINAL_PUNCTUATION": "脚本无结束标点：必须以完整句子与结束标点结尾（B1R1）。",
+    "AUDIO_GAIN_PUMPING": "音频短时响度跳变或人声音量不稳定：仅允许 BGM 淡入淡出/ducking，人声增益恒定（B1R1）。",
+    "AUDIO_TRUE_PEAK_EXCEEDED": "混音真峰值超限：需 true-peak limiter 兜底（B1R1）。",
+    "AUDIBLE_END_TOO_CLOSE": "最后发声距画面结束不足 0.25s 或超过 0.8s（B1R1）。",
+    "LAST_SUBTITLE_INCOMPLETE": "最后一条字幕未以完整句子结束（B1R1）。",
 }
 
 
@@ -178,6 +189,11 @@ class ProductionService:
         paths = self.context.paths
         ffmpeg = paths.install_root / "tools" / "win32" / "ffmpeg.exe"
         ffprobe = paths.install_root / "tools" / "win32" / "ffprobe.exe"
+        # ---- B1R1: script must be COMPLETE before any TTS (no char-slicing) ----
+        script_gate = check_script_completeness(request.narration)
+        if not script_gate.passed:
+            raise RuntimeError(
+                f"脚本完整性失败 [{script_gate.code}]: {script_gate.reason}")
         # ---- B1: REAL narration first, single synthesis; duration is the only
         # authority. Never silently pad empty footage; never fake with BGM. ----
         work = project / "work"
@@ -257,8 +273,25 @@ class ProductionService:
             prebuilt_audio=narration_wav,
         )
         mixed = project / "03_配音音乐预览.mp4"
-        progress("正在混合背景音乐…", 70)
-        mix_background_music(narrated, bgm, mixed, ffmpeg, ffprobe, 0.10)
+        progress("正在按三轨契约混音（voice 恒定 / 仅 BGM 淡入淡出与 ducking / limiter）…", 70)
+        from treecut.media import probe_media
+        mix_artifacts = build_mix(
+            work / "narration.wav", bgm, work, ffmpeg,
+            probe_media(Path(narrated), ffprobe).duration,
+        )
+        mix_ev = mix_artifacts["evidence"]
+        if not mix_ev["pump_ok"]:
+            raise RuntimeError(
+                f"音频混音失败 [AUDIO_GAIN_PUMPING]: 相邻窗口响度跳变 "
+                f"{mix_ev['max_adjacent_window_delta_db']}dB ≥ 8dB")
+        if not mix_ev["peak_ok"]:
+            raise RuntimeError(
+                f"音频混音失败 [AUDIO_TRUE_PEAK_EXCEEDED]: "
+                f"峰值 {mix_ev['final'].get('max_volume_db')}dB 超过限幅余量")
+        remux_video_audio(
+            Path(narrated), mix_artifacts["final_mix"], Path(mixed), ffmpeg,
+            probe_media(Path(narrated), ffprobe).duration,
+        )
 
         final_mp4 = None
         if request.output_mp4:
@@ -309,7 +342,29 @@ class ProductionService:
         if not contract_final.passed:
             raise RuntimeError(
                 f"最终成片时长契约失败 [{contract_final.code}]: {contract_final.reason}")
+        # B1R1: audible-end alignment (REAL last voice, not container length)
+        last_voice = last_voice_time(work / "narration.wav")
+        end_gate = check_audible_end(
+            last_voice, final_video_duration or plan_duration, narration_duration,
+            request.intentional_outro)
+        if not end_gate.passed:
+            raise RuntimeError(
+                f"结尾对齐失败 [{end_gate.code}]: {end_gate.reason}")
+        # B1R1: last subtitle must be a COMPLETE sentence aligned with narration end
+        srt_lines = (work / "narration.srt").read_text(
+            encoding="utf-8-sig").strip().splitlines()
+        last_cue_text = srt_lines[-1] if srt_lines else ""
+        if last_cue_text and last_cue_text[-1] not in "。！？!?":
+            raise RuntimeError(
+                f"字幕完整性失败 [{LAST_SUBTITLE_INCOMPLETE}]: 最后一条字幕未以完整句子结束")
         quality = combine_reports(*quality_reports)
+        script_sha = hashlib.sha256(request.narration.encode("utf-8")).hexdigest()
+        technical_pass = bool(quality.passed)
+        duration_pass = bool(contract_final.passed)
+        script_pass = bool(script_gate.passed)
+        audio_pass = bool(mix_ev["pump_ok"] and mix_ev["peak_ok"]
+                          and mix_ev.get("voice_gain_constant", True))
+        audible_pass = bool(end_gate.passed)
 
         report_path = project / "production_report.json"
         report = {
@@ -323,19 +378,33 @@ class ProductionService:
                                 "errors": semantic_errors},
             "duration_contract": contract_final.fields
             | {"code": contract_final.code, "strategy": request.duration_strategy},
+            "script": {"text": request.narration, "sha256": script_sha,
+                       "char_count": len(request.narration),
+                       "last_sentence": script_gate.fields.get("last_sentence"),
+                       "last_char": script_gate.fields.get("last_char")},
+            "audio_mix": mix_ev,
+            "audible_end": end_gate.fields,
             "statuses": {
-                "TECHNICAL_RENDER_PASS": bool(quality.passed),
-                "DURATION_CONTRACT_PASS": bool(contract_final.passed),
-                # B1 scope only; later phases (B2-B5) must turn these on
+                "TECHNICAL_RENDER_PASS": technical_pass,
+                "DURATION_CONTRACT_PASS": duration_pass,
+                "SCRIPT_COMPLETENESS_PASS": script_pass,
+                "AUDIO_MIX_PASS": audio_pass,
+                "AUDIBLE_END_ALIGNMENT_PASS": audible_pass,
+                "B1_ACCEPTANCE_PASS": bool(technical_pass and duration_pass
+                                           and script_pass and audio_pass
+                                           and audible_pass),
+                # B2+ scope only; later phases must turn these on
                 "SUBTITLE_HYGIENE_PASS": False,
                 "SEMANTIC_MATCH_PASS": False,
                 "VISUAL_GRAMMAR_PASS": False,
                 "CONTENT_QUALITY_PASS": False,
                 "HUMAN_ACCEPTANCE_PASS": False,
                 "PUBLISH_READY": False,
-                "note": "B1 implements only the narration duration contract + "
-                        "fail-closed QA. Subtitle hygiene / semantic match / "
-                        "visual grammar / human acceptance are NOT yet passed."},
+                "note": "B1R1 scope: script completeness + three-track audio mix + "
+                        "audible-end alignment. Subtitle hygiene (B2 occlusion "
+                        "plates: bottom-subtitle cover then redraw; top/mid multi-"
+                        "text reject) / semantic match / visual grammar / human "
+                        "acceptance are NOT yet passed."},
         }
         report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
         if not quality.passed:
