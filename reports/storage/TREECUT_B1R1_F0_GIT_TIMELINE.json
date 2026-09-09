@@ -1,0 +1,1681 @@
+{
+ "experiment": "TREECUT_B1R1_F0_GIT_TIMELINE",
+ "head": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+ "key_commits": [
+  "11887df",
+  "02c1fc8",
+  "cec8040",
+  "ced26b6",
+  "0c95e5c",
+  "f378fda",
+  "6fc5e6f"
+ ],
+ "method": "git log --all --full-history -S/-G per token; HEAD grep; E-install presence",
+ "features": [
+  {
+   "id": "caption_display_punctuation",
+   "name": "显示字幕去标点 (speech/display 分离)",
+   "tokens": [
+    {
+     "token": "标点",
+     "commit_count": 6,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "\"docs/02_\\351\\230\\266\\346\\256\\265\\351\\252\\214\\346\\224\\266\\350\\256\\260\\345\\275\\225.md\"",
+      "docs/PRODUCTION_GRADE_GAP_AUDIT.md",
+      "docs/TREECUT_B1R1_REPORT.md",
+      "docs/TREECUT_CAM01_OBJ01_REPORT.md",
+      "docs/TREECUT_CAM01_V22R1_CORRECTION_REPORT.md",
+      "reports/storage/TREECUT_B1R1_FAIL_CASES.json",
+      "reports/storage/TREECUT_B1R1_RESULT.json",
+      "reports/storage/TREECUT_CAM01_OBJ01_STRUCT01_CORRECTIONS.json",
+      "scripts/audit_treecut_b1r1_final.py",
+      "scripts/b007_v06_search_probe.py",
+      "scripts/posta3_cam01_obj01.py",
+      "src/treecut/application/production.py",
+      "src/treecut/quality/publish_gates.py"
+     ],
+     "e_install_paths": [
+      "treecut\\application\\production.py",
+      "treecut\\quality\\publish_gates.py"
+     ]
+    },
+    {
+     "token": "punctuation",
+     "commit_count": 2,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "release/release_manifest.json",
+      "scripts/audit_treecut_b1r1_run.py",
+      "src/treecut/output/narration.py",
+      "src/treecut/quality/publish_gates.py",
+      "tests/test_b1r1_publish_gates.py"
+     ],
+     "e_install_paths": [
+      "treecut\\output\\narration.py",
+      "treecut\\quality\\publish_gates.py"
+     ]
+    },
+    {
+     "token": "display_text",
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "head_paths": [],
+     "e_install_paths": []
+    },
+    {
+     "token": "build_srt",
+     "commit_count": 6,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "0c95e5c87388362956b8932cfbc516dbc75b6cff",
+      "ct": "1788933269",
+      "subject": "B0H freeze: human acceptance FAILURE sample frozen (architect frame-by-frame review of a0r2_repro E2E 成片) - verdict split: source/model baseline PASS, technical E2E PASS, human watch FAIL, content quality FAIL, publishable NO; machine corroboration: video 25.100s vs narration 11.633s (64 chars) => 13.467s no-narration tail, coverage 46.35%; plan 7x~4s=25s fixed slicing; subtitles end 11.633s; Chinese-CLIP 0 scored (BaseModelOutputWithPooling no 'norm'), BGE 3260 fallback; quality_passed=true = FALSE PASS (QA only checks audio presence, BGM always present); 3 root causes with code evidence (RC1 subtitle layers: narration.py:270 fixed style, no source-subtitle policy, OCR CAM-only; RC2 narration-duration decoupled: planning.py:39-73 fill-by-clip-no-narration, narration.py:203 validate only rejects longer narration, no Beat/Claim layer; RC3 selection/editing absent: semantic_matching.py:100-132 CLIP errors, whole-file 4s clips, segment bridge OPEN); QA mechanism quality/inspection.py:78-97 audio-only; NEXT_BLOCKER=E2E_PUBLISHABILITY_CONTRACT_AND_DEFECT_FREEZE; architect hard-gate rules recorded (coverage<95% fail, >0.8s tail fail, BGM not narration, dirty-material reject, safe-area subtitles, no-repeat, no-fragment ending, CLIP-fail never content-pass); NO product code changed; audit-only"
+     },
+     "head_paths": [
+      "docs/TREECUT_CORRECTIVE_STATUS_REPORT_V1.md",
+      "docs/TREECUT_E2E_PUBLISHABILITY_CONTRACT_AUDIT.md",
+      "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+      "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+      "reports/storage/TREECUT_CORRECTIVE_STATUS_REPORT_V1.md",
+      "reports/storage/TREECUT_PRODUCTION_MODULE_INVENTORY_V1.json",
+      "reports/storage/TREECUT_TTS_INVENTORY_V1.json",
+      "scripts/audit_treecut_b0h_freeze.py",
+      "scripts/b007_audit_production.py",
+      "scripts/b007_v084_report.py",
+      "scripts/b007_v091_v2.py",
+      "src/treecut/output/__init__.py",
+      "src/treecut/output/narration.py",
+      "src/treecut/output/production_narration.py"
+     ],
+     "e_install_paths": [
+      "treecut\\output\\__init__.py",
+      "treecut\\output\\narration.py",
+      "treecut\\output\\production_narration.py"
+     ]
+    },
+    {
+     "token": "split_subtitle_cues",
+     "commit_count": 2,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "7a66fa419fc986674936edf3e84ebbcc2922bc05",
+      "ct": "1787732092",
+      "subject": "docs(audit): 生产级架构差距审计报告（45问/六类分级，只读审计）"
+     },
+     "head_paths": [
+      "docs/PRODUCTION_GRADE_GAP_AUDIT.md",
+      "src/treecut/output/narration.py"
+     ],
+     "e_install_paths": [
+      "treecut\\output\\narration.py"
+     ]
+    }
+   ],
+   "head_paths_union": [
+    "\"docs/02_\\351\\230\\266\\346\\256\\265\\351\\252\\214\\346\\224\\266\\350\\256\\260\\345\\275\\225.md\"",
+    "docs/PRODUCTION_GRADE_GAP_AUDIT.md",
+    "docs/TREECUT_B1R1_REPORT.md",
+    "docs/TREECUT_CAM01_OBJ01_REPORT.md",
+    "docs/TREECUT_CAM01_V22R1_CORRECTION_REPORT.md",
+    "docs/TREECUT_CORRECTIVE_STATUS_REPORT_V1.md",
+    "docs/TREECUT_E2E_PUBLISHABILITY_CONTRACT_AUDIT.md",
+    "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+    "release/release_manifest.json",
+    "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+    "reports/storage/TREECUT_B1R1_FAIL_CASES.json",
+    "reports/storage/TREECUT_B1R1_RESULT.json",
+    "reports/storage/TREECUT_CAM01_OBJ01_STRUCT01_CORRECTIONS.json",
+    "reports/storage/TREECUT_CORRECTIVE_STATUS_REPORT_V1.md",
+    "reports/storage/TREECUT_PRODUCTION_MODULE_INVENTORY_V1.json",
+    "reports/storage/TREECUT_TTS_INVENTORY_V1.json",
+    "scripts/audit_treecut_b0h_freeze.py",
+    "scripts/audit_treecut_b1r1_final.py",
+    "scripts/audit_treecut_b1r1_run.py",
+    "scripts/b007_audit_production.py",
+    "scripts/b007_v06_search_probe.py",
+    "scripts/b007_v084_report.py",
+    "scripts/b007_v091_v2.py",
+    "scripts/posta3_cam01_obj01.py",
+    "src/treecut/application/production.py",
+    "src/treecut/output/__init__.py",
+    "src/treecut/output/narration.py",
+    "src/treecut/output/production_narration.py",
+    "src/treecut/quality/publish_gates.py",
+    "tests/test_b1r1_publish_gates.py"
+   ],
+   "e_install_paths_union": [
+    "treecut\\application\\production.py",
+    "treecut\\output\\__init__.py",
+    "treecut\\output\\narration.py",
+    "treecut\\output\\production_narration.py",
+    "treecut\\quality\\publish_gates.py"
+   ],
+   "first_commit_overall": {
+    "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+    "ct": "1787134638",
+    "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+   },
+   "last_commit_overall": {
+    "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+    "ct": "1788939233",
+    "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+   },
+   "any_history_hit": true,
+   "in_head": true
+  },
+  {
+   "id": "subtitle_occlusion_plate",
+   "name": "原字幕遮挡板 (drawbox/occlusion/plate)",
+   "tokens": [
+    {
+     "token": "drawbox",
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "head_paths": [],
+     "e_install_paths": []
+    },
+    {
+     "token": "occlusion",
+     "commit_count": 3,
+     "first_commit": {
+      "sha": "db2ff37708aa355cb977f9f4075323160ade8a02",
+      "ct": "1788853424",
+      "subject": "cam01-eh02-n0: targeted NEG reference set DESIGN + blind human review pack (baseline 8f84a1a clean, design-only, no candidate algorithm run, no family verdicts, no GEOM) - frozen 11-candidate universe (1019/1025/103/1600/1638/1639/2163/2208/2211/2492/26023; universe hash a12f6874; all REVIEW_REQUIRED; all visual_family_id UNKNOWN; CALIBRATION10 overlap=0; A3/EH overlap=0; no dup-group membership -> near-dup UNKNOWN; 11/11 media readable via ffprobe 1728x3072@60 mostly + 2x 2160x3840 + 26023 src4 factory DJI) - visual_content_family vs algorithm_evidence_family strict split (3 algos on 1 sample = 1 family; V24/GFTT FEATURE_LOCAL same chain; 2543 anchor no forcing); blind protocol R01-R11 shuffled seed 20260908, algorithm/route/structural hidden from reviewer; review schema preregistered (NO_ACTION/target-visible/unique/identity/scene-cut/occlusion/ROI/visual-family fields + N2 eligibility prerecorded); diversity analysis potential-only (3 suspected same-sequence groups A/C/E; 26023 distinct factory source; potential 5-7 candidate families incl ~2 new, NOT formal); preregistered N1 frame-ROI freeze / N2 frozen-router eval / N3 control decision (ESTABLISHED only closes NEG gate, GEOM needs separate approval); consistency 12/12 PASS; TARGETED_NEG_DESIGN_COMPLETE=YES, BLIND_REVIEW_PACK_READY=YES (local gitignored pack dir), PRESENT=YES ESTABLISHED=NO, NEW_NEG=0 NEW_STRONG=0 GEOM_ALLOWED=NO; NEXT_BLOCKER HUMAN_FRAME_ROI_REVIEW_FREEZE (architect views blind pack personally); only 4 design files tracked, no media/secrets"
+     },
+     "last_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "docs/TREECUT_CAM01_EH02N0_TARGETED_NEG_DESIGN.md",
+      "reports/storage/TREECUT_B1R1_RESULT.json",
+      "reports/storage/TREECUT_B1R1_SUCCESS_REPRO.json",
+      "reports/storage/TREECUT_CAM01_EH02N0_ARCHITECT_DECISION_STATUS.json",
+      "reports/storage/TREECUT_CAM01_EH02N0_HUMAN_REVIEW_SCHEMA.json",
+      "scripts/audit_treecut_b1r1_final.py",
+      "src/treecut/application/production.py"
+     ],
+     "e_install_paths": [
+      "treecut\\application\\production.py"
+     ]
+    },
+    {
+     "token": "遮挡板",
+     "commit_count": 1,
+     "first_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "last_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "docs/TREECUT_B1R1_REPORT.md",
+      "scripts/audit_treecut_b1r1_final.py"
+     ],
+     "e_install_paths": []
+    },
+    {
+     "token": "inpaint",
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "head_paths": [],
+     "e_install_paths": []
+    }
+   ],
+   "head_paths_union": [
+    "docs/TREECUT_B1R1_REPORT.md",
+    "docs/TREECUT_CAM01_EH02N0_TARGETED_NEG_DESIGN.md",
+    "reports/storage/TREECUT_B1R1_RESULT.json",
+    "reports/storage/TREECUT_B1R1_SUCCESS_REPRO.json",
+    "reports/storage/TREECUT_CAM01_EH02N0_ARCHITECT_DECISION_STATUS.json",
+    "reports/storage/TREECUT_CAM01_EH02N0_HUMAN_REVIEW_SCHEMA.json",
+    "scripts/audit_treecut_b1r1_final.py",
+    "src/treecut/application/production.py"
+   ],
+   "e_install_paths_union": [
+    "treecut\\application\\production.py"
+   ],
+   "first_commit_overall": {
+    "sha": "db2ff37708aa355cb977f9f4075323160ade8a02",
+    "ct": "1788853424",
+    "subject": "cam01-eh02-n0: targeted NEG reference set DESIGN + blind human review pack (baseline 8f84a1a clean, design-only, no candidate algorithm run, no family verdicts, no GEOM) - frozen 11-candidate universe (1019/1025/103/1600/1638/1639/2163/2208/2211/2492/26023; universe hash a12f6874; all REVIEW_REQUIRED; all visual_family_id UNKNOWN; CALIBRATION10 overlap=0; A3/EH overlap=0; no dup-group membership -> near-dup UNKNOWN; 11/11 media readable via ffprobe 1728x3072@60 mostly + 2x 2160x3840 + 26023 src4 factory DJI) - visual_content_family vs algorithm_evidence_family strict split (3 algos on 1 sample = 1 family; V24/GFTT FEATURE_LOCAL same chain; 2543 anchor no forcing); blind protocol R01-R11 shuffled seed 20260908, algorithm/route/structural hidden from reviewer; review schema preregistered (NO_ACTION/target-visible/unique/identity/scene-cut/occlusion/ROI/visual-family fields + N2 eligibility prerecorded); diversity analysis potential-only (3 suspected same-sequence groups A/C/E; 26023 distinct factory source; potential 5-7 candidate families incl ~2 new, NOT formal); preregistered N1 frame-ROI freeze / N2 frozen-router eval / N3 control decision (ESTABLISHED only closes NEG gate, GEOM needs separate approval); consistency 12/12 PASS; TARGETED_NEG_DESIGN_COMPLETE=YES, BLIND_REVIEW_PACK_READY=YES (local gitignored pack dir), PRESENT=YES ESTABLISHED=NO, NEW_NEG=0 NEW_STRONG=0 GEOM_ALLOWED=NO; NEXT_BLOCKER HUMAN_FRAME_ROI_REVIEW_FREEZE (architect views blind pack personally); only 4 design files tracked, no media/secrets"
+   },
+   "last_commit_overall": {
+    "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+    "ct": "1788939233",
+    "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+   },
+   "any_history_hit": true,
+   "in_head": true
+  },
+  {
+   "id": "old_subtitle_detection",
+   "name": "原字幕检测/卫生 (old_subtitle/hygiene)",
+   "tokens": [
+    {
+     "token": "old_subtitle",
+     "commit_count": 8,
+     "first_commit": {
+      "sha": "53d815e51a54ed6a34f80c3b64f7140294b86860",
+      "ct": "1788341805",
+      "subject": "B007 V0.9.1: Pilot V2 (干净源混剪 1.3x 音频优先 + ASS硬烧字幕 + AV硬闸 + qwen视觉证据) — 8镜头 22.69s READY_WITH_LIMITATIONS(BGM无源), 等 V1vsV2 人工对比"
+     },
+     "last_commit": {
+      "sha": "0c95e5c87388362956b8932cfbc516dbc75b6cff",
+      "ct": "1788933269",
+      "subject": "B0H freeze: human acceptance FAILURE sample frozen (architect frame-by-frame review of a0r2_repro E2E 成片) - verdict split: source/model baseline PASS, technical E2E PASS, human watch FAIL, content quality FAIL, publishable NO; machine corroboration: video 25.100s vs narration 11.633s (64 chars) => 13.467s no-narration tail, coverage 46.35%; plan 7x~4s=25s fixed slicing; subtitles end 11.633s; Chinese-CLIP 0 scored (BaseModelOutputWithPooling no 'norm'), BGE 3260 fallback; quality_passed=true = FALSE PASS (QA only checks audio presence, BGM always present); 3 root causes with code evidence (RC1 subtitle layers: narration.py:270 fixed style, no source-subtitle policy, OCR CAM-only; RC2 narration-duration decoupled: planning.py:39-73 fill-by-clip-no-narration, narration.py:203 validate only rejects longer narration, no Beat/Claim layer; RC3 selection/editing absent: semantic_matching.py:100-132 CLIP errors, whole-file 4s clips, segment bridge OPEN); QA mechanism quality/inspection.py:78-97 audio-only; NEXT_BLOCKER=E2E_PUBLISHABILITY_CONTRACT_AND_DEFECT_FREEZE; architect hard-gate rules recorded (coverage<95% fail, >0.8s tail fail, BGM not narration, dirty-material reject, safe-area subtitles, no-repeat, no-fragment ending, CLIP-fail never content-pass); NO product code changed; audit-only"
+     },
+     "head_paths": [
+      "docs/B007_PILOT_V1_VS_V2_REPORT.md",
+      "docs/TREECUT_E2E_PUBLISHABILITY_CONTRACT_AUDIT.md",
+      "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0R1.md",
+      "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+      "reports/storage/B007_FIRST_REAL_PILOT_V2_REVIEW.html",
+      "reports/storage/B007_PILOT_V1_VS_V2_REPORT.md",
+      "reports/storage/TREECUT_A0R1_GAP_MAP.json",
+      "reports/storage/TREECUT_A0R2_CORRECTED_GAP_MAP.json",
+      "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_A0_PRODUCT_GAP_MAP.json",
+      "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+      "reports/storage/audit_evidence/_work/services_inv.txt",
+      "scripts/audit_treecut_a0r1_final.py",
+      "scripts/audit_treecut_a0r2_final.py",
+      "scripts/audit_treecut_b0h_freeze.py",
+      "scripts/audit_treecut_product_a0_caps.py",
+      "scripts/audit_treecut_product_a0_rest.py",
+      "scripts/b007_v091_v2.py",
+      "scripts/sprintv2_g2_build.py",
+      "src/treecut/services/production_qa.py",
+      "tests/test_audit_treecut_a0r2.py",
+      "tests/test_g5_dedup_qa.py"
+     ],
+     "e_install_paths": [
+      "treecut\\services\\production_qa.py"
+     ]
+    },
+    {
+     "token": "OLD_SUBTITLE_ABSENT",
+     "commit_count": 4,
+     "first_commit": {
+      "sha": "53d815e51a54ed6a34f80c3b64f7140294b86860",
+      "ct": "1788341805",
+      "subject": "B007 V0.9.1: Pilot V2 (干净源混剪 1.3x 音频优先 + ASS硬烧字幕 + AV硬闸 + qwen视觉证据) — 8镜头 22.69s READY_WITH_LIMITATIONS(BGM无源), 等 V1vsV2 人工对比"
+     },
+     "last_commit": {
+      "sha": "3be032e1cad732a76b9e8453825484c70c23df1f",
+      "ct": "1788494321",
+      "subject": "fix(audit): correction wave r1.1 deterministic closure"
+     },
+     "head_paths": [
+      "docs/B007_PILOT_V1_VS_V2_REPORT.md",
+      "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+      "reports/storage/B007_FIRST_REAL_PILOT_V2_REVIEW.html",
+      "reports/storage/B007_PILOT_V1_VS_V2_REPORT.md",
+      "reports/storage/B007_V2_PRODUCTION_QA_V1.json",
+      "scripts/b007_v091_v2.py",
+      "tests/test_source_audit_r11.py"
+     ],
+     "e_install_paths": []
+    },
+    {
+     "token": "原字幕",
+     "commit_count": 4,
+     "first_commit": {
+      "sha": "bdc7506005c3914049f56d6c38020a0fc2797b41",
+      "ct": "1788857790",
+      "subject": "audit: MASTER PRODUCT GOAL ALIGNMENT A0 (read-only full product capability audit, baseline 740ca94) - REAL finding: production chain (desktop Tk -> ProductionService._create -> load_candidates(real 4-table DB) -> BGE/CLIP semantic match -> edit plan -> ffmpeg render -> melo TTS -> subtitle burn -> BGM -> Jianying draft -> QA) is E2E_PROVEN with real 2026-08-06 outputs (TreeCut_成片.mp4 1080x1080@30 + real Jianying draft_content + cover + report quality passed); capability matrix 33 items (E2E_PROVEN 11, DATA_CONNECTED 12, USER_USABLE 3, CODE_EXISTS 4, NOT_FOUND 2, UNIT_TESTED 1); 8 domains A-H assessed; KEY GAPS (product P0): production chain has NO script->beat/claim parse layer (D2 NOT_FOUND, whole-text match), Source/A4 gate is CAM-research not in prod matching, historical E2E media 5/6 paths invalid (needs rescan); CAM/EH/GEOM/N0 = SHADOW_NOT_PRODUCTION_CONNECTED (desktop imports no CAM module), solves reference evidence only; N0 preserved (N1=NO/PRESENT=YES/ESTABLISHED=NO/GEOM=NO); test truth: 586 collected/570 pass/12 fail/4 xfail in one run (12 fail = 7 env GPU-under-system-py + 5 order-dependent-pass-alone); 46 EH tests = artifact-regression; human feedback consumed PARTIAL (DB+ranking not embedding); voice clone NOT_FOUND (melo TTS); user workflow PARTIAL; two-track roadmap: Track A MVP (reuse retrieval/render/TTS/subtitle/BGM/draft + build script-beat layer + manual gate + rescan) NOT blocked by Track B research; risks P0x2 P1x3; consistency 7/7; no secrets/large files"
+     },
+     "last_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "docs/TREECUT_B1R1_REPORT.md",
+      "docs/TREECUT_B1_NARRATION_DURATION_CONTRACT_REPORT.md",
+      "docs/TREECUT_E2E_PUBLISHABILITY_CONTRACT_AUDIT.md",
+      "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+      "scripts/audit_treecut_b0h_freeze.py",
+      "scripts/audit_treecut_b1_final.py",
+      "scripts/audit_treecut_b1r1_final.py",
+      "scripts/audit_treecut_product_a0_caps.py"
+     ],
+     "e_install_paths": []
+    },
+    {
+     "token": "subtitle hygiene",
+     "commit_count": 1,
+     "first_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "last_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "reports/storage/TREECUT_B1R1_RESULT.json",
+      "scripts/audit_treecut_b1r1_final.py"
+     ],
+     "e_install_paths": []
+    },
+    {
+     "token": "SUBTITLE_HYGIENE_PASS",
+     "commit_count": 2,
+     "first_commit": {
+      "sha": "f378fda23404655004c9aa4e8c018e40805c5b35",
+      "ct": "1788936062",
+      "subject": "B1 narration duration contract + fail-closed QA (baseline 0c95e5c): three strategies FIT_SCRIPT_TO_TARGET(explicit NotImplementedError, never silent pad)/FIT_VIDEO_TO_NARRATION(plan=real narration)/STRICT_REJECT(default); real-TTS-first pipeline (narration.wav synthesized once + measured before plan/render, prebuilt_audio single-source in narration.py); QA fail-codes NARRATION_TOO_SHORT/NARRATION_TOO_LONG/VOICE_COVERAGE_LOW/VOICE_TAIL_TOO_LONG/BGM_ONLY_AUDIO/DURATION_CONTRACT_NOT_RUN with fields narration_duration/video_duration/narration_coverage/narration_tail_gap/intentional_outro/duration_contract_pass; report statuses split (TECHNICAL_RENDER_PASS/DURATION_CONTRACT_PASS true; SUBTITLE/SEMANTIC/VISUAL/CONTENT/HUMAN/PUBLISH false - B1 scope honest); FAIL repro: 64-char real TTS 11.45s + 25s strict => NARRATION_TOO_SHORT, STATUS failed, no artifacts; SUCCESS repro: new run 20260909_143916_370553 139-char 24.802s narration => coverage 99.21%, tail 0.198s, new sha cd306e11, draft generated; env note persistent TREECUT_DATA_ROOT=batch1 inherited; E install synced identical; unit 11/11 + regression 27 passed; compile clean; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "last_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "docs/TREECUT_B1R1_REPORT.md",
+      "docs/TREECUT_B1_NARRATION_DURATION_CONTRACT_REPORT.md",
+      "reports/storage/TREECUT_B1R1_RESULT.json",
+      "reports/storage/TREECUT_B1R1_SUCCESS_REPRO.json",
+      "reports/storage/TREECUT_B1_RESULT.json",
+      "reports/storage/TREECUT_B1_SUCCESS_REPRO.json",
+      "scripts/audit_treecut_b1_final.py",
+      "scripts/audit_treecut_b1r1_final.py",
+      "src/treecut/application/production.py"
+     ],
+     "e_install_paths": [
+      "treecut\\application\\production.py"
+     ]
+    }
+   ],
+   "head_paths_union": [
+    "docs/B007_PILOT_V1_VS_V2_REPORT.md",
+    "docs/TREECUT_B1R1_REPORT.md",
+    "docs/TREECUT_B1_NARRATION_DURATION_CONTRACT_REPORT.md",
+    "docs/TREECUT_E2E_PUBLISHABILITY_CONTRACT_AUDIT.md",
+    "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0R1.md",
+    "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+    "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+    "reports/storage/B007_FIRST_REAL_PILOT_V2_REVIEW.html",
+    "reports/storage/B007_PILOT_V1_VS_V2_REPORT.md",
+    "reports/storage/B007_V2_PRODUCTION_QA_V1.json",
+    "reports/storage/TREECUT_A0R1_GAP_MAP.json",
+    "reports/storage/TREECUT_A0R2_CORRECTED_GAP_MAP.json",
+    "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+    "reports/storage/TREECUT_A0_PRODUCT_GAP_MAP.json",
+    "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+    "reports/storage/TREECUT_B1R1_RESULT.json",
+    "reports/storage/TREECUT_B1R1_SUCCESS_REPRO.json",
+    "reports/storage/TREECUT_B1_RESULT.json",
+    "reports/storage/TREECUT_B1_SUCCESS_REPRO.json",
+    "reports/storage/audit_evidence/_work/services_inv.txt",
+    "scripts/audit_treecut_a0r1_final.py",
+    "scripts/audit_treecut_a0r2_final.py",
+    "scripts/audit_treecut_b0h_freeze.py",
+    "scripts/audit_treecut_b1_final.py",
+    "scripts/audit_treecut_b1r1_final.py",
+    "scripts/audit_treecut_product_a0_caps.py",
+    "scripts/audit_treecut_product_a0_rest.py",
+    "scripts/b007_v091_v2.py",
+    "scripts/sprintv2_g2_build.py",
+    "src/treecut/application/production.py",
+    "src/treecut/services/production_qa.py",
+    "tests/test_audit_treecut_a0r2.py",
+    "tests/test_g5_dedup_qa.py",
+    "tests/test_source_audit_r11.py"
+   ],
+   "e_install_paths_union": [
+    "treecut\\application\\production.py",
+    "treecut\\services\\production_qa.py"
+   ],
+   "first_commit_overall": {
+    "sha": "53d815e51a54ed6a34f80c3b64f7140294b86860",
+    "ct": "1788341805",
+    "subject": "B007 V0.9.1: Pilot V2 (干净源混剪 1.3x 音频优先 + ASS硬烧字幕 + AV硬闸 + qwen视觉证据) — 8镜头 22.69s READY_WITH_LIMITATIONS(BGM无源), 等 V1vsV2 人工对比"
+   },
+   "last_commit_overall": {
+    "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+    "ct": "1788939233",
+    "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+   },
+   "any_history_hit": true,
+   "in_head": true
+  },
+  {
+   "id": "caption_safe_zone",
+   "name": "字幕安全区/字号行数 (safe zone/MarginV)",
+   "tokens": [
+    {
+     "token": "safe zone",
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "head_paths": [],
+     "e_install_paths": []
+    },
+    {
+     "token": "MarginV",
+     "commit_count": 2,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "53d815e51a54ed6a34f80c3b64f7140294b86860",
+      "ct": "1788341805",
+      "subject": "B007 V0.9.1: Pilot V2 (干净源混剪 1.3x 音频优先 + ASS硬烧字幕 + AV硬闸 + qwen视觉证据) — 8镜头 22.69s READY_WITH_LIMITATIONS(BGM无源), 等 V1vsV2 人工对比"
+     },
+     "head_paths": [
+      "scripts/b007_v091_v2.py",
+      "src/treecut/output/narration.py"
+     ],
+     "e_install_paths": [
+      "treecut\\output\\narration.py"
+     ]
+    },
+    {
+     "token": "安全区",
+     "commit_count": 2,
+     "first_commit": {
+      "sha": "0c95e5c87388362956b8932cfbc516dbc75b6cff",
+      "ct": "1788933269",
+      "subject": "B0H freeze: human acceptance FAILURE sample frozen (architect frame-by-frame review of a0r2_repro E2E 成片) - verdict split: source/model baseline PASS, technical E2E PASS, human watch FAIL, content quality FAIL, publishable NO; machine corroboration: video 25.100s vs narration 11.633s (64 chars) => 13.467s no-narration tail, coverage 46.35%; plan 7x~4s=25s fixed slicing; subtitles end 11.633s; Chinese-CLIP 0 scored (BaseModelOutputWithPooling no 'norm'), BGE 3260 fallback; quality_passed=true = FALSE PASS (QA only checks audio presence, BGM always present); 3 root causes with code evidence (RC1 subtitle layers: narration.py:270 fixed style, no source-subtitle policy, OCR CAM-only; RC2 narration-duration decoupled: planning.py:39-73 fill-by-clip-no-narration, narration.py:203 validate only rejects longer narration, no Beat/Claim layer; RC3 selection/editing absent: semantic_matching.py:100-132 CLIP errors, whole-file 4s clips, segment bridge OPEN); QA mechanism quality/inspection.py:78-97 audio-only; NEXT_BLOCKER=E2E_PUBLISHABILITY_CONTRACT_AND_DEFECT_FREEZE; architect hard-gate rules recorded (coverage<95% fail, >0.8s tail fail, BGM not narration, dirty-material reject, safe-area subtitles, no-repeat, no-fragment ending, CLIP-fail never content-pass); NO product code changed; audit-only"
+     },
+     "last_commit": {
+      "sha": "f378fda23404655004c9aa4e8c018e40805c5b35",
+      "ct": "1788936062",
+      "subject": "B1 narration duration contract + fail-closed QA (baseline 0c95e5c): three strategies FIT_SCRIPT_TO_TARGET(explicit NotImplementedError, never silent pad)/FIT_VIDEO_TO_NARRATION(plan=real narration)/STRICT_REJECT(default); real-TTS-first pipeline (narration.wav synthesized once + measured before plan/render, prebuilt_audio single-source in narration.py); QA fail-codes NARRATION_TOO_SHORT/NARRATION_TOO_LONG/VOICE_COVERAGE_LOW/VOICE_TAIL_TOO_LONG/BGM_ONLY_AUDIO/DURATION_CONTRACT_NOT_RUN with fields narration_duration/video_duration/narration_coverage/narration_tail_gap/intentional_outro/duration_contract_pass; report statuses split (TECHNICAL_RENDER_PASS/DURATION_CONTRACT_PASS true; SUBTITLE/SEMANTIC/VISUAL/CONTENT/HUMAN/PUBLISH false - B1 scope honest); FAIL repro: 64-char real TTS 11.45s + 25s strict => NARRATION_TOO_SHORT, STATUS failed, no artifacts; SUCCESS repro: new run 20260909_143916_370553 139-char 24.802s narration => coverage 99.21%, tail 0.198s, new sha cd306e11, draft generated; env note persistent TREECUT_DATA_ROOT=batch1 inherited; E install synced identical; unit 11/11 + regression 27 passed; compile clean; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "docs/TREECUT_B1_NARRATION_DURATION_CONTRACT_REPORT.md",
+      "docs/TREECUT_E2E_PUBLISHABILITY_CONTRACT_AUDIT.md",
+      "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+      "scripts/audit_treecut_b0h_freeze.py",
+      "scripts/audit_treecut_b1_final.py"
+     ],
+     "e_install_paths": []
+    },
+    {
+     "token": "Alignment=2",
+     "commit_count": 1,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "head_paths": [
+      "src/treecut/output/narration.py"
+     ],
+     "e_install_paths": [
+      "treecut\\output\\narration.py"
+     ]
+    },
+    {
+     "token": "CAPTION_LINE_TOO_LONG",
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "head_paths": [],
+     "e_install_paths": []
+    }
+   ],
+   "head_paths_union": [
+    "docs/TREECUT_B1_NARRATION_DURATION_CONTRACT_REPORT.md",
+    "docs/TREECUT_E2E_PUBLISHABILITY_CONTRACT_AUDIT.md",
+    "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+    "scripts/audit_treecut_b0h_freeze.py",
+    "scripts/audit_treecut_b1_final.py",
+    "scripts/b007_v091_v2.py",
+    "src/treecut/output/narration.py"
+   ],
+   "e_install_paths_union": [
+    "treecut\\output\\narration.py"
+   ],
+   "first_commit_overall": {
+    "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+    "ct": "1787134638",
+    "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+   },
+   "last_commit_overall": {
+    "sha": "f378fda23404655004c9aa4e8c018e40805c5b35",
+    "ct": "1788936062",
+    "subject": "B1 narration duration contract + fail-closed QA (baseline 0c95e5c): three strategies FIT_SCRIPT_TO_TARGET(explicit NotImplementedError, never silent pad)/FIT_VIDEO_TO_NARRATION(plan=real narration)/STRICT_REJECT(default); real-TTS-first pipeline (narration.wav synthesized once + measured before plan/render, prebuilt_audio single-source in narration.py); QA fail-codes NARRATION_TOO_SHORT/NARRATION_TOO_LONG/VOICE_COVERAGE_LOW/VOICE_TAIL_TOO_LONG/BGM_ONLY_AUDIO/DURATION_CONTRACT_NOT_RUN with fields narration_duration/video_duration/narration_coverage/narration_tail_gap/intentional_outro/duration_contract_pass; report statuses split (TECHNICAL_RENDER_PASS/DURATION_CONTRACT_PASS true; SUBTITLE/SEMANTIC/VISUAL/CONTENT/HUMAN/PUBLISH false - B1 scope honest); FAIL repro: 64-char real TTS 11.45s + 25s strict => NARRATION_TOO_SHORT, STATUS failed, no artifacts; SUCCESS repro: new run 20260909_143916_370553 139-char 24.802s narration => coverage 99.21%, tail 0.198s, new sha cd306e11, draft generated; env note persistent TREECUT_DATA_ROOT=batch1 inherited; E install synced identical; unit 11/11 + regression 27 passed; compile clean; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+   },
+   "any_history_hit": true,
+   "in_head": true
+  },
+  {
+   "id": "source_gate",
+   "name": "干净生产源门 (source gate)",
+   "tokens": [
+    {
+     "token": "production_source",
+     "commit_count": 10,
+     "first_commit": {
+      "sha": "9371862202ec09ef745f69e82dfe9b233c1b0569",
+      "ct": "1788335607",
+      "subject": "V0.8.5: PRODUCTION PATH PREFLIGHT PASS — B007 real segments→timeline→real TTS/SRT→TECHNICAL_SMOKE.mp4 (h264 540x960 23.2s+audio, decodable), 0 B003 contamination, all 8 QA gates TRUE; legacy render_video_plan usable w/ WinGet ffmpeg; jianying partial (bgm=None unsupported, GUI not required); 8 new tests + core 264 passed; docs report"
+     },
+     "last_commit": {
+      "sha": "afcdd7d6967ef080e465ebac5b66a754346525c4",
+      "ct": "1788921101",
+      "subject": "B0 source-of-truth (2/3): A0R2 errata recorded (ffmpeg=8.0.1 not 8.1.1; TTS hash claim limited to 5 key files+count/bytes; H1/H2 REACHED_IN_E2E_RUN; NEXT_BLOCKER=B0_SOURCE_OF_TRUTH_RECONCILIATION; CLIP error => E2E proves chain not selection quality) + compact evidence archive (RUN_MANIFEST/reproduction_result/report key fields/output manifest sha256+ffprobe/TTS A-B meta/junit sha256+exit, no binaries); paths.py model-root resolution priority env > local runtime pointer (data_root/config/models_path.txt via configure_models_path) > install_root/models; 5 unit tests test_b0_model_root_resolution pass; E sync of paths.py; provenance rerun after full E sync: 221/221 E_CONTENT_EQ_HEAD => BASELINE_SELF_CONTAINED=YES"
+     },
+     "head_paths": [
+      "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
+      "docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+      "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_STAGE8_G1_EXECUTION_REPORT.md",
+      "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+      "reports/storage/TREECUT_B0_SOURCE_PROVENANCE.json",
+      "reports/storage/TREECUT_CODE_MANIFEST_V1.json",
+      "reports/storage/TREECUT_G1_EVALUATION_V1.json",
+      "reports/storage/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.json",
+      "reports/storage/TREECUT_PRODUCTION_CONTRACT_PROBE_V1.json",
+      "reports/storage/TREECUT_STAGE8_G1_EXECUTION_REPORT.md",
+      "reports/storage/TREECUT_SYSTEM_MASTER_AUDIT_V1.json",
+      "reports/storage/audit_evidence/_work/services_inv.txt",
+      "reports/storage/audit_evidence/ev_layerA_imports.json",
+      "scripts/b007_v091_v2.py",
+      "scripts/mmv_a3_holdout_freeze.py",
+      "scripts/overnight_contract_probe.py",
+      "scripts/sprintv2_p0.py",
+      "tests/test_g1_source_gate.py",
+      "tests/test_production_path_preflight_v01.py",
+      "tests/test_source_audit_r11.py"
+     ],
+     "e_install_paths": []
+    },
+    {
+     "token": "source_role",
+     "commit_count": 22,
+     "first_commit": {
+      "sha": "ffbf051a46dd1c6088a88cebbe5378fcdcda3edc",
+      "ct": "1788342575",
+      "subject": "路线对齐: Stage0-10唯一主图+STAGE8冻结; G1源闸门实施计划(复用现状/100段验收集/时间估计) 待验收"
+     },
+     "last_commit": {
+      "sha": "02c1fc8abb4f28ec45745bb4e484a4efa0bb5bef",
+      "ct": "1788861564",
+      "subject": "audit: A0 R1 evidence closure + current reproduction + capability regrade (baseline bdc7506, machine-collected evidence only) - DEFECT AUDIT confirms all 9 A0 defects (hardcoded dicts/baseline conflict/historical-vs-target E2E mixed/historical-as-current/overgrade/P2 count/tests self-verify/shortest-MVP incomplete/\\\\\\\\X1 path mapping wrong) and closes each with live DB/git/disk queries; REAL BASELINE: start clean (0 untracked at bdc7506), generation-time 16 untracked = A0R1 files only (tracked clean); PROD media paths corrected to 15246/15378 valid (A0 wrong-0 fixed); CAM db real counts assets 22466/segments 41834 (0 orphans)/transcripts 51543/ocr 289218; HISTORICAL 4 projects = 2 success SAME-INPUT rerun (unique_inputs=1, not 2 independent E2E); CURRENT REPRODUCTION on bdc7506 reaches render (01_高清画面底片.mp4 15.7MB vertical real) then blocked TTS_MODEL_LOAD_CHINESE_PATH (sherpa date.fst under Chinese install path) -> current full-chain E2E NOT proven; THREE E2E STATES split: A historical reduced chain NONE-blocker, B current reduced chain TTS blocker, C target chain first blocker SCRIPT_TO_BEAT_CLAIM_NOT_FOUND; CAPABILITY regrade E2E_PROVEN(11)->HISTORICALLY_E2E_PROVEN where historical-only, F2 render E2E_PROVEN_CURRENT_RENDER, G3 BLOCKED_AT_LOAD, H3 USER_USABLE_NOT_PROVEN_LIVE; GAP counts P0=3 P1=4 P2=2 R=3 verified; TEST TRUTH: 7 GPU failures = ENVIRONMENT_MISMATCH_CONFIRMED (runtime py CUDA passes stage2 13/13), 5 = TEST_ISOLATION_DEFECT kept; final.py hardcoded actual_baseline defect found+fixed to machine-derived; A0R1 tests 9/9 PASS read evidence files with sha256; N0 preserved; STOP - awaiting architect ruling"
+     },
+     "head_paths": [
+      "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
+      "docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_STAGE8_G1_EXECUTION_REPORT.md",
+      "docs/TREECUT_STAGE8_G1_PLAN.md",
+      "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+      "reports/storage/TREECUT_A0R1_RAW_DB_EVIDENCE.json",
+      "reports/storage/TREECUT_A0_DATA_IDENTITY_MAP.json",
+      "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_A0_PRODUCT_GAP_MAP.json",
+      "reports/storage/TREECUT_G1_CONTAMINATION_RULES_V1.json",
+      "reports/storage/TREECUT_G1_EVALUATION_V1.json",
+      "reports/storage/TREECUT_MMVV_A3_HOLDOUT_MANIFEST.json",
+      "reports/storage/TREECUT_PROJECT_STATE_V1.json",
+      "reports/storage/TREECUT_STAGE8_G1_EXECUTION_REPORT.md",
+      "reports/storage/TREECUT_SYSTEM_MASTER_AUDIT_V1.json",
+      "reports/storage/_g1_reviewpkg_meta.json",
+      "reports/storage/audit_evidence/_db_counts.json",
+      "reports/storage/audit_evidence/ev_db_dist.json",
+      "reports/storage/audit_evidence/ev_db_dist2.json",
+      "scripts/_g1_reviewpkg_meta.py",
+      "scripts/audit_treecut_product_a0_caps.py",
+      "scripts/audit_treecut_product_a0_map.py",
+      "scripts/audit_treecut_product_a0_rest.py",
+      "scripts/b007_g1_source_gate.py"
+     ],
+     "e_install_paths": [
+      "treecut\\services\\claim_visual.py",
+      "treecut\\services\\production_source.py"
+     ]
+    },
+    {
+     "token": "clean_raw",
+     "commit_count": 1,
+     "first_commit": {
+      "sha": "dc058b44bbeee47967f79af1d64ff9b545d6df82",
+      "ct": "1788345914",
+      "subject": "STAGE8 G1 PRODUCTION SOURCE GATE 执行: 角色表100%覆盖+OCR污染检测(检出S2混合27条等)+SAMPLE100/L2(qwen非真值)/L3待审45条+ProductionSourceService替代pick_clean+10测试过 — 建议PASS_WITH_LIMITATIONS(待架构师L3)"
+     },
+     "last_commit": {
+      "sha": "dc058b44bbeee47967f79af1d64ff9b545d6df82",
+      "ct": "1788345914",
+      "subject": "STAGE8 G1 PRODUCTION SOURCE GATE 执行: 角色表100%覆盖+OCR污染检测(检出S2混合27条等)+SAMPLE100/L2(qwen非真值)/L3待审45条+ProductionSourceService替代pick_clean+10测试过 — 建议PASS_WITH_LIMITATIONS(待架构师L3)"
+     },
+     "head_paths": [
+      "tests/test_g1_source_gate.py"
+     ],
+     "e_install_paths": []
+    },
+    {
+     "token": "SourceGate",
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "head_paths": [],
+     "e_install_paths": []
+    },
+    {
+     "token": "SUBTITLE_HYGIENE_NOT_RUN",
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "head_paths": [],
+     "e_install_paths": []
+    }
+   ],
+   "head_paths_union": [
+    "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
+    "docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md",
+    "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+    "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+    "docs/TREECUT_STAGE8_G1_EXECUTION_REPORT.md",
+    "docs/TREECUT_STAGE8_G1_PLAN.md",
+    "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+    "reports/storage/TREECUT_A0R1_RAW_DB_EVIDENCE.json",
+    "reports/storage/TREECUT_A0_DATA_IDENTITY_MAP.json",
+    "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+    "reports/storage/TREECUT_A0_PRODUCT_GAP_MAP.json",
+    "reports/storage/TREECUT_B0_SOURCE_PROVENANCE.json",
+    "reports/storage/TREECUT_CODE_MANIFEST_V1.json",
+    "reports/storage/TREECUT_G1_CONTAMINATION_RULES_V1.json",
+    "reports/storage/TREECUT_G1_EVALUATION_V1.json",
+    "reports/storage/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.json",
+    "reports/storage/TREECUT_MMVV_A3_HOLDOUT_MANIFEST.json",
+    "reports/storage/TREECUT_PRODUCTION_CONTRACT_PROBE_V1.json",
+    "reports/storage/TREECUT_PROJECT_STATE_V1.json",
+    "reports/storage/TREECUT_STAGE8_G1_EXECUTION_REPORT.md",
+    "reports/storage/TREECUT_SYSTEM_MASTER_AUDIT_V1.json",
+    "reports/storage/_g1_reviewpkg_meta.json",
+    "reports/storage/audit_evidence/_db_counts.json",
+    "reports/storage/audit_evidence/_work/services_inv.txt",
+    "reports/storage/audit_evidence/ev_db_dist.json",
+    "reports/storage/audit_evidence/ev_db_dist2.json",
+    "reports/storage/audit_evidence/ev_layerA_imports.json",
+    "scripts/_g1_reviewpkg_meta.py",
+    "scripts/audit_treecut_product_a0_caps.py",
+    "scripts/audit_treecut_product_a0_map.py",
+    "scripts/audit_treecut_product_a0_rest.py",
+    "scripts/b007_g1_source_gate.py",
+    "scripts/b007_v091_v2.py",
+    "scripts/mmv_a3_holdout_freeze.py",
+    "scripts/overnight_contract_probe.py",
+    "scripts/sprintv2_p0.py",
+    "tests/test_g1_source_gate.py",
+    "tests/test_production_path_preflight_v01.py",
+    "tests/test_source_audit_r11.py"
+   ],
+   "e_install_paths_union": [
+    "treecut\\services\\claim_visual.py",
+    "treecut\\services\\production_source.py"
+   ],
+   "first_commit_overall": {
+    "sha": "9371862202ec09ef745f69e82dfe9b233c1b0569",
+    "ct": "1788335607",
+    "subject": "V0.8.5: PRODUCTION PATH PREFLIGHT PASS — B007 real segments→timeline→real TTS/SRT→TECHNICAL_SMOKE.mp4 (h264 540x960 23.2s+audio, decodable), 0 B003 contamination, all 8 QA gates TRUE; legacy render_video_plan usable w/ WinGet ffmpeg; jianying partial (bgm=None unsupported, GUI not required); 8 new tests + core 264 passed; docs report"
+   },
+   "last_commit_overall": {
+    "sha": "afcdd7d6967ef080e465ebac5b66a754346525c4",
+    "ct": "1788921101",
+    "subject": "B0 source-of-truth (2/3): A0R2 errata recorded (ffmpeg=8.0.1 not 8.1.1; TTS hash claim limited to 5 key files+count/bytes; H1/H2 REACHED_IN_E2E_RUN; NEXT_BLOCKER=B0_SOURCE_OF_TRUTH_RECONCILIATION; CLIP error => E2E proves chain not selection quality) + compact evidence archive (RUN_MANIFEST/reproduction_result/report key fields/output manifest sha256+ffprobe/TTS A-B meta/junit sha256+exit, no binaries); paths.py model-root resolution priority env > local runtime pointer (data_root/config/models_path.txt via configure_models_path) > install_root/models; 5 unit tests test_b0_model_root_resolution pass; E sync of paths.py; provenance rerun after full E sync: 221/221 E_CONTENT_EQ_HEAD => BASELINE_SELF_CONTAINED=YES"
+   },
+   "any_history_hit": true,
+   "in_head": true
+  },
+  {
+   "id": "beat_claim",
+   "name": "Beat/Claim 拆解",
+   "tokens": [
+    {
+     "token": "claim_visual",
+     "commit_count": 16,
+     "first_commit": {
+      "sha": "f4541473d36e1c0b314da3a4ddbfe7781b48eca5",
+      "ct": "1788348985",
+      "subject": "SprintV2 G2/G3 逻辑层: ActionSubclipService(动作窗/语义边界分离/长度指导) + ClaimVisualMatcher(硬闸/禁止推断/StoryMode/薄抽) 18测试过; qwen时序探测后台跑"
+     },
+     "last_commit": {
+      "sha": "afcdd7d6967ef080e465ebac5b66a754346525c4",
+      "ct": "1788921101",
+      "subject": "B0 source-of-truth (2/3): A0R2 errata recorded (ffmpeg=8.0.1 not 8.1.1; TTS hash claim limited to 5 key files+count/bytes; H1/H2 REACHED_IN_E2E_RUN; NEXT_BLOCKER=B0_SOURCE_OF_TRUTH_RECONCILIATION; CLIP error => E2E proves chain not selection quality) + compact evidence archive (RUN_MANIFEST/reproduction_result/report key fields/output manifest sha256+ffprobe/TTS A-B meta/junit sha256+exit, no binaries); paths.py model-root resolution priority env > local runtime pointer (data_root/config/models_path.txt via configure_models_path) > install_root/models; 5 unit tests test_b0_model_root_resolution pass; E sync of paths.py; provenance rerun after full E sync: 221/221 E_CONTENT_EQ_HEAD => BASELINE_SELF_CONTAINED=YES"
+     },
+     "head_paths": [
+      "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
+      "docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+      "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0.md",
+      "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+      "reports/storage/TREECUT_A0R2_BEAT_CLAIM_SEARCH.json",
+      "reports/storage/TREECUT_A0_CURRENT_ARCHITECTURE_MAP.json",
+      "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_A0_PRODUCT_GAP_MAP.json",
+      "reports/storage/TREECUT_B0_SOURCE_PROVENANCE.json",
+      "reports/storage/TREECUT_CODE_MANIFEST_V1.json",
+      "reports/storage/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.json",
+      "reports/storage/TREECUT_OVERNIGHT_MASTER_REPORT_2026-09-05.json",
+      "reports/storage/TREECUT_OVERNIGHT_PRODUCTION_DRYRUN_V1.json",
+      "reports/storage/TREECUT_OVERNIGHT_PYTEST_MATRIX_V1.json",
+      "reports/storage/TREECUT_PRODUCTION_CONTRACT_PROBE_V1.json",
+      "reports/storage/TREECUT_PROJECT_STATE_V1.json",
+      "reports/storage/audit_evidence/_work/services_inv.txt",
+      "reports/storage/audit_evidence/ev_layerA_imports.json",
+      "reports/storage/audit_evidence/ev_tests.json",
+      "scripts/audit_treecut_product_a0_caps.py",
+      "scripts/audit_treecut_product_a0_map.py",
+      "scripts/audit_treecut_product_a0_rest.py",
+      "scripts/overnight_contract_probe.py"
+     ],
+     "e_install_paths": []
+    },
+    {
+     "token": "visual_beat",
+     "commit_count": 10,
+     "first_commit": {
+      "sha": "43eaee4b374a8341a1089e089d499689c55ad0d8",
+      "ct": "1788404149",
+      "subject": "R波修复(吸收2026-09-03人审): R1反向动作硬闸 + R2方向门/歧义丢弃/静态≠动作 + R4 16→5视觉Beat + R5无候选脚本改写审计 + R7叙事近重WARNING+贡献可解释 + 裁决负例黑名单 + idx63关闭(GARMENT_ENVIRONMENT_TEXT/APPROVED) + 裁决JSON入库; 364/2/0"
+     },
+     "last_commit": {
+      "sha": "afcdd7d6967ef080e465ebac5b66a754346525c4",
+      "ct": "1788921101",
+      "subject": "B0 source-of-truth (2/3): A0R2 errata recorded (ffmpeg=8.0.1 not 8.1.1; TTS hash claim limited to 5 key files+count/bytes; H1/H2 REACHED_IN_E2E_RUN; NEXT_BLOCKER=B0_SOURCE_OF_TRUTH_RECONCILIATION; CLIP error => E2E proves chain not selection quality) + compact evidence archive (RUN_MANIFEST/reproduction_result/report key fields/output manifest sha256+ffprobe/TTS A-B meta/junit sha256+exit, no binaries); paths.py model-root resolution priority env > local runtime pointer (data_root/config/models_path.txt via configure_models_path) > install_root/models; 5 unit tests test_b0_model_root_resolution pass; E sync of paths.py; provenance rerun after full E sync: 221/221 E_CONTENT_EQ_HEAD => BASELINE_SELF_CONTAINED=YES"
+     },
+     "head_paths": [
+      "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
+      "docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+      "docs/TREECUT_MASTER_PRODUCT_AUDIT_A0R2.md",
+      "docs/TREECUT_MULTI_MODULE_VISUAL_VALIDATION_MASTER_V1.md",
+      "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+      "reports/storage/TREECUT_A0R2_BEAT_CLAIM_SEARCH.json",
+      "reports/storage/TREECUT_A0R2_CORRECTED_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_A0_CURRENT_ARCHITECTURE_MAP.json",
+      "reports/storage/TREECUT_B0_SOURCE_PROVENANCE.json",
+      "reports/storage/TREECUT_CODE_MANIFEST_V1.json",
+      "reports/storage/TREECUT_CURRENT_VIDEO_EXAMPLE_LABELS_V1.json",
+      "reports/storage/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.json",
+      "reports/storage/TREECUT_PROJECT_STATE_V1.json",
+      "reports/storage/TREECUT_VISUAL_SEMANTIC_KB_V1.json",
+      "reports/storage/TREECUT_WORKBENCH_PROJECT_V1.json",
+      "reports/storage/audit_evidence/_work/services_inv.txt",
+      "reports/storage/audit_evidence/ev_layerA_imports.json",
+      "scripts/audit_treecut_a0r2_final.py",
+      "scripts/audit_treecut_product_a0_map.py",
+      "scripts/sprintv2_v2int.py",
+      "scripts/sprintv2_v2map.py",
+      "src/treecut/services/mmvl_master_v1.py",
+      "src/treecut/services/visual_beat.py"
+     ],
+     "e_install_paths": [
+      "treecut\\services\\mmvl_master_v1.py",
+      "treecut\\services\\visual_beat.py"
+     ]
+    },
+    {
+     "token": "BeatClaim",
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "head_paths": [],
+     "e_install_paths": []
+    },
+    {
+     "token": "beat_id",
+     "commit_count": 17,
+     "first_commit": {
+      "sha": "fc7029925d3d71590f6132963f66bb968dfda79a",
+      "ct": "1787733389",
+      "subject": "feat(phase1): Canonical Data Spine — 统一身份(media→asset→segment)/Asset&SegmentService/shot_usage(0002)/ID矩阵/追溯100%"
+     },
+     "last_commit": {
+      "sha": "bdc7506005c3914049f56d6c38020a0fc2797b41",
+      "ct": "1788857790",
+      "subject": "audit: MASTER PRODUCT GOAL ALIGNMENT A0 (read-only full product capability audit, baseline 740ca94) - REAL finding: production chain (desktop Tk -> ProductionService._create -> load_candidates(real 4-table DB) -> BGE/CLIP semantic match -> edit plan -> ffmpeg render -> melo TTS -> subtitle burn -> BGM -> Jianying draft -> QA) is E2E_PROVEN with real 2026-08-06 outputs (TreeCut_成片.mp4 1080x1080@30 + real Jianying draft_content + cover + report quality passed); capability matrix 33 items (E2E_PROVEN 11, DATA_CONNECTED 12, USER_USABLE 3, CODE_EXISTS 4, NOT_FOUND 2, UNIT_TESTED 1); 8 domains A-H assessed; KEY GAPS (product P0): production chain has NO script->beat/claim parse layer (D2 NOT_FOUND, whole-text match), Source/A4 gate is CAM-research not in prod matching, historical E2E media 5/6 paths invalid (needs rescan); CAM/EH/GEOM/N0 = SHADOW_NOT_PRODUCTION_CONNECTED (desktop imports no CAM module), solves reference evidence only; N0 preserved (N1=NO/PRESENT=YES/ESTABLISHED=NO/GEOM=NO); test truth: 586 collected/570 pass/12 fail/4 xfail in one run (12 fail = 7 env GPU-under-system-py + 5 order-dependent-pass-alone); 46 EH tests = artifact-regression; human feedback consumed PARTIAL (DB+ranking not embedding); voice clone NOT_FOUND (melo TTS); user workflow PARTIAL; two-track roadmap: Track A MVP (reuse retrieval/render/TTS/subtitle/BGM/draft + build script-beat layer + manual gate + rescan) NOT blocked by Track B research; risks P0x2 P1x3; consistency 7/7; no secrets/large files"
+     },
+     "head_paths": [
+      "docs/PHASE1_CANONICAL_DATA_SPINE.md",
+      "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+      "migrations/0002_shot_usage_visual_clusters.sql",
+      "reports/storage/B007_FIRST_REAL_SCRIPT_BEATS_V1.json",
+      "reports/storage/B007_V2_SCRIPT_BEATS_V1.json",
+      "reports/storage/TREECUT_A0_DATA_IDENTITY_MAP.json",
+      "reports/storage/TREECUT_CURRENT_VIDEO_EXAMPLE_LABELS_V1.json",
+      "reports/storage/TREECUT_G3_ATOMIC_CLAIMS_V1.json",
+      "reports/storage/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.json",
+      "reports/storage/TREECUT_VISUAL_SEMANTIC_KB_V1.json",
+      "reports/storage/TREECUT_WORKBENCH_PROJECT_V1.json",
+      "reports/storage/human_review_package/TREECUT_G3_CHATGPT_REVIEW_V1.json",
+      "scripts/audit_treecut_product_a0_map.py",
+      "scripts/b007_v091_cp23.py",
+      "scripts/b007_v09_pilot.py",
+      "scripts/hrp_g3.py",
+      "scripts/sprintv2_g2_build.py",
+      "scripts/sprintv2_g3_dedup_run.py",
+      "scripts/sprintv2_ui_placeholder.py",
+      "scripts/sprintv2_ui_smoke.py",
+      "src/treecut/services/claim_visual.py",
+      "src/treecut/services/shot_usage.py",
+      "src/treecut/services/visual_beat.py",
+      "src/treecut/services/visual_understanding_v2.py",
+      "tests/test_g3_claim_visual.py"
+     ],
+     "e_install_paths": [
+      "treecut\\services\\claim_visual.py",
+      "treecut\\services\\shot_usage.py",
+      "treecut\\services\\visual_beat.py",
+      "treecut\\services\\visual_understanding_v2.py"
+     ]
+    }
+   ],
+   "head_paths_union": [
+    "docs/PHASE1_CANONICAL_DATA_SPINE.md",
+    "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
+    "docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md",
+    "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+    "docs/TREECUT_MASTER_PRODUCT_AUDIT_A0R2.md",
+    "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0.md",
+    "docs/TREECUT_MULTI_MODULE_VISUAL_VALIDATION_MASTER_V1.md",
+    "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+    "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+    "migrations/0002_shot_usage_visual_clusters.sql",
+    "reports/storage/B007_FIRST_REAL_SCRIPT_BEATS_V1.json",
+    "reports/storage/B007_V2_SCRIPT_BEATS_V1.json",
+    "reports/storage/TREECUT_A0R2_BEAT_CLAIM_SEARCH.json",
+    "reports/storage/TREECUT_A0R2_CORRECTED_CAPABILITY_MATRIX.json",
+    "reports/storage/TREECUT_A0_CURRENT_ARCHITECTURE_MAP.json",
+    "reports/storage/TREECUT_A0_DATA_IDENTITY_MAP.json",
+    "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+    "reports/storage/TREECUT_A0_PRODUCT_GAP_MAP.json",
+    "reports/storage/TREECUT_B0_SOURCE_PROVENANCE.json",
+    "reports/storage/TREECUT_CODE_MANIFEST_V1.json",
+    "reports/storage/TREECUT_CURRENT_VIDEO_EXAMPLE_LABELS_V1.json",
+    "reports/storage/TREECUT_G3_ATOMIC_CLAIMS_V1.json",
+    "reports/storage/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.json",
+    "reports/storage/TREECUT_OVERNIGHT_MASTER_REPORT_2026-09-05.json",
+    "reports/storage/TREECUT_OVERNIGHT_PRODUCTION_DRYRUN_V1.json",
+    "reports/storage/TREECUT_OVERNIGHT_PYTEST_MATRIX_V1.json",
+    "reports/storage/TREECUT_PRODUCTION_CONTRACT_PROBE_V1.json",
+    "reports/storage/TREECUT_PROJECT_STATE_V1.json",
+    "reports/storage/TREECUT_VISUAL_SEMANTIC_KB_V1.json",
+    "reports/storage/TREECUT_WORKBENCH_PROJECT_V1.json",
+    "reports/storage/audit_evidence/_work/services_inv.txt",
+    "reports/storage/audit_evidence/ev_layerA_imports.json",
+    "reports/storage/audit_evidence/ev_tests.json",
+    "reports/storage/human_review_package/TREECUT_G3_CHATGPT_REVIEW_V1.json",
+    "scripts/audit_treecut_a0r2_final.py",
+    "scripts/audit_treecut_product_a0_caps.py",
+    "scripts/audit_treecut_product_a0_map.py",
+    "scripts/audit_treecut_product_a0_rest.py",
+    "scripts/b007_v091_cp23.py",
+    "scripts/b007_v09_pilot.py",
+    "scripts/hrp_g3.py",
+    "scripts/overnight_contract_probe.py",
+    "scripts/sprintv2_g2_build.py",
+    "scripts/sprintv2_g3_dedup_run.py",
+    "scripts/sprintv2_ui_placeholder.py",
+    "scripts/sprintv2_ui_smoke.py",
+    "scripts/sprintv2_v2int.py",
+    "scripts/sprintv2_v2map.py",
+    "src/treecut/services/claim_visual.py",
+    "src/treecut/services/mmvl_master_v1.py",
+    "src/treecut/services/shot_usage.py",
+    "src/treecut/services/visual_beat.py",
+    "src/treecut/services/visual_understanding_v2.py",
+    "tests/test_g3_claim_visual.py"
+   ],
+   "e_install_paths_union": [
+    "treecut\\services\\claim_visual.py",
+    "treecut\\services\\mmvl_master_v1.py",
+    "treecut\\services\\shot_usage.py",
+    "treecut\\services\\visual_beat.py",
+    "treecut\\services\\visual_understanding_v2.py"
+   ],
+   "first_commit_overall": {
+    "sha": "fc7029925d3d71590f6132963f66bb968dfda79a",
+    "ct": "1787733389",
+    "subject": "feat(phase1): Canonical Data Spine — 统一身份(media→asset→segment)/Asset&SegmentService/shot_usage(0002)/ID矩阵/追溯100%"
+   },
+   "last_commit_overall": {
+    "sha": "afcdd7d6967ef080e465ebac5b66a754346525c4",
+    "ct": "1788921101",
+    "subject": "B0 source-of-truth (2/3): A0R2 errata recorded (ffmpeg=8.0.1 not 8.1.1; TTS hash claim limited to 5 key files+count/bytes; H1/H2 REACHED_IN_E2E_RUN; NEXT_BLOCKER=B0_SOURCE_OF_TRUTH_RECONCILIATION; CLIP error => E2E proves chain not selection quality) + compact evidence archive (RUN_MANIFEST/reproduction_result/report key fields/output manifest sha256+ffprobe/TTS A-B meta/junit sha256+exit, no binaries); paths.py model-root resolution priority env > local runtime pointer (data_root/config/models_path.txt via configure_models_path) > install_root/models; 5 unit tests test_b0_model_root_resolution pass; E sync of paths.py; provenance rerun after full E sync: 221/221 E_CONTENT_EQ_HEAD => BASELINE_SELF_CONTAINED=YES"
+   },
+   "any_history_hit": true,
+   "in_head": true
+  },
+  {
+   "id": "feedback_loop",
+   "name": "人工反馈消费 (FeedbackStore)",
+   "tokens": [
+    {
+     "token": "FeedbackStore",
+     "commit_count": 4,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "cec804039e64f52fe8fe3231a9a36d0aed477664",
+      "ct": "1788867216",
+      "subject": "audit: A0 R2 evidence chain closure + TTS controlled A/B (baseline 02c1fc8, preflight raw git captured to repo-external audit temp FIRST) - adjudications A0R1_SUBSTANTIVE_FINDINGS=PROVISIONALLY_ACCEPTED / A0R1_EVIDENCE_CLOSURE=NO / TEMP_TTS_ASCII_AB=YES / TRACK_A=NO / N1-GEOM-CAM=NO; SOURCE_PROVENANCE over 101 E-install running .py with git ls-files/cat-file/rev-parse rc+stdout+stderr and 3-way SHA-256 (EOL-normalized, autocrlf=true): 85 E_CONTENT_EQ_HEAD / 12 NOT_IN_HEAD (src/treecut/models pkg entirely gitignored by repo .gitignore 'models/' pattern, never in git incl tts_local.py/vision_florence.py/cache.py - root cause of A0R1 literal HEAD:... records) / 4 E_CONTENT_DIFFERS_HEAD (settings/desktop/library-init/main) => BASELINE_SELF_CONTAINED=NO P0; BEAT/CLAIM machine search: production import closure 21 modules 0 beat/claim => TARGET_BEAT_LAYER=NOT_FOUND; HISTORICAL canonical-hash (full selling+narration+media+plan) unique_inputs=1 (2 success same input) + relpath-keyed manifest; RAW_TEST_RUNS parsed from pytest JUnit+raw logs (no hardcoded counts): system_full 614/12 runtime_full 614/3(collection) reorder_first 614/10, classification 7 ENVIRONMENT_MISMATCH (GPU; runtime CUDA passes) + 2 TEST_ISOLATION_DEFECT (order: iso pass + reorder-first pass) + 3 TEST_ISOLATION_DEFECT_COLLECTION (r11 workbench pass-alone fail-any-suite-position: collection-time 'server' sys.modules collision), audit self-tests excluded via product_failures; TTS controlled A/B: A Chinese-path sherpa date.fst open fail rc1, B pure-ASCII E-copy same 20 files/182MB/hashes rc0 7.059s wav => TTS_NON_ASCII_ROOT_CAUSE=CONFIRMED (no original model touched, no junction); CURRENT REDUCED E2E one approved run via single formal runner (unique run_id a0r2_repro_20260908_184606_986514, ASCII models root env TREECUT_MODEL_ROOT supported by code, DB copy only) PASS 1857s: 01-03 mp4 + TreeCut_成片.mp4 8.95MB 1080x1920@30 audio 25.1s + Jianying draft + cover + production_report quality passed=True (40 matches) + RUN_MANIFEST + imported-module source sha; extra machine finding: Chinese-CLIP semantic re-score errors ('BaseModelOutputWithPooling' has no 'norm', clip_scored=0, BGE 3260 fallback); corrected capability matrix ASR/OCR/vision/segment => DATA_PRESENT_SHADOW/NOT_PRODUCTION_CONNECTED; corrected gap map split ROOT_CAUSE(4 incl baseline-not-self-contained)/ACCEPTANCE_GATE(7 incl 5 MVP missing); data-driven tests test_audit_treecut_a0r2.py 12/12 read evidence files with sha256; EVIDENCE_INDEX 11 entries; no secrets/large files; STOP - awaiting architect ruling on permanent ASCII model-root fix"
+     },
+     "head_paths": [
+      "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0R1.md",
+      "reports/storage/TREECUT_A0R1_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_A0R1_SOURCE_EVIDENCE.json",
+      "reports/storage/TREECUT_A0R2_CORRECTED_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+      "scripts/audit_treecut_a0r1_baseline.py",
+      "scripts/audit_treecut_a0r1_source.py",
+      "scripts/audit_treecut_a0r2_final.py",
+      "scripts/audit_treecut_product_a0_caps.py",
+      "src/treecut/api.py",
+      "src/treecut/application/production.py",
+      "src/treecut/desktop.py",
+      "src/treecut/learning/__init__.py",
+      "src/treecut/learning/feedback.py",
+      "src/treecut/stats.py"
+     ],
+     "e_install_paths": [
+      "treecut\\api.py",
+      "treecut\\application\\production.py",
+      "treecut\\desktop.py",
+      "treecut\\learning\\__init__.py",
+      "treecut\\learning\\feedback.py",
+      "treecut\\stats.py"
+     ]
+    },
+    {
+     "token": "adjustments",
+     "commit_count": 5,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "cec804039e64f52fe8fe3231a9a36d0aed477664",
+      "ct": "1788867216",
+      "subject": "audit: A0 R2 evidence chain closure + TTS controlled A/B (baseline 02c1fc8, preflight raw git captured to repo-external audit temp FIRST) - adjudications A0R1_SUBSTANTIVE_FINDINGS=PROVISIONALLY_ACCEPTED / A0R1_EVIDENCE_CLOSURE=NO / TEMP_TTS_ASCII_AB=YES / TRACK_A=NO / N1-GEOM-CAM=NO; SOURCE_PROVENANCE over 101 E-install running .py with git ls-files/cat-file/rev-parse rc+stdout+stderr and 3-way SHA-256 (EOL-normalized, autocrlf=true): 85 E_CONTENT_EQ_HEAD / 12 NOT_IN_HEAD (src/treecut/models pkg entirely gitignored by repo .gitignore 'models/' pattern, never in git incl tts_local.py/vision_florence.py/cache.py - root cause of A0R1 literal HEAD:... records) / 4 E_CONTENT_DIFFERS_HEAD (settings/desktop/library-init/main) => BASELINE_SELF_CONTAINED=NO P0; BEAT/CLAIM machine search: production import closure 21 modules 0 beat/claim => TARGET_BEAT_LAYER=NOT_FOUND; HISTORICAL canonical-hash (full selling+narration+media+plan) unique_inputs=1 (2 success same input) + relpath-keyed manifest; RAW_TEST_RUNS parsed from pytest JUnit+raw logs (no hardcoded counts): system_full 614/12 runtime_full 614/3(collection) reorder_first 614/10, classification 7 ENVIRONMENT_MISMATCH (GPU; runtime CUDA passes) + 2 TEST_ISOLATION_DEFECT (order: iso pass + reorder-first pass) + 3 TEST_ISOLATION_DEFECT_COLLECTION (r11 workbench pass-alone fail-any-suite-position: collection-time 'server' sys.modules collision), audit self-tests excluded via product_failures; TTS controlled A/B: A Chinese-path sherpa date.fst open fail rc1, B pure-ASCII E-copy same 20 files/182MB/hashes rc0 7.059s wav => TTS_NON_ASCII_ROOT_CAUSE=CONFIRMED (no original model touched, no junction); CURRENT REDUCED E2E one approved run via single formal runner (unique run_id a0r2_repro_20260908_184606_986514, ASCII models root env TREECUT_MODEL_ROOT supported by code, DB copy only) PASS 1857s: 01-03 mp4 + TreeCut_成片.mp4 8.95MB 1080x1920@30 audio 25.1s + Jianying draft + cover + production_report quality passed=True (40 matches) + RUN_MANIFEST + imported-module source sha; extra machine finding: Chinese-CLIP semantic re-score errors ('BaseModelOutputWithPooling' has no 'norm', clip_scored=0, BGE 3260 fallback); corrected capability matrix ASR/OCR/vision/segment => DATA_PRESENT_SHADOW/NOT_PRODUCTION_CONNECTED; corrected gap map split ROOT_CAUSE(4 incl baseline-not-self-contained)/ACCEPTANCE_GATE(7 incl 5 MVP missing); data-driven tests test_audit_treecut_a0r2.py 12/12 read evidence files with sha256; EVIDENCE_INDEX 11 entries; no secrets/large files; STOP - awaiting architect ruling on permanent ASCII model-root fix"
+     },
+     "head_paths": [
+      "docs/PRODUCTION_GRADE_GAP_AUDIT.md",
+      "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0.md",
+      "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0R1.md",
+      "reports/storage/TREECUT_A0R1_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_A0R2_CORRECTED_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+      "scripts/audit_treecut_a0r1_baseline.py",
+      "scripts/audit_treecut_a0r2_final.py",
+      "scripts/audit_treecut_product_a0_caps.py",
+      "src/treecut/application/production.py",
+      "src/treecut/learning/feedback.py",
+      "src/treecut/workflow/matching.py"
+     ],
+     "e_install_paths": [
+      "treecut\\application\\production.py",
+      "treecut\\learning\\feedback.py",
+      "treecut\\workflow\\matching.py"
+     ]
+    },
+    {
+     "token": "feedback",
+     "commit_count": 19,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "afcdd7d6967ef080e465ebac5b66a754346525c4",
+      "ct": "1788921101",
+      "subject": "B0 source-of-truth (2/3): A0R2 errata recorded (ffmpeg=8.0.1 not 8.1.1; TTS hash claim limited to 5 key files+count/bytes; H1/H2 REACHED_IN_E2E_RUN; NEXT_BLOCKER=B0_SOURCE_OF_TRUTH_RECONCILIATION; CLIP error => E2E proves chain not selection quality) + compact evidence archive (RUN_MANIFEST/reproduction_result/report key fields/output manifest sha256+ffprobe/TTS A-B meta/junit sha256+exit, no binaries); paths.py model-root resolution priority env > local runtime pointer (data_root/config/models_path.txt via configure_models_path) > install_root/models; 5 unit tests test_b0_model_root_resolution pass; E sync of paths.py; provenance rerun after full E sync: 221/221 E_CONTENT_EQ_HEAD => BASELINE_SELF_CONTAINED=YES"
+     },
+     "head_paths": [
+      "\"docs/06_\\346\\236\\266\\346\\236\\204\\344\\270\\216\\351\\227\\256\\351\\242\\230\\350\\247\\243\\345\\206\\263\\346\\200\\273\\346\\212\\245\\345\\221\\212.md\"",
+      "\"docs/09_\\345\\205\\250\\347\\233\\230\\346\\214\\221\\346\\257\\233\\347\\227\\205\\345\\256\\241\\350\\256\\241\\346\\212\\245\\345\\221\\212.md\"",
+      "docs/AI_BUSINESS_COGNITIVE_SYSTEM_DESIGN.md",
+      "docs/BRAIN_PHASE4_REPORT.md",
+      "docs/HUMAN_FEEDBACK_DESIGN.md",
+      "docs/PHASE0_ENGINEERING_BASELINE.md",
+      "docs/PHASE1_CANONICAL_DATA_SPINE.md",
+      "docs/PRODUCTION_GRADE_ARCHITECTURE_CONSTITUTION.md",
+      "docs/PRODUCTION_GRADE_GAP_AUDIT.md",
+      "docs/QUALITY_VALIDATION_UI_DESIGN.md",
+      "docs/TREECUT_CORRECTIVE_STATUS_REPORT_V1.md",
+      "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+      "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0.md",
+      "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0R1.md",
+      "docs/TREECUT_ROADMAP_MASTER_V1.md",
+      "knowledge/schemas/knowledge_record.schema.json",
+      "release/release_manifest.json",
+      "reports/storage/B007_FIRST_REAL_PILOT_V1_FEEDBACK.json",
+      "reports/storage/TREECUT_A0R1_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_A0R1_RAW_DB_EVIDENCE.json",
+      "reports/storage/TREECUT_A0R1_SOURCE_EVIDENCE.json",
+      "reports/storage/TREECUT_A0R2_CORRECTED_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_A0R2_CURRENT_REPRODUCTION.json",
+      "reports/storage/TREECUT_A0R2_RESULT.json",
+      "reports/storage/TREECUT_A0R2_SOURCE_PROVENANCE.json"
+     ],
+     "e_install_paths": [
+      "treecut\\api.py",
+      "treecut\\application\\production.py",
+      "treecut\\cognitive\\learning.py",
+      "treecut\\desktop.py",
+      "treecut\\feedback_learning\\__init__.py",
+      "treecut\\learning\\__init__.py",
+      "treecut\\learning\\feedback.py",
+      "treecut\\main.py",
+      "treecut\\maintenance.py",
+      "treecut\\quality_validation\\__init__.py",
+      "treecut\\quality_validation\\store.py",
+      "treecut\\quality_validation\\ui.py",
+      "treecut\\stats.py",
+      "treecut\\ui\\dashboard_dialog.py",
+      "treecut\\ui\\result_dialog.py",
+      "treecut\\workflow\\matching.py"
+     ]
+    }
+   ],
+   "head_paths_union": [
+    "\"docs/06_\\346\\236\\266\\346\\236\\204\\344\\270\\216\\351\\227\\256\\351\\242\\230\\350\\247\\243\\345\\206\\263\\346\\200\\273\\346\\212\\245\\345\\221\\212.md\"",
+    "\"docs/09_\\345\\205\\250\\347\\233\\230\\346\\214\\221\\346\\257\\233\\347\\227\\205\\345\\256\\241\\350\\256\\241\\346\\212\\245\\345\\221\\212.md\"",
+    "docs/AI_BUSINESS_COGNITIVE_SYSTEM_DESIGN.md",
+    "docs/BRAIN_PHASE4_REPORT.md",
+    "docs/HUMAN_FEEDBACK_DESIGN.md",
+    "docs/PHASE0_ENGINEERING_BASELINE.md",
+    "docs/PHASE1_CANONICAL_DATA_SPINE.md",
+    "docs/PRODUCTION_GRADE_ARCHITECTURE_CONSTITUTION.md",
+    "docs/PRODUCTION_GRADE_GAP_AUDIT.md",
+    "docs/QUALITY_VALIDATION_UI_DESIGN.md",
+    "docs/TREECUT_CORRECTIVE_STATUS_REPORT_V1.md",
+    "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+    "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0.md",
+    "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0R1.md",
+    "docs/TREECUT_ROADMAP_MASTER_V1.md",
+    "knowledge/schemas/knowledge_record.schema.json",
+    "release/release_manifest.json",
+    "reports/storage/B007_FIRST_REAL_PILOT_V1_FEEDBACK.json",
+    "reports/storage/TREECUT_A0R1_CAPABILITY_MATRIX.json",
+    "reports/storage/TREECUT_A0R1_RAW_DB_EVIDENCE.json",
+    "reports/storage/TREECUT_A0R1_SOURCE_EVIDENCE.json",
+    "reports/storage/TREECUT_A0R2_CORRECTED_CAPABILITY_MATRIX.json",
+    "reports/storage/TREECUT_A0R2_CURRENT_REPRODUCTION.json",
+    "reports/storage/TREECUT_A0R2_RESULT.json",
+    "reports/storage/TREECUT_A0R2_SOURCE_PROVENANCE.json",
+    "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+    "scripts/audit_treecut_a0r1_baseline.py",
+    "scripts/audit_treecut_a0r1_source.py",
+    "scripts/audit_treecut_a0r2_final.py",
+    "scripts/audit_treecut_product_a0_caps.py",
+    "src/treecut/api.py",
+    "src/treecut/application/production.py",
+    "src/treecut/desktop.py",
+    "src/treecut/learning/__init__.py",
+    "src/treecut/learning/feedback.py",
+    "src/treecut/stats.py",
+    "src/treecut/workflow/matching.py"
+   ],
+   "e_install_paths_union": [
+    "treecut\\api.py",
+    "treecut\\application\\production.py",
+    "treecut\\cognitive\\learning.py",
+    "treecut\\desktop.py",
+    "treecut\\feedback_learning\\__init__.py",
+    "treecut\\learning\\__init__.py",
+    "treecut\\learning\\feedback.py",
+    "treecut\\main.py",
+    "treecut\\maintenance.py",
+    "treecut\\quality_validation\\__init__.py",
+    "treecut\\quality_validation\\store.py",
+    "treecut\\quality_validation\\ui.py",
+    "treecut\\stats.py",
+    "treecut\\ui\\dashboard_dialog.py",
+    "treecut\\ui\\result_dialog.py",
+    "treecut\\workflow\\matching.py"
+   ],
+   "first_commit_overall": {
+    "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+    "ct": "1787134638",
+    "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+   },
+   "last_commit_overall": {
+    "sha": "afcdd7d6967ef080e465ebac5b66a754346525c4",
+    "ct": "1788921101",
+    "subject": "B0 source-of-truth (2/3): A0R2 errata recorded (ffmpeg=8.0.1 not 8.1.1; TTS hash claim limited to 5 key files+count/bytes; H1/H2 REACHED_IN_E2E_RUN; NEXT_BLOCKER=B0_SOURCE_OF_TRUTH_RECONCILIATION; CLIP error => E2E proves chain not selection quality) + compact evidence archive (RUN_MANIFEST/reproduction_result/report key fields/output manifest sha256+ffprobe/TTS A-B meta/junit sha256+exit, no binaries); paths.py model-root resolution priority env > local runtime pointer (data_root/config/models_path.txt via configure_models_path) > install_root/models; 5 unit tests test_b0_model_root_resolution pass; E sync of paths.py; provenance rerun after full E sync: 221/221 E_CONTENT_EQ_HEAD => BASELINE_SELF_CONTAINED=YES"
+   },
+   "any_history_hit": true,
+   "in_head": true
+  },
+  {
+   "id": "semantic_selection",
+   "name": "BGE/CLIP 语义选材",
+   "tokens": [
+    {
+     "token": "semantic_matching",
+     "commit_count": 9,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "0c95e5c87388362956b8932cfbc516dbc75b6cff",
+      "ct": "1788933269",
+      "subject": "B0H freeze: human acceptance FAILURE sample frozen (architect frame-by-frame review of a0r2_repro E2E 成片) - verdict split: source/model baseline PASS, technical E2E PASS, human watch FAIL, content quality FAIL, publishable NO; machine corroboration: video 25.100s vs narration 11.633s (64 chars) => 13.467s no-narration tail, coverage 46.35%; plan 7x~4s=25s fixed slicing; subtitles end 11.633s; Chinese-CLIP 0 scored (BaseModelOutputWithPooling no 'norm'), BGE 3260 fallback; quality_passed=true = FALSE PASS (QA only checks audio presence, BGM always present); 3 root causes with code evidence (RC1 subtitle layers: narration.py:270 fixed style, no source-subtitle policy, OCR CAM-only; RC2 narration-duration decoupled: planning.py:39-73 fill-by-clip-no-narration, narration.py:203 validate only rejects longer narration, no Beat/Claim layer; RC3 selection/editing absent: semantic_matching.py:100-132 CLIP errors, whole-file 4s clips, segment bridge OPEN); QA mechanism quality/inspection.py:78-97 audio-only; NEXT_BLOCKER=E2E_PUBLISHABILITY_CONTRACT_AND_DEFECT_FREEZE; architect hard-gate rules recorded (coverage<95% fail, >0.8s tail fail, BGM not narration, dirty-material reject, safe-area subtitles, no-repeat, no-fragment ending, CLIP-fail never content-pass); NO product code changed; audit-only"
+     },
+     "head_paths": [
+      "docs/PHASE1_CANONICAL_DATA_SPINE.md",
+      "docs/TREECUT_E2E_PUBLISHABILITY_CONTRACT_AUDIT.md",
+      "docs/TREECUT_MASTER_PRODUCT_AUDIT_A0R2.md",
+      "release/release_manifest.json",
+      "reports/storage/TREECUT_A0R1_SOURCE_EVIDENCE.json",
+      "reports/storage/TREECUT_A0R2_BEAT_CLAIM_SEARCH.json",
+      "reports/storage/TREECUT_A0R2_CURRENT_REPRODUCTION.json",
+      "reports/storage/TREECUT_A0R2_RESULT.json",
+      "reports/storage/TREECUT_A0R2_SOURCE_PROVENANCE.json",
+      "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+      "reports/storage/TREECUT_B0_MODELS_GIT_EVIDENCE_PRE.json",
+      "reports/storage/TREECUT_B0_SOURCE_PROVENANCE.json",
+      "scripts/audit_treecut_b0h_freeze.py",
+      "scripts/audit_treecut_product_a0_caps.py",
+      "src/treecut/application/production.py"
+     ],
+     "e_install_paths": [
+      "treecut\\application\\production.py"
+     ]
+    },
+    {
+     "token": "semantic_scores",
+     "commit_count": 4,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "85bed5d995a4740861e740da394fb40ddfacc4a8",
+      "ct": "1788920474",
+      "subject": "B0 source-of-truth (1/3): fix .gitignore to ignore only repo-root /models/ (no longer src/treecut/models/*.py); track 13 real model-source files (12 E-running incl tts_local/vision_florence/cache + repo-only tts_sapi) that were never in git; merge decision evidence: E install = older snapshot (missing services/, library assets/migrate, desktop review-center, research CLI), production chain 85/101 byte-equal => keep HEAD for the 4 differing files + full-tree E sync; pre-change git evidence recorded (check-ignore/log --all/ls-files all empty => never tracked)"
+     },
+     "head_paths": [
+      "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0.md",
+      "reports/storage/TREECUT_A0R1_SOURCE_EVIDENCE.json",
+      "reports/storage/TREECUT_A0_CURRENT_ARCHITECTURE_MAP.json",
+      "reports/storage/TREECUT_A0_END_TO_END_TRACE.json",
+      "scripts/audit_treecut_a0r1_source.py",
+      "scripts/audit_treecut_product_a0_map.py",
+      "scripts/audit_treecut_product_a0_rest.py",
+      "src/treecut/application/production.py",
+      "src/treecut/models/semantic_matching.py"
+     ],
+     "e_install_paths": [
+      "treecut\\application\\production.py",
+      "treecut\\models\\semantic_matching.py"
+     ]
+    },
+    {
+     "token": "Chinese-CLIP",
+     "commit_count": 8,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "f378fda23404655004c9aa4e8c018e40805c5b35",
+      "ct": "1788936062",
+      "subject": "B1 narration duration contract + fail-closed QA (baseline 0c95e5c): three strategies FIT_SCRIPT_TO_TARGET(explicit NotImplementedError, never silent pad)/FIT_VIDEO_TO_NARRATION(plan=real narration)/STRICT_REJECT(default); real-TTS-first pipeline (narration.wav synthesized once + measured before plan/render, prebuilt_audio single-source in narration.py); QA fail-codes NARRATION_TOO_SHORT/NARRATION_TOO_LONG/VOICE_COVERAGE_LOW/VOICE_TAIL_TOO_LONG/BGM_ONLY_AUDIO/DURATION_CONTRACT_NOT_RUN with fields narration_duration/video_duration/narration_coverage/narration_tail_gap/intentional_outro/duration_contract_pass; report statuses split (TECHNICAL_RENDER_PASS/DURATION_CONTRACT_PASS true; SUBTITLE/SEMANTIC/VISUAL/CONTENT/HUMAN/PUBLISH false - B1 scope honest); FAIL repro: 64-char real TTS 11.45s + 25s strict => NARRATION_TOO_SHORT, STATUS failed, no artifacts; SUCCESS repro: new run 20260909_143916_370553 139-char 24.802s narration => coverage 99.21%, tail 0.198s, new sha cd306e11, draft generated; env note persistent TREECUT_DATA_ROOT=batch1 inherited; E install synced identical; unit 11/11 + regression 27 passed; compile clean; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "\"README_\\345\\260\\217\\347\\231\\275\\347\\211\\210.md\"",
+      "\"docs/02_\\351\\230\\266\\346\\256\\265\\351\\252\\214\\346\\224\\266\\350\\256\\260\\345\\275\\225.md\"",
+      "\"docs/04_\\346\\250\\241\\345\\236\\213\\346\\234\\200\\347\\273\\210\\345\\216\\273\\347\\225\\231_\\345\\260\\217\\347\\231\\275\\347\\211\\210.md\"",
+      "\"docs/22_\\345\\215\\207\\347\\272\\247\\344\\273\\273\\345\\212\\24113_\\346\\250\\241\\345\\236\\213\\345\\256\\214\\346\\225\\264\\346\\200\\247\\344\\270\\216\\347\\234\\237\\345\\256\\236\\345\\212\\240\\350\\275\\275\\351\\252\\214\\350\\257\\201.md\"",
+      "\"docs/35_\\345\\215\\207\\347\\272\\247\\344\\273\\273\\345\\212\\24126_\\345\\217\\221\\345\\270\\203\\346\\270\\205\\345\\215\\225\\344\\270\\216\\350\\256\\270\\345\\217\\257\\350\\257\\201\\345\\256\\241\\350\\256\\241.md\"",
+      "\"docs/36_\\345\\215\\207\\347\\272\\247\\344\\273\\273\\345\\212\\24127_\\346\\250\\241\\345\\236\\213\\351\\223\\276\\350\\267\\257\\345\\220\\210\\345\\271\\266\\344\\270\\216\\350\\277\\220\\350\\241\\214\\346\\227\\266\\347\\230\\246\\350\\272\\253.md\"",
+      "docs/TREECUT_B0_SOURCE_OF_TRUTH_REPORT.md",
+      "docs/TREECUT_B1_NARRATION_DURATION_CONTRACT_REPORT.md",
+      "docs/TREECUT_E2E_PUBLISHABILITY_CONTRACT_AUDIT.md",
+      "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+      "docs/TREECUT_MASTER_PRODUCT_AUDIT_A0R2.md",
+      "release/THIRD_PARTY_NOTICES.md",
+      "release/models.lock.json",
+      "release/release_manifest.json",
+      "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+      "reports/storage/TREECUT_B0_A0R2_ERRATA_AND_DECISION.json",
+      "reports/storage/TREECUT_B0_COMPACT_EVIDENCE.json",
+      "reports/storage/TREECUT_B0_SMOKES.json",
+      "reports/storage/TREECUT_B1_RESULT.json",
+      "scripts/audit_treecut_b0_errata.py",
+      "scripts/audit_treecut_b0_final.py",
+      "scripts/audit_treecut_b0_smokes.py",
+      "scripts/audit_treecut_b0h_freeze.py",
+      "scripts/audit_treecut_b1_final.py",
+      "scripts/generate_release_metadata.py"
+     ],
+     "e_install_paths": [
+      "treecut\\diagnostics.py",
+      "treecut\\models\\registry.py",
+      "treecut\\models\\semantic_matching.py",
+      "treecut\\models\\validation.py",
+      "treecut\\platform\\capabilities.py"
+     ]
+    },
+    {
+     "token": "bge_scored",
+     "commit_count": 5,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "reports/storage/TREECUT_A0_END_TO_END_TRACE.json",
+      "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+      "reports/storage/TREECUT_B0_COMPACT_EVIDENCE.json",
+      "reports/storage/TREECUT_B1R1_RESULT.json",
+      "reports/storage/TREECUT_B1R1_SUCCESS_REPRO.json",
+      "scripts/audit_treecut_b0h_freeze.py",
+      "scripts/audit_treecut_product_a0_caps.py",
+      "scripts/audit_treecut_product_a0_rest.py",
+      "src/treecut/application/production.py"
+     ],
+     "e_install_paths": [
+      "treecut\\application\\production.py"
+     ]
+    }
+   ],
+   "head_paths_union": [
+    "\"README_\\345\\260\\217\\347\\231\\275\\347\\211\\210.md\"",
+    "\"docs/02_\\351\\230\\266\\346\\256\\265\\351\\252\\214\\346\\224\\266\\350\\256\\260\\345\\275\\225.md\"",
+    "\"docs/04_\\346\\250\\241\\345\\236\\213\\346\\234\\200\\347\\273\\210\\345\\216\\273\\347\\225\\231_\\345\\260\\217\\347\\231\\275\\347\\211\\210.md\"",
+    "\"docs/22_\\345\\215\\207\\347\\272\\247\\344\\273\\273\\345\\212\\24113_\\346\\250\\241\\345\\236\\213\\345\\256\\214\\346\\225\\264\\346\\200\\247\\344\\270\\216\\347\\234\\237\\345\\256\\236\\345\\212\\240\\350\\275\\275\\351\\252\\214\\350\\257\\201.md\"",
+    "\"docs/35_\\345\\215\\207\\347\\272\\247\\344\\273\\273\\345\\212\\24126_\\345\\217\\221\\345\\270\\203\\346\\270\\205\\345\\215\\225\\344\\270\\216\\350\\256\\270\\345\\217\\257\\350\\257\\201\\345\\256\\241\\350\\256\\241.md\"",
+    "\"docs/36_\\345\\215\\207\\347\\272\\247\\344\\273\\273\\345\\212\\24127_\\346\\250\\241\\345\\236\\213\\351\\223\\276\\350\\267\\257\\345\\220\\210\\345\\271\\266\\344\\270\\216\\350\\277\\220\\350\\241\\214\\346\\227\\266\\347\\230\\246\\350\\272\\253.md\"",
+    "docs/PHASE1_CANONICAL_DATA_SPINE.md",
+    "docs/TREECUT_B0_SOURCE_OF_TRUTH_REPORT.md",
+    "docs/TREECUT_B1_NARRATION_DURATION_CONTRACT_REPORT.md",
+    "docs/TREECUT_E2E_PUBLISHABILITY_CONTRACT_AUDIT.md",
+    "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+    "docs/TREECUT_MASTER_PRODUCT_AUDIT_A0R2.md",
+    "docs/TREECUT_MASTER_PRODUCT_GOAL_ALIGNMENT_AUDIT_A0.md",
+    "release/THIRD_PARTY_NOTICES.md",
+    "release/models.lock.json",
+    "release/release_manifest.json",
+    "reports/storage/TREECUT_A0R1_SOURCE_EVIDENCE.json",
+    "reports/storage/TREECUT_A0R2_BEAT_CLAIM_SEARCH.json",
+    "reports/storage/TREECUT_A0R2_CURRENT_REPRODUCTION.json",
+    "reports/storage/TREECUT_A0R2_RESULT.json",
+    "reports/storage/TREECUT_A0R2_SOURCE_PROVENANCE.json",
+    "reports/storage/TREECUT_A0_CURRENT_ARCHITECTURE_MAP.json",
+    "reports/storage/TREECUT_A0_END_TO_END_TRACE.json",
+    "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+    "reports/storage/TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE.json",
+    "reports/storage/TREECUT_B0_A0R2_ERRATA_AND_DECISION.json",
+    "reports/storage/TREECUT_B0_COMPACT_EVIDENCE.json",
+    "reports/storage/TREECUT_B0_MODELS_GIT_EVIDENCE_PRE.json",
+    "reports/storage/TREECUT_B0_SMOKES.json",
+    "reports/storage/TREECUT_B0_SOURCE_PROVENANCE.json",
+    "reports/storage/TREECUT_B1R1_RESULT.json",
+    "reports/storage/TREECUT_B1R1_SUCCESS_REPRO.json",
+    "reports/storage/TREECUT_B1_RESULT.json",
+    "scripts/audit_treecut_a0r1_source.py",
+    "scripts/audit_treecut_b0_errata.py",
+    "scripts/audit_treecut_b0_final.py",
+    "scripts/audit_treecut_b0_smokes.py",
+    "scripts/audit_treecut_b0h_freeze.py",
+    "scripts/audit_treecut_b1_final.py",
+    "scripts/audit_treecut_product_a0_caps.py",
+    "scripts/audit_treecut_product_a0_map.py",
+    "scripts/audit_treecut_product_a0_rest.py",
+    "scripts/generate_release_metadata.py",
+    "src/treecut/application/production.py",
+    "src/treecut/models/semantic_matching.py"
+   ],
+   "e_install_paths_union": [
+    "treecut\\application\\production.py",
+    "treecut\\diagnostics.py",
+    "treecut\\models\\registry.py",
+    "treecut\\models\\semantic_matching.py",
+    "treecut\\models\\validation.py",
+    "treecut\\platform\\capabilities.py"
+   ],
+   "first_commit_overall": {
+    "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+    "ct": "1787134638",
+    "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+   },
+   "last_commit_overall": {
+    "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+    "ct": "1788939233",
+    "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+   },
+   "any_history_hit": true,
+   "in_head": true
+  },
+  {
+   "id": "cam_mmvv_action",
+   "name": "CAM/MMVV/动作证据生产接线",
+   "tokens": [
+    {
+     "token": "mmvl",
+     "commit_count": 22,
+     "first_commit": {
+      "sha": "c4d23d6464fc0f171e0d0fdf78f9a1a976d29b2b",
+      "ct": "1788421454",
+      "subject": "MMV V1.1 Real-Media Shadow: 6已知案例真实媒体验证(89 FAIL人动桌板不动/52 UNSURE抽屉动/109 FAIL开着≠打开/51·1985·1986 UNSURE保守) 无假PASS + MMV产物/HTML/报告 + 13测试 + 回归404/2/0"
+     },
+     "last_commit": {
+      "sha": "afcdd7d6967ef080e465ebac5b66a754346525c4",
+      "ct": "1788921101",
+      "subject": "B0 source-of-truth (2/3): A0R2 errata recorded (ffmpeg=8.0.1 not 8.1.1; TTS hash claim limited to 5 key files+count/bytes; H1/H2 REACHED_IN_E2E_RUN; NEXT_BLOCKER=B0_SOURCE_OF_TRUTH_RECONCILIATION; CLIP error => E2E proves chain not selection quality) + compact evidence archive (RUN_MANIFEST/reproduction_result/report key fields/output manifest sha256+ffprobe/TTS A-B meta/junit sha256+exit, no binaries); paths.py model-root resolution priority env > local runtime pointer (data_root/config/models_path.txt via configure_models_path) > install_root/models; 5 unit tests test_b0_model_root_resolution pass; E sync of paths.py; provenance rerun after full E sync: 221/221 E_CONTENT_EQ_HEAD => BASELINE_SELF_CONTAINED=YES"
+     },
+     "head_paths": [
+      "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
+      "docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+      "docs/TREECUT_MMVV_A21B_REPORT.md",
+      "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+      "reports/storage/TREECUT_A0R2_BEAT_CLAIM_SEARCH.json",
+      "reports/storage/TREECUT_A0_CURRENT_ARCHITECTURE_MAP.json",
+      "reports/storage/TREECUT_B0_SOURCE_PROVENANCE.json",
+      "reports/storage/TREECUT_CODE_MANIFEST_V1.json",
+      "reports/storage/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.json",
+      "reports/storage/TREECUT_OVERNIGHT_MASTER_REPORT_2026-09-05.json",
+      "reports/storage/TREECUT_OVERNIGHT_PRODUCTION_DRYRUN_V1.json",
+      "reports/storage/TREECUT_OVERNIGHT_PYTEST_MATRIX_V1.json",
+      "reports/storage/TREECUT_PRODUCTION_CONTRACT_PROBE_V1.json",
+      "reports/storage/TREECUT_SYSTEM_MASTER_AUDIT_V1.json",
+      "reports/storage/audit_evidence/_work/services_inv.txt",
+      "reports/storage/audit_evidence/ev_layerA_imports.json",
+      "reports/storage/audit_evidence/ev_tests.json",
+      "scripts/audit_treecut_product_a0_map.py",
+      "scripts/mmv_a21_run.py",
+      "scripts/mmv_a22_run.py",
+      "scripts/mmv_a2_run.py",
+      "scripts/overnight_contract_probe.py",
+      "scripts/overnight_dryrun_plan.py"
+     ],
+     "e_install_paths": []
+    },
+    {
+     "token": "MMVV",
+     "commit_count": 37,
+     "first_commit": {
+      "sha": "c4d23d6464fc0f171e0d0fdf78f9a1a976d29b2b",
+      "ct": "1788421454",
+      "subject": "MMV V1.1 Real-Media Shadow: 6已知案例真实媒体验证(89 FAIL人动桌板不动/52 UNSURE抽屉动/109 FAIL开着≠打开/51·1985·1986 UNSURE保守) 无假PASS + MMV产物/HTML/报告 + 13测试 + 回归404/2/0"
+     },
+     "last_commit": {
+      "sha": "bdc7506005c3914049f56d6c38020a0fc2797b41",
+      "ct": "1788857790",
+      "subject": "audit: MASTER PRODUCT GOAL ALIGNMENT A0 (read-only full product capability audit, baseline 740ca94) - REAL finding: production chain (desktop Tk -> ProductionService._create -> load_candidates(real 4-table DB) -> BGE/CLIP semantic match -> edit plan -> ffmpeg render -> melo TTS -> subtitle burn -> BGM -> Jianying draft -> QA) is E2E_PROVEN with real 2026-08-06 outputs (TreeCut_成片.mp4 1080x1080@30 + real Jianying draft_content + cover + report quality passed); capability matrix 33 items (E2E_PROVEN 11, DATA_CONNECTED 12, USER_USABLE 3, CODE_EXISTS 4, NOT_FOUND 2, UNIT_TESTED 1); 8 domains A-H assessed; KEY GAPS (product P0): production chain has NO script->beat/claim parse layer (D2 NOT_FOUND, whole-text match), Source/A4 gate is CAM-research not in prod matching, historical E2E media 5/6 paths invalid (needs rescan); CAM/EH/GEOM/N0 = SHADOW_NOT_PRODUCTION_CONNECTED (desktop imports no CAM module), solves reference evidence only; N0 preserved (N1=NO/PRESENT=YES/ESTABLISHED=NO/GEOM=NO); test truth: 586 collected/570 pass/12 fail/4 xfail in one run (12 fail = 7 env GPU-under-system-py + 5 order-dependent-pass-alone); 46 EH tests = artifact-regression; human feedback consumed PARTIAL (DB+ranking not embedding); voice clone NOT_FOUND (melo TTS); user workflow PARTIAL; two-track roadmap: Track A MVP (reuse retrieval/render/TTS/subtitle/BGM/draft + build script-beat layer + manual gate + rescan) NOT blocked by Track B research; risks P0x2 P1x3; consistency 7/7; no secrets/large files"
+     },
+     "head_paths": [
+      "docs/A3_HUMAN_GATES_HANDOFF_2026-09-05.md",
+      "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
+      "docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_CAM01_DENSE01R2_REPORT.md",
+      "docs/TREECUT_CAM01_EH01_REPORT.md",
+      "docs/TREECUT_CAM01_EVIDENCE_HIERARCHY_PROPOSAL_V1.md",
+      "docs/TREECUT_MMVV_A1_HUMAN_GT_ROI_REPORT.md",
+      "docs/TREECUT_MMVV_A21B_REPORT.md",
+      "docs/TREECUT_MMVV_A21_REPORT.md",
+      "docs/TREECUT_MMVV_A22_R1_REPORT.md",
+      "docs/TREECUT_MMVV_A22_REPORT.md",
+      "docs/TREECUT_MMVV_A2_REPORT.md",
+      "docs/TREECUT_MMVV_A3_BLIND_GENERALIZATION_REPORT.md",
+      "docs/TREECUT_MMVV_A3_REPORT.md",
+      "docs/TREECUT_MMV_REAL_MEDIA_HARDENING_R2.md",
+      "docs/TREECUT_MULTI_MODULE_VISUAL_VALIDATION_MASTER_V1.md",
+      "docs/TREECUT_OVERNIGHT_MASTER_REPORT_2026-09-05.md",
+      "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+      "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+      "reports/storage/TREECUT_A0_CURRENT_ARCHITECTURE_MAP.json",
+      "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+      "reports/storage/TREECUT_CAM01_EH01_RESULT.json",
+      "reports/storage/TREECUT_ENTRYPOINT_MAP_V1.json",
+      "reports/storage/TREECUT_MMVV_A1_HUMAN_GT_ROI_REVIEW.html",
+      "reports/storage/TREECUT_MMVV_A1_HUMAN_TEMPORAL_LABELS.json"
+     ],
+     "e_install_paths": [
+      "treecut\\services\\mmv_camera_diag.py",
+      "treecut\\services\\mmvl_master_v1.py"
+     ]
+    },
+    {
+     "token": "action_evidence",
+     "commit_count": 4,
+     "first_commit": {
+      "sha": "53d815e51a54ed6a34f80c3b64f7140294b86860",
+      "ct": "1788341805",
+      "subject": "B007 V0.9.1: Pilot V2 (干净源混剪 1.3x 音频优先 + ASS硬烧字幕 + AV硬闸 + qwen视觉证据) — 8镜头 22.69s READY_WITH_LIMITATIONS(BGM无源), 等 V1vsV2 人工对比"
+     },
+     "last_commit": {
+      "sha": "db2ff37708aa355cb977f9f4075323160ade8a02",
+      "ct": "1788853424",
+      "subject": "cam01-eh02-n0: targeted NEG reference set DESIGN + blind human review pack (baseline 8f84a1a clean, design-only, no candidate algorithm run, no family verdicts, no GEOM) - frozen 11-candidate universe (1019/1025/103/1600/1638/1639/2163/2208/2211/2492/26023; universe hash a12f6874; all REVIEW_REQUIRED; all visual_family_id UNKNOWN; CALIBRATION10 overlap=0; A3/EH overlap=0; no dup-group membership -> near-dup UNKNOWN; 11/11 media readable via ffprobe 1728x3072@60 mostly + 2x 2160x3840 + 26023 src4 factory DJI) - visual_content_family vs algorithm_evidence_family strict split (3 algos on 1 sample = 1 family; V24/GFTT FEATURE_LOCAL same chain; 2543 anchor no forcing); blind protocol R01-R11 shuffled seed 20260908, algorithm/route/structural hidden from reviewer; review schema preregistered (NO_ACTION/target-visible/unique/identity/scene-cut/occlusion/ROI/visual-family fields + N2 eligibility prerecorded); diversity analysis potential-only (3 suspected same-sequence groups A/C/E; 26023 distinct factory source; potential 5-7 candidate families incl ~2 new, NOT formal); preregistered N1 frame-ROI freeze / N2 frozen-router eval / N3 control decision (ESTABLISHED only closes NEG gate, GEOM needs separate approval); consistency 12/12 PASS; TARGETED_NEG_DESIGN_COMPLETE=YES, BLIND_REVIEW_PACK_READY=YES (local gitignored pack dir), PRESENT=YES ESTABLISHED=NO, NEW_NEG=0 NEW_STRONG=0 GEOM_ALLOWED=NO; NEXT_BLOCKER HUMAN_FRAME_ROI_REVIEW_FREEZE (architect views blind pack personally); only 4 design files tracked, no media/secrets"
+     },
+     "head_paths": [
+      "docs/B007_PILOT_V1_VS_V2_REPORT.md",
+      "reports/storage/B007_FIRST_REAL_PILOT_V2_REVIEW.html",
+      "reports/storage/B007_PILOT_V1_VS_V2_REPORT.md",
+      "reports/storage/TREECUT_CAM01_EH02N0_CANDIDATE_UNIVERSE.json",
+      "reports/storage/TREECUT_G2_ACTION_CALIBRATION_V1.json",
+      "reports/storage/TREECUT_G2_SEGMENT_CALIBRATION_STATUS_V2.json",
+      "scripts/b007_v091_v2.py",
+      "tests/test_g3_claim_visual.py"
+     ],
+     "e_install_paths": []
+    },
+    {
+     "token": "visual_action",
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "head_paths": [],
+     "e_install_paths": []
+    },
+    {
+     "token": "ActionEvidenceGate",
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "head_paths": [],
+     "e_install_paths": []
+    }
+   ],
+   "head_paths_union": [
+    "docs/A3_HUMAN_GATES_HANDOFF_2026-09-05.md",
+    "docs/B007_PILOT_V1_VS_V2_REPORT.md",
+    "docs/TREECUT_ARCHITECT_READ_GUIDE_V1.md",
+    "docs/TREECUT_AUDIT_ROUND1_ADJUDICATION_V1.md",
+    "docs/TREECUT_CAM01_DENSE01R2_REPORT.md",
+    "docs/TREECUT_CAM01_EH01_REPORT.md",
+    "docs/TREECUT_CAM01_EVIDENCE_HIERARCHY_PROPOSAL_V1.md",
+    "docs/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.md",
+    "docs/TREECUT_MMVV_A1_HUMAN_GT_ROI_REPORT.md",
+    "docs/TREECUT_MMVV_A21B_REPORT.md",
+    "docs/TREECUT_MMVV_A21_REPORT.md",
+    "docs/TREECUT_MMVV_A22_R1_REPORT.md",
+    "docs/TREECUT_MMVV_A22_REPORT.md",
+    "docs/TREECUT_MMVV_A2_REPORT.md",
+    "docs/TREECUT_MMVV_A3_BLIND_GENERALIZATION_REPORT.md",
+    "docs/TREECUT_MMVV_A3_REPORT.md",
+    "docs/TREECUT_MMV_REAL_MEDIA_HARDENING_R2.md",
+    "docs/TREECUT_MULTI_MODULE_VISUAL_VALIDATION_MASTER_V1.md",
+    "docs/TREECUT_OVERNIGHT_MASTER_REPORT_2026-09-05.md",
+    "docs/TREECUT_SOURCE_AUDIT_ROUND1_ADJUDICATION_V1.md",
+    "docs/TREECUT_SYSTEM_MASTER_AUDIT_V1.md",
+    "reports/storage/B007_FIRST_REAL_PILOT_V2_REVIEW.html",
+    "reports/storage/B007_PILOT_V1_VS_V2_REPORT.md",
+    "reports/storage/TREECUT_A0R2_BEAT_CLAIM_SEARCH.json",
+    "reports/storage/TREECUT_A0_CURRENT_ARCHITECTURE_MAP.json",
+    "reports/storage/TREECUT_A0_PRODUCT_CAPABILITY_MATRIX.json",
+    "reports/storage/TREECUT_B0_SOURCE_PROVENANCE.json",
+    "reports/storage/TREECUT_CAM01_EH01_RESULT.json",
+    "reports/storage/TREECUT_CAM01_EH02N0_CANDIDATE_UNIVERSE.json",
+    "reports/storage/TREECUT_CODE_MANIFEST_V1.json",
+    "reports/storage/TREECUT_ENTRYPOINT_MAP_V1.json",
+    "reports/storage/TREECUT_G2_ACTION_CALIBRATION_V1.json",
+    "reports/storage/TREECUT_G2_SEGMENT_CALIBRATION_STATUS_V2.json",
+    "reports/storage/TREECUT_MASTER_CURRENT_STATE_AUDIT_HANDOFF_V2.json",
+    "reports/storage/TREECUT_MMVV_A1_HUMAN_GT_ROI_REVIEW.html",
+    "reports/storage/TREECUT_MMVV_A1_HUMAN_TEMPORAL_LABELS.json",
+    "reports/storage/TREECUT_OVERNIGHT_MASTER_REPORT_2026-09-05.json",
+    "reports/storage/TREECUT_OVERNIGHT_PRODUCTION_DRYRUN_V1.json",
+    "reports/storage/TREECUT_OVERNIGHT_PYTEST_MATRIX_V1.json",
+    "reports/storage/TREECUT_PRODUCTION_CONTRACT_PROBE_V1.json",
+    "reports/storage/TREECUT_SYSTEM_MASTER_AUDIT_V1.json",
+    "reports/storage/audit_evidence/_work/services_inv.txt",
+    "reports/storage/audit_evidence/ev_layerA_imports.json",
+    "reports/storage/audit_evidence/ev_tests.json",
+    "scripts/audit_treecut_product_a0_map.py",
+    "scripts/b007_v091_v2.py",
+    "scripts/mmv_a21_run.py",
+    "scripts/mmv_a22_run.py",
+    "scripts/mmv_a2_run.py",
+    "scripts/overnight_contract_probe.py",
+    "scripts/overnight_dryrun_plan.py",
+    "tests/test_g3_claim_visual.py"
+   ],
+   "e_install_paths_union": [
+    "treecut\\services\\mmv_camera_diag.py",
+    "treecut\\services\\mmvl_master_v1.py"
+   ],
+   "first_commit_overall": {
+    "sha": "53d815e51a54ed6a34f80c3b64f7140294b86860",
+    "ct": "1788341805",
+    "subject": "B007 V0.9.1: Pilot V2 (干净源混剪 1.3x 音频优先 + ASS硬烧字幕 + AV硬闸 + qwen视觉证据) — 8镜头 22.69s READY_WITH_LIMITATIONS(BGM无源), 等 V1vsV2 人工对比"
+   },
+   "last_commit_overall": {
+    "sha": "afcdd7d6967ef080e465ebac5b66a754346525c4",
+    "ct": "1788921101",
+    "subject": "B0 source-of-truth (2/3): A0R2 errata recorded (ffmpeg=8.0.1 not 8.1.1; TTS hash claim limited to 5 key files+count/bytes; H1/H2 REACHED_IN_E2E_RUN; NEXT_BLOCKER=B0_SOURCE_OF_TRUTH_RECONCILIATION; CLIP error => E2E proves chain not selection quality) + compact evidence archive (RUN_MANIFEST/reproduction_result/report key fields/output manifest sha256+ffprobe/TTS A-B meta/junit sha256+exit, no binaries); paths.py model-root resolution priority env > local runtime pointer (data_root/config/models_path.txt via configure_models_path) > install_root/models; 5 unit tests test_b0_model_root_resolution pass; E sync of paths.py; provenance rerun after full E sync: 221/221 E_CONTENT_EQ_HEAD => BASELINE_SELF_CONTAINED=YES"
+   },
+   "any_history_hit": true,
+   "in_head": true
+  },
+  {
+   "id": "plan_override_bypass",
+   "name": "plan_override 绕过智能选材",
+   "tokens": [
+    {
+     "token": "plan_override",
+     "commit_count": 4,
+     "first_commit": {
+      "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+      "ct": "1787134638",
+      "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+     },
+     "last_commit": {
+      "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+      "ct": "1788939233",
+      "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+     },
+     "head_paths": [
+      "docs/TREECUT_B1_NARRATION_DURATION_CONTRACT_REPORT.md",
+      "reports/storage/TREECUT_A0_PRODUCT_GAP_MAP.json",
+      "scripts/audit_treecut_b1_final.py",
+      "scripts/audit_treecut_b1_run.py",
+      "scripts/audit_treecut_b1r1_run.py",
+      "scripts/audit_treecut_product_a0_rest.py",
+      "src/treecut/application/production.py",
+      "src/treecut/desktop.py"
+     ],
+     "e_install_paths": [
+      "treecut\\application\\production.py",
+      "treecut\\desktop.py"
+     ]
+    }
+   ],
+   "head_paths_union": [
+    "docs/TREECUT_B1_NARRATION_DURATION_CONTRACT_REPORT.md",
+    "reports/storage/TREECUT_A0_PRODUCT_GAP_MAP.json",
+    "scripts/audit_treecut_b1_final.py",
+    "scripts/audit_treecut_b1_run.py",
+    "scripts/audit_treecut_b1r1_run.py",
+    "scripts/audit_treecut_product_a0_rest.py",
+    "src/treecut/application/production.py",
+    "src/treecut/desktop.py"
+   ],
+   "e_install_paths_union": [
+    "treecut\\application\\production.py",
+    "treecut\\desktop.py"
+   ],
+   "first_commit_overall": {
+    "sha": "4f5f9bddd83af5dd89dc9a4f178a2b302c4dfd53",
+    "ct": "1787134638",
+    "subject": "chore(init): TreeCut v13 模块化架构源码基线（仅开发资产）"
+   },
+   "last_commit_overall": {
+    "sha": "6fc5e6fad5a36382277ecae3c46a7947923bae5e",
+    "ct": "1788939233",
+    "subject": "B1R1 script completeness + three-track audio mix + audible-end alignment (baseline f378fda): script gate BEFORE TTS (SCRIPT_TRUNCATED/SCRIPT_NO_TERMINAL_PUNCTUATION; whole-sentence edits only, old 139-char mid-cut rejected); full text/sha/last-sentence/last-char recorded; output/mix.py voice loudnorm-once constant gain (no automation) + BGM separate loudness/fades/voice-triggered sidechain ducking only on BGM + alimiter true-peak ~-1dBFS, emits voice_stem/bgm_stem/final_mix + loudness/peak/windowed evidence with pump&peak gates; audible-end alignment on real last-voice time (0.25-0.8s tail) + last-subtitle complete check; statuses SCRIPT_COMPLETENESS_PASS/AUDIO_MIX_PASS/AUDIBLE_END_ALIGNMENT_PASS/B1_ACCEPTANCE_PASS; generic quality_passed no longer used as success evidence (TECHNICAL_RENDER_PASS); FAIL cases: OLD139->SCRIPT_TRUNCATED, SHORT64->NARRATION_TOO_SHORT; SUCCESS new run 20260909_153206_237084 new sha 11d6c8c9 25.0s whole-sentence narration (14,30) ends '很好打理。' coverage 98.1% tail 0.473s audible 0.483s audio pump 2.6dB peak ok voice constant B1_ACCEPTANCE_PASS=true; subtitle hygiene false kept (B2 MVP: bottom occlusion plate then redraw / top-mid multi-text reject); unit 6 new +33 total pass; compile clean; repo==E; secret scan clean; no B2/CLIP/segment/Beat/N1/GEOM/CAM"
+   },
+   "any_history_hit": true,
+   "in_head": true
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+{
+ "experiment": "TREECUT_B1R1_F0_CALL_GRAPH",
+ "production_entry": "src/treecut/application/production.py",
+ "production_import_closure": [
+  "treecut/application/production.py",
+  "treecut/bootstrap.py",
+  "treecut/config.py",
+  "treecut/extensions.py",
+  "treecut/knowledge.py",
+  "treecut/learning.py",
+  "treecut/media.py",
+  "treecut/models/cache.py",
+  "treecut/models/policy.py",
+  "treecut/models/semantic_matching.py",
+  "treecut/models/tts_local.py",
+  "treecut/models/validation.py",
+  "treecut/output.py",
+  "treecut/output/cover.py",
+  "treecut/output/filters.py",
+  "treecut/output/mix.py",
+  "treecut/output/narration.py",
+  "treecut/output/presets.py",
+  "treecut/platform/capabilities.py",
+  "treecut/platform/logging.py",
+  "treecut/platform/memory.py",
+  "treecut/platform/paths.py",
+  "treecut/platform/progress.py",
+  "treecut/quality.py",
+  "treecut/quality/duration_contract.py",
+  "treecut/quality/publish_gates.py",
+  "treecut/workflow.py"
+ ],
+ "closure_count": 27,
+ "per_feature": {
+  "caption_display_punctuation": {
+   "code_files": [
+    "src/treecut/application/production.py",
+    "src/treecut/output/__init__.py",
+    "src/treecut/output/narration.py",
+    "src/treecut/output/production_narration.py",
+    "src/treecut/quality/publish_gates.py"
+   ],
+   "in_production_closure": false,
+   "closure_matches": []
+  },
+  "subtitle_occlusion_plate": {
+   "code_files": [
+    "src/treecut/application/production.py"
+   ],
+   "in_production_closure": false,
+   "closure_matches": []
+  },
+  "old_subtitle_detection": {
+   "code_files": [
+    "src/treecut/application/production.py",
+    "src/treecut/services/production_qa.py"
+   ],
+   "in_production_closure": false,
+   "closure_matches": []
+  },
+  "caption_safe_zone": {
+   "code_files": [
+    "src/treecut/output/narration.py"
+   ],
+   "in_production_closure": false,
+   "closure_matches": []
+  },
+  "source_gate": {
+   "code_files": [],
+   "in_production_closure": false,
+   "closure_matches": []
+  },
+  "beat_claim": {
+   "code_files": [
+    "src/treecut/services/claim_visual.py",
+    "src/treecut/services/mmvl_master_v1.py",
+    "src/treecut/services/shot_usage.py",
+    "src/treecut/services/visual_beat.py",
+    "src/treecut/services/visual_understanding_v2.py"
+   ],
+   "in_production_closure": false,
+   "closure_matches": []
+  },
+  "feedback_loop": {
+   "code_files": [
+    "src/treecut/api.py",
+    "src/treecut/application/production.py",
+    "src/treecut/desktop.py",
+    "src/treecut/learning/__init__.py",
+    "src/treecut/learning/feedback.py",
+    "src/treecut/stats.py",
+    "src/treecut/workflow/matching.py"
+   ],
+   "in_production_closure": false,
+   "closure_matches": []
+  },
+  "semantic_selection": {
+   "code_files": [
+    "src/treecut/application/production.py",
+    "src/treecut/models/semantic_matching.py"
+   ],
+   "in_production_closure": false,
+   "closure_matches": []
+  },
+  "cam_mmvv_action": {
+   "code_files": [],
+   "in_production_closure": false,
+   "closure_matches": []
+  },
+  "plan_override_bypass": {
+   "code_files": [
+    "src/treecut/application/production.py",
+    "src/treecut/desktop.py"
+   ],
+   "in_production_closure": false,
+   "closure_matches": []
+  }
+ },
+ "classification": {
+  "caption_display_punctuation": "CODE_PRESENT_PENDING_CALLER",
+  "subtitle_occlusion_plate": "CODE_PRESENT_PENDING_CALLER",
+  "old_subtitle_detection": "CODE_PRESENT_PENDING_CALLER",
+  "caption_safe_zone": "CODE_PRESENT_PENDING_CALLER",
+  "source_gate": "UNKNOWN",
+  "beat_claim": "CODE_PRESENT_PENDING_CALLER",
+  "feedback_loop": "CODE_PRESENT_PENDING_CALLER",
+  "semantic_selection": "CODE_PRESENT_PENDING_CALLER",
+  "cam_mmvv_action": "UNKNOWN",
+  "plan_override_bypass": "CODE_PRESENT_PENDING_CALLER"
+ },
+ "runner_bypass_evidence": {
+  "production_plan_override_branch": "production.py sets matches=[], bge=clip={} when plan_override is not None (skips load_candidates/FeedbackStore/semantic_scores/match_materials/build_edit_plan)",
+  "b1_success_media": "TREECUT_B1_SUCCESS_REPRO.json media.id=32 (path D:\\剪影草稿\\...0619-01\\...L0_001....mov, 0-25s window)",
+  "b1r1_success_media": "TREECUT_B1R1_SUCCESS_REPRO.json media.id=32 same path, same 0-25s window, plan_override used",
+  "bge_clip_on_runs": {
+   "b1": "bge_scored=3260? no: B1 used plan_override => semantic_models.bge_scored=0, clip_scored=0",
+   "b1r1": "bge_scored=0, clip_scored=0"
+  },
+  "conclusion": "SELECTION_ROUTE_BYPASSED - B1/B1R1 reused media_id=32 with plan_override; NOT a smart-selection reproduction"
+ },
+ "classification_final": {
+  "caption_display_punctuation": {
+   "classification": "NEVER_IMPLEMENTED",
+   "evidence": "no display_text layer ever; build_srt/split_subtitle_cues write speech text verbatim (punctuation kept); publish_gates requires script punctuation and LAST_SUBTITLE_INCOMPLETE forces display punctuation; punctuation-strip+protect logic never existed in any history (tokens 标点/punctuation/display_text absent from src code; only docs/notes/reports). Required capability absent; current code actively keeps punctuation on screen."
+  },
+  "subtitle_occlusion_plate": {
+   "classification": "NEVER_IMPLEMENTED",
+   "evidence": "drawbox / 遮挡板 / inpaint never present in any src file (HEAD grep none; history none in src); the only 'occlusion' hits are the B1R1 status-note string inside production.py and audit docs/reports. No plate, no region detection, no post-render OCR verify."
+  },
+  "old_subtitle_detection": {
+   "classification": "IMPLEMENTED_BUT_DISCONNECTED",
+   "evidence": "services/production_qa.py (repo HEAD) historically touched OLD_SUBTITLE_ABSENT / 原字幕 semantics; its only consumer is desktop.py (QA center), NOT the classic render chain; application/production.py never calls it; no in-chain tests/real-run evidence."
+  },
+  "caption_safe_zone": {
+   "classification": "NEVER_IMPLEMENTED",
+   "evidence": "only fixed style params in burn_subtitles (FontSize=19, MarginV=75, Alignment=2); no explicit 1080x1920 safe-zone/coordinate contract, no line-length/two-line gate (tokens safe zone/安全区 absent from src)."
+  },
+  "source_gate": {
+   "classification": "IMPLEMENTED_BUT_DISCONNECTED",
+   "evidence": "services/production_source.py + test_g1_source_gate exist; zero callers in application/desktop/api; classic matching uses only the eligible flag; source-role gate never executed in production chain."
+  },
+  "beat_claim": {
+   "classification": "IMPLEMENTED_BUT_DISCONNECTED",
+   "evidence": "services/visual_beat.py + claim_visual.py + tests (test_g2_action_subclip/test_g3_claim_visual) exist in repo research layer; absent from application/production.py import closure (27 modules, 0 beat/claim); no production caller or real-run."
+  },
+  "feedback_loop": {
+   "classification": "IMPLEMENTED_ACTIVE",
+   "evidence": "FeedbackStore.adjustments() consumed in production non-override branch (match ordering) plus desktop/api paths; limitation: no before/after ranking counterfactual evidence - consumed as soft ranking only."
+  },
+  "semantic_selection": {
+   "classification": "IMPLEMENTED_ACTIVE",
+   "evidence": "semantic_scores (BGE/CLIP) live in production import closure and run in the non-override branch; Chinese-CLIP defect OPEN ('BaseModelOutputWithPooling' has no 'norm', clip_scored=0); B1/B1R1 samples did NOT run this path (SELECTION_ROUTE_BYPASSED)."
+  },
+  "cam_mmvv_action": {
+   "classification": "IMPLEMENTED_BUT_DISCONNECTED",
+   "evidence": "services action/MMVL/visual modules (action_subclip, mmvl_master_v1, visual_understanding_v2, temporal_action_v2 ...) exist as shadow/research with tests; no application/production.py caller; not part of classic render chain."
+  },
+  "plan_override_bypass": {
+   "classification": "IMPLEMENTED_ACTIVE",
+   "evidence": "plan_override branch exists in production.py and was used by B1/B1R1 runners (media_id=32, source 0-25s, match_score/terms are test stubs; bge/clip=0) => SELECTION_ROUTE_BYPASSED, NOT a smart-selection reproduction."
+  }
+ },
+ "selection_route": {
+  "conclusion": "SELECTION_ROUTE_BYPASSED",
+  "b1": {
+   "media_id": 32,
+   "window_s": "0-25",
+   "evidence": "TREECUT_B1_SUCCESS_REPRO.json (bge_scored=0, clip_scored=0, plan_override used)"
+  },
+  "b1r1": {
+   "media_id": 32,
+   "window_s": "0-25",
+   "evidence": "TREECUT_B1R1_SUCCESS_REPRO.json (bge_scored=0, clip_scored=0, plan_override used)"
+  },
+  "visual_similarity": "B1 vs B1R1 share media_id=32 + first 25s; architect SSIM~0.993 on upper frames => old picture selection, new voice/mix/encode only"
+ }
+}

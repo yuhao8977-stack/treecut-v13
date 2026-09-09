@@ -1,0 +1,48 @@
+{
+ "experiment": "TREECUT_B1R1_F0_PRODUCT_CONTRACT_FREEZE",
+ "authority": "architect B1R1 deep-audit rulings; single source of truth for later B2/C0 implementation; any deviation requires architect approval",
+ "frozen_requirements": [
+  {
+   "id": "SPEECH_DISPLAY_SPLIT",
+   "rule": "speech_text keeps full punctuation (TTS/script integrity); display_text defaults to NO visible sentence/clause punctuation; protect decimal/version/percent/model/URL internal symbols (no naive 'delete all dots')"
+  },
+  {
+   "id": "DISPLAY_PUNCTUATION_GATE",
+   "rule": "hard gate DISPLAY_PUNCTUATION_FORBIDDEN / COUNT / DISPLAY_TEXT_EMPTY_AFTER_NORMALIZE; default acceptance: 0 visible CJK sentence/clause punctuation in display_text except explicit whitelist"
+  },
+  {
+   "id": "OLD_SUBTITLE_POLICY",
+   "rule": "clean-no-subtitle material highest priority; bottom stable subtitle band: occlusion plate (region-derived height + margin + high-opacity dark plate) then redraw new caption centered; top/mid large or multi-region dynamic text: REJECT_DIRTY_TEXT (fail-closed, swap candidate); watermark by allowlist else reject; inpaint not first version"
+  },
+  {
+   "id": "SUBTITLE_NOT_RUN_NEVER_PASS",
+   "rule": "SUBTITLE_HYGIENE_NOT_RUN when no source-text detection executed; never pass without detection"
+  },
+  {
+   "id": "SAFE_ZONE",
+   "rule": "explicit 1080x1920 caption coordinates (no reliance on MarginV=75 alone); <=2 lines; line length bounded; caption must not cover product core"
+  },
+  {
+   "id": "POST_RENDER_VERIFY",
+   "rule": "after occlusion+redraw sample frames: old subtitle not readable, new caption present, subject not covered; any frame fail -> swap candidate, never warning-only"
+  },
+  {
+   "id": "SELECTION_NOT_SMART_UNLESS_SMART_RAN",
+   "rule": "plan_override runs are SELECTION_ROUTE_BYPASSED and must never be presented as smart-selection success; smart selection requires plan_override=false + source gate + segment identity + BGE/CLIP recorded + beat evidence"
+  },
+  {
+   "id": "NAMING",
+   "rule": "when PUBLISH_READY=false deliveries carry NOT_PUBLISHABLE or explicit test purpose; statuses TECHNICAL_AUDIO_TEST_PASS / SUBTITLE_TEST_PASS/FAIL / SELECTION_TEST_NOT_RUN / HUMAN_ACCEPTANCE_FAIL / PUBLISH_READY_NO"
+  }
+ ],
+ "allowed_categories": [
+  "NEVER_IMPLEMENTED",
+  "REPORT_OR_CHAT_ONLY",
+  "HISTORICAL_SCRIPT_ONLY",
+  "IMPLEMENTED_BUT_DISCONNECTED",
+  "IMPLEMENTED_ACTIVE",
+  "OVERWRITTEN",
+  "DELETED",
+  "DEPLOYMENT_MISSING"
+ ]
+}
