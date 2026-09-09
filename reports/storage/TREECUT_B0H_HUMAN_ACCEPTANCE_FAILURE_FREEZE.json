@@ -1,0 +1,133 @@
+{
+ "experiment": "TREECUT_B0H_HUMAN_ACCEPTANCE_FAILURE_FREEZE",
+ "sample": {
+  "video": "TreeCut_成片_A0R2_ASCII模型根E2E.mp4",
+  "run_id": "a0r2_repro_20260908_184606_986514",
+  "project": "20260908_184619_988409",
+  "human_review": "architect frame-by-frame review (segment table below)",
+  "verdict": "TECH_CHAIN_RUNS_BUT_PUBLISHABILITY_FAILED"
+ },
+ "verdict_split": [
+  {
+   "item": "源码与模型运行基线 (B0)",
+   "verdict": "PASS"
+  },
+  {
+   "item": "技术E2E：能生成 MP4 与剪映草稿",
+   "verdict": "PASS"
+  },
+  {
+   "item": "人工观看验收",
+   "verdict": "FAIL"
+  },
+  {
+   "item": "内容质量",
+   "verdict": "FAIL"
+  },
+  {
+   "item": "可直接发布",
+   "verdict": "NO"
+  }
+ ],
+ "machine_corroboration": {
+  "final_video_duration_s": 25.1,
+  "narration_wav_duration_s": 11.633,
+  "narration_chars": 64,
+  "no_narration_tail_s": 13.467,
+  "narration_coverage_pct": 46.35,
+  "plan_segments": 7,
+  "plan_duration_s": 25.0,
+  "clip_seconds": 4.0,
+  "subtitle_end_s": 11.633,
+  "clip_scored": 0,
+  "clip_error": "Chinese-CLIP: AttributeError: 'BaseModelOutputWithPooling' object has no attribute 'norm'",
+  "bge_scored": 3260,
+  "quality_passed": true,
+  "quality_verdict": "FALSE_PASS (BGM audio track satisfies the only audio check)"
+ },
+ "timeline_defects": [
+  {
+   "t": "0-4s",
+   "defect": "新字幕与素材原字幕同时出现，双重字幕"
+  },
+  {
+   "t": "4-8s",
+   "defect": "顶部原始标题 + 新字幕 + 底部原字幕，最高三层文字"
+  },
+  {
+   "t": "8-11.63s",
+   "defect": "新字幕字号过大、位置过高，压住岛台主体"
+  },
+  {
+   "t": "11.63-16s",
+   "defect": "旁白与新字幕结束但画面继续；与前段近似重复镜头"
+  },
+  {
+   "t": "16-20s",
+   "defect": "人物操作岛台，只剩 BGM 与素材原字幕"
+  },
+  {
+   "t": "20-23s",
+   "defect": "人物面对镜头讲解、嘴部运动但无人声（静音讲解人像）"
+  },
+  {
+   "t": "23-25.1s",
+   "defect": "约4次画面变化，末段镜头过短/跳跃/杂乱"
+  }
+ ],
+ "root_causes": [
+  {
+   "id": "RC1_SUBTITLE_LAYERS",
+   "title": "字幕三层问题",
+   "desc": "新字幕固定字号/位置；素材原字幕为烧录像素不可关轨；生产链未接入原字幕检测/拒绝/去除（OCR 数据在旁路 CAM 库，未接生产）",
+   "code_evidence": [
+    "output/narration.py:270 style FontSize=19 (single fixed style)",
+    "output/narration.py:259-288 burn_subtitles (no source-subtitle policy)",
+    "A0R2: OCR 289218 rows CAM-only, P1_old_subtitle OPEN"
+   ]
+  },
+  {
+   "id": "RC2_NARRATION_DURATION_DECOUPLED",
+   "title": "脚本/配音/画面时长脱节",
+   "desc": "64 字旁白=11.633s，画面 25s 独立铺满；validate_narration_fit 只禁止配音长于画面，不拦过短；无 Script→Beat/Claim→镜头层",
+   "code_evidence": [
+    "workflow/planning.py:39-73 _fill_plan fills target by clip length only (no narration input)",
+    "output/narration.py:203-211 validate_narration_fit rejects only narration>video",
+    "output/narration.py:167-195 build_srt distributes cues over audio_duration => subtitles end 11.633s",
+    "output/narration.py:291-335 create_narrated_video muxes to source.duration (25s)"
+   ]
+  },
+  {
+   "id": "RC3_SELECTION_AND_EDITING_NOT_ESTABLISHED",
+   "title": "选材与镜头编排未建立",
+   "desc": "Chinese-CLIP=0（报错），退回 BGE 文本检索；整段视频固定 ~4s 截取，非 segment 级；41834 segments 未桥接生产；无口播人像/重复镜头/原片内切镜/最短镜头限制",
+   "code_evidence": [
+    "models/semantic_matching.py:100-132 CLIP text/vision scoring path errors under runtime transformers",
+    "workflow/matching.py:121 match_materials text-based",
+    "A0R2: P1_segment_bridge OPEN (CAM assets/segments not identity-bridged)"
+   ]
+  }
+ ],
+ "qa_false_pass_mechanism": {
+  "desc": "final QA only checks file exists/bytes/probe/duration±0.5/dimensions/audio-present (BGM always present => has_audio True); no narration-coverage or content checks => quality_passed=True is a false pass",
+  "code_evidence": [
+   "quality/inspection.py:78-97 inspect_final_video video_audio = media.has_audio"
+  ]
+ },
+ "next_blocker": "E2E_PUBLISHABILITY_CONTRACT_AND_DEFECT_FREEZE",
+ "rules_proposed_by_architect": [
+  "旁白覆盖率 <95% => 失败",
+  "结尾无旁白 >0.8s 且非明确片尾 => 失败",
+  "BGM 不得计入旁白",
+  "旁白过短 => 重新生成脚本或缩短视频，禁止静默补空镜",
+  "画面长度服从真实旁白长度（约 23.5-25s @25s 目标）",
+  "按旁白时间轴拆句子/信息点再配镜头",
+  "原字幕大区/标题/口播人像素材默认拒绝；OCR 文字区记录；底部字幕遮罩/跟踪/时序修复",
+  "新字幕小字号、最多两行、动态安全区",
+  "口播人像无对应人声 => 否决",
+  "成片内禁重复/近重复画面；跨原片切镜重裁或放弃；末段禁 <1s 碎片",
+  "每镜头对应当前旁白信息点（伸缩/收纳等）",
+  "Chinese-CLIP 失败时不得判内容质量通过"
+ ],
+ "no_code_changed": true
+}
