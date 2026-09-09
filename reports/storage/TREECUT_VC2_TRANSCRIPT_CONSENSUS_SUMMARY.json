@@ -1,0 +1,138 @@
+{
+ "experiment": "TREECUT_VC2_TRANSCRIPT_CONSENSUS_SUMMARY",
+ "asr_paths": [
+  "faster-whisper small",
+  "funasr paraformer-zh (two different families)"
+ ],
+ "note": "transcript TEXT stays local only",
+ "segments": [
+  {
+   "segment_id": "seg01",
+   "whisper_len": 10,
+   "funasr_len": 10,
+   "diff_ratio": 0.0,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg04",
+   "whisper_len": 10,
+   "funasr_len": 10,
+   "diff_ratio": 0.0,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg06",
+   "whisper_len": 9,
+   "funasr_len": 10,
+   "diff_ratio": 0.1,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg07",
+   "whisper_len": 9,
+   "funasr_len": 9,
+   "diff_ratio": 0.0,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg09",
+   "whisper_len": 17,
+   "funasr_len": 19,
+   "diff_ratio": 0.105,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg11",
+   "whisper_len": 28,
+   "funasr_len": 32,
+   "diff_ratio": 0.125,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg13",
+   "whisper_len": 48,
+   "funasr_len": 53,
+   "diff_ratio": 0.094,
+   "profession_word_hits": [
+    "户型"
+   ],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg15",
+   "whisper_len": 24,
+   "funasr_len": 27,
+   "diff_ratio": 0.111,
+   "profession_word_hits": [
+    "户型"
+   ],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg18",
+   "whisper_len": 17,
+   "funasr_len": 20,
+   "diff_ratio": 0.15,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg19",
+   "whisper_len": 36,
+   "funasr_len": 42,
+   "diff_ratio": 0.143,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg21",
+   "whisper_len": 30,
+   "funasr_len": 34,
+   "diff_ratio": 0.118,
+   "profession_word_hits": [
+    "户型"
+   ],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg23",
+   "whisper_len": 53,
+   "funasr_len": 57,
+   "diff_ratio": 0.07,
+   "profession_word_hits": [
+    "水电"
+   ],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg25",
+   "whisper_len": 30,
+   "funasr_len": 34,
+   "diff_ratio": 0.118,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg27",
+   "whisper_len": 26,
+   "funasr_len": 29,
+   "diff_ratio": 0.103,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  },
+  {
+   "segment_id": "seg29",
+   "whisper_len": 19,
+   "funasr_len": 20,
+   "diff_ratio": 0.05,
+   "profession_word_hits": [],
+   "status": "PROVISIONAL_MACHINE_CONSENSUS"
+  }
+ ]
+}

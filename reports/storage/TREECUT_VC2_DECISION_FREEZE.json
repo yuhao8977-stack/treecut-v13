@@ -1,0 +1,29 @@
+{
+ "experiment": "TREECUT_VC2_DECISION_FREEZE",
+ "ARCHITECT_REVIEW_DATE": "2026-09-09",
+ "PREFERRED_ANONYMOUS_LABEL": "A",
+ "LABEL_A_BACKEND": "GPT_SOVITS",
+ "LABEL_B_BACKEND": "MELO",
+ "GPT_SOVITS_CLOSER_THAN_MELO": "YES",
+ "ZERO_SHOT_DIRECTION_VALID": "YES",
+ "ZERO_SHOT_PASS": "PARTIAL_NOT_ACCEPTED",
+ "VOICE_SIMILARITY_ASSESSMENT": "SOMEWHAT_SIMILAR_BUT_SUBSTANTIAL_GAP_REMAINS",
+ "FINE_TUNE_NEEDED": "YES",
+ "FINE_TUNE_ALLOWED": "YES_INTERNAL_EXPERIMENT_ONLY",
+ "PRODUCTION_INTEGRATION_ALLOWED": "NO",
+ "TREECUT_TTS_REPLACED": "NO",
+ "VOICE_OWNER_AUTHORIZED": "YES",
+ "known_issues": {
+  "pause_ratio_ref": 0.11,
+  "pause_ratio_vc1_gpt": [
+   0.29,
+   0.37
+  ],
+  "gpt_slower_than_melo": true,
+  "old_T5_renamed": "LONG_STRESS_TEST_NOT_25S",
+  "transcripts_unverified": true,
+  "single_speaker_human_confirmed": "NO",
+  "weight_license": "INTERNAL_TEST_ONLY_PENDING_COMMERCIAL_CONFIRM",
+  "infer_config_in_audit_temp": "migrate to permanent experiment dir"
+ }
+}

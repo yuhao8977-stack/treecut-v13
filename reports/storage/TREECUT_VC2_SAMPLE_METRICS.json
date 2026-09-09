@@ -1,0 +1,333 @@
+{
+ "experiment": "TREECUT_VC2_SAMPLE_METRICS",
+ "round1_texts": [
+  "T1",
+  "T2",
+  "T3",
+  "CAL25"
+ ],
+ "FAIR_LOUDNESS_NORMALIZATION": "PASS",
+ "fair_fail_items": [],
+ "rows": [
+  {
+   "system": "VC2_OPT_ZS_BEST",
+   "test": "T1",
+   "raw_sha256": "02ded5303f1a9c2ca6fe9453fba987e31d2cb115378a106fa454437795080f8f",
+   "eval_sha256": "8e248e6748798ac02e149899746624ab0768c1a30877c4dd2c7dcea62fa3b0da",
+   "analysis": {
+    "duration_s": 5.6,
+    "voiced_s": 4.66,
+    "pause_ratio": 0.1679,
+    "lead_s": 0.08,
+    "trail_s": 0.32
+   },
+   "chars_per_sec": 5.0,
+   "cer": 0.3571,
+   "loudness": {
+    "final_i": -15.97,
+    "final_tp": -1.77,
+    "match": true
+   }
+  },
+  {
+   "system": "VC2_OPT_ZS_BEST",
+   "test": "T2",
+   "raw_sha256": "a79b9ff449b79d48d2823305e4ae0a1ffa99695b31c573e2be536b9dfd2f689a",
+   "eval_sha256": "162ce6c6d2e9dbcae44ca25d34ae7b162bcfbe9990b20589d42bdfce4a5e4ec7",
+   "analysis": {
+    "duration_s": 6.58,
+    "voiced_s": 4.4,
+    "pause_ratio": 0.3313,
+    "lead_s": 0.1,
+    "trail_s": 0.36
+   },
+   "chars_per_sec": 3.65,
+   "cer": 0.2083,
+   "loudness": {
+    "final_i": -16.04,
+    "final_tp": -2.04,
+    "match": true
+   }
+  },
+  {
+   "system": "VC2_OPT_ZS_BEST",
+   "test": "T3",
+   "raw_sha256": "161f0c38bff7ec912f7d2b837b857c40430294f539a446d18c7fc87ee9241759",
+   "eval_sha256": "e94b7c81bcec4e2401de1c73111a89a2a42679c1c46e9d71c67da83478738304",
+   "analysis": {
+    "duration_s": 4.8,
+    "voiced_s": 3.68,
+    "pause_ratio": 0.2333,
+    "lead_s": 0.18,
+    "trail_s": 0.36
+   },
+   "chars_per_sec": 5.21,
+   "cer": 0.2,
+   "loudness": {
+    "final_i": -16.01,
+    "final_tp": -2.36,
+    "match": true
+   }
+  },
+  {
+   "system": "VC2_OPT_ZS_BEST",
+   "test": "CAL25",
+   "raw_sha256": "6d9e7a97e88a4ea892ec7d915b712e642119bd5a4d6a89bb8a7d4b8de6773ff3",
+   "eval_sha256": "37e078d8985879882d2c34cab09d81fea92b1cf37bd974eb4c3ca65ba78e3132",
+   "analysis": {
+    "duration_s": 25.12,
+    "voiced_s": 18.66,
+    "pause_ratio": 0.2572,
+    "lead_s": 0.18,
+    "trail_s": 0.36
+   },
+   "chars_per_sec": 4.54,
+   "cer": 0.1491,
+   "loudness": {
+    "final_i": -15.91,
+    "final_tp": -1.5,
+    "match": true
+   }
+  },
+  {
+   "system": "VC2_OPT_ZS_2ND",
+   "test": "T1",
+   "raw_sha256": "521cb2a9d910df114a077feddc2a25b1efb6604ad269b8da9cc20a1adc7128da",
+   "eval_sha256": "92ed20f09a82314f2a0a3c5c469cffe56c51d2d54d626aa97c1b857e578f6ca0",
+   "analysis": {
+    "duration_s": 6.48,
+    "voiced_s": 5.02,
+    "pause_ratio": 0.2253,
+    "lead_s": 0.14,
+    "trail_s": 0.38
+   },
+   "chars_per_sec": 4.32,
+   "cer": 0.3214,
+   "loudness": {
+    "final_i": -16.0,
+    "final_tp": -2.73,
+    "match": true
+   }
+  },
+  {
+   "system": "VC2_OPT_ZS_2ND",
+   "test": "T2",
+   "raw_sha256": "2a7940a4ede85f4cc8135d6cb272ef30a2d45eb725bb90b82a558414aeb55f12",
+   "eval_sha256": "4ea3c5bf3d9a426e86da78e40237eaaa18c394e0bfa2299e9c0f3fbb01a7e23a",
+   "analysis": {
+    "duration_s": 6.94,
+    "voiced_s": 4.46,
+    "pause_ratio": 0.3573,
+    "lead_s": 0.12,
+    "trail_s": 0.82
+   },
+   "chars_per_sec": 3.46,
+   "cer": 0.2083,
+   "loudness": {
+    "final_i": -16.03,
+    "final_tp": -2.41,
+    "match": true
+   }
+  },
+  {
+   "system": "VC2_OPT_ZS_2ND",
+   "test": "T3",
+   "raw_sha256": "11fa9e199f2673a00e59ed521634a31e0807c602c31f861a2a1c1f8cec73a7de",
+   "eval_sha256": "5de1103cae9bdfa3a44d2cc1afda554e477eb016f077352a3f0b33a86d89c2cf",
+   "analysis": {
+    "duration_s": 5.24,
+    "voiced_s": 3.94,
+    "pause_ratio": 0.2481,
+    "lead_s": 0.2,
+    "trail_s": 0.44
+   },
+   "chars_per_sec": 4.77,
+   "cer": 0.16,
+   "loudness": {
+    "final_i": -16.07,
+    "final_tp": -2.87,
+    "match": true
+   }
+  },
+  {
+   "system": "VC2_OPT_ZS_2ND",
+   "test": "CAL25",
+   "raw_sha256": "05dd1b2856997266441262f621733cbae4d099f073e9e86b2ebf41b6e90d81b3",
+   "eval_sha256": "ee6fb480f7fc610f3ac72efdd6404c9c59cb96aae74d62a02c6cbb7eb61307e5",
+   "analysis": {
+    "duration_s": 33.68,
+    "voiced_s": 22.36,
+    "pause_ratio": 0.3361,
+    "lead_s": 0.16,
+    "trail_s": 0.62
+   },
+   "chars_per_sec": 3.38,
+   "cer": 0.1842,
+   "loudness": {
+    "final_i": -15.98,
+    "final_tp": -1.77,
+    "match": true
+   }
+  },
+  {
+   "system": "VC1_ZS_BASELINE",
+   "test": "T1",
+   "raw_sha256": "0b2a1510967cd1e4718dc75e58debeda908c54cdd9e21804c866943f0e156e3a",
+   "eval_sha256": "1e86f2d91a0730189c499ea8fc06513063117636c0e4ec98e9058a325f97db47",
+   "analysis": {
+    "duration_s": 7.16,
+    "voiced_s": 5.06,
+    "pause_ratio": 0.2933,
+    "lead_s": 0.6,
+    "trail_s": 0.28
+   },
+   "chars_per_sec": 3.91,
+   "cer": 0.3214,
+   "loudness": {
+    "final_i": -16.0,
+    "final_tp": -2.34,
+    "match": true
+   }
+  },
+  {
+   "system": "VC1_ZS_BASELINE",
+   "test": "T2",
+   "raw_sha256": "c0521bfe96795ac8bbdcfc2b03f5f8ae9df3fb83e01467d15b4a09405fdb4d31",
+   "eval_sha256": "f72d59e547e9920578f1fb8c5724a80184d29787c19904f43ba032f554edc0f8",
+   "analysis": {
+    "duration_s": 7.02,
+    "voiced_s": 4.48,
+    "pause_ratio": 0.3618,
+    "lead_s": 0.16,
+    "trail_s": 0.44
+   },
+   "chars_per_sec": 3.42,
+   "cer": 0.5,
+   "loudness": {
+    "final_i": -15.99,
+    "final_tp": -2.98,
+    "match": true
+   }
+  },
+  {
+   "system": "VC1_ZS_BASELINE",
+   "test": "T3",
+   "raw_sha256": "32e85930cf41fbc38ab15b7fc14341c7849efb85a6917d047ef0bdd797a8f991",
+   "eval_sha256": "242270890273118cbd3537bbaaaf42c2a5c0b4a9c040ed02c5b1b152772c26f5",
+   "analysis": {
+    "duration_s": 6.04,
+    "voiced_s": 3.9,
+    "pause_ratio": 0.3543,
+    "lead_s": 0.34,
+    "trail_s": 0.42
+   },
+   "chars_per_sec": 4.14,
+   "cer": 0.08,
+   "loudness": {
+    "final_i": -16.08,
+    "final_tp": -2.92,
+    "match": true
+   }
+  },
+  {
+   "system": "VC1_ZS_BASELINE",
+   "test": "CAL25",
+   "raw_sha256": "b97592980f1825608cee250d30d925fa03b521efac1eb8235a7c3da8c85c327c",
+   "eval_sha256": "12b559974663a047387ce6b43a295d920a8b57f59f2d7ba81834344cb267cd87",
+   "analysis": {
+    "duration_s": 30.68,
+    "voiced_s": 20.72,
+    "pause_ratio": 0.3246,
+    "lead_s": 0.12,
+    "trail_s": 0.42
+   },
+   "chars_per_sec": 3.72,
+   "cer": 0.2281,
+   "loudness": {
+    "final_i": -15.96,
+    "final_tp": -1.73,
+    "match": true
+   }
+  },
+  {
+   "system": "MELO_ANCHOR",
+   "test": "T1",
+   "raw_sha256": "23d1898606997bc6a63781db23a75aba4a08b96ef8d96cee570f71e92d666009",
+   "eval_sha256": "4851857b7f1299fc205c1142d3f5f200395f03eaa81725bc6a1732669d407c3d",
+   "analysis": {
+    "duration_s": 4.772,
+    "voiced_s": 4.6,
+    "pause_ratio": 0.036,
+    "lead_s": 0.06,
+    "trail_s": 0.0
+   },
+   "chars_per_sec": 5.87,
+   "cer": 0.6429,
+   "loudness": {
+    "final_i": -16.0,
+    "final_tp": -1.89,
+    "match": true
+   }
+  },
+  {
+   "system": "MELO_ANCHOR",
+   "test": "T2",
+   "raw_sha256": "87958db01e57690243aaabcf396d6583ccb3c7f597e7fe09768fcedb3b613dbf",
+   "eval_sha256": "d90e835dde3945a5758a9f2e443d584280b2a4d66a87335dc1238dc6764078ba",
+   "analysis": {
+    "duration_s": 4.412,
+    "voiced_s": 4.16,
+    "pause_ratio": 0.0571,
+    "lead_s": 0.14,
+    "trail_s": 0.0
+   },
+   "chars_per_sec": 5.44,
+   "cer": 0.5,
+   "loudness": {
+    "final_i": -15.99,
+    "final_tp": -2.81,
+    "match": true
+   }
+  },
+  {
+   "system": "MELO_ANCHOR",
+   "test": "T3",
+   "raw_sha256": "749ad9454ed1bac659688e73ee636cdde17c02c77fb588c871047e08ce1b3bf6",
+   "eval_sha256": "d2ab4129d5676eebfbe9c6acf4ba507bafccfc2301490ddc8d63ff35dad737c5",
+   "analysis": {
+    "duration_s": 4.249,
+    "voiced_s": 3.9,
+    "pause_ratio": 0.0822,
+    "lead_s": 0.08,
+    "trail_s": 0.08
+   },
+   "chars_per_sec": 5.88,
+   "cer": 0.12,
+   "loudness": {
+    "final_i": -16.0,
+    "final_tp": -1.65,
+    "match": true
+   }
+  },
+  {
+   "system": "MELO_ANCHOR",
+   "test": "CAL25",
+   "raw_sha256": "a35fc4daa6a885c92c6846596fcb3f3be07ff79b32a0f5908442e584849a765f",
+   "eval_sha256": "2e8909f2eaf67dc7620a341e218ab74ae04fe9376a0d57effea096bf8721b8bf",
+   "analysis": {
+    "duration_s": 20.19,
+    "voiced_s": 18.44,
+    "pause_ratio": 0.0867,
+    "lead_s": 0.1,
+    "trail_s": 0.04
+   },
+   "chars_per_sec": 5.65,
+   "cer": 0.3333,
+   "loudness": {
+    "final_i": -15.99,
+    "final_tp": -1.5,
+    "match": true
+   }
+  }
+ ]
+}

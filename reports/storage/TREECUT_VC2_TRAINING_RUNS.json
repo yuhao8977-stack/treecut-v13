@@ -1,0 +1,13 @@
+{
+ "experiment": "TREECUT_VC2_TRAINING_RUNS",
+ "FINE_TUNE_EXECUTED": "NOT_EXECUTED_PREPROCESS_TOOLCHAIN_REQUIRES_WEBUI",
+ "detail": "v2 few-shot (s1_train/s2_train) requires WebUI-generated per-experiment configs AND preprocessed exp dir (2-name2text.txt, 4-cnhubert/*.pt, 5-wav32k/*.wav per module/data_utils.py asserts); replicating that pipeline unattended from CLI is not supported without guessing; not faked.",
+ "data_gate": {
+  "unique>=10": true,
+  "duration>=45s": true,
+  "holdout>=2/8s": true,
+  "dup_leakage": false,
+  "transcript_authority": "PROVISIONAL_MACHINE_CONSENSUS"
+ },
+ "runs": []
+}
