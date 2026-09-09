@@ -1,0 +1,327 @@
+{
+ "experiment": "TREECUT_VC0_SEGMENTS_SUMMARY",
+ "voice_profile_id": "VOICE_001",
+ "source_sha256": "4f453ddfa046fe9b7d9f373d1f7a80c8fe9e16703dd95054bda0fb0cb58992e5",
+ "extracted": {
+  "original": {
+   "sha256": "d510db03bc966a3ebd78a841f8f8543d2bf0d8f15a8dabb84c05621bb6bb4873",
+   "duration_s": 193.856,
+   "samplerate": 48000,
+   "channels": 1,
+   "frames": 9305088,
+   "input_i_lufs": -14.17,
+   "input_tp_dbtp": 0.01,
+   "input_lra": 5.9,
+   "peak": 1.0,
+   "rms_db": -15.15,
+   "clipping_ratio": 3e-06
+  },
+  "working": {
+   "sha256": "7304bb19eea8d40de134f04ce4874d71f94956ff9c0f5e947383cce86ae43e8f",
+   "duration_s": 193.856,
+   "samplerate": 24000,
+   "channels": 1,
+   "frames": 4652544,
+   "input_i_lufs": -14.17,
+   "input_tp_dbtp": 0.13,
+   "input_lra": 5.9,
+   "peak": 1.0,
+   "rms_db": -15.15,
+   "clipping_ratio": 3e-06
+  }
+ },
+ "vad": {
+  "segment_count": 30,
+  "frame_s": 0.02,
+  "energy_db": -50.0,
+  "raw_segments": 53
+ },
+ "dedup": {
+  "raw_segment_count": 30,
+  "duplicate_pair_count": 15,
+  "kept_unique_count": 15,
+  "unique_speech_duration_s": 70.34,
+  "pairs": [
+   [
+    "seg19",
+    "seg20",
+    0.9998
+   ],
+   [
+    "seg15",
+    "seg16",
+    0.9997
+   ],
+   [
+    "seg21",
+    "seg22",
+    0.9992
+   ],
+   [
+    "seg11",
+    "seg12",
+    0.9991
+   ],
+   [
+    "seg07",
+    "seg08",
+    0.999
+   ],
+   [
+    "seg27",
+    "seg28",
+    0.9986
+   ],
+   [
+    "seg29",
+    "seg30",
+    0.998
+   ],
+   [
+    "seg25",
+    "seg26",
+    0.9966
+   ],
+   [
+    "seg09",
+    "seg10",
+    0.996
+   ],
+   [
+    "seg01",
+    "seg02",
+    0.9957
+   ],
+   [
+    "seg05",
+    "seg06",
+    0.9953
+   ],
+   [
+    "seg03",
+    "seg04",
+    0.9948
+   ],
+   [
+    "seg13",
+    "seg14",
+    0.9822
+   ],
+   [
+    "seg23",
+    "seg24",
+    0.9822
+   ],
+   [
+    "seg17",
+    "seg18",
+    0.9721
+   ]
+  ]
+ },
+ "speaker_proxy": {
+  "mean_centroid_hz": 562.3,
+  "std_centroid_hz": 92.4,
+  "single_speaker_confirmed": "NO"
+ },
+ "segments_anonymous": [
+  {
+   "segment_id": "seg01",
+   "start_s": 2.3,
+   "end_s": 4.36,
+   "duration_s": 2.06,
+   "sha256": "23fe4454e0395f7fb0794aa2d32272a7179e58e7c40e8ec1fca4c117bb75feeb",
+   "rms_db": -11.98,
+   "peak": 0.99997,
+   "clipping_ratio": 4e-05,
+   "input_i_lufs": -12.05,
+   "input_tp_dbtp": 0.01,
+   "duplicate_of": "seg02"
+  },
+  {
+   "segment_id": "seg04",
+   "start_s": 13.98,
+   "end_s": 15.9,
+   "duration_s": 1.92,
+   "sha256": "618160310a83ffe1083bd966a5aaa9f987039967562ce1f7c008f25393ca1080",
+   "rms_db": -13.18,
+   "peak": 0.79019,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -12.93,
+   "input_tp_dbtp": -1.95,
+   "duplicate_of": "seg03"
+  },
+  {
+   "segment_id": "seg06",
+   "start_s": 22.1,
+   "end_s": 24.14,
+   "duration_s": 2.04,
+   "sha256": "9fc05e52a56647758ee8266f565ae21c37fe57a9387e21190ccfe383ffcdd9d2",
+   "rms_db": -13.43,
+   "peak": 0.85748,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -13.36,
+   "input_tp_dbtp": -1.31,
+   "duplicate_of": "seg05"
+  },
+  {
+   "segment_id": "seg07",
+   "start_s": 26.08,
+   "end_s": 28.04,
+   "duration_s": 1.96,
+   "sha256": "5dad412fa6f1bc222f1c381f63de2fcd05b3d3904ae6f46575a1abe3f174027f",
+   "rms_db": -13.31,
+   "peak": 0.9079,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -12.9,
+   "input_tp_dbtp": -0.83,
+   "duplicate_of": "seg08"
+  },
+  {
+   "segment_id": "seg09",
+   "start_s": 34.6,
+   "end_s": 37.98,
+   "duration_s": 3.38,
+   "sha256": "2c8a1471c1a4318fa39693f559d27baca06221faf5e6611aa0b1683777b1133c",
+   "rms_db": -14.27,
+   "peak": 0.92911,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -14.38,
+   "input_tp_dbtp": -0.61,
+   "duplicate_of": "seg10"
+  },
+  {
+   "segment_id": "seg11",
+   "start_s": 44.24,
+   "end_s": 49.54,
+   "duration_s": 5.3,
+   "sha256": "f8e2885d2f2a943a09994c8a3a372e4a666e35fbca32a8f43b5201a5d57b61bb",
+   "rms_db": -12.89,
+   "peak": 1.0,
+   "clipping_ratio": 1.6e-05,
+   "input_i_lufs": -13.31,
+   "input_tp_dbtp": 0.13,
+   "duplicate_of": "seg12"
+  },
+  {
+   "segment_id": "seg13",
+   "start_s": 57.38,
+   "end_s": 66.78,
+   "duration_s": 9.4,
+   "sha256": "5d22466fee9c6066d546c0902d9396ff37d136220000b5498d2e535148cf706a",
+   "rms_db": -14.24,
+   "peak": 0.95486,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -14.93,
+   "input_tp_dbtp": -0.4,
+   "duplicate_of": "seg14"
+  },
+  {
+   "segment_id": "seg15",
+   "start_s": 78.38,
+   "end_s": 83.48,
+   "duration_s": 5.1,
+   "sha256": "611df4e95b2ae221e9ba285b6eaedb3fcada92697e71bb7c63d5eae606ea889b",
+   "rms_db": -15.08,
+   "peak": 0.97583,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -15.93,
+   "input_tp_dbtp": -0.14,
+   "duplicate_of": "seg16"
+  },
+  {
+   "segment_id": "seg18",
+   "start_s": 95.66,
+   "end_s": 99.18,
+   "duration_s": 3.52,
+   "sha256": "5204e4e33ca89bca00f9cf99573a096436e1dc317e7b075821c923f15ad7fd7c",
+   "rms_db": -14.04,
+   "peak": 0.90417,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -14.85,
+   "input_tp_dbtp": -0.83,
+   "duplicate_of": "seg17"
+  },
+  {
+   "segment_id": "seg19",
+   "start_s": 100.26,
+   "end_s": 106.9,
+   "duration_s": 6.64,
+   "sha256": "0e16e37457815e773db022c7b09c3210179c9216672be5b32db15617e0ff5058",
+   "rms_db": -13.89,
+   "peak": 0.99997,
+   "clipping_ratio": 1.3e-05,
+   "input_i_lufs": -15.0,
+   "input_tp_dbtp": 0.0,
+   "duplicate_of": "seg20"
+  },
+  {
+   "segment_id": "seg21",
+   "start_s": 115.78,
+   "end_s": 122.74,
+   "duration_s": 6.96,
+   "sha256": "2680425282178444ad373e84e939a0f6e809a905fa375d3fd43e253e5966c8e0",
+   "rms_db": -13.02,
+   "peak": 0.99066,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -13.94,
+   "input_tp_dbtp": -0.07,
+   "duplicate_of": "seg22"
+  },
+  {
+   "segment_id": "seg23",
+   "start_s": 132.16,
+   "end_s": 141.2,
+   "duration_s": 9.04,
+   "sha256": "d49c30255a0f60824d02cf0cb718b5796ce358ea4a7addb53cdabeb74110981d",
+   "rms_db": -13.34,
+   "peak": 0.88815,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -13.56,
+   "input_tp_dbtp": -1.01,
+   "duplicate_of": "seg24"
+  },
+  {
+   "segment_id": "seg25",
+   "start_s": 153.74,
+   "end_s": 159.38,
+   "duration_s": 5.64,
+   "sha256": "3908c7d9c5f7ef8d1f57848e92970ff743b7e17380e2dfc6695857286191edad",
+   "rms_db": -15.71,
+   "peak": 0.85245,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -16.61,
+   "input_tp_dbtp": -1.38,
+   "duplicate_of": "seg26"
+  },
+  {
+   "segment_id": "seg27",
+   "start_s": 168.28,
+   "end_s": 172.38,
+   "duration_s": 4.1,
+   "sha256": "43325bda596c4efca84a036b8c9a4050c422bdd231de9df1c373d0b1c3ba04cb",
+   "rms_db": -13.67,
+   "peak": 0.91629,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -14.5,
+   "input_tp_dbtp": -0.75,
+   "duplicate_of": "seg28"
+  },
+  {
+   "segment_id": "seg29",
+   "start_s": 180.92,
+   "end_s": 184.2,
+   "duration_s": 3.28,
+   "sha256": "a02083e53eb321b57068f0ce8da343957ab5b178551e902fde2a8f3aac79ad95",
+   "rms_db": -13.67,
+   "peak": 0.88031,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -14.21,
+   "input_tp_dbtp": -1.09,
+   "duplicate_of": "seg30"
+  }
+ ],
+ "transcript_verified_count": 0,
+ "review_status": "TRANSCRIPT_UNVERIFIED",
+ "asr_text_stored_locally_only": true
+}

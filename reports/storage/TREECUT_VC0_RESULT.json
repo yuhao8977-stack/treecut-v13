@@ -1,0 +1,88 @@
+{
+ "experiment": "TREECUT_VC0_RESULT",
+ "VOICE_REFERENCE_AVAILABLE": "YES",
+ "VOICE_OWNER_AUTHORIZED": "YES",
+ "RAW_DURATION": 193.856,
+ "ACTIVE_SPEECH_DURATION": 140.68,
+ "UNIQUE_SPEECH_DURATION": 70.34,
+ "RAW_SEGMENT_COUNT": 30,
+ "UNIQUE_SEGMENT_COUNT": 15,
+ "DUPLICATE_PAIR_COUNT": 15,
+ "SINGLE_SPEAKER_CONFIRMED": "NO",
+ "TRANSCRIPT_VERIFIED_COUNT": 0,
+ "TRANSCRIPT_REVIEW_STATUS": "TRANSCRIPT_UNVERIFIED (human listen required; ASR homophones expected)",
+ "DATASET_READY_FOR_ZERO_SHOT": "YES_AFTER_TRANSCRIPT_REVIEW",
+ "DATASET_READY_FOR_FINE_TUNE": "NO",
+ "SELECTED_BACKEND": "GPT-SoVITS (preferred) - zero-shot; PENDING_OFFLINE_INSTALL",
+ "LICENSE_STATUS": "GPT-SoVITS code MIT; weight license re-verify at install",
+ "ZERO_SHOT_A_B_COMPLETED": "A_ONLY",
+ "HUMAN_REVIEW_STATUS": "AWAITING (blind pack A + B/C pending)",
+ "FINE_TUNE_ALLOWED": "NO",
+ "PRODUCTION_INTEGRATION_ALLOWED": "NO",
+ "NEXT_BLOCKER": "VC0 human blind listening (SAMPLE_A) + authorize offline clone backend install (GPT-SoVITS) for B/C",
+ "reference_candidates": [
+  {
+   "segment_id": "seg13",
+   "start_s": 57.38,
+   "end_s": 66.78,
+   "duration_s": 9.4,
+   "sha256": "5d22466fee9c6066d546c0902d9396ff37d136220000b5498d2e535148cf706a",
+   "rms_db": -14.24,
+   "peak": 0.95486,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -14.93,
+   "input_tp_dbtp": -0.4,
+   "duplicate_of": "seg14"
+  },
+  {
+   "segment_id": "seg23",
+   "start_s": 132.16,
+   "end_s": 141.2,
+   "duration_s": 9.04,
+   "sha256": "d49c30255a0f60824d02cf0cb718b5796ce358ea4a7addb53cdabeb74110981d",
+   "rms_db": -13.34,
+   "peak": 0.88815,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -13.56,
+   "input_tp_dbtp": -1.01,
+   "duplicate_of": "seg24"
+  },
+  {
+   "segment_id": "seg25",
+   "start_s": 153.74,
+   "end_s": 159.38,
+   "duration_s": 5.64,
+   "sha256": "3908c7d9c5f7ef8d1f57848e92970ff743b7e17380e2dfc6695857286191edad",
+   "rms_db": -15.71,
+   "peak": 0.85245,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -16.61,
+   "input_tp_dbtp": -1.38,
+   "duplicate_of": "seg26"
+  },
+  {
+   "segment_id": "seg27",
+   "start_s": 168.28,
+   "end_s": 172.38,
+   "duration_s": 4.1,
+   "sha256": "43325bda596c4efca84a036b8c9a4050c422bdd231de9df1c373d0b1c3ba04cb",
+   "rms_db": -13.67,
+   "peak": 0.91629,
+   "clipping_ratio": 0.0,
+   "input_i_lufs": -14.5,
+   "input_tp_dbtp": -0.75,
+   "duplicate_of": "seg28"
+  }
+ ],
+ "report_paths": [
+  "docs/TREECUT_VC0_VOICE_REFERENCE_REPORT.md"
+ ],
+ "private_local_artifact_paths": {
+  "profile": "E:\\TreeCutRuntime\\voice_profiles\\VOICE_001",
+  "original_wav": "E:\\TreeCutRuntime\\voice_profiles\\VOICE_001\\source_original_audio.wav",
+  "working_wav": "E:\\TreeCutRuntime\\voice_profiles\\VOICE_001\\source_working_24k.wav",
+  "segments": "E:\\TreeCutRuntime\\voice_profiles\\VOICE_001\\segments",
+  "asr": "E:\\TreeCutRuntime\\voice_profiles\\VOICE_001\\asr",
+  "local_manifest": "E:\\TreeCutRuntime\\voice_profiles\\VOICE_001\\vc0_local_manifest.json"
+ }
+}

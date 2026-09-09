@@ -1,0 +1,40 @@
+{
+ "experiment": "TREECUT_VC0_BACKEND_DECISION",
+ "voice_profile_id": "VOICE_001",
+ "VOICE_OWNER_AUTHORIZED": "YES",
+ "SELECTED_BACKEND": "GPT-SoVITS (preferred) - zero-shot; PENDING_OFFLINE_INSTALL",
+ "FALLBACK_CANDIDATES": [
+  "CosyVoice zero-shot (control)",
+  "OpenVoice V2 (lightweight reserve)"
+ ],
+ "F5_TTS_DEFAULT": "NO (pretrained weights non-commercial until license resolved)",
+ "backend_preflight": {
+  "torch": "2.6.0+cu124",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 3050",
+  "gpu_mem_gb": 6.0,
+  "ram_gb": 31.9,
+  "disk_free_gb": {
+   "E:\\": 142.3,
+   "C:\\": 28.9
+  },
+  "clone_backends_installed": {
+   "GPT_SoVITS": false,
+   "cosyvoice": false,
+   "openvoice": false,
+   "f5_tts": false
+  },
+  "treecut_tts_current": "LocalTTS (sherpa-onnx melo zh_en) - voice clone NOT integrated (F0/A0R2 confirmed)",
+  "license_notes": {
+   "GPT-SoVITS": "code MIT (official repo); pretrained-weight license must be re-verified at install time before any commercial use",
+   "CosyVoice": "Apache-2.0 code; weight terms re-verify at install",
+   "OpenVoiceV2": "MIT code (per official); verify weight terms",
+   "F5-TTS": "code MIT but official pretrained weights are non-commercial - NOT a production default until license resolved"
+  }
+ },
+ "clone_env": "isolated venv/service; never pollutes TreeCut runtime; never overwrites LocalTTS; weights never in git",
+ "ZERO_SHOT_A_B_COMPLETED": "A_ONLY",
+ "zero_shot_status_note": "Melo baseline (A) generated; GPT-SoVITS / CosyVoice backends NOT installed in this environment - offline availability + weight licenses must be resolved before B/C; no fabricated samples produced",
+ "FINE_TUNE_ALLOWED": "NO",
+ "PRODUCTION_INTEGRATION_ALLOWED": "NO"
+}
