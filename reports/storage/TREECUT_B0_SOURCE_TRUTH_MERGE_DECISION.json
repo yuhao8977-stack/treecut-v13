@@ -1,0 +1,38 @@
+{
+ "experiment": "TREECUT_B0_SOURCE_TRUTH_MERGE_DECISION",
+ "finding": "E install is an OLDER deployment snapshot of repo HEAD (missing services/, library assets/migrate modules, review-center desktop entry, research CLI flags); production chain 85/101 files byte-equal to HEAD.",
+ "merge_rule": "keep HEAD content for all 4 differing files (newer, self-consistent superset) + full-tree sync repo src/treecut -> E src/treecut; production behavior preserved (85 files equal); no direct E overwrite of HEAD features.",
+ "per_file": [
+  {
+   "file": "src/treecut/config/settings.py",
+   "decision": "keep HEAD",
+   "reason": "HEAD adds asr_device='auto' field+validation; E has no reader; keeps repo research consumers intact"
+  },
+  {
+   "file": "src/treecut/desktop.py",
+   "decision": "keep HEAD",
+   "reason": "HEAD adds lazy review-center entry (imports treecut.services.review_center only on click); deps synced to E"
+  },
+  {
+   "file": "src/treecut/library/__init__.py",
+   "decision": "keep HEAD",
+   "reason": "HEAD superset exports match repo submodules; E snapshot predates them; synced to E makes imports resolve"
+  },
+  {
+   "file": "src/treecut/main.py",
+   "decision": "keep HEAD",
+   "reason": "HEAD superset CLI; runtime entry unchanged; research flags kept"
+  }
+ ],
+ "e_install_evidence": {
+  "e_library_modules": [
+   "catalog.py",
+   "classification.py",
+   "__init__.py"
+  ],
+  "e_has_services_pkg": false,
+  "e_has_scheduler": true,
+  "head_desktop_lazy_import": "treecut.services.review_center (inside _open_review_center)",
+  "equal_production_files": "85/101 E .py byte-equal to HEAD (SOURCE_PROVENANCE E_CONTENT_EQ_HEAD)"
+ }
+}

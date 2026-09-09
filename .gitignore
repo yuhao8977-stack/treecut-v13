@@ -12,8 +12,9 @@
 config.json
 
 # B 类大文件/运行数据（仅本地）
-# 模型权重
-models/
+# 模型权重：仅忽略仓库根目录 models/（权重不入库）；
+# 不得忽略 src/treecut/models/*.py（运行代码必须入库，见 B0 source-of-truth）
+/models/
 *.safetensors
 *.pt
 *.pth

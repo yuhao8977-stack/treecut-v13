@@ -1,0 +1,210 @@
+{
+ "experiment": "TREECUT_B0_MODELS_GIT_EVIDENCE_PRE",
+ "note": "captured BEFORE .gitignore fix / git add",
+ "files": {
+  "src/treecut/models/__init__.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/__init__.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/cache.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/cache.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/object_detection.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/object_detection.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/policy.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/policy.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/registry.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/registry.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/semantic_matching.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/semantic_matching.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/speech_sensevoice.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/speech_sensevoice.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/speech_whisper.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/speech_whisper.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/tts_local.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/tts_local.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/validation.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/validation.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/vision_florence.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/vision_florence.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  },
+  "src/treecut/models/vision_qwen.py": {
+   "check_ignore": {
+    "rc": 0,
+    "stdout": ".gitignore:16:models/\tsrc/treecut/models/vision_qwen.py\n",
+    "stderr": ""
+   },
+   "log_all_first5": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   },
+   "ls_files": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+   }
+  }
+ }
+}
