@@ -1,0 +1,2685 @@
+{
+ "experiment": "TREECUT_B1R1_F0R1_GIT_HISTORY",
+ "head": "89c1d393b83b896964f80e96834f2e9e77d97b97",
+ "method": "-S and -G and --name-status all actually executed per token; content + filename search; bucketed src/tests/scripts/docs/reports/other",
+ "features": [
+  {
+   "id": "caption_display_punctuation",
+   "name": "显示字幕去标点 speech/display 分离",
+   "capability_tokens": [
+    "display_text",
+    "caption_policy",
+    "strip_punctuation"
+   ],
+   "legacy_tokens": [
+    "标点",
+    "punctuation",
+    "build_srt",
+    "split_subtitle_cues"
+   ],
+   "code_files": [],
+   "canonical_code_files": [],
+   "import_reachable": false,
+   "import_matches": [],
+   "direct_callers": {},
+   "in_production_closure": [],
+   "history": {
+    "S": {
+     "display_text": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "caption_policy": {
+      "ran": true,
+      "commit_count": 0,
+      "first": null,
+      "last": null,
+      "sample": []
+     },
+     "strip_punctuation": {
+      "ran": true,
+      "commit_count": 0,
+      "first": null,
+      "last": null,
+      "sample": []
+     },
+     "标点": {
+      "ran": true,
+      "commit_count": 7,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "1d470abe",
+       "942d4592",
+       "89521554",
+       "7a66fa41"
+      ]
+     },
+     "punctuation": {
+      "ran": true,
+      "commit_count": 3,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "4f5f9bdd"
+      ]
+     },
+     "build_srt": {
+      "ran": true,
+      "commit_count": 7,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "0c95e5c8",
+       "c04e4fa6",
+       "53d815e5",
+       "3a7d9642",
+       "50cab7e8"
+      ]
+     },
+     "split_subtitle_cues": {
+      "ran": true,
+      "commit_count": 3,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "7a66fa41",
+       "4f5f9bdd"
+      ]
+     }
+    },
+    "G": {
+     "display_text": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "caption_policy": {
+      "ran": true,
+      "commit_count": 0,
+      "first": null,
+      "last": null,
+      "sample": []
+     },
+     "strip_punctuation": {
+      "ran": true,
+      "commit_count": 0,
+      "first": null,
+      "last": null,
+      "sample": []
+     },
+     "标点": {
+      "ran": true,
+      "commit_count": 7,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "1d470abe",
+       "942d4592",
+       "89521554",
+       "7a66fa41"
+      ]
+     },
+     "punctuation": {
+      "ran": true,
+      "commit_count": 3,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "4f5f9bdd"
+      ]
+     },
+     "build_srt": {
+      "ran": true,
+      "commit_count": 7,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "0c95e5c8",
+       "c04e4fa6",
+       "53d815e5",
+       "3a7d9642",
+       "50cab7e8"
+      ]
+     },
+     "split_subtitle_cues": {
+      "ran": true,
+      "commit_count": 3,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "7a66fa41",
+       "4f5f9bdd"
+      ]
+     }
+    }
+   },
+   "name_status_buckets": {
+    "display_text": {
+     "docs": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 1,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 1,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "标点": {
+     "docs": {
+      "commits": 5,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 3,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 4,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 2,
+      "A": 2,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "punctuation": {
+     "docs": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 1,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 2,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 2,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "build_srt": {
+     "docs": {
+      "commits": 4,
+      "A": 4,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 4,
+      "A": 6,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 5,
+      "A": 6,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 2,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "split_subtitle_cues": {
+     "docs": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 1,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 1,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    }
+   },
+   "filename_history": {
+    "caption_policy.py": {
+     "ran": true,
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "status_counts": {}
+    },
+    "display_caption.py": {
+     "ran": true,
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "status_counts": {}
+    }
+   },
+   "searched_refs": "all branches + tags + HEAD (git log --all)",
+   "history_commit_universe": 1
+  },
+  {
+   "id": "subtitle_occlusion_plate",
+   "name": "原字幕遮挡板 drawbox/occlusion",
+   "capability_tokens": [
+    "drawbox",
+    "遮挡板",
+    "inpaint"
+   ],
+   "legacy_tokens": [
+    "occlusion"
+   ],
+   "code_files": [],
+   "canonical_code_files": [],
+   "import_reachable": false,
+   "import_matches": [],
+   "direct_callers": {},
+   "in_production_closure": [],
+   "history": {
+    "S": {
+     "drawbox": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "遮挡板": {
+      "ran": true,
+      "commit_count": 2,
+      "first": "6fc5e6fa",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa"
+      ]
+     },
+     "inpaint": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "occlusion": {
+      "ran": true,
+      "commit_count": 4,
+      "first": "db2ff377",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "740ca949",
+       "db2ff377"
+      ]
+     }
+    },
+    "G": {
+     "drawbox": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "遮挡板": {
+      "ran": true,
+      "commit_count": 2,
+      "first": "6fc5e6fa",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa"
+      ]
+     },
+     "inpaint": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "occlusion": {
+      "ran": true,
+      "commit_count": 4,
+      "first": "db2ff377",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "740ca949",
+       "db2ff377"
+      ]
+     }
+    }
+   },
+   "name_status_buckets": {
+    "drawbox": {
+     "docs": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 1,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 1,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "遮挡板": {
+     "docs": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 1,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 2,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "inpaint": {
+     "docs": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 1,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 1,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "occlusion": {
+     "docs": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 4,
+      "A": 7,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 2,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 1,
+      "A": 0,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     }
+    }
+   },
+   "filename_history": {
+    "caption_occlusion.py": {
+     "ran": true,
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "status_counts": {}
+    },
+    "source_text_policy.py": {
+     "ran": true,
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "status_counts": {}
+    }
+   },
+   "searched_refs": "all branches + tags + HEAD (git log --all)",
+   "history_commit_universe": 1
+  },
+  {
+   "id": "old_subtitle_detection",
+   "name": "原字幕检测/卫生",
+   "capability_tokens": [
+    "OLD_SUBTITLE_ABSENT",
+    "old_subtitle"
+   ],
+   "legacy_tokens": [
+    "原字幕",
+    "subtitle hygiene",
+    "SUBTITLE_HYGIENE_PASS"
+   ],
+   "code_files": [
+    "src/treecut/services/production_qa.py"
+   ],
+   "canonical_code_files": [
+    "treecut/services/production_qa.py"
+   ],
+   "import_reachable": false,
+   "import_matches": [],
+   "direct_callers": {},
+   "in_production_closure": [],
+   "history": {
+    "S": {
+     "OLD_SUBTITLE_ABSENT": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "53d815e5",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "3be032e1",
+       "ce1852ff",
+       "c04e4fa6",
+       "53d815e5"
+      ]
+     },
+     "old_subtitle": {
+      "ran": true,
+      "commit_count": 9,
+      "first": "53d815e5",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "0c95e5c8",
+       "cec80403",
+       "02c1fc8a",
+       "bdc75060",
+       "c04e4fa6"
+      ]
+     },
+     "原字幕": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "bdc75060",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "f378fda2",
+       "0c95e5c8",
+       "bdc75060"
+      ]
+     },
+     "subtitle hygiene": {
+      "ran": true,
+      "commit_count": 2,
+      "first": "6fc5e6fa",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa"
+      ]
+     },
+     "SUBTITLE_HYGIENE_PASS": {
+      "ran": true,
+      "commit_count": 3,
+      "first": "f378fda2",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "f378fda2"
+      ]
+     }
+    },
+    "G": {
+     "OLD_SUBTITLE_ABSENT": {
+      "ran": true,
+      "commit_count": 6,
+      "first": "53d815e5",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "3be032e1",
+       "ce1852ff",
+       "c04e4fa6",
+       "d184bd4b",
+       "53d815e5"
+      ]
+     },
+     "old_subtitle": {
+      "ran": true,
+      "commit_count": 9,
+      "first": "53d815e5",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "0c95e5c8",
+       "cec80403",
+       "02c1fc8a",
+       "bdc75060",
+       "c04e4fa6"
+      ]
+     },
+     "原字幕": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "bdc75060",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "f378fda2",
+       "0c95e5c8",
+       "bdc75060"
+      ]
+     },
+     "subtitle hygiene": {
+      "ran": true,
+      "commit_count": 2,
+      "first": "6fc5e6fa",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa"
+      ]
+     },
+     "SUBTITLE_HYGIENE_PASS": {
+      "ran": true,
+      "commit_count": 3,
+      "first": "f378fda2",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "f378fda2"
+      ]
+     }
+    }
+   },
+   "name_status_buckets": {
+    "OLD_SUBTITLE_ABSENT": {
+     "docs": {
+      "commits": 5,
+      "A": 4,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 2,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 3,
+      "A": 3,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "old_subtitle": {
+     "docs": {
+      "commits": 5,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 7,
+      "A": 10,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 7,
+      "A": 9,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "原字幕": {
+     "docs": {
+      "commits": 4,
+      "A": 4,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 3,
+      "A": 4,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 5,
+      "A": 6,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "subtitle hygiene": {
+     "reports": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "SUBTITLE_HYGIENE_PASS": {
+     "reports": {
+      "commits": 3,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 3,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "docs": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 1,
+      "A": 0,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     }
+    }
+   },
+   "filename_history": {
+    "production_qa.py": {
+     "ran": true,
+     "commit_count": 1,
+     "first_commit": "006b92de",
+     "last_commit": "006b92de",
+     "status_counts": {
+      "A": 1
+     }
+    },
+    "source_text_detect.py": {
+     "ran": true,
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "status_counts": {}
+    }
+   },
+   "searched_refs": "all branches + tags + HEAD (git log --all)",
+   "history_commit_universe": 1
+  },
+  {
+   "id": "caption_safe_zone",
+   "name": "字幕安全区",
+   "capability_tokens": [
+    "safe zone",
+    "安全区",
+    "caption_safe_zone_pass"
+   ],
+   "legacy_tokens": [
+    "MarginV"
+   ],
+   "code_files": [],
+   "canonical_code_files": [],
+   "import_reachable": false,
+   "import_matches": [],
+   "direct_callers": {},
+   "in_production_closure": [],
+   "history": {
+    "S": {
+     "safe zone": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "安全区": {
+      "ran": true,
+      "commit_count": 3,
+      "first": "0c95e5c8",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "f378fda2",
+       "0c95e5c8"
+      ]
+     },
+     "caption_safe_zone_pass": {
+      "ran": true,
+      "commit_count": 0,
+      "first": null,
+      "last": null,
+      "sample": []
+     },
+     "MarginV": {
+      "ran": true,
+      "commit_count": 3,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "53d815e5",
+       "4f5f9bdd"
+      ]
+     }
+    },
+    "G": {
+     "safe zone": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "安全区": {
+      "ran": true,
+      "commit_count": 3,
+      "first": "0c95e5c8",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "f378fda2",
+       "0c95e5c8"
+      ]
+     },
+     "caption_safe_zone_pass": {
+      "ran": true,
+      "commit_count": 0,
+      "first": null,
+      "last": null,
+      "sample": []
+     },
+     "MarginV": {
+      "ran": true,
+      "commit_count": 3,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "53d815e5",
+       "4f5f9bdd"
+      ]
+     }
+    }
+   },
+   "name_status_buckets": {
+    "safe zone": {
+     "docs": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 1,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 1,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "安全区": {
+     "docs": {
+      "commits": 3,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 2,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 3,
+      "A": 4,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "MarginV": {
+     "docs": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 1,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 2,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    }
+   },
+   "filename_history": {
+    "caption_safe_zone.py": {
+     "ran": true,
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "status_counts": {}
+    }
+   },
+   "searched_refs": "all branches + tags + HEAD (git log --all)",
+   "history_commit_universe": 1
+  },
+  {
+   "id": "source_gate",
+   "name": "干净生产源门",
+   "capability_tokens": [
+    "SourceGate",
+    "production_source"
+   ],
+   "legacy_tokens": [
+    "source_role",
+    "clean_raw",
+    "eligible"
+   ],
+   "code_files": [
+    "src/treecut/services/production_source.py"
+   ],
+   "canonical_code_files": [
+    "treecut/services/production_source.py"
+   ],
+   "import_reachable": false,
+   "import_matches": [],
+   "direct_callers": {},
+   "in_production_closure": [],
+   "history": {
+    "S": {
+     "SourceGate": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "production_source": {
+      "ran": true,
+      "commit_count": 11,
+      "first": "93718622",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "c2bb7b65",
+       "721d9f21",
+       "75c30172",
+       "3be032e1"
+      ]
+     },
+     "source_role": {
+      "ran": true,
+      "commit_count": 23,
+      "first": "ffbf051a",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "02c1fc8a",
+       "bdc75060",
+       "3309c4fd",
+       "721d9f21",
+       "75c30172"
+      ]
+     },
+     "clean_raw": {
+      "ran": true,
+      "commit_count": 2,
+      "first": "dc058b44",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "dc058b44"
+      ]
+     },
+     "eligible": {
+      "ran": true,
+      "commit_count": 44,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "85bed5d9",
+       "02c1fc8a",
+       "bdc75060",
+       "740ca949",
+       "db2ff377"
+      ]
+     }
+    },
+    "G": {
+     "SourceGate": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "production_source": {
+      "ran": true,
+      "commit_count": 11,
+      "first": "93718622",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "c2bb7b65",
+       "721d9f21",
+       "75c30172",
+       "3be032e1"
+      ]
+     },
+     "source_role": {
+      "ran": true,
+      "commit_count": 23,
+      "first": "ffbf051a",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "02c1fc8a",
+       "bdc75060",
+       "3309c4fd",
+       "721d9f21",
+       "75c30172"
+      ]
+     },
+     "clean_raw": {
+      "ran": true,
+      "commit_count": 2,
+      "first": "dc058b44",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "dc058b44"
+      ]
+     },
+     "eligible": {
+      "ran": true,
+      "commit_count": 44,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "85bed5d9",
+       "02c1fc8a",
+       "bdc75060",
+       "740ca949",
+       "db2ff377"
+      ]
+     }
+    }
+   },
+   "name_status_buckets": {
+    "SourceGate": {
+     "reports": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "production_source": {
+     "docs": {
+      "commits": 6,
+      "A": 6,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 6,
+      "A": 11,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 5,
+      "A": 5,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 3,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "source_role": {
+     "reports": {
+      "commits": 8,
+      "A": 14,
+      "M": 3,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 17,
+      "A": 18,
+      "M": 2,
+      "D": 2,
+      "R": 0
+     },
+     "other": {
+      "commits": 5,
+      "A": 2,
+      "M": 4,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 3,
+      "A": 2,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "docs": {
+      "commits": 6,
+      "A": 6,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "clean_raw": {
+     "reports": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "eligible": {
+     "docs": {
+      "commits": 19,
+      "A": 19,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 21,
+      "A": 37,
+      "M": 7,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 28,
+      "A": 38,
+      "M": 2,
+      "D": 1,
+      "R": 0
+     },
+     "other": {
+      "commits": 11,
+      "A": 8,
+      "M": 6,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 10,
+      "A": 9,
+      "M": 3,
+      "D": 0,
+      "R": 0
+     }
+    }
+   },
+   "filename_history": {
+    "production_source.py": {
+     "ran": true,
+     "commit_count": 3,
+     "first_commit": "dc058b44",
+     "last_commit": "3be032e1",
+     "status_counts": {
+      "M": 2,
+      "A": 1
+     }
+    },
+    "source_gate.py": {
+     "ran": true,
+     "commit_count": 0,
+     "first_commit": null,
+     "last_commit": null,
+     "status_counts": {}
+    }
+   },
+   "searched_refs": "all branches + tags + HEAD (git log --all)",
+   "history_commit_universe": 1
+  },
+  {
+   "id": "beat_claim",
+   "name": "Beat/Claim 拆解",
+   "capability_tokens": [
+    "beat_id",
+    "BeatClaim"
+   ],
+   "legacy_tokens": [
+    "claim_visual",
+    "visual_beat",
+    "required_visual"
+   ],
+   "code_files": [
+    "src/treecut/services/claim_visual.py",
+    "src/treecut/services/shot_usage.py",
+    "src/treecut/services/visual_beat.py",
+    "src/treecut/services/visual_understanding_v2.py"
+   ],
+   "canonical_code_files": [
+    "treecut/services/claim_visual.py",
+    "treecut/services/shot_usage.py",
+    "treecut/services/visual_beat.py",
+    "treecut/services/visual_understanding_v2.py"
+   ],
+   "import_reachable": false,
+   "import_matches": [],
+   "direct_callers": {},
+   "in_production_closure": [],
+   "history": {
+    "S": {
+     "beat_id": {
+      "ran": true,
+      "commit_count": 18,
+      "first": "fc702992",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "bdc75060",
+       "c2bb7b65",
+       "3be032e1",
+       "ce1852ff",
+       "9640c9f9"
+      ]
+     },
+     "BeatClaim": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "claim_visual": {
+      "ran": true,
+      "commit_count": 17,
+      "first": "f4541473",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "cec80403",
+       "bdc75060",
+       "c2bb7b65",
+       "922749ae"
+      ]
+     },
+     "visual_beat": {
+      "ran": true,
+      "commit_count": 11,
+      "first": "43eaee4b",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "cec80403",
+       "bdc75060",
+       "c2bb7b65",
+       "ce1852ff"
+      ]
+     },
+     "required_visual": {
+      "ran": true,
+      "commit_count": 2,
+      "first": "f1b95b2b",
+      "last": "f9a966db",
+      "sample": [
+       "f9a966db",
+       "f1b95b2b"
+      ]
+     }
+    },
+    "G": {
+     "beat_id": {
+      "ran": true,
+      "commit_count": 18,
+      "first": "fc702992",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "bdc75060",
+       "c2bb7b65",
+       "3be032e1",
+       "ce1852ff",
+       "9640c9f9"
+      ]
+     },
+     "BeatClaim": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "claim_visual": {
+      "ran": true,
+      "commit_count": 17,
+      "first": "f4541473",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "cec80403",
+       "bdc75060",
+       "c2bb7b65",
+       "922749ae"
+      ]
+     },
+     "visual_beat": {
+      "ran": true,
+      "commit_count": 11,
+      "first": "43eaee4b",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "cec80403",
+       "bdc75060",
+       "c2bb7b65",
+       "ce1852ff"
+      ]
+     },
+     "required_visual": {
+      "ran": true,
+      "commit_count": 2,
+      "first": "f1b95b2b",
+      "last": "f9a966db",
+      "sample": [
+       "f9a966db",
+       "f1b95b2b"
+      ]
+     }
+    }
+   },
+   "name_status_buckets": {
+    "beat_id": {
+     "reports": {
+      "commits": 8,
+      "A": 9,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 7,
+      "A": 9,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "docs": {
+      "commits": 3,
+      "A": 3,
+      "M": 0,
+      "D": 1,
+      "R": 0
+     },
+     "tests": {
+      "commits": 6,
+      "A": 5,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 7,
+      "A": 8,
+      "M": 2,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "BeatClaim": {
+     "reports": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "claim_visual": {
+     "docs": {
+      "commits": 6,
+      "A": 7,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 10,
+      "A": 16,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 7,
+      "A": 12,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 4,
+      "A": 4,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "visual_beat": {
+     "docs": {
+      "commits": 7,
+      "A": 8,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 8,
+      "A": 12,
+      "M": 2,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 4,
+      "A": 6,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 2,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "required_visual": {
+     "reports": {
+      "commits": 2,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    }
+   },
+   "filename_history": {
+    "visual_beat.py": {
+     "ran": true,
+     "commit_count": 1,
+     "first_commit": "43eaee4b",
+     "last_commit": "43eaee4b",
+     "status_counts": {
+      "A": 1
+     }
+    },
+    "claim_visual.py": {
+     "ran": true,
+     "commit_count": 3,
+     "first_commit": "f4541473",
+     "last_commit": "ce1852ff",
+     "status_counts": {
+      "M": 2,
+      "A": 1
+     }
+    }
+   },
+   "searched_refs": "all branches + tags + HEAD (git log --all)",
+   "history_commit_universe": 1
+  },
+  {
+   "id": "feedback_loop",
+   "name": "Feedback 消费",
+   "capability_tokens": [
+    "adjustments"
+   ],
+   "legacy_tokens": [
+    "FeedbackStore",
+    "feedback"
+   ],
+   "code_files": [
+    "src/treecut/application/production.py",
+    "src/treecut/learning/feedback.py",
+    "src/treecut/workflow/matching.py"
+   ],
+   "canonical_code_files": [
+    "treecut/application/production.py",
+    "treecut/learning/feedback.py",
+    "treecut/workflow/matching.py"
+   ],
+   "import_reachable": true,
+   "import_matches": [
+    "treecut/application/production.py",
+    "treecut/learning/feedback.py",
+    "treecut/workflow/matching.py"
+   ],
+   "direct_callers": {
+    "treecut/application/production.py": [
+     "treecut/learning/feedback.py"
+    ],
+    "treecut/desktop.py": [
+     "treecut/learning/feedback.py"
+    ],
+    "treecut/api.py": [
+     "treecut/learning/feedback.py"
+    ]
+   },
+   "in_production_closure": [
+    "treecut/application/production.py",
+    "treecut/learning/feedback.py",
+    "treecut/workflow/matching.py"
+   ],
+   "history": {
+    "S": {
+     "adjustments": {
+      "ran": true,
+      "commit_count": 6,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "cec80403",
+       "02c1fc8a",
+       "bdc75060",
+       "7a66fa41",
+       "4f5f9bdd"
+      ]
+     },
+     "FeedbackStore": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "cec80403",
+       "02c1fc8a",
+       "bdc75060",
+       "4f5f9bdd"
+      ]
+     },
+     "feedback": {
+      "ran": true,
+      "commit_count": 20,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "cec80403",
+       "02c1fc8a",
+       "bdc75060",
+       "c2bb7b65"
+      ]
+     }
+    },
+    "G": {
+     "adjustments": {
+      "ran": true,
+      "commit_count": 6,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "cec80403",
+       "02c1fc8a",
+       "bdc75060",
+       "7a66fa41",
+       "4f5f9bdd"
+      ]
+     },
+     "FeedbackStore": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "cec80403",
+       "02c1fc8a",
+       "bdc75060",
+       "4f5f9bdd"
+      ]
+     },
+     "feedback": {
+      "ran": true,
+      "commit_count": 20,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "cec80403",
+       "02c1fc8a",
+       "bdc75060",
+       "c2bb7b65"
+      ]
+     }
+    }
+   },
+   "name_status_buckets": {
+    "adjustments": {
+     "docs": {
+      "commits": 4,
+      "A": 4,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 4,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 4,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 1,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "FeedbackStore": {
+     "docs": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 4,
+      "A": 6,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 4,
+      "A": 6,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 1,
+      "A": 6,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "feedback": {
+     "reports": {
+      "commits": 8,
+      "A": 19,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 6,
+      "A": 9,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "docs": {
+      "commits": 13,
+      "A": 12,
+      "M": 2,
+      "D": 1,
+      "R": 0
+     },
+     "tests": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 4,
+      "A": 20,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     }
+    }
+   },
+   "filename_history": {
+    "feedback.py": {
+     "ran": true,
+     "commit_count": 1,
+     "first_commit": "4f5f9bdd",
+     "last_commit": "4f5f9bdd",
+     "status_counts": {
+      "A": 1
+     }
+    }
+   },
+   "searched_refs": "all branches + tags + HEAD (git log --all)",
+   "history_commit_universe": 1
+  },
+  {
+   "id": "semantic_selection",
+   "name": "BGE/CLIP 语义选材",
+   "capability_tokens": [
+    "semantic_scores",
+    "bge_scored",
+    "clip_scored"
+   ],
+   "legacy_tokens": [
+    "Chinese-CLIP",
+    "semantic_matching"
+   ],
+   "code_files": [
+    "src/treecut/application/production.py",
+    "src/treecut/models/semantic_matching.py"
+   ],
+   "canonical_code_files": [
+    "treecut/application/production.py",
+    "treecut/models/semantic_matching.py"
+   ],
+   "import_reachable": true,
+   "import_matches": [
+    "treecut/application/production.py",
+    "treecut/models/semantic_matching.py"
+   ],
+   "direct_callers": {
+    "treecut/application/production.py": [
+     "treecut/models/semantic_matching.py"
+    ]
+   },
+   "in_production_closure": [
+    "treecut/application/production.py",
+    "treecut/models/semantic_matching.py"
+   ],
+   "history": {
+    "S": {
+     "semantic_scores": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "85bed5d9",
+       "02c1fc8a",
+       "bdc75060",
+       "4f5f9bdd"
+      ]
+     },
+     "bge_scored": {
+      "ran": true,
+      "commit_count": 6,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "0c95e5c8",
+       "afcdd7d6",
+       "bdc75060",
+       "4f5f9bdd"
+      ]
+     },
+     "clip_scored": {
+      "ran": true,
+      "commit_count": 7,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "0c95e5c8",
+       "afcdd7d6",
+       "cec80403",
+       "bdc75060"
+      ]
+     },
+     "Chinese-CLIP": {
+      "ran": true,
+      "commit_count": 9,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "f378fda2",
+       "0c95e5c8",
+       "ced26b62",
+       "afcdd7d6",
+       "85bed5d9"
+      ]
+     },
+     "semantic_matching": {
+      "ran": true,
+      "commit_count": 10,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "0c95e5c8",
+       "afcdd7d6",
+       "85bed5d9",
+       "cec80403",
+       "02c1fc8a"
+      ]
+     }
+    },
+    "G": {
+     "semantic_scores": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "85bed5d9",
+       "02c1fc8a",
+       "bdc75060",
+       "4f5f9bdd"
+      ]
+     },
+     "bge_scored": {
+      "ran": true,
+      "commit_count": 6,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "0c95e5c8",
+       "afcdd7d6",
+       "bdc75060",
+       "4f5f9bdd"
+      ]
+     },
+     "clip_scored": {
+      "ran": true,
+      "commit_count": 7,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "0c95e5c8",
+       "afcdd7d6",
+       "cec80403",
+       "bdc75060"
+      ]
+     },
+     "Chinese-CLIP": {
+      "ran": true,
+      "commit_count": 9,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "f378fda2",
+       "0c95e5c8",
+       "ced26b62",
+       "afcdd7d6",
+       "85bed5d9"
+      ]
+     },
+     "semantic_matching": {
+      "ran": true,
+      "commit_count": 10,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "0c95e5c8",
+       "afcdd7d6",
+       "85bed5d9",
+       "cec80403",
+       "02c1fc8a"
+      ]
+     }
+    }
+   },
+   "name_status_buckets": {
+    "semantic_scores": {
+     "docs": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 3,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 3,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "bge_scored": {
+     "reports": {
+      "commits": 5,
+      "A": 8,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 3,
+      "A": 5,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "clip_scored": {
+     "docs": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 5,
+      "A": 9,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 4,
+      "A": 6,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "Chinese-CLIP": {
+     "docs": {
+      "commits": 6,
+      "A": 6,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 5,
+      "A": 7,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 6,
+      "A": 8,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 2,
+      "A": 14,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "semantic_matching": {
+     "reports": {
+      "commits": 7,
+      "A": 11,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 3,
+      "A": 3,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "docs": {
+      "commits": 4,
+      "A": 3,
+      "M": 1,
+      "D": 1,
+      "R": 0
+     },
+     "other": {
+      "commits": 1,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    }
+   },
+   "filename_history": {
+    "semantic_matching.py": {
+     "ran": true,
+     "commit_count": 1,
+     "first_commit": "85bed5d9",
+     "last_commit": "85bed5d9",
+     "status_counts": {
+      "A": 1
+     }
+    }
+   },
+   "searched_refs": "all branches + tags + HEAD (git log --all)",
+   "history_commit_universe": 1
+  },
+  {
+   "id": "cam_mmvv_action",
+   "name": "CAM/MMVV/动作证据接线",
+   "capability_tokens": [
+    "ActionEvidence",
+    "action_evidence"
+   ],
+   "legacy_tokens": [
+    "mmvl",
+    "visual_action",
+    "mmvl_master"
+   ],
+   "code_files": [
+    "src/treecut/services/action_subclip.py",
+    "src/treecut/services/mmvl_master_v1.py"
+   ],
+   "canonical_code_files": [
+    "treecut/services/action_subclip.py",
+    "treecut/services/mmvl_master_v1.py"
+   ],
+   "import_reachable": false,
+   "import_matches": [],
+   "direct_callers": {},
+   "in_production_closure": [],
+   "history": {
+    "S": {
+     "ActionEvidence": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "action_evidence": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "53d815e5",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "db2ff377",
+       "5515788f",
+       "f4541473",
+       "53d815e5"
+      ]
+     },
+     "mmvl": {
+      "ran": true,
+      "commit_count": 23,
+      "first": "c4d23d64",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "cec80403",
+       "bdc75060",
+       "c2bb7b65",
+       "cad69a16"
+      ]
+     },
+     "visual_action": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "mmvl_master": {
+      "ran": true,
+      "commit_count": 23,
+      "first": "c4d23d64",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "cec80403",
+       "bdc75060",
+       "c2bb7b65",
+       "cad69a16"
+      ]
+     }
+    },
+    "G": {
+     "ActionEvidence": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "action_evidence": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "53d815e5",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "db2ff377",
+       "5515788f",
+       "f4541473",
+       "53d815e5"
+      ]
+     },
+     "mmvl": {
+      "ran": true,
+      "commit_count": 23,
+      "first": "c4d23d64",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "cec80403",
+       "bdc75060",
+       "c2bb7b65",
+       "cad69a16"
+      ]
+     },
+     "visual_action": {
+      "ran": true,
+      "commit_count": 1,
+      "first": "89c1d393",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393"
+      ]
+     },
+     "mmvl_master": {
+      "ran": true,
+      "commit_count": 23,
+      "first": "c4d23d64",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "afcdd7d6",
+       "cec80403",
+       "bdc75060",
+       "c2bb7b65",
+       "cad69a16"
+      ]
+     }
+    }
+   },
+   "name_status_buckets": {
+    "ActionEvidence": {
+     "reports": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "action_evidence": {
+     "reports": {
+      "commits": 4,
+      "A": 5,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "docs": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "mmvl": {
+     "docs": {
+      "commits": 7,
+      "A": 7,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 9,
+      "A": 15,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 13,
+      "A": 12,
+      "M": 2,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 7,
+      "A": 6,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "visual_action": {
+     "reports": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 1,
+      "A": 1,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     }
+    },
+    "mmvl_master": {
+     "docs": {
+      "commits": 6,
+      "A": 6,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 9,
+      "A": 13,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 13,
+      "A": 11,
+      "M": 2,
+      "D": 0,
+      "R": 0
+     },
+     "tests": {
+      "commits": 7,
+      "A": 6,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     }
+    }
+   },
+   "filename_history": {
+    "mmvl_master_v1.py": {
+     "ran": true,
+     "commit_count": 6,
+     "first_commit": "c4d23d64",
+     "last_commit": "3b7af858",
+     "status_counts": {
+      "M": 5,
+      "A": 1
+     }
+    },
+    "action_subclip.py": {
+     "ran": true,
+     "commit_count": 5,
+     "first_commit": "f4541473",
+     "last_commit": "ce1852ff",
+     "status_counts": {
+      "M": 4,
+      "A": 1
+     }
+    }
+   },
+   "searched_refs": "all branches + tags + HEAD (git log --all)",
+   "history_commit_universe": 1
+  },
+  {
+   "id": "plan_override_bypass",
+   "name": "plan_override 绕过智能选材",
+   "capability_tokens": [
+    "plan_override"
+   ],
+   "legacy_tokens": [],
+   "code_files": [
+    "src/treecut/application/production.py",
+    "src/treecut/desktop.py"
+   ],
+   "canonical_code_files": [
+    "treecut/application/production.py",
+    "treecut/desktop.py"
+   ],
+   "import_reachable": true,
+   "import_matches": [
+    "treecut/application/production.py"
+   ],
+   "direct_callers": {
+    "treecut/application/production.py": [
+     "treecut/application/production.py"
+    ],
+    "treecut/desktop.py": [
+     "treecut/application/production.py"
+    ],
+    "treecut/api.py": [
+     "treecut/application/production.py"
+    ]
+   },
+   "in_production_closure": [
+    "treecut/application/production.py"
+   ],
+   "history": {
+    "S": {
+     "plan_override": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "f378fda2",
+       "bdc75060",
+       "4f5f9bdd"
+      ]
+     }
+    },
+    "G": {
+     "plan_override": {
+      "ran": true,
+      "commit_count": 5,
+      "first": "4f5f9bdd",
+      "last": "89c1d393",
+      "sample": [
+       "89c1d393",
+       "6fc5e6fa",
+       "f378fda2",
+       "bdc75060",
+       "4f5f9bdd"
+      ]
+     }
+    }
+   },
+   "name_status_buckets": {
+    "plan_override": {
+     "docs": {
+      "commits": 2,
+      "A": 2,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "reports": {
+      "commits": 2,
+      "A": 4,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "scripts": {
+      "commits": 4,
+      "A": 6,
+      "M": 0,
+      "D": 0,
+      "R": 0
+     },
+     "other": {
+      "commits": 2,
+      "A": 2,
+      "M": 1,
+      "D": 0,
+      "R": 0
+     }
+    }
+   },
+   "filename_history": {},
+   "searched_refs": "all branches + tags + HEAD (git log --all)",
+   "history_commit_universe": 1
+  }
+ ]
+}

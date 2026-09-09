@@ -1,0 +1,330 @@
+{
+ "experiment": "TREECUT_B1R1_F0R1_RESULT",
+ "head": "89c1d393b83b896964f80e96834f2e9e77d97b97",
+ "classifications": {
+  "caption_display_punctuation": "NEVER_IMPLEMENTED",
+  "subtitle_occlusion_plate": "NEVER_IMPLEMENTED",
+  "old_subtitle_detection": "IMPLEMENTED_BUT_DISCONNECTED",
+  "caption_safe_zone": "NEVER_IMPLEMENTED",
+  "source_gate": "IMPLEMENTED_BUT_DISCONNECTED",
+  "beat_claim": "IMPLEMENTED_BUT_DISCONNECTED",
+  "feedback_loop": "IMPLEMENTED_ACTIVE",
+  "semantic_selection": "IMPLEMENTED_ACTIVE",
+  "cam_mmvv_action": "IMPLEMENTED_BUT_DISCONNECTED",
+  "plan_override_bypass": "IMPLEMENTED_ACTIVE"
+ },
+ "feature_details": [
+  {
+   "id": "caption_display_punctuation",
+   "name": "显示字幕去标点 speech/display 分离",
+   "rule_id": "R_NEVER_CAPABILITY",
+   "rule_reason": "capability tokens display_text/caption_policy/strip_punctuation NOT_FOUND_IN_REACHABLE_GIT_HISTORY (S&G, all-refs 1); filenames caption_policy/display_caption none; legacy tokens 标点/punctuation only in comments/docs, build_srt keeps punctuation verbatim",
+   "machine_inputs": {
+    "import_reachable": false,
+    "code_files": [],
+    "capability_src_hist_hits": [
+     "display_text"
+    ],
+    "filename_history_hits": {}
+   },
+   "derived_classification": "NEVER_IMPLEMENTED",
+   "manual_adjudication": "NEVER_IMPLEMENTED",
+   "adjudication_reason": "legacy tokens 标点/punctuation appear in src comments/docs only; build_srt currently WRITES speech verbatim with punctuation (active wrong behavior), but the required no-punctuation display capability has no implementation in reachable history"
+  },
+  {
+   "id": "subtitle_occlusion_plate",
+   "name": "原字幕遮挡板 drawbox/occlusion",
+   "rule_id": "R_NEVER_CAPABILITY",
+   "rule_reason": "drawbox/遮挡板/inpaint NOT_FOUND_IN_REACHABLE_GIT_HISTORY in src; only 'occlusion' word in notes/reports",
+   "machine_inputs": {
+    "import_reachable": false,
+    "code_files": [],
+    "capability_src_hist_hits": [
+     "drawbox",
+     "遮挡板",
+     "inpaint"
+    ],
+    "filename_history_hits": {}
+   },
+   "derived_classification": "NEVER_IMPLEMENTED",
+   "manual_adjudication": null,
+   "adjudication_reason": null
+  },
+  {
+   "id": "old_subtitle_detection",
+   "name": "原字幕检测/卫生",
+   "rule_id": "R_DISCONNECTED",
+   "rule_reason": "code at HEAD (files ['treecut/services/production_qa.py']...) but NOT in production closure (35 modules); filename-found independent of content tokens",
+   "machine_inputs": {
+    "import_reachable": false,
+    "code_files": [
+     "treecut/services/production_qa.py"
+    ],
+    "capability_src_hist_hits": [
+     "OLD_SUBTITLE_ABSENT",
+     "old_subtitle"
+    ],
+    "filename_history_hits": {
+     "production_qa.py": {
+      "ran": true,
+      "commit_count": 1,
+      "first_commit": "006b92de",
+      "last_commit": "006b92de",
+      "status_counts": {
+       "A": 1
+      }
+     }
+    }
+   },
+   "derived_classification": "IMPLEMENTED_BUT_DISCONNECTED",
+   "manual_adjudication": null,
+   "adjudication_reason": null
+  },
+  {
+   "id": "caption_safe_zone",
+   "name": "字幕安全区",
+   "rule_id": "R_NEVER_CAPABILITY",
+   "rule_reason": "safe zone/安全区/caption_safe_zone_pass NOT_FOUND_IN_REACHABLE_GIT_HISTORY in src (S&G all refs); only fixed MarginV/Alignment params in burn_subtitles",
+   "machine_inputs": {
+    "import_reachable": false,
+    "code_files": [],
+    "capability_src_hist_hits": [
+     "safe zone",
+     "安全区"
+    ],
+    "filename_history_hits": {}
+   },
+   "derived_classification": "NEVER_IMPLEMENTED",
+   "manual_adjudication": null,
+   "adjudication_reason": null
+  },
+  {
+   "id": "source_gate",
+   "name": "干净生产源门",
+   "rule_id": "R_DISCONNECTED",
+   "rule_reason": "code at HEAD (files ['treecut/services/production_source.py']...) but NOT in production closure (35 modules); filename-found independent of content tokens",
+   "machine_inputs": {
+    "import_reachable": false,
+    "code_files": [
+     "treecut/services/production_source.py"
+    ],
+    "capability_src_hist_hits": [
+     "SourceGate",
+     "production_source"
+    ],
+    "filename_history_hits": {
+     "production_source.py": {
+      "ran": true,
+      "commit_count": 3,
+      "first_commit": "dc058b44",
+      "last_commit": "3be032e1",
+      "status_counts": {
+       "M": 2,
+       "A": 1
+      }
+     }
+    }
+   },
+   "derived_classification": "IMPLEMENTED_BUT_DISCONNECTED",
+   "manual_adjudication": null,
+   "adjudication_reason": null
+  },
+  {
+   "id": "beat_claim",
+   "name": "Beat/Claim 拆解",
+   "rule_id": "R_DISCONNECTED",
+   "rule_reason": "code at HEAD (files ['treecut/services/claim_visual.py', 'treecut/services/shot_usage.py', 'treecut/services/visual_beat.py']...) but NOT in production closure (35 modules); filename-found independent of content tokens",
+   "machine_inputs": {
+    "import_reachable": false,
+    "code_files": [
+     "treecut/services/claim_visual.py",
+     "treecut/services/shot_usage.py",
+     "treecut/services/visual_beat.py",
+     "treecut/services/visual_understanding_v2.py"
+    ],
+    "capability_src_hist_hits": [
+     "beat_id",
+     "BeatClaim"
+    ],
+    "filename_history_hits": {
+     "visual_beat.py": {
+      "ran": true,
+      "commit_count": 1,
+      "first_commit": "43eaee4b",
+      "last_commit": "43eaee4b",
+      "status_counts": {
+       "A": 1
+      }
+     },
+     "claim_visual.py": {
+      "ran": true,
+      "commit_count": 3,
+      "first_commit": "f4541473",
+      "last_commit": "ce1852ff",
+      "status_counts": {
+       "M": 2,
+       "A": 1
+      }
+     }
+    }
+   },
+   "derived_classification": "IMPLEMENTED_BUT_DISCONNECTED",
+   "manual_adjudication": null,
+   "adjudication_reason": null
+  },
+  {
+   "id": "feedback_loop",
+   "name": "Feedback 消费",
+   "rule_id": "R_ACTIVE_CODE_NONOVERRIDE",
+   "rule_reason": "import_reachable=True; code runs only in non-override branch; B1/B1R1 bypassed (runtime_executed false) - code state active, sample not executed",
+   "machine_inputs": {
+    "import_reachable": true,
+    "code_files": [
+     "treecut/application/production.py",
+     "treecut/learning/feedback.py",
+     "treecut/workflow/matching.py"
+    ],
+    "capability_src_hist_hits": [
+     "adjustments"
+    ],
+    "filename_history_hits": {
+     "feedback.py": {
+      "ran": true,
+      "commit_count": 1,
+      "first_commit": "4f5f9bdd",
+      "last_commit": "4f5f9bdd",
+      "status_counts": {
+       "A": 1
+      }
+     }
+    }
+   },
+   "derived_classification": "IMPLEMENTED_ACTIVE",
+   "manual_adjudication": "IMPLEMENTED_ACTIVE",
+   "adjudication_reason": "imported at production module top and adjustments() consumed in the non-override branch; B1/B1R1 did not execute it (bypassed) - code state, not sample run"
+  },
+  {
+   "id": "semantic_selection",
+   "name": "BGE/CLIP 语义选材",
+   "rule_id": "R_ACTIVE_CODE_NONOVERRIDE",
+   "rule_reason": "import_reachable=True; code runs only in non-override branch; B1/B1R1 bypassed (runtime_executed false) - code state active, sample not executed",
+   "machine_inputs": {
+    "import_reachable": true,
+    "code_files": [
+     "treecut/application/production.py",
+     "treecut/models/semantic_matching.py"
+    ],
+    "capability_src_hist_hits": [
+     "semantic_scores",
+     "bge_scored",
+     "clip_scored"
+    ],
+    "filename_history_hits": {
+     "semantic_matching.py": {
+      "ran": true,
+      "commit_count": 1,
+      "first_commit": "85bed5d9",
+      "last_commit": "85bed5d9",
+      "status_counts": {
+       "A": 1
+      }
+     }
+    }
+   },
+   "derived_classification": "IMPLEMENTED_ACTIVE",
+   "manual_adjudication": "IMPLEMENTED_ACTIVE",
+   "adjudication_reason": "semantic_scores in closure, called in non-override branch only; Chinese-CLIP defect OPEN; samples bypassed (bge/clip=0)"
+  },
+  {
+   "id": "cam_mmvv_action",
+   "name": "CAM/MMVV/动作证据接线",
+   "rule_id": "R_DISCONNECTED",
+   "rule_reason": "code at HEAD (files ['treecut/services/action_subclip.py', 'treecut/services/mmvl_master_v1.py']...) but NOT in production closure (35 modules); filename-found independent of content tokens",
+   "machine_inputs": {
+    "import_reachable": false,
+    "code_files": [
+     "treecut/services/action_subclip.py",
+     "treecut/services/mmvl_master_v1.py"
+    ],
+    "capability_src_hist_hits": [
+     "ActionEvidence",
+     "action_evidence"
+    ],
+    "filename_history_hits": {
+     "mmvl_master_v1.py": {
+      "ran": true,
+      "commit_count": 6,
+      "first_commit": "c4d23d64",
+      "last_commit": "3b7af858",
+      "status_counts": {
+       "M": 5,
+       "A": 1
+      }
+     },
+     "action_subclip.py": {
+      "ran": true,
+      "commit_count": 5,
+      "first_commit": "f4541473",
+      "last_commit": "ce1852ff",
+      "status_counts": {
+       "M": 4,
+       "A": 1
+      }
+     }
+    }
+   },
+   "derived_classification": "IMPLEMENTED_BUT_DISCONNECTED",
+   "manual_adjudication": null,
+   "adjudication_reason": null
+  },
+  {
+   "id": "plan_override_bypass",
+   "name": "plan_override 绕过智能选材",
+   "rule_id": "R_ACTIVE_AND_BYPASS",
+   "rule_reason": "plan_override branch in production.py; runners used it (media_id=32 0-25s); SELECTION_ROUTE_BYPASSED for B1/B1R1",
+   "machine_inputs": {
+    "import_reachable": true,
+    "code_files": [
+     "treecut/application/production.py",
+     "treecut/desktop.py"
+    ],
+    "capability_src_hist_hits": [
+     "plan_override"
+    ],
+    "filename_history_hits": {}
+   },
+   "derived_classification": "IMPLEMENTED_ACTIVE",
+   "manual_adjudication": null,
+   "adjudication_reason": null
+  }
+ ],
+ "selection_route_bypass": {
+  "SELECTION_ROUTE_BYPASSED": true,
+  "media_id": 32,
+  "window_s": "0-25",
+  "b1r1_bge_clip": [
+   0,
+   0
+  ],
+  "b1_evidence": "B1 runner (audit_treecut_b1_run.py) used plan_override => production.py override branch sets bge_scores=clip_scores={} (bge_scored=clip_scored=0 by construction); B1 SUCCESS json lacks a semantic_models field",
+  "evidence_sources": [
+   "TREECUT_B1R1_SUCCESS_REPRO.json (media.id=32, semantic_models bge=clip=0)",
+   "audit_treecut_b1_run.py / audit_treecut_b1r1_run.py plan_override=plan with source_start=0 source_end=25"
+  ]
+ },
+ "F0_SUBSTANTIVE_FINDINGS": "ACCEPTED",
+ "F0_EVIDENCE_CLOSURE": "YES",
+ "SELECTION_ROUTE_BYPASSED": "YES",
+ "OLD_FEATURES_DELETED_PROVEN": "NO",
+ "B2_READY": "YES",
+ "NEXT_BLOCKER": "B2_CAPTION_SPEECH_DISPLAY_SPLIT_AND_OCCLUSION",
+ "classifier_note": "classification derived by rules (rule_id + machine inputs); manual adjudication stored in separate fields; NOT a fixed CLASS dict override",
+ "closure_verified": {
+  "treecut/application/production.py": true,
+  "treecut/output/narration.py": true,
+  "treecut/output/mix.py": true,
+  "treecut/quality/publish_gates.py": true,
+  "treecut/quality/duration_contract.py": true,
+  "treecut/models/semantic_matching.py": true
+ }
+}
