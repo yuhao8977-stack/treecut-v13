@@ -23,18 +23,19 @@ config.json
 
 # 运行数据（数据库/缓存/日志/素材/输出）
 runtime_data/
-databases/
-indexes/
-keyframes/
-thumbnails/
-proxies/
-asr_cache/
-ocr_cache/
-exports/
-roughcuts/
-logs/
-temp/
-cache/
+# 数据类目录仅忽略仓库根（不得吞 src/treecut/*/ 下的运行代码）
+/databases/
+/indexes/
+/keyframes/
+/thumbnails/
+/proxies/
+/asr_cache/
+/ocr_cache/
+/exports/
+/roughcuts/
+/logs/
+/temp/
+/cache/
 
 # 素材与媒体
 *.mp4
