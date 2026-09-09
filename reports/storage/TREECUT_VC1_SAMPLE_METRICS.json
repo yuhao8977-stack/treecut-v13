@@ -1,0 +1,368 @@
+{
+ "experiment": "TREECUT_VC1_SAMPLE_METRICS",
+ "eval_target": "integrated -16 LUFS, true peak <= -1.5 dBTP, 24000Hz mono",
+ "rows": [
+  {
+   "test": "T1",
+   "backend": "gpt",
+   "ref": "seg23",
+   "text": "这款岛台总长一米八，拉开以后可以满足六到八个人同时用餐。",
+   "text_sha256": "9358b7f3ea4fcc24330309769e26e807d6790fad37d8dd09cabf24ba08b767b5",
+   "raw_sha256": "bda8b15c7477ed8576c800688a25500d896cdd4d9d5aad6f5ceee5bf4f68248b",
+   "eval_sha256": "dca4a9527ba8e1ec208d463644c7953e446bda2bfd89fe3c9ec7300e3d4dc7ed",
+   "gen_seconds": 3.1,
+   "raw": {
+    "duration_s": 7.16,
+    "lufs": -15.39,
+    "true_peak_dbtp": -1.73,
+    "clipping_ratio": 0.0,
+    "peak": 0.81934
+   },
+   "eval": {
+    "duration_s": 7.16,
+    "lufs": -15.99,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.84149
+   },
+   "asr_hyp": "这款导台总长1米8拉开以后可以满足6-8的人同时用餐",
+   "cer": 0.3214
+  },
+  {
+   "test": "T2",
+   "backend": "gpt",
+   "ref": "seg23",
+   "text": "公牛轨道插座，烧水、充电、吃火锅都不用满屋拉线。",
+   "text_sha256": "5761bd1314446545bec15f3a94aeb7c371f958f97b3888992f02471fc560dee3",
+   "raw_sha256": "c0521bfe96795ac8bbdcfc2b03f5f8ae9df3fb83e01467d15b4a09405fdb4d31",
+   "eval_sha256": "c1b1dae9f785e55f2a05932d4e51b648ee02af7d6c72a681f4c19cf7da06643a",
+   "gen_seconds": 2.9,
+   "raw": {
+    "duration_s": 7.02,
+    "lufs": -14.2,
+    "true_peak_dbtp": -1.18,
+    "clipping_ratio": 0.0,
+    "peak": 0.87207
+   },
+   "eval": {
+    "duration_s": 7.02,
+    "lufs": -15.51,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.84137
+   },
+   "asr_hyp": "供牛軌道插座燒水充電吃火鍋都不用滿無垃圾",
+   "cer": 0.5417
+  },
+  {
+   "test": "T3",
+   "backend": "gpt",
+   "ref": "seg23",
+   "text": "您家现在装修到哪个阶段了？水电位置有没有提前预留？",
+   "text_sha256": "d29693626d40eb6af07af8f64fab7ba885b322f2dd9f0675a370e29a3ac4b19f",
+   "raw_sha256": "32e85930cf41fbc38ab15b7fc14341c7849efb85a6917d047ef0bdd797a8f991",
+   "eval_sha256": "bc0b7ff23135370260e6656788951bd8a4fae93c82075cf10fd5d6f6e9757ec5",
+   "gen_seconds": 2.2,
+   "raw": {
+    "duration_s": 6.04,
+    "lufs": -14.63,
+    "true_peak_dbtp": -1.55,
+    "clipping_ratio": 0.0,
+    "peak": 0.83447
+   },
+   "eval": {
+    "duration_s": 6.04,
+    "lufs": -14.9,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.83923
+   },
+   "asr_hyp": "您家现在装修到哪个阶段了水电位置有没有提前预留",
+   "cer": 0.08
+  },
+  {
+   "test": "T4",
+   "backend": "gpt",
+   "ref": "seg23",
+   "text": "这是一款专为小户型设计的伸缩岛台。平时收起来不占过道，需要时轻轻拉出，就能多出一张工作台。台面下方做了分区收纳，抽屉放文具，柜门里放餐具。台面宽度和高度都可以按户型定制，边角圆润，家里有老人小孩也不用担心磕碰。岩板表面耐刮耐热，打理起来非常简单，用起来非常顺手。",
+   "text_sha256": "995cdfb3ac743fca61f986a336979dd817c4655b4aa22b8c90e21b5af453ff3a",
+   "raw_sha256": "9f01de5754496195f2bea46391489f2f49f2436d6b4f7aece69651c5a896f423",
+   "eval_sha256": "06bd22ad6ba7f8753329e0c01867ba68a23749688589d8b964884decad4164aa",
+   "gen_seconds": 11.9,
+   "raw": {
+    "duration_s": 36.62,
+    "lufs": -14.95,
+    "true_peak_dbtp": -0.88,
+    "clipping_ratio": 0.0,
+    "peak": 0.90332
+   },
+   "eval": {
+    "duration_s": 36.62,
+    "lufs": -16.18,
+    "true_peak_dbtp": -1.92,
+    "clipping_ratio": 0.0,
+    "peak": 0.80093
+   },
+   "asr_hyp": "这是一款专为小护刑设计的伸缩导台平时收起来不占过导,需要时轻轻拉住就能多出一张工作台台面下方做了分区收纳超级一放文具,柜门里放餐具台面宽度和高度都可以按护刑定制颠脚圆圆家里有老人一小孩也不用担心磕碰盐巴表面耐关耐热打理一起来非常简单用起来非常顺手",
+   "cer": 0.229
+  },
+  {
+   "test": "T5",
+   "backend": "gpt",
+   "ref": "seg23",
+   "text": "小户型也能拥有实用岛台。平时收起来不占过道，需要时轻轻拉出，立刻多出一张工作台。它既能当办公桌，也能招待朋友用餐，一物三用不浪费。台面下方做了分区收纳，抽屉放文具，柜门里放餐具。常用物品放在顺手的高度，拿取不用弯腰。边角都做了圆润处理，家里有小孩也不用担心磕碰。台面宽度可以按户型定制，过道再窄也能放得下。高度同样可以调节，站着办公或坐着用餐都舒服。岩板表面耐刮耐热，泼了水一擦就干净。滑轮带有锁定，拉出后固定不晃动，用起来更安心。总之，这台小岛台让日常生活方便了许多。",
+   "text_sha256": "d89adc1b6386883f8c5c99f92f6f92b2ce9786a7933c318b305c1f2bb0aa3447",
+   "raw_sha256": "b80adc9cab5c5f35bf5119c0d527674baf992796f225d418f20f3acea26d6df2",
+   "eval_sha256": "b50ce1c6e2bf9657becac8b6a1982c8eaf7afb0dd6467e646a92a5d8512fca83",
+   "gen_seconds": 21.2,
+   "raw": {
+    "duration_s": 68.56,
+    "lufs": -14.81,
+    "true_peak_dbtp": -0.6,
+    "clipping_ratio": 0.0,
+    "peak": 0.93359
+   },
+   "eval": {
+    "duration_s": 68.56,
+    "lufs": -16.03,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.84119
+   },
+   "asr_hyp": "小户型也能擁有使用導臺譬如說起來不占國道需要使勁勁拉出立刻多出一張工作臺他竟能當辦工作也能招待朋友用餐一物三用不浪費他念下方做了分去收納抽屜放文具櫃門你放餐具茶用品放在信手的高度拿水不用問要顛腳都做了圓潤處理家裡有小孩也不用擔心磕碰臺面寬度可以按護型定制過到再戰也能放得下高度同樣可以調節站著辦公或坐著用餐都舒服眼板表面耐刮耐熱脫落水一擦就乾淨華倫帶有鎖定拉出後骨頂不晃動用起來更安靜總之這台小老臺讓日常生活方便了許多",
+   "cer": 0.4298
+  },
+  {
+   "test": "T1",
+   "backend": "gpt",
+   "ref": "seg13",
+   "text": "这款岛台总长一米八，拉开以后可以满足六到八个人同时用餐。",
+   "text_sha256": "9358b7f3ea4fcc24330309769e26e807d6790fad37d8dd09cabf24ba08b767b5",
+   "raw_sha256": "51d072ecd6f7120b59cebb70b0cd284c45fc84a8f4676c6f70b2472f784baa3a",
+   "eval_sha256": "4ded08a9d4d244df8e55c91db7e30361aa20143a6052c4375d1ec4d1090c2435",
+   "gen_seconds": 2.5,
+   "raw": {
+    "duration_s": 5.88,
+    "lufs": -15.4,
+    "true_peak_dbtp": -1.4,
+    "clipping_ratio": 0.0,
+    "peak": 0.8501
+   },
+   "eval": {
+    "duration_s": 5.88,
+    "lufs": -16.07,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.8414
+   },
+   "asr_hyp": "这款导台综杂1米8拉开以后可以满足6-8个人同时用餐",
+   "cer": 0.3571
+  },
+  {
+   "test": "T3",
+   "backend": "gpt",
+   "ref": "seg25",
+   "text": "您家现在装修到哪个阶段了？水电位置有没有提前预留？",
+   "text_sha256": "d29693626d40eb6af07af8f64fab7ba885b322f2dd9f0675a370e29a3ac4b19f",
+   "raw_sha256": "af9f3240f87d69533c8a0666b996c589e700386f3719e028a0b3be2670976c07",
+   "eval_sha256": "315e8233cc4dd167c4a6c81c4e65732c5fd2d205f29abd67995038f9530f7b9b",
+   "gen_seconds": 2.5,
+   "raw": {
+    "duration_s": 6.04,
+    "lufs": -17.51,
+    "true_peak_dbtp": -1.34,
+    "clipping_ratio": 0.0,
+    "peak": 0.85596
+   },
+   "eval": {
+    "duration_s": 6.04,
+    "lufs": -16.47,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.84137
+   },
+   "asr_hyp": "民家现在终修到哪个阶段了水电位置有没有提前预留",
+   "cer": 0.16
+  },
+  {
+   "test": "T1",
+   "backend": "melo",
+   "ref": "seg23",
+   "text": "这款岛台总长一米八，拉开以后可以满足六到八个人同时用餐。",
+   "text_sha256": "9358b7f3ea4fcc24330309769e26e807d6790fad37d8dd09cabf24ba08b767b5",
+   "raw_sha256": "4e5a0a42f5bd2bb6a69f95d55670de6b9aad7efb8239dfd3b92ff83715a9f8c5",
+   "eval_sha256": "e478ff8d06da32b7269570f21bef0f08e3edf56fb7b50b6a48c772881ff5f859",
+   "gen_seconds": 6.7,
+   "raw": {
+    "duration_s": 4.772,
+    "lufs": -28.86,
+    "true_peak_dbtp": -11.9,
+    "clipping_ratio": 0.0,
+    "peak": 0.25409
+   },
+   "eval": {
+    "duration_s": 4.772,
+    "lufs": -15.16,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.84152
+   },
+   "asr_hyp": "这款导开增长1米8拉开以后可以满足6-8个人同时用餐",
+   "cer": 0.3571
+  },
+  {
+   "test": "T2",
+   "backend": "melo",
+   "ref": "seg23",
+   "text": "公牛轨道插座，烧水、充电、吃火锅都不用满屋拉线。",
+   "text_sha256": "5761bd1314446545bec15f3a94aeb7c371f958f97b3888992f02471fc560dee3",
+   "raw_sha256": "67ecbfae638f6aee79fe3d907c2450f4a3f623c01e0906d357111863971e2043",
+   "eval_sha256": "6cfd846c2fd5209ba963e6dcba7e285d484e84d2e6fbc58f14337ea9780d9593",
+   "gen_seconds": 1.9,
+   "raw": {
+    "duration_s": 4.412,
+    "lufs": -27.82,
+    "true_peak_dbtp": -11.33,
+    "clipping_ratio": 0.0,
+    "peak": 0.27127
+   },
+   "eval": {
+    "duration_s": 4.412,
+    "lufs": -15.13,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.84164
+   },
+   "asr_hyp": "供給軌道插座、燒水、沖點、吃火鍋都不用買烏拉餡",
+   "cer": 0.5
+  },
+  {
+   "test": "T3",
+   "backend": "melo",
+   "ref": "seg23",
+   "text": "您家现在装修到哪个阶段了？水电位置有没有提前预留？",
+   "text_sha256": "d29693626d40eb6af07af8f64fab7ba885b322f2dd9f0675a370e29a3ac4b19f",
+   "raw_sha256": "6a55e0bf3fcfac5a04c464975b78c9fa889d7a34b45f0bfb9cab2746445582f7",
+   "eval_sha256": "af5a278c47ade5d69df196dd1a6548ca39fc8133b38b3d852737353955c52603",
+   "gen_seconds": 1.8,
+   "raw": {
+    "duration_s": 4.249,
+    "lufs": -29.47,
+    "true_peak_dbtp": -14.09,
+    "clipping_ratio": 0.0,
+    "peak": 0.19724
+   },
+   "eval": {
+    "duration_s": 4.249,
+    "lufs": -16.38,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.8353
+   },
+   "asr_hyp": "您家现在装修到哪个阶段了嘴颠未知有没有提前预留",
+   "cer": 0.24
+  },
+  {
+   "test": "T4",
+   "backend": "melo",
+   "ref": "seg23",
+   "text": "这是一款专为小户型设计的伸缩岛台。平时收起来不占过道，需要时轻轻拉出，就能多出一张工作台。台面下方做了分区收纳，抽屉放文具，柜门里放餐具。台面宽度和高度都可以按户型定制，边角圆润，家里有老人小孩也不用担心磕碰。岩板表面耐刮耐热，打理起来非常简单，用起来非常顺手。",
+   "text_sha256": "995cdfb3ac743fca61f986a336979dd817c4655b4aa22b8c90e21b5af453ff3a",
+   "raw_sha256": "3fbc3110228f77ec27ea54c8b1cebbdb48c06478b7d698b90d9f12b24de77ba6",
+   "eval_sha256": "ad83489d7485b0a6d23577f8f76386c986e800f4e91700c9f0113479a3eb4edf",
+   "gen_seconds": 9.8,
+   "raw": {
+    "duration_s": 23.106,
+    "lufs": -30.67,
+    "true_peak_dbtp": -12.42,
+    "clipping_ratio": 0.0,
+    "peak": 0.23911
+   },
+   "eval": {
+    "duration_s": 23.106,
+    "lufs": -17.21,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.8414
+   },
+   "asr_hyp": "这就是一款装备小护型设计的伸缩导台平时收起来不占我导需要时轻轻拉出又能多处一张工作台海面下方做了分区收纳抽屉放文具为门里放餐具海面宽度和高度都可以按护型另一致延久圆润家里有老人小还也不用担心可碰两般表面耐关耐热哪里起来非常简单用起来非常顺手",
+   "cer": 0.2824
+  },
+  {
+   "test": "T5",
+   "backend": "melo",
+   "ref": "seg23",
+   "text": "小户型也能拥有实用岛台。平时收起来不占过道，需要时轻轻拉出，立刻多出一张工作台。它既能当办公桌，也能招待朋友用餐，一物三用不浪费。台面下方做了分区收纳，抽屉放文具，柜门里放餐具。常用物品放在顺手的高度，拿取不用弯腰。边角都做了圆润处理，家里有小孩也不用担心磕碰。台面宽度可以按户型定制，过道再窄也能放得下。高度同样可以调节，站着办公或坐着用餐都舒服。岩板表面耐刮耐热，泼了水一擦就干净。滑轮带有锁定，拉出后固定不晃动，用起来更安心。总之，这台小岛台让日常生活方便了许多。",
+   "text_sha256": "d89adc1b6386883f8c5c99f92f6f92b2ce9786a7933c318b305c1f2bb0aa3447",
+   "raw_sha256": "dcad17ee9603b9f8f7376a46e7a7721c250b2026047b96ee1f8c178534970018",
+   "eval_sha256": "3924ca99aa6f474b83d7fec75356866b2a9153b1584bec4bbf97e15fc81c2662",
+   "gen_seconds": 18.4,
+   "raw": {
+    "duration_s": 42.223,
+    "lufs": -30.57,
+    "true_peak_dbtp": -13.25,
+    "clipping_ratio": 0.0,
+    "peak": 0.21643
+   },
+   "eval": {
+    "duration_s": 42.223,
+    "lufs": -16.06,
+    "true_peak_dbtp": -1.5,
+    "clipping_ratio": 0.0,
+    "peak": 0.84146
+   },
+   "asr_hyp": "早互行也能拥有食用导台平时收起来不占过导要时轻轻拉出一颗多出一张工作台还既能当慢工桌也能招待朋友用餐一物塞用不浪费海面下方做了分区收纳收贴放文具为门里放餐具潮用物品放在睡手的高度R取不用弯腰连脚都做了原刃处理打理有小孩也不用担心可控海面宽度可以安互行令制木刀在斩也能放得下高度同样可以调节站着办公货坐着运餐都舒服连板表面耐瓜耐热喝了水一擦就干净划轮带有锁定拉出后顾定不晃动问起来更安心总之这台小岛台量日常生活方便了许多",
+   "cer": 0.3021
+  }
+ ],
+ "fair_loudness_check": {
+  "T1_gpt_seg23": {
+   "lufs": -15.99,
+   "tp": -1.5
+  },
+  "T2_gpt_seg23": {
+   "lufs": -15.51,
+   "tp": -1.5
+  },
+  "T3_gpt_seg23": {
+   "lufs": -14.9,
+   "tp": -1.5
+  },
+  "T4_gpt_seg23": {
+   "lufs": -16.18,
+   "tp": -1.92
+  },
+  "T5_gpt_seg23": {
+   "lufs": -16.03,
+   "tp": -1.5
+  },
+  "T1_gpt_seg13": {
+   "lufs": -16.07,
+   "tp": -1.5
+  },
+  "T3_gpt_seg25": {
+   "lufs": -16.47,
+   "tp": -1.5
+  },
+  "T1_melo_seg23": {
+   "lufs": -15.16,
+   "tp": -1.5
+  },
+  "T2_melo_seg23": {
+   "lufs": -15.13,
+   "tp": -1.5
+  },
+  "T3_melo_seg23": {
+   "lufs": -16.38,
+   "tp": -1.5
+  },
+  "T4_melo_seg23": {
+   "lufs": -17.21,
+   "tp": -1.5
+  },
+  "T5_melo_seg23": {
+   "lufs": -16.06,
+   "tp": -1.5
+  }
+ }
+}
