@@ -1,0 +1,470 @@
+{
+ "experiment": "TREECUT_B0_COMPACT_EVIDENCE",
+ "run_manifest": {
+  "run_id": "20260908_184606_986514",
+  "runner": "audit_treecut_a0r2_repro_runner.py",
+  "baseline_sha": "02c1fc8abb4f28ec45745bb4e484a4efa0bb5bef",
+  "git": {
+   "head": "02c1fc8abb4f28ec45745bb4e484a4efa0bb5bef",
+   "origin_main": "02c1fc8abb4f28ec45745bb4e484a4efa0bb5bef",
+   "status": "?? reports/storage/TREECUT_A0R2_BEAT_CLAIM_SEARCH.json\n?? reports/storage/TREECUT_A0R2_HISTORICAL_CANONICAL_INPUT.json\n?? reports/storage/TREECUT_A0R2_HISTORICAL_RELPATH_MANIFEST.json\n?? reports/storage/TREECUT_A0R2_RAW_PREFLIGHT.json\n?? reports/storage/TREECUT_A0R2_SOURCE_PROVENANCE.json\n?? scripts/audit_treecut_a0r2_beat_search.py\n?? scripts/audit_treecut_a0r2_final.py\n?? scripts/audit_treecut_a0r2_historical.py\n?? scripts/audit_treecut_a0r2_preflight.py\n?? scripts/audit_treecut_a0r2_provenance.py\n?? scripts/audit_treecut_a0r2_repro_runner.py\n?? scripts/audit_treecut_a0r2_test_truth.py\n?? scripts/audit_treecut_a0r2_tts_ab.py\n?? tests/test_audit_treecut_a0r2.py\n"
+  },
+  "data_root": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_repro_20260908_184606_986514",
+  "model_root": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_models_ascii_20260908_184122",
+  "versions": {
+   "python": "3.12.13",
+   "torch": "2.6.0+cu124",
+   "torch_cuda": true,
+   "sherpa_onnx": "1.13.4",
+   "onnxruntime": "1.28.0"
+  },
+  "env": {
+   "TREECUT_DATA_ROOT": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_repro_20260908_184606_986514",
+   "TREECUT_MODEL_ROOT": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_models_ascii_20260908_184122"
+  },
+  "db_copy_sha": {
+   "materials.db": {
+    "size": 46919680,
+    "sha256": "d069fcf1c17eefc9d4e7a3306593abde1448da1fe397a4e58611f513e110c4bb"
+   },
+   "feedback.db": {
+    "size": 12288,
+    "sha256": "91d7e1d289735ae5c99eee6e82b41147749ddd70077a4f31371ecd1516a4bf4c"
+   }
+  },
+  "request": {
+   "selling_points": "小户型岛台 可伸缩设计 分区收纳 实用尺寸 家庭办公会客两用",
+   "narration": "小户型也能拥有实用岛台。伸缩设计兼顾办公、用餐和聚会。分区收纳让常用物品随手可取。合理定制高度、宽度和台面厚度，让小空间更舒适。",
+   "target_duration": 25.0,
+   "clip_seconds": 4.0,
+   "output_mp4": true,
+   "output_jianying": true,
+   "include_test_materials": false,
+   "bgm_path": "",
+   "output_preset": "vertical",
+   "narration_speed": 1.0,
+   "style": "natural",
+   "watermark_path": ""
+  },
+  "source_provenance_ref": "TREECUT_A0R2_SOURCE_PROVENANCE.json (BASELINE_SELF_CONTAINED=NO: 12 models files NOT_IN_HEAD + 4 differ)"
+ },
+ "reproduction_result": {
+  "run_id": "20260908_184606_986514",
+  "PASS": true,
+  "seconds": 1857.3,
+  "project": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_repro_20260908_184606_986514\\output\\projects\\20260908_184619_988409",
+  "preview": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_repro_20260908_184606_986514\\output\\projects\\20260908_184619_988409\\01_高清画面底片.mp4",
+  "final_mp4": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_repro_20260908_184606_986514\\output\\projects\\20260908_184619_988409\\TreeCut_成片.mp4",
+  "draft": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_repro_20260908_184606_986514\\output\\projects\\20260908_184619_988409\\TreeCut_剪映草稿",
+  "report": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_repro_20260908_184606_986514\\output\\projects\\20260908_184619_988409\\production_report.json",
+  "cover": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_repro_20260908_184606_986514\\output\\projects\\20260908_184619_988409\\cover.jpg",
+  "n_matches": 40,
+  "plan_duration": 25.0
+ },
+ "imported_module_sha_count": 41,
+ "status": {
+  "state": "success",
+  "updated_at": "2026-09-08T19:17:15",
+  "error": "",
+  "details": "",
+  "advice": []
+ },
+ "production_report_key_fields": {
+  "quality_passed": true,
+  "critical_failed": [],
+  "semantic": {
+   "bge_scored": 3260,
+   "clip_scored": 0,
+   "errors": [
+    "Chinese-CLIP: AttributeError: 'BaseModelOutputWithPooling' object has no attribute 'norm'"
+   ]
+  },
+  "matches": [
+   13557,
+   13613,
+   13630,
+   13566,
+   13608,
+   13610,
+   13617,
+   13619,
+   5815,
+   5834,
+   13430,
+   13595,
+   13615,
+   13627,
+   13633,
+   6702,
+   6890,
+   13394,
+   13427,
+   13637,
+   13287,
+   13452,
+   13464,
+   13563,
+   13628,
+   13639,
+   8336,
+   8411,
+   9435,
+   13418,
+   13423,
+   13437,
+   13445,
+   13446,
+   13580,
+   13585,
+   13599,
+   13622,
+   5776,
+   5791
+  ],
+  "plan": {
+   "segments": 7,
+   "planned_duration": 25.0
+  }
+ },
+ "output_manifest": {
+  "01_高清画面底片.mp4": {
+   "size": 12276090,
+   "sha256": "b6f9ec35bae8150944be6a0db7ce9f5e4097fd497c7393fcd6be785bd79470ba",
+   "ffprobe": {
+    "streams": [
+     {
+      "codec_type": "video",
+      "width": 1080,
+      "height": 1920,
+      "r_frame_rate": "30/1",
+      "duration": "25.100000"
+     }
+    ],
+    "format_duration": "25.100000"
+   }
+  },
+  "02_配音字幕预览.mp4": {
+   "size": 12516258,
+   "sha256": "15794c67f13d58a978798e84984b22d6fae081172dc2016cc40d6903adedf5d9",
+   "ffprobe": {
+    "streams": [
+     {
+      "codec_type": "video",
+      "width": 1080,
+      "height": 1920,
+      "r_frame_rate": "30/1",
+      "duration": "25.100000"
+     },
+     {
+      "codec_type": "audio",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "duration": "25.100000"
+     },
+     {
+      "codec_type": "subtitle",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "duration": "11.633000"
+     }
+    ],
+    "format_duration": "25.100000"
+   }
+  },
+  "03_配音音乐预览.mp4": {
+   "size": 12749285,
+   "sha256": "a56a2d5379f6d62455a6f76c0efd9ffd6c7e77a16a887d7ed6ec37f38a9a94ff",
+   "ffprobe": {
+    "streams": [
+     {
+      "codec_type": "video",
+      "width": 1080,
+      "height": 1920,
+      "r_frame_rate": "30/1",
+      "duration": "25.100000"
+     },
+     {
+      "codec_type": "audio",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "duration": "25.100000"
+     },
+     {
+      "codec_type": "subtitle",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "duration": "11.633000"
+     }
+    ],
+    "format_duration": "25.100000"
+   }
+  },
+  "cover.jpg": {
+   "size": 239724,
+   "sha256": "eee64b67c53671ce52cb33a30cf8c6689f530f4973efbd9e8cb02198a5703cd6"
+  },
+  "production_report.json": {
+   "size": 52690,
+   "sha256": "5878012d1a489575c3516806d2412acbaccc8b0c3f57f1f3be6ea2c06727f9de"
+  },
+  "STATUS.json": {
+   "size": 117,
+   "sha256": "6e82488c2510008dd8f2902f9f500fc71dce0f92336d05195b133abe2caca539"
+  },
+  "TreeCut_剪映草稿/draft_content.json": {
+   "size": 44159,
+   "sha256": "8ab168e3fdea3324d26fd9d91dbf4d21400558dbdb50e375693fa1c0c3e9847c"
+  },
+  "TreeCut_剪映草稿/draft_meta_info.json": {
+   "size": 402,
+   "sha256": "8fcac4dfb3464eddebf1afa7e544a511cf18fba56516865fefb569f53bdb7916"
+  },
+  "TreeCut_剪映草稿/draft_settings": {
+   "size": 74,
+   "sha256": "205bb851f6b59ac12e31afe3ba20fa50b0f269e890e37141e10527fd1644a76b"
+  },
+  "TreeCut_剪映草稿/treecut_assets/bgm_timeline.wav": {
+   "size": 4800122,
+   "sha256": "34973f68e71df78f4879f979ed977f327a486280e50ba745694656ad7ccee46a",
+   "ffprobe": {
+    "streams": [
+     {
+      "codec_type": "audio",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "duration": "25.000000"
+     }
+    ],
+    "format_duration": "25.000000"
+   }
+  },
+  "TreeCut_剪映草稿/treecut_assets/voice_timeline.wav": {
+   "size": 2205078,
+   "sha256": "7b838c118faed7b97b8bf4dbb1254b30598a2cce8aae332ce354e855c63b2831",
+   "ffprobe": {
+    "streams": [
+     {
+      "codec_type": "audio",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "duration": "25.000000"
+     }
+    ],
+    "format_duration": "25.000000"
+   }
+  },
+  "TreeCut_成片.mp4": {
+   "size": 8951130,
+   "sha256": "2473999e754bb7321cec66eb977bceeb22243126953ac230954918a963756391",
+   "ffprobe": {
+    "streams": [
+     {
+      "codec_type": "video",
+      "width": 1080,
+      "height": 1920,
+      "r_frame_rate": "30/1",
+      "duration": "25.100000"
+     },
+     {
+      "codec_type": "audio",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "duration": "25.100000"
+     }
+    ],
+    "format_duration": "25.100000"
+   }
+  },
+  "work/cover_frame.jpg": {
+   "size": 135970,
+   "sha256": "6229d9625492572cf2fd3eef4b03fa4760640069d91bea56bee016b74c14bdb9"
+  },
+  "work/narration.srt": {
+   "size": 459,
+   "sha256": "721ef5e75802c842e4253ba932cec267acea19e0f8240da4790c8f55ca64fa5b"
+  },
+  "work/narration.wav": {
+   "size": 1026092,
+   "sha256": "c57dd4de09ec7e2e4465a553f52e96f010549d64ea2cfbb12c6453cec573100c",
+   "ffprobe": {
+    "streams": [
+     {
+      "codec_type": "audio",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "duration": "11.633197"
+     }
+    ],
+    "format_duration": "11.633197"
+   }
+  }
+ },
+ "tts_ab_raw": {
+  "A_meta": {
+   "model_root": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS",
+   "exists": true,
+   "discovered": {
+    "model": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\model.onnx",
+    "tokens": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\tokens.txt",
+    "lexicon": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\lexicon.txt",
+    "dict_dir": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\dict",
+    "rule_fsts": [
+     "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\date.fst",
+     "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\new_heteronym.fst",
+     "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\number.fst",
+     "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\phone.fst"
+    ]
+   },
+   "rc": 1,
+   "error": "RuntimeError: D:\\a\\sherpa-onnx\\sherpa-onnx\\build\\temp.win-amd64-cpython-312\\Release\\_deps\\kaldifst-src\\kaldifst\\csrc\\kaldi-io.cc:Input:744\n[E] Error opening input stream 'E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS\\vits-melo-tts-zh_en\\date.fst'",
+   "stdout": "",
+   "stderr": ""
+  },
+  "B_meta": {
+   "model_root": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS",
+   "exists": true,
+   "discovered": {
+    "model": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS\\vits-melo-tts-zh_en\\model.onnx",
+    "tokens": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS\\vits-melo-tts-zh_en\\tokens.txt",
+    "lexicon": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS\\vits-melo-tts-zh_en\\lexicon.txt",
+    "dict_dir": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS\\vits-melo-tts-zh_en\\dict",
+    "rule_fsts": [
+     "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS\\vits-melo-tts-zh_en\\date.fst",
+     "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS\\vits-melo-tts-zh_en\\new_heteronym.fst",
+     "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS\\vits-melo-tts-zh_en\\number.fst",
+     "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS\\vits-melo-tts-zh_en\\phone.fst"
+    ]
+   },
+   "rc": 0,
+   "wav": {
+    "path": "E:\\EchoBird-main\\_treecut_audit_temp\\tts_B\\out.wav",
+    "size": 622636,
+    "sha256": "30acb6552fe6e80f78478e2fff0a875fdf071550512248cb44e2efc3f7895f22",
+    "sample_rate": 44100,
+    "num_samples": 311296,
+    "duration_s": 7.059
+   },
+   "stdout": "",
+   "stderr": ""
+  },
+  "inventory_A": {
+   "model_root": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\models\\LocalTTS",
+   "file_count": 20,
+   "total_bytes": 191246256,
+   "required_files": {
+    "date.fst": [
+     {
+      "rel": "vits-melo-tts-zh_en\\date.fst",
+      "size": 59154,
+      "sha256": "eb8aa079ae3cb81d8f4404992f39d61a0cb990947512b5b8d1e54d1f6980e718"
+     }
+    ],
+    "model.onnx": [
+     {
+      "rel": "vits-melo-tts-zh_en\\model.onnx",
+      "size": 170429550,
+      "sha256": "bf30582eb1b012250a35b1a4a80e7dfbcf8485e7bb9de0d95efbbeef0e4ad86d"
+     }
+    ],
+    "model.int8.onnx": [
+     {
+      "rel": "vits-melo-tts-zh_en\\model.int8.onnx",
+      "size": 133,
+      "sha256": "0a1462eef98f05c15a6f57569bf2fb57a6b3995891bb17956187ff5e2694273e"
+     }
+    ],
+    "tokens.txt": [
+     {
+      "rel": "vits-melo-tts-zh_en\\tokens.txt",
+      "size": 655,
+      "sha256": "d18664a7e12bd7ea1022ddaf951e534e136815016c5a809d6b64156bffb4369d"
+     }
+    ],
+    "lexicon.txt": [
+     {
+      "rel": "vits-melo-tts-zh_en\\lexicon.txt",
+      "size": 6837671,
+      "sha256": "7236884b02435ac5d10cf69b4be40a61b45aa676b5300f0e412f185748fee528"
+     }
+    ]
+   }
+  },
+  "inventory_B": {
+   "model_root": "E:\\EchoBird-main\\_treecut_audit_temp\\a0r2_tts_ab_20260908_183905\\LocalTTS",
+   "file_count": 20,
+   "total_bytes": 191246256,
+   "required_files": {
+    "date.fst": [
+     {
+      "rel": "vits-melo-tts-zh_en\\date.fst",
+      "size": 59154,
+      "sha256": "eb8aa079ae3cb81d8f4404992f39d61a0cb990947512b5b8d1e54d1f6980e718"
+     }
+    ],
+    "model.onnx": [
+     {
+      "rel": "vits-melo-tts-zh_en\\model.onnx",
+      "size": 170429550,
+      "sha256": "bf30582eb1b012250a35b1a4a80e7dfbcf8485e7bb9de0d95efbbeef0e4ad86d"
+     }
+    ],
+    "model.int8.onnx": [
+     {
+      "rel": "vits-melo-tts-zh_en\\model.int8.onnx",
+      "size": 133,
+      "sha256": "0a1462eef98f05c15a6f57569bf2fb57a6b3995891bb17956187ff5e2694273e"
+     }
+    ],
+    "tokens.txt": [
+     {
+      "rel": "vits-melo-tts-zh_en\\tokens.txt",
+      "size": 655,
+      "sha256": "d18664a7e12bd7ea1022ddaf951e534e136815016c5a809d6b64156bffb4369d"
+     }
+    ],
+    "lexicon.txt": [
+     {
+      "rel": "vits-melo-tts-zh_en\\lexicon.txt",
+      "size": 6837671,
+      "sha256": "7236884b02435ac5d10cf69b4be40a61b45aa676b5300f0e412f185748fee528"
+     }
+    ]
+   }
+  }
+ },
+ "pytest_junit_sha256_and_exit": {
+  "system_full": {
+   "sha256": "03d2e9ccaf4d38716f399d7ad2508be4bfc298a4d47acc1236e670432d1bb036",
+   "exit_code_line": ""
+  },
+  "runtime_full": {
+   "sha256": "99e7589cf0f6ab418c149cf1971833ca38ff4c9c219d8e63cce5f2d59f0c630e",
+   "exit_code_line": ""
+  },
+  "reorder_first": {
+   "sha256": "170fc21dd9bad0adad482046b8ce64ec1cc4d3c8a9df7cfde7462a4257b0eb57",
+   "exit_code_line": ""
+  },
+  "iso_test_source_audit_r11": {
+   "sha256": "78b0117fc36ff439dc26141b51acb2c666ad2f7e4b772a64b65c04f5d7fd27bd",
+   "exit_code_line": ""
+  },
+  "iso_test_stage3_mini_v2": {
+   "sha256": "e80cefaf84cdf89635c64c10cd3e245f5d3bccd6c2c18b1f16c2ecc7c52b64f8",
+   "exit_code_line": ""
+  },
+  "iso_test_stage3_model_dev": {
+   "sha256": "28da96f59c75a6b2036dfc2c1bd8f5fa2f2f9652973496d696a4f45e45b58147",
+   "exit_code_line": ""
+  }
+ },
+ "no_large_files_embedded": true
+}

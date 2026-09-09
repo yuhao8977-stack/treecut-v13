@@ -1,0 +1,4875 @@
+{
+ "experiment": "TREECUT_B0_SOURCE_PROVENANCE",
+ "after_e_full_sync": true,
+ "e_src_py_count": 221,
+ "match_counts": {
+  "E_CONTENT_EQ_HEAD": 221
+ },
+ "e_files_not_in_head": [],
+ "e_files_content_differ_head": [],
+ "baseline_self_contained": true,
+ "files": [
+  {
+   "e_relpath": "treecut/__canary__.py",
+   "git_path": "src/treecut/__canary__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/__canary__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/__canary__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "f90d7039ccd12ac3f358ef4ecc1dbdc45510672c70f5e42272495f7a28c44aaf",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/__canary__.py",
+    "exit_code": 0,
+    "stdout": "99a094bdb875e2c974260f5239bcac2ded437bf4\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "99a094bdb875e2c974260f5239bcac2ded437bf4",
+   "sha_head_blob_raw": "f90d7039ccd12ac3f358ef4ecc1dbdc45510672c70f5e42272495f7a28c44aaf",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/__init__.py",
+   "git_path": "src/treecut/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c46dde4b094d36594253e7520191499f7c0668342b293a2a7accd9f3ef520aa2",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/__init__.py",
+    "exit_code": 0,
+    "stdout": "bf3039ddb43f4e133c38dcf25f1312b4f5b74cfa\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "bf3039ddb43f4e133c38dcf25f1312b4f5b74cfa",
+   "sha_head_blob_raw": "c46dde4b094d36594253e7520191499f7c0668342b293a2a7accd9f3ef520aa2",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis/__init__.py",
+   "git_path": "src/treecut/analysis/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "0d094b828da3996198038808783b94b0a104a02c5c6d84de098403bf4994171e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis/__init__.py",
+    "exit_code": 0,
+    "stdout": "7a9afeef3390ccfd07fa4b6e6f16a9ef67dbe91e\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "7a9afeef3390ccfd07fa4b6e6f16a9ef67dbe91e",
+   "sha_head_blob_raw": "0d094b828da3996198038808783b94b0a104a02c5c6d84de098403bf4994171e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis/embedding_worker.py",
+   "git_path": "src/treecut/analysis/embedding_worker.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis/embedding_worker.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis/embedding_worker.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5f43be50b8eebf92275a53b3996c4c114f50a62077a5eac89384d77b706f4d48",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis/embedding_worker.py",
+    "exit_code": 0,
+    "stdout": "0ef7b5ff40dec3adfcf9bae37a477fcfccc7f712\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "0ef7b5ff40dec3adfcf9bae37a477fcfccc7f712",
+   "sha_head_blob_raw": "5f43be50b8eebf92275a53b3996c4c114f50a62077a5eac89384d77b706f4d48",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis/p2_worker.py",
+   "git_path": "src/treecut/analysis/p2_worker.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis/p2_worker.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis/p2_worker.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "9c8c157bfcf6d5108b7150739f5baca87afccf0953f5acdebb167e51ace6f791",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis/p2_worker.py",
+    "exit_code": 0,
+    "stdout": "bedc367b33c98978e8b0252d3458919f515f5b1d\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "bedc367b33c98978e8b0252d3458919f515f5b1d",
+   "sha_head_blob_raw": "9c8c157bfcf6d5108b7150739f5baca87afccf0953f5acdebb167e51ace6f791",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis/p3_worker.py",
+   "git_path": "src/treecut/analysis/p3_worker.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis/p3_worker.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis/p3_worker.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "476919c85fd8a175c2609ed259f70a25be6bf05f7cf6ac5072ca39b0cd43644d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis/p3_worker.py",
+    "exit_code": 0,
+    "stdout": "5afb670bd6127f86d92c1eeccb24f72293059aea\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5afb670bd6127f86d92c1eeccb24f72293059aea",
+   "sha_head_blob_raw": "476919c85fd8a175c2609ed259f70a25be6bf05f7cf6ac5072ca39b0cd43644d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis/parallel.py",
+   "git_path": "src/treecut/analysis/parallel.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis/parallel.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis/parallel.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "11a1df4d7880df0365f5669b8d64b1cb260551ef887b3ea1db0600dda42c86bd",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis/parallel.py",
+    "exit_code": 0,
+    "stdout": "09025993d68f8139b9578aba65824ff71d47bdad\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "09025993d68f8139b9578aba65824ff71d47bdad",
+   "sha_head_blob_raw": "11a1df4d7880df0365f5669b8d64b1cb260551ef887b3ea1db0600dda42c86bd",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis/pool.py",
+   "git_path": "src/treecut/analysis/pool.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis/pool.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis/pool.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "4be31658848bd26ea40e856e95a48d4c9bf324d6cfd21166b0542065a8e44d42",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis/pool.py",
+    "exit_code": 0,
+    "stdout": "5157b519481d8b02a6d254a1f181b3a83003eeff\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5157b519481d8b02a6d254a1f181b3a83003eeff",
+   "sha_head_blob_raw": "4be31658848bd26ea40e856e95a48d4c9bf324d6cfd21166b0542065a8e44d42",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis/scheduler.py",
+   "git_path": "src/treecut/analysis/scheduler.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis/scheduler.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis/scheduler.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "d5c648abac1a3e16637c7c587fb13b92d53342806bb83640eaeeac940ac43b65",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis/scheduler.py",
+    "exit_code": 0,
+    "stdout": "0859ddaba77e05eda774f397c0912182fbc733af\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "0859ddaba77e05eda774f397c0912182fbc733af",
+   "sha_head_blob_raw": "d5c648abac1a3e16637c7c587fb13b92d53342806bb83640eaeeac940ac43b65",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis/worker.py",
+   "git_path": "src/treecut/analysis/worker.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis/worker.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis/worker.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c565327736b219bfec12518e540dac6c61b21598ad6101fce57c58896f5a7d72",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis/worker.py",
+    "exit_code": 0,
+    "stdout": "38c01c1b42d6c5b55392578d7be1a00d13a933c6\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "38c01c1b42d6c5b55392578d7be1a00d13a933c6",
+   "sha_head_blob_raw": "c565327736b219bfec12518e540dac6c61b21598ad6101fce57c58896f5a7d72",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis/worker_p25.py",
+   "git_path": "src/treecut/analysis/worker_p25.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis/worker_p25.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis/worker_p25.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "a43a484772b702985b64615421e65bb7b2e745180f980d616869a14dff70bcb3",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis/worker_p25.py",
+    "exit_code": 0,
+    "stdout": "ee374d3c03cb0b5094b32dfccae65645ae294dd1\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ee374d3c03cb0b5094b32dfccae65645ae294dd1",
+   "sha_head_blob_raw": "a43a484772b702985b64615421e65bb7b2e745180f980d616869a14dff70bcb3",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis/worker_pool.py",
+   "git_path": "src/treecut/analysis/worker_pool.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis/worker_pool.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis/worker_pool.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "82818e70d861eff5c19669746a73d09d4108efb9b04da3f5a782acb4533e0d3d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis/worker_pool.py",
+    "exit_code": 0,
+    "stdout": "cdcd8602c26ba1e2a8ff8a8be90ba319c0d0498d\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "cdcd8602c26ba1e2a8ff8a8be90ba319c0d0498d",
+   "sha_head_blob_raw": "82818e70d861eff5c19669746a73d09d4108efb9b04da3f5a782acb4533e0d3d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis_contract.py",
+   "git_path": "src/treecut/analysis_contract.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis_contract.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis_contract.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "de687f47bebaebbe31e67e1fbfd1356fd3c4c485ef705773a03ea722af11e5cb",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis_contract.py",
+    "exit_code": 0,
+    "stdout": "13336939ecb944e57209d7311f5fa27b103c8ea0\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "13336939ecb944e57209d7311f5fa27b103c8ea0",
+   "sha_head_blob_raw": "de687f47bebaebbe31e67e1fbfd1356fd3c4c485ef705773a03ea722af11e5cb",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/analysis_version.py",
+   "git_path": "src/treecut/analysis_version.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/analysis_version.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/analysis_version.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "e6dbfc6957833bdc257d8a40d6f0c61cfbfde20be2e5d5a1c9512a484302fed8",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/analysis_version.py",
+    "exit_code": 0,
+    "stdout": "74f5e7aba552cea4f8ebf4ec8beba15d4883f2cd\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "74f5e7aba552cea4f8ebf4ec8beba15d4883f2cd",
+   "sha_head_blob_raw": "e6dbfc6957833bdc257d8a40d6f0c61cfbfde20be2e5d5a1c9512a484302fed8",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/api.py",
+   "git_path": "src/treecut/api.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/api.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/api.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "40ceac12025f6a41a8be2cde497ecba01317f9add6809b51f72fa65f96e384b0",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/api.py",
+    "exit_code": 0,
+    "stdout": "fcfbec16be5dc4df0aee6951d53f3e6a4d96a7b2\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "fcfbec16be5dc4df0aee6951d53f3e6a4d96a7b2",
+   "sha_head_blob_raw": "40ceac12025f6a41a8be2cde497ecba01317f9add6809b51f72fa65f96e384b0",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/api_security.py",
+   "git_path": "src/treecut/api_security.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/api_security.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/api_security.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "82d2872261c4142059fc891159d73d51a27b37b441696e9380c34bd5234e7c61",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/api_security.py",
+    "exit_code": 0,
+    "stdout": "cd5b850a599305b0592e211717ccd78a39d2dd91\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "cd5b850a599305b0592e211717ccd78a39d2dd91",
+   "sha_head_blob_raw": "82d2872261c4142059fc891159d73d51a27b37b441696e9380c34bd5234e7c61",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/application/__init__.py",
+   "git_path": "src/treecut/application/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/application/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/application/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "3ba2dc4444a51bbe2413bed3e3da6cc6802f77caee4c08a9f22fb78637d6f351",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/application/__init__.py",
+    "exit_code": 0,
+    "stdout": "a8d98834a9d0d0b353e0a0623d30c2f93d1f01f5\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "a8d98834a9d0d0b353e0a0623d30c2f93d1f01f5",
+   "sha_head_blob_raw": "3ba2dc4444a51bbe2413bed3e3da6cc6802f77caee4c08a9f22fb78637d6f351",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/application/jobs.py",
+   "git_path": "src/treecut/application/jobs.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/application/jobs.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/application/jobs.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "b7c163b0c696ddb124f6e5847003e9908aa48e4c4c0aac7e74c6ceec18c82d6d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/application/jobs.py",
+    "exit_code": 0,
+    "stdout": "ba92f2baf9345c071cbbb1eb2c9b43f7bc9198ac\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ba92f2baf9345c071cbbb1eb2c9b43f7bc9198ac",
+   "sha_head_blob_raw": "b7c163b0c696ddb124f6e5847003e9908aa48e4c4c0aac7e74c6ceec18c82d6d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/application/production.py",
+   "git_path": "src/treecut/application/production.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/application/production.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/application/production.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c421772463cbb7bbb91710985742d1ccd5cca618183c98297a2717f04d471c47",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/application/production.py",
+    "exit_code": 0,
+    "stdout": "46ff3bdfecb651bd1f2c6cd7348a2e43738c0161\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "46ff3bdfecb651bd1f2c6cd7348a2e43738c0161",
+   "sha_head_blob_raw": "c421772463cbb7bbb91710985742d1ccd5cca618183c98297a2717f04d471c47",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/asr/__init__.py",
+   "git_path": "src/treecut/asr/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/asr/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/asr/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "14419206120faabc84350a786008d0283d5ca12dbfb271bc156c3963e2f0392d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/asr/__init__.py",
+    "exit_code": 0,
+    "stdout": "9c368e02c8b06f8d5c6cd5c97106576628a29cdb\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "9c368e02c8b06f8d5c6cd5c97106576628a29cdb",
+   "sha_head_blob_raw": "14419206120faabc84350a786008d0283d5ca12dbfb271bc156c3963e2f0392d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/asr/device_manager.py",
+   "git_path": "src/treecut/asr/device_manager.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/asr/device_manager.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/asr/device_manager.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "d945c7c16c5e48009a9c6f00e2a07d3cd061999521818c17b194562a10780623",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/asr/device_manager.py",
+    "exit_code": 0,
+    "stdout": "27467d966b232eff747d6af9725bd6a3d3c8985e\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "27467d966b232eff747d6af9725bd6a3d3c8985e",
+   "sha_head_blob_raw": "d945c7c16c5e48009a9c6f00e2a07d3cd061999521818c17b194562a10780623",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/asr/engine.py",
+   "git_path": "src/treecut/asr/engine.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/asr/engine.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/asr/engine.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "125fdd6875101bf46dae5642ff1ff39a11a5bb8e9ff900caf921720185a1de35",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/asr/engine.py",
+    "exit_code": 0,
+    "stdout": "a94a04ada19de6fc402264e2153c9b2ce5df4e81\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "a94a04ada19de6fc402264e2153c9b2ce5df4e81",
+   "sha_head_blob_raw": "125fdd6875101bf46dae5642ff1ff39a11a5bb8e9ff900caf921720185a1de35",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/batch.py",
+   "git_path": "src/treecut/batch.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/batch.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/batch.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "4511fb0a479f7be0e3b98d026bfc4fff5d38b510ca20da1293e0b98d8693e5b0",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/batch.py",
+    "exit_code": 0,
+    "stdout": "e350242290942e1fda5c1a2fba25e18ff1af7323\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e350242290942e1fda5c1a2fba25e18ff1af7323",
+   "sha_head_blob_raw": "4511fb0a479f7be0e3b98d026bfc4fff5d38b510ca20da1293e0b98d8693e5b0",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/bootstrap.py",
+   "git_path": "src/treecut/bootstrap.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/bootstrap.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/bootstrap.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "4197ce1934e88887ded4dd073e9dd8434aae947854e79ff47b7c9862e269317e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/bootstrap.py",
+    "exit_code": 0,
+    "stdout": "564526963673467adcfd7d8e7d5ee09c0978fca5\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "564526963673467adcfd7d8e7d5ee09c0978fca5",
+   "sha_head_blob_raw": "4197ce1934e88887ded4dd073e9dd8434aae947854e79ff47b7c9862e269317e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/__init__.py",
+   "git_path": "src/treecut/browser/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "38c09b8debc9334f76841c2a30602b563f566b7ff1d438d27a5736af18f1a7ba",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/__init__.py",
+    "exit_code": 0,
+    "stdout": "9ce83d704f3ae75be5e8c41f40a9ea3ee5e28c19\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "9ce83d704f3ae75be5e8c41f40a9ea3ee5e28c19",
+   "sha_head_blob_raw": "38c09b8debc9334f76841c2a30602b563f566b7ff1d438d27a5736af18f1a7ba",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/account_detector.py",
+   "git_path": "src/treecut/browser/account_detector.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/account_detector.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/account_detector.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "9a9817c2f5a7d862d1ec259b560823c8b6fc7b9ff836c54b23fb916ed4b17a86",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/account_detector.py",
+    "exit_code": 0,
+    "stdout": "2e5134c187635d20b8ceb3b5d2ccfd1a560c3e89\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "2e5134c187635d20b8ceb3b5d2ccfd1a560c3e89",
+   "sha_head_blob_raw": "9a9817c2f5a7d862d1ec259b560823c8b6fc7b9ff836c54b23fb916ed4b17a86",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/adapters.py",
+   "git_path": "src/treecut/browser/adapters.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/adapters.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/adapters.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "93c13dd959d2c611abd0b1474c2f6ec13c74a7cd6568a6364d1da85b609913ab",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/adapters.py",
+    "exit_code": 0,
+    "stdout": "61590b1a55e6c7a44c33e9fdcec90fe794c9f20a\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "61590b1a55e6c7a44c33e9fdcec90fe794c9f20a",
+   "sha_head_blob_raw": "93c13dd959d2c611abd0b1474c2f6ec13c74a7cd6568a6364d1da85b609913ab",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/checkpoint_store.py",
+   "git_path": "src/treecut/browser/checkpoint_store.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/checkpoint_store.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/checkpoint_store.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "f76cbe13a6f9a859c7420bb6b12f8e640db3cc7ac6bef09c87087ef40df75092",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/checkpoint_store.py",
+    "exit_code": 0,
+    "stdout": "91efcdf62ce8a71c3a4606dd8bab72d920fe3ccc\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "91efcdf62ce8a71c3a4606dd8bab72d920fe3ccc",
+   "sha_head_blob_raw": "f76cbe13a6f9a859c7420bb6b12f8e640db3cc7ac6bef09c87087ef40df75092",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/config.py",
+   "git_path": "src/treecut/browser/config.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/config.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/config.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "67d55a6885c3956abaccf08adb7f7e72ea5bd90fad5b96ad57ef33fe2749a1d6",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/config.py",
+    "exit_code": 0,
+    "stdout": "249e5529b739cc0210e38d23328419fc1ddd7818\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "249e5529b739cc0210e38d23328419fc1ddd7818",
+   "sha_head_blob_raw": "67d55a6885c3956abaccf08adb7f7e72ea5bd90fad5b96ad57ef33fe2749a1d6",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/creator_sync.py",
+   "git_path": "src/treecut/browser/creator_sync.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/creator_sync.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/creator_sync.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "81396ede258935a750da4422d1d8221c78e9e21e14893d9890a6b38d95984b6c",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/creator_sync.py",
+    "exit_code": 0,
+    "stdout": "4992ad0c13d54b90494d7ea02a9f60bac8e8f1e1\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4992ad0c13d54b90494d7ea02a9f60bac8e8f1e1",
+   "sha_head_blob_raw": "81396ede258935a750da4422d1d8221c78e9e21e14893d9890a6b38d95984b6c",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/errors.py",
+   "git_path": "src/treecut/browser/errors.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/errors.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/errors.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "3ac8240b3c6e6c2fb60b933e5b3087f3b6470fde060f54d99bd4d5771cdb431d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/errors.py",
+    "exit_code": 0,
+    "stdout": "7eea27109b05228c5cbf3952f58f297c644ff4a7\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "7eea27109b05228c5cbf3952f58f297c644ff4a7",
+   "sha_head_blob_raw": "3ac8240b3c6e6c2fb60b933e5b3087f3b6470fde060f54d99bd4d5771cdb431d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/local_bridge.py",
+   "git_path": "src/treecut/browser/local_bridge.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/local_bridge.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/local_bridge.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "185e1ddc48bfabf73def5fd07ec75c727c1b2b9f4634d57b76c3593067747983",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/local_bridge.py",
+    "exit_code": 0,
+    "stdout": "11a3918d904601f9fd27494e346544828a75a56d\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "11a3918d904601f9fd27494e346544828a75a56d",
+   "sha_head_blob_raw": "185e1ddc48bfabf73def5fd07ec75c727c1b2b9f4634d57b76c3593067747983",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/local_stub.py",
+   "git_path": "src/treecut/browser/local_stub.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/local_stub.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/local_stub.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "1471d34787df8203a8e3ed07e48ed3cb89ed4a4f8381196249ca758d8eb95ea7",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/local_stub.py",
+    "exit_code": 0,
+    "stdout": "977ccec7fc4edb9e007fda691c31c6a0778b2bd4\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "977ccec7fc4edb9e007fda691c31c6a0778b2bd4",
+   "sha_head_blob_raw": "1471d34787df8203a8e3ed07e48ed3cb89ed4a4f8381196249ca758d8eb95ea7",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/main.py",
+   "git_path": "src/treecut/browser/main.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/main.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/main.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5bc384f8ef9d52ac81d0b0a993b5ffa2ce352f6988744ac51c98d3d3251985df",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/main.py",
+    "exit_code": 0,
+    "stdout": "bc051a3ce9f5b8d4bedbae72db0edb8dff1dd628\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "bc051a3ce9f5b8d4bedbae72db0edb8dff1dd628",
+   "sha_head_blob_raw": "5bc384f8ef9d52ac81d0b0a993b5ffa2ce352f6988744ac51c98d3d3251985df",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/minimal_dashboard.py",
+   "git_path": "src/treecut/browser/minimal_dashboard.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/minimal_dashboard.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/minimal_dashboard.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "51217c8707a4631a1162fd60049bb3138e5c0b1a9837267feee206ced44215cf",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/minimal_dashboard.py",
+    "exit_code": 0,
+    "stdout": "dee04a39792211f02d7bdfd4eb1704030ae7cdae\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "dee04a39792211f02d7bdfd4eb1704030ae7cdae",
+   "sha_head_blob_raw": "51217c8707a4631a1162fd60049bb3138e5c0b1a9837267feee206ced44215cf",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/policies.py",
+   "git_path": "src/treecut/browser/policies.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/policies.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/policies.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "b75f6ddc76fdaca82447cf12d1422fefbc9d755a13c8d15336f64af526737bf7",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/policies.py",
+    "exit_code": 0,
+    "stdout": "4c63ed548014c0e8bec4f2eaabb1cecd399fbf0b\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4c63ed548014c0e8bec4f2eaabb1cecd399fbf0b",
+   "sha_head_blob_raw": "b75f6ddc76fdaca82447cf12d1422fefbc9d755a13c8d15336f64af526737bf7",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/profile_manager.py",
+   "git_path": "src/treecut/browser/profile_manager.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/profile_manager.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/profile_manager.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "704a49ad95bbd101469e23a9ee76edbf89753abb638520881fd6f026c451d2f5",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/profile_manager.py",
+    "exit_code": 0,
+    "stdout": "383ac029917558853ea131f83ca558c8329e3574\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "383ac029917558853ea131f83ca558c8329e3574",
+   "sha_head_blob_raw": "704a49ad95bbd101469e23a9ee76edbf89753abb638520881fd6f026c451d2f5",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/retry_policy.py",
+   "git_path": "src/treecut/browser/retry_policy.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/retry_policy.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/retry_policy.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c1d71a4678f0802623d3c1d44674484a58cebb4f76431792a26f820259445e69",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/retry_policy.py",
+    "exit_code": 0,
+    "stdout": "bf95d49d15cfef36ecb33c5a5fde2ad065ec4297\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "bf95d49d15cfef36ecb33c5a5fde2ad065ec4297",
+   "sha_head_blob_raw": "c1d71a4678f0802623d3c1d44674484a58cebb4f76431792a26f820259445e69",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/session_detector.py",
+   "git_path": "src/treecut/browser/session_detector.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/session_detector.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/session_detector.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "a9875d7780b3618f036b97f5cb971eefdadc7bfb5aad1eb86664403ec537829f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/session_detector.py",
+    "exit_code": 0,
+    "stdout": "a1b2630cdd3e94a0d46356108dc2d5346287622e\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "a1b2630cdd3e94a0d46356108dc2d5346287622e",
+   "sha_head_blob_raw": "a9875d7780b3618f036b97f5cb971eefdadc7bfb5aad1eb86664403ec537829f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/storage_guard.py",
+   "git_path": "src/treecut/browser/storage_guard.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/storage_guard.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/storage_guard.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "4ac4e3a5520b32608877c58e5a531cb7e082a8d99f9cf119f17d614a7b63c083",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/storage_guard.py",
+    "exit_code": 0,
+    "stdout": "b7552ce5cf636dde2b07eea327d0aa4558ce62fc\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "b7552ce5cf636dde2b07eea327d0aa4558ce62fc",
+   "sha_head_blob_raw": "4ac4e3a5520b32608877c58e5a531cb7e082a8d99f9cf119f17d614a7b63c083",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/tab_manager.py",
+   "git_path": "src/treecut/browser/tab_manager.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/tab_manager.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/tab_manager.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5baa96b87b6709908395c33adfa8a0dd5d3daccafa0964899d62d5a8a9b7a586",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/tab_manager.py",
+    "exit_code": 0,
+    "stdout": "7f0145ce4a07585c231517f9771128cdbe7c0d1a\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "7f0145ce4a07585c231517f9771128cdbe7c0d1a",
+   "sha_head_blob_raw": "5baa96b87b6709908395c33adfa8a0dd5d3daccafa0964899d62d5a8a9b7a586",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/task_engine.py",
+   "git_path": "src/treecut/browser/task_engine.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/task_engine.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/task_engine.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "50db0c83e4ad49762088985bbf76638071ebe0526c74f3d5eee8625fb5569489",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/task_engine.py",
+    "exit_code": 0,
+    "stdout": "2b44a1eafc3c0196e80d256284d598182dcc2f0c\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "2b44a1eafc3c0196e80d256284d598182dcc2f0c",
+   "sha_head_blob_raw": "50db0c83e4ad49762088985bbf76638071ebe0526c74f3d5eee8625fb5569489",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/browser/workspace_manager.py",
+   "git_path": "src/treecut/browser/workspace_manager.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/browser/workspace_manager.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/browser/workspace_manager.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "bb048baf1be3196f1e5ac294c9534f3db0d6b558d1a7badc060d8a97f3cdbd87",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/browser/workspace_manager.py",
+    "exit_code": 0,
+    "stdout": "33ecb6ce19d8700c87a8d8b8009960603e6cf1bf\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "33ecb6ce19d8700c87a8d8b8009960603e6cf1bf",
+   "sha_head_blob_raw": "bb048baf1be3196f1e5ac294c9534f3db0d6b558d1a7badc060d8a97f3cdbd87",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/classify/asset_type.py",
+   "git_path": "src/treecut/classify/asset_type.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/classify/asset_type.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/classify/asset_type.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "feb13440455484f1ef6690b2b1fe476efe3bbcfda2909dbabc2b348538daf835",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/classify/asset_type.py",
+    "exit_code": 0,
+    "stdout": "f63cfb05db6c19650f62d3bff57548608c5a7cc6\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "f63cfb05db6c19650f62d3bff57548608c5a7cc6",
+   "sha_head_blob_raw": "feb13440455484f1ef6690b2b1fe476efe3bbcfda2909dbabc2b348538daf835",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/__init__.py",
+   "git_path": "src/treecut/cognitive/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "756b98e4cb5debeafa8944c7818b704c451303c3d9509837c9bae6f770d117cb",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/__init__.py",
+    "exit_code": 0,
+    "stdout": "d285d9f03f4b7a7b72263a1f1931a5b477b9ffc4\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "d285d9f03f4b7a7b72263a1f1931a5b477b9ffc4",
+   "sha_head_blob_raw": "756b98e4cb5debeafa8944c7818b704c451303c3d9509837c9bae6f770d117cb",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/account.py",
+   "git_path": "src/treecut/cognitive/account.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/account.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/account.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c3824155280fb2b22071e6ea113b2095227ee668f1b7f1c5e4145a540a3d5b6f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/account.py",
+    "exit_code": 0,
+    "stdout": "6176fdac20424850971ca91c3f4b891a71082011\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "6176fdac20424850971ca91c3f4b891a71082011",
+   "sha_head_blob_raw": "c3824155280fb2b22071e6ea113b2095227ee668f1b7f1c5e4145a540a3d5b6f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/accuracy.py",
+   "git_path": "src/treecut/cognitive/accuracy.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/accuracy.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/accuracy.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "e31f67137d73a5cb3fc18211de0a466e21c35f525fc69a1ff0d1c53efe2f3d68",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/accuracy.py",
+    "exit_code": 0,
+    "stdout": "1cb413514c47e1b647d0d5751a3672a1a2ecfa94\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "1cb413514c47e1b647d0d5751a3672a1a2ecfa94",
+   "sha_head_blob_raw": "e31f67137d73a5cb3fc18211de0a466e21c35f525fc69a1ff0d1c53efe2f3d68",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/accuracy_ui.py",
+   "git_path": "src/treecut/cognitive/accuracy_ui.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/accuracy_ui.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/accuracy_ui.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "043dac575b10fcc0daad5ce910d577cf8e72faacf794d8f6f8321ac77d989549",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/accuracy_ui.py",
+    "exit_code": 0,
+    "stdout": "707422aa4e44fecc31db1b778809e0260fbb6591\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "707422aa4e44fecc31db1b778809e0260fbb6591",
+   "sha_head_blob_raw": "043dac575b10fcc0daad5ce910d577cf8e72faacf794d8f6f8321ac77d989549",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/brain.py",
+   "git_path": "src/treecut/cognitive/brain.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/brain.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/brain.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "e1cf97226a90db166c9c6ef46345f4b889bde06fc0e8537d016e065cba4ec29e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/brain.py",
+    "exit_code": 0,
+    "stdout": "a22a21b3dd64109d6cdffd0113a211cfd8c0be1f\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "a22a21b3dd64109d6cdffd0113a211cfd8c0be1f",
+   "sha_head_blob_raw": "e1cf97226a90db166c9c6ef46345f4b889bde06fc0e8537d016e065cba4ec29e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/industry.py",
+   "git_path": "src/treecut/cognitive/industry.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/industry.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/industry.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "bc106748893d982404b63b3c29a5797d18ef3ccc2b8e0918b9d3a98cb559d9fe",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/industry.py",
+    "exit_code": 0,
+    "stdout": "7de9c073f647f06425504742f2aef1da6cfebd2d\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "7de9c073f647f06425504742f2aef1da6cfebd2d",
+   "sha_head_blob_raw": "bc106748893d982404b63b3c29a5797d18ef3ccc2b8e0918b9d3a98cb559d9fe",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/knowledge.py",
+   "git_path": "src/treecut/cognitive/knowledge.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/knowledge.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/knowledge.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "61534e9ffa2240faf3a794cfecb7d99b42f592371166c9bcee3fcb5deb0bde57",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/knowledge.py",
+    "exit_code": 0,
+    "stdout": "4874a6342b13186cf9460eac08192cb33f60763f\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4874a6342b13186cf9460eac08192cb33f60763f",
+   "sha_head_blob_raw": "61534e9ffa2240faf3a794cfecb7d99b42f592371166c9bcee3fcb5deb0bde57",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/learning.py",
+   "git_path": "src/treecut/cognitive/learning.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/learning.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/learning.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "b1ae375cd4f37262ecaa0d2811e3e92464c80a68b16fd49e7ee2a89248db4087",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/learning.py",
+    "exit_code": 0,
+    "stdout": "48163290b9f203f012721fd6d44649f9cc14e509\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "48163290b9f203f012721fd6d44649f9cc14e509",
+   "sha_head_blob_raw": "b1ae375cd4f37262ecaa0d2811e3e92464c80a68b16fd49e7ee2a89248db4087",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/production.py",
+   "git_path": "src/treecut/cognitive/production.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/production.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/production.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "89b72191a1928738932953c0908aeb3b5ad2e12be46f8c77dac686f924f25e89",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/production.py",
+    "exit_code": 0,
+    "stdout": "3273a115b84c3d2e83b591c3d17680f3f4f15bc7\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "3273a115b84c3d2e83b591c3d17680f3f4f15bc7",
+   "sha_head_blob_raw": "89b72191a1928738932953c0908aeb3b5ad2e12be46f8c77dac686f924f25e89",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/store.py",
+   "git_path": "src/treecut/cognitive/store.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/store.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/store.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5866761c796487a25fd36e6d61d45459448bc4f558dbf4bfef0f00b2727a4ef1",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/store.py",
+    "exit_code": 0,
+    "stdout": "c5b131ed572dec83eef14c1fcacfe2fee0ac7cea\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "c5b131ed572dec83eef14c1fcacfe2fee0ac7cea",
+   "sha_head_blob_raw": "5866761c796487a25fd36e6d61d45459448bc4f558dbf4bfef0f00b2727a4ef1",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/template.py",
+   "git_path": "src/treecut/cognitive/template.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/template.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/template.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "f1d5bf32cd87d468b1156816cbf538b7764684a682552de84831da5d6a868469",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/template.py",
+    "exit_code": 0,
+    "stdout": "e38a5d11d29574d25a445a031443f557aaae3da0\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e38a5d11d29574d25a445a031443f557aaae3da0",
+   "sha_head_blob_raw": "f1d5bf32cd87d468b1156816cbf538b7764684a682552de84831da5d6a868469",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/ui.py",
+   "git_path": "src/treecut/cognitive/ui.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/ui.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/ui.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "753c990b96410c63d692a45585ba85228ab80cb7180d2de8702416fdc05c003b",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/ui.py",
+    "exit_code": 0,
+    "stdout": "f839979bfef20d33f4aff9aaabc1d07a1b5a22d7\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "f839979bfef20d33f4aff9aaabc1d07a1b5a22d7",
+   "sha_head_blob_raw": "753c990b96410c63d692a45585ba85228ab80cb7180d2de8702416fdc05c003b",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/value.py",
+   "git_path": "src/treecut/cognitive/value.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/value.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/value.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "d044aff427235a39df76bede48def54bee75be61362418e232b01ce550c672c1",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/value.py",
+    "exit_code": 0,
+    "stdout": "2e70816a9423a52907c4b65dfba4f4722f9a2db1\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "2e70816a9423a52907c4b65dfba4f4722f9a2db1",
+   "sha_head_blob_raw": "d044aff427235a39df76bede48def54bee75be61362418e232b01ce550c672c1",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/cognitive/vision.py",
+   "git_path": "src/treecut/cognitive/vision.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/cognitive/vision.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/cognitive/vision.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "8c75a264df88eb6f86233a92e930150079158cbe803d81720fd3e4ce7638fec9",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/cognitive/vision.py",
+    "exit_code": 0,
+    "stdout": "e4c94fdbbb459999af9095379880520aa427bfa1\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e4c94fdbbb459999af9095379880520aa427bfa1",
+   "sha_head_blob_raw": "8c75a264df88eb6f86233a92e930150079158cbe803d81720fd3e4ce7638fec9",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/config/__init__.py",
+   "git_path": "src/treecut/config/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/config/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/config/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "6e7e62dbde9f343b105845f7a1ad5ab9c89ff6db3fad6abae6712df3ea1f0449",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/config/__init__.py",
+    "exit_code": 0,
+    "stdout": "adaee860a217700545b32cf54e05fbba32d8665e\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "adaee860a217700545b32cf54e05fbba32d8665e",
+   "sha_head_blob_raw": "6e7e62dbde9f343b105845f7a1ad5ab9c89ff6db3fad6abae6712df3ea1f0449",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/config/production.py",
+   "git_path": "src/treecut/config/production.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/config/production.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/config/production.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "21da5559837cf85547c4f5d39516f040a8f022a5b4c003198a68ca6099a3cd2f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/config/production.py",
+    "exit_code": 0,
+    "stdout": "6b0ae9307e704e9e374ceea6966a260f7b06d9ec\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "6b0ae9307e704e9e374ceea6966a260f7b06d9ec",
+   "sha_head_blob_raw": "21da5559837cf85547c4f5d39516f040a8f022a5b4c003198a68ca6099a3cd2f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/config/settings.py",
+   "git_path": "src/treecut/config/settings.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/config/settings.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/config/settings.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "0bee01abe7f5c6624238977dd9ec0822a6962e6ee6ae474ef430e4d5d7dea1c1",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/config/settings.py",
+    "exit_code": 0,
+    "stdout": "799adc8b15b784a9af35e539974968fa58d92697\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "799adc8b15b784a9af35e539974968fa58d92697",
+   "sha_head_blob_raw": "0bee01abe7f5c6624238977dd9ec0822a6962e6ee6ae474ef430e4d5d7dea1c1",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/content_tags.py",
+   "git_path": "src/treecut/content_tags.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/content_tags.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/content_tags.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "dbe9e463b98f093712064fb5d5b9e3e0306f433a1ffcf9ec85db6d94fd50d195",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/content_tags.py",
+    "exit_code": 0,
+    "stdout": "2643aa1c0af48f65a7b101ba451d298a218b931c\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "2643aa1c0af48f65a7b101ba451d298a218b931c",
+   "sha_head_blob_raw": "dbe9e463b98f093712064fb5d5b9e3e0306f433a1ffcf9ec85db6d94fd50d195",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/copywriter.py",
+   "git_path": "src/treecut/copywriter.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/copywriter.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/copywriter.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "20a66e18ef17c34fa88f56df4c85cd11dee7ef3b63d061a18bf6d0327a574b3c",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/copywriter.py",
+    "exit_code": 0,
+    "stdout": "1437e2d5ef68131fcf416bbf6fe53dc0d6039532\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "1437e2d5ef68131fcf416bbf6fe53dc0d6039532",
+   "sha_head_blob_raw": "20a66e18ef17c34fa88f56df4c85cd11dee7ef3b63d061a18bf6d0327a574b3c",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/database.py",
+   "git_path": "src/treecut/database.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/database.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/database.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "65790a43ee5e853c3a9cf7326b0e5f84a5674ea329d29b87beb3f586a775a69a",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/database.py",
+    "exit_code": 0,
+    "stdout": "1ea40e03f9b6c2aeed5868984d85f93ae097d084\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "1ea40e03f9b6c2aeed5868984d85f93ae097d084",
+   "sha_head_blob_raw": "65790a43ee5e853c3a9cf7326b0e5f84a5674ea329d29b87beb3f586a775a69a",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/desktop.py",
+   "git_path": "src/treecut/desktop.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/desktop.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/desktop.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "221d9abcfe5771a4a0cda0d6a973627d450e249e4b62907f146e600d4d2fd1ae",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/desktop.py",
+    "exit_code": 0,
+    "stdout": "f5a651f2e343d0ce7be68c1353b8c5e8a709614b\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "f5a651f2e343d0ce7be68c1353b8c5e8a709614b",
+   "sha_head_blob_raw": "221d9abcfe5771a4a0cda0d6a973627d450e249e4b62907f146e600d4d2fd1ae",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/diagnostics.py",
+   "git_path": "src/treecut/diagnostics.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/diagnostics.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/diagnostics.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "e691fe0a4558ed5b6d7012ead276277184375344fbd6a616d0dd10715b6c9976",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/diagnostics.py",
+    "exit_code": 0,
+    "stdout": "8fd2ea4669078c5e9527c9330ee9399f1f160a65\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "8fd2ea4669078c5e9527c9330ee9399f1f160a65",
+   "sha_head_blob_raw": "e691fe0a4558ed5b6d7012ead276277184375344fbd6a616d0dd10715b6c9976",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/extensions.py",
+   "git_path": "src/treecut/extensions.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/extensions.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/extensions.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "ed1b4f8c539b8b3bd3829f149839a5786323905e955aa0c00ebda7d610b798e0",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/extensions.py",
+    "exit_code": 0,
+    "stdout": "ebaf3c9d0ac77bdc267b1fa6b1cd7d8b96ec55a9\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ebaf3c9d0ac77bdc267b1fa6b1cd7d8b96ec55a9",
+   "sha_head_blob_raw": "ed1b4f8c539b8b3bd3829f149839a5786323905e955aa0c00ebda7d610b798e0",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/feedback_learning/__init__.py",
+   "git_path": "src/treecut/feedback_learning/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/feedback_learning/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/feedback_learning/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "4ab22376e331e4dd873639e409938b4cdeebb76f50051573e5c2507a6e97c48c",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/feedback_learning/__init__.py",
+    "exit_code": 0,
+    "stdout": "eaa76ad17ee4698514aba6facd19b0f49494226a\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "eaa76ad17ee4698514aba6facd19b0f49494226a",
+   "sha_head_blob_raw": "4ab22376e331e4dd873639e409938b4cdeebb76f50051573e5c2507a6e97c48c",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/gpu_acceptance.py",
+   "git_path": "src/treecut/gpu_acceptance.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/gpu_acceptance.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/gpu_acceptance.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5557cf570ad77b535ae28bc23141215083e7bccbcf0a53d37376bf19f9d3ef3b",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/gpu_acceptance.py",
+    "exit_code": 0,
+    "stdout": "106e5c2a5ac6aadc1d56f28b44c30e0a29950095\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "106e5c2a5ac6aadc1d56f28b44c30e0a29950095",
+   "sha_head_blob_raw": "5557cf570ad77b535ae28bc23141215083e7bccbcf0a53d37376bf19f9d3ef3b",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/keyframes/__init__.py",
+   "git_path": "src/treecut/keyframes/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/keyframes/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/keyframes/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "8689a62dca5bf286a2347b8818d07cd636b5932f9019e020b996f233f07d0dc6",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/keyframes/__init__.py",
+    "exit_code": 0,
+    "stdout": "8a3efdaa9d830756a3a3f531c0da1f4ef37eb255\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "8a3efdaa9d830756a3a3f531c0da1f4ef37eb255",
+   "sha_head_blob_raw": "8689a62dca5bf286a2347b8818d07cd636b5932f9019e020b996f233f07d0dc6",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/keyframes/extractor.py",
+   "git_path": "src/treecut/keyframes/extractor.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/keyframes/extractor.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/keyframes/extractor.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "63d5972024c47bea200f55502d396cecec099d2152f0be534566848b76286bb0",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/keyframes/extractor.py",
+    "exit_code": 0,
+    "stdout": "6276c58874d8f4f449b0a8dbde0f43d4be9cc6c2\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "6276c58874d8f4f449b0a8dbde0f43d4be9cc6c2",
+   "sha_head_blob_raw": "63d5972024c47bea200f55502d396cecec099d2152f0be534566848b76286bb0",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/knowledge.py",
+   "git_path": "src/treecut/knowledge.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/knowledge.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/knowledge.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "bb648ffbf676b176c9ecc197de633aa3910624c0b2552a790bfeb6f083a10064",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/knowledge.py",
+    "exit_code": 0,
+    "stdout": "cffe91a86c92ffade624e6a61a561585a7837370\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "cffe91a86c92ffade624e6a61a561585a7837370",
+   "sha_head_blob_raw": "bb648ffbf676b176c9ecc197de633aa3910624c0b2552a790bfeb6f083a10064",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/learning/__init__.py",
+   "git_path": "src/treecut/learning/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/learning/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/learning/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "40b9f889d14149c170af09be1226adca1f0ac94da28f88fa1a5f774da69500dd",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/learning/__init__.py",
+    "exit_code": 0,
+    "stdout": "42eb76ffd84b946cdc72a29880a509975be11c3e\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "42eb76ffd84b946cdc72a29880a509975be11c3e",
+   "sha_head_blob_raw": "40b9f889d14149c170af09be1226adca1f0ac94da28f88fa1a5f774da69500dd",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/learning/feedback.py",
+   "git_path": "src/treecut/learning/feedback.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/learning/feedback.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/learning/feedback.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "98da1b63ca527b410091bf039cd4f61f4924855a56144bc10b8781cd2405f5fd",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/learning/feedback.py",
+    "exit_code": 0,
+    "stdout": "be658e098a31ffce3c7d6aff2d47766512f5bd66\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "be658e098a31ffce3c7d6aff2d47766512f5bd66",
+   "sha_head_blob_raw": "98da1b63ca527b410091bf039cd4f61f4924855a56144bc10b8781cd2405f5fd",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/__init__.py",
+   "git_path": "src/treecut/library/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "1628ea91c9e29212455448be3ee8f4c2df23e70612526affe2e07073a40cd26c",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/__init__.py",
+    "exit_code": 0,
+    "stdout": "a4a34ebfec5544c1603c8543950891a08b39d7d4\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "a4a34ebfec5544c1603c8543950891a08b39d7d4",
+   "sha_head_blob_raw": "1628ea91c9e29212455448be3ee8f4c2df23e70612526affe2e07073a40cd26c",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/assets.py",
+   "git_path": "src/treecut/library/assets.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/assets.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/assets.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "6f2901e18789123f763a0d7ecd4cc6c76cd0414b0bd4ddaf179ddea9b0a8d3e6",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/assets.py",
+    "exit_code": 0,
+    "stdout": "08483dca03fcbfb4407c9643503a4b1c7f0bc3f2\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "08483dca03fcbfb4407c9643503a4b1c7f0bc3f2",
+   "sha_head_blob_raw": "6f2901e18789123f763a0d7ecd4cc6c76cd0414b0bd4ddaf179ddea9b0a8d3e6",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/catalog.py",
+   "git_path": "src/treecut/library/catalog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/catalog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/catalog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "1e3f16cbe5f8f88ed34a80d71521709cdafd4e0ce68f4e8324692ba557fd4a1f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/catalog.py",
+    "exit_code": 0,
+    "stdout": "fd73c33f28f2bfb49b280754b906dfa823530ac5\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "fd73c33f28f2bfb49b280754b906dfa823530ac5",
+   "sha_head_blob_raw": "1e3f16cbe5f8f88ed34a80d71521709cdafd4e0ce68f4e8324692ba557fd4a1f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/classification.py",
+   "git_path": "src/treecut/library/classification.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/classification.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/classification.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "1823a4ef5acda9ae5a4e538a06050f4674a8a9d60e3effd2252f1899b4422394",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/classification.py",
+    "exit_code": 0,
+    "stdout": "6006c7176e2553164eba7355605ec54f1bb2f043\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "6006c7176e2553164eba7355605ec54f1bb2f043",
+   "sha_head_blob_raw": "1823a4ef5acda9ae5a4e538a06050f4674a8a9d60e3effd2252f1899b4422394",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/classification_store.py",
+   "git_path": "src/treecut/library/classification_store.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/classification_store.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/classification_store.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "17a771beb4bde51dc6e8848337eb546a3712e676ffdcdb633d77556d8d1d64bc",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/classification_store.py",
+    "exit_code": 0,
+    "stdout": "1e5c058eaf8f7e20617f8e88d3133aea8fe57fd8\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "1e5c058eaf8f7e20617f8e88d3133aea8fe57fd8",
+   "sha_head_blob_raw": "17a771beb4bde51dc6e8848337eb546a3712e676ffdcdb633d77556d8d1d64bc",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/hash_utils.py",
+   "git_path": "src/treecut/library/hash_utils.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/hash_utils.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/hash_utils.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "b8e42879844481ade587a97d618514f565c37089a1f7dcf785a8ede7e29565c5",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/hash_utils.py",
+    "exit_code": 0,
+    "stdout": "5da9954cfb66375c909f7ee5e0b8e147c7f0eb81\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5da9954cfb66375c909f7ee5e0b8e147c7f0eb81",
+   "sha_head_blob_raw": "b8e42879844481ade587a97d618514f565c37089a1f7dcf785a8ede7e29565c5",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/migrate_v12.py",
+   "git_path": "src/treecut/library/migrate_v12.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/migrate_v12.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/migrate_v12.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "163f9b7164cd93de4377dc14dbd6056d50eb1123144a63368ce0250d065c9c8a",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/migrate_v12.py",
+    "exit_code": 0,
+    "stdout": "2f66e8a62ab35d295d2f234bb40d996abde935de\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "2f66e8a62ab35d295d2f234bb40d996abde935de",
+   "sha_head_blob_raw": "163f9b7164cd93de4377dc14dbd6056d50eb1123144a63368ce0250d065c9c8a",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/probe_worker.py",
+   "git_path": "src/treecut/library/probe_worker.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/probe_worker.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/probe_worker.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "2e9c55daade40cbc6d03ac1061c717719857de2b8ca8bc516d7881a16d9cd4a1",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/probe_worker.py",
+    "exit_code": 0,
+    "stdout": "d046f30befc39a20a3b6d94fa5193a5c78a57a5e\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "d046f30befc39a20a3b6d94fa5193a5c78a57a5e",
+   "sha_head_blob_raw": "2e9c55daade40cbc6d03ac1061c717719857de2b8ca8bc516d7881a16d9cd4a1",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/processing_state.py",
+   "git_path": "src/treecut/library/processing_state.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/processing_state.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/processing_state.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "377561893f1898294b064338bb9af9d6131cc95328eb5174905d2cac2aa8b199",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/processing_state.py",
+    "exit_code": 0,
+    "stdout": "77ad75fd5a7c511029afeb4e714dacaca3ebd2ff\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "77ad75fd5a7c511029afeb4e714dacaca3ebd2ff",
+   "sha_head_blob_raw": "377561893f1898294b064338bb9af9d6131cc95328eb5174905d2cac2aa8b199",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/segments.py",
+   "git_path": "src/treecut/library/segments.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/segments.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/segments.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "a02f3ac31bca3fde27221c9db49c22f5dc55ed6475e5d7acecf8e341d46f2d8d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/segments.py",
+    "exit_code": 0,
+    "stdout": "734996129fffa19be8f85831b280fc0c11f817a3\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "734996129fffa19be8f85831b280fc0c11f817a3",
+   "sha_head_blob_raw": "a02f3ac31bca3fde27221c9db49c22f5dc55ed6475e5d7acecf8e341d46f2d8d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/library/task_store.py",
+   "git_path": "src/treecut/library/task_store.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/library/task_store.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/library/task_store.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "b93a306bed357a6dbae9a38de3e0dea8e4667ab96b0ffab9cc7ff302d720d1e5",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/library/task_store.py",
+    "exit_code": 0,
+    "stdout": "4f333c6de38dc0ec5e62a7f4aed85ad7bac6a3de\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4f333c6de38dc0ec5e62a7f4aed85ad7bac6a3de",
+   "sha_head_blob_raw": "b93a306bed357a6dbae9a38de3e0dea8e4667ab96b0ffab9cc7ff302d720d1e5",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/main.py",
+   "git_path": "src/treecut/main.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/main.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/main.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "442402d90b09e1dea3b1a7d68d26e6aa1b7ead1f47b2e327e1a3cba9fd257061",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/main.py",
+    "exit_code": 0,
+    "stdout": "4187a522b70fba425b3b4649e71602f3d316a728\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4187a522b70fba425b3b4649e71602f3d316a728",
+   "sha_head_blob_raw": "442402d90b09e1dea3b1a7d68d26e6aa1b7ead1f47b2e327e1a3cba9fd257061",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/maintenance.py",
+   "git_path": "src/treecut/maintenance.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/maintenance.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/maintenance.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "9f627b42b117be33d670af0cd20c3466b8edce9779a70bc8584208a8e9485828",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/maintenance.py",
+    "exit_code": 0,
+    "stdout": "fb1399b3bc8ce83ad42573a13470ca5c13cc8287\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "fb1399b3bc8ce83ad42573a13470ca5c13cc8287",
+   "sha_head_blob_raw": "9f627b42b117be33d670af0cd20c3466b8edce9779a70bc8584208a8e9485828",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/maintenance_cli.py",
+   "git_path": "src/treecut/maintenance_cli.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/maintenance_cli.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/maintenance_cli.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "35d5386c736c74fcce8fefd3443364922477b13c8b26bb7eab4d46fb5d85e4b4",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/maintenance_cli.py",
+    "exit_code": 0,
+    "stdout": "b868afbabf80ed4862f0c77a4c70a73660659d71\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "b868afbabf80ed4862f0c77a4c70a73660659d71",
+   "sha_head_blob_raw": "35d5386c736c74fcce8fefd3443364922477b13c8b26bb7eab4d46fb5d85e4b4",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/media/__init__.py",
+   "git_path": "src/treecut/media/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/media/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/media/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "864218e556c250b7246a61ac4006d60f4cb76380ee33921e52fd1410d4c24c40",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/media/__init__.py",
+    "exit_code": 0,
+    "stdout": "a5e5f4ebbc4cc89c523e670862f0030c2abf5861\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "a5e5f4ebbc4cc89c523e670862f0030c2abf5861",
+   "sha_head_blob_raw": "864218e556c250b7246a61ac4006d60f4cb76380ee33921e52fd1410d4c24c40",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/media/probe.py",
+   "git_path": "src/treecut/media/probe.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/media/probe.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/media/probe.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "b8501ea16bb519a22020cc7aa974c10761efb241b3e39f89e99aef453e8408b6",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/media/probe.py",
+    "exit_code": 0,
+    "stdout": "959ee418f44f5b42e6448dfc420e135955b407fd\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "959ee418f44f5b42e6448dfc420e135955b407fd",
+   "sha_head_blob_raw": "b8501ea16bb519a22020cc7aa974c10761efb241b3e39f89e99aef453e8408b6",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/media/source_discovery.py",
+   "git_path": "src/treecut/media/source_discovery.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/media/source_discovery.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/media/source_discovery.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "2ae41feb021701e933bd8377189ee6c8704d58423a36d03756bc6fb8d9a6c5d1",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/media/source_discovery.py",
+    "exit_code": 0,
+    "stdout": "ace827890c16d0d358dc3260e7823955b3cb9774\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ace827890c16d0d358dc3260e7823955b3cb9774",
+   "sha_head_blob_raw": "2ae41feb021701e933bd8377189ee6c8704d58423a36d03756bc6fb8d9a6c5d1",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/__init__.py",
+   "git_path": "src/treecut/models/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "531b741d13f65af6dd3b80258ef31eecf248301ec5f9eb1f9ab8be8f71f66da6",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/__init__.py",
+    "exit_code": 0,
+    "stdout": "515db1179031e31abed3d57197b17db33dd7c569\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "515db1179031e31abed3d57197b17db33dd7c569",
+   "sha_head_blob_raw": "531b741d13f65af6dd3b80258ef31eecf248301ec5f9eb1f9ab8be8f71f66da6",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/cache.py",
+   "git_path": "src/treecut/models/cache.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/cache.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/cache.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "329c9b4dba586f5d6d2db03aa23576493d2b8fa58de0da066e5325e721ab095f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/cache.py",
+    "exit_code": 0,
+    "stdout": "3bf03751b6e5f00a3a4a49ca575ae80ee73582e8\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "3bf03751b6e5f00a3a4a49ca575ae80ee73582e8",
+   "sha_head_blob_raw": "329c9b4dba586f5d6d2db03aa23576493d2b8fa58de0da066e5325e721ab095f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/object_detection.py",
+   "git_path": "src/treecut/models/object_detection.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/object_detection.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/object_detection.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "46287460ce3958dcd745ce97ea8c47fafff17d9932205a331647429f4550e24f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/object_detection.py",
+    "exit_code": 0,
+    "stdout": "bc7cdab4d3648e305dbcb8d8ee3452a1bef5145f\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "bc7cdab4d3648e305dbcb8d8ee3452a1bef5145f",
+   "sha_head_blob_raw": "46287460ce3958dcd745ce97ea8c47fafff17d9932205a331647429f4550e24f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/policy.py",
+   "git_path": "src/treecut/models/policy.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/policy.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/policy.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "9d0dc02ff1ef00470834c3fb0c8a959e1a0cfce46311109f45eaf88650a8abc1",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/policy.py",
+    "exit_code": 0,
+    "stdout": "6ddc41cb7dee51e0e38e506f81e4cd17de149b5d\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "6ddc41cb7dee51e0e38e506f81e4cd17de149b5d",
+   "sha_head_blob_raw": "9d0dc02ff1ef00470834c3fb0c8a959e1a0cfce46311109f45eaf88650a8abc1",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/registry.py",
+   "git_path": "src/treecut/models/registry.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/registry.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/registry.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "a808d2aa2939c02a614ad1389899e42f81d23f17d0eeb94e4ea77513765df095",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/registry.py",
+    "exit_code": 0,
+    "stdout": "efdfdd1fd05a123086401ba3648afbda83cddd35\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "efdfdd1fd05a123086401ba3648afbda83cddd35",
+   "sha_head_blob_raw": "a808d2aa2939c02a614ad1389899e42f81d23f17d0eeb94e4ea77513765df095",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/semantic_matching.py",
+   "git_path": "src/treecut/models/semantic_matching.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/semantic_matching.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/semantic_matching.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "34826a8d8886e187a26a447913c9b7a4cff331fd6f31935706528497947a344a",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/semantic_matching.py",
+    "exit_code": 0,
+    "stdout": "299973da8b00c7c95195d047da8ae84f137ffbe0\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "299973da8b00c7c95195d047da8ae84f137ffbe0",
+   "sha_head_blob_raw": "34826a8d8886e187a26a447913c9b7a4cff331fd6f31935706528497947a344a",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/speech_sensevoice.py",
+   "git_path": "src/treecut/models/speech_sensevoice.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/speech_sensevoice.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/speech_sensevoice.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "27c4de5c14f5f87a3a4d0b3bbf2b7d06b3b6a9906c8a905f7e8ce5ad4cb05f3f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/speech_sensevoice.py",
+    "exit_code": 0,
+    "stdout": "a062bdb3371d60b4de494dea659df93e71996429\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "a062bdb3371d60b4de494dea659df93e71996429",
+   "sha_head_blob_raw": "27c4de5c14f5f87a3a4d0b3bbf2b7d06b3b6a9906c8a905f7e8ce5ad4cb05f3f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/speech_whisper.py",
+   "git_path": "src/treecut/models/speech_whisper.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/speech_whisper.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/speech_whisper.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "1fe5f3df69d1aadfd77b41baa0c002492dfb933d3165149defc624e4fb8efa69",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/speech_whisper.py",
+    "exit_code": 0,
+    "stdout": "99e1988eda454b47a31097d3e70938e59eec5c26\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "99e1988eda454b47a31097d3e70938e59eec5c26",
+   "sha_head_blob_raw": "1fe5f3df69d1aadfd77b41baa0c002492dfb933d3165149defc624e4fb8efa69",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/tts_local.py",
+   "git_path": "src/treecut/models/tts_local.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/tts_local.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/tts_local.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "1db5dd8f2cbe181955ba58b9ba41b0ab0381e0a1299bba6a46d4199febba2ab1",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/tts_local.py",
+    "exit_code": 0,
+    "stdout": "ae51191f425f78dd8f5e9e1ce24e3b64f89cb83f\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ae51191f425f78dd8f5e9e1ce24e3b64f89cb83f",
+   "sha_head_blob_raw": "1db5dd8f2cbe181955ba58b9ba41b0ab0381e0a1299bba6a46d4199febba2ab1",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/tts_sapi.py",
+   "git_path": "src/treecut/models/tts_sapi.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/tts_sapi.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/tts_sapi.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "96c4e7c452043aaa979bdb98e5c65b60dd8056503cecd9b38e52fd73fc6fd710",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/tts_sapi.py",
+    "exit_code": 0,
+    "stdout": "ef89b65da1aa3c168b16fb67913e82b767ecb2e9\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ef89b65da1aa3c168b16fb67913e82b767ecb2e9",
+   "sha_head_blob_raw": "96c4e7c452043aaa979bdb98e5c65b60dd8056503cecd9b38e52fd73fc6fd710",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/validation.py",
+   "git_path": "src/treecut/models/validation.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/validation.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/validation.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c2e9c2cc4810c1b4d03a14c64f26228d68ffd97572f3570ffa40801cd220e5bf",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/validation.py",
+    "exit_code": 0,
+    "stdout": "d54c99008880622faae591fa1c1df025bfe4bb49\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "d54c99008880622faae591fa1c1df025bfe4bb49",
+   "sha_head_blob_raw": "c2e9c2cc4810c1b4d03a14c64f26228d68ffd97572f3570ffa40801cd220e5bf",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/vision_florence.py",
+   "git_path": "src/treecut/models/vision_florence.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/vision_florence.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/vision_florence.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "06a5c8338e0571be18ca0b736f8bcdd897d6d5467a0e0fe921f15251a75a1ec5",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/vision_florence.py",
+    "exit_code": 0,
+    "stdout": "36abd93f79b02a88c601e85bb3b1c55156d0114d\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "36abd93f79b02a88c601e85bb3b1c55156d0114d",
+   "sha_head_blob_raw": "06a5c8338e0571be18ca0b736f8bcdd897d6d5467a0e0fe921f15251a75a1ec5",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/models/vision_qwen.py",
+   "git_path": "src/treecut/models/vision_qwen.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/models/vision_qwen.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/models/vision_qwen.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "00295319ea7f52f527e000464e0d769e4ebf823979ae40e7be9c3fe1b6c70bd3",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/models/vision_qwen.py",
+    "exit_code": 0,
+    "stdout": "1227f880c4716a82882f0e95a84b2b6e74677499\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "1227f880c4716a82882f0e95a84b2b6e74677499",
+   "sha_head_blob_raw": "00295319ea7f52f527e000464e0d769e4ebf823979ae40e7be9c3fe1b6c70bd3",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ocr/__init__.py",
+   "git_path": "src/treecut/ocr/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ocr/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ocr/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "8fdc43d829b3d7b71364f9ca650a610eba65d48d03aeff0967c2b26dbe0cbd3a",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ocr/__init__.py",
+    "exit_code": 0,
+    "stdout": "625360298758beea71ea9e698f73b3f57de7c84a\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "625360298758beea71ea9e698f73b3f57de7c84a",
+   "sha_head_blob_raw": "8fdc43d829b3d7b71364f9ca650a610eba65d48d03aeff0967c2b26dbe0cbd3a",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ocr/engine.py",
+   "git_path": "src/treecut/ocr/engine.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ocr/engine.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ocr/engine.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "07e24f16fedb2dd3ed56cddb06d855d4f73c4bb6eb8c635cce81ab404d4828fe",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ocr/engine.py",
+    "exit_code": 0,
+    "stdout": "1e0adb4e3f2a5f4d20765a8f4f4e6aab7231e3b5\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "1e0adb4e3f2a5f4d20765a8f4f4e6aab7231e3b5",
+   "sha_head_blob_raw": "07e24f16fedb2dd3ed56cddb06d855d4f73c4bb6eb8c635cce81ab404d4828fe",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/output/__init__.py",
+   "git_path": "src/treecut/output/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/output/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/output/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c0e3144fb2acc4d9ace0a9597cd99d14a2e1711a684a4784a9b0b95d6fd8b926",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/output/__init__.py",
+    "exit_code": 0,
+    "stdout": "701b54e058925a099825c66cfb34b18bdebe6879\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "701b54e058925a099825c66cfb34b18bdebe6879",
+   "sha_head_blob_raw": "c0e3144fb2acc4d9ace0a9597cd99d14a2e1711a684a4784a9b0b95d6fd8b926",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/output/cover.py",
+   "git_path": "src/treecut/output/cover.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/output/cover.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/output/cover.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "2e50998ab6fef5e0266057899d66a74b325d225a24de78460c8a3b6a01f19499",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/output/cover.py",
+    "exit_code": 0,
+    "stdout": "eb2e0af2cd2df1ec9f1aff5259121c0026c270db\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "eb2e0af2cd2df1ec9f1aff5259121c0026c270db",
+   "sha_head_blob_raw": "2e50998ab6fef5e0266057899d66a74b325d225a24de78460c8a3b6a01f19499",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/output/filters.py",
+   "git_path": "src/treecut/output/filters.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/output/filters.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/output/filters.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "b1636d3d901b299ff92ededdb3f6defd558282a718ee59c9ff6fa6fee0b01122",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/output/filters.py",
+    "exit_code": 0,
+    "stdout": "23745f750b56f8631d3bfbd726b8c0712cec31f8\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "23745f750b56f8631d3bfbd726b8c0712cec31f8",
+   "sha_head_blob_raw": "b1636d3d901b299ff92ededdb3f6defd558282a718ee59c9ff6fa6fee0b01122",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/output/jianying.py",
+   "git_path": "src/treecut/output/jianying.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/output/jianying.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/output/jianying.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "e741a3dd131da82c476eab835f5c3f4661eb244cc87c46a4bfbe014be7f0710c",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/output/jianying.py",
+    "exit_code": 0,
+    "stdout": "ac40e7fc4e8ae50d7ecd7a4eeda448a77b0198a2\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ac40e7fc4e8ae50d7ecd7a4eeda448a77b0198a2",
+   "sha_head_blob_raw": "e741a3dd131da82c476eab835f5c3f4661eb244cc87c46a4bfbe014be7f0710c",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/output/mp4.py",
+   "git_path": "src/treecut/output/mp4.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/output/mp4.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/output/mp4.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "283543a1b580f91b5bd1a0a6533a7c50ef248a739a8be76d05cb7d3335642f60",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/output/mp4.py",
+    "exit_code": 0,
+    "stdout": "f1c5c54a1cb8123fa5c3e7ab2f3f9302f8983900\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "f1c5c54a1cb8123fa5c3e7ab2f3f9302f8983900",
+   "sha_head_blob_raw": "283543a1b580f91b5bd1a0a6533a7c50ef248a739a8be76d05cb7d3335642f60",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/output/narration.py",
+   "git_path": "src/treecut/output/narration.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/output/narration.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/output/narration.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "d68979000d8dfa21b8dae46f40b6b1ba869e0a695e72f3944227ab4f3c728e8f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/output/narration.py",
+    "exit_code": 0,
+    "stdout": "868658afecf1f4d616e70ef1118167319cc71f60\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "868658afecf1f4d616e70ef1118167319cc71f60",
+   "sha_head_blob_raw": "d68979000d8dfa21b8dae46f40b6b1ba869e0a695e72f3944227ab4f3c728e8f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/output/presets.py",
+   "git_path": "src/treecut/output/presets.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/output/presets.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/output/presets.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "73aa4b93aa7ed44290e57cfb810e8c6f1d20101f3591aa9341813d70537823f2",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/output/presets.py",
+    "exit_code": 0,
+    "stdout": "f5f4d6c1fc1962d47850aec8f1aa472ab2047d98\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "f5f4d6c1fc1962d47850aec8f1aa472ab2047d98",
+   "sha_head_blob_raw": "73aa4b93aa7ed44290e57cfb810e8c6f1d20101f3591aa9341813d70537823f2",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/output/production_narration.py",
+   "git_path": "src/treecut/output/production_narration.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/output/production_narration.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/output/production_narration.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "162cd51627030b0c7559c173d5b2522c39c8857278d3e36b9ce8f89bbd11f17b",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/output/production_narration.py",
+    "exit_code": 0,
+    "stdout": "7d0cab17d57cccfaf1367f7a09e76ad0d27cfdb8\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "7d0cab17d57cccfaf1367f7a09e76ad0d27cfdb8",
+   "sha_head_blob_raw": "162cd51627030b0c7559c173d5b2522c39c8857278d3e36b9ce8f89bbd11f17b",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/__init__.py",
+   "git_path": "src/treecut/platform/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5bfc2db4e0f599d5ff5a697a0e6e31726e135a397f1ad34125e72d407c006901",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/__init__.py",
+    "exit_code": 0,
+    "stdout": "6cb139e43013ddbe05abb4c32a2d3614e456353b\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "6cb139e43013ddbe05abb4c32a2d3614e456353b",
+   "sha_head_blob_raw": "5bfc2db4e0f599d5ff5a697a0e6e31726e135a397f1ad34125e72d407c006901",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/capabilities.py",
+   "git_path": "src/treecut/platform/capabilities.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/capabilities.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/capabilities.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "a36188dce4f5e678af8995ef53347febd15b1e21ccd7f85340e528d2d605905e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/capabilities.py",
+    "exit_code": 0,
+    "stdout": "4f820f7adfa1e55423a17a6d9508c6ebce76e65c\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4f820f7adfa1e55423a17a6d9508c6ebce76e65c",
+   "sha_head_blob_raw": "a36188dce4f5e678af8995ef53347febd15b1e21ccd7f85340e528d2d605905e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/crash.py",
+   "git_path": "src/treecut/platform/crash.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/crash.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/crash.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "797e41e927e04ff15e44c466e1bd4368fba68ec6c4828c698b4c24cf51d2f6c9",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/crash.py",
+    "exit_code": 0,
+    "stdout": "9f023037195d9a9732c8e8c0b3cb16bd5f1c379b\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "9f023037195d9a9732c8e8c0b3cb16bd5f1c379b",
+   "sha_head_blob_raw": "797e41e927e04ff15e44c466e1bd4368fba68ec6c4828c698b4c24cf51d2f6c9",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/dpi.py",
+   "git_path": "src/treecut/platform/dpi.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/dpi.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/dpi.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5df24a564443d96dbaaab0294c60b4a0cd31ea64c3b3f31ec9481d6b09ebfc53",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/dpi.py",
+    "exit_code": 0,
+    "stdout": "5f352eeee8a08dd3aae2e05407b31dd80bb99df8\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5f352eeee8a08dd3aae2e05407b31dd80bb99df8",
+   "sha_head_blob_raw": "5df24a564443d96dbaaab0294c60b4a0cd31ea64c3b3f31ec9481d6b09ebfc53",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/logging.py",
+   "git_path": "src/treecut/platform/logging.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/logging.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/logging.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "dac6138e7751611688e33ee4ffd703bd8e0a56533dfcad250005465974387086",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/logging.py",
+    "exit_code": 0,
+    "stdout": "2e1f3497bdd3c9921c9b594d93b8ec2d09871827\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "2e1f3497bdd3c9921c9b594d93b8ec2d09871827",
+   "sha_head_blob_raw": "dac6138e7751611688e33ee4ffd703bd8e0a56533dfcad250005465974387086",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/memory.py",
+   "git_path": "src/treecut/platform/memory.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/memory.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/memory.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "07ca921f8db3846b79e981ae4ed36c6d00900223ddac033513d768b583ccb2f1",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/memory.py",
+    "exit_code": 0,
+    "stdout": "0208beb9bbca970d4eecfeeed1184575d51d33fa\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "0208beb9bbca970d4eecfeeed1184575d51d33fa",
+   "sha_head_blob_raw": "07ca921f8db3846b79e981ae4ed36c6d00900223ddac033513d768b583ccb2f1",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/migrations.py",
+   "git_path": "src/treecut/platform/migrations.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/migrations.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/migrations.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "540ddf47cd61326c99513a2139a6e41bbf8cd0303731361fe8e61ac958391f5e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/migrations.py",
+    "exit_code": 0,
+    "stdout": "e3ef50e587c23dc86273f69b0524aa15eed62041\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e3ef50e587c23dc86273f69b0524aa15eed62041",
+   "sha_head_blob_raw": "540ddf47cd61326c99513a2139a6e41bbf8cd0303731361fe8e61ac958391f5e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/paths.py",
+   "git_path": "src/treecut/platform/paths.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/paths.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/paths.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "42bf5509b473692035fd35b2a5e594fda1db497250d177461a29d7b12c3ee1b9",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/paths.py",
+    "exit_code": 0,
+    "stdout": "0306c96a9e60d0f8404f431ef32fcec8d95ff926\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "0306c96a9e60d0f8404f431ef32fcec8d95ff926",
+   "sha_head_blob_raw": "42bf5509b473692035fd35b2a5e594fda1db497250d177461a29d7b12c3ee1b9",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/progress.py",
+   "git_path": "src/treecut/platform/progress.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/progress.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/progress.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "ef092061ddc4589e79d52aa215a9069af76dbf4380ffd6e6f442a90426ecf8ff",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/progress.py",
+    "exit_code": 0,
+    "stdout": "24d7ea602413277de0f72d65dc41c01f57173f19\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "24d7ea602413277de0f72d65dc41c01f57173f19",
+   "sha_head_blob_raw": "ef092061ddc4589e79d52aa215a9069af76dbf4380ffd6e6f442a90426ecf8ff",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/shortcuts.py",
+   "git_path": "src/treecut/platform/shortcuts.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/shortcuts.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/shortcuts.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "65eb080a9f85d3b6128a45c3f78635efbd7ccb326a08fee8e5b75efdf1e1a7f2",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/shortcuts.py",
+    "exit_code": 0,
+    "stdout": "57543f264d2cb41b9388777bca47fcdadb035d69\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "57543f264d2cb41b9388777bca47fcdadb035d69",
+   "sha_head_blob_raw": "65eb080a9f85d3b6128a45c3f78635efbd7ccb326a08fee8e5b75efdf1e1a7f2",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/platform/single_instance.py",
+   "git_path": "src/treecut/platform/single_instance.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/platform/single_instance.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/platform/single_instance.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "bf13146cf7bbfb182982b3a9a3ab48257bba45aec97500aa5267fd12397f6082",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/platform/single_instance.py",
+    "exit_code": 0,
+    "stdout": "20e617981e50c884fb98c02d54f9a45329f628b7\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "20e617981e50c884fb98c02d54f9a45329f628b7",
+   "sha_head_blob_raw": "bf13146cf7bbfb182982b3a9a3ab48257bba45aec97500aa5267fd12397f6082",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/quality/__init__.py",
+   "git_path": "src/treecut/quality/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/quality/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/quality/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "058f5342380c4b705a4508f8b3ee4ec21726511c6b40f637d60b14059b9eb633",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/quality/__init__.py",
+    "exit_code": 0,
+    "stdout": "838df49dea527a3fdcfaae099c72e8aabd6cbd00\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "838df49dea527a3fdcfaae099c72e8aabd6cbd00",
+   "sha_head_blob_raw": "058f5342380c4b705a4508f8b3ee4ec21726511c6b40f637d60b14059b9eb633",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/quality/inspection.py",
+   "git_path": "src/treecut/quality/inspection.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/quality/inspection.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/quality/inspection.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "79f1444b5830d147834023c6376547084003a563e7ae448deda47507ca761c7a",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/quality/inspection.py",
+    "exit_code": 0,
+    "stdout": "9bd3f54f5ccdf48cd956d0b6f8d5b2a9e4700f03\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "9bd3f54f5ccdf48cd956d0b6f8d5b2a9e4700f03",
+   "sha_head_blob_raw": "79f1444b5830d147834023c6376547084003a563e7ae448deda47507ca761c7a",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/quality_validation/__init__.py",
+   "git_path": "src/treecut/quality_validation/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/quality_validation/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/quality_validation/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5f0750c5245d53efd555a20fea4f49ecfa0e3d8589511179227cd1cfdc0f7945",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/quality_validation/__init__.py",
+    "exit_code": 0,
+    "stdout": "e4496e4a42818393763a4858f3702624845ebcec\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e4496e4a42818393763a4858f3702624845ebcec",
+   "sha_head_blob_raw": "5f0750c5245d53efd555a20fea4f49ecfa0e3d8589511179227cd1cfdc0f7945",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/quality_validation/report.py",
+   "git_path": "src/treecut/quality_validation/report.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/quality_validation/report.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/quality_validation/report.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "3d62e65fc1bf61c99186d01faa51df263825df13dd85a2e135c7cbcedd451534",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/quality_validation/report.py",
+    "exit_code": 0,
+    "stdout": "b7405c54dc16adbe334ce793cfc7ada5e25ba794\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "b7405c54dc16adbe334ce793cfc7ada5e25ba794",
+   "sha_head_blob_raw": "3d62e65fc1bf61c99186d01faa51df263825df13dd85a2e135c7cbcedd451534",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/quality_validation/sampler.py",
+   "git_path": "src/treecut/quality_validation/sampler.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/quality_validation/sampler.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/quality_validation/sampler.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "82107fc39103a799312dd49e2286c422968c89f2d390529cad5b8bb892b2fa50",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/quality_validation/sampler.py",
+    "exit_code": 0,
+    "stdout": "d70b354d8549757522dc7ab5ff180da51bbaecef\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "d70b354d8549757522dc7ab5ff180da51bbaecef",
+   "sha_head_blob_raw": "82107fc39103a799312dd49e2286c422968c89f2d390529cad5b8bb892b2fa50",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/quality_validation/scoring.py",
+   "git_path": "src/treecut/quality_validation/scoring.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/quality_validation/scoring.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/quality_validation/scoring.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "4a7c085e09a328f0d94f86375b006a98a432bd80579e1a17c4dc9fc82c4de300",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/quality_validation/scoring.py",
+    "exit_code": 0,
+    "stdout": "dc7ad94d8ff993f746414425843f3b9d1f74644c\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "dc7ad94d8ff993f746414425843f3b9d1f74644c",
+   "sha_head_blob_raw": "4a7c085e09a328f0d94f86375b006a98a432bd80579e1a17c4dc9fc82c4de300",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/quality_validation/store.py",
+   "git_path": "src/treecut/quality_validation/store.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/quality_validation/store.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/quality_validation/store.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "6c9a58706d0af67942802cb66b3ecbe18769e7b849838d5da050eb8de089471d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/quality_validation/store.py",
+    "exit_code": 0,
+    "stdout": "b7c448b7942859a023d172f9020e034d2e2e60a1\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "b7c448b7942859a023d172f9020e034d2e2e60a1",
+   "sha_head_blob_raw": "6c9a58706d0af67942802cb66b3ecbe18769e7b849838d5da050eb8de089471d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/quality_validation/ui.py",
+   "git_path": "src/treecut/quality_validation/ui.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/quality_validation/ui.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/quality_validation/ui.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "d58045ae30f3328f355ea76134dffa4378e0ec8cf24a88ab3cc6037edd82d87f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/quality_validation/ui.py",
+    "exit_code": 0,
+    "stdout": "5a402d5672a183ea770d697f2dcb0c13fc83c41c\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5a402d5672a183ea770d697f2dcb0c13fc83c41c",
+   "sha_head_blob_raw": "d58045ae30f3328f355ea76134dffa4378e0ec8cf24a88ab3cc6037edd82d87f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/__init__.py",
+   "git_path": "src/treecut/remote/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "3b0dd6762382fd0fad34046ce5fb4adfa726343cdca6e70f1ae4d7cccefee7d8",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/__init__.py",
+    "exit_code": 0,
+    "stdout": "5f5e93691782f2cb4eb20fcb036feb2f1cb31335\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5f5e93691782f2cb4eb20fcb036feb2f1cb31335",
+   "sha_head_blob_raw": "3b0dd6762382fd0fad34046ce5fb4adfa726343cdca6e70f1ae4d7cccefee7d8",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/agent.py",
+   "git_path": "src/treecut/remote/agent.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/agent.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/agent.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "1ac11d94d0520fed0c5f029f678dccdffccdba9ab11619a32491f567b27cc8fd",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/agent.py",
+    "exit_code": 0,
+    "stdout": "35241db337d4e5b3d92de25f16c820afc0973f14\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "35241db337d4e5b3d92de25f16c820afc0973f14",
+   "sha_head_blob_raw": "1ac11d94d0520fed0c5f029f678dccdffccdba9ab11619a32491f567b27cc8fd",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/agent_main.py",
+   "git_path": "src/treecut/remote/agent_main.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/agent_main.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/agent_main.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "f41e4f189a17f6bb1b023990e5f9b07129bf5f4e445fa7dadabb643db0f6f4b6",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/agent_main.py",
+    "exit_code": 0,
+    "stdout": "e657de2620c0a0d565dfb78959dc62bc937104e9\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e657de2620c0a0d565dfb78959dc62bc937104e9",
+   "sha_head_blob_raw": "f41e4f189a17f6bb1b023990e5f9b07129bf5f4e445fa7dadabb643db0f6f4b6",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/autostart.py",
+   "git_path": "src/treecut/remote/autostart.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/autostart.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/autostart.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "4fbe83b1621f7cc99657c843e060174377a022223be194d50a881037f6711478",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/autostart.py",
+    "exit_code": 0,
+    "stdout": "0bad2a04d8716131d3a71f9567ed380d99e73ab9\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "0bad2a04d8716131d3a71f9567ed380d99e73ab9",
+   "sha_head_blob_raw": "4fbe83b1621f7cc99657c843e060174377a022223be194d50a881037f6711478",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/config.py",
+   "git_path": "src/treecut/remote/config.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/config.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/config.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "e4a50d5db8a5dd429427e261a403715a84938421939ef7e01e92240267911dc8",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/config.py",
+    "exit_code": 0,
+    "stdout": "0fd18628603d777f6a1386fb77429dda8fe3921b\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "0fd18628603d777f6a1386fb77429dda8fe3921b",
+   "sha_head_blob_raw": "e4a50d5db8a5dd429427e261a403715a84938421939ef7e01e92240267911dc8",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/discovery.py",
+   "git_path": "src/treecut/remote/discovery.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/discovery.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/discovery.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "508c1bb6484ce96c1aa22eda97c6f256f84cb14f5784d0e8e9d8611f5eb79297",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/discovery.py",
+    "exit_code": 0,
+    "stdout": "4c288e3b3f769220f9371c2d9587418ba320a56b\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4c288e3b3f769220f9371c2d9587418ba320a56b",
+   "sha_head_blob_raw": "508c1bb6484ce96c1aa22eda97c6f256f84cb14f5784d0e8e9d8611f5eb79297",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/hub.py",
+   "git_path": "src/treecut/remote/hub.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/hub.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/hub.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "60c54f863614ddfe52d40bc52531cc5fc16516fdc7ae4b2408440eda800be509",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/hub.py",
+    "exit_code": 0,
+    "stdout": "b96ca8b88923ba254c5c162cd6c67f62457a3089\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "b96ca8b88923ba254c5c162cd6c67f62457a3089",
+   "sha_head_blob_raw": "60c54f863614ddfe52d40bc52531cc5fc16516fdc7ae4b2408440eda800be509",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/hub_main.py",
+   "git_path": "src/treecut/remote/hub_main.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/hub_main.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/hub_main.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "e40fc85d392530ca49c0801990c0ff924de40bb2877fb555420e4b859adb9bc7",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/hub_main.py",
+    "exit_code": 0,
+    "stdout": "239512e5c02eb38ac588299871aac611b1188049\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "239512e5c02eb38ac588299871aac611b1188049",
+   "sha_head_blob_raw": "e40fc85d392530ca49c0801990c0ff924de40bb2877fb555420e4b859adb9bc7",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/remote_produce.py",
+   "git_path": "src/treecut/remote/remote_produce.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/remote_produce.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/remote_produce.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "f52f6ecf9f07a03592d869c6503d5ecaa51ef83fcf3138c9e37253403bc70799",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/remote_produce.py",
+    "exit_code": 0,
+    "stdout": "2c48090b94af56d7bc7431b7884c54ef7e0b3ec4\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "2c48090b94af56d7bc7431b7884c54ef7e0b3ec4",
+   "sha_head_blob_raw": "f52f6ecf9f07a03592d869c6503d5ecaa51ef83fcf3138c9e37253403bc70799",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/roles.py",
+   "git_path": "src/treecut/remote/roles.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/roles.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/roles.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "7e47e5c66dfa1db78d92de5d7c726840aadd61eb9fd56e195f61a1d2beb4c609",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/roles.py",
+    "exit_code": 0,
+    "stdout": "6f0fe99b76cfb2bf218b9cc28b2a3f8ed37ebe67\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "6f0fe99b76cfb2bf218b9cc28b2a3f8ed37ebe67",
+   "sha_head_blob_raw": "7e47e5c66dfa1db78d92de5d7c726840aadd61eb9fd56e195f61a1d2beb4c609",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/security.py",
+   "git_path": "src/treecut/remote/security.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/security.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/security.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c24edbeec0c4472b52e5ba649d11c24c173c861e09169ada7c96913e966efedd",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/security.py",
+    "exit_code": 0,
+    "stdout": "22574c77bcbaa778bce94d11677b1f6d1279f280\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "22574c77bcbaa778bce94d11677b1f6d1279f280",
+   "sha_head_blob_raw": "c24edbeec0c4472b52e5ba649d11c24c173c861e09169ada7c96913e966efedd",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/store.py",
+   "git_path": "src/treecut/remote/store.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/store.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/store.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "723edb5f9585984b51a1bf32cd6689259c902d538b885a923f90b71df0dd6a9a",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/store.py",
+    "exit_code": 0,
+    "stdout": "4ee2e1dafa4b46132f5592b336e00f47e50cd209\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4ee2e1dafa4b46132f5592b336e00f47e50cd209",
+   "sha_head_blob_raw": "723edb5f9585984b51a1bf32cd6689259c902d538b885a923f90b71df0dd6a9a",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/remote/update_pack.py",
+   "git_path": "src/treecut/remote/update_pack.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/remote/update_pack.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/remote/update_pack.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "065cd91963bed834c8bdcbca8c967751f8d11737c9c992b1dcf7d43ffb2f55ba",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/remote/update_pack.py",
+    "exit_code": 0,
+    "stdout": "a697324e9e09a2027f1fc37d6f296c6dafb2f490\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "a697324e9e09a2027f1fc37d6f296c6dafb2f490",
+   "sha_head_blob_raw": "065cd91963bed834c8bdcbca8c967751f8d11737c9c992b1dcf7d43ffb2f55ba",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/roughcut/__init__.py",
+   "git_path": "src/treecut/roughcut/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/roughcut/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/roughcut/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "97ab595bdf805fadbcb3ae5528c9e57ba27d32e38a5ca12e2bacaa2e1f6e1cac",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/roughcut/__init__.py",
+    "exit_code": 0,
+    "stdout": "d73f7e45c54ecfc87dcef6f53621f506c6742e77\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "d73f7e45c54ecfc87dcef6f53621f506c6742e77",
+   "sha_head_blob_raw": "97ab595bdf805fadbcb3ae5528c9e57ba27d32e38a5ca12e2bacaa2e1f6e1cac",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/roughcut/engine.py",
+   "git_path": "src/treecut/roughcut/engine.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/roughcut/engine.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/roughcut/engine.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5433d10531d95247b1383c75acdeccba213a61f35f809c27038c0a12237a971e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/roughcut/engine.py",
+    "exit_code": 0,
+    "stdout": "cd0b465853e7fd18615b27cc54a550bd3e4e4ef3\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "cd0b465853e7fd18615b27cc54a550bd3e4e4ef3",
+   "sha_head_blob_raw": "5433d10531d95247b1383c75acdeccba213a61f35f809c27038c0a12237a971e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/roughcut/sort_advisor.py",
+   "git_path": "src/treecut/roughcut/sort_advisor.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/roughcut/sort_advisor.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/roughcut/sort_advisor.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "4231203bae15010f2087d1530e3530833f9702845390694e996961f1ebe28eb4",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/roughcut/sort_advisor.py",
+    "exit_code": 0,
+    "stdout": "06d6d36faad316628f607f3cd0dadc95ad43c2fc\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "06d6d36faad316628f607f3cd0dadc95ad43c2fc",
+   "sha_head_blob_raw": "4231203bae15010f2087d1530e3530833f9702845390694e996961f1ebe28eb4",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/scanner/__init__.py",
+   "git_path": "src/treecut/scanner/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/scanner/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/scanner/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "8f23277de540cc7eee2211a9a5099d8b0ff6fb2d1b6c9753873afb4be54b8161",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/scanner/__init__.py",
+    "exit_code": 0,
+    "stdout": "3c28742a380101dfa19f6e5193d41f498cb161e0\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "3c28742a380101dfa19f6e5193d41f498cb161e0",
+   "sha_head_blob_raw": "8f23277de540cc7eee2211a9a5099d8b0ff6fb2d1b6c9753873afb4be54b8161",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/scanner/incremental.py",
+   "git_path": "src/treecut/scanner/incremental.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/scanner/incremental.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/scanner/incremental.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "03d95747310dc2798031f4025b45e6ea581b229f269512541ca4f6165ff8fb0f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/scanner/incremental.py",
+    "exit_code": 0,
+    "stdout": "f28f67c4c27e334cc7f2f2e8419be4cabb37492e\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "f28f67c4c27e334cc7f2f2e8419be4cabb37492e",
+   "sha_head_blob_raw": "03d95747310dc2798031f4025b45e6ea581b229f269512541ca4f6165ff8fb0f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/scenes/__init__.py",
+   "git_path": "src/treecut/scenes/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/scenes/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/scenes/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "712502d8f706c8049cc420ea1edc98d0bbe44392acea2da82ccefce861f91aff",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/scenes/__init__.py",
+    "exit_code": 0,
+    "stdout": "cdaed6059f1041f0dc29030422e042ee50d07640\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "cdaed6059f1041f0dc29030422e042ee50d07640",
+   "sha_head_blob_raw": "712502d8f706c8049cc420ea1edc98d0bbe44392acea2da82ccefce861f91aff",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/scenes/detector.py",
+   "git_path": "src/treecut/scenes/detector.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/scenes/detector.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/scenes/detector.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "362afff86d501dd33e388f987c789602d9b0110f1cc7097785eb1f9b01b5a4ac",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/scenes/detector.py",
+    "exit_code": 0,
+    "stdout": "4fa2db290ce1ab90520581587c93101648ec6c1c\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4fa2db290ce1ab90520581587c93101648ec6c1c",
+   "sha_head_blob_raw": "362afff86d501dd33e388f987c789602d9b0110f1cc7097785eb1f9b01b5a4ac",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/scheduler.py",
+   "git_path": "src/treecut/scheduler.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/scheduler.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/scheduler.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "3cb01e06d5097525f478addf3e261fcdc600eff235d5a82e2ca32546a2a5e736",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/scheduler.py",
+    "exit_code": 0,
+    "stdout": "0aeca42eac4e9b71a234b451abb9e34fb57d5298\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "0aeca42eac4e9b71a234b451abb9e34fb57d5298",
+   "sha_head_blob_raw": "3cb01e06d5097525f478addf3e261fcdc600eff235d5a82e2ca32546a2a5e736",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/search/__init__.py",
+   "git_path": "src/treecut/search/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/search/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/search/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "aa7674076e17f2bb0a5c4c090f95576a5574f00b88f471af7bea78af14537412",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/search/__init__.py",
+    "exit_code": 0,
+    "stdout": "37298cd289117438fe538f2856763f501b24b8e5\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "37298cd289117438fe538f2856763f501b24b8e5",
+   "sha_head_blob_raw": "aa7674076e17f2bb0a5c4c090f95576a5574f00b88f471af7bea78af14537412",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/search/embedding.py",
+   "git_path": "src/treecut/search/embedding.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/search/embedding.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/search/embedding.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "2d46084d9d03f2059eecc104d558e6a621721f9dbff92c744cf435cac3beb031",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/search/embedding.py",
+    "exit_code": 0,
+    "stdout": "49d529acc62cd66ab11eb993cf8d4851228d0ab7\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "49d529acc62cd66ab11eb993cf8d4851228d0ab7",
+   "sha_head_blob_raw": "2d46084d9d03f2059eecc104d558e6a621721f9dbff92c744cf435cac3beb031",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/search/hybrid.py",
+   "git_path": "src/treecut/search/hybrid.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/search/hybrid.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/search/hybrid.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "ead053e3d77427986ea7c1ca62844a6b0547951ee764d9104c252a0b276f3188",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/search/hybrid.py",
+    "exit_code": 0,
+    "stdout": "9c1b319f1e588bf1e843b91e1437bb955cd949bb\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "9c1b319f1e588bf1e843b91e1437bb955cd949bb",
+   "sha_head_blob_raw": "ead053e3d77427986ea7c1ca62844a6b0547951ee764d9104c252a0b276f3188",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/__init__.py",
+   "git_path": "src/treecut/services/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "1bcd559e1b6a082ea72929bb61a6a1311b763740438f6ee5ccb56bf0f851834d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/__init__.py",
+    "exit_code": 0,
+    "stdout": "26b4766ac044ff2a421d4244959559449edea5be\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "26b4766ac044ff2a421d4244959559449edea5be",
+   "sha_head_blob_raw": "1bcd559e1b6a082ea72929bb61a6a1311b763740438f6ee5ccb56bf0f851834d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/action_subclip.py",
+   "git_path": "src/treecut/services/action_subclip.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/action_subclip.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/action_subclip.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "154b905174cc926242b3baef2c9b87235ceeee1d62ae46858489d7d00d8ae2ac",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/action_subclip.py",
+    "exit_code": 0,
+    "stdout": "5b9a2a9660f81b5fc007fdd00f05b9ff7cfd13ce\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5b9a2a9660f81b5fc007fdd00f05b9ff7cfd13ce",
+   "sha_head_blob_raw": "154b905174cc926242b3baef2c9b87235ceeee1d62ae46858489d7d00d8ae2ac",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/annotation_governance.py",
+   "git_path": "src/treecut/services/annotation_governance.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/annotation_governance.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/annotation_governance.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "fa608f4c054dd738e1b5cc026f459120fb90740bdec1f26177a23b2ef6aa511f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/annotation_governance.py",
+    "exit_code": 0,
+    "stdout": "d5699cb102ab79c465cebb2840ad932dd52781dd\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "d5699cb102ab79c465cebb2840ad932dd52781dd",
+   "sha_head_blob_raw": "fa608f4c054dd738e1b5cc026f459120fb90740bdec1f26177a23b2ef6aa511f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/b003_import_adapter.py",
+   "git_path": "src/treecut/services/b003_import_adapter.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/b003_import_adapter.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/b003_import_adapter.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "b37c5218e1a9cbfc8109491a5f03ab3bdd3535b0a469216e70bb874c4cd2d7da",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/b003_import_adapter.py",
+    "exit_code": 0,
+    "stdout": "abbc84b12cdf5dd8154bc718b45ca452fce1b0c3\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "abbc84b12cdf5dd8154bc718b45ca452fce1b0c3",
+   "sha_head_blob_raw": "b37c5218e1a9cbfc8109491a5f03ab3bdd3535b0a469216e70bb874c4cd2d7da",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/b007_creator_adapter.py",
+   "git_path": "src/treecut/services/b007_creator_adapter.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/b007_creator_adapter.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/b007_creator_adapter.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "2677ffdb2d31898e8508834b3bc560c9fdc924dedabf1c8cf01991f8bd909165",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/b007_creator_adapter.py",
+    "exit_code": 0,
+    "stdout": "7ec3cb0f08609ddf781e6ab1b5ca59b1834c1e2f\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "7ec3cb0f08609ddf781e6ab1b5ca59b1834c1e2f",
+   "sha_head_blob_raw": "2677ffdb2d31898e8508834b3bc560c9fdc924dedabf1c8cf01991f8bd909165",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/business_cognition_service.py",
+   "git_path": "src/treecut/services/business_cognition_service.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/business_cognition_service.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/business_cognition_service.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c357c1ced8453907ae923974784eb8925cc426cfa2adaa0e0e201e456d0e04d3",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/business_cognition_service.py",
+    "exit_code": 0,
+    "stdout": "28d46d8716c537690412db83498066e03dbf4c92\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "28d46d8716c537690412db83498066e03dbf4c92",
+   "sha_head_blob_raw": "c357c1ced8453907ae923974784eb8925cc426cfa2adaa0e0e201e456d0e04d3",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/business_cognition_v2.py",
+   "git_path": "src/treecut/services/business_cognition_v2.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/business_cognition_v2.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/business_cognition_v2.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "cda0406dae677dc34b0f86f0cc68b3268dbbd1b42982dd3bc936de60c70a8d2e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/business_cognition_v2.py",
+    "exit_code": 0,
+    "stdout": "00ed8dba70cba2516f2702207334cdf2a70175ca\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "00ed8dba70cba2516f2702207334cdf2a70175ca",
+   "sha_head_blob_raw": "cda0406dae677dc34b0f86f0cc68b3268dbbd1b42982dd3bc936de60c70a8d2e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/business_cognition_v2_1.py",
+   "git_path": "src/treecut/services/business_cognition_v2_1.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/business_cognition_v2_1.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/business_cognition_v2_1.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "0ccbb01c2e41021c68c8a988122f5b0314d534935fdeb858570f62c8f26b8f5d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/business_cognition_v2_1.py",
+    "exit_code": 0,
+    "stdout": "2e72aff16784a965ea115abca7cfc886ea298bd5\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "2e72aff16784a965ea115abca7cfc886ea298bd5",
+   "sha_head_blob_raw": "0ccbb01c2e41021c68c8a988122f5b0314d534935fdeb858570f62c8f26b8f5d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/canonical_truth.py",
+   "git_path": "src/treecut/services/canonical_truth.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/canonical_truth.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/canonical_truth.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "1c0a54940c3ccb705b118074fb3f56767eee7f355094e9187d82c4fbcdffd8d0",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/canonical_truth.py",
+    "exit_code": 0,
+    "stdout": "06ab02c5da0f9dfc45802a1f7990992130f2c5f3\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "06ab02c5da0f9dfc45802a1f7990992130f2c5f3",
+   "sha_head_blob_raw": "1c0a54940c3ccb705b118074fb3f56767eee7f355094e9187d82c4fbcdffd8d0",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/claim_visual.py",
+   "git_path": "src/treecut/services/claim_visual.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/claim_visual.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/claim_visual.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5cec2a1f1b16ba80eb9d7a2be50e61e113314d6648e053e4f1b90923363d828c",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/claim_visual.py",
+    "exit_code": 0,
+    "stdout": "8abe4c9d98ae6a2900bfe56e83d1c1073ba930fd\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "8abe4c9d98ae6a2900bfe56e83d1c1073ba930fd",
+   "sha_head_blob_raw": "5cec2a1f1b16ba80eb9d7a2be50e61e113314d6648e053e4f1b90923363d828c",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/conflict_resolver.py",
+   "git_path": "src/treecut/services/conflict_resolver.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/conflict_resolver.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/conflict_resolver.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "97b42ad2e3d474496fd4b8bfd714d07a8507068b441dab3546ae35c4623fde5e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/conflict_resolver.py",
+    "exit_code": 0,
+    "stdout": "93ca104568aaf0a5b4cd779699e6949411e7aeb3\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "93ca104568aaf0a5b4cd779699e6949411e7aeb3",
+   "sha_head_blob_raw": "97b42ad2e3d474496fd4b8bfd714d07a8507068b441dab3546ae35c4623fde5e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/conflict_resolver_v2.py",
+   "git_path": "src/treecut/services/conflict_resolver_v2.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/conflict_resolver_v2.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/conflict_resolver_v2.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "2c5f699087eb2993440ca139ed943904d42d995dd99289efaf5516bc1fca5389",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/conflict_resolver_v2.py",
+    "exit_code": 0,
+    "stdout": "d6aa1ef162f03ab91aa522b4fb280a27892d55ae\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "d6aa1ef162f03ab91aa522b4fb280a27892d55ae",
+   "sha_head_blob_raw": "2c5f699087eb2993440ca139ed943904d42d995dd99289efaf5516bc1fca5389",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/evidence_resolver.py",
+   "git_path": "src/treecut/services/evidence_resolver.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/evidence_resolver.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/evidence_resolver.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "bfade59831173e666422c2e38d1a25a1dff48bf4443e0663db565c93ed028d55",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/evidence_resolver.py",
+    "exit_code": 0,
+    "stdout": "5095f5cbdfb5801d44d99873308b6806e3b27961\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5095f5cbdfb5801d44d99873308b6806e3b27961",
+   "sha_head_blob_raw": "bfade59831173e666422c2e38d1a25a1dff48bf4443e0663db565c93ed028d55",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/evidence_strength_v2.py",
+   "git_path": "src/treecut/services/evidence_strength_v2.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/evidence_strength_v2.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/evidence_strength_v2.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "ba9e2b6df7556348723e3863f9ddec1532e29de97985440a4fd53817ba129d60",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/evidence_strength_v2.py",
+    "exit_code": 0,
+    "stdout": "6365141e840b9242775d422d253b3296934de582\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "6365141e840b9242775d422d253b3296934de582",
+   "sha_head_blob_raw": "ba9e2b6df7556348723e3863f9ddec1532e29de97985440a4fd53817ba129d60",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/identity.py",
+   "git_path": "src/treecut/services/identity.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/identity.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/identity.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "24da0448d5de3b4cb720b071949b9f1ba40c6ce0cdd256604904cd46aeddec68",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/identity.py",
+    "exit_code": 0,
+    "stdout": "66105eb242e65fa8b35d3967583b0018e84587fa\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "66105eb242e65fa8b35d3967583b0018e84587fa",
+   "sha_head_blob_raw": "24da0448d5de3b4cb720b071949b9f1ba40c6ce0cdd256604904cd46aeddec68",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/knowledge_service.py",
+   "git_path": "src/treecut/services/knowledge_service.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/knowledge_service.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/knowledge_service.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "2bd157fd190e0ac13247ebd4df0aa32b0d05aca07662bbf217cfb9ed77f72d54",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/knowledge_service.py",
+    "exit_code": 0,
+    "stdout": "86526fcec72daa301679eee24ea9107cbdd30ad9\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "86526fcec72daa301679eee24ea9107cbdd30ad9",
+   "sha_head_blob_raw": "2bd157fd190e0ac13247ebd4df0aa32b0d05aca07662bbf217cfb9ed77f72d54",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/mmv_camera_diag.py",
+   "git_path": "src/treecut/services/mmv_camera_diag.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/mmv_camera_diag.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/mmv_camera_diag.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "36fce4a7a36e74403fe6770ac6e57dec71ef5d828b10bdd432b04cafe109ce3a",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/mmv_camera_diag.py",
+    "exit_code": 0,
+    "stdout": "3a031210d19a8e5314cc44523bb0bcf9a45d5edf\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "3a031210d19a8e5314cc44523bb0bcf9a45d5edf",
+   "sha_head_blob_raw": "36fce4a7a36e74403fe6770ac6e57dec71ef5d828b10bdd432b04cafe109ce3a",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/mmvl_master_v1.py",
+   "git_path": "src/treecut/services/mmvl_master_v1.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/mmvl_master_v1.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/mmvl_master_v1.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "dbbbcabcd243e88fa0beae4113df9cb1dc90de3025a3e9758eed1051258b87d5",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/mmvl_master_v1.py",
+    "exit_code": 0,
+    "stdout": "3a92b2846198712b5909694f396aa8cc29818947\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "3a92b2846198712b5909694f396aa8cc29818947",
+   "sha_head_blob_raw": "dbbbcabcd243e88fa0beae4113df9cb1dc90de3025a3e9758eed1051258b87d5",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/people_analyzer_v2.py",
+   "git_path": "src/treecut/services/people_analyzer_v2.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/people_analyzer_v2.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/people_analyzer_v2.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "880e12b0f4d5883c7759642cd6c6f7baddb4d977e36665629f5728f953805aff",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/people_analyzer_v2.py",
+    "exit_code": 0,
+    "stdout": "c32b961773234fcff5ec54e6ed2974f44e44db21\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "c32b961773234fcff5ec54e6ed2974f44e44db21",
+   "sha_head_blob_raw": "880e12b0f4d5883c7759642cd6c6f7baddb4d977e36665629f5728f953805aff",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/phase3_review_ui.py",
+   "git_path": "src/treecut/services/phase3_review_ui.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/phase3_review_ui.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/phase3_review_ui.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "02f8072d82f0ba399305b10c78f337d805414c269eb82e0a1cb9c2d9359b846e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/phase3_review_ui.py",
+    "exit_code": 0,
+    "stdout": "d77ddc4b9c9fd50657f012ce889dd8ae01b83eea\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "d77ddc4b9c9fd50657f012ce889dd8ae01b83eea",
+   "sha_head_blob_raw": "02f8072d82f0ba399305b10c78f337d805414c269eb82e0a1cb9c2d9359b846e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/production_dedup.py",
+   "git_path": "src/treecut/services/production_dedup.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/production_dedup.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/production_dedup.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "1c4f70d14b09af2dc4dd403da60a4581caa961c624afde53773eeca352b7f47b",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/production_dedup.py",
+    "exit_code": 0,
+    "stdout": "e644a5d3798f7a1e84acc59534ecd855c921b2d2\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e644a5d3798f7a1e84acc59534ecd855c921b2d2",
+   "sha_head_blob_raw": "1c4f70d14b09af2dc4dd403da60a4581caa961c624afde53773eeca352b7f47b",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/production_qa.py",
+   "git_path": "src/treecut/services/production_qa.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/production_qa.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/production_qa.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "4e3b106183fe08f5acecd7e4b8ff215f80650e98f75cf00316189ea027f935f1",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/production_qa.py",
+    "exit_code": 0,
+    "stdout": "785d2f269ac51938facecb8a90f7d63cac55a5bd\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "785d2f269ac51938facecb8a90f7d63cac55a5bd",
+   "sha_head_blob_raw": "4e3b106183fe08f5acecd7e4b8ff215f80650e98f75cf00316189ea027f935f1",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/production_source.py",
+   "git_path": "src/treecut/services/production_source.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/production_source.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/production_source.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c8b0373b3d57083baf9a6fabae46f3e3c06792c2499d7e88af2af011d9cbe358",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/production_source.py",
+    "exit_code": 0,
+    "stdout": "2baf347414715eb4f6993a0b645038e2b8fa9958\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "2baf347414715eb4f6993a0b645038e2b8fa9958",
+   "sha_head_blob_raw": "c8b0373b3d57083baf9a6fabae46f3e3c06792c2499d7e88af2af011d9cbe358",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/review_center.py",
+   "git_path": "src/treecut/services/review_center.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/review_center.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/review_center.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "fc308591257047923f18b69bbd1d9ed86b4be4c74dd792d1704a989355f31d5d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/review_center.py",
+    "exit_code": 0,
+    "stdout": "57f693e7646cf3f195eaa52b6568f7e6589c395a\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "57f693e7646cf3f195eaa52b6568f7e6589c395a",
+   "sha_head_blob_raw": "fc308591257047923f18b69bbd1d9ed86b4be4c74dd792d1704a989355f31d5d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/schema_v2.py",
+   "git_path": "src/treecut/services/schema_v2.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/schema_v2.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/schema_v2.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "67f13a5843c037182a9baef35c430a801bc4fe945da8864e2158c476b74926ed",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/schema_v2.py",
+    "exit_code": 0,
+    "stdout": "6e6bb4db7a3ecdc5d46e876738c399b0af74b8d5\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "6e6bb4db7a3ecdc5d46e876738c399b0af74b8d5",
+   "sha_head_blob_raw": "67f13a5843c037182a9baef35c430a801bc4fe945da8864e2158c476b74926ed",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/second_review_ui.py",
+   "git_path": "src/treecut/services/second_review_ui.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/second_review_ui.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/second_review_ui.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "7586fa17a01c8267b27e6ce22f141702c35e6886626df454d2af2fa76bec448f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/second_review_ui.py",
+    "exit_code": 0,
+    "stdout": "7d9a8a09929e6729902a99a324737b6ae2242f1f\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "7d9a8a09929e6729902a99a324737b6ae2242f1f",
+   "sha_head_blob_raw": "7586fa17a01c8267b27e6ce22f141702c35e6886626df454d2af2fa76bec448f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/segment_cognition.py",
+   "git_path": "src/treecut/services/segment_cognition.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/segment_cognition.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/segment_cognition.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "122351592b567a1c6ccce2d8c149e47b4892d0783a1a9c8477bc5b6cfb9cafdf",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/segment_cognition.py",
+    "exit_code": 0,
+    "stdout": "14d771eb98856734de35bfddbfdd2aab10ff0c90\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "14d771eb98856734de35bfddbfdd2aab10ff0c90",
+   "sha_head_blob_raw": "122351592b567a1c6ccce2d8c149e47b4892d0783a1a9c8477bc5b6cfb9cafdf",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/segment_cognition_ui.py",
+   "git_path": "src/treecut/services/segment_cognition_ui.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/segment_cognition_ui.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/segment_cognition_ui.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "510613d762d469d9f4889464003015de50e26c0a0a62e22f2d766f587cf41a8c",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/segment_cognition_ui.py",
+    "exit_code": 0,
+    "stdout": "80eff0406a3452c2086acf7b66b181cca8aa2bea\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "80eff0406a3452c2086acf7b66b181cca8aa2bea",
+   "sha_head_blob_raw": "510613d762d469d9f4889464003015de50e26c0a0a62e22f2d766f587cf41a8c",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/segment_validation_report.py",
+   "git_path": "src/treecut/services/segment_validation_report.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/segment_validation_report.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/segment_validation_report.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "d30c1951b0e981ef68ea29e74504d5f197107cdb3f14f24759217517860844df",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/segment_validation_report.py",
+    "exit_code": 0,
+    "stdout": "14d2ccdd9631c46525db370b6251a99b1424395f\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "14d2ccdd9631c46525db370b6251a99b1424395f",
+   "sha_head_blob_raw": "d30c1951b0e981ef68ea29e74504d5f197107cdb3f14f24759217517860844df",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/semantic_action_v1.py",
+   "git_path": "src/treecut/services/semantic_action_v1.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/semantic_action_v1.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/semantic_action_v1.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "7ab38ae72cf9b0890e6df21a57f6bbfde83f9950a5068e0052a22701d5c17277",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/semantic_action_v1.py",
+    "exit_code": 0,
+    "stdout": "0793c5cf2a3faf227ba3e15cf74a378a0d33424e\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "0793c5cf2a3faf227ba3e15cf74a378a0d33424e",
+   "sha_head_blob_raw": "7ab38ae72cf9b0890e6df21a57f6bbfde83f9950a5068e0052a22701d5c17277",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/semantic_action_v2.py",
+   "git_path": "src/treecut/services/semantic_action_v2.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/semantic_action_v2.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/semantic_action_v2.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c098a981b0e716f24cde33fc5af51ffdf4b669f68023c5d2a242f3c02f2aecda",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/semantic_action_v2.py",
+    "exit_code": 0,
+    "stdout": "f764bb9e3e7a50dec596cccae61da3e135b83054\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "f764bb9e3e7a50dec596cccae61da3e135b83054",
+   "sha_head_blob_raw": "c098a981b0e716f24cde33fc5af51ffdf4b669f68023c5d2a242f3c02f2aecda",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/shot_usage.py",
+   "git_path": "src/treecut/services/shot_usage.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/shot_usage.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/shot_usage.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "33678dc2c51e69cbecbc869e27a0b32703bad5289807ca464f9f226adaac8031",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/shot_usage.py",
+    "exit_code": 0,
+    "stdout": "ccfd5870c0a6e9829b9a097c3123d3b63aecfddd\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ccfd5870c0a6e9829b9a097c3123d3b63aecfddd",
+   "sha_head_blob_raw": "33678dc2c51e69cbecbc869e27a0b32703bad5289807ca464f9f226adaac8031",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/static_vision_v2.py",
+   "git_path": "src/treecut/services/static_vision_v2.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/static_vision_v2.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/static_vision_v2.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "7d7c9487ded59f8ccf27b07995df3d12cfb06781df8c52e1bd50d8c68808587d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/static_vision_v2.py",
+    "exit_code": 0,
+    "stdout": "325193613b80440d7a853294b38b72e66955eda0\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "325193613b80440d7a853294b38b72e66955eda0",
+   "sha_head_blob_raw": "7d7c9487ded59f8ccf27b07995df3d12cfb06781df8c52e1bd50d8c68808587d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/temporal_action_v2.py",
+   "git_path": "src/treecut/services/temporal_action_v2.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/temporal_action_v2.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/temporal_action_v2.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5a08b7b70f718ec69ea4578628359aac469fed626c40d63e76f08e4522fd1d88",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/temporal_action_v2.py",
+    "exit_code": 0,
+    "stdout": "e0f1ea9721d5fd40d74cbaa76a3cb02e35ad5bce\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e0f1ea9721d5fd40d74cbaa76a3cb02e35ad5bce",
+   "sha_head_blob_raw": "5a08b7b70f718ec69ea4578628359aac469fed626c40d63e76f08e4522fd1d88",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/utterance_context.py",
+   "git_path": "src/treecut/services/utterance_context.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/utterance_context.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/utterance_context.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "2ede43351bb5d54e18278c5ddb40e4a811c5ddf990af7f291cca4264b3e43dbe",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/utterance_context.py",
+    "exit_code": 0,
+    "stdout": "aafa5d9dde6b5da251f025648e976fc95d512805\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "aafa5d9dde6b5da251f025648e976fc95d512805",
+   "sha_head_blob_raw": "2ede43351bb5d54e18278c5ddb40e4a811c5ddf990af7f291cca4264b3e43dbe",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/vision_runtime.py",
+   "git_path": "src/treecut/services/vision_runtime.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/vision_runtime.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/vision_runtime.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "8e5ac0d340a9f4ee624a0f1f0d330116453626e8f14fae77c7524c7bf55a3683",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/vision_runtime.py",
+    "exit_code": 0,
+    "stdout": "ed796569d3af22994534107ca73d3a197b808779\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ed796569d3af22994534107ca73d3a197b808779",
+   "sha_head_blob_raw": "8e5ac0d340a9f4ee624a0f1f0d330116453626e8f14fae77c7524c7bf55a3683",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/visual_beat.py",
+   "git_path": "src/treecut/services/visual_beat.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/visual_beat.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/visual_beat.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "30f2c10053f5ff52a130bd0b7197dd21dccf7db2d9e62947991d60d3749c1db3",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/visual_beat.py",
+    "exit_code": 0,
+    "stdout": "c2f10b439817501189296b84df0a379d76ae43ea\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "c2f10b439817501189296b84df0a379d76ae43ea",
+   "sha_head_blob_raw": "30f2c10053f5ff52a130bd0b7197dd21dccf7db2d9e62947991d60d3749c1db3",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/visual_cognition.py",
+   "git_path": "src/treecut/services/visual_cognition.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/visual_cognition.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/visual_cognition.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "422e14509dda6ce6e90a3d5575da6b529951fc19ac33bd76d282348488034afb",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/visual_cognition.py",
+    "exit_code": 0,
+    "stdout": "339ab887882828648e40dc28bc5ab02aef86a850\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "339ab887882828648e40dc28bc5ab02aef86a850",
+   "sha_head_blob_raw": "422e14509dda6ce6e90a3d5575da6b529951fc19ac33bd76d282348488034afb",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/services/visual_understanding_v2.py",
+   "git_path": "src/treecut/services/visual_understanding_v2.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/services/visual_understanding_v2.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/services/visual_understanding_v2.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "fcb891b62082289b90055f3cf99750aee65967c20728ade986e6493f673aa94b",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/services/visual_understanding_v2.py",
+    "exit_code": 0,
+    "stdout": "e54a82f2f9203703fe216f76dbb87568b6615ae7\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e54a82f2f9203703fe216f76dbb87568b6615ae7",
+   "sha_head_blob_raw": "fcb891b62082289b90055f3cf99750aee65967c20728ade986e6493f673aa94b",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/stats.py",
+   "git_path": "src/treecut/stats.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/stats.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/stats.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "20016a9edffbab958946d5620a7f68183eb23e2ad249528f8d79eb0b8dd5cfdd",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/stats.py",
+    "exit_code": 0,
+    "stdout": "ad7cb912b436fcceea5b0408b1067cf9dd7fbc68\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ad7cb912b436fcceea5b0408b1067cf9dd7fbc68",
+   "sha_head_blob_raw": "20016a9edffbab958946d5620a7f68183eb23e2ad249528f8d79eb0b8dd5cfdd",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/templates/__init__.py",
+   "git_path": "src/treecut/templates/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/templates/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/templates/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "f15a160699de41675e7951e4d1e429201042169d7eb0d7275d0d77a40e3db29b",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/templates/__init__.py",
+    "exit_code": 0,
+    "stdout": "e06943945e08bca543183bd4185803bc5d2eb710\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e06943945e08bca543183bd4185803bc5d2eb710",
+   "sha_head_blob_raw": "f15a160699de41675e7951e4d1e429201042169d7eb0d7275d0d77a40e3db29b",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/templates/definitions.py",
+   "git_path": "src/treecut/templates/definitions.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/templates/definitions.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/templates/definitions.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "5b96a585c31faf5598419b22c0044dc49aec25e9b3fae4250c055713f04cfc7e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/templates/definitions.py",
+    "exit_code": 0,
+    "stdout": "15e544d279cf2209f9efafd65d801840d7c75504\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "15e544d279cf2209f9efafd65d801840d7c75504",
+   "sha_head_blob_raw": "5b96a585c31faf5598419b22c0044dc49aec25e9b3fae4250c055713f04cfc7e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/templates/definitions_ext.py",
+   "git_path": "src/treecut/templates/definitions_ext.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/templates/definitions_ext.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/templates/definitions_ext.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "19c99266b7d9681d87b828fbb49d8324044c6bde9327489d7c6332375f968a44",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/templates/definitions_ext.py",
+    "exit_code": 0,
+    "stdout": "4f45f9cbd99612b0b64495e2afe18624be85ac74\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4f45f9cbd99612b0b64495e2afe18624be85ac74",
+   "sha_head_blob_raw": "19c99266b7d9681d87b828fbb49d8324044c6bde9327489d7c6332375f968a44",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/templates/engine.py",
+   "git_path": "src/treecut/templates/engine.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/templates/engine.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/templates/engine.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "b9eca4fbcf282bfb9c883adb677c0707fb153b8e0a5a7cd5de3bce1d91bd7d8a",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/templates/engine.py",
+    "exit_code": 0,
+    "stdout": "5506226503fe0218f7f8904c94d6a52d8b095a76\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5506226503fe0218f7f8904c94d6a52d8b095a76",
+   "sha_head_blob_raw": "b9eca4fbcf282bfb9c883adb677c0707fb153b8e0a5a7cd5de3bce1d91bd7d8a",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/__init__.py",
+   "git_path": "src/treecut/ui/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "f14561f84217095a777980ecb54374bcb9ac9da874cea5256b660ff8663c5dd1",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/__init__.py",
+    "exit_code": 0,
+    "stdout": "4be4b8be26b78765abab7c6fb3246377cb33fdb5\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "4be4b8be26b78765abab7c6fb3246377cb33fdb5",
+   "sha_head_blob_raw": "f14561f84217095a777980ecb54374bcb9ac9da874cea5256b660ff8663c5dd1",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/dashboard_dialog.py",
+   "git_path": "src/treecut/ui/dashboard_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/dashboard_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/dashboard_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "6df722b0502873acde61a10b5b74773f3d602fa50ca7f6c0c5b192c4235f2342",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/dashboard_dialog.py",
+    "exit_code": 0,
+    "stdout": "ab6162250af410f59d0baf7fa565bcd957e3ea82\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "ab6162250af410f59d0baf7fa565bcd957e3ea82",
+   "sha_head_blob_raw": "6df722b0502873acde61a10b5b74773f3d602fa50ca7f6c0c5b192c4235f2342",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/ip_blacklist_dialog.py",
+   "git_path": "src/treecut/ui/ip_blacklist_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/ip_blacklist_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/ip_blacklist_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "edd2169eb9be844a7ec5d673821d3fcb3638f302b348f2a3e4375ac7d785be68",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/ip_blacklist_dialog.py",
+    "exit_code": 0,
+    "stdout": "99b03ba43bd0aea2db5bc41f873034c651877f9f\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "99b03ba43bd0aea2db5bc41f873034c651877f9f",
+   "sha_head_blob_raw": "edd2169eb9be844a7ec5d673821d3fcb3638f302b348f2a3e4375ac7d785be68",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/library_dialog.py",
+   "git_path": "src/treecut/ui/library_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/library_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/library_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "a9549f5d8816dfb8334b2bada4bd2dfdacc99d9520819e28ed5e165118890943",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/library_dialog.py",
+    "exit_code": 0,
+    "stdout": "14ca95652b481be7a857fa34627daa2d1b4c23fb\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "14ca95652b481be7a857fa34627daa2d1b4c23fb",
+   "sha_head_blob_raw": "a9549f5d8816dfb8334b2bada4bd2dfdacc99d9520819e28ed5e165118890943",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/log_dialog.py",
+   "git_path": "src/treecut/ui/log_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/log_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/log_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "605faa102e3a14f12ae1b8fd12ccfb6d4823533c5209920bd7f8d143a476e055",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/log_dialog.py",
+    "exit_code": 0,
+    "stdout": "5fd9fca8b51b04da0ed5ff8bebfe7d279265f93a\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5fd9fca8b51b04da0ed5ff8bebfe7d279265f93a",
+   "sha_head_blob_raw": "605faa102e3a14f12ae1b8fd12ccfb6d4823533c5209920bd7f8d143a476e055",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/maintenance_dialog.py",
+   "git_path": "src/treecut/ui/maintenance_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/maintenance_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/maintenance_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "e39472754539d0e32e4a95511c7f951b968b93c605ca93098f6f349efcd262a2",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/maintenance_dialog.py",
+    "exit_code": 0,
+    "stdout": "f3f0ee234b79b92081633b52b42012e27b06818d\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "f3f0ee234b79b92081633b52b42012e27b06818d",
+   "sha_head_blob_raw": "e39472754539d0e32e4a95511c7f951b968b93c605ca93098f6f349efcd262a2",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/player.py",
+   "git_path": "src/treecut/ui/player.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/player.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/player.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "d78e974cce5dc578d02b92aed29fe479bf391d5274092857016b7274533f2537",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/player.py",
+    "exit_code": 0,
+    "stdout": "e3df65775780ecdc8597bf2d0700cba637f94ddd\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e3df65775780ecdc8597bf2d0700cba637f94ddd",
+   "sha_head_blob_raw": "d78e974cce5dc578d02b92aed29fe479bf391d5274092857016b7274533f2537",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/remote_manager_dialog.py",
+   "git_path": "src/treecut/ui/remote_manager_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/remote_manager_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/remote_manager_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "39e56cd53f5bedce1c570a3176346edf1af86448e9fd07c21b8ce8ffbe3a0c5c",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/remote_manager_dialog.py",
+    "exit_code": 0,
+    "stdout": "f07986878e05bd369933b364707650d0edc79c65\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "f07986878e05bd369933b364707650d0edc79c65",
+   "sha_head_blob_raw": "39e56cd53f5bedce1c570a3176346edf1af86448e9fd07c21b8ce8ffbe3a0c5c",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/result_dialog.py",
+   "git_path": "src/treecut/ui/result_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/result_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/result_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "95bdc0201a340f51630ade8b02799fe0b22a3b0e5fea6336e947a3d254ed0a3f",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/result_dialog.py",
+    "exit_code": 0,
+    "stdout": "6d6a05ac9f220fbf33bf92c4f1262d7899900e70\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "6d6a05ac9f220fbf33bf92c4f1262d7899900e70",
+   "sha_head_blob_raw": "95bdc0201a340f51630ade8b02799fe0b22a3b0e5fea6336e947a3d254ed0a3f",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/schedule_dialog.py",
+   "git_path": "src/treecut/ui/schedule_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/schedule_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/schedule_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "0ce8142bfeb56010eb5a485c5587660523a01ab744d90e4adc09fcda26ae2301",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/schedule_dialog.py",
+    "exit_code": 0,
+    "stdout": "7c89aaa881e3a70be067a60472aaeb66bdc090b1\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "7c89aaa881e3a70be067a60472aaeb66bdc090b1",
+   "sha_head_blob_raw": "0ce8142bfeb56010eb5a485c5587660523a01ab744d90e4adc09fcda26ae2301",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/settings_dialog.py",
+   "git_path": "src/treecut/ui/settings_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/settings_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/settings_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "2bd0e80ca45c69eb81ad67e8085c5b9a4644aab2c38bc01143b69e2798cb24cb",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/settings_dialog.py",
+    "exit_code": 0,
+    "stdout": "b7f3ef4f4a8eb74be66cc94aef488de99d74a61e\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "b7f3ef4f4a8eb74be66cc94aef488de99d74a61e",
+   "sha_head_blob_raw": "2bd0e80ca45c69eb81ad67e8085c5b9a4644aab2c38bc01143b69e2798cb24cb",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/timeline_dialog.py",
+   "git_path": "src/treecut/ui/timeline_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/timeline_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/timeline_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "83565d40de2d38162195e9f1d19b85cb9fb0133d336809778312d3ecbe09641e",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/timeline_dialog.py",
+    "exit_code": 0,
+    "stdout": "b9a0938f193e367946244041b26c7b23c6e4bd61\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "b9a0938f193e367946244041b26c7b23c6e4bd61",
+   "sha_head_blob_raw": "83565d40de2d38162195e9f1d19b85cb9fb0133d336809778312d3ecbe09641e",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/update_check_dialog.py",
+   "git_path": "src/treecut/ui/update_check_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/update_check_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/update_check_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "c933b3d3d7973f4d31cc43f4357c17be5b7ff850547867b26500b6b50086d4fe",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/update_check_dialog.py",
+    "exit_code": 0,
+    "stdout": "01f6bc852e55c77451d3f5cf867c20036db92491\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "01f6bc852e55c77451d3f5cf867c20036db92491",
+   "sha_head_blob_raw": "c933b3d3d7973f4d31cc43f4357c17be5b7ff850547867b26500b6b50086d4fe",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/update_packages_dialog.py",
+   "git_path": "src/treecut/ui/update_packages_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/update_packages_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/update_packages_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "fa8633ddd7e2cb632704f56a78e03212e049116ab6a8b07c37640e091a204f35",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/update_packages_dialog.py",
+    "exit_code": 0,
+    "stdout": "5cea2f6911b1697efb50bbebf19bc85f8f632e11\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5cea2f6911b1697efb50bbebf19bc85f8f632e11",
+   "sha_head_blob_raw": "fa8633ddd7e2cb632704f56a78e03212e049116ab6a8b07c37640e091a204f35",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/ui/welcome_dialog.py",
+   "git_path": "src/treecut/ui/welcome_dialog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/ui/welcome_dialog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/ui/welcome_dialog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "bb074ebc3a9241f17e8b9f69ee849adf58a40fa5a85a87360ef856769a6bdc49",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/ui/welcome_dialog.py",
+    "exit_code": 0,
+    "stdout": "1c9fbf7c9a48811a3bcbdf303858178a460bc119\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "1c9fbf7c9a48811a3bcbdf303858178a460bc119",
+   "sha_head_blob_raw": "bb074ebc3a9241f17e8b9f69ee849adf58a40fa5a85a87360ef856769a6bdc49",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/updates.py",
+   "git_path": "src/treecut/updates.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/updates.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/updates.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "90c5edd7701b45465e32f9fb6007ba48325974b5331187995b67177f4b7d7dee",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/updates.py",
+    "exit_code": 0,
+    "stdout": "66844ecf2440523dc96415e91ce4565aaeb1a8fd\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "66844ecf2440523dc96415e91ce4565aaeb1a8fd",
+   "sha_head_blob_raw": "90c5edd7701b45465e32f9fb6007ba48325974b5331187995b67177f4b7d7dee",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/watchdog.py",
+   "git_path": "src/treecut/watchdog.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/watchdog.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/watchdog.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "34bb26ab66fc3c70a8ab122d4f7ddb83f16238f350259e871c210400f5a59958",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/watchdog.py",
+    "exit_code": 0,
+    "stdout": "e514d192d4032000a8ff42c8a146f90713af95ea\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "e514d192d4032000a8ff42c8a146f90713af95ea",
+   "sha_head_blob_raw": "34bb26ab66fc3c70a8ab122d4f7ddb83f16238f350259e871c210400f5a59958",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/workflow/__init__.py",
+   "git_path": "src/treecut/workflow/__init__.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/workflow/__init__.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/workflow/__init__.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "43408a2009bc02be8a828e0fbf8d66bd81527d5786a2d32ba0d2ae91c85dc25d",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/workflow/__init__.py",
+    "exit_code": 0,
+    "stdout": "5f20f396ed56fc13e66f46bac5e411a85ce136a9\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "5f20f396ed56fc13e66f46bac5e411a85ce136a9",
+   "sha_head_blob_raw": "43408a2009bc02be8a828e0fbf8d66bd81527d5786a2d32ba0d2ae91c85dc25d",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/workflow/matching.py",
+   "git_path": "src/treecut/workflow/matching.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/workflow/matching.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/workflow/matching.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "25f050bd708e598dab18edd9d483d59093fc5134b294330fc864f4896e300ceb",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/workflow/matching.py",
+    "exit_code": 0,
+    "stdout": "b852f07ef78041e44b439ebb7972225d9eb9ca4d\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "b852f07ef78041e44b439ebb7972225d9eb9ca4d",
+   "sha_head_blob_raw": "25f050bd708e598dab18edd9d483d59093fc5134b294330fc864f4896e300ceb",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  },
+  {
+   "e_relpath": "treecut/workflow/planning.py",
+   "git_path": "src/treecut/workflow/planning.py",
+   "tracked": true,
+   "ls_files": {
+    "cmd": "git ls-files --error-unmatch -- src/treecut/workflow/planning.py",
+    "exit_code": 0,
+    "stdout": "src/treecut/workflow/planning.py\n",
+    "stderr": ""
+   },
+   "sha_e_norm": "964f1da157bbd05df35f5be53d9eb0139feebf55d3a0abebf4dddc7ce3f9b836",
+   "rev_parse": {
+    "cmd": "git rev-parse HEAD:src/treecut/workflow/planning.py",
+    "exit_code": 0,
+    "stdout": "791524eb931c59cc9dfea16e10cf9449b67f7b3c\n",
+    "stderr": ""
+   },
+   "head_blob_sha": "791524eb931c59cc9dfea16e10cf9449b67f7b3c",
+   "sha_head_blob_raw": "964f1da157bbd05df35f5be53d9eb0139feebf55d3a0abebf4dddc7ce3f9b836",
+   "e_content_eq_head": true,
+   "match": "E_CONTENT_EQ_HEAD"
+  }
+ ]
+}

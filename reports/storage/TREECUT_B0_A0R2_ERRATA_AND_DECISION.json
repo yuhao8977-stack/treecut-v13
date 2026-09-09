@@ -1,0 +1,38 @@
+{
+ "experiment": "TREECUT_B0_A0R2_ERRATA_AND_DECISION",
+ "note": "errata to A0 R2 report; historical A0R2 files NOT rewritten",
+ "adjudications": {
+  "A0R2_CORE_FINDINGS": "ACCEPTED_FOR_DECISION",
+  "MASTER_AUDIT_PHASE": "COMPLETE",
+  "PERMANENT_ASCII_MODEL_ROOT": "APPROVED",
+  "TRACK_A_ALLOWED": "NO",
+  "N1_GEOM_CAM_PRODUCTION": "NO",
+  "CLIP_DEFECT": "OPEN_UNCHANGED (first product defect after B0)"
+ },
+ "errata": [
+  {
+   "id": "E1_ffmpeg_version",
+   "report_said": "8.1.1",
+   "correct": "8.0.1",
+   "evidence": "RAW_PREFLIGHT ffmpeg.txt first line: ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers"
+  },
+  {
+   "id": "E2_tts_hash_claim",
+   "issue": "A0R2 said '20 files hashes identical'; evidence only proves key required-file hashes (date.fst/model.onnx/tokens/lexicon/model.int8) + total count/bytes equal",
+   "correct_statement": "copy identical at file_count=20, total_bytes=191246256, and 5 required-file sha256 equal (not all 20 files)"
+  },
+  {
+   "id": "E3_h1_h2_levels",
+   "issue": "capability matrix H1/H2 evidence still said 'historical only' while current ASCII-root E2E reached final MP4 + Jianying draft; corrected level REACHED_IN_E2E_RUN (see CORRECTED_CAPABILITY_MATRIX)"
+  },
+  {
+   "id": "E4_next_blocker",
+   "issue": "RESULT NEXT_BLOCKER='none' was wrong",
+   "correct": "NEXT_BLOCKER=B0_SOURCE_OF_TRUTH_RECONCILIATION (git baseline not self-contained at A0R2 close)"
+  },
+  {
+   "id": "E5_e2e_quality_scope",
+   "issue": "Chinese-CLIP reranker errored (clip_scored=0, BGE 3260 fallback) => A0R2 E2E proves the technical chain runs, NOT material-selection quality"
+  }
+ ]
+}

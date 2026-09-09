@@ -5,6 +5,20 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
+# B0: model-root resolution priority is
+#   TREECUT_MODEL_ROOT env  >  local runtime pointer file  >  install_root\models
+MODELS_PATH_POINTER = "models_path.txt"
+
+
+def configure_models_path(data_root: Path, models_path: Path) -> Path:
+    """Persist the model root in TreeCut's own local runtime config
+    (data_root/config/models_path.txt). App-level, no global env."""
+    cfg = Path(data_root) / "config"
+    cfg.mkdir(parents=True, exist_ok=True)
+    ptr = cfg / MODELS_PATH_POINTER
+    ptr.write_text(str(Path(models_path)), encoding="utf-8")
+    return ptr
+
 
 @dataclass(frozen=True)
 class RuntimePaths:
@@ -25,7 +39,7 @@ class RuntimePaths:
         return cls(
             install_root=install_root,
             data_root=data_root,
-            models=Path(os.environ.get("TREECUT_MODEL_ROOT", install_root / "models")).resolve(),
+            models=cls._resolve_models(install_root, data_root),
             cache=data_root / "cache",
             temp=data_root / "temp",
             logs=data_root / "logs",
@@ -33,6 +47,18 @@ class RuntimePaths:
             materials=data_root / "materials",
             output=data_root / "output",
         )
+
+    @staticmethod
+    def _resolve_models(install_root: Path, data_root: Path) -> Path:
+        env = os.environ.get("TREECUT_MODEL_ROOT")
+        if env and str(env).strip():
+            return Path(env).resolve()
+        pointer = Path(data_root) / "config" / MODELS_PATH_POINTER
+        if pointer.is_file():
+            candidate = pointer.read_text(encoding="utf-8").strip()
+            if candidate and Path(candidate).is_dir():
+                return Path(candidate).resolve()
+        return (Path(install_root) / "models").resolve()
 
     def ensure(self) -> None:
         if os.name == "nt":
