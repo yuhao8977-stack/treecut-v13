@@ -290,7 +290,8 @@ def burn_subtitles(video: Path, subtitle: Path, font_dir: Path, output: Path,
 
 def create_narrated_video(video: Path, narration: str, output: Path, work_dir: Path,
                           tts_model: Path, ffmpeg: Path, ffprobe: Path,
-                          speed: float = 1.0) -> NarratedResult:
+                          speed: float = 1.0,
+                          prebuilt_audio: Path | None = None) -> NarratedResult:
     if not video.is_file():
         raise FileNotFoundError(video)
     if not 0.5 <= speed <= 2.0:
@@ -299,11 +300,20 @@ def create_narrated_video(video: Path, narration: str, output: Path, work_dir: P
     work_dir.mkdir(parents=True, exist_ok=True)
     audio_path = work_dir / "narration.wav"
     subtitle_path = work_dir / "narration.srt"
-    synthesize(narration, audio_path, tts_model)
-    if abs(speed - 1.0) > 1e-6:
-        stretched = work_dir / "narration_speed.wav"
-        _apply_narration_speed(audio_path, stretched, speed, ffmpeg)
-        stretched.replace(audio_path)
+    if prebuilt_audio is not None:
+        # B1: narration already synthesized once (real-TTS measured); never
+        # synthesize twice, never re-speed after the contract measurement.
+        if not prebuilt_audio.is_file():
+            raise FileNotFoundError(f"预生成旁白缺失: {prebuilt_audio}")
+        if not abs(speed - 1.0) <= 1e-6:
+            raise ValueError("B1: 预生成旁白路径禁止变速（时长契约已按原速测量）")
+        prebuilt_audio.replace(audio_path)  # move into work dir, single source
+    else:
+        synthesize(narration, audio_path, tts_model)
+        if abs(speed - 1.0) > 1e-6:
+            stretched = work_dir / "narration_speed.wav"
+            _apply_narration_speed(audio_path, stretched, speed, ffmpeg)
+            stretched.replace(audio_path)
     narration_seconds = wav_duration(audio_path)
     validate_narration_fit(narration_seconds, source_probe.duration)
     subtitle_text = build_srt(narration, narration_seconds, audio_path)

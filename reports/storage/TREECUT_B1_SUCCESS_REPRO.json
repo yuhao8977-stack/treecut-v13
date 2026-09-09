@@ -1,0 +1,44 @@
+{
+ "mode": "success",
+ "PASS": true,
+ "seconds": 40.0,
+ "run_id": "20260909_143916_370553",
+ "project_dir": "E:\\EchoBird-main\\_treecut_audit_temp\\b1_success_20260909_143831_404212\\output\\projects\\20260909_143916_370553",
+ "final_mp4": "E:\\EchoBird-main\\_treecut_audit_temp\\b1_success_20260909_143831_404212\\output\\projects\\20260909_143916_370553\\TreeCut_成片.mp4",
+ "final_mp4_sha256": "cd306e11e2993763a071d52cd12ab416f6a9977f9c406fc745a9f73913ce7257",
+ "final_mp4_duration_s": 25.0,
+ "jianying_draft": "E:\\EchoBird-main\\_treecut_audit_temp\\b1_success_20260909_143831_404212\\output\\projects\\20260909_143916_370553\\TreeCut_剪映草稿",
+ "narration_chars": 139,
+ "narration_calib_tries": 2,
+ "narration_duration_s": 24.802,
+ "narration_coverage_pct": 99.21,
+ "duration_contract": {
+  "narration_duration": 24.802,
+  "video_duration": 25.0,
+  "narration_coverage": 0.9921,
+  "narration_tail_gap": 0.198,
+  "intentional_outro": false,
+  "duration_contract_pass": true,
+  "code": null,
+  "strategy": "strict_reject"
+ },
+ "statuses": {
+  "TECHNICAL_RENDER_PASS": true,
+  "DURATION_CONTRACT_PASS": true,
+  "SUBTITLE_HYGIENE_PASS": false,
+  "SEMANTIC_MATCH_PASS": false,
+  "VISUAL_GRAMMAR_PASS": false,
+  "CONTENT_QUALITY_PASS": false,
+  "HUMAN_ACCEPTANCE_PASS": false,
+  "PUBLISH_READY": false,
+  "note": "B1 implements only the narration duration contract + fail-closed QA. Subtitle hygiene / semantic match / visual grammar / human acceptance are NOT yet passed."
+ },
+ "quality_passed": true,
+ "media": {
+  "id": 32,
+  "path": "D:\\剪影草稿\\JianyingPro Drafts\\0619-01\\video\\IOS_ALBUM@5509BF3D-2B06-4FE1-AC56-7EFAC381CD41_L0_001@1718726753000.mov",
+  "duration_s": 96.705
+ },
+ "data_root": "E:\\EchoBird-main\\_treecut_audit_temp\\b1_success_20260909_143831_404212",
+ "db_copy_sha256": "d069fcf1c17eefc9d4e7a3306593abde1448da1fe397a4e58611f513e110c4bb"
+}

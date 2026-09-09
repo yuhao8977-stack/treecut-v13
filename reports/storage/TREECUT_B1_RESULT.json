@@ -1,0 +1,88 @@
+{
+ "experiment": "TREECUT_B1_RESULT",
+ "baseline": "0c95e5c87388362956b8932cfbc516dbc75b6cff",
+ "adjudications": {
+  "TRACK_A_ALLOWED": "NO",
+  "N1_GEOM_CAM": "NO",
+  "B2_CLIP_SEGMENT_BEAT": "NOT_STARTED"
+ },
+ "implemented": [
+  "three duration strategies FIT_SCRIPT_TO_TARGET (explicit NotImplementedError, no silent pad) / FIT_VIDEO_TO_NARRATION / STRICT_REJECT (default)",
+  "real-TTS-first pipeline: narration.wav synthesized once and measured BEFORE plan/render; plan duration obeys strategy",
+  "fail-closed QA: narration_duration/video_duration/narration_coverage/narration_tail_gap/intentional_outro/duration_contract_pass fields; failure codes NARRATION_TOO_SHORT/NARRATION_TOO_LONG/VOICE_COVERAGE_LOW/VOICE_TAIL_TOO_LONG/BGM_ONLY_AUDIO/DURATION_CONTRACT_NOT_RUN; BGM never counted as narration",
+  "report statuses split TECHNICAL_RENDER_PASS / DURATION_CONTRACT_PASS / SUBTITLE_HYGIENE_PASS=false / SEMANTIC_MATCH_PASS=false / VISUAL_GRAMMAR_PASS=false / CONTENT_QUALITY_PASS=false / HUMAN_ACCEPTANCE_PASS=false / PUBLISH_READY=false"
+ ],
+ "failure_repro": {
+  "mode": "fail",
+  "narration_chars": 64,
+  "intercepted": true,
+  "error": "时长契约失败 [NARRATION_TOO_SHORT]: 旁白 11.45s 短于目标 25.00s 超过 0.8s",
+  "error_type": "RuntimeError",
+  "failure_code": "NARRATION_TOO_SHORT",
+  "seconds": 10.6,
+  "data_root": "E:\\EchoBird-main\\_treecut_audit_temp\\b1_fail_20260909_142707_392783",
+  "db_copy_sha256": "d069fcf1c17eefc9d4e7a3306593abde1448da1fe397a4e58611f513e110c4bb"
+ },
+ "success_repro": {
+  "mode": "success",
+  "PASS": true,
+  "seconds": 40.0,
+  "run_id": "20260909_143916_370553",
+  "project_dir": "E:\\EchoBird-main\\_treecut_audit_temp\\b1_success_20260909_143831_404212\\output\\projects\\20260909_143916_370553",
+  "final_mp4": "E:\\EchoBird-main\\_treecut_audit_temp\\b1_success_20260909_143831_404212\\output\\projects\\20260909_143916_370553\\TreeCut_成片.mp4",
+  "final_mp4_sha256": "cd306e11e2993763a071d52cd12ab416f6a9977f9c406fc745a9f73913ce7257",
+  "final_mp4_duration_s": 25.0,
+  "jianying_draft": "E:\\EchoBird-main\\_treecut_audit_temp\\b1_success_20260909_143831_404212\\output\\projects\\20260909_143916_370553\\TreeCut_剪映草稿",
+  "narration_chars": 139,
+  "narration_calib_tries": 2,
+  "narration_duration_s": 24.802,
+  "narration_coverage_pct": 99.21,
+  "duration_contract": {
+   "narration_duration": 24.802,
+   "video_duration": 25.0,
+   "narration_coverage": 0.9921,
+   "narration_tail_gap": 0.198,
+   "intentional_outro": false,
+   "duration_contract_pass": true,
+   "code": null,
+   "strategy": "strict_reject"
+  },
+  "statuses": {
+   "TECHNICAL_RENDER_PASS": true,
+   "DURATION_CONTRACT_PASS": true,
+   "SUBTITLE_HYGIENE_PASS": false,
+   "SEMANTIC_MATCH_PASS": false,
+   "VISUAL_GRAMMAR_PASS": false,
+   "CONTENT_QUALITY_PASS": false,
+   "HUMAN_ACCEPTANCE_PASS": false,
+   "PUBLISH_READY": false,
+   "note": "B1 implements only the narration duration contract + fail-closed QA. Subtitle hygiene / semantic match / visual grammar / human acceptance are NOT yet passed."
+  },
+  "quality_passed": true,
+  "media": {
+   "id": 32,
+   "path": "D:\\剪影草稿\\JianyingPro Drafts\\0619-01\\video\\IOS_ALBUM@5509BF3D-2B06-4FE1-AC56-7EFAC381CD41_L0_001@1718726753000.mov",
+   "duration_s": 96.705
+  },
+  "data_root": "E:\\EchoBird-main\\_treecut_audit_temp\\b1_success_20260909_143831_404212",
+  "db_copy_sha256": "d069fcf1c17eefc9d4e7a3306593abde1448da1fe397a4e58611f513e110c4bb"
+ },
+ "acceptance": {
+  "short_narration_intercepted": true,
+  "no_success_artifacts_on_fail": true,
+  "success_coverage_pct": 99.21,
+  "success_tail_gap_s": 0.198,
+  "success_new_run_id": "20260909_143916_370553",
+  "success_new_sha256": "cd306e11e2993763a071d52cd12ab416f6a9977f9c406fc745a9f73913ce7257",
+  "not_fixed_in_b1": "subtitles (source-subtitle policy, safe-area) and material selection (Chinese-CLIP, segment bridge, beat mapping, talking-head/repeat/fragment rules) are OUT of B1 scope and NOT claimed passed"
+ },
+ "environment_note": "processes inherit a persistent user/machine env TREECUT_DATA_ROOT=...runtime_data\\temp\\batch1 which would override default path resolution; B1 runner clears it (recorded for deployment hygiene)",
+ "changed_files": [
+  "src/treecut/application/production.py",
+  "src/treecut/output/narration.py",
+  "src/treecut/quality/duration_contract.py (new)",
+  "tests/test_b1_duration_contract.py (new, 11 tests)",
+  "scripts/audit_treecut_b1_run.py (new)"
+ ],
+ "e_install_synced": true
+}

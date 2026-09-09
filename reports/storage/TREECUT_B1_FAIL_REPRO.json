@@ -1,0 +1,11 @@
+{
+ "mode": "fail",
+ "narration_chars": 64,
+ "intercepted": true,
+ "error": "时长契约失败 [NARRATION_TOO_SHORT]: 旁白 11.45s 短于目标 25.00s 超过 0.8s",
+ "error_type": "RuntimeError",
+ "failure_code": "NARRATION_TOO_SHORT",
+ "seconds": 10.6,
+ "data_root": "E:\\EchoBird-main\\_treecut_audit_temp\\b1_fail_20260909_142707_392783",
+ "db_copy_sha256": "d069fcf1c17eefc9d4e7a3306593abde1448da1fe397a4e58611f513e110c4bb"
+}

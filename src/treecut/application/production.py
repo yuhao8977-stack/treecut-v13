@@ -43,6 +43,9 @@ class CreativeRequest:
     narration_speed: float = 1.0
     style: str = "natural"
     watermark_path: str = ""
+    # B1 narration duration contract
+    duration_strategy: str = "strict_reject"
+    intentional_outro: bool = False
 
     def validate(self) -> None:
         if not self.selling_points.strip():
@@ -55,6 +58,9 @@ class CreativeRequest:
             raise ValueError("单镜头时长必须在 1–15 秒之间")
         if not 0.5 <= self.narration_speed <= 2.0:
             raise ValueError("配音语速必须在 0.5–2.0 之间")
+        from treecut.quality.duration_contract import STRATEGIES
+        if self.duration_strategy not in STRATEGIES:
+            raise ValueError(f"未知时长策略: {self.duration_strategy}（可选 {STRATEGIES}）")
         if not (self.output_mp4 or self.output_jianying):
             raise ValueError("至少选择 MP4 或剪映草稿一种输出")
         resolve_preset(self.output_preset)
@@ -103,6 +109,12 @@ QUALITY_ADVICE = {
     "burned_subtitle_pixels": "字幕没有可靠烧录到画面，请检查字体和字幕文件。",
     "draft_source_files": "剪映草稿引用的素材已离线，请重新连接硬盘后重试。",
     "draft_segment_bounds": "剪映片段越界，重新生成时间线。",
+    "NARRATION_TOO_SHORT": "旁白过短：请扩写配音文案或缩短目标时长；禁止静默补空镜（B1 时长契约）。",
+    "NARRATION_TOO_LONG": "旁白过长：请精简配音文案或增加目标时长（B1 时长契约）。",
+    "VOICE_COVERAGE_LOW": "旁白覆盖率过低（需≥95%）：文案与目标时长不匹配（B1 时长契约）。",
+    "VOICE_TAIL_TOO_LONG": "结尾无旁白超过 0.8 秒且未声明片尾（B1 时长契约）。",
+    "BGM_ONLY_AUDIO": "检测不到旁白音轨，背景音乐不得计为旁白（B1 时长契约）。",
+    "DURATION_CONTRACT_NOT_RUN": "时长契约未执行，禁止放行（B1）。",
 }
 
 
@@ -161,7 +173,38 @@ class ProductionService:
 
     def _create(self, request: CreativeRequest, progress, project: Path,
                 plan_override=None) -> ProductionResult:
+        from treecut.output.narration import _apply_narration_speed, synthesize, wav_duration
+        from treecut.quality.duration_contract import check_duration_contract, resolve_plan_duration
         paths = self.context.paths
+        ffmpeg = paths.install_root / "tools" / "win32" / "ffmpeg.exe"
+        ffprobe = paths.install_root / "tools" / "win32" / "ffprobe.exe"
+        # ---- B1: REAL narration first, single synthesis; duration is the only
+        # authority. Never silently pad empty footage; never fake with BGM. ----
+        work = project / "work"
+        work.mkdir(parents=True, exist_ok=True)
+        narration_wav = work / "narration.wav"
+        progress("正在合成真实旁白并测量时长…", 5)
+        synthesize(request.narration, narration_wav, paths.models / "LocalTTS")
+        if abs(request.narration_speed - 1.0) > 1e-6:
+            stretched = work / "narration_speed.wav"
+            _apply_narration_speed(narration_wav, stretched, request.narration_speed, ffmpeg)
+            stretched.replace(narration_wav)
+        narration_duration = wav_duration(narration_wav)
+        if plan_override is not None:
+            plan_duration = float(getattr(plan_override, "planned_duration", 0.0)
+                                  or request.target_duration)
+        else:
+            plan_duration = resolve_plan_duration(
+                request.duration_strategy, request.target_duration, narration_duration)
+        contract = check_duration_contract(
+            strategy=request.duration_strategy,
+            target_duration=request.target_duration,
+            narration_duration=narration_duration,
+            video_duration=plan_duration,
+            intentional_outro=request.intentional_outro)
+        if not contract.passed:
+            raise RuntimeError(f"时长契约失败 [{contract.code}]: {contract.reason}")
+        progress("旁白时长契约通过", 8)
         if plan_override is not None:
             progress("使用用户调整后的剪辑计划…", 10)
             plan = plan_override
@@ -169,8 +212,6 @@ class ProductionService:
             bge_scores = clip_scores = {}
             semantic_errors = []
         else:
-            ffmpeg = paths.install_root / "tools" / "win32" / "ffmpeg.exe"
-            ffprobe = paths.install_root / "tools" / "win32" / "ffprobe.exe"
             progress("正在匹配相关素材…", 10)
             candidates = load_candidates(
                 paths.databases / "materials.db", request.include_test_materials,
@@ -191,7 +232,7 @@ class ProductionService:
                 bge_scores=bge_scores, clip_scores=clip_scores,
                 domain_terms=self.context.domain_vocabulary,
             )
-            plan = build_edit_plan(matches, request.target_duration, request.clip_seconds)
+            plan = build_edit_plan(matches, plan_duration, request.clip_seconds)
             if not plan.complete:
                 raise RuntimeError("；".join(plan.warnings))
         plan_quality = inspect_edit_plan(plan)
@@ -199,7 +240,6 @@ class ProductionService:
             failed = [item.code for item in plan_quality.checks if item.critical and not item.passed]
             raise RuntimeError("剪辑计划质量检查失败：" + "、".join(failed))
         bgm = Path(request.bgm_path) if request.bgm_path else paths.install_root / "assets" / "bgm" / "mixkit_ambient_31f31ead.mp3"
-        tts_model = paths.models / "LocalTTS"
         render_profile = select_render_profile(request)
         preset = resolve_preset(request.output_preset)
         preview = project / ("01_高清画面底片.mp4" if render_profile == "final" else "01_画面预览.mp4")
@@ -209,12 +249,12 @@ class ProductionService:
             plan, preview, ffmpeg, ffprobe, render_profile, preset=preset,
             style=request.style, watermark_path=watermark,
         )
-        work = project / "work"
         narrated = project / "02_配音字幕预览.mp4"
         progress("正在生成离线配音和字幕…", 55)
         create_narrated_video(
-            preview, request.narration, narrated, work, tts_model, ffmpeg, ffprobe,
-            speed=request.narration_speed,
+            preview, request.narration, narrated, work, paths.models / "LocalTTS",
+            ffmpeg, ffprobe, speed=request.narration_speed,
+            prebuilt_audio=narration_wav,
         )
         mixed = project / "03_配音音乐预览.mp4"
         progress("正在混合背景音乐…", 70)
@@ -245,6 +285,7 @@ class ProductionService:
 
         progress("正在回读并检查最终输出…", 95)
         quality_reports = [plan_quality]
+        final_video_duration = None
         if final_mp4:
             quality_reports.append(inspect_final_video(
                 Path(final_mp4), ffprobe, plan.planned_duration,
@@ -254,8 +295,20 @@ class ProductionService:
             quality_reports.append(inspect_burned_subtitles(
                 mixed, Path(final_mp4), work / "narration.srt",
             ))
+            from treecut.media import probe_media
+            final_video_duration = float(probe_media(Path(final_mp4), ffprobe).duration)
         if draft_path:
             quality_reports.append(inspect_jianying_draft(Path(draft_path), plan.planned_duration))
+        # B1: re-verify the duration contract against the REAL final video length
+        contract_final = check_duration_contract(
+            strategy=request.duration_strategy,
+            target_duration=request.target_duration,
+            narration_duration=narration_duration,
+            video_duration=final_video_duration or plan_duration,
+            intentional_outro=request.intentional_outro)
+        if not contract_final.passed:
+            raise RuntimeError(
+                f"最终成片时长契约失败 [{contract_final.code}]: {contract_final.reason}")
         quality = combine_reports(*quality_reports)
 
         report_path = project / "production_report.json"
@@ -268,6 +321,21 @@ class ProductionService:
             "semantic_models": {"bge_scored": len(bge_scores),
                                 "clip_scored": len(clip_scores),
                                 "errors": semantic_errors},
+            "duration_contract": contract_final.fields
+            | {"code": contract_final.code, "strategy": request.duration_strategy},
+            "statuses": {
+                "TECHNICAL_RENDER_PASS": bool(quality.passed),
+                "DURATION_CONTRACT_PASS": bool(contract_final.passed),
+                # B1 scope only; later phases (B2-B5) must turn these on
+                "SUBTITLE_HYGIENE_PASS": False,
+                "SEMANTIC_MATCH_PASS": False,
+                "VISUAL_GRAMMAR_PASS": False,
+                "CONTENT_QUALITY_PASS": False,
+                "HUMAN_ACCEPTANCE_PASS": False,
+                "PUBLISH_READY": False,
+                "note": "B1 implements only the narration duration contract + "
+                        "fail-closed QA. Subtitle hygiene / semantic match / "
+                        "visual grammar / human acceptance are NOT yet passed."},
         }
         report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
         if not quality.passed:
