@@ -66,7 +66,8 @@ def separate(master, model):
     if canonical.exists():
         return canonical
     # demucs writes out/{model}/{track}/vocals.wav; reuse anything already made
-    existing = sorted(outdir.rglob("vocals.wav"),
+    existing = sorted((p for p in outdir.rglob("vocals.wav")
+                       if master.stem in str(p)),
                       key=lambda p: p.stat().st_mtime, reverse=True)
     if existing:
         canonical.parent.mkdir(parents=True, exist_ok=True)
@@ -76,7 +77,8 @@ def separate(master, model):
     cmd = [str(DEMUCS_PY), "-m", "demucs.separate", "-n", model,
            "--two-stems=vocals", "-o", str(outdir), str(master)]
     r = subprocess.run(cmd, capture_output=True, timeout=5400)
-    found = sorted(outdir.rglob("vocals.wav"),
+    found = sorted((p for p in outdir.rglob("vocals.wav")
+                    if master.stem in str(p)),
                    key=lambda p: p.stat().st_mtime, reverse=True)
     if r.returncode != 0 or not found:
         log = (EXP / "11_logs" / f"demucs_{model}_{master.stem}.log")
