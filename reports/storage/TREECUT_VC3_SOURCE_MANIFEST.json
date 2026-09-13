@@ -1,0 +1,208 @@
+{
+ "experiment": "TREECUT_VC3_SOURCE_MANIFEST",
+ "source_dir": "C:\\Users\\admin\\Desktop\\录音训练文件",
+ "file_count": 9,
+ "raw_total_audio_duration_s": 539.47,
+ "expected_duration_s": 539.5,
+ "hash_match_expected": null,
+ "files": [
+  {
+   "file": "ffe0fe05aea1281802ad10e04db84bea.mp4",
+   "absolute_path": "C:\\Users\\admin\\Desktop\\录音训练文件\\ffe0fe05aea1281802ad10e04db84bea.mp4",
+   "file_size": 18991929,
+   "sha256": "89a388676da0ffd168b8befcf796c0b99970eeb1112cce8bf36ecb095972e138",
+   "container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "video_duration": 99.799667,
+   "audio_duration": 99.869184,
+   "audio_codec": "aac",
+   "sample_rate": "44100",
+   "channels": 1,
+   "bitrate": "48014",
+   "creation_metadata": {
+    "minor_version": "512",
+    "major_brand": "isom",
+    "compatible_brands": "isomiso2avc1mp41",
+    "copyright": "",
+    "copyright-eng": "",
+    "wxMeta": "{\"WXVer\":671108605}",
+    "encoder": "Lavf58.20.100"
+   }
+  },
+  {
+   "file": "1f9c445a28736942cfd84d19ffc87293.mp4",
+   "absolute_path": "C:\\Users\\admin\\Desktop\\录音训练文件\\1f9c445a28736942cfd84d19ffc87293.mp4",
+   "file_size": 3538770,
+   "sha256": "64681fe203e131b4d8ff1ec02e8f69988a13d06be717db528c1d3c1cc1df6bbd",
+   "container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "video_duration": 28.433333,
+   "audio_duration": 28.490952,
+   "audio_codec": "aac",
+   "sample_rate": "44100",
+   "channels": 1,
+   "bitrate": "48352",
+   "creation_metadata": {
+    "minor_version": "512",
+    "major_brand": "isom",
+    "compatible_brands": "isomiso2mp41",
+    "copyright": "",
+    "copyright-eng": "",
+    "wxMeta": "{\"WXVer\":671108605}",
+    "encoder": "Lavf58.20.100"
+   }
+  },
+  {
+   "file": "3bad5e51a7e03bf91db9ea8192cf1044.mp4",
+   "absolute_path": "C:\\Users\\admin\\Desktop\\录音训练文件\\3bad5e51a7e03bf91db9ea8192cf1044.mp4",
+   "file_size": 5158387,
+   "sha256": "bd6452d391e20d520ba86198ef2579dcce9901f628630a12869d9d1ea78dacab",
+   "container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "video_duration": 39.4,
+   "audio_duration": 39.450794,
+   "audio_codec": "aac",
+   "sample_rate": "44100",
+   "channels": 1,
+   "bitrate": "48231",
+   "creation_metadata": {
+    "minor_version": "512",
+    "major_brand": "isom",
+    "compatible_brands": "isomiso2mp41",
+    "copyright": "",
+    "copyright-eng": "",
+    "wxMeta": "{\"WXVer\":671108605}",
+    "encoder": "Lavf58.20.100"
+   }
+  },
+  {
+   "file": "4f8a6f3b4160ef49d5cf0135570b762d.mp4",
+   "absolute_path": "C:\\Users\\admin\\Desktop\\录音训练文件\\4f8a6f3b4160ef49d5cf0135570b762d.mp4",
+   "file_size": 4710163,
+   "sha256": "6d3ef5b92d9980480726ceb6c41b765580471ba10c880ab0ef76f42f9a8eac15",
+   "container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "video_duration": 32.8,
+   "audio_duration": 32.856327,
+   "audio_codec": "aac",
+   "sample_rate": "44100",
+   "channels": 1,
+   "bitrate": "48673",
+   "creation_metadata": {
+    "minor_version": "512",
+    "major_brand": "isom",
+    "compatible_brands": "isomiso2mp41",
+    "copyright": "",
+    "copyright-eng": "",
+    "wxMeta": "{\"WXVer\":671108605}",
+    "encoder": "Lavf58.20.100"
+   }
+  },
+  {
+   "file": "7c9133e56ad2b7b8dc2c9f08b0813f7f.mp4",
+   "absolute_path": "C:\\Users\\admin\\Desktop\\录音训练文件\\7c9133e56ad2b7b8dc2c9f08b0813f7f.mp4",
+   "file_size": 15356596,
+   "sha256": "1dfe4bce1ed8b016d3f018541aad5cc3f7f780b7194cabaa77614eea61aa7a5a",
+   "container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "video_duration": 80.933,
+   "audio_duration": 81.014558,
+   "audio_codec": "aac",
+   "sample_rate": "44100",
+   "channels": 1,
+   "bitrate": "48018",
+   "creation_metadata": {
+    "minor_version": "512",
+    "major_brand": "isom",
+    "compatible_brands": "isomiso2avc1mp41",
+    "copyright": "",
+    "copyright-eng": "",
+    "wxMeta": "{\"WXVer\":671108605}",
+    "encoder": "Lavf58.20.100"
+   }
+  },
+  {
+   "file": "36d855036cae95e20b557bd2132a6e1c.mp4",
+   "absolute_path": "C:\\Users\\admin\\Desktop\\录音训练文件\\36d855036cae95e20b557bd2132a6e1c.mp4",
+   "file_size": 16192082,
+   "sha256": "1f52eeb161996f8096760d12408758dce20c1ebe43c5a2d141cdca99108c5bea",
+   "container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "video_duration": 85.133,
+   "audio_duration": 85.19415,
+   "audio_codec": "aac",
+   "sample_rate": "44100",
+   "channels": 1,
+   "bitrate": "48016",
+   "creation_metadata": {
+    "minor_version": "512",
+    "major_brand": "isom",
+    "compatible_brands": "isomiso2avc1mp41",
+    "copyright": "",
+    "copyright-eng": "",
+    "wxMeta": "{\"WXVer\":671108605}",
+    "encoder": "Lavf58.20.100"
+   }
+  },
+  {
+   "file": "67351bcb8b7d6de001cbc2d4235a559d.mp4",
+   "absolute_path": "C:\\Users\\admin\\Desktop\\录音训练文件\\67351bcb8b7d6de001cbc2d4235a559d.mp4",
+   "file_size": 4227520,
+   "sha256": "e38d4ae1dfc0d279ac8c49586eef20d099a7a8370fb6e9ef5579283d9233ba2b",
+   "container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "video_duration": 38.066667,
+   "audio_duration": 38.057596,
+   "audio_codec": "aac",
+   "sample_rate": "44100",
+   "channels": 1,
+   "bitrate": "48354",
+   "creation_metadata": {
+    "minor_version": "512",
+    "major_brand": "isom",
+    "compatible_brands": "isomiso2mp41",
+    "copyright": "",
+    "copyright-eng": "",
+    "wxMeta": "{\"WXVer\":671108605}",
+    "encoder": "Lavf58.20.100"
+   }
+  },
+  {
+   "file": "b1e2da63aa73b6364dc599f6d2d4517a.mp4",
+   "absolute_path": "C:\\Users\\admin\\Desktop\\录音训练文件\\b1e2da63aa73b6364dc599f6d2d4517a.mp4",
+   "file_size": 13797451,
+   "sha256": "1542f2313ed585caa53fe6a86329a478e92b0244fd5b57dcf5b68205c2bca202",
+   "container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "video_duration": 72.833,
+   "audio_duration": 72.933991,
+   "audio_codec": "aac",
+   "sample_rate": "44100",
+   "channels": 1,
+   "bitrate": "48000",
+   "creation_metadata": {
+    "minor_version": "512",
+    "major_brand": "isom",
+    "compatible_brands": "isomiso2avc1mp41",
+    "copyright": "",
+    "copyright-eng": "",
+    "wxMeta": "{\"WXVer\":671108605}",
+    "encoder": "Lavf58.20.100"
+   }
+  },
+  {
+   "file": "fbb22200af6d3441fe2ebc0be82a9b57.mp4",
+   "absolute_path": "C:\\Users\\admin\\Desktop\\录音训练文件\\fbb22200af6d3441fe2ebc0be82a9b57.mp4",
+   "file_size": 11684273,
+   "sha256": "fdad37ed4c527e00ca806dc61a00fb7196967151a64e5aaf7af6d14e0e895511",
+   "container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "video_duration": 61.499667,
+   "audio_duration": 61.60263,
+   "audio_codec": "aac",
+   "sample_rate": "44100",
+   "channels": 1,
+   "bitrate": "48000",
+   "creation_metadata": {
+    "minor_version": "512",
+    "major_brand": "isom",
+    "compatible_brands": "isomiso2avc1mp41",
+    "copyright": "",
+    "copyright-eng": "",
+    "wxMeta": "{\"WXVer\":671108605}",
+    "encoder": "Lavf58.20.100"
+   }
+  }
+ ]
+}

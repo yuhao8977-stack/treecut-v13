@@ -1,0 +1,44 @@
+{
+ "experiment": "TREECUT_VC3_DECISION_FREEZE",
+ "VOICE_OWNER_AUTHORIZED": "YES",
+ "SAME_FEMALE_OWNER_CONFIRMED": "YES",
+ "SAME_AS_VOICE_001_TARGET": "YES",
+ "NEW_VIDEO_COUNT": 9,
+ "NEW_RAW_DURATION_EXPECTED": 539.5,
+ "AUDIO_ONLY_POLICY": "YES",
+ "VIDEO_VISUAL_CONTENT_ALLOWED_FOR_MODEL": "NO",
+ "BACKGROUND_MUSIC_ALLOWED_FOR_MODEL": "NO",
+ "SOUND_EFFECT_ALLOWED_FOR_MODEL": "NO",
+ "OLD_MALE_DRIFT_OUTPUT_ALLOWED_AS_REFERENCE": "NO",
+ "ZERO_SHOT_FIRST": "YES",
+ "FINE_TUNE_CONDITIONAL_ONLY": "YES",
+ "PRODUCTION_INTEGRATION_ALLOWED": "NO",
+ "TREECUT_TTS_REPLACED": "NO",
+ "B2_C0_N1_GEOM_CAM": "NOT_STARTED",
+ "SAME_SPEAKER_DIFFERENT_POST_PROCESSING_DOMAINS": "YES",
+ "USER_PREFERENCE_IS_SAMPLE_LEVEL_ONLY": "YES",
+ "VC2_ACCEPTED": "NO",
+ "VC2_PARTIAL_DIRECTIONAL_SIGNAL": "YES",
+ "R2_MALE_MAGNETIC_DRIFT_NEGATIVE_REFERENCE": "YES",
+ "preflight": {
+  "start_time": "2026-09-13T11:32:59",
+  "branch": "main",
+  "head": "1c5de4feadd477e34cf10adf2b6aa75c26fa0a7c",
+  "origin_main": "1c5de4feadd477e34cf10adf2b6aa75c26fa0a7c",
+  "head_eq_origin": true,
+  "worktree_clean_before_this_task": true,
+  "status_lines": [
+   "?? scripts/audit_treecut_vc3_stageA.py"
+  ],
+  "torch": "2.6.0+cu124",
+  "cuda": true,
+  "gpu": "NVIDIA GeForce RTX 3050",
+  "gpu_mem_gb": 6.0,
+  "ffmpeg": "E:\\树剪整理\\02_安装程序\\TreeCut_v13\\tools\\win32\\ffmpeg.exe",
+  "disk_free_gb": {
+   "E:\\": 126.4,
+   "C:\\": 75.2
+  },
+  "E_TreeCutRuntime_writable": true
+ }
+}
