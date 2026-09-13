@@ -1,0 +1,10 @@
+{
+ "experiment": "TREECUT_VC3_ADDITIONAL_SEPARATOR_PROBE",
+ "purpose": "third separation model for the 4 high-pollution sources (rule: never force-pick among failures)",
+ "audio_separator_installed": true,
+ "modelscope_in_demucs_venv": false,
+ "weight_fetch": "NOT_ATTEMPTED_OFFLINE_CONSTRAINT: audio-separator fetches BS-RoFormer/UVR weights from huggingface.co which is unreachable in this environment; modelscope package absent in the demucs venv; no SSL-verification bypass allowed by task rules",
+ "consequence": "the 4 flagged sources (1f9c445a28736942cfd84d19ffc87293, 3bad5e51a7e03bf91db9ea8192cf1044, 4f8a6f3b4160ef49d5cf0135570b762d, 67351bcb8b7d6de001cbc2d4235a559d) remain SOURCE_REQUIRES_ADDITIONAL_MODEL and are excluded from any training set for now",
+ "next_action": "continuation round: try modelscope-hosted BS-RoFormer/UVR weights inside a dedicated venv, re-run contamination gate for these 4 sources, then evaluate dataset gate (currently only 5 clean sources, gate requires >=6)",
+ "no_force_pick": true
+}
